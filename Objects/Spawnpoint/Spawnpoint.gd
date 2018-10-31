@@ -10,5 +10,5 @@ func _ready():
 
 
 func respawn():
-	
-	player.global_transform = global_transform
+	if player.health > 0:
+		player.global_transform = global_transform
