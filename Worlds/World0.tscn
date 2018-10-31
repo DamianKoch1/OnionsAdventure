@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/DirtTileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Onion.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/Camera.tscn" type="PackedScene" id=6]
+
+[node name="World" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+position = Vector2( 0, -96 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 9, 0, 65537, 10, 0, 65538, 10, 0, 65539, 11, 0, 131072, 3, 0, 131073, 4, 0, 131074, 4, 0, 131075, 5, 0, 196608, 3, 0, 196609, 4, 0, 196610, 4, 0, 196611, 5, 0, 262144, 12, 0, 262145, 13, 0, 262146, 24, 0, 262147, 19, 0, 327682, 27, 0, 327683, 22, 0, 327694, 9, 0, 327695, 11, 0, 393230, 12, 0, 393231, 16, 0, 720896, 9, 0, 720897, 10, 0, 720898, 10, 0, 720899, 10, 0, 720900, 10, 0, 720901, 10, 0, 720902, 10, 0, 720903, 10, 0, 720904, 10, 0, 720905, 10, 0, 720906, 10, 0, 720907, 10, 0, 720908, 10, 0, 720909, 10, 0, 720910, 10, 0, 720911, 10, 0, 720912, 11, 0, 786432, 18, 0, 786433, 14, 0, 786434, 14, 0, 786435, 14, 0, 786436, 14, 0, 786437, 14, 0, 786438, 14, 0, 786439, 25, 0, 786440, 7, 0, 786441, 7, 0, 786442, 7, 0, 786443, 7, 0, 786444, 7, 0, 786445, 7, 0, 786446, 7, 0, 786447, 15, 0, 786448, 16, 0, 851968, 21, 0, 851969, 7, 0, 851970, 7, 0, 851971, 7, 0, 851972, 7, 0, 851973, 7, 0, 851974, 7, 0, 851975, 28, 0 )
+_sections_unfolded = [ "Cell", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Goal" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 544, 224 )
+
+[node name="Ladder" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 432, 160 )
+scale = Vector2( 0.5, 3 )
+
+[node name="Bouncer" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 288, 256 )
+
+[node name="Onion" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 32, 224 )
+
+[node name="Camera" parent="." index="5" instance=ExtResource( 6 )]
+
+

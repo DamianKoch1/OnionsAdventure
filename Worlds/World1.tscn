@@ -1,0 +1,273 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Onion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Runes/EarthStone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Runes/FireStone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Runes/EarthStone.gd" type="Script" id=7]
+[ext_resource path="res://icon.png" type="Texture" id=8]
+[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player/Camera.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Spawnpoint/Spawnpoint.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=13]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 151.696, 149.102 )
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1775.56, 14.7179 )
+
+[node name="Node" type="Node" index="0"]
+
+[node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 64, 352 )
+z_index = 1
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Bouncer" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 864, 368 )
+scale = Vector2( 1, 0.5 )
+z_index = 1
+
+[node name="Bouncer2" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 416, 760 )
+scale = Vector2( 3, 2.25 )
+z_index = 1
+
+[node name="Ladder" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 752, 96 )
+scale = Vector2( 0.500001, 5 )
+z_index = -5
+z_as_relative = false
+
+[node name="Onion" parent="." index="4" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( 64, 192 )
+z_index = 5
+z_as_relative = false
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="RayCast2D" parent="Onion" index="0"]
+
+enabled = false
+
+[node name="Sprite" parent="Onion" index="2"]
+
+editor/display_folded = true
+
+[node name="OnionBody" parent="Onion/Sprite" index="0"]
+
+position = Vector2( 0.50386, -27.9498 )
+scale = Vector2( 0.5, 0.436655 )
+
+[node name="OnionHair" parent="Onion/Sprite/OnionBody" index="0"]
+
+position = Vector2( 7.03369, -39.5234 )
+rotation = 0.0748545
+scale = Vector2( 1, 0.943046 )
+
+[node name="onion_eyes" parent="Onion/Sprite/OnionBody" index="1"]
+
+position = Vector2( 13.7552, 1.70089 )
+scale = Vector2( 1, 0.178333 )
+
+[node name="OnionEarL" parent="Onion/Sprite" index="1"]
+
+position = Vector2( 0.468682, -44.1974 )
+rotation = 0.219187
+
+[node name="OnionEarR" parent="Onion/Sprite" index="2"]
+
+position = Vector2( -4.05002, -41.767 )
+rotation = -0.66299
+
+[node name="OnionTail" parent="Onion/Sprite" index="3"]
+
+rotation = -0.163854
+
+[node name="EarthStone" parent="." index="5" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 992, 32 )
+
+[node name="State2" parent="EarthStone" index="2"]
+
+position = Vector2( 0, 320 )
+
+[node name="EarthStone2" parent="." index="6" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 1120, 352 )
+
+[node name="TileMap" parent="EarthStone2" index="0"]
+
+tile_data = PoolIntArray( -196604, 2, 0, -196603, 2, 0, -131068, 2, 0, -131066, 2, 0, -2, 0, 0, -1, 1, 0, -65536, 1, 0, -65535, 2, 0, -65534, 2, 0, -65533, 2, 0, -65532, 2, 0, 65534, 1610612738, 0, 65535, 1610612737, 0, 0, 1610612737, 0, 1, 1610612736, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 65539, 2, 0, 65540, 2, 0 )
+
+[node name="State2" parent="EarthStone2" index="2"]
+
+position = Vector2( 5.72205e-006, 224 )
+scale = Vector2( 3.2, 3.2 )
+
+[node name="EarthStone3" parent="." index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 992, 576 )
+platformSpeed = 0.005
+
+[node name="EarthStone" parent="EarthStone3/TileMap" index="0"]
+
+editor/display_folded = true
+
+[node name="FireStone" parent="EarthStone3/TileMap" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( -352, -352 )
+scale = Vector2( 5.50001, 5.50001 )
+objToDestroyPath = NodePath("../../../DamagingObstacle2")
+
+[node name="State2" parent="EarthStone3" index="2"]
+
+position = Vector2( -352, 32 )
+scale = Vector2( 3.2, 3.2 )
+
+[node name="EarthStone5" type="Node2D" parent="." index="8"]
+
+position = Vector2( -64, 288 )
+script = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+platformSpeed = 0.005
+
+[node name="EarthStone" type="StaticBody2D" parent="EarthStone5" index="0"]
+
+editor/display_folded = true
+position = Vector2( 240, -48 )
+scale = Vector2( 0.5, 0.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EarthStone5/EarthStone" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="icon" type="Sprite" parent="EarthStone5/EarthStone" index="1"]
+
+position = Vector2( -1.62125e-005, -6.10352e-005 )
+texture = ExtResource( 8 )
+
+[node name="EarthStoneTrigger" type="Area2D" parent="EarthStone5/EarthStone" index="2"]
+
+position = Vector2( 0, -32 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 6.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Audio Bus" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EarthStone5/EarthStone/EarthStoneTrigger" index="0"]
+
+position = Vector2( 7.62939e-006, -24.6761 )
+scale = Vector2( 0.178771, 0.146426 )
+shape = SubResource( 3 )
+
+[node name="TileMap" parent="EarthStone5" index="1" instance=ExtResource( 9 )]
+
+tile_data = PoolIntArray( -2, 0, 0, -1, 1, 0, -65536, 1, 0, -65535, 2, 0, 65534, 1610612738, 0, 65535, 1610612737, 0, 0, 1610612737, 0, 1, 1610612736, 0 )
+
+[node name="State1" type="Position2D" parent="EarthStone5" index="2"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="State2" type="Position2D" parent="EarthStone5" index="3"]
+
+position = Vector2( 480, -320 )
+scale = Vector2( 3.2, 3.2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TileMap" parent="." index="9" instance=ExtResource( 9 )]
+
+z_index = -3
+z_as_relative = false
+tile_data = PoolIntArray( 24, 0, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 2, 0, 65560, 10, 0, 65561, 10, 0, 65562, 10, 0, 65563, 10, 0, 65564, 1610612739, 0, 131096, 10, 0, 131097, 10, 0, 131098, 10, 0, 131099, 10, 0, 131100, 1610612739, 0, 196632, -1073741823, 0, 196633, 10, 0, 196634, 10, 0, 196635, 10, 0, 196636, 1610612739, 0, 262168, -1073741823, 0, 262169, 10, 0, 262170, 10, 0, 262171, 10, 0, 262172, 5, 0, 327704, -1073741823, 0, 327705, 10, 0, 327706, 10, 0, 327707, 10, 0, 327708, 5, 0, 393240, -1073741823, 0, 393241, 10, 0, 393242, 10, 0, 393243, 10, 0, 393244, 5, 0, 458776, -1073741823, 0, 458777, 10, 0, 458778, 10, 0, 458779, 10, 0, 458780, -1073741817, 0, 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 9, 0, 524313, 10, 0, 524314, 10, 0, 524315, 10, 0, 524316, -1073741817, 0, 589824, 3, 0, 589825, 10, 0, 589826, 10, 0, 589827, 10, 0, 589828, 10, 0, 589829, 10, 0, 589830, 10, 0, 589831, 10, 0, 589832, 10, 0, 589833, 10, 0, 589834, 10, 0, 589835, 10, 0, 589836, 10, 0, 589837, 10, 0, 589838, 10, 0, 589839, 10, 0, 589840, 10, 0, 589841, 10, 0, 589842, 10, 0, 589843, 10, 0, 589844, 10, 0, 589845, 10, 0, 589846, 10, 0, 589847, 10, 0, 589848, 10, 0, 589849, 10, 0, 589850, 10, 0, 589851, 10, 0, 589852, -1073741817, 0, 655360, 3, 0, 655361, 10, 0, 655362, 10, 0, 655363, 10, 0, 655364, 10, 0, 655365, 10, 0, 655366, 10, 0, 655367, 10, 0, 655368, 10, 0, 655369, 10, 0, 655370, 10, 0, 655371, 10, 0, 655372, 10, 0, 655373, 10, 0, 655374, 10, 0, 655375, 10, 0, 655376, 10, 0, 655377, 10, 0, 655378, 10, 0, 655379, 10, 0, 655380, 10, 0, 655381, 10, 0, 655382, 10, 0, 655383, 10, 0, 655384, 10, 0, 655385, 10, 0, 655386, 10, 0, 655387, 10, 0, 655388, -1073741817, 0, 720896, 3, 0, 720897, 10, 0, 720898, 10, 0, 720899, 10, 0, 720900, 10, 0, 720901, 10, 0, 720902, 10, 0, 720903, 10, 0, 720904, 10, 0, 720905, 10, 0, 720906, 10, 0, 720907, 10, 0, 720908, 10, 0, 720909, 10, 0, 720910, 10, 0, 720911, 10, 0, 720912, 10, 0, 720913, 10, 0, 720914, 10, 0, 720915, 10, 0, 720916, 10, 0, 720917, 10, 0, 720918, 10, 0, 720919, 10, 0, 720920, 10, 0, 720921, 10, 0, 720922, 10, 0, 720923, 10, 0, 720924, -1073741817, 0, 786432, 1610612738, 0, 786433, 1610612737, 0, 786434, 1610612737, 0, 786435, 1610612737, 0, 786436, 1610612737, 0, 786437, 1610612737, 0, 786438, 1610612737, 0, 786439, 1610612737, 0, 786440, 1610612737, 0, 786441, 1610612737, 0, 786442, -1610612731, 0, 786443, -1610612731, 0, 786444, -1610612731, 0, 786445, -1610612731, 0, 786446, -1610612731, 0, 786447, -1610612731, 0, 786448, -1610612731, 0, 786449, -1610612731, 0, 786450, 7, 0, 786451, 7, 0, 786452, 7, 0, 786453, 7, 0, 786454, 7, 0, 786455, 7, 0, 786456, 7, 0, 786457, 7, 0, 786458, 7, 0, 786459, 7, 0, 786460, 7, 0 )
+_sections_unfolded = [ "Cell", "Transform", "Z Index" ]
+
+[node name="Camera" parent="." index="10" instance=ExtResource( 10 )]
+
+position = Vector2( 94.2725, 233.927 )
+_sections_unfolded = [ "Transform" ]
+camSpeed = 0.05
+
+[node name="Spawnpoint" parent="." index="11" instance=ExtResource( 11 )]
+
+position = Vector2( 192, 128 )
+
+[node name="DamagingObstacle" parent="." index="12" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 480, 184.867 )
+scale = Vector2( 0.0258265, 0.0230877 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionPolygon2D" parent="DamagingObstacle/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( 828.5, 3081, 172.783, 3203.26, 443.749, 2510.1, 99.207, 1655.92, 327.049, 1545.7, 254.806, 216.212, 1321.78, 167.992, 1277.32, 1490.6, 1355.12, 1848.8, 1660.76, 2193.23, 1427.36, 2461.88, 1637.42, 3218.91 )
+
+[node name="CollisionShape2D" parent="DamagingObstacle/Area2D" index="0"]
+
+position = Vector2( 798.757, 1639.3 )
+scale = Vector2( 0.514945, 125.709 )
+shape = SubResource( 1 )
+
+[node name="DamagingObstacle2" parent="." index="13" instance=ExtResource( 12 )]
+
+position = Vector2( 647.646, 292.449 )
+scale = Vector2( 0.0316234, 0.0303398 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionPolygon2D" parent="DamagingObstacle2/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( 828.5, 3081, 172.783, 3203.26, 443.749, 2510.1, 99.207, 1655.92, 327.049, 1545.7, 254.806, 216.212, 1321.78, 167.992, 1277.32, 1490.6, 1355.12, 1848.8, 1660.76, 2193.23, 1427.36, 2461.88, 1637.42, 3218.91 )
+
+[node name="CollisionShape2D" parent="DamagingObstacle2/Area2D" index="0"]
+
+position = Vector2( 798.757, 1639.3 )
+scale = Vector2( 0.514945, 125.709 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="EarthStone5/EarthStone/EarthStoneTrigger" to="EarthStone5" method="_on_EarthStoneTrigger_body_entered"]
+
+
+[editable path="Onion"]
+[editable path="EarthStone"]
+[editable path="EarthStone2"]
+[editable path="EarthStone3"]
+[editable path="DamagingObstacle"]
+[editable path="DamagingObstacle2"]

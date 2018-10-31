@@ -1,0 +1,115 @@
+extends KinematicBody2D
+
+const UP = Vector2(0, -1)
+var motion = Vector2()
+var anim
+var newAnim
+var state
+enum {idle, run, jump, fall, climb, dead}
+
+onready var worldNode = get_parent()
+onready var ray = $RayCast2D
+
+export var movespeed = 250
+export var gravity = 20
+export var jumpheight = 550
+export var climbSpeed = 200
+
+export var health = 3 setget setHealth, getHealth
+signal noHp
+signal loseHp
+
+func setHealth(newHealth):
+	if newHealth > 0 && newHealth < health :
+		emit_signal("loseHp")
+	health = newHealth
+	if health <= 0:
+		setState(dead)
+		emit_signal("dead")
+
+func getHealth():
+	return health
+
+func setState(newState):
+	state = newState
+	match state:
+		idle:
+			newAnim = "Onion_Idle"
+		run:
+			newAnim = "Onion_Walk"
+		jump:
+			newAnim = "Onion_JumpUp"
+		fall:
+			newAnim = "Onion_JumpDown"
+		climb:
+			#cimb anim
+			newAnim = "Onion_Idle"
+		dead:
+			rotation_degrees = 90
+			$AnimationPlayer.stop()
+
+func _ready():
+	setState(idle)
+
+func _physics_process(delta):
+	if state != dead:
+		rayUpdate()
+		if newAnim != anim:
+			anim = newAnim
+			$AnimationPlayer.play(anim)
+		
+		if state != climb:
+			motion.y += gravity
+		elif state == climb:
+			if Input.is_action_pressed("ui_up"):
+				motion.y = -climbSpeed
+			elif Input.is_action_pressed("ui_down"):
+				motion.y = climbSpeed
+			else:
+				motion.y = 0
+		
+		if Input.is_action_pressed("ui_right"):
+			motion.x = movespeed
+			$Sprite.scale.x = 1	
+			if is_on_floor() && state != climb:
+				setState(run)
+		elif Input.is_action_pressed("ui_left"):
+			motion.x = -movespeed
+			$Sprite.scale.x = -1
+			if is_on_floor() && state != climb:
+				setState(run)
+		else:	
+			motion.x = 0
+		
+		if is_on_floor():
+			if motion.x == 0 && state != climb:
+				setState(idle)
+			if Input.is_action_just_pressed("jump"):
+				motion.y = -jumpheight
+		else:
+			if state != climb:
+				if motion.y > 0:
+					setState(fall)
+				elif motion.y < 0:
+					setState(jump)
+		motion = move_and_slide(motion, UP)
+
+func bounce(bounceStr):
+	motion.y = -bounceStr
+	motion = move_and_slide(motion, UP)
+	
+func rayUpdate():
+	ray.force_raycast_update()
+	if ray.is_colliding():
+		if global_position.distance_to(ray.get_collision_point()) <= 20:
+			attachTo(ray.get_collider())
+		elif global_position.distance_to(ray.get_collision_point()) > 20:
+			attachTo(worldNode)
+	else:
+		attachTo(worldNode)
+	
+func attachTo(obj):
+	var playerTransform = get_global_transform()
+	get_parent().remove_child(self)
+	obj.add_child(self)
+	set_global_transform(playerTransform)
