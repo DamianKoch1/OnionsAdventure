@@ -20,9 +20,10 @@ signal noHp
 signal loseHp
 
 func setHealth(newHealth):
-	if newHealth > 0 && newHealth < health :
-		emit_signal("loseHp")
+	var oldHealth = health
 	health = newHealth
+	if newHealth < oldHealth :
+		emit_signal("loseHp")
 	if health <= 0:
 		setState(dead)
 		emit_signal("dead")
