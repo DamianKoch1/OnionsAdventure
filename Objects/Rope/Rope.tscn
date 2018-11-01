@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Rope/Rope.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Rope/Rope.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 32.7328, 34.5922 )
 
 [node name="Rope" type="Area2D" index="0"]
 
-position = Vector2( 16, 0 )
-scale = Vector2( 0.5, 4 )
+position = Vector2( 144, 80 )
+scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -20,13 +21,22 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+swingDegrees = 30
+swingSpeed = 0.03
 
-[node name="Area2D" type="Sprite" parent="." index="0"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
+position = Vector2( 0, 224 )
+scale = Vector2( 1, 8 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( 0, 222.5 )
+scale = Vector2( 0.977612, 7.35714 )
 shape = SubResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_Rope_body_entered"]

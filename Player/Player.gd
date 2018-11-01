@@ -5,7 +5,7 @@ var motion = Vector2()
 var anim
 var newAnim
 var state
-enum {idle, run, jump, fall, climb, dead}
+enum {idle, run, jump, fall, climb, dead, swing}
 
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
@@ -100,14 +100,15 @@ func bounce(bounceStr):
 	motion = move_and_slide(motion, UP)
 	
 func rayUpdate():
-	ray.force_raycast_update()
-	if ray.is_colliding():
-		if global_position.distance_to(ray.get_collision_point()) <= 20:
-			attachTo(ray.get_collider())
-		elif global_position.distance_to(ray.get_collision_point()) > 20:
+	if state != climb:
+		ray.force_raycast_update()
+		if ray.is_colliding():
+			if global_position.distance_to(ray.get_collision_point()) <= 20:
+				attachTo(ray.get_collider())
+			elif global_position.distance_to(ray.get_collision_point()) > 20:
+				attachTo(worldNode)
+		else:
 			attachTo(worldNode)
-	else:
-		attachTo(worldNode)
 	
 func attachTo(obj):
 	var playerTransform = get_global_transform()
