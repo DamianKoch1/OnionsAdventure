@@ -14,17 +14,17 @@
 [ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=13]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 151.696, 149.102 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 1775.56, 14.7179 )
@@ -45,8 +45,8 @@ z_index = 1
 
 [node name="Bouncer2" parent="." index="2" instance=ExtResource( 2 )]
 
-position = Vector2( 416, 760 )
-scale = Vector2( 3, 2.25 )
+position = Vector2( 768, 760 )
+scale = Vector2( 51, 2.25 )
 z_index = 1
 
 [node name="Ladder" parent="." index="3" instance=ExtResource( 3 )]
@@ -173,7 +173,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EarthStone5/EarthStone" index="0"]
 
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="EarthStone5/EarthStone" index="1"]
 
@@ -197,7 +197,7 @@ _sections_unfolded = [ "Audio Bus" ]
 
 position = Vector2( 7.62939e-006, -24.6761 )
 scale = Vector2( 0.178771, 0.146426 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="TileMap" parent="EarthStone5" index="1" instance=ExtResource( 9 )]
 
@@ -246,7 +246,7 @@ polygon = PoolVector2Array( 828.5, 3081, 172.783, 3203.26, 443.749, 2510.1, 99.2
 
 position = Vector2( 798.757, 1639.3 )
 scale = Vector2( 0.514945, 125.709 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="DamagingObstacle2" parent="." index="13" instance=ExtResource( 12 )]
 
@@ -263,7 +263,7 @@ polygon = PoolVector2Array( 828.5, 3081, 172.783, 3203.26, 443.749, 2510.1, 99.2
 
 position = Vector2( 798.757, 1639.3 )
 scale = Vector2( 0.514945, 125.709 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [connection signal="body_entered" from="EarthStone5/EarthStone/EarthStoneTrigger" to="EarthStone5" method="_on_EarthStoneTrigger_body_entered"]
 
