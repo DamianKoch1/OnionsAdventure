@@ -41,10 +41,14 @@ func setState(newState):
 		run:
 			newAnim = "Onion_Walk"
 		jump:
-			global_rotation_degrees = 0
+			rotation_degrees = 0
+			global_scale.x = 0.5
+			global_scale.y = 0.5
 			newAnim = "Onion_JumpUp"
 		fall:
-			global_rotation_degrees = 0
+			rotation_degrees = 0
+			global_scale.x = 0.5
+			global_scale.y = 0.5
 			newAnim = "Onion_JumpDown"
 		climb:
 			#cimb anim
@@ -89,6 +93,7 @@ func _physics_process(delta):
 			motion.x = 0
 		
 		if is_on_floor():
+			
 			if motion.x == 0 && state != climb:
 				setState(idle)
 			if Input.is_action_just_pressed("jump"):
