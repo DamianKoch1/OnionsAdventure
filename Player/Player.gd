@@ -59,6 +59,7 @@ func setState(newState):
 
 func _ready():
 	setState(idle)
+
 	
 
 func _physics_process(delta):
