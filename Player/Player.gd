@@ -5,7 +5,9 @@ var motion = Vector2()
 var anim
 var newAnim
 var state
-enum {idle, run, jump, fall, climb, dead}
+enum {idle, run, jump, fall, climb, dead, swing}
+signal swinging
+
 
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
@@ -39,8 +41,10 @@ func setState(newState):
 		run:
 			newAnim = "Onion_Walk"
 		jump:
+			global_rotation_degrees = 0
 			newAnim = "Onion_JumpUp"
 		fall:
+			global_rotation_degrees = 0
 			newAnim = "Onion_JumpDown"
 		climb:
 			#cimb anim
@@ -51,10 +55,12 @@ func setState(newState):
 
 func _ready():
 	setState(idle)
+	
 
 func _physics_process(delta):
 	if state != dead:
-		rayUpdate()
+		if state != climb:
+			rayUpdate()
 		if newAnim != anim:
 			anim = newAnim
 			$AnimationPlayer.play(anim)
@@ -102,8 +108,11 @@ func bounce(bounceStr):
 func rayUpdate():
 	ray.force_raycast_update()
 	if ray.is_colliding():
+		var col = ray.get_collider()
+		if col.name == "ignore":
+			ray.add_exception(col)
 		if global_position.distance_to(ray.get_collision_point()) <= 20:
-			attachTo(ray.get_collider())
+			attachTo(col)
 		elif global_position.distance_to(ray.get_collision_point()) > 20:
 			attachTo(worldNode)
 	else:
@@ -114,3 +123,13 @@ func attachTo(obj):
 	get_parent().remove_child(self)
 	obj.add_child(self)
 	set_global_transform(playerTransform)
+	#print(obj)
+
+
+
+
+#func _on_ignore_area_entered(area):
+	#attachTo(area)
+
+
+

@@ -37,10 +37,12 @@ health = 3
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="0"]
 
+position = Vector2( 0, -64 )
 enabled = true
 exclude_parent = true
-cast_to = Vector2( 0, 100 )
+cast_to = Vector2( 0, 200 )
 collision_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
@@ -55,7 +57,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite" index="0"]
 
-editor/display_folded = true
 position = Vector2( 0.50386, -42.567 )
 scale = Vector2( 0.5, 0.635893 )
 z_index = 1
@@ -123,5 +124,26 @@ anims/Onion_JumpDown = ExtResource( 10 )
 anims/Onion_JumpUp = ExtResource( 11 )
 anims/Onion_Walk = ExtResource( 12 )
 blend_times = [  ]
+
+[node name="ignore" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ignore" index="0"]
+
+position = Vector2( 0, -32.2171 )
+scale = Vector2( 1, 0.989124 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="area_entered" from="ignore" to="." method="_on_ignore_area_entered"]
+
+[connection signal="area_exited" from="ignore" to="." method="_on_ignore_area_exited"]
 
 
