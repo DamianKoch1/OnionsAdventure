@@ -128,13 +128,9 @@ func attachTo(obj):
 	get_parent().remove_child(self)
 	obj.add_child(self)
 	set_global_transform(playerTransform)
-	#print(obj)
 
 
 
-
-#func _on_ignore_area_entered(area):
-	#attachTo(area)
 
 
 
