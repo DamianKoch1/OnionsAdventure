@@ -52,6 +52,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Node2D" parent="." index="2"]
 
+position = Vector2( -0.463928, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite" index="0"]

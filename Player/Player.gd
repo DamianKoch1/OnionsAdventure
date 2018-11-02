@@ -5,9 +5,7 @@ var motion = Vector2()
 var anim
 var newAnim
 var state
-enum {idle, run, jump, fall, climb, dead, swing}
-signal swinging
-
+enum {idle, run, jump, fall, climb, dead}
 
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D

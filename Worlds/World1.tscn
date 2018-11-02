@@ -50,6 +50,7 @@ z_index = 1
 position = Vector2( 768, 760 )
 scale = Vector2( 51, 2.25 )
 z_index = 1
+maxBounceStr = 1100
 
 [node name="Ladder" parent="." index="3" instance=ExtResource( 3 )]
 
@@ -60,7 +61,7 @@ z_as_relative = false
 
 [node name="Onion" parent="." index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 1344, -96 )
+position = Vector2( 1386.17, -58.3384 )
 z_index = 5
 z_as_relative = false
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -223,7 +224,8 @@ _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
 [node name="Camera" parent="." index="10" instance=ExtResource( 10 )]
 
-position = Vector2( 94.2725, 233.927 )
+position = Vector2( 147.328, 222.703 )
+scale = Vector2( 1.10689, 0.967083 )
 _sections_unfolded = [ "Transform" ]
 camSpeed = 0.05
 
@@ -274,7 +276,6 @@ position = Vector2( 288, -32 )
 [node name="Box" parent="." index="15" instance=ExtResource( 15 )]
 
 position = Vector2( 1504, -128 )
-brakeSpeed = 0.04
 
 [connection signal="body_entered" from="EarthStone5/EarthStone/EarthStoneTrigger" to="EarthStone5" method="_on_EarthStoneTrigger_body_entered"]
 

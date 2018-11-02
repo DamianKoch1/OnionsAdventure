@@ -22,16 +22,14 @@ func _physics_process(delta):
 		moveDistance += platformSpeed
 		platform.global_position.x = lerp(pos1.x, pos2.x, moveDistance)
 		platform.global_position.y = lerp(pos1.y, pos2.y, moveDistance)
-	
 	if moveDistance >= 1:
 		state = idle
 		moveDistance = 0
-	
+
 func _on_EarthStoneTrigger_body_entered(body):
 	if body.name == "Onion" && player == null:
 		player = body
 		worldNode = player.get_parent()
-	
 	if body == player && state == idle && player.motion.y > player.gravity*15:
 		if platform.global_position == pos1:
 			state = movingTo2

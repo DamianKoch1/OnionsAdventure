@@ -1,19 +1,24 @@
 extends KinematicBody2D
 
 var motion = Vector2()
-onready var player = get_parent().find_node("Onion")
-onready var worldNode = player.get_parent()
+var player
 export var brakeSpeed = 0.04
-
+onready var isPushed = false
+export var gravity = 12
 
 func _physics_process(delta):
-	if player != null:
-		print(str(global_position.y)+"a")
-		print(player.global_position.y)
-		motion.y += player.gravity /1.3
-		motion = move_and_slide(motion)
-		if abs(global_position.x - player.global_position.x) < 65 && player.is_on_floor():
-			motion.x = player.motion.x
-		else:
-			motion.x = lerp(motion.x, 0, brakeSpeed)
+	if isPushed == true:
+		motion.x = player.motion.x
+	else:
+		motion.x = lerp(motion.x, 0, brakeSpeed)
+	motion.y += gravity
+	motion = move_and_slide(motion)
 
+func _on_Area2D_body_entered(body):
+	if body.name == "Onion":
+		player = body
+		isPushed = true
+
+func _on_Area2D_body_exited(body):
+	if body.name == "Onion":
+		isPushed = false

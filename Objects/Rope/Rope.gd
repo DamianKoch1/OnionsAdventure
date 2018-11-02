@@ -4,8 +4,6 @@ export var swingDegrees = 30
 export var swingSpeed = 0.03
 onready var swingAmount = 0
 
-
-
 func _physics_process(delta):
 	swingAmount += swingSpeed
 	if swingAmount >= 20*PI:
