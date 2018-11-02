@@ -128,6 +128,7 @@ func attachTo(obj):
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
+		rotation_degrees = 0
 
 
 
