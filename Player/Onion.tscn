@@ -31,7 +31,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 movespeed = 250
 gravity = 20
-jumpheight = 550
+jumpheight = 450
 climbSpeed = 200
 health = 3
 
