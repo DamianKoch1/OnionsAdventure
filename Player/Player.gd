@@ -123,10 +123,11 @@ func rayUpdate():
 		attachTo(worldNode)
 	
 func attachTo(obj):
-	var transf = get_global_transform()
-	get_parent().remove_child(self)
-	obj.add_child(self)
-	set_global_transform(transf)
+	if obj.get_class() != "Area2D":
+		var transf = get_global_transform()
+		get_parent().remove_child(self)
+		obj.add_child(self)
+		set_global_transform(transf)
 
 
 
