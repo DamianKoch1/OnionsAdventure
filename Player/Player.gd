@@ -123,10 +123,10 @@ func rayUpdate():
 		attachTo(worldNode)
 	
 func attachTo(obj):
-	var playerTransform = get_global_transform()
+	var transf = get_global_transform()
 	get_parent().remove_child(self)
 	obj.add_child(self)
-	set_global_transform(playerTransform)
+	set_global_transform(transf)
 
 
 

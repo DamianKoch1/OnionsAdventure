@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Ladder/asset_vine_grass_1.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -29,6 +29,7 @@ __meta__ = {
 
 modulate = Color( 0.675781, 0.57019, 0, 1 )
 position = Vector2( -32, -32 )
+scale = Vector2( 0.0995334, 0.0263809 )
 texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]

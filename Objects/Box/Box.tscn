@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Objects/Box/Box.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Box/asset_wooden_box_1.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -25,7 +25,7 @@ gravity = 12
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0.441406, 0.206909, 0, 1 )
+scale = Vector2( 0.101266, 0.109215 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
