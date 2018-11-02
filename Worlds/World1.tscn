@@ -131,9 +131,7 @@ scale = Vector2( 3.2, 3.2 )
 
 [node name="EarthStone3" parent="." index="7" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 992, 576 )
-platformSpeed = 0.005
 
 [node name="EarthStone" parent="EarthStone3/TileMap" index="0"]
 
@@ -148,8 +146,8 @@ destroyRadius = 262
 
 [node name="State2" parent="EarthStone3" index="2"]
 
-position = Vector2( -352, -32 )
-scale = Vector2( 3.2, 3.2 )
+position = Vector2( -256, -16 )
+scale = Vector2( 3.2, 4.8 )
 
 [node name="EarthStone5" type="Node2D" parent="." index="8"]
 

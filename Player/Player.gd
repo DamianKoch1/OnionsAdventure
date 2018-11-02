@@ -113,11 +113,11 @@ func rayUpdate():
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
-		if col.name == "ignore":
+		if col.get_class() == "Area2D":
 			ray.add_exception(col)
-		if global_position.distance_to(ray.get_collision_point()) <= 20:
+		if global_position.distance_to(ray.get_collision_point()) <= 30:
 			attachTo(col)
-		elif global_position.distance_to(ray.get_collision_point()) > 20:
+		elif global_position.distance_to(ray.get_collision_point()) > 30:
 			attachTo(worldNode)
 	else:
 		attachTo(worldNode)

@@ -15,9 +15,6 @@ func _on_FireStoneTrigger_body_entered(body):
 		if body.motion.y > body.gravity*15:
 			if triggered == false:
 				var distanceToObject = global_position.distance_to(objToDestroy.global_position)
-				print(distanceToObject)
 				if body.motion.y > 3 && global_position.distance_to(objToDestroy.global_position) < destroyRadius:
 					objToDestroy.get_parent().remove_child(objToDestroy)
 					triggered = true
-				else:
-					print("OUT OF RANGE")

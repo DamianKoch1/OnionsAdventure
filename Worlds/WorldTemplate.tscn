@@ -6,7 +6,7 @@
 [ext_resource path="res://Player/Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.tscn" type="PackedScene" id=5]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
