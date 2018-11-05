@@ -7,7 +7,7 @@ func _process(delta):
 	if damageCD > 0:
 		damageCD = max(damageCD-delta, 0)
 
-func _on_Area2D_body_entered(body):
+func _on_Trigger_body_entered(body):
 	if body.name == "Onion":
 		if damageCD == 0:
 			damageCD = 1

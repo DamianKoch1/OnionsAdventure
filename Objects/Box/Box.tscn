@@ -11,7 +11,7 @@ extents = Vector2( 32, 32 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 36.9395, 30.5873 )
+extents = Vector2( 46.7717, 36.8304 )
 
 [node name="Box" type="KinematicBody2D"]
 
@@ -20,7 +20,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-brakeSpeed = 0.04
+brakeSpeed = 0.08
 gravity = 12
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
@@ -46,12 +46,10 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( 0, 13.607 )
-scale = Vector2( 1, 0.594878 )
+position = Vector2( 0, 10.9564 )
+scale = Vector2( 1, 0.52833 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 
 
