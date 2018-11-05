@@ -12,7 +12,7 @@ extents = Vector2( 465.076, 1133.96 )
 custom_solver_bias = 0.0
 extents = Vector2( 791.922, 1453.1 )
 
-[node name="Sprite" type="Sprite"]
+[node name="Sprite" type="Sprite" index="0"]
 
 script = ExtResource( 1 )
 
@@ -28,6 +28,8 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collider" index="0"]
 
+position = Vector2( 5.24521e-006, -160.494 )
+scale = Vector2( 0.13673, 0.140292 )
 shape = SubResource( 1 )
 
 [node name="Trigger" type="Area2D" parent="." index="1"]
@@ -42,6 +44,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" index="0"]
 
+position = Vector2( -1.04904e-005, -192 )
+scale = Vector2( 0.161022, 0.131859 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Trigger" to="." method="_on_Trigger_body_entered"]
