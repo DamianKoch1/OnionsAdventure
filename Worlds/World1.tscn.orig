@@ -1,4 +1,8 @@
+<<<<<<< working copy
+[gd_scene load_steps=21 format=2]
+=======
 [gd_scene load_steps=20 format=2]
+>>>>>>> merge rev
 
 [ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
@@ -11,12 +15,21 @@
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/Camera.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.tscn" type="PackedScene" id=11]
+<<<<<<< working copy
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=13]
+[ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=17]
+=======
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=17]
+>>>>>>> merge rev
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -28,7 +41,7 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 151.696, 149.102 )
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -231,19 +244,71 @@ camSpeed = 0.05
 position = Vector2( 160, 224 )
 scale = Vector2( 1.73437, 1 )
 
+<<<<<<< working copy
+[node name="DamagingObstacle" parent="." index="12" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 480, 184.867 )
+scale = Vector2( 0.0258265, 0.0230877 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionPolygon2D" parent="DamagingObstacle/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( 828.5, 3081, 172.783, 3203.26, 443.749, 2510.1, 99.207, 1655.92, 327.049, 1545.7, 254.806, 216.212, 1321.78, 167.992, 1277.32, 1490.6, 1355.12, 1848.8, 1660.76, 2193.23, 1427.36, 2461.88, 1637.42, 3218.91 )
+
+[node name="CollisionShape2D" parent="DamagingObstacle/Area2D" index="0"]
+
+position = Vector2( 798.757, 1639.3 )
+scale = Vector2( 0.514945, 125.709 )
+shape = SubResource( 3 )
+
+[node name="DamagingObstacle2" parent="." index="13" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 647.646, 292.449 )
+scale = Vector2( 0.0316234, 0.0303398 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionPolygon2D" parent="DamagingObstacle2/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( 828.5, 3081, 172.783, 3203.26, 443.749, 2510.1, 99.207, 1655.92, 327.049, 1545.7, 254.806, 216.212, 1321.78, 167.992, 1277.32, 1490.6, 1355.12, 1848.8, 1660.76, 2193.23, 1427.36, 2461.88, 1637.42, 3218.91 )
+
+[node name="CollisionShape2D" parent="DamagingObstacle2/Area2D" index="0"]
+
+position = Vector2( 798.757, 1639.3 )
+scale = Vector2( 0.514945, 125.709 )
+shape = SubResource( 3 )
+
+[node name="Rope" parent="." index="14" instance=ExtResource( 14 )]
+=======
 [node name="Rope" parent="." index="12" instance=ExtResource( 12 )]
+>>>>>>> merge rev
 
 position = Vector2( 1440, -320 )
 
+<<<<<<< working copy
+[node name="Box" parent="." index="15" instance=ExtResource( 15 )]
+=======
 [node name="Box" parent="." index="13" instance=ExtResource( 13 )]
+>>>>>>> merge rev
 
 position = Vector2( 96, 224 )
 
+<<<<<<< working copy
+[node name="Checkpoint" parent="." index="16" instance=ExtResource( 16 )]
+=======
 [node name="Checkpoint" parent="." index="14" instance=ExtResource( 14 )]
+>>>>>>> merge rev
 
 position = Vector2( 832, -32 )
 
+<<<<<<< working copy
+[node name="Trap" parent="." index="17" instance=ExtResource( 17 )]
+=======
 [node name="Trap" parent="." index="15" instance=ExtResource( 15 )]
+>>>>>>> merge rev
 
 position = Vector2( -224, 320 )
 scale = Vector2( 0.5, 0.5 )
