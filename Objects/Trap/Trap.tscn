@@ -16,8 +16,9 @@ extents = Vector2( 192, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 27.7846, 159.975 )
 
-[node name="Trap" type="Area2D"]
+[node name="Trap" type="Area2D" index="0"]
 
+scale = Vector2( 0.407591, 0.407591 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -26,6 +27,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="base" type="Sprite" parent="." index="0"]
 
