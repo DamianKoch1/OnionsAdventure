@@ -8,9 +8,9 @@ func _ready():
 
 func _on_Trap_body_entered(body):
 	if triggered == false:
-		if body.name != "StaticBody2D":
+		if body.name != "StaticBody2D" || body.name != "TileMap":
 			triggered = true
 			triggeredBody.disabled = false
 			$AnimationPlayer.play("Snap")
 			if body.name == "Onion":
-				body.health = 0
+				body.health -= 1

@@ -19,7 +19,7 @@ custom_solver_bias = 0.0
 radius = 17.613
 height = 34.0682
 
-[node name="Onion" type="KinematicBody2D"]
+[node name="Onion" type="KinematicBody2D" index="0"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
@@ -57,8 +57,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite" index="0"]
 
-position = Vector2( 0.50386, -42.567 )
-scale = Vector2( 0.5, 0.635893 )
+position = Vector2( 0.50386, -18.941 )
+scale = Vector2( 0.5, 0.298058 )
 z_index = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
@@ -66,7 +66,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="OnionHair" type="Sprite" parent="Sprite/OnionBody" index="0"]
 
 position = Vector2( 7.13066, -40.2171 )
-rotation = 0.379986
+rotation = 0.00358834
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 3 )
 offset = Vector2( -2.05788, -20.5568 )
@@ -89,24 +89,24 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="OnionEarL" type="Sprite" parent="Sprite" index="1"]
 
-position = Vector2( 0.468755, -60.396 )
-rotation = -0.00576014
+position = Vector2( 0.468691, -29.7288 )
+rotation = 0.282815
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 offset = Vector2( -49.4588, -96.8829 )
 
 [node name="OnionEarR" type="Sprite" parent="Sprite" index="2"]
 
-position = Vector2( -4.05026, -60.202 )
-rotation = -0.870691
+position = Vector2( -4.04999, -28.8692 )
+rotation = -0.572655
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 offset = Vector2( -15.5284, -107.047 )
 
 [node name="OnionTail" type="Sprite" parent="Sprite" index="3"]
 
-position = Vector2( -18.3196, -11.677 )
-rotation = -0.47466
+position = Vector2( -18.3196, -6.67652 )
+rotation = -0.0640929
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 offset = Vector2( -27.0576, -23.7384 )
