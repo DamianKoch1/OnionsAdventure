@@ -8,7 +8,7 @@ export var gravity = 12
 
 func _physics_process(delta):
 	if isPushed == true:
-		motion.x = player.motion.x
+		global_position.x = lerp(global_position.x, global_position.x -(player.global_position.x-global_position.x), 0.05)
 	else:
 		motion.x = lerp(motion.x, 0, brakeSpeed)
 	motion.y += gravity
