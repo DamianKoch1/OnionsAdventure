@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Worlds/WorldTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Objects/Ladder/asset_vine_1.png" type="Texture" id=13]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -27,7 +28,7 @@ position = Vector2( 55.558, -369.463 )
 
 [node name="Onion" parent="." index="1"]
 
-position = Vector2( -192, 128 )
+position = Vector2( 1210.58, 149.177 )
 scale = Vector2( 0.5, 0.503912 )
 
 [node name="TileMap" parent="." index="2"]
@@ -90,37 +91,25 @@ polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606
 position = Vector2( 576, -32 )
 scale = Vector2( 0.952712, 0.952712 )
 
-[node name="Trap" parent="." index="8" instance=ExtResource( 2 )]
-
-position = Vector2( 640, 224 )
-scale = Vector2( 1, 0.465593 )
-texture = ExtResource( 8 )
-
-[node name="Trap2" parent="." index="9" instance=ExtResource( 2 )]
-
-position = Vector2( 736, 224 )
-scale = Vector2( 1, 0.465593 )
-texture = ExtResource( 8 )
-
-[node name="Trap3" parent="." index="10" instance=ExtResource( 2 )]
+[node name="Trap3" parent="." index="8" instance=ExtResource( 2 )]
 
 position = Vector2( 2080, 320 )
 scale = Vector2( 1, 0.449226 )
 texture = ExtResource( 8 )
 
-[node name="Trap4" parent="." index="11" instance=ExtResource( 2 )]
+[node name="Trap4" parent="." index="9" instance=ExtResource( 2 )]
 
 position = Vector2( 2144, 320 )
 scale = Vector2( 1, 0.449226 )
 texture = ExtResource( 8 )
 
-[node name="Trap5" parent="." index="12" instance=ExtResource( 2 )]
+[node name="Trap5" parent="." index="10" instance=ExtResource( 2 )]
 
 position = Vector2( 3776, 160 )
 scale = Vector2( 1, 0.449226 )
 texture = ExtResource( 8 )
 
-[node name="Baumstumpf gr 2" parent="." index="13" instance=ExtResource( 2 )]
+[node name="Baumstumpf gr 2" parent="." index="11" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 952.372, 47.0786 )
@@ -139,14 +128,13 @@ polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93
 
 editor/display_folded = true
 position = Vector2( -265.343, 600.014 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionPolygon2D" parent="Baumstumpf gr 2/Ast 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="dried tendril" parent="." index="14" instance=ExtResource( 9 )]
+[node name="dried tendril" parent="." index="12" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 1086.06, 36.2059 )
@@ -159,17 +147,17 @@ position = Vector2( 829.078, 1544.19 )
 scale = Vector2( 0.854165, 0.845324 )
 shape = SubResource( 1 )
 
-[node name="Checkpoint" parent="." index="15" instance=ExtResource( 11 )]
+[node name="Checkpoint" parent="." index="13" instance=ExtResource( 11 )]
 
 position = Vector2( 1287.47, 140.249 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Checkpoint2" parent="." index="16" instance=ExtResource( 11 )]
+[node name="Checkpoint2" parent="." index="14" instance=ExtResource( 11 )]
 
 position = Vector2( 4512, 160 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Ladder" parent="." index="17" instance=ExtResource( 12 )]
+[node name="Ladder" parent="." index="15" instance=ExtResource( 12 )]
 
 editor/display_folded = true
 position = Vector2( 1726.52, 110.793 )
@@ -179,7 +167,7 @@ scale = Vector2( 1, 4.64753 )
 
 texture = ExtResource( 13 )
 
-[node name="Baumstumpf gr 3" parent="." index="18" instance=ExtResource( 2 )]
+[node name="Baumstumpf gr 3" parent="." index="16" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 2270.53, -51.8474 )
@@ -190,12 +178,12 @@ texture = ExtResource( 4 )
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
-[node name="Box2" parent="." index="19" instance=ExtResource( 7 )]
+[node name="Box2" parent="." index="17" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 1984, 32 )
 
-[node name="dried tendril2" parent="." index="20" instance=ExtResource( 9 )]
+[node name="dried tendril2" parent="." index="18" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 2400, -64 )
@@ -208,7 +196,7 @@ position = Vector2( 829.078, 1544.19 )
 scale = Vector2( 0.854165, 0.845324 )
 shape = SubResource( 1 )
 
-[node name="Baumstumpf gr 4" parent="." index="21" instance=ExtResource( 2 )]
+[node name="Baumstumpf gr 4" parent="." index="19" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1887.96, 238.87 )
@@ -219,7 +207,6 @@ texture = ExtResource( 4 )
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionPolygon2D" parent="Baumstumpf gr 4/Ast 1/StaticBody2D" index="0"]
@@ -241,7 +228,7 @@ texture = ExtResource( 6 )
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
-[node name="Baumstumpf gr 5" parent="." index="22" instance=ExtResource( 2 )]
+[node name="Baumstumpf gr 5" parent="." index="20" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 2222.72, 238.87 )
@@ -252,7 +239,6 @@ texture = ExtResource( 4 )
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionPolygon2D" parent="Baumstumpf gr 5/Ast 1/StaticBody2D" index="0"]
@@ -274,7 +260,7 @@ texture = ExtResource( 6 )
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
-[node name="Ladder2" parent="." index="23" instance=ExtResource( 12 )]
+[node name="Ladder2" parent="." index="21" instance=ExtResource( 12 )]
 
 editor/display_folded = true
 position = Vector2( 2720, 192 )
@@ -284,7 +270,7 @@ scale = Vector2( 1, 3.25 )
 
 texture = ExtResource( 13 )
 
-[node name="Baumstumpf klein 2" parent="." index="24" instance=ExtResource( 2 )]
+[node name="Baumstumpf klein 2" parent="." index="22" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 2878.52, 152.607 )
@@ -295,7 +281,7 @@ texture = ExtResource( 3 )
 
 polygon = PoolVector2Array( 539.198, 0, 1437.86, 0, 1437.86, 718.93, 539.198, 718.93 )
 
-[node name="Baumstumpf gr 6" parent="." index="25" instance=ExtResource( 2 )]
+[node name="Baumstumpf gr 6" parent="." index="23" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 3051.99, 76.3321 )
@@ -306,7 +292,6 @@ texture = ExtResource( 4 )
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionPolygon2D" parent="Baumstumpf gr 6/Ast 1/StaticBody2D" index="0"]
@@ -328,7 +313,7 @@ texture = ExtResource( 6 )
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
-[node name="Ladder3" parent="." index="26" instance=ExtResource( 12 )]
+[node name="Ladder3" parent="." index="24" instance=ExtResource( 12 )]
 
 editor/display_folded = true
 position = Vector2( 3299.02, -12.3438 )
@@ -338,11 +323,11 @@ scale = Vector2( 1, 3.25 )
 
 texture = ExtResource( 13 )
 
-[node name="Box3" parent="." index="27" instance=ExtResource( 7 )]
+[node name="Box3" parent="." index="25" instance=ExtResource( 7 )]
 
 position = Vector2( 3520, -64 )
 
-[node name="dried tendril3" parent="." index="28" instance=ExtResource( 9 )]
+[node name="dried tendril3" parent="." index="26" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 4320, 64 )
@@ -355,12 +340,22 @@ position = Vector2( 829.078, 1544.19 )
 scale = Vector2( 0.854165, 0.845324 )
 shape = SubResource( 1 )
 
-[node name="Obstacle" parent="." index="29" instance=ExtResource( 2 )]
+[node name="Obstacle" parent="." index="27" instance=ExtResource( 2 )]
 
 modulate = Color( 0.167101, 0.890625, 0.125244, 1 )
 position = Vector2( 4032, 128 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Material", "Offset", "Visibility" ]
+
+[node name="Trap6" parent="." index="28" instance=ExtResource( 14 )]
+
+position = Vector2( 724.385, 245.151 )
+scale = Vector2( 0.407591, 0.407591 )
+
+[node name="Trap7" parent="." index="29" instance=ExtResource( 14 )]
+
+position = Vector2( 2112, 352 )
+scale = Vector2( 0.210636, 0.210636 )
 
 
 [editable path="Baumstumpf klein 1"]
@@ -388,3 +383,4 @@ _sections_unfolded = [ "Material", "Offset", "Visibility" ]
 [editable path="Ladder3"]
 [editable path="dried tendril3"]
 [editable path="Obstacle"]
+[editable path="Trap6"]
