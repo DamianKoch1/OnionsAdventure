@@ -16,7 +16,7 @@ extents = Vector2( 192, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 27.7846, 159.975 )
 
-[node name="Trap" type="Area2D" index="0"]
+[node name="Trap" type="Area2D"]
 
 scale = Vector2( 0.407591, 0.407591 )
 input_pickable = true
