@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/floor_finally_3x3_new_new.png" type="Texture" id=1]
 [ext_resource path="res://Assets/edge.png" type="Texture" id=2]
 [ext_resource path="res://Assets/floor_w_grass_1_1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/floor_w_grass_1_2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/floor_w_grass_1_3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/gray-stone.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -403,6 +404,35 @@ bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="15/StaticBody2D" index="0"]
+
+position = Vector2( 88, 88 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="16" type="Sprite" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( 1056, 704 )
+texture = ExtResource( 6 )
+centered = false
+region_rect = Rect2( 352, 352, 176, 176 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="16" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="16/StaticBody2D" index="0"]
 
 position = Vector2( 88, 88 )
 shape = SubResource( 1 )
