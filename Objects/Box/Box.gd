@@ -12,7 +12,7 @@ func _physics_process(delta):
 	rayUpdate()
 	if isPushed == true:
 		motion.x = player.motion.x
-		if abs(player.motion.y) >= 20 || abs(motion.y) >= 20:
+		if abs(player.motion.y) >= 25 || abs(motion.y) >= 25:
 			isPushed = false
 	else:
 		motion.x = lerp(motion.x, 0, brakeSpeed)
@@ -43,7 +43,7 @@ func rayUpdate():
 		attachTo(worldNode)
 
 func attachTo(obj):
-	if obj.get_class() != "Area2D":
+	if obj.get_class() != "Area2D" && obj != get_parent():
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)

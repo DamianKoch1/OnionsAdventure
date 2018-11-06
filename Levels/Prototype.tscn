@@ -103,8 +103,7 @@ position = Vector2( 0, 320 )
 
 [node name="EarthStone2" parent="." index="6" instance=ExtResource( 5 )]
 
-editor/display_folded = true
-position = Vector2( 1120, 352 )
+position = Vector2( 1120, 576 )
 platformSpeed = 2
 
 [node name="TileMap" parent="EarthStone2" index="0"]
@@ -113,7 +112,7 @@ tile_data = PoolIntArray( -196604, 2, 0, -196603, 2, 0, -131068, 2, 0, -131066, 
 
 [node name="State2" parent="EarthStone2" index="2"]
 
-position = Vector2( 5.72205e-006, 224 )
+position = Vector2( 5.72205e-006, -320 )
 scale = Vector2( 3.2, 3.2 )
 
 [node name="EarthStone3" parent="." index="7" instance=ExtResource( 5 )]
@@ -151,7 +150,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="State2" type="Position2D" parent="EarthStone5" index="2"]
 
-position = Vector2( 160, -256 )
+position = Vector2( 160, -288 )
 scale = Vector2( 3.2, 3.2 )
 _sections_unfolded = [ "Transform" ]
 
@@ -176,11 +175,13 @@ scale = Vector2( 1.73437, 1 )
 
 [node name="Rope" parent="." index="12" instance=ExtResource( 11 )]
 
-position = Vector2( 1440, -320 )
+position = Vector2( 1440, -288 )
 
 [node name="Box" parent="." index="13" instance=ExtResource( 12 )]
 
 position = Vector2( 96, 224 )
+z_index = 5
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Checkpoint" parent="." index="14" instance=ExtResource( 13 )]
 

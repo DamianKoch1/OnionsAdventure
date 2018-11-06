@@ -121,7 +121,7 @@ func rayUpdate():
 		attachTo(worldNode)
 	
 func attachTo(obj):
-	if obj.get_class() != "Area2D":
+	if obj.get_class() != "Area2D" && obj.get_class() != "KinematicBody2D":
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)
