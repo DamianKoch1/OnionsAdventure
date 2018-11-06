@@ -20,4 +20,4 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.name == "Onion":
 		player.setState(player.jump)
-		player.bounce(min(abs(rotation_degrees)*20, 600))
+		player.bounce(min(abs(rotation_degrees)*660*swingSpeed, 600))
