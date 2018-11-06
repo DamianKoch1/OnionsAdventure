@@ -107,46 +107,49 @@ position = Vector2( 7.18484, 7.78357 )
 
 position = Vector2( -207.215, 79.8556 )
 
-[node name="Baumstumpf klein 1" parent="." index="5" instance=ExtResource( 2 )]
+[node name="stump s 1" parent="." index="5" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -32, 85.2306 )
 scale = Vector2( 0.0556382, 0.0574858 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="CollisionPolygon2D" parent="Baumstumpf klein 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump s 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 539.198, 0, 1437.86, 0, 1437.86, 718.93, 539.198, 718.93 )
 
-[node name="Baumstumpf gr 1" parent="." index="6" instance=ExtResource( 2 )]
+[node name="stump m 1" parent="." index="6" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 110, 10 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
-[node name="Ast 1" parent="Baumstumpf gr 1" index="1" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 1" index="1" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -246.908, 214.06 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 1/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 1/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="Ast 2" parent="Baumstumpf gr 1" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump m 1" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 1/Ast 2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 1/branch 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
@@ -154,28 +157,28 @@ polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606
 
 position = Vector2( 576, -32 )
 
-[node name="Baumstumpf gr 2" parent="." index="8" instance=ExtResource( 2 )]
+[node name="stump m 2" parent="." index="8" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 952.372, 47.0786 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="StaticBody2D" parent="Baumstumpf gr 2" index="0"]
+[node name="StaticBody2D" parent="stump m 2" index="0"]
 
 editor/display_folded = true
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
-[node name="Ast 1" parent="Baumstumpf gr 2" index="1" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 2" index="1" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -265.343, 600.014 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 2/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 2/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
@@ -204,14 +207,14 @@ scale = Vector2( 1, 4.64753 )
 
 texture = ExtResource( 10 )
 
-[node name="Baumstumpf gr 3" parent="." index="13" instance=ExtResource( 2 )]
+[node name="stump m 3" parent="." index="13" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 2270.53, -51.8474 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 3/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 3/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
@@ -221,67 +224,59 @@ editor/display_folded = true
 position = Vector2( 1984, 32 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Baumstumpf gr 4" parent="." index="15" instance=ExtResource( 2 )]
+[node name="stump m 4" parent="." index="15" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1887.96, 238.87 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 4" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 4" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 4/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 4/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 4/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
-
-[node name="Ast 2" parent="Baumstumpf gr 4" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump m 4" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 4/Ast 2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 4/branch 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
-[node name="Baumstumpf gr 5" parent="." index="16" instance=ExtResource( 2 )]
+[node name="stump m 5" parent="." index="16" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 2222.72, 238.87 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 5" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 5" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 5/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 5/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 5/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
-
-[node name="Ast 2" parent="Baumstumpf gr 5" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump m 5" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 5/Ast 2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 5/branch 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
@@ -295,46 +290,46 @@ scale = Vector2( 1, 3.25 )
 
 texture = ExtResource( 10 )
 
-[node name="Baumstumpf klein 2" parent="." index="18" instance=ExtResource( 2 )]
+[node name="stump s 2" parent="." index="18" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 2878.52, 152.607 )
 scale = Vector2( 0.0556382, 0.0574858 )
 texture = ExtResource( 3 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf klein 2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump s 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 539.198, 0, 1437.86, 0, 1437.86, 718.93, 539.198, 718.93 )
 
-[node name="Baumstumpf gr 6" parent="." index="19" instance=ExtResource( 2 )]
+[node name="stump m 6" parent="." index="19" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 3051.99, 76.3321 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 6" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 6" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 6/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 6/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 6/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 6/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
-[node name="Ast 2" parent="Baumstumpf gr 6" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump m 6" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 6/Ast 2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 6/branch 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
@@ -405,24 +400,24 @@ position = Vector2( 5050, -190 )
 
 position = Vector2( 5370, 290 )
 
-[node name="Baumstumpf gr 7" parent="." index="31" instance=ExtResource( 2 )]
+[node name="stump m 7" parent="." index="31" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 5030, 200 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 7" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 7" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 7/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 7/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 7/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 7/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
@@ -478,35 +473,35 @@ position = Vector2( 5680, -200 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../dried tendril9")
 
-[node name="Baumstumpf klein 3" parent="." index="39" instance=ExtResource( 2 )]
+[node name="stump s 3" parent="." index="39" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 6114.59, 60 )
 scale = Vector2( 0.0556382, 0.0574858 )
 texture = ExtResource( 3 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf klein 3/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump s 3/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 539.198, 0, 1437.86, 0, 1437.86, 718.93, 539.198, 718.93 )
 
-[node name="Baumstumpf gr 8" parent="." index="40" instance=ExtResource( 2 )]
+[node name="stump m 8" parent="." index="40" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 6290, -20 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 8" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 8" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 8/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 8/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 8/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 8/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
@@ -514,78 +509,78 @@ polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93
 
 position = Vector2( 6500, 90 )
 
-[node name="Baumstumpf klein 4" parent="." index="42" instance=ExtResource( 2 )]
+[node name="stump s 4" parent="." index="42" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 6570, 60 )
 scale = Vector2( 0.0556382, 0.0574858 )
 texture = ExtResource( 3 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf klein 4/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump s 4/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 539.198, 0, 1437.86, 0, 1437.86, 718.93, 539.198, 718.93 )
 
-[node name="Baumstumpf gr 9" parent="." index="43" instance=ExtResource( 2 )]
+[node name="stump m 9" parent="." index="43" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 6730, -20 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 9" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 9" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 9/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 9/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 9/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 9/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
-[node name="Ast 2" parent="Baumstumpf gr 9" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump m 9" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 9/Ast 2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 9/branch 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
-[node name="Baumstumpf gr 10" parent="." index="44" instance=ExtResource( 2 )]
+[node name="stump m 10" parent="." index="44" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 8310, 210 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 10" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 10" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 10/Ast 1/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 10/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 10/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 10/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
-[node name="Ast 2" parent="Baumstumpf gr 10" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump m 10" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 10/Ast 2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump m 10/branch 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
@@ -639,170 +634,172 @@ position = Vector2( 8770, 310 )
 
 position = Vector2( 10515.2, 403.346 )
 
-[node name="dried tendril" parent="." index="55" instance=ExtResource( 14 )]
+[node name="thornbush" parent="." index="55" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 1120, 100 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="CollisionShape2D" parent="dried tendril/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush/Trigger" index="0"]
 
 position = Vector2( 23.3049, 24.949 )
 scale = Vector2( 0.15939, 0.155259 )
 
-[node name="dried tendril6" parent="." index="56" instance=ExtResource( 14 )]
+[node name="thornbush2" parent="." index="56" instance=ExtResource( 14 )]
 
+editor/display_folded = true
 position = Vector2( 2440.49, 4.87675 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
 
-[node name="CollisionShape2D" parent="dried tendril6/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush2/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril6/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush2/Trigger" index="0"]
 
 position = Vector2( -1.04904e-005, 24.7307 )
 scale = Vector2( 0.161022, 0.153324 )
 
-[node name="dried tendril7" parent="." index="57" instance=ExtResource( 14 )]
+[node name="thornbush3" parent="." index="57" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 4332.13, 133.868 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
 
-[node name="CollisionShape2D" parent="dried tendril7/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush3/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril7/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush3/Trigger" index="0"]
 
 position = Vector2( -1.04904e-005, 47.0887 )
 scale = Vector2( 0.161022, 0.155538 )
 
-[node name="dried tendril8" parent="." index="58" instance=ExtResource( 14 )]
+[node name="thornbush4" parent="." index="58" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 5710.55, 260.486 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
 
-[node name="CollisionShape2D" parent="dried tendril8/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush4/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril8/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush4/Trigger" index="0"]
 
 position = Vector2( -1.04904e-005, 35.9943 )
 scale = Vector2( 0.161022, 0.154439 )
 
-[node name="dried tendril10" parent="." index="59" instance=ExtResource( 14 )]
+[node name="thornbush5" parent="." index="59" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 7290, -60 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
 
-[node name="CollisionShape2D" parent="dried tendril10/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush5/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril10/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush5/Trigger" index="0"]
 
 position = Vector2( -1.04904e-005, 57.3953 )
 scale = Vector2( 0.161022, 0.156559 )
 
-[node name="dried tendril9" parent="." index="60" instance=ExtResource( 14 )]
+[node name="thornbush6" parent="." index="60" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 5890, -120 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
 
-[node name="CollisionShape2D" parent="dried tendril9/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush6/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril9/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush6/Trigger" index="0"]
 
 position = Vector2( -1.04904e-005, 74.7951 )
 scale = Vector2( 0.161022, 0.158282 )
 
-[node name="baumstumpf large" parent="." index="61" instance=ExtResource( 2 )]
+[node name="stump l" parent="." index="61" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 8520, 150 )
 scale = Vector2( 0.0989583, 0.104806 )
 texture = ExtResource( 16 )
 
-[node name="CollisionPolygon2D" parent="baumstumpf large/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump l/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 684.844, -6.47095, 1345.21, 12.1415, 1340.27, 1328.97, 1335.35, 1710.53, 665.125, 1701.22 )
 
-[node name="Ast 3" parent="baumstumpf large" index="1" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump l" index="1" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 27.5156, 447.684 )
 scale = Vector2( 0.774041, 0.915257 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="baumstumpf large/Ast 3/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump l/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="Ast 4" parent="baumstumpf large" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump l" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1145.84, 852.611 )
 scale = Vector2( 0.901587, 0.851278 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="baumstumpf large/Ast 4/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump l/branch 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
-[node name="baumstumpf large2" parent="." index="62" instance=ExtResource( 2 )]
+[node name="stump l 2" parent="." index="62" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 8830, 150 )
 scale = Vector2( 0.0989583, 0.104806 )
 texture = ExtResource( 16 )
 
-[node name="CollisionPolygon2D" parent="baumstumpf large2/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump l 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 684.844, -6.47095, 1345.21, 12.1415, 1340.27, 1328.97, 1335.35, 1710.53, 665.125, 1701.22 )
 
-[node name="Ast 3" parent="baumstumpf large2" index="1" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump l 2" index="1" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 27.5156, 447.684 )
 scale = Vector2( 0.774041, 0.915257 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="baumstumpf large2/Ast 3/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump l 2/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="Ast 4" parent="baumstumpf large2" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump l 2" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1145.84, 852.611 )
 scale = Vector2( 0.901587, 0.851278 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="baumstumpf large2/Ast 4/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="stump l 2/branch 2/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
@@ -834,16 +831,12 @@ scale = Vector2( -0.987274, 1.01781 )
 polygon = PoolVector2Array( 96, 1056, 0, 960, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1715.02, 70.0601, 1808.63, 191.49, 1836.46, 694.919, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="baumstumpf large3" parent="." index="65" instance=ExtResource( 2 )]
+[node name="stump l 3" parent="." index="65" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 9434.01, 52.053 )
 scale = Vector2( 0.0989583, 0.104806 )
 texture = ExtResource( 16 )
-
-[node name="CollisionPolygon2D" parent="baumstumpf large3/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 684.844, -6.47095, 1345.21, 12.1415, 1340.27, 1328.97, 1335.35, 1710.53, 665.125, 1701.22 )
 
 [node name="Ladder8" parent="." index="66" instance=ExtResource( 9 )]
 
@@ -855,36 +848,36 @@ scale = Vector2( 1, 3.48613 )
 
 texture = ExtResource( 10 )
 
-[node name="dried tendril11" parent="." index="67" instance=ExtResource( 14 )]
+[node name="thornbush7" parent="." index="67" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 9640, 170 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
 
-[node name="CollisionShape2D" parent="dried tendril11/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush7/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril11/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush7/Trigger" index="0"]
 
 position = Vector2( -1.04904e-005, 31.8845 )
 scale = Vector2( 0.161022, 0.154032 )
 
-[node name="dried tendril12" parent="." index="68" instance=ExtResource( 14 )]
+[node name="thornbush8" parent="." index="68" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 9710, 170 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
 
-[node name="CollisionShape2D" parent="dried tendril12/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush8/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril12/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush8/Trigger" index="0"]
 
 position = Vector2( -1.04904e-005, 27.9874 )
 scale = Vector2( 0.161022, 0.153646 )
@@ -919,51 +912,39 @@ texture = ExtResource( 18 )
 
 polygon = PoolVector2Array( 246.766, 241.127, 131.516, 298.738, 30.7031, 723.619, 9.10938, 781.23, 268.359, 1090.89, 261.156, 1450.96, 167.531, 1458.16, 167.531, 1638.19, 9.10938, 1753.41, 9.10938, 1904.64, 966.875, 1904.64, 830.063, 1501.37, 794.047, 1062.08, 945.281, 853.243, 974.094, 579.592, 729.25, 291.537, 578.016, 147.51, 549.203, 82.6978, 390.781, 10.6841, 239.547, 118.705 )
 
-[node name="Baumstumpf gr 11" parent="." index="72" instance=ExtResource( 2 )]
+[node name="stump m 11" parent="." index="72" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 10446.3, 79.9243 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 11" index="0" instance=ExtResource( 2 )]
+[node name="Ast 1" parent="stump m 11" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 11/Ast 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 11/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
-
-[node name="Ast 2" parent="Baumstumpf gr 11" index="2" instance=ExtResource( 2 )]
+[node name="Ast 2" parent="stump m 11" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 11/Ast 2/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
-
-[node name="dried tendril13" parent="." index="73" instance=ExtResource( 14 )]
+[node name="thornbush9" parent="." index="73" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 10816, 226.263 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
 
-[node name="CollisionShape2D" parent="dried tendril13/Collider" index="0"]
+[node name="CollisionShape2D" parent="thornbush9/Collider" index="0"]
 
 position = Vector2( 0, 201.52 )
 scale = Vector2( 1, 1.17724 )
 
-[node name="CollisionShape2D" parent="dried tendril13/Trigger" index="0"]
+[node name="CollisionShape2D" parent="thornbush9/Trigger" index="0"]
 
 position = Vector2( -1.04904e-005, 27.9874 )
 scale = Vector2( 0.161022, 0.153646 )
@@ -975,37 +956,29 @@ position = Vector2( 10725.2, 245.068 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../dried tendril13")
 
-[node name="Baumstumpf gr 12" parent="." index="75" instance=ExtResource( 2 )]
+[node name="thornbush10" parent="." index="75" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 10967.6, 177.074 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 4 )
 
-[node name="Ast 1" parent="Baumstumpf gr 12" index="0" instance=ExtResource( 2 )]
+[node name="Ast 1" parent="thornbush10" index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 12/Ast 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 12/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="thornbush10/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 593.753, 22.5327, 1235.71, 16.8995, 1348.59, 1244.93, 544.371, 1244.93 )
 
-[node name="Ast 2" parent="Baumstumpf gr 12" index="2" instance=ExtResource( 2 )]
+[node name="Ast 2" parent="thornbush10" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
-
-[node name="CollisionPolygon2D" parent="Baumstumpf gr 12/Ast 2/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
 [node name="Trap12" parent="." index="76" instance=ExtResource( 12 )]
 
@@ -1030,38 +1003,26 @@ anims/Snap = SubResource( 2 )
 editor/display_folded = true
 position = Vector2( 12260, 120 )
 
-[node name="baumstumpf large4" parent="." index="79" instance=ExtResource( 2 )]
+[node name="stump l 4" parent="." index="79" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 11276.5, 116.96 )
 scale = Vector2( 0.0989583, 0.104806 )
 texture = ExtResource( 16 )
 
-[node name="CollisionPolygon2D" parent="baumstumpf large4/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 684.844, -6.47095, 1345.21, 12.1415, 1340.27, 1328.97, 1335.35, 1710.53, 665.125, 1701.22 )
-
-[node name="Ast 3" parent="baumstumpf large4" index="1" instance=ExtResource( 2 )]
+[node name="Ast 3" parent="stump l 4" index="1" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 27.5156, 447.684 )
 scale = Vector2( 0.774041, 0.915257 )
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D" parent="baumstumpf large4/Ast 3/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="Ast 4" parent="baumstumpf large4" index="2" instance=ExtResource( 2 )]
+[node name="Ast 4" parent="stump l 4" index="2" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 1145.84, 852.611 )
 scale = Vector2( 0.901587, 0.851278 )
 texture = ExtResource( 6 )
-
-[node name="CollisionPolygon2D" parent="baumstumpf large4/Ast 4/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
 
 [node name="Box9" parent="." index="80" instance=ExtResource( 7 )]
 
@@ -1081,16 +1042,12 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 11970, 100 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="baumstumpf large5" parent="." index="84" instance=ExtResource( 2 )]
+[node name="stump l 5" parent="." index="84" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 12319, -46.0279 )
 scale = Vector2( 0.0989583, 0.104806 )
 texture = ExtResource( 16 )
-
-[node name="CollisionPolygon2D" parent="baumstumpf large5/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 684.844, -6.47095, 1345.21, 12.1415, 1340.27, 1328.97, 1335.35, 1710.53, 665.125, 1701.22 )
 
 [node name="Ladder11" parent="." index="85" instance=ExtResource( 9 )]
 
@@ -1110,83 +1067,71 @@ scale = Vector2( 0.121272, 0.121272 )
 texture = ExtResource( 19 )
 
 
-[editable path="Baumstumpf klein 1"]
-[editable path="Baumstumpf gr 1"]
-[editable path="Baumstumpf gr 1/Ast 1"]
-[editable path="Baumstumpf gr 1/Ast 2"]
-[editable path="Baumstumpf gr 2"]
-[editable path="Baumstumpf gr 2/Ast 1"]
+[editable path="stump s 1"]
+[editable path="stump m 1"]
+[editable path="stump m 1/branch 1"]
+[editable path="stump m 1/branch 2"]
+[editable path="stump m 2"]
+[editable path="stump m 2/branch 1"]
 [editable path="Ladder"]
-[editable path="Baumstumpf gr 3"]
+[editable path="stump m 3"]
 [editable path="Box2"]
-[editable path="Baumstumpf gr 4"]
-[editable path="Baumstumpf gr 4/Ast 1"]
-[editable path="Baumstumpf gr 4/Ast 2"]
-[editable path="Baumstumpf gr 5"]
-[editable path="Baumstumpf gr 5/Ast 1"]
-[editable path="Baumstumpf gr 5/Ast 2"]
+[editable path="stump m 4/branch 1"]
+[editable path="stump m 4/branch 2"]
+[editable path="stump m 5/branch 1"]
+[editable path="stump m 5/branch 2"]
 [editable path="Ladder2"]
-[editable path="Baumstumpf klein 2"]
-[editable path="Baumstumpf gr 6"]
-[editable path="Baumstumpf gr 6/Ast 1"]
-[editable path="Baumstumpf gr 6/Ast 2"]
+[editable path="stump s 2"]
+[editable path="stump m 6"]
+[editable path="stump m 6/branch 1"]
+[editable path="stump m 6/branch 2"]
 [editable path="Ladder3"]
 [editable path="Trap6"]
 [editable path="Ladder4"]
 [editable path="Ladder5"]
-[editable path="Baumstumpf gr 7"]
-[editable path="Baumstumpf gr 7/Ast 1"]
+[editable path="stump m 7"]
+[editable path="stump m 7/branch 1"]
 [editable path="FireS3"]
 [editable path="FireS"]
 [editable path="FireS4"]
 [editable path="Ladder6"]
 [editable path="Ladder7"]
 [editable path="FireS2"]
-[editable path="Baumstumpf klein 3"]
-[editable path="Baumstumpf gr 8"]
-[editable path="Baumstumpf gr 8/Ast 1"]
-[editable path="Baumstumpf klein 4"]
-[editable path="Baumstumpf gr 9"]
-[editable path="Baumstumpf gr 9/Ast 1"]
-[editable path="Baumstumpf gr 9/Ast 2"]
-[editable path="Baumstumpf gr 10"]
-[editable path="Baumstumpf gr 10/Ast 1"]
-[editable path="Baumstumpf gr 10/Ast 2"]
+[editable path="stump s 3"]
+[editable path="stump m 8"]
+[editable path="stump m 8/branch 1"]
+[editable path="stump s 4"]
+[editable path="stump m 9"]
+[editable path="stump m 9/branch 1"]
+[editable path="stump m 9/branch 2"]
+[editable path="stump m 10"]
+[editable path="stump m 10/branch 1"]
+[editable path="stump m 10/branch 2"]
 [editable path="Checkpoint3"]
-[editable path="dried tendril"]
-[editable path="dried tendril6"]
-[editable path="dried tendril7"]
-[editable path="dried tendril8"]
-[editable path="dried tendril10"]
-[editable path="dried tendril9"]
-[editable path="baumstumpf large"]
-[editable path="baumstumpf large/Ast 3"]
-[editable path="baumstumpf large/Ast 4"]
-[editable path="baumstumpf large2"]
-[editable path="baumstumpf large2/Ast 3"]
-[editable path="baumstumpf large2/Ast 4"]
+[editable path="thornbush"]
+[editable path="thornbush2"]
+[editable path="thornbush3"]
+[editable path="thornbush4"]
+[editable path="thornbush5"]
+[editable path="thornbush6"]
+[editable path="stump l"]
+[editable path="stump l/branch 1"]
+[editable path="stump l/branch 2"]
+[editable path="stump l 2"]
+[editable path="stump l 2/branch 1"]
+[editable path="stump l 2/branch 2"]
 [editable path="stone"]
 [editable path="stone2"]
-[editable path="baumstumpf large3"]
 [editable path="Ladder8"]
-[editable path="dried tendril11"]
-[editable path="dried tendril12"]
+[editable path="thornbush7"]
+[editable path="thornbush8"]
 [editable path="Ladder9"]
 [editable path="Ladder10"]
 [editable path="big stone"]
-[editable path="Baumstumpf gr 11"]
-[editable path="Baumstumpf gr 11/Ast 1"]
-[editable path="Baumstumpf gr 11/Ast 2"]
-[editable path="dried tendril13"]
+[editable path="thornbush9"]
 [editable path="FireS5"]
-[editable path="Baumstumpf gr 12"]
-[editable path="Baumstumpf gr 12/Ast 1"]
-[editable path="Baumstumpf gr 12/Ast 2"]
+[editable path="thornbush10"]
 [editable path="Trap12"]
 [editable path="Trap13"]
-[editable path="baumstumpf large4"]
-[editable path="baumstumpf large4/Ast 3"]
-[editable path="baumstumpf large4/Ast 4"]
-[editable path="baumstumpf large5"]
 [editable path="Ladder11"]
 [editable path="endstone"]
