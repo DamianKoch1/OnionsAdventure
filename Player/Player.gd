@@ -16,6 +16,7 @@ export var jumpheight = 550
 export var climbSpeed = 200
 
 var rope
+var ropeAttachCD = 0
 
 export var health = 3 setget setHealth, getHealth
 
@@ -45,14 +46,14 @@ func setState(newState):
 		run:
 			newAnim = "Onion_Walk"
 		jump:
-			rotation_degrees = 0
-			global_scale.x = 0.5
-			global_scale.y = 0.5
+			#rotation_degrees = 0
+			#global_scale.x = 0.5
+			#global_scale.y = 0.5
 			newAnim = "Onion_JumpUp"
 		fall:
-			rotation_degrees = 0
-			global_scale.x = 0.5
-			global_scale.y = 0.5
+			#rotation_degrees = 0
+			#global_scale.x = 0.5
+			#global_scale.y = 0.5
 			newAnim = "Onion_JumpDown"
 		climb:
 			#cimb anim?
@@ -74,6 +75,7 @@ func _physics_process(delta):
 		if state != climb:
 			rayUpdate()
 			motion.y += gravity
+			rotation_degrees = lerp(rotation_degrees, 0, delta*3)
 		elif state == climb:
 			if rope != null:
 				var transf = get_global_transform()
@@ -137,10 +139,3 @@ func attachTo(obj):
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
-		rotation_degrees = 0
-
-
-
-
-
-

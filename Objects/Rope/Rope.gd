@@ -3,6 +3,7 @@ extends Node2D
 export var swingDegrees = 30
 export var swingSpeed = 0.03
 onready var swingAmount = 0
+var player
 
 func _physics_process(delta):
 	swingAmount += swingSpeed
@@ -12,12 +13,11 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Onion":
-		body.state = body.climb
+		player = body
+		body.setState(body.climb)
 		body.rope = self
-
 
 func _on_Area2D_body_exited(body):
 	if body.name == "Onion":
-		body.state = body.jump
-		body.bounce(min(abs(rotation_degrees)*20, 700))
-
+		player.setState(player.jump)
+		player.bounce(min(abs(rotation_degrees)*20, 600))
