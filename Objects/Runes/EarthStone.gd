@@ -4,7 +4,7 @@ onready var platform = $TileMap
 onready var pos1 = $State1.global_position
 onready var pos2 = $State2.global_position
 
-export var platformSpeed = 2
+export (float) var platformSpeed = 2
 
 var moveDistance = 0
 var offset = 0

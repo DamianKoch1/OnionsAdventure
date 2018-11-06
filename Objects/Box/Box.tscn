@@ -50,6 +50,15 @@ position = Vector2( 0, 10.9564 )
 scale = Vector2( 1, 0.52833 )
 shape = SubResource( 2 )
 
+[node name="RayCast2D" type="RayCast2D" parent="." index="3"]
+
+z_index = 5
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 1
+_sections_unfolded = [ "Z Index" ]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 

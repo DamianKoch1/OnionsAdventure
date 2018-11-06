@@ -49,16 +49,15 @@ func setState(newState):
 			global_scale.y = 0.5
 			newAnim = "Onion_JumpDown"
 		climb:
-			#cimb anim
+			#cimb anim?
 			newAnim = "Onion_Idle"
 		dead:
+			#death anim
 			rotation_degrees = 90
 			$AnimationPlayer.stop()
 
 func _ready():
 	setState(idle)
-
-	
 
 func _physics_process(delta):
 	if state != dead:
@@ -92,7 +91,6 @@ func _physics_process(delta):
 			motion.x = 0
 		
 		if is_on_floor():
-			
 			if motion.x == 0 && state != climb:
 				setState(idle)
 			if Input.is_action_just_pressed("jump"):
@@ -123,7 +121,7 @@ func rayUpdate():
 		attachTo(worldNode)
 	
 func attachTo(obj):
-	if obj.get_class() != "Area2D":
+	if obj.get_class() != "Area2D" && obj.get_class() != "KinematicBody2D":
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)
