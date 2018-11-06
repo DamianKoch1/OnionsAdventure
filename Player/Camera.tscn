@@ -4,6 +4,7 @@
 
 [node name="Camera" type="Camera2D"]
 
+position = Vector2( -34.7368, -27.3684 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -29,16 +30,16 @@ editor_draw_drag_margin = false
 script = ExtResource( 1 )
 camSpeed = 0.1
 
-[node name="Label" type="Label" parent="." index="0"]
+[node name="HP" type="Label" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -319.0
-margin_top = -177.0
-margin_right = -253.0
-margin_bottom = -163.0
+margin_left = -288.0
+margin_top = -173.0
+margin_right = -222.0
+margin_bottom = -159.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -46,6 +47,27 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 text = "Health: 3"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NPCsSaved" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 182.0
+margin_top = -172.0
+margin_right = 279.0
+margin_bottom = -158.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Animals saved:"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

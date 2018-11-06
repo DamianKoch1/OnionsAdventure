@@ -23,6 +23,9 @@ export var health = 3 setget setHealth, getHealth
 signal noHp
 signal loseHp
 signal changeHp
+signal NPCsaved
+
+var NPCsavedCount = 0
 
 func setHealth(newHealth):
 	var oldHealth = health

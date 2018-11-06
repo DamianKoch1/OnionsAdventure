@@ -8,7 +8,9 @@ func _ready():
 	if player != null:
 		global_position = player.global_position
 		player.connect("changeHp", self, "updateHp")
+		player.connect("NPCsaved", self, "updateNPCsaved")
 		updateHp()
+		updateNPCsaved()
 
 func _physics_process(delta):
 	if player != null:
@@ -16,4 +18,7 @@ func _physics_process(delta):
 		global_position.y = lerp(global_position.y, player.global_position.y, camSpeed)
 
 func updateHp():
-	$Label.set_text("Health: "+str(player.health))
+	$HP.set_text("Health: "+str(player.health))
+
+func updateNPCsaved():
+	$NPCsSaved.set_text("Animals saved: "+str(player.NPCsavedCount))
