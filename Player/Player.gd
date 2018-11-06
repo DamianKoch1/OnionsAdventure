@@ -15,6 +15,7 @@ export var gravity = 20
 export var jumpheight = 550
 export var climbSpeed = 200
 
+var rope
 
 export var health = 3 setget setHealth, getHealth
 
@@ -67,15 +68,18 @@ func _ready():
 
 func _physics_process(delta):
 	if state != dead:
-		if state != climb:
-			rayUpdate()
 		if newAnim != anim:
 			anim = newAnim
 			$AnimationPlayer.play(anim)
-		
 		if state != climb:
+			rayUpdate()
 			motion.y += gravity
 		elif state == climb:
+			if rope != null:
+				var transf = get_global_transform()
+				attachTo(rope)
+				set_global_transform(transf)
+				rope = null
 			if Input.is_action_pressed("ui_up"):
 				motion.y = -climbSpeed
 			elif Input.is_action_pressed("ui_down"):
@@ -114,20 +118,22 @@ func bounce(bounceStr):
 	motion = move_and_slide(motion, UP)
 	
 func rayUpdate():
-	ray.force_raycast_update()
-	if ray.is_colliding():
-		var col = ray.get_collider()
-		if col.get_class() == "Area2D":
-			ray.add_exception(col)
-		if global_position.distance_to(ray.get_collision_point()) <= 30:
-			attachTo(col)
-		elif global_position.distance_to(ray.get_collision_point()) > 30:
+	if state != climb:
+		ray.force_raycast_update()
+		if ray.is_colliding():
+			var col = ray.get_collider()
+			if col.get_class() == "Area2D":
+				ray.add_exception(col)
+			else:
+				if global_position.distance_to(ray.get_collision_point()) <= 30:
+					attachTo(col)
+				elif global_position.distance_to(ray.get_collision_point()) > 30:
+					attachTo(worldNode)
+		else:
 			attachTo(worldNode)
-	else:
-		attachTo(worldNode)
 	
 func attachTo(obj):
-	if obj.get_class() != "Area2D" && obj.get_class() != "KinematicBody2D":
+	if obj.get_class() != "KinematicBody2D":
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)

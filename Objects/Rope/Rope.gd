@@ -9,13 +9,15 @@ func _physics_process(delta):
 	if swingAmount >= 20*PI:
 		swingAmount = 0
 	rotation_degrees = swingDegrees*sin(swingAmount)
-	
-	
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Onion":
+		body.state = body.climb
+		body.rope = self
 
 
-
-
-
-
-
+func _on_Area2D_body_exited(body):
+	if body.name == "Onion":
+		body.state = body.jump
+		body.bounce(abs(rotation_degrees)*20)
 

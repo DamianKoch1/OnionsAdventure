@@ -9,3 +9,6 @@ func _ready():
 func respawn():
 	if player.health > 0:
 		player.global_transform = global_transform
+		player.rotation_degrees = 0
+		player.global_scale.x = 0.5
+		player.global_scale.y = 0.5

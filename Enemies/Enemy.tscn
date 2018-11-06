@@ -88,8 +88,6 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 blend_times = [  ]
 
-[connection signal="body_entered" from="EnemyPath/Enemy/Area2D" to="EnemyPath" method="_on_Area2D_body_entered"]
-
 [connection signal="body_entered" from="EnemyPath/Enemy/Area2D" to="." method="_on_Area2D_body_entered"]
 
 
