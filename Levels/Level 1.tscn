@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://Worlds/WorldTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_small_1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=4]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Stones/asset_stone_large_2.png" type="Texture" id=17]
+
 
 [node name="Node2D" index="0" instance=ExtResource( 1 )]
 
