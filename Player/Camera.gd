@@ -17,5 +17,3 @@ func _physics_process(delta):
 
 func updateHp():
 	$Label.set_text("Health: "+str(player.health))
-	if player.health <= 0:
-		$Label.set_text(":(")

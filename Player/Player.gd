@@ -97,7 +97,7 @@ func _physics_process(delta):
 				motion.y = -jumpheight
 		else:
 			if state != climb:
-				if motion.y > 20:
+				if motion.y > 40:
 					setState(fall)
 				elif motion.y < 0:
 					setState(jump)

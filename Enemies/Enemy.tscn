@@ -3,12 +3,11 @@
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
-
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 46.5767, 170.18 )
+"points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
 }
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -16,18 +15,62 @@ _data = {
 custom_solver_bias = 0.0
 extents = Vector2( 31.6861, 31.8947 )
 
-[node name="Enemy" type="Path2D" index="0"]
+[node name="Enemy" type="Node2D"]
+
+script = ExtResource( 1 )
+movespeed = 2
+pathLooped = true
+
+[node name="EnemyPath" type="Path2D" parent="." index="0"]
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
-position = Vector2( 192, -128 )
+position = Vector2( 81.2339, -169.313 )
 curve = SubResource( 1 )
-script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="PathFollow2D" type="PathFollow2D" parent="." index="0"]
+[node name="Enemy" type="Node2D" parent="EnemyPath" index="0"]
+
+position = Vector2( -81.2339, 169.313 )
+
+[node name="Sprites" type="Node2D" parent="EnemyPath/Enemy" index="0"]
+
+editor/display_folded = true
+position = Vector2( 0.00422668, 0.00424194 )
+rotation = -0.000132151
+
+[node name="Sprite" type="Sprite" parent="EnemyPath/Enemy/Sprites" index="0"]
+
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -0.156357, -0.0539894 )
+scale = Vector2( 0.500416, 0.500855 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="EnemyPath/Enemy" index="1"]
+
+editor/display_folded = true
+position = Vector2( -80.7138, 170.143 )
+rotation = -0.000132151
+scale = Vector2( 0.500416, 0.500855 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/Area2D" index="0"]
+
+position = Vector2( 160.61, -339.783 )
+scale = Vector2( 1.01237, 1 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 
 position = Vector2( -80.5574, 170.197 )
-rotation = -0.000124377
+rotation = -0.0076473
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0
@@ -37,34 +80,17 @@ loop = true
 lookahead = 4.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="PathFollow2D" index="0"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyPath" index="2"]
 
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( -0.156357, -0.0539888 )
-scale = Vector2( 0.500416, 0.500855 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-__meta__ = {
-"_edit_group_": true
-}
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+blend_times = [  ]
 
-[node name="Area2D" type="Area2D" parent="PathFollow2D/Sprite" index="0"]
+[connection signal="body_entered" from="EnemyPath/Enemy/Area2D" to="EnemyPath" method="_on_Area2D_body_entered"]
 
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Sprite/Area2D" index="0"]
-
-position = Vector2( -0.423897, 0 )
-scale = Vector2( 1.01237, 1 )
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[connection signal="body_entered" from="PathFollow2D/Sprite/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="EnemyPath/Enemy/Area2D" to="." method="_on_Area2D_body_entered"]
 
 
