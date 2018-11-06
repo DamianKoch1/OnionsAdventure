@@ -19,7 +19,7 @@ custom_solver_bias = 0.0
 radius = 17.613
 height = 34.0682
 
-[node name="Onion" type="KinematicBody2D"]
+[node name="Onion" type="KinematicBody2D" index="0"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
@@ -124,23 +124,5 @@ anims/Onion_JumpDown = ExtResource( 10 )
 anims/Onion_JumpUp = ExtResource( 11 )
 anims/Onion_Walk = ExtResource( 12 )
 blend_times = [  ]
-
-[node name="Area2D" type="Area2D" parent="." index="4"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitorable = false
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="0"]
-
-position = Vector2( 0, -32.2171 )
-scale = Vector2( 1, 0.989124 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
 
