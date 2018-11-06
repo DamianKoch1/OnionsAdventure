@@ -13,7 +13,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 31.6861, 31.8947 )
+extents = Vector2( 31.9971, 31.8947 )
 
 [node name="Enemy" type="Node2D"]
 
@@ -48,7 +48,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="EnemyPath/Enemy" index="1"]
 
-editor/display_folded = true
 position = Vector2( -80.7138, 170.143 )
 rotation = -0.000132151
 scale = Vector2( 0.500416, 0.500855 )
@@ -62,8 +61,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/Area2D" index="0"]
 
-position = Vector2( 160.61, -339.783 )
-scale = Vector2( 1.01237, 1 )
+position = Vector2( 161.009, -339.783 )
+scale = Vector2( 1.00098, 1 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 

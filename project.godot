@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Onion Adventures"
-run/main_scene="res://Worlds/World1.tscn"
+run/main_scene="res://Levels/Prototype.tscn"
 config/icon="res://icon.png"
 
 [autoload]

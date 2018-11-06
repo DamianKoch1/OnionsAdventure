@@ -209,9 +209,8 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="Sprite" parent="." index="16" instance=ExtResource( 15 )]
 
-editor/display_folded = true
-position = Vector2( 512, 214.233 )
-scale = Vector2( 0.0289622, 0.0271037 )
+position = Vector2( 512, 216.91 )
+scale = Vector2( 0.0289622, 0.0262167 )
 texture = ExtResource( 16 )
 
 [node name="CollisionShape2D" parent="Sprite/Collider" index="0"]
@@ -221,13 +220,12 @@ scale = Vector2( 1, 1.17768 )
 
 [node name="CollisionShape2D" parent="Sprite/Trigger" index="0"]
 
-position = Vector2( 0, 67.8218 )
-scale = Vector2( 1, 1.04658 )
+position = Vector2( -5.89149, 40.4562 )
+scale = Vector2( 0.10767, 0.149532 )
 
 [node name="Sprite2" parent="." index="17" instance=ExtResource( 15 )]
 
-editor/display_folded = true
-position = Vector2( 640, 335.984 )
+position = Vector2( 639.613, 338.115 )
 scale = Vector2( 0.0289622, 0.0311587 )
 texture = ExtResource( 16 )
 
@@ -238,11 +236,12 @@ scale = Vector2( 1, 1.21401 )
 
 [node name="CollisionShape2D" parent="Sprite2/Trigger" index="0"]
 
-position = Vector2( 0, 138.723 )
-scale = Vector2( 1, 1.09527 )
+position = Vector2( 17.2571, 80.7451 )
+scale = Vector2( 0.111448, 0.15888 )
 
 [node name="Enemy" parent="." index="18" instance=ExtResource( 17 )]
 
+editor/display_folded = true
 position = Vector2( -636.128, 236.206 )
 pathLooped = false
 
@@ -252,7 +251,8 @@ curve = SubResource( 1 )
 
 [node name="Enemy2" parent="." index="19" instance=ExtResource( 17 )]
 
-position = Vector2( 1439.28, -128.576 )
+editor/display_folded = true
+position = Vector2( 1445.31, -80.3412 )
 movespeed = 0.2
 
 [node name="EnemyPath" parent="Enemy2" index="0"]

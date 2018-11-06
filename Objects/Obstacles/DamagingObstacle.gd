@@ -10,4 +10,5 @@ func _process(delta):
 func _on_Trigger_body_entered(body):
 	if body.name == "Onion" && damageCD == 0:
 		damageCD = 1
-		body.health = max(body.health-1, 0)
+		body.health -= 1
+		print(self)

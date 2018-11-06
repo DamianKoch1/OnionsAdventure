@@ -7,7 +7,7 @@ export var camSpeed = 0.08
 func _ready():
 	if player != null:
 		global_position = player.global_position
-		player.connect("loseHp", self, "updateHp")
+		player.connect("changeHp", self, "updateHp")
 		updateHp()
 
 func _physics_process(delta):

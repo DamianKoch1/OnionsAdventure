@@ -15,15 +15,20 @@ export var gravity = 20
 export var jumpheight = 550
 export var climbSpeed = 200
 
+
 export var health = 3 setget setHealth, getHealth
+
 signal noHp
 signal loseHp
+signal changeHp
 
 func setHealth(newHealth):
 	var oldHealth = health
 	health = newHealth
-	if newHealth < oldHealth :
-		emit_signal("loseHp")
+	if newHealth != oldHealth:
+		emit_signal("changeHp")
+		if newHealth < oldHealth :
+			emit_signal("loseHp")
 	if health <= 0:
 		setState(dead)
 		get_tree().reload_current_scene()
@@ -58,6 +63,7 @@ func setState(newState):
 
 func _ready():
 	setState(idle)
+	health = global.maxHealth
 
 func _physics_process(delta):
 	if state != dead:
