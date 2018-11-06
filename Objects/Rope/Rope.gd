@@ -19,5 +19,5 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.name == "Onion":
 		body.state = body.jump
-		body.bounce(abs(rotation_degrees)*20)
+		body.bounce(min(abs(rotation_degrees)*20, 700))
 

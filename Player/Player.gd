@@ -118,19 +118,18 @@ func bounce(bounceStr):
 	motion = move_and_slide(motion, UP)
 	
 func rayUpdate():
-	if state != climb:
-		ray.force_raycast_update()
-		if ray.is_colliding():
-			var col = ray.get_collider()
-			if col.get_class() == "Area2D":
-				ray.add_exception(col)
-			else:
-				if global_position.distance_to(ray.get_collision_point()) <= 30:
-					attachTo(col)
-				elif global_position.distance_to(ray.get_collision_point()) > 30:
-					attachTo(worldNode)
+	ray.force_raycast_update()
+	if ray.is_colliding():
+		var col = ray.get_collider()
+		if col.get_class() == "Area2D":
+			ray.add_exception(col)
 		else:
-			attachTo(worldNode)
+			if global_position.distance_to(ray.get_collision_point()) <= 30:
+				attachTo(col)
+			elif global_position.distance_to(ray.get_collision_point()) > 30:
+				attachTo(worldNode)
+	else:
+		attachTo(worldNode)
 	
 func attachTo(obj):
 	if obj.get_class() != "KinematicBody2D":

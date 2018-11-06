@@ -34,7 +34,6 @@ _sections_unfolded = [ "Visibility" ]
 [node name="right" type="Sprite" parent="." index="1"]
 
 position = Vector2( 26.047, -4.52453 )
-rotation = -1.5708
 scale = Vector2( 0.174292, 0.153846 )
 texture = ExtResource( 3 )
 offset = Vector2( 437.039, -183.536 )
@@ -43,7 +42,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="left" type="Sprite" parent="." index="2"]
 
 position = Vector2( -36.0423, -1.85963 )
-rotation = 1.5708
 scale = Vector2( 0.174292, 0.137339 )
 texture = ExtResource( 4 )
 offset = Vector2( -441.808, -207.951 )
