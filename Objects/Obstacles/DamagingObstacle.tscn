@@ -10,9 +10,9 @@ extents = Vector2( 465.076, 1133.96 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 791.922, 1453.1 )
+extents = Vector2( 6348.13, 10804 )
 
-[node name="Sprite" type="Sprite" index="0"]
+[node name="Sprite" type="Sprite"]
 
 script = ExtResource( 1 )
 
