@@ -7,7 +7,7 @@ export var camSpeed = 0.08
 func _ready():
 	if player != null:
 		global_position = player.global_position
-		player.connect("loseHp", self, "updateHp")
+		player.connect("changeHp", self, "updateHp")
 		updateHp()
 
 func _physics_process(delta):
@@ -17,5 +17,3 @@ func _physics_process(delta):
 
 func updateHp():
 	$Label.set_text("Health: "+str(player.health))
-	if player.health <= 0:
-		$Label.set_text(":(")

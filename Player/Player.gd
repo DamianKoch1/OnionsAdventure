@@ -15,15 +15,22 @@ export var gravity = 20
 export var jumpheight = 550
 export var climbSpeed = 200
 
+var rope
+var ropeAttachCD = 0
+
 export var health = 3 setget setHealth, getHealth
+
 signal noHp
 signal loseHp
+signal changeHp
 
 func setHealth(newHealth):
 	var oldHealth = health
 	health = newHealth
-	if newHealth < oldHealth :
-		emit_signal("loseHp")
+	if newHealth != oldHealth:
+		emit_signal("changeHp")
+		if newHealth < oldHealth :
+			emit_signal("loseHp")
 	if health <= 0:
 		setState(dead)
 		get_tree().reload_current_scene()
@@ -39,14 +46,14 @@ func setState(newState):
 		run:
 			newAnim = "Onion_Walk"
 		jump:
-			rotation_degrees = 0
-			global_scale.x = 0.5
-			global_scale.y = 0.5
+			#rotation_degrees = 0
+			#global_scale.x = 0.5
+			#global_scale.y = 0.5
 			newAnim = "Onion_JumpUp"
 		fall:
-			rotation_degrees = 0
-			global_scale.x = 0.5
-			global_scale.y = 0.5
+			#rotation_degrees = 0
+			#global_scale.x = 0.5
+			#global_scale.y = 0.5
 			newAnim = "Onion_JumpDown"
 		climb:
 			#cimb anim?
@@ -58,18 +65,23 @@ func setState(newState):
 
 func _ready():
 	setState(idle)
+	health = global.maxHealth
 
 func _physics_process(delta):
 	if state != dead:
-		if state != climb:
-			rayUpdate()
 		if newAnim != anim:
 			anim = newAnim
 			$AnimationPlayer.play(anim)
-		
 		if state != climb:
+			rayUpdate()
 			motion.y += gravity
+			rotation_degrees = lerp(rotation_degrees, 0, delta*3)
 		elif state == climb:
+			if rope != null:
+				var transf = get_global_transform()
+				attachTo(rope)
+				set_global_transform(transf)
+				rope = null
 			if Input.is_action_pressed("ui_up"):
 				motion.y = -climbSpeed
 			elif Input.is_action_pressed("ui_down"):
@@ -97,7 +109,7 @@ func _physics_process(delta):
 				motion.y = -jumpheight
 		else:
 			if state != climb:
-				if motion.y > 20:
+				if motion.y > 40:
 					setState(fall)
 				elif motion.y < 0:
 					setState(jump)
@@ -113,23 +125,17 @@ func rayUpdate():
 		var col = ray.get_collider()
 		if col.get_class() == "Area2D":
 			ray.add_exception(col)
-		if global_position.distance_to(ray.get_collision_point()) <= 30:
-			attachTo(col)
-		elif global_position.distance_to(ray.get_collision_point()) > 30:
-			attachTo(worldNode)
+		else:
+			if global_position.distance_to(ray.get_collision_point()) <= 30:
+				attachTo(col)
+			elif global_position.distance_to(ray.get_collision_point()) > 30:
+				attachTo(worldNode)
 	else:
 		attachTo(worldNode)
 	
 func attachTo(obj):
-	if obj.get_class() != "Area2D" && obj.get_class() != "KinematicBody2D":
+	if obj.get_class() != "KinematicBody2D":
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
-		rotation_degrees = 0
-
-
-
-
-
-

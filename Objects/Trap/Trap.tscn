@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Objects/Trap/Trap.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Trap/asset_trap_base_1.png" type="Texture" id=2]
@@ -10,11 +10,6 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 192, 32 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 27.7846, 159.975 )
 
 [node name="Trap" type="Area2D"]
 
@@ -78,11 +73,12 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="triggeredTrap" index="0"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="triggeredTrap" index="0"]
 
 position = Vector2( -3.98111, -82.039 )
 scale = Vector2( 1.32291, 0.496618 )
-shape = SubResource( 2 )
+build_mode = 0
+polygon = PoolVector2Array( -27.08, -155.06, -28.0527, 165.366, -53.3423, 166.23, -65.8074, 233.07, 74.9431, 233.07, 51.3824, 164.502, 26.0714, 164.072, 24.7959, -155.06 )
 
 [connection signal="body_entered" from="." to="." method="_on_Trap_body_entered"]
 
