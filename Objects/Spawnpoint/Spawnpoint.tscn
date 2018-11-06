@@ -3,10 +3,10 @@
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Spawnpoint/asset_respawn_crystal.png" type="Texture" id=2]
 
-[node name="Spawnpoint" type="Node2D"]
+[node name="Spawnpoint" type="Node2D" index="0"]
 
 position = Vector2( 15, 10 )
-scale = Vector2( 0.46875, 0.3125 )
+scale = Vector2( 2.2367, 1.49113 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
