@@ -26,7 +26,7 @@ func setHealth(newHealth):
 		emit_signal("loseHp")
 	if health <= 0:
 		setState(dead)
-		emit_signal("dead")
+		get_tree().reload_current_scene()
 
 func getHealth():
 	return health
