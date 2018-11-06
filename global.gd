@@ -1,5 +1,3 @@
 extends Node
 
-var nextWorldId = 0
-var gravity
-
+var nextLevelId = 0

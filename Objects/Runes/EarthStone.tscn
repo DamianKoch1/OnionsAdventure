@@ -1,71 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/Runes/EarthStone.gd" type="Script" id=1]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 151.696, 149.102 )
 
 [node name="EarthStone" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-platformSpeed = 0.01
+platformSpeed = 8
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 2 )]
 
 tile_data = PoolIntArray( -2, 0, 0, -1, 1, 0, -65536, 1, 0, -65535, 2, 0, 65534, 1610612738, 0, 65535, 1610612737, 0, 0, 1610612737, 0, 1, 1610612736, 0 )
-
-[node name="EarthStone" type="StaticBody2D" parent="TileMap" index="0"]
-
-position = Vector2( 88.0001, -176 )
-scale = Vector2( 2.75, 2.75 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/EarthStone" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="icon" type="Sprite" parent="TileMap/EarthStone" index="1"]
-
-position = Vector2( -1.62125e-005, -6.10352e-005 )
-texture = ExtResource( 3 )
-
-[node name="EarthStoneTrigger" type="Area2D" parent="TileMap/EarthStone" index="2"]
-
-position = Vector2( 0, -32 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-priority = 6.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Audio Bus" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/EarthStone/EarthStoneTrigger" index="0"]
-
-position = Vector2( 7.62939e-006, -24.6761 )
-scale = Vector2( 0.178771, 0.146426 )
-shape = SubResource( 2 )
 
 [node name="State1" type="Position2D" parent="." index="1"]
 
@@ -75,7 +21,5 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 320, 64 )
 _sections_unfolded = [ "Transform" ]
-
-[connection signal="body_entered" from="TileMap/EarthStone/EarthStoneTrigger" to="." method="_on_EarthStoneTrigger_body_entered"]
 
 

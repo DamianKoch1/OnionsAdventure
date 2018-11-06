@@ -1,12 +1,10 @@
 extends Area2D
 
-var worldPath = ""
-
 func _on_Goal_body_entered(body):
 	if body.name == "Onion":
-			loadNextWorld(worldPath)
+			loadNextLevel()
 
-func loadNextWorld(worldPath):
-	global.nextWorldId += 1
-	worldPath = "Worlds/World" + str(global.nextWorldId) + ".tscn"
-	get_tree().change_scene(worldPath)
+func loadNextLevel():
+	global.nextLevelId += 1
+	var path = "Levels/Level " + str(global.nextLevelId) + ".tscn"
+	get_tree().change_scene(path)
