@@ -75,7 +75,10 @@ func _physics_process(delta):
 		if state != climb:
 			rayUpdate()
 			motion.y += gravity
-			rotation_degrees = lerp(rotation_degrees, 0, delta*3)
+			if abs(rotation_degrees) > 3:
+				rotation_degrees = lerp(rotation_degrees, 0, delta*3)
+			else:
+				rotation_degrees = 0
 		elif state == climb:
 			if rope != null:
 				var transf = get_global_transform()
