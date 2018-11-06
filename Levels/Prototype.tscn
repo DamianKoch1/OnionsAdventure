@@ -17,7 +17,7 @@
 [ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=16]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 

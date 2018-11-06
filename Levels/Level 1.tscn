@@ -18,7 +18,6 @@
 [ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Stones/asset_stone_large_2.png" type="Texture" id=17]
 
-
 [node name="Node2D" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
@@ -574,7 +573,6 @@ scale = Vector2( 1, 1.17724 )
 
 [node name="dried tendril6" parent="." index="53" instance=ExtResource( 14 )]
 
-editor/display_folded = true
 position = Vector2( 2440.49, 4.87675 )
 scale = Vector2( 0.0415107, 0.0415108 )
 texture = ExtResource( 15 )
