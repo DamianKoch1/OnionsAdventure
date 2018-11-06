@@ -64,7 +64,7 @@ z_as_relative = false
 [node name="Onion" parent="." index="4" instance=ExtResource( 4 )]
 
 editor/display_folded = true
-position = Vector2( 2272, -96 )
+position = Vector2( 288, 192 )
 z_index = 5
 z_as_relative = false
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -210,20 +210,26 @@ position = Vector2( 96, 224 )
 z_index = 5
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Checkpoint" parent="." index="15" instance=ExtResource( 13 )]
+[node name="Box2" parent="." index="15" instance=ExtResource( 12 )]
+
+position = Vector2( 640, 224 )
+z_index = 5
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Checkpoint" parent="." index="16" instance=ExtResource( 13 )]
 
 position = Vector2( 832, -32 )
 
-[node name="Checkpoint2" parent="." index="16" instance=ExtResource( 13 )]
+[node name="Checkpoint2" parent="." index="17" instance=ExtResource( 13 )]
 
 position = Vector2( 2304, -32 )
 
-[node name="Trap" parent="." index="17" instance=ExtResource( 14 )]
+[node name="Trap" parent="." index="18" instance=ExtResource( 14 )]
 
 position = Vector2( -97.7994, 240.296 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Sprite" parent="." index="18" instance=ExtResource( 15 )]
+[node name="Sprite" parent="." index="19" instance=ExtResource( 15 )]
 
 editor/display_folded = true
 position = Vector2( 512, 216.91 )
@@ -240,7 +246,7 @@ scale = Vector2( 1, 1.17768 )
 position = Vector2( -5.89149, 40.4562 )
 scale = Vector2( 0.10767, 0.149532 )
 
-[node name="Sprite2" parent="." index="19" instance=ExtResource( 15 )]
+[node name="Sprite2" parent="." index="20" instance=ExtResource( 15 )]
 
 editor/display_folded = true
 position = Vector2( 639.613, 338.115 )
@@ -257,7 +263,7 @@ scale = Vector2( 1, 1.21401 )
 position = Vector2( 17.2571, 80.7451 )
 scale = Vector2( 0.111448, 0.15888 )
 
-[node name="Enemy" parent="." index="20" instance=ExtResource( 17 )]
+[node name="Enemy" parent="." index="21" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 position = Vector2( -636.128, 236.206 )
@@ -267,7 +273,7 @@ pathLooped = false
 
 curve = SubResource( 1 )
 
-[node name="Enemy2" parent="." index="21" instance=ExtResource( 17 )]
+[node name="Enemy2" parent="." index="22" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 position = Vector2( 1475.24, -38.1696 )
@@ -277,7 +283,7 @@ movespeed = 0.2
 
 curve = SubResource( 2 )
 
-[node name="FollowingEnemy" parent="." index="22" instance=ExtResource( 18 )]
+[node name="FollowingEnemy" parent="." index="23" instance=ExtResource( 18 )]
 
 position = Vector2( 2905.98, -38.6253 )
 
