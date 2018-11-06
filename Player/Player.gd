@@ -46,14 +46,12 @@ func setState(newState):
 		run:
 			newAnim = "Onion_Walk"
 		jump:
-			#rotation_degrees = 0
-			#global_scale.x = 0.5
-			#global_scale.y = 0.5
+			global_scale.x = 0.5
+			global_scale.y = 0.5
 			newAnim = "Onion_JumpUp"
 		fall:
-			#rotation_degrees = 0
-			#global_scale.x = 0.5
-			#global_scale.y = 0.5
+			global_scale.x = 0.5
+			global_scale.y = 0.5
 			newAnim = "Onion_JumpDown"
 		climb:
 			#cimb anim?
