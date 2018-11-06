@@ -18,7 +18,7 @@
 [ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Stones/asset_stone_large_2.png" type="Texture" id=17]
 
-[node name="Node2D" index="0" instance=ExtResource( 1 )]
+[node name="Node2D" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 

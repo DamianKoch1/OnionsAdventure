@@ -17,7 +17,7 @@
 [ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=16]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -139,7 +139,7 @@ scale = Vector2( 3.2, 4.8 )
 position = Vector2( -224, 544 )
 script = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
-platformSpeed = 2
+platformSpeed = 0.8
 
 [node name="TileMap" parent="EarthStone5" index="0" instance=ExtResource( 8 )]
 
