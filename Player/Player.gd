@@ -67,6 +67,8 @@ func setState(newState):
 func _ready():
 	setState(idle)
 	health = global.maxHealth
+	global.currLevelId = int(get_parent().name)
+	print(global.currLevelId)
 
 func _physics_process(delta):
 	if state != dead:

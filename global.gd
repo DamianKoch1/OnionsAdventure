@@ -1,4 +1,4 @@
 extends Node
 
-var nextLevelId = 0
+var currLevelId = 0
 var maxHealth = 3
