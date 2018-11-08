@@ -1,20 +1,29 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Runes/EarthStone.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Trees/asset_tree_stump_small_1.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=6]
-[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=9]
-[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Objects/Runes/FireStone.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Objects/Ladder/asset_vine_1.png" type="Texture" id=13]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=5]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Runes/FireStone.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Ladder/asset_vine_1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=11]
+[ext_resource path="res://Objects/Obstacles/Stump S.tscn" type="PackedScene" id=12]
 
-[node name="Level 2" instance=ExtResource( 1 )]
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.4254 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 447.881, 10 )
+
+[node name="Level 2" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -48,42 +57,7 @@ tile_data = PoolIntArray( -2, 0, 0, -1, 1, 0, -65536, 1, 0, -65535, 2, 0, 65534,
 
 position = Vector2( -3.8147e-006, -270 )
 
-[node name="stump s" parent="." index="6" instance=ExtResource( 3 )]
-
-editor/display_folded = true
-position = Vector2( -100, 70 )
-scale = Vector2( 0.055638, 0.057486 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Offset", "Transform" ]
-
-[node name="CollisionPolygon2D" parent="stump s/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 539.2, 0, 1437.87, 0, 1437.87, 695.822, 539.2, 695.822 )
-
-[node name="stump m" parent="." index="7" instance=ExtResource( 3 )]
-
-editor/display_folded = true
-position = Vector2( -270, -360 )
-scale = Vector2( 0.0765198, 0.095925 )
-texture = ExtResource( 5 )
-_sections_unfolded = [ "Offset", "Transform" ]
-
-[node name="CollisionPolygon2D" parent="stump m/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 522.74, 0, 1306.85, 0, 1306.85, 938.233, 1568.22, 938.233, 1568.22, 1250.98, 261.37, 1250.98, 261.37, 938.233, 522.74, 938.233 )
-
-[node name="brunch right" parent="stump m" index="1" instance=ExtResource( 3 )]
-
-position = Vector2( 1176.17, 312.744 )
-scale = Vector2( 1.09309, 0.894834 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Offset", "Transform" ]
-
-[node name="CollisionPolygon2D" parent="stump m/brunch right/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 46.4655, 234.119, 74.1982, 177.369, 160.88, 184.998, 413.247, 93.1167, 696.121, 30.9614, 1045.84, 7.55054, 1072.92, 11.3201, 1038.11, 52.781, 798.29, 82.9343, 589.416, 124.396, 465.639, 180.933, 214.217, 271.393, 74.9678, 392.007 )
-
-[node name="moving Platform2" parent="." index="8" instance=ExtResource( 2 )]
+[node name="moving Platform2" parent="." index="6" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 80, -290.902 )
@@ -94,25 +68,25 @@ platformSpeed = 1.0
 position = Vector2( 477.47, 3.33786e-006 )
 scale = Vector2( 1.62451, 0.999999 )
 
-[node name="Trap" parent="." index="9" instance=ExtResource( 7 )]
+[node name="Trap" parent="." index="7" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 440.1, -194.59 )
 
-[node name="Trap2" parent="." index="10" instance=ExtResource( 7 )]
+[node name="Trap2" parent="." index="8" instance=ExtResource( 3 )]
 
 position = Vector2( 599.613, -193.681 )
 
-[node name="Trap3" parent="." index="11" instance=ExtResource( 7 )]
+[node name="Trap3" parent="." index="9" instance=ExtResource( 3 )]
 
 position = Vector2( 1060, -190 )
 
-[node name="thornbush" parent="." index="12" instance=ExtResource( 8 )]
+[node name="thornbush" parent="." index="10" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 350, 40 )
 scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 9 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" parent="thornbush/Collider" index="0"]
@@ -125,37 +99,37 @@ scale = Vector2( 1.21708, 1.36722 )
 position = Vector2( 9.02779, 13.3851 )
 scale = Vector2( 0.163041, 0.145038 )
 
-[node name="thornbush2" parent="." index="13" instance=ExtResource( 8 )]
+[node name="thornbush2" parent="." index="11" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 280, 40 )
 scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 9 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="thornbush3" parent="." index="14" instance=ExtResource( 8 )]
+[node name="thornbush3" parent="." index="12" instance=ExtResource( 4 )]
 
 position = Vector2( -290, -310 )
 scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 9 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="thornbush4" parent="." index="15" instance=ExtResource( 8 )]
+[node name="thornbush4" parent="." index="13" instance=ExtResource( 4 )]
 
 position = Vector2( 1400, -440 )
 scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 9 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Box" parent="." index="16" instance=ExtResource( 10 )]
+[node name="Box" parent="." index="14" instance=ExtResource( 6 )]
 
 position = Vector2( 860, -210 )
 
-[node name="Box2" parent="." index="17" instance=ExtResource( 10 )]
+[node name="Box2" parent="." index="15" instance=ExtResource( 6 )]
 
 position = Vector2( 1500, -400 )
 
-[node name="moving Platform3" parent="." index="18" instance=ExtResource( 2 )]
+[node name="moving Platform3" parent="." index="16" instance=ExtResource( 2 )]
 
 position = Vector2( 1250, -230 )
 platformSpeed = 2
@@ -164,7 +138,7 @@ platformSpeed = 2
 
 tile_data = PoolIntArray( -3, 0, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 2, 0, 65533, 6, 0, 65534, 7, 0, 65535, 7, 0, 0, 7, 0, 1, 8, 0 )
 
-[node name="FireSalamander" parent="moving Platform3/TileMap" index="0" instance=ExtResource( 11 )]
+[node name="FireSalamander" parent="moving Platform3/TileMap" index="0" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 165, -330 )
@@ -177,42 +151,19 @@ destroyRadius = 140
 position = Vector2( -7.48634e-005, -140 )
 scale = Vector2( 1.00001, 0.999999 )
 
-[node name="Trap4" parent="." index="19" instance=ExtResource( 7 )]
+[node name="Trap4" parent="." index="17" instance=ExtResource( 3 )]
 
 position = Vector2( 1721, -190 )
 
-[node name="Trap5" parent="." index="20" instance=ExtResource( 7 )]
+[node name="Trap5" parent="." index="18" instance=ExtResource( 3 )]
 
 position = Vector2( 2235.37, -63.5859 )
 
-[node name="Trap6" parent="." index="21" instance=ExtResource( 7 )]
+[node name="Trap6" parent="." index="19" instance=ExtResource( 3 )]
 
 position = Vector2( 2395.81, -64.5612 )
 
-[node name="stump m2" parent="." index="22" instance=ExtResource( 3 )]
-
-editor/display_folded = true
-position = Vector2( 1789.82, -296.592 )
-scale = Vector2( 0.0765198, 0.095925 )
-texture = ExtResource( 5 )
-_sections_unfolded = [ "Offset", "Transform" ]
-
-[node name="CollisionPolygon2D" parent="stump m2/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 522.74, 0, 1306.85, 0, 1306.85, 938.233, 1568.22, 938.233, 1568.22, 1250.98, 261.37, 1250.98, 261.37, 938.233, 522.74, 938.233 )
-
-[node name="brunch right" parent="stump m2" index="1" instance=ExtResource( 3 )]
-
-position = Vector2( 1176.17, 312.744 )
-scale = Vector2( 1.09309, 0.894834 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Offset", "Transform" ]
-
-[node name="CollisionPolygon2D" parent="stump m2/brunch right/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 46.4655, 234.119, 74.1982, 177.369, 160.88, 184.998, 413.247, 93.1167, 696.121, 30.9614, 1045.84, 7.55054, 1072.92, 11.3201, 1038.11, 52.781, 798.29, 82.9343, 589.416, 124.396, 465.639, 180.933, 214.217, 271.393, 74.9678, 392.007 )
-
-[node name="moving Platform4" parent="." index="23" instance=ExtResource( 2 )]
+[node name="moving Platform4" parent="." index="20" instance=ExtResource( 2 )]
 
 position = Vector2( 2019.63, -518.174 )
 platformSpeed = 1.0
@@ -221,14 +172,14 @@ platformSpeed = 1.0
 
 tile_data = PoolIntArray( -2, 0, 0, -1, 1, 0, -65536, 1, 0, -65535, 2, 0, 65534, 6, 0, 65535, 7, 0, 0, 7, 0, 1, 8, 0 )
 
-[node name="Ladder" parent="moving Platform4/TileMap" index="0" instance=ExtResource( 12 )]
+[node name="Ladder" parent="moving Platform4/TileMap" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( -20.1025, 768.737 )
 scale = Vector2( 5.50001, 20.517 )
 
 [node name="icon" parent="moving Platform4/TileMap/Ladder" index="0"]
 
-texture = ExtResource( 13 )
+texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" parent="moving Platform4/TileMap/Ladder" index="1"]
 
@@ -239,17 +190,130 @@ visible = true
 position = Vector2( -2.17632, -366.834 )
 scale = Vector2( 2.81007, 1.35001 )
 
+[node name="stump m 7" type="Sprite" parent="." index="21"]
+
+position = Vector2( -246, -368 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 10 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="branch 2" type="Sprite" parent="stump m 7" index="0"]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 11 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 7/branch 2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 7/branch 2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 106.54, 310.559, 81.9783, 146.471, 431.996, 80.2121, 714.984, 27.0116, 1060.56, 12.2434, 1050.56, 142.115, 785.924, 166.172, 576.625, 209.476, 456.338, 233.533, 165.613, 295.791 )
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 7" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 7/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 7/StaticBody2D2" index="1"]
+
+position = Vector2( 899.917, 1078.2 )
+scale = Vector2( 1.45442, 16.2295 )
+shape = SubResource( 10 )
+
+[node name="stump m 8" type="Sprite" parent="." index="22"]
+
+position = Vector2( 1808.16, -302.702 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 10 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="branch 2" type="Sprite" parent="stump m 8" index="0"]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 11 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 8/branch 2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 8/branch 2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 106.54, 310.559, 81.9783, 146.471, 431.996, 80.2121, 714.984, 27.0116, 1060.56, 12.2434, 1050.56, 142.115, 785.924, 166.172, 576.625, 209.476, 456.338, 233.533, 165.613, 295.791 )
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 8" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 8/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 8/StaticBody2D2" index="1"]
+
+position = Vector2( 899.917, 1078.2 )
+scale = Vector2( 1.45442, 16.2295 )
+shape = SubResource( 10 )
+
+[node name="stump s 1" parent="." index="23" instance=ExtResource( 12 )]
+
+position = Vector2( -106, 58 )
+
 
 [editable path="moving Platform"]
-[editable path="stump s"]
-[editable path="stump m"]
-[editable path="stump m/brunch right"]
 [editable path="moving Platform2"]
 [editable path="Trap"]
 [editable path="thornbush"]
 [editable path="moving Platform3"]
 [editable path="moving Platform3/TileMap/FireSalamander"]
-[editable path="stump m2"]
-[editable path="stump m2/brunch right"]
 [editable path="moving Platform4"]
 [editable path="moving Platform4/TileMap/Ladder"]
