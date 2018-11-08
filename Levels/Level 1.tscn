@@ -110,7 +110,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Level 1" index="0" instance=ExtResource( 1 )]
+[node name="Level 1" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -358,12 +358,16 @@ position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
 shape = SubResource( 2 )
 
-[node name="stump m 7" parent="." index="17" instance=ExtResource( 7 )]
+[node name="stump m 7" type="Sprite" parent="." index="17"]
 
-editor/display_folded = true
 position = Vector2( 107.666, 13.0946 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="branch 1" parent="stump m 7" index="0" instance=ExtResource( 7 )]
 
@@ -375,12 +379,46 @@ texture = ExtResource( 9 )
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="branch 2" parent="stump m 7" index="2" instance=ExtResource( 7 )]
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 7" index="1"]
 
-editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 7/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="branch 2" type="Sprite" parent="stump m 7" index="2"]
+
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 10 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 7/branch 2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 7/branch 2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 106.54, 310.559, 81.9783, 146.471, 431.996, 80.2121, 714.984, 27.0116, 1060.56, 12.2434, 1045.79, 59.5014, 676.587, 109.713, 534.814, 139.249, 452.113, 189.461, 165.613, 295.791 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump m 7" index="3"]
 
@@ -1219,7 +1257,7 @@ shape = SubResource( 4 )
 [node name="stump m 15" type="Sprite" parent="." index="68"]
 
 editor/display_folded = true
-position = Vector2( 6271.91, -13.0258 )
+position = Vector2( 6292.27, -13.0258 )
 scale = Vector2( 0.0765978, 0.0959247 )
 texture = ExtResource( 8 )
 centered = false
@@ -1787,7 +1825,6 @@ texture = ExtResource( 19 )
 [editable path="stump m 4/branch 2"]
 [editable path="stump m 6"]
 [editable path="stump m 6/branch 1"]
-[editable path="stump m 7"]
 [editable path="stump m 7/branch 1"]
 [editable path="stump m 5/branch 1"]
 [editable path="stump m 5/branch 2"]

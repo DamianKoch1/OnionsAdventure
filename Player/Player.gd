@@ -57,6 +57,8 @@ func setState(newState):
 			global_scale.y = 0.5
 			newAnim = "Onion_JumpDown"
 		climb:
+			global_scale.x = 0.5
+			global_scale.y = 0.5
 			#cimb anim?
 			newAnim = "Onion_Idle"
 		dead:
@@ -80,6 +82,8 @@ func _physics_process(delta):
 			motion.y += gravity
 			if abs(rotation_degrees) > 3:
 				rotation_degrees = lerp(rotation_degrees, 0, delta*3)
+				global_scale.x = 0.5
+				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
 		elif state == climb:
@@ -147,3 +151,5 @@ func attachTo(obj):
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
+		global_scale.x = 0.5
+		global_scale.y = 0.5
