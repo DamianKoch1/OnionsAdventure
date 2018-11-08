@@ -1,123 +1,47 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Trees/asset_tree_stump_small_1.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=6]
-[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Objects/Ladder/asset_vine_1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_small_1.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Ladder/asset_vine_1.png" type="Texture" id=6]
+[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=10]
 [ext_resource path="res://icon.png" type="Texture" id=11]
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Objects/Runes/FireStone.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=15]
-[ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=16]
-[ext_resource path="res://Assets/Stones/asset_stone_large_2.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Stones/asset_stone_inamovable_3.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Stones/asset_stone_large_2.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Stones/asset_stone_inamovable_3.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Stones/asset_stone_gate_runes_2.png" type="Texture" id=19]
 
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10.4221 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 11.7569 )
-
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
-extents = Vector2( 1286.74, 12.0929 )
-
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 9.38898, 14.1547 )
 
-[sub_resource type="RectangleShape2D" id=9]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 12.1068 )
-
-[sub_resource type="RectangleShape2D" id=10]
-
-custom_solver_bias = 0.0
-extents = Vector2( 1039.79, 10.3808 )
-
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="Animation" id=5]
 
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=13]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=14]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=15]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=16]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=17]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=18]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=19]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=20]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=21]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="Animation" id=1]
-
-resource_name = "Snap"
 length = 0.1
 loop = false
 step = 0.1
@@ -146,9 +70,8 @@ tracks/1/keys = {
 "values": [ 0.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=6]
 
-resource_name = "Snap"
 length = 0.1
 loop = false
 step = 0.1
@@ -177,12 +100,12 @@ tracks/1/keys = {
 "values": [ 0.0, 90.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=22]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=23]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -212,97 +135,134 @@ position = Vector2( 7.18484, 7.78357 )
 
 position = Vector2( -207.215, 79.8556 )
 
-[node name="stump s 1" parent="." index="5" instance=ExtResource( 2 )]
+[node name="stump s 1" type="Sprite" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( -32, 85.2306 )
 scale = Vector2( 0.0556382, 0.0574858 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
+centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionPolygon2D" parent="stump s 1/StaticBody2D" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="stump s 1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump s 1/StaticBody2D" index="0"]
 
 position = Vector2( 968.059, 385.87 )
 scale = Vector2( 40.5739, 37.2641 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
-[node name="stump m 1" parent="." index="6" instance=ExtResource( 2 )]
+[node name="stump s 5" type="Sprite" parent="." index="6"]
 
-position = Vector2( 110, 10 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
+position = Vector2( 2857.48, 154.998 )
+scale = Vector2( 0.0556382, 0.0574858 )
+texture = ExtResource( 2 )
+centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionPolygon2D" parent="stump m 1/StaticBody2D" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="stump s 5" index="0"]
 
-position = Vector2( 920.722, 623.792 )
-scale = Vector2( 37.9731, 52.3931 )
-shape = SubResource( 4 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
-[node name="branch 1" parent="stump m 1" index="1" instance=ExtResource( 2 )]
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump s 5/StaticBody2D" index="0"]
 
-editor/display_folded = true
-position = Vector2( -246.908, 214.06 )
-texture = ExtResource( 5 )
+position = Vector2( 968.059, 385.87 )
+scale = Vector2( 40.5739, 37.2641 )
+shape = SubResource( 1 )
 
-[node name="CollisionPolygon2D" parent="stump m 1/branch 1/StaticBody2D" index="0"]
+[node name="stump s 6" type="Sprite" parent="." index="7"]
 
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="branch 2" parent="stump m 1" index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 1127.71, 494.169 )
-scale = Vector2( 1.16478, 0.930097 )
-texture = ExtResource( 6 )
+position = Vector2( 6112.28, 58.8926 )
+scale = Vector2( 0.0556382, 0.0574858 )
+texture = ExtResource( 2 )
+centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionPolygon2D" parent="stump m 1/branch 2/StaticBody2D" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="stump s 6" index="0"]
 
-polygon = PoolVector2Array( 64.9871, 164.243, 143.026, 162.142, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
-[node name="Box" parent="." index="7" instance=ExtResource( 7 )]
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump s 6/StaticBody2D" index="0"]
+
+position = Vector2( 968.059, 385.87 )
+scale = Vector2( 40.5739, 37.2641 )
+shape = SubResource( 1 )
+
+[node name="stump s 7" type="Sprite" parent="." index="8"]
+
+position = Vector2( 6593.77, 58.1575 )
+scale = Vector2( 0.0556382, 0.0574858 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump s 7" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump s 7/StaticBody2D" index="0"]
+
+position = Vector2( 968.059, 385.87 )
+scale = Vector2( 40.5739, 37.2641 )
+shape = SubResource( 1 )
+
+[node name="Box" parent="." index="9" instance=ExtResource( 3 )]
 
 position = Vector2( 576, -32 )
 
-[node name="stump m 2" parent="." index="8" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 952.372, 47.0786 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
-
-[node name="CollisionPolygon2D" parent="stump m 2/StaticBody2D" index="0"]
-
-position = Vector2( 918.803, 625.194 )
-scale = Vector2( 37.0935, 62.6349 )
-shape = SubResource( 5 )
-
-[node name="branch 1" parent="stump m 2" index="1" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( -265.343, 600.014 )
-texture = ExtResource( 5 )
-
-[node name="CollisionPolygon2D" parent="stump m 2/branch 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="Checkpoint" parent="." index="9" instance=ExtResource( 8 )]
+[node name="Checkpoint" parent="." index="10" instance=ExtResource( 4 )]
 
 position = Vector2( 1290, 114.278 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Checkpoint2" parent="." index="10" instance=ExtResource( 8 )]
+[node name="Checkpoint2" parent="." index="11" instance=ExtResource( 4 )]
 
 position = Vector2( 4520.36, 144.698 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Checkpoint5" parent="." index="11" instance=ExtResource( 8 )]
+[node name="Checkpoint5" parent="." index="12" instance=ExtResource( 4 )]
 
 position = Vector2( 6042.84, 49.7698 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Ladder" parent="." index="12" instance=ExtResource( 9 )]
+[node name="Ladder" parent="." index="13" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 1726.52, 110.793 )
@@ -310,49 +270,37 @@ scale = Vector2( 1, 4.64753 )
 
 [node name="icon" parent="Ladder" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="stump m 3" parent="." index="13" instance=ExtResource( 2 )]
-
-position = Vector2( 2270.53, -51.8474 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
-
-[node name="CollisionPolygon2D" parent="stump m 3/StaticBody2D" index="0"]
-
-position = Vector2( 915.184, 629.885 )
-scale = Vector2( 0.290414, 52.122 )
-shape = SubResource( 6 )
-
-[node name="Box2" parent="." index="14" instance=ExtResource( 7 )]
+[node name="Box2" parent="." index="14" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 1984, 32 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="stump m 4" parent="." index="15" instance=ExtResource( 2 )]
+[node name="stump m 4" parent="." index="15" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 1887.96, 238.87 )
 scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 
-[node name="branch 1" parent="stump m 4" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 4" index="0" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="CollisionPolygon2D" parent="stump m 4/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="branch 2" parent="stump m 4" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump m 4" index="2" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
-texture = ExtResource( 6 )
+texture = ExtResource( 10 )
 
 [node name="StaticBody2D" parent="stump m 4/branch 2" index="0"]
 
@@ -376,30 +324,102 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
-[node name="stump m 5" parent="." index="16" instance=ExtResource( 2 )]
+[node name="stump m 6" parent="." index="16" instance=ExtResource( 7 )]
 
-position = Vector2( 2222.72, 238.87 )
+position = Vector2( 938.593, 50.107 )
 scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 
-[node name="branch 1" parent="stump m 5" index="0" instance=ExtResource( 2 )]
+[node name="branch 1" parent="stump m 6" index="0" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" parent="stump m 6/branch 1/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 6" index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 6/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 2 )
+
+[node name="stump m 7" parent="." index="17" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( 107.666, 13.0946 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+
+[node name="branch 1" parent="stump m 7" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" parent="stump m 7/branch 1/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
+
+[node name="branch 2" parent="stump m 7" index="2" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 7" index="3"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 7/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 2 )
+
+[node name="stump m 5" parent="." index="18" instance=ExtResource( 7 )]
+
+position = Vector2( 2222.72, 238.87 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+
+[node name="branch 1" parent="stump m 5" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 9 )
 
 [node name="CollisionPolygon2D" parent="stump m 5/branch 1/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
 
-[node name="branch 2" parent="stump m 5" index="2" instance=ExtResource( 2 )]
+[node name="branch 2" parent="stump m 5" index="2" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
-texture = ExtResource( 6 )
+texture = ExtResource( 10 )
 
 [node name="CollisionPolygon2D" parent="stump m 5/branch 2/StaticBody2D" index="0"]
 
@@ -419,9 +439,9 @@ bounce = 0.0
 
 position = Vector2( 922.405, 625.365 )
 scale = Vector2( 40.4064, 45.0663 )
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 
-[node name="Ladder2" parent="." index="17" instance=ExtResource( 9 )]
+[node name="Ladder2" parent="." index="19" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 2720, 192 )
@@ -429,53 +449,9 @@ scale = Vector2( 1, 3.25 )
 
 [node name="icon" parent="Ladder2" index="0"]
 
-texture = ExtResource( 10 )
-
-[node name="stump s 2" parent="." index="18" instance=ExtResource( 2 )]
-
-position = Vector2( 2878.52, 152.607 )
-scale = Vector2( 0.0556382, 0.0574858 )
-texture = ExtResource( 3 )
-
-[node name="CollisionPolygon2D" parent="stump s 2/StaticBody2D" index="0"]
-
-position = Vector2( 963.844, 373.659 )
-scale = Vector2( 41.8148, 31.1027 )
-shape = SubResource( 9 )
-
-[node name="stump m 6" parent="." index="19" instance=ExtResource( 2 )]
-
-position = Vector2( 3051.99, 76.3321 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
-
-[node name="branch 1" parent="stump m 6" index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
-
-[node name="CollisionPolygon2D" parent="stump m 6/branch 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="CollisionPolygon2D" parent="stump m 6/StaticBody2D" index="0"]
-
-position = Vector2( 929.809, 626.909 )
-scale = Vector2( 0.338847, 60.4613 )
-shape = SubResource( 10 )
-
-[node name="branch 2" parent="stump m 6" index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 1127.71, 494.169 )
-scale = Vector2( 1.16478, 0.930097 )
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D" parent="stump m 6/branch 2/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 64.9871, 164.243, 110.832, 165.37, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
-
-[node name="Ladder3" parent="." index="20" instance=ExtResource( 9 )]
+[node name="Ladder3" parent="." index="20" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 3299.02, -12.3438 )
@@ -483,13 +459,13 @@ scale = Vector2( 1, 3.25 )
 
 [node name="icon" parent="Ladder3" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="Box3" parent="." index="21" instance=ExtResource( 7 )]
+[node name="Box3" parent="." index="21" instance=ExtResource( 3 )]
 
 position = Vector2( 3520, -64 )
 
-[node name="NPC" parent="." index="22" instance=ExtResource( 2 )]
+[node name="NPC" parent="." index="22" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 modulate = Color( 0.167101, 0.890625, 0.125244, 1 )
@@ -514,7 +490,7 @@ position = Vector2( 3889.04, 184.191 )
 
 position = Vector2( 5240, -170 )
 
-[node name="Ladder4" parent="." index="27" instance=ExtResource( 9 )]
+[node name="Ladder4" parent="." index="27" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 4767.74, 24.5 )
@@ -522,9 +498,9 @@ scale = Vector2( 1, 4.10938 )
 
 [node name="icon" parent="Ladder4" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="Ladder5" parent="." index="28" instance=ExtResource( 9 )]
+[node name="Ladder5" parent="." index="28" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 4830.74, -163.5 )
@@ -532,64 +508,42 @@ scale = Vector2( 1, 4.14063 )
 
 [node name="icon" parent="Ladder5" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="Box4" parent="." index="29" instance=ExtResource( 7 )]
+[node name="Box4" parent="." index="29" instance=ExtResource( 3 )]
 
 position = Vector2( 5050, -190 )
 
-[node name="Box5" parent="." index="30" instance=ExtResource( 7 )]
+[node name="Box5" parent="." index="30" instance=ExtResource( 3 )]
 
 position = Vector2( 5370, 290 )
 
-[node name="stump m 7" parent="." index="31" instance=ExtResource( 2 )]
-
-position = Vector2( 5030, 200 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
-
-[node name="branch 1" parent="stump m 7" index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
-
-[node name="CollisionPolygon2D" parent="stump m 7/branch 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="CollisionPolygon2D" parent="stump m 7/StaticBody2D" index="0"]
-
-position = Vector2( 919.517, 638.102 )
-scale = Vector2( 37.2972, 63.2283 )
-shape = SubResource( 11 )
-
-[node name="Trap3" parent="." index="32" instance=ExtResource( 12 )]
+[node name="Trap3" parent="." index="31" instance=ExtResource( 12 )]
 
 position = Vector2( 5250, 310 )
 
-[node name="FireS3" parent="." index="33" instance=ExtResource( 13 )]
+[node name="FireS3" parent="." index="32" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 4230, 150 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush3")
 
-[node name="FireS" parent="." index="34" instance=ExtResource( 13 )]
+[node name="FireS" parent="." index="33" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 5590, 270 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush4")
 
-[node name="FireS4" parent="." index="35" instance=ExtResource( 13 )]
+[node name="FireS4" parent="." index="34" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 7200, -50 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush5")
 
-[node name="Ladder6" parent="." index="36" instance=ExtResource( 9 )]
+[node name="Ladder6" parent="." index="35" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 5880, 130 )
@@ -597,9 +551,9 @@ scale = Vector2( 1, 4.14063 )
 
 [node name="icon" parent="Ladder6" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="Ladder7" parent="." index="37" instance=ExtResource( 9 )]
+[node name="Ladder7" parent="." index="36" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 7470, 70 )
@@ -607,152 +561,41 @@ scale = Vector2( 1, 4.41406 )
 
 [node name="icon" parent="Ladder7" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="FireS2" parent="." index="38" instance=ExtResource( 13 )]
+[node name="FireS2" parent="." index="37" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 5680, -200 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush6")
 
-[node name="stump s 3" parent="." index="39" instance=ExtResource( 2 )]
-
-position = Vector2( 6114.59, 60 )
-scale = Vector2( 0.0556382, 0.0574858 )
-texture = ExtResource( 3 )
-
-[node name="CollisionPolygon2D" parent="stump s 3/StaticBody2D" index="0"]
-
-position = Vector2( 964.492, 372.245 )
-scale = Vector2( 41.3763, 36.1495 )
-shape = SubResource( 12 )
-
-[node name="stump m 8" parent="." index="40" instance=ExtResource( 2 )]
-
-position = Vector2( 6290, -20 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
-
-[node name="branch 1" parent="stump m 8" index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
-
-[node name="CollisionPolygon2D" parent="stump m 8/branch 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="CollisionPolygon2D" parent="stump m 8/StaticBody2D" index="0"]
-
-position = Vector2( 919.5, 627.036 )
-scale = Vector2( 37.2019, 61.7479 )
-shape = SubResource( 13 )
-
-[node name="Trap4" parent="." index="41" instance=ExtResource( 12 )]
+[node name="Trap4" parent="." index="38" instance=ExtResource( 12 )]
 
 position = Vector2( 6500, 90 )
 
-[node name="stump s 4" parent="." index="42" instance=ExtResource( 2 )]
-
-position = Vector2( 6570, 60 )
-scale = Vector2( 0.0556382, 0.0574858 )
-texture = ExtResource( 3 )
-
-[node name="CollisionPolygon2D" parent="stump s 4/StaticBody2D" index="0"]
-
-position = Vector2( 956.774, 377.216 )
-scale = Vector2( 40.9742, 37.5089 )
-shape = SubResource( 14 )
-
-[node name="stump m 9" parent="." index="43" instance=ExtResource( 2 )]
-
-position = Vector2( 6730, -20 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
-
-[node name="branch 1" parent="stump m 9" index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
-
-[node name="CollisionPolygon2D" parent="stump m 9/branch 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="CollisionPolygon2D" parent="stump m 9/StaticBody2D" index="0"]
-
-position = Vector2( 916.157, 621.135 )
-scale = Vector2( 37.2976, 61.7949 )
-shape = SubResource( 15 )
-
-[node name="branch 2" parent="stump m 9" index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 1127.71, 494.169 )
-scale = Vector2( 1.16478, 0.930097 )
-texture = ExtResource( 6 )
-
-[node name="CollisionPolygon2D" parent="stump m 9/branch 2/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 64.9871, 164.243, 115.438, 164.967, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
-
-[node name="stump m 10" parent="." index="44" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 8310, 210 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
-
-[node name="branch 1" parent="stump m 10" index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
-
-[node name="CollisionPolygon2D" parent="stump m 10/branch 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="CollisionPolygon2D" parent="stump m 10/StaticBody2D" index="0"]
-
-position = Vector2( 922.225, 639.041 )
-scale = Vector2( 35.9964, 63.5492 )
-shape = SubResource( 16 )
-
-[node name="branch 2" parent="stump m 10" index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 1127.71, 494.169 )
-scale = Vector2( 1.16478, 0.930097 )
-texture = ExtResource( 6 )
-
-[node name="CollisionPolygon2D" parent="stump m 10/branch 2/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 64.9871, 164.243, 108.875, 158.231, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
-
-[node name="Box6" parent="." index="45" instance=ExtResource( 7 )]
+[node name="Box6" parent="." index="39" instance=ExtResource( 3 )]
 
 position = Vector2( 7130, 290 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Trap5" parent="." index="46" instance=ExtResource( 12 )]
+[node name="Trap5" parent="." index="40" instance=ExtResource( 12 )]
 
 position = Vector2( 7280, 310 )
 
-[node name="Trap8" parent="." index="47" instance=ExtResource( 12 )]
+[node name="Trap8" parent="." index="41" instance=ExtResource( 12 )]
 
 position = Vector2( 7660, 340 )
 
-[node name="Box7" parent="." index="48" instance=ExtResource( 7 )]
+[node name="Box7" parent="." index="42" instance=ExtResource( 3 )]
 
 position = Vector2( 7630, 0 )
 
-[node name="Box8" parent="." index="49" instance=ExtResource( 7 )]
+[node name="Box8" parent="." index="43" instance=ExtResource( 3 )]
 
 position = Vector2( 7760, 0 )
 
-[node name="Checkpoint3" parent="." index="50" instance=ExtResource( 8 )]
+[node name="Checkpoint3" parent="." index="44" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 7850, 276 )
@@ -763,25 +606,25 @@ scale = Vector2( 0.568831, 0.622471 )
 position = Vector2( 0, -55.34 )
 scale = Vector2( 1, 0.166778 )
 
-[node name="Checkpoint4" parent="." index="51" instance=ExtResource( 8 )]
+[node name="Checkpoint4" parent="." index="45" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 9856, 176.752 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Trap9" parent="." index="52" instance=ExtResource( 12 )]
+[node name="Trap9" parent="." index="46" instance=ExtResource( 12 )]
 
 position = Vector2( 8050, 340 )
 
-[node name="Trap10" parent="." index="53" instance=ExtResource( 12 )]
+[node name="Trap10" parent="." index="47" instance=ExtResource( 12 )]
 
 position = Vector2( 8770, 310 )
 
-[node name="Trap11" parent="." index="54" instance=ExtResource( 12 )]
+[node name="Trap11" parent="." index="48" instance=ExtResource( 12 )]
 
 position = Vector2( 10515.2, 403.346 )
 
-[node name="thornbush" parent="." index="55" instance=ExtResource( 14 )]
+[node name="thornbush" parent="." index="49" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 1120, 100 )
@@ -799,7 +642,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( 23.3049, 24.949 )
 scale = Vector2( 0.15939, 0.155259 )
 
-[node name="thornbush2" parent="." index="56" instance=ExtResource( 14 )]
+[node name="thornbush2" parent="." index="50" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 2440.49, 4.87675 )
@@ -816,7 +659,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 24.7307 )
 scale = Vector2( 0.161022, 0.153324 )
 
-[node name="thornbush3" parent="." index="57" instance=ExtResource( 14 )]
+[node name="thornbush3" parent="." index="51" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 4332.13, 133.868 )
@@ -833,7 +676,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 47.0887 )
 scale = Vector2( 0.161022, 0.155538 )
 
-[node name="thornbush4" parent="." index="58" instance=ExtResource( 14 )]
+[node name="thornbush4" parent="." index="52" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 5710.55, 260.486 )
@@ -850,7 +693,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 35.9943 )
 scale = Vector2( 0.161022, 0.154439 )
 
-[node name="thornbush5" parent="." index="59" instance=ExtResource( 14 )]
+[node name="thornbush5" parent="." index="53" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 7290, -60 )
@@ -867,7 +710,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 57.3953 )
 scale = Vector2( 0.161022, 0.156559 )
 
-[node name="thornbush6" parent="." index="60" instance=ExtResource( 14 )]
+[node name="thornbush6" parent="." index="54" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 5890, -120 )
@@ -884,91 +727,24 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 74.7951 )
 scale = Vector2( 0.161022, 0.158282 )
 
-[node name="stump l" parent="." index="61" instance=ExtResource( 2 )]
-
-position = Vector2( 8520, 150 )
-scale = Vector2( 0.0989583, 0.104806 )
-texture = ExtResource( 16 )
-
-[node name="CollisionPolygon2D" parent="stump l/StaticBody2D" index="0"]
-
-position = Vector2( 1003.5, 867.811 )
-scale = Vector2( 33.038, 85.858 )
-shape = SubResource( 17 )
-
-[node name="branch 1" parent="stump l" index="1" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 27.5156, 447.684 )
-scale = Vector2( 0.774041, 0.915257 )
-texture = ExtResource( 5 )
-
-[node name="CollisionPolygon2D" parent="stump l/branch 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="branch 2" parent="stump l" index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 1145.84, 852.611 )
-scale = Vector2( 0.901587, 0.851278 )
-texture = ExtResource( 6 )
-
-[node name="CollisionPolygon2D" parent="stump l/branch 2/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 64.9871, 164.243, 142.961, 161.095, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
-
-[node name="stump l 2" parent="." index="62" instance=ExtResource( 2 )]
-
-position = Vector2( 8830, 150 )
-scale = Vector2( 0.0989583, 0.104806 )
-texture = ExtResource( 16 )
-
-[node name="CollisionPolygon2D" parent="stump l 2/StaticBody2D" index="0"]
-
-position = Vector2( 1002.3, 859.896 )
-scale = Vector2( 34.273, 86.1495 )
-shape = SubResource( 18 )
-
-[node name="branch 1" parent="stump l 2" index="1" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 27.5156, 447.684 )
-scale = Vector2( 0.774041, 0.915257 )
-texture = ExtResource( 5 )
-
-[node name="CollisionPolygon2D" parent="stump l 2/branch 1/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 927.18, 180.977, 593.954, 69.8034, 349.74, 22.4179, 5.10254, 4.19278, 11.9497, 44.2882, 50.7499, 60.6909, 240.187, 77.0935, 395.388, 98.9638, 514.071, 133.592, 591.672, 168.219, 641.884, 197.38, 740.026, 228.363, 881.533, 283.038, 1020.76, 428.84, 1011.63, 193.735 )
-
-[node name="branch 2" parent="stump l 2" index="2" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 1145.84, 852.611 )
-scale = Vector2( 0.901587, 0.851278 )
-texture = ExtResource( 6 )
-
-[node name="CollisionPolygon2D" parent="stump l 2/branch 2/StaticBody2D" index="0"]
-
-polygon = PoolVector2Array( 64.9871, 164.243, 146.805, 187.152, 277.713, 144.606, 441.349, 98.7884, 650.802, 39.8796, 847.165, 20.2433, 1050.07, 7.15247, 1053.35, 36.6069, 1033.71, 56.2431, 883.165, 66.0613, 762.074, 85.6976, 582.075, 115.152, 460.985, 183.879, 316.986, 232.97, 133.714, 321.333, 61.7144, 403.151 )
-
-[node name="stone" parent="." index="63" instance=ExtResource( 2 )]
+[node name="stone" parent="." index="55" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 9070, 220 )
 scale = Vector2( 0.104167, 0.104167 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="CollisionPolygon2D" parent="stone/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 96, 1056, 0, 960, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1715.02, 70.0601, 1808.63, 191.49, 1836.46, 694.919, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
 
-[node name="stone2" parent="." index="64" instance=ExtResource( 2 )]
+[node name="stone2" parent="." index="56" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 9923.31, 311.022 )
 scale = Vector2( 0.104167, 0.104167 )
 z_index = 90
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 flip_h = true
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
@@ -979,19 +755,7 @@ scale = Vector2( -0.987274, 1.01781 )
 polygon = PoolVector2Array( 96, 1056, 0, 960, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1715.02, 70.0601, 1808.63, 191.49, 1836.46, 694.919, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="stump l 3" parent="." index="65" instance=ExtResource( 2 )]
-
-position = Vector2( 9434.01, 52.053 )
-scale = Vector2( 0.0989583, 0.104806 )
-texture = ExtResource( 16 )
-
-[node name="CollisionPolygon2D" parent="stump l 3/StaticBody2D" index="0"]
-
-position = Vector2( 1003.57, 883.485 )
-scale = Vector2( 33.5206, 88.1329 )
-shape = SubResource( 19 )
-
-[node name="Ladder8" parent="." index="66" instance=ExtResource( 9 )]
+[node name="Ladder8" parent="." index="57" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 9410.65, 55.2861 )
@@ -999,9 +763,9 @@ scale = Vector2( 1, 3.48613 )
 
 [node name="icon" parent="Ladder8" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="thornbush7" parent="." index="67" instance=ExtResource( 14 )]
+[node name="thornbush7" parent="." index="58" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 9640, 170 )
@@ -1018,7 +782,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 31.8845 )
 scale = Vector2( 0.161022, 0.154032 )
 
-[node name="thornbush8" parent="." index="68" instance=ExtResource( 14 )]
+[node name="thornbush8" parent="." index="59" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 9710, 170 )
@@ -1035,7 +799,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 27.9874 )
 scale = Vector2( 0.161022, 0.153646 )
 
-[node name="Ladder9" parent="." index="69" instance=ExtResource( 9 )]
+[node name="Ladder9" parent="." index="60" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 10303.7, 212.627 )
@@ -1043,39 +807,45 @@ scale = Vector2( 1, 3.48613 )
 
 [node name="icon" parent="Ladder9" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="Ladder10" parent="." index="70" instance=ExtResource( 9 )]
+[node name="Ladder10" parent="." index="61" instance=ExtResource( 5 )]
 
 position = Vector2( 11629.8, 87.3631 )
 scale = Vector2( 1, 3.48613 )
 
 [node name="icon" parent="Ladder10" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="big stone" parent="." index="71" instance=ExtResource( 2 )]
+[node name="big stone" parent="." index="62" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 10590.1, 288.102 )
 scale = Vector2( 0.0677199, 0.0677199 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
 [node name="CollisionPolygon2D" parent="big stone/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 246.766, 241.127, 131.516, 298.738, 30.7031, 723.619, 9.10938, 781.23, 268.359, 1090.89, 261.156, 1450.96, 167.531, 1458.16, 167.531, 1638.19, 9.10938, 1753.41, 9.10938, 1904.64, 966.875, 1904.64, 830.063, 1501.37, 794.047, 1062.08, 945.281, 853.243, 974.094, 579.592, 729.25, 291.537, 578.016, 147.51, 549.203, 82.6978, 390.781, 10.6841, 239.547, 118.705 )
 
-[node name="stump m 11" parent="." index="72" instance=ExtResource( 2 )]
+[node name="stump m 11" type="Sprite" parent="." index="63"]
 
+editor/display_folded = true
 position = Vector2( 10446.3, 79.9243 )
 scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Ast 1" parent="stump m 11" index="0" instance=ExtResource( 2 )]
+[node name="Ast 1" parent="stump m 11" index="0" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump m 11/Ast 1" index="1"]
 
@@ -1092,11 +862,26 @@ bounce = 0.0
 build_mode = 0
 polygon = PoolVector2Array( 964.406, 196.287, 873.109, 147.079, 656.281, 85.1135, 320.766, 19.5029, 21.7969, 4.92261, 8.07813, 34.083, 33.2031, 55.9532, 204.375, 72.356, 535.313, 130.677, 706.5, 212.69, 950.719, 307.461 )
 
-[node name="Ast 2" parent="stump m 11" index="2" instance=ExtResource( 2 )]
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 11" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 11/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="Ast 2" parent="stump m 11" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 1127.71, 494.169 )
 scale = Vector2( 1.16478, 0.930097 )
-texture = ExtResource( 6 )
+texture = ExtResource( 10 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump m 11/Ast 2" index="1"]
 
@@ -1128,9 +913,526 @@ bounce = 0.0
 
 position = Vector2( 922.809, 644.632 )
 scale = Vector2( 36.9002, 64.1315 )
-shape = SubResource( 20 )
+shape = SubResource( 4 )
 
-[node name="thornbush9" parent="." index="73" instance=ExtResource( 14 )]
+[node name="stump m 13" type="Sprite" parent="." index="64"]
+
+editor/display_folded = true
+position = Vector2( 8315.15, 211.869 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 1" parent="stump m 13" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 13/Ast 1" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 13/Ast 1/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 964.406, 196.287, 873.109, 147.079, 656.281, 85.1135, 320.766, 19.5029, 21.7969, 4.92261, 8.07813, 34.083, 33.2031, 55.9532, 204.375, 72.356, 535.313, 130.677, 706.5, 212.69, 950.719, 307.461 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 13" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 13/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="Ast 2" parent="stump m 13" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 13/Ast 2" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 13/Ast 2/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 49.5859, 207.405, 102.5, 189.77, 253.375, 144.702, 427.766, 87.8762, 719.734, 27.1318, 1066.56, 15.375, 1050.89, 54.5649, 729.523, 91.7953, 478.719, 172.135, 239.656, 262.271, 84.8672, 348.489 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 13" index="3"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 13/StaticBody2D2" index="0"]
+
+position = Vector2( 922.809, 644.632 )
+scale = Vector2( 36.9002, 64.1315 )
+shape = SubResource( 4 )
+
+[node name="stump m 14" type="Sprite" parent="." index="65"]
+
+editor/display_folded = true
+position = Vector2( 6732.49, -17.3765 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 1" parent="stump m 14" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 14/Ast 1" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 14/Ast 1/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 964.406, 196.287, 873.109, 147.079, 656.281, 85.1135, 320.766, 19.5029, 21.7969, 4.92261, 8.07813, 34.083, 33.2031, 55.9532, 204.375, 72.356, 535.313, 130.677, 706.5, 212.69, 950.719, 307.461 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 14" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 14/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="Ast 2" parent="stump m 14" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 14/Ast 2" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 14/Ast 2/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 49.5859, 207.405, 102.5, 189.77, 253.375, 144.702, 427.766, 87.8762, 719.734, 27.1318, 1066.56, 15.375, 1050.89, 54.5649, 729.523, 91.7953, 478.719, 172.135, 239.656, 262.271, 84.8672, 348.489 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 14" index="3"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 14/StaticBody2D2" index="0"]
+
+position = Vector2( 922.809, 644.632 )
+scale = Vector2( 36.9002, 64.1315 )
+shape = SubResource( 4 )
+
+[node name="stump m 17" type="Sprite" parent="." index="66"]
+
+editor/display_folded = true
+position = Vector2( 3056.71, 81.2598 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 1" parent="stump m 17" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 17/Ast 1" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 17/Ast 1/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 964.406, 196.287, 873.109, 147.079, 656.281, 85.1135, 320.766, 19.5029, 21.7969, 4.92261, 8.07813, 34.083, 33.2031, 55.9532, 204.375, 72.356, 535.313, 130.677, 706.5, 212.69, 950.719, 307.461 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 17" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 17/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="Ast 2" parent="stump m 17" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 17/Ast 2" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 17/Ast 2/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 49.5859, 207.405, 102.5, 189.77, 253.375, 144.702, 427.766, 87.8762, 719.734, 27.1318, 1066.56, 15.375, 1050.89, 54.5649, 729.523, 91.7953, 478.719, 172.135, 239.656, 262.271, 84.8672, 348.489 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 17" index="3"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 17/StaticBody2D2" index="0"]
+
+position = Vector2( 922.809, 644.632 )
+scale = Vector2( 36.9002, 64.1315 )
+shape = SubResource( 4 )
+
+[node name="stump m 18" type="Sprite" parent="." index="67"]
+
+position = Vector2( 2251.69, -50.134 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 18" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 18/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 18" index="1"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 18/StaticBody2D2" index="0"]
+
+position = Vector2( 922.809, 644.632 )
+scale = Vector2( 36.9002, 64.1315 )
+shape = SubResource( 4 )
+
+[node name="stump m 15" type="Sprite" parent="." index="68"]
+
+editor/display_folded = true
+position = Vector2( 6271.91, -13.0258 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 1" parent="stump m 15" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 15/Ast 1" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 15/Ast 1/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 964.406, 196.287, 873.109, 147.079, 656.281, 85.1135, 320.766, 19.5029, 21.7969, 4.92261, 8.07813, 34.083, 33.2031, 55.9532, 204.375, 72.356, 535.313, 130.677, 706.5, 212.69, 950.719, 307.461 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 15" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 15/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 15" index="2"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 15/StaticBody2D2" index="0"]
+
+position = Vector2( 922.809, 644.632 )
+scale = Vector2( 36.9002, 64.1315 )
+shape = SubResource( 4 )
+
+[node name="stump m 16" type="Sprite" parent="." index="69"]
+
+editor/display_folded = true
+position = Vector2( 4996.47, 208.433 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 1" parent="stump m 16" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 16/Ast 1" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 16/Ast 1/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 964.406, 196.287, 873.109, 147.079, 656.281, 85.1135, 320.766, 19.5029, 21.7969, 4.92261, 8.07813, 34.083, 33.2031, 55.9532, 204.375, 72.356, 535.313, 130.677, 706.5, 212.69, 950.719, 307.461 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 16" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 16/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 16" index="2"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 16/StaticBody2D2" index="0"]
+
+position = Vector2( 922.809, 644.632 )
+scale = Vector2( 36.9002, 64.1315 )
+shape = SubResource( 4 )
+
+[node name="stump m 12" type="Sprite" parent="." index="70"]
+
+editor/display_folded = true
+position = Vector2( 10950.2, 172.403 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 1" parent="stump m 12" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 12/Ast 1" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 12/Ast 1/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 964.406, 196.287, 873.109, 147.079, 656.281, 85.1135, 320.766, 19.5029, 21.7969, 4.92261, 8.07813, 34.083, 33.2031, 55.9532, 204.375, 72.356, 535.313, 130.677, 706.5, 212.69, 950.719, 307.461 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 12" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 12/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+[node name="Ast 2" parent="stump m 12" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 12/Ast 2" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 12/Ast 2/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 49.5859, 207.405, 102.5, 189.77, 253.375, 144.702, 427.766, 87.8762, 719.734, 27.1318, 1066.56, 15.375, 1050.89, 54.5649, 729.523, 91.7953, 478.719, 172.135, 239.656, 262.271, 84.8672, 348.489 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 12" index="3"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 12/StaticBody2D2" index="0"]
+
+position = Vector2( 922.809, 644.632 )
+scale = Vector2( 36.9002, 64.1315 )
+shape = SubResource( 4 )
+
+[node name="thornbush9" parent="." index="71" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 10816, 226.263 )
@@ -1147,105 +1449,53 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 27.9874 )
 scale = Vector2( 0.161022, 0.153646 )
 
-[node name="FireS5" parent="." index="74" instance=ExtResource( 13 )]
+[node name="FireS5" parent="." index="72" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 10725.2, 245.068 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush9")
 
-[node name="thornbush10" parent="." index="75" instance=ExtResource( 2 )]
-
-position = Vector2( 10967.6, 177.074 )
-scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 4 )
-
-[node name="Ast 1" parent="thornbush10" index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 5 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="thornbush10/Ast 1" index="1"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="thornbush10/Ast 1/StaticBody2D2" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 891.609, 283.358, 881.5, 152.096, 648.844, 87.4753, 335.25, 24.8735, 49.4688, 4.67944, 11.5469, 4.67944, 16.6094, 53.1453, 122.813, 67.2813, 406.063, 99.5918, 615.953, 182.388 )
-
-[node name="StaticBody2D" parent="thornbush10" index="1"]
-
-editor/display_folded = true
-
-[node name="CollisionPolygon2D" parent="thornbush10/StaticBody2D" index="0"]
-
-position = Vector2( 918.202, 656.477 )
-scale = Vector2( 36.9021, 64.8253 )
-shape = SubResource( 21 )
-
-[node name="Ast 2" parent="thornbush10" index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 1127.71, 494.169 )
-scale = Vector2( 1.16478, 0.930097 )
-texture = ExtResource( 6 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="thornbush10/Ast 2" index="1"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="thornbush10/Ast 2/StaticBody2D2" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 91.1328, 175.361, 327.367, 119.216, 561.859, 54.0808, 800.68, 12.8284, 1063.4, 6.31494, 1048.2, 49.7385, 883.188, 69.2791, 635.672, 104.018, 440.266, 190.865, 164.531, 299.425, 82.0234, 347.191 )
-
-[node name="Trap12" parent="." index="76" instance=ExtResource( 12 )]
+[node name="Trap12" parent="." index="73" instance=ExtResource( 12 )]
 
 editor/display_folded = true
 position = Vector2( 11210, 280 )
 
 [node name="AnimationPlayer" parent="Trap12" index="4"]
 
-anims/Snap = SubResource( 1 )
+anims/Snap = SubResource( 5 )
 
-[node name="Trap13" parent="." index="77" instance=ExtResource( 12 )]
+[node name="Trap13" parent="." index="74" instance=ExtResource( 12 )]
 
 editor/display_folded = true
 position = Vector2( 11560, 280 )
 
 [node name="AnimationPlayer" parent="Trap13" index="4"]
 
-anims/Snap = SubResource( 2 )
+anims/Snap = SubResource( 6 )
 
-[node name="Trap14" parent="." index="78" instance=ExtResource( 12 )]
+[node name="Trap14" parent="." index="75" instance=ExtResource( 12 )]
 
 editor/display_folded = true
 position = Vector2( 12260, 120 )
 
-[node name="stump l 4" parent="." index="79" instance=ExtResource( 2 )]
+[node name="stump l 4" type="Sprite" parent="." index="76"]
 
+editor/display_folded = true
 position = Vector2( 11276.5, 116.96 )
 scale = Vector2( 0.0989583, 0.104806 )
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Ast 3" parent="stump l 4" index="1" instance=ExtResource( 2 )]
+[node name="Ast 3" parent="stump l 4" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 27.5156, 447.684 )
 scale = Vector2( 0.774041, 0.915257 )
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump l 4/Ast 3" index="1"]
 
@@ -1262,11 +1512,11 @@ bounce = 0.0
 build_mode = 0
 polygon = PoolVector2Array( 871.859, 284.229, 875.297, 157.86, 589.75, 67.2035, 242.281, 9.51306, 18.6719, 4.0188, 35.8594, 53.4677, 201, 75.4449, 510.625, 124.894, 672.313, 196.32 )
 
-[node name="Ast 4" parent="stump l 4" index="2" instance=ExtResource( 2 )]
+[node name="Ast 4" parent="stump l 4" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 1145.84, 852.611 )
 scale = Vector2( 0.901587, 0.851278 )
-texture = ExtResource( 6 )
+texture = ExtResource( 10 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump l 4/Ast 4" index="1"]
 
@@ -1283,7 +1533,7 @@ bounce = 0.0
 build_mode = 0
 polygon = PoolVector2Array( 154.391, 305.868, 175.938, 143.23, 448.313, 80.5259, 722.523, 27.3701, 1062.47, 6.62183, 1052.91, 48.1184, 610.383, 107.153, 458.109, 184.379 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 4" index="3"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 4" index="2"]
 
 input_pickable = false
 collision_layer = 1
@@ -1297,33 +1547,179 @@ bounce = 0.0
 
 position = Vector2( 999.944, 875.041 )
 scale = Vector2( 33.1696, 87.1565 )
-shape = SubResource( 22 )
+shape = SubResource( 7 )
 
-[node name="Box9" parent="." index="80" instance=ExtResource( 7 )]
+[node name="stump l 7" type="Sprite" parent="." index="77"]
+
+editor/display_folded = true
+position = Vector2( 8838.03, 152.034 )
+scale = Vector2( 0.0989583, 0.104806 )
+texture = ExtResource( 18 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 3" parent="stump l 7" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 27.5156, 447.684 )
+scale = Vector2( 0.774041, 0.915257 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 7/Ast 3" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump l 7/Ast 3/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 871.859, 284.229, 875.297, 157.86, 589.75, 67.2035, 242.281, 9.51306, 18.6719, 4.0188, 35.8594, 53.4677, 201, 75.4449, 510.625, 124.894, 672.313, 196.32 )
+
+[node name="Ast 4" parent="stump l 7" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 1145.84, 852.611 )
+scale = Vector2( 0.901587, 0.851278 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 7/Ast 4" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump l 7/Ast 4/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 154.391, 305.868, 175.938, 143.23, 448.313, 80.5259, 722.523, 27.3701, 1062.47, 6.62183, 1052.91, 48.1184, 610.383, 107.153, 458.109, 184.379 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 7" index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump l 7/StaticBody2D2" index="0"]
+
+position = Vector2( 999.944, 875.041 )
+scale = Vector2( 33.1696, 87.1565 )
+shape = SubResource( 7 )
+
+[node name="stump l 8" type="Sprite" parent="." index="78"]
+
+editor/display_folded = true
+position = Vector2( 8507.34, 153.704 )
+scale = Vector2( 0.0989583, 0.104806 )
+texture = ExtResource( 18 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 3" parent="stump l 8" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 27.5156, 447.684 )
+scale = Vector2( 0.774041, 0.915257 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 8/Ast 3" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump l 8/Ast 3/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 871.859, 284.229, 875.297, 157.86, 589.75, 67.2035, 242.281, 9.51306, 18.6719, 4.0188, 35.8594, 53.4677, 201, 75.4449, 510.625, 124.894, 672.313, 196.32 )
+
+[node name="Ast 4" parent="stump l 8" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 1145.84, 852.611 )
+scale = Vector2( 0.901587, 0.851278 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 8/Ast 4" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump l 8/Ast 4/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 154.391, 305.868, 175.938, 143.23, 448.313, 80.5259, 722.523, 27.3701, 1062.47, 6.62183, 1052.91, 48.1184, 610.383, 107.153, 458.109, 184.379 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 8" index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump l 8/StaticBody2D2" index="0"]
+
+position = Vector2( 999.944, 875.041 )
+scale = Vector2( 33.1696, 87.1565 )
+shape = SubResource( 7 )
+
+[node name="Box9" parent="." index="79" instance=ExtResource( 3 )]
 
 position = Vector2( 11800, 100 )
 
-[node name="Box10" parent="." index="81" instance=ExtResource( 7 )]
+[node name="Box10" parent="." index="80" instance=ExtResource( 3 )]
 
 position = Vector2( 11870, 100 )
 
-[node name="Box11" parent="." index="82" instance=ExtResource( 7 )]
+[node name="Box11" parent="." index="81" instance=ExtResource( 3 )]
 
 position = Vector2( 11834.8, 36.4124 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Box12" parent="." index="83" instance=ExtResource( 7 )]
+[node name="Box12" parent="." index="82" instance=ExtResource( 3 )]
 
 position = Vector2( 11970, 100 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="stump l 5" parent="." index="84" instance=ExtResource( 2 )]
+[node name="stump l 5" type="Sprite" parent="." index="83"]
 
+editor/display_folded = true
 position = Vector2( 12319, -46.0279 )
 scale = Vector2( 0.0989583, 0.104806 )
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 5" index="1"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 5" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -1337,9 +1733,37 @@ bounce = 0.0
 
 position = Vector2( 1003.35, 870.349 )
 scale = Vector2( 33.5284, 86.7346 )
-shape = SubResource( 23 )
+shape = SubResource( 8 )
 
-[node name="Ladder11" parent="." index="85" instance=ExtResource( 9 )]
+[node name="stump l 6" type="Sprite" parent="." index="84"]
+
+editor/display_folded = true
+position = Vector2( 9421.23, 54.183 )
+scale = Vector2( 0.0989583, 0.104806 )
+texture = ExtResource( 18 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 6" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump l 6/StaticBody2D2" index="0"]
+
+position = Vector2( 1003.35, 870.349 )
+scale = Vector2( 33.5284, 86.7346 )
+shape = SubResource( 8 )
+
+[node name="Ladder11" parent="." index="85" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 12320.2, -87.3332 )
@@ -1347,9 +1771,9 @@ scale = Vector2( 1, 3.48613 )
 
 [node name="icon" parent="Ladder11" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
-[node name="endstone" parent="." index="86" instance=ExtResource( 2 )]
+[node name="endstone" parent="." index="86" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 12859.4, -47.6668 )
@@ -1357,46 +1781,27 @@ scale = Vector2( 0.121272, 0.121272 )
 texture = ExtResource( 19 )
 
 
-[editable path="stump s 1"]
-[editable path="stump m 1"]
-[editable path="stump m 1/branch 1"]
-[editable path="stump m 1/branch 2"]
-[editable path="stump m 2"]
-[editable path="stump m 2/branch 1"]
 [editable path="Ladder"]
-[editable path="stump m 3"]
 [editable path="Box2"]
 [editable path="stump m 4/branch 1"]
 [editable path="stump m 4/branch 2"]
+[editable path="stump m 6"]
+[editable path="stump m 6/branch 1"]
+[editable path="stump m 7"]
+[editable path="stump m 7/branch 1"]
 [editable path="stump m 5/branch 1"]
 [editable path="stump m 5/branch 2"]
 [editable path="Ladder2"]
-[editable path="stump s 2"]
-[editable path="stump m 6"]
-[editable path="stump m 6/branch 1"]
-[editable path="stump m 6/branch 2"]
 [editable path="Ladder3"]
 [editable path="Trap6"]
 [editable path="Ladder4"]
 [editable path="Ladder5"]
-[editable path="stump m 7"]
-[editable path="stump m 7/branch 1"]
 [editable path="FireS3"]
 [editable path="FireS"]
 [editable path="FireS4"]
 [editable path="Ladder6"]
 [editable path="Ladder7"]
 [editable path="FireS2"]
-[editable path="stump s 3"]
-[editable path="stump m 8"]
-[editable path="stump m 8/branch 1"]
-[editable path="stump s 4"]
-[editable path="stump m 9"]
-[editable path="stump m 9/branch 1"]
-[editable path="stump m 9/branch 2"]
-[editable path="stump m 10"]
-[editable path="stump m 10/branch 1"]
-[editable path="stump m 10/branch 2"]
 [editable path="Checkpoint3"]
 [editable path="thornbush"]
 [editable path="thornbush2"]
@@ -1404,15 +1809,8 @@ texture = ExtResource( 19 )
 [editable path="thornbush4"]
 [editable path="thornbush5"]
 [editable path="thornbush6"]
-[editable path="stump l"]
-[editable path="stump l/branch 1"]
-[editable path="stump l/branch 2"]
-[editable path="stump l 2"]
-[editable path="stump l 2/branch 1"]
-[editable path="stump l 2/branch 2"]
 [editable path="stone"]
 [editable path="stone2"]
-[editable path="stump l 3"]
 [editable path="Ladder8"]
 [editable path="thornbush7"]
 [editable path="thornbush8"]
@@ -1421,7 +1819,6 @@ texture = ExtResource( 19 )
 [editable path="big stone"]
 [editable path="thornbush9"]
 [editable path="FireS5"]
-[editable path="thornbush10"]
 [editable path="Trap12"]
 [editable path="Trap13"]
 [editable path="Ladder11"]
