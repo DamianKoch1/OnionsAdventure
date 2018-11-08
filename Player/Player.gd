@@ -71,7 +71,6 @@ func _ready():
 
 
 func _physics_process(delta):
-	print(motion.y)
 	if state != dead:
 		if newAnim != anim:
 			anim = newAnim
