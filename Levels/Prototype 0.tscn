@@ -68,6 +68,7 @@ editor/display_folded = true
 position = Vector2( 1300.97, -64.3183 )
 z_index = 5
 z_as_relative = false
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="RayCast2D" parent="Onion" index="0"]
 
@@ -285,7 +286,6 @@ curve = SubResource( 2 )
 
 [node name="FollowingEnemy" parent="." index="23" instance=ExtResource( 18 )]
 
-editor/display_folded = true
 position = Vector2( 2905.98, -38.6253 )
 
 [node name="trappedNPC" parent="." index="24" instance=ExtResource( 19 )]
