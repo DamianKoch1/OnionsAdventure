@@ -18,22 +18,22 @@
 [ext_resource path="res://Objects/Obstacles/Stump L.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=17]
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
 
-[sub_resource type="StreamTexture" id=13]
+[sub_resource type="StreamTexture" id=3]
 
 flags = 0
-load_path = "res://.import/asset_stone_large_2.png-02f56c717cb661d9d13b2c176d59a9bd.stex"
+load_path = ""
 
-[sub_resource type="StreamTexture" id=14]
+[sub_resource type="StreamTexture" id=4]
 
 flags = 0
 load_path = "res://.import/asset_stone_inamovable_3.png-94ee387bd991097ac861a2eaae47f874.stex"
@@ -98,22 +98,22 @@ tracks/1/keys = {
 "values": [ 0.0, 90.0 ]
 }
 
-[sub_resource type="StreamTexture" id=15]
+[sub_resource type="StreamTexture" id=7]
 
 flags = 0
-load_path = "res://.import/asset_stone_gate_runes_2.png-3a7a8eff923c0515cbc5344a188026e2.stex"
+load_path = ""
 
-[sub_resource type="RectangleShape2D" id=11]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Level 1" index="0" instance=ExtResource( 1 )]
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Level 1" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -225,13 +225,13 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 9 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 11/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 10 )
+shape = SubResource( 2 )
 
 [node name="stump m 9" parent="." index="13" instance=ExtResource( 6 )]
 
@@ -266,13 +266,13 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 9 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 12/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 10 )
+shape = SubResource( 2 )
 
 [node name="stump m 19" parent="." index="16" instance=ExtResource( 6 )]
 
@@ -326,13 +326,13 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 9 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 26/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 10 )
+shape = SubResource( 2 )
 
 [node name="stump m 27" type="Sprite" parent="." index="18"]
 
@@ -382,13 +382,13 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 9 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 27/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 10 )
+shape = SubResource( 2 )
 
 [node name="stump m 22" parent="." index="19" instance=ExtResource( 6 )]
 
@@ -697,7 +697,7 @@ scale = Vector2( 0.161022, 0.158282 )
 editor/display_folded = true
 position = Vector2( 9070, 220 )
 scale = Vector2( 0.104167, 0.104167 )
-texture = SubResource( 13 )
+texture = SubResource( 3 )
 
 [node name="CollisionPolygon2D" parent="stone/StaticBody2D" index="0"]
 
@@ -709,7 +709,7 @@ editor/display_folded = true
 position = Vector2( 9923.31, 311.022 )
 scale = Vector2( 0.104167, 0.104167 )
 z_index = 90
-texture = SubResource( 13 )
+texture = SubResource( 3 )
 flip_h = true
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
@@ -788,7 +788,7 @@ texture = ExtResource( 5 )
 editor/display_folded = true
 position = Vector2( 10590.1, 288.102 )
 scale = Vector2( 0.0677199, 0.0677199 )
-texture = SubResource( 14 )
+texture = SubResource( 4 )
 
 [node name="CollisionPolygon2D" parent="big stone/StaticBody2D" index="0"]
 
@@ -874,7 +874,7 @@ texture = ExtResource( 5 )
 editor/display_folded = true
 position = Vector2( 12859.4, -47.6668 )
 scale = Vector2( 0.121272, 0.121272 )
-texture = SubResource( 15 )
+texture = SubResource( 7 )
 
 [node name="stump s 2" parent="." index="78" instance=ExtResource( 15 )]
 
@@ -921,13 +921,13 @@ bounce = 0.0
 
 position = Vector2( 999.944, 875.041 )
 scale = Vector2( 33.1696, 87.1565 )
-shape = SubResource( 11 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump l 12/StaticBody2D2" index="1"]
 
 position = Vector2( 928.747, 1539.22 )
 scale = Vector2( 62.1414, 19.2334 )
-shape = SubResource( 12 )
+shape = SubResource( 9 )
 
 [node name="stump l 13" type="Sprite" parent="." index="84"]
 
@@ -954,13 +954,13 @@ bounce = 0.0
 
 position = Vector2( 999.944, 875.041 )
 scale = Vector2( 33.1696, 87.1565 )
-shape = SubResource( 11 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump l 13/StaticBody2D2" index="1"]
 
 position = Vector2( 928.747, 1539.22 )
 scale = Vector2( 62.1414, 19.2334 )
-shape = SubResource( 12 )
+shape = SubResource( 9 )
 
 [node name="stump l 10" parent="." index="85" instance=ExtResource( 16 )]
 
