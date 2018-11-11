@@ -40,7 +40,7 @@ position = Vector2( 1020.4, -609.308 )
 
 [node name="Onion" parent="." index="1"]
 
-position = Vector2( 5850, -740 )
+position = Vector2( -150, 50 )
 
 [node name="TileMap" parent="." index="2"]
 
@@ -352,7 +352,7 @@ scale = Vector2( 2.81007, 2 )
 
 [node name="Checkpoint" parent="." index="39" instance=ExtResource( 14 )]
 
-position = Vector2( 790, -210 )
+position = Vector2( 790, -230 )
 
 [node name="Checkpoint3" parent="." index="40" instance=ExtResource( 14 )]
 
@@ -481,8 +481,7 @@ scale = Vector2( 2.81007, 1.99446 )
 
 [node name="moving Platform8" parent="." index="48" instance=ExtResource( 2 )]
 
-editor/display_folded = true
-position = Vector2( 4059.97, -900.177 )
+position = Vector2( 4060, -920 )
 platformSpeed = 1.0
 
 [node name="TileMap" parent="moving Platform8" index="0"]
