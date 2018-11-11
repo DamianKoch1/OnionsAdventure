@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=2]
@@ -8,16 +8,17 @@
 [ext_resource path="res://Objects/Obstacles/Stump M.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=8]
-[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=9]
-[ext_resource path="res://icon.png" type="Texture" id=10]
-[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Objects/Runes/FireStone.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=14]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Runes/FireStone.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=12]
+[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Stones/asset_stone_large_1.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Stones/asset_stone_inamovable_3.png" type="Texture" id=15]
 [ext_resource path="res://Objects/Obstacles/Stump S.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Objects/Obstacles/Stump L.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=18]
+[ext_resource path="res://Objects/TrappedNPC/trappedNPC.tscn" type="PackedScene" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -99,7 +100,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Level 1" instance=ExtResource( 1 )]
+[node name="Level 1" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -421,32 +422,24 @@ texture = ExtResource( 5 )
 
 position = Vector2( 3520, -64 )
 
-[node name="NPC" parent="." index="26" instance=ExtResource( 9 )]
-
-editor/display_folded = true
-modulate = Color( 0.167101, 0.890625, 0.125244, 1 )
-position = Vector2( 4032, 128 )
-texture = ExtResource( 10 )
-_sections_unfolded = [ "Material", "Offset", "Visibility" ]
-
-[node name="Trap6" parent="." index="27" instance=ExtResource( 11 )]
+[node name="Trap6" parent="." index="26" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 724.385, 245.151 )
 
-[node name="Trap7" parent="." index="28" instance=ExtResource( 11 )]
+[node name="Trap7" parent="." index="27" instance=ExtResource( 9 )]
 
 position = Vector2( 2131.24, 341.369 )
 
-[node name="Trap" parent="." index="29" instance=ExtResource( 11 )]
+[node name="Trap" parent="." index="28" instance=ExtResource( 9 )]
 
 position = Vector2( 3889.04, 184.191 )
 
-[node name="Trap2" parent="." index="30" instance=ExtResource( 11 )]
+[node name="Trap2" parent="." index="29" instance=ExtResource( 9 )]
 
 position = Vector2( 5240, -170 )
 
-[node name="Ladder4" parent="." index="31" instance=ExtResource( 4 )]
+[node name="Ladder4" parent="." index="30" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 4767.74, 24.5 )
@@ -456,7 +449,7 @@ scale = Vector2( 1, 4.10938 )
 
 texture = ExtResource( 5 )
 
-[node name="Ladder5" parent="." index="32" instance=ExtResource( 4 )]
+[node name="Ladder5" parent="." index="31" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 4830.74, -163.5 )
@@ -466,40 +459,40 @@ scale = Vector2( 1, 4.14063 )
 
 texture = ExtResource( 5 )
 
-[node name="Box4" parent="." index="33" instance=ExtResource( 2 )]
+[node name="Box4" parent="." index="32" instance=ExtResource( 2 )]
 
 position = Vector2( 5050, -190 )
 
-[node name="Box5" parent="." index="34" instance=ExtResource( 2 )]
+[node name="Box5" parent="." index="33" instance=ExtResource( 2 )]
 
 position = Vector2( 5370, 290 )
 
-[node name="Trap3" parent="." index="35" instance=ExtResource( 11 )]
+[node name="Trap3" parent="." index="34" instance=ExtResource( 9 )]
 
 position = Vector2( 5250, 310 )
 
-[node name="FireS3" parent="." index="36" instance=ExtResource( 12 )]
+[node name="FireS3" parent="." index="35" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 4230, 150 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush3")
 
-[node name="FireS" parent="." index="37" instance=ExtResource( 12 )]
+[node name="FireS" parent="." index="36" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 5590, 270 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush4")
 
-[node name="FireS4" parent="." index="38" instance=ExtResource( 12 )]
+[node name="FireS4" parent="." index="37" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 7200, -50 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush5")
 
-[node name="Ladder6" parent="." index="39" instance=ExtResource( 4 )]
+[node name="Ladder6" parent="." index="38" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 5880, 130 )
@@ -509,7 +502,7 @@ scale = Vector2( 1, 4.14063 )
 
 texture = ExtResource( 5 )
 
-[node name="Ladder7" parent="." index="40" instance=ExtResource( 4 )]
+[node name="Ladder7" parent="." index="39" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 7470, 70 )
@@ -519,39 +512,39 @@ scale = Vector2( 1, 4.41406 )
 
 texture = ExtResource( 5 )
 
-[node name="FireS2" parent="." index="41" instance=ExtResource( 12 )]
+[node name="FireS2" parent="." index="40" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 5680, -200 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush6")
 
-[node name="Trap4" parent="." index="42" instance=ExtResource( 11 )]
+[node name="Trap4" parent="." index="41" instance=ExtResource( 9 )]
 
 position = Vector2( 6500, 90 )
 
-[node name="Box6" parent="." index="43" instance=ExtResource( 2 )]
+[node name="Box6" parent="." index="42" instance=ExtResource( 2 )]
 
 position = Vector2( 7130, 290 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Trap5" parent="." index="44" instance=ExtResource( 11 )]
+[node name="Trap5" parent="." index="43" instance=ExtResource( 9 )]
 
 position = Vector2( 7280, 310 )
 
-[node name="Trap8" parent="." index="45" instance=ExtResource( 11 )]
+[node name="Trap8" parent="." index="44" instance=ExtResource( 9 )]
 
 position = Vector2( 7660, 340 )
 
-[node name="Box7" parent="." index="46" instance=ExtResource( 2 )]
+[node name="Box7" parent="." index="45" instance=ExtResource( 2 )]
 
 position = Vector2( 7630, 0 )
 
-[node name="Box8" parent="." index="47" instance=ExtResource( 2 )]
+[node name="Box8" parent="." index="46" instance=ExtResource( 2 )]
 
 position = Vector2( 7760, 0 )
 
-[node name="Checkpoint3" parent="." index="48" instance=ExtResource( 3 )]
+[node name="Checkpoint3" parent="." index="47" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 7850, 276 )
@@ -562,30 +555,30 @@ scale = Vector2( 0.568831, 0.622471 )
 position = Vector2( 0, -55.34 )
 scale = Vector2( 1, 0.166778 )
 
-[node name="Checkpoint4" parent="." index="49" instance=ExtResource( 3 )]
+[node name="Checkpoint4" parent="." index="48" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 9856, 176.752 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Trap9" parent="." index="50" instance=ExtResource( 11 )]
+[node name="Trap9" parent="." index="49" instance=ExtResource( 9 )]
 
 position = Vector2( 8050, 340 )
 
-[node name="Trap10" parent="." index="51" instance=ExtResource( 11 )]
+[node name="Trap10" parent="." index="50" instance=ExtResource( 9 )]
 
 position = Vector2( 8770, 310 )
 
-[node name="Trap11" parent="." index="52" instance=ExtResource( 11 )]
+[node name="Trap11" parent="." index="51" instance=ExtResource( 9 )]
 
 position = Vector2( 10515.2, 403.346 )
 
-[node name="thornbush" parent="." index="53" instance=ExtResource( 13 )]
+[node name="thornbush" parent="." index="52" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 1120, 100 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" parent="thornbush/Collider" index="0"]
@@ -598,12 +591,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( 23.3049, 24.949 )
 scale = Vector2( 0.15939, 0.155259 )
 
-[node name="thornbush2" parent="." index="54" instance=ExtResource( 13 )]
+[node name="thornbush2" parent="." index="53" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 2440.49, 4.87675 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="thornbush2/Collider" index="0"]
 
@@ -615,12 +608,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 24.7307 )
 scale = Vector2( 0.161022, 0.153324 )
 
-[node name="thornbush3" parent="." index="55" instance=ExtResource( 13 )]
+[node name="thornbush3" parent="." index="54" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 4332.13, 133.868 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="thornbush3/Collider" index="0"]
 
@@ -632,12 +625,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 47.0887 )
 scale = Vector2( 0.161022, 0.155538 )
 
-[node name="thornbush4" parent="." index="56" instance=ExtResource( 13 )]
+[node name="thornbush4" parent="." index="55" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 5710.55, 260.486 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="thornbush4/Collider" index="0"]
 
@@ -649,12 +642,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 35.9943 )
 scale = Vector2( 0.161022, 0.154439 )
 
-[node name="thornbush5" parent="." index="57" instance=ExtResource( 13 )]
+[node name="thornbush5" parent="." index="56" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 7290, -60 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="thornbush5/Collider" index="0"]
 
@@ -666,12 +659,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 57.3953 )
 scale = Vector2( 0.161022, 0.156559 )
 
-[node name="thornbush6" parent="." index="58" instance=ExtResource( 13 )]
+[node name="thornbush6" parent="." index="57" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 5890, -120 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="thornbush6/Collider" index="0"]
 
@@ -683,22 +676,23 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 74.7951 )
 scale = Vector2( 0.161022, 0.158282 )
 
-[node name="stone" parent="." index="59" instance=ExtResource( 9 )]
+[node name="stone" parent="." index="58" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 9070, 220 )
 scale = Vector2( 0.104167, 0.104167 )
+texture = ExtResource( 14 )
 
 [node name="CollisionPolygon2D" parent="stone/StaticBody2D" index="0"]
 
-polygon = PoolVector2Array( 96, 1056, 0, 960, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1715.02, 70.0601, 1808.63, 191.49, 1836.46, 694.919, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
+polygon = PoolVector2Array( 96, 1056, -96, 1056, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1823.99, 95.9998, 1919.99, 191.999, 1919.99, 671.998, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
 
-[node name="stone2" parent="." index="60" instance=ExtResource( 9 )]
+[node name="stone2" parent="." index="59" instance=ExtResource( 13 )]
 
-editor/display_folded = true
 position = Vector2( 9923.31, 311.022 )
 scale = Vector2( 0.104167, 0.104167 )
 z_index = 90
+texture = ExtResource( 14 )
 flip_h = true
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
@@ -706,10 +700,10 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 position = Vector2( 1906.57, -7.77135 )
 scale = Vector2( -0.987274, 1.01781 )
-polygon = PoolVector2Array( 96, 1056, 0, 960, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1715.02, 70.0601, 1808.63, 191.49, 1836.46, 694.919, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
+polygon = PoolVector2Array( 96, 1056, -78.6563, 1035.51, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1715.02, 70.0601, 1808.63, 191.49, 1836.46, 694.919, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Ladder8" parent="." index="61" instance=ExtResource( 4 )]
+[node name="Ladder8" parent="." index="60" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 9410.65, 55.2861 )
@@ -719,12 +713,12 @@ scale = Vector2( 1, 3.48613 )
 
 texture = ExtResource( 5 )
 
-[node name="thornbush7" parent="." index="62" instance=ExtResource( 13 )]
+[node name="thornbush7" parent="." index="61" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 9640, 170 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="thornbush7/Collider" index="0"]
 
@@ -736,12 +730,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 31.8845 )
 scale = Vector2( 0.161022, 0.154032 )
 
-[node name="thornbush8" parent="." index="63" instance=ExtResource( 13 )]
+[node name="thornbush8" parent="." index="62" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 9710, 170 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="thornbush8/Collider" index="0"]
 
@@ -753,7 +747,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 27.9874 )
 scale = Vector2( 0.161022, 0.153646 )
 
-[node name="Ladder9" parent="." index="64" instance=ExtResource( 4 )]
+[node name="Ladder9" parent="." index="63" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 10303.7, 212.627 )
@@ -763,7 +757,7 @@ scale = Vector2( 1, 3.48613 )
 
 texture = ExtResource( 5 )
 
-[node name="Ladder10" parent="." index="65" instance=ExtResource( 4 )]
+[node name="Ladder10" parent="." index="64" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 11629.8, 87.3631 )
@@ -773,7 +767,7 @@ scale = Vector2( 1, 3.48613 )
 
 texture = ExtResource( 5 )
 
-[node name="big stone" parent="." index="66" instance=ExtResource( 9 )]
+[node name="big stone" parent="." index="65" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 10590.1, 288.102 )
@@ -784,12 +778,12 @@ texture = ExtResource( 15 )
 
 polygon = PoolVector2Array( 246.766, 241.127, 131.516, 298.738, 30.7031, 723.619, 9.10938, 781.23, 268.359, 1090.89, 261.156, 1450.96, 167.531, 1458.16, 167.531, 1638.19, 9.10938, 1753.41, 9.10938, 1904.64, 966.875, 1904.64, 830.063, 1501.37, 794.047, 1062.08, 945.281, 853.243, 974.094, 579.592, 729.25, 291.537, 578.016, 147.51, 549.203, 82.6978, 390.781, 10.6841, 239.547, 118.705 )
 
-[node name="thornbush9" parent="." index="67" instance=ExtResource( 13 )]
+[node name="thornbush9" parent="." index="66" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 10816, 226.263 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 14 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="thornbush9/Collider" index="0"]
 
@@ -801,14 +795,14 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 27.9874 )
 scale = Vector2( 0.161022, 0.153646 )
 
-[node name="FireS5" parent="." index="68" instance=ExtResource( 12 )]
+[node name="FireS5" parent="." index="67" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 10725.2, 245.068 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush9")
 
-[node name="Trap12" parent="." index="69" instance=ExtResource( 11 )]
+[node name="Trap12" parent="." index="68" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 11210, 280 )
@@ -817,7 +811,7 @@ position = Vector2( 11210, 280 )
 
 anims/Snap = SubResource( 3 )
 
-[node name="Trap13" parent="." index="70" instance=ExtResource( 11 )]
+[node name="Trap13" parent="." index="69" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 11560, 280 )
@@ -826,30 +820,30 @@ position = Vector2( 11560, 280 )
 
 anims/Snap = SubResource( 4 )
 
-[node name="Trap14" parent="." index="71" instance=ExtResource( 11 )]
+[node name="Trap14" parent="." index="70" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 12260, 120 )
 
-[node name="Box9" parent="." index="72" instance=ExtResource( 2 )]
+[node name="Box9" parent="." index="71" instance=ExtResource( 2 )]
 
 position = Vector2( 11800, 100 )
 
-[node name="Box10" parent="." index="73" instance=ExtResource( 2 )]
+[node name="Box10" parent="." index="72" instance=ExtResource( 2 )]
 
 position = Vector2( 11870, 100 )
 
-[node name="Box11" parent="." index="74" instance=ExtResource( 2 )]
+[node name="Box11" parent="." index="73" instance=ExtResource( 2 )]
 
 position = Vector2( 11834.8, 36.4124 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Box12" parent="." index="75" instance=ExtResource( 2 )]
+[node name="Box12" parent="." index="74" instance=ExtResource( 2 )]
 
 position = Vector2( 11970, 100 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ladder11" parent="." index="76" instance=ExtResource( 4 )]
+[node name="Ladder11" parent="." index="75" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 12320.2, -87.3332 )
@@ -859,33 +853,33 @@ scale = Vector2( 1, 3.48613 )
 
 texture = ExtResource( 5 )
 
-[node name="endstone" parent="." index="77" instance=ExtResource( 9 )]
+[node name="endstone" parent="." index="76" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 12859.4, -47.6668 )
 scale = Vector2( 0.121272, 0.121272 )
 
-[node name="stump s 2" parent="." index="78" instance=ExtResource( 16 )]
+[node name="stump s 2" parent="." index="77" instance=ExtResource( 16 )]
 
 position = Vector2( 2, 93 )
 
-[node name="stump s 3" parent="." index="79" instance=ExtResource( 16 )]
+[node name="stump s 3" parent="." index="78" instance=ExtResource( 16 )]
 
 position = Vector2( 2868.31, 154.217 )
 
-[node name="stump s 4" parent="." index="80" instance=ExtResource( 16 )]
+[node name="stump s 4" parent="." index="79" instance=ExtResource( 16 )]
 
 position = Vector2( 6114.16, 57.6303 )
 
-[node name="stump s 5" parent="." index="81" instance=ExtResource( 16 )]
+[node name="stump s 5" parent="." index="80" instance=ExtResource( 16 )]
 
 position = Vector2( 6605.74, 55.972 )
 
-[node name="stump l 8" parent="." index="82" instance=ExtResource( 17 )]
+[node name="stump l 8" parent="." index="81" instance=ExtResource( 17 )]
 
 position = Vector2( 8843.62, 151.987 )
 
-[node name="stump l 12" type="Sprite" parent="." index="83"]
+[node name="stump l 12" type="Sprite" parent="." index="82"]
 
 position = Vector2( 9418.73, 52.5902 )
 scale = Vector2( 0.0989583, 0.104806 )
@@ -918,7 +912,7 @@ position = Vector2( 928.747, 1539.22 )
 scale = Vector2( 62.1414, 19.2334 )
 shape = SubResource( 6 )
 
-[node name="stump l 13" type="Sprite" parent="." index="84"]
+[node name="stump l 13" type="Sprite" parent="." index="83"]
 
 position = Vector2( 12344.4, -48.0843 )
 scale = Vector2( 0.0989583, 0.104806 )
@@ -951,9 +945,13 @@ position = Vector2( 928.747, 1539.22 )
 scale = Vector2( 62.1414, 19.2334 )
 shape = SubResource( 6 )
 
-[node name="stump l 10" parent="." index="85" instance=ExtResource( 17 )]
+[node name="stump l 10" parent="." index="84" instance=ExtResource( 17 )]
 
 position = Vector2( 11290.1, 116.825 )
+
+[node name="trappedNPC" parent="." index="85" instance=ExtResource( 19 )]
+
+position = Vector2( 4090, 150 )
 
 
 [editable path="Ladder"]
