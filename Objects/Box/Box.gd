@@ -7,6 +7,10 @@ onready var isPushed = false
 export var gravity = 12
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
+var startpos
+
+func _ready():
+	startpos = global_position
 
 func _physics_process(delta):
 	rayUpdate()
@@ -21,7 +25,9 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Onion":
-		player = body
+		if player == null:
+			player = body
+			player.connect("loseHp", self, "resetPos")
 		if Input.is_action_just_pressed("push"):
 			if isPushed == true:
 				isPushed = false
@@ -49,3 +55,6 @@ func attachTo(obj):
 		obj.add_child(self)
 		set_global_transform(transf)
 		rotation_degrees = 0
+
+func resetPos():
+	global_position = startpos
