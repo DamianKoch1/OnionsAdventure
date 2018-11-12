@@ -15,7 +15,9 @@ _data = {
 custom_solver_bias = 0.0
 extents = Vector2( 31.9971, 31.8947 )
 
-[node name="Enemy" type="Node2D"]
+[node name="Enemy" type="Node2D" index="0" groups=[
+"Enemies",
+]]
 
 script = ExtResource( 1 )
 movespeed = 2
