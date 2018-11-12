@@ -7,12 +7,18 @@ onready var isPushed = false
 export var gravity = 12
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
+var startpos
+onready var damageCD = 0
+
+func _ready():
+	startpos = global_position
 
 func _physics_process(delta):
 	rayUpdate()
+	damageCD = max(damageCD - delta, 0)
 	if isPushed == true:
 		motion.x = player.motion.x
-		if abs(player.motion.y) >= 45 || abs(motion.y) >= 45:
+		if abs(player.motion.y) >= 25 || abs(motion.y) >= 25:
 			isPushed = false
 	else:
 		motion.x = lerp(motion.x, 0, brakeSpeed)
@@ -21,7 +27,9 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Onion":
-		player = body
+		if player == null:
+			player = body
+			player.connect("loseHp", self, "resetPos")
 		if Input.is_action_just_pressed("push"):
 			if isPushed == true:
 				isPushed = false
@@ -37,7 +45,6 @@ func rayUpdate():
 			ray.add_exception(col)
 		if global_position.distance_to(ray.get_collision_point()) <= 40:
 			attachTo(col)
-			motion.y = 0
 		elif global_position.distance_to(ray.get_collision_point()) > 40:
 			attachTo(worldNode)
 	else:
@@ -45,10 +52,16 @@ func rayUpdate():
 
 func attachTo(obj):
 	if obj.get_class() != "Area2D" && obj != get_parent():
-		var temp = isPushed
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
 		rotation_degrees = 0
-		isPushed = temp
+
+func resetPos():
+	global_position = startpos
+
+func _on_damageArea_body_entered(body):
+	if damageCD == 0 && body.name == "Onion":
+		damageCD = 1
+		body.health = max(body.health - 1, 0)
