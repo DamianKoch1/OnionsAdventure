@@ -2,9 +2,11 @@ extends Area2D
 
 var triggered = false
 onready var triggeredBody = $triggeredTrap/CollisionShape2D
+onready var player = get_parent().find_node("Onion")
 
 func _ready():
 	triggeredBody.disabled = true
+	player.connect("loseHp", self, "open")
 
 func _on_Trap_body_entered(body):
 	if triggered == false:
@@ -14,3 +16,6 @@ func _on_Trap_body_entered(body):
 			$AnimationPlayer.play("Snap")
 			if body.name == "Onion":
 				body.health -= 1
+
+func open():
+	$AnimationPlayer.play("Open")
