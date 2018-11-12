@@ -20,32 +20,32 @@
 [ext_resource path="res://Objects/TrappedNPC/trappedNPC.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=19]
 
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.4254 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 447.881, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
 [sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
-extents = Vector2( 447.881, 10 )
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 11.4254 )
-
-[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
@@ -60,7 +60,7 @@ position = Vector2( 11565.1, -1221.69 )
 
 [node name="Onion" parent="." index="1"]
 
-position = Vector2( -141.901, 66.2981 )
+position = Vector2( 2186.19, -688.757 )
 
 [node name="TileMap" parent="." index="2"]
 
@@ -146,13 +146,13 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="stump m2" type="Sprite" parent="." index="8"]
 
@@ -204,13 +204,13 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m2/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="moving Platform2" parent="." index="9" instance=ExtResource( 2 )]
 
@@ -303,27 +303,27 @@ scale = Vector2( 0.161022, 0.149396 )
 [node name="Box" parent="." index="17" instance=ExtResource( 10 )]
 
 editor/display_folded = true
-position = Vector2( 920, -210 )
+position = Vector2( 923.961, -244.77 )
 
 [node name="Box2" parent="." index="18" instance=ExtResource( 10 )]
 
 editor/display_folded = true
-position = Vector2( 1500, -400 )
+position = Vector2( 1496.51, -436.03 )
 
 [node name="Box4" parent="." index="19" instance=ExtResource( 10 )]
 
 editor/display_folded = true
-position = Vector2( 7583.31, -1281.96 )
+position = Vector2( 7586.22, -1300.08 )
 
 [node name="Box5" parent="." index="20" instance=ExtResource( 10 )]
 
 editor/display_folded = true
-position = Vector2( 10017.4, -1277.99 )
+position = Vector2( 10017.8, -1304.52 )
 
 [node name="Box3" parent="." index="21" instance=ExtResource( 10 )]
 
 editor/display_folded = true
-position = Vector2( 2280, -660 )
+position = Vector2( 2281.17, -691.535 )
 
 [node name="moving Platform3" parent="." index="22" instance=ExtResource( 2 )]
 
@@ -549,13 +549,13 @@ bounce = 0.0
 
 position = Vector2( 999.944, 875.041 )
 scale = Vector2( 33.1696, 87.1565 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump l 8/StaticBody2D2" index="1"]
 
 position = Vector2( 928.747, 1539.22 )
 scale = Vector2( 62.1414, 19.2334 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="moving Platform6" parent="." index="49" instance=ExtResource( 2 )]
 
@@ -672,7 +672,6 @@ scale = Vector2( 0.161022, 0.146345 )
 
 editor/display_folded = true
 position = Vector2( 6435.83, -733.483 )
-scale = Vector2( 1, 1 )
 objToDestroyPath = NodePath("../thornbush7")
 destroyRadius = 140
 
@@ -959,7 +958,6 @@ scale = Vector2( 0.161022, 0.146345 )
 
 editor/display_folded = true
 position = Vector2( 9142.51, -639.576 )
-scale = Vector2( 1, 1 )
 objToDestroyPath = NodePath("../thornbush19")
 destroyRadius = 140
 
@@ -1027,13 +1025,13 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 9/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="stump m 10" parent="." index="83" instance=ExtResource( 17 )]
 
@@ -1093,7 +1091,6 @@ scale = Vector2( 0.161022, 0.146345 )
 
 editor/display_folded = true
 position = Vector2( 10626, -1566.76 )
-scale = Vector2( 1, 1 )
 objToDestroyPath = NodePath("../thornbush20")
 destroyRadius = 140
 
@@ -1147,13 +1144,13 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 11/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="Ladder4" parent="." index="89" instance=ExtResource( 12 )]
 
