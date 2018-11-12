@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="stump l 8" type="Sprite" index="0"]
+
+scale = Vector2( 0.0989583, 0.104806 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ast 3" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 27.5156, 447.684 )
+scale = Vector2( 0.774041, 0.915257 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Ast 3" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ast 3/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 871.859, 284.229, 875.297, 157.86, 589.75, 67.2035, 242.281, 9.51306, 18.6719, 4.0188, 26.7892, 104.53, 246.969, 140.243, 549.716, 217.163, 866.225, 373.752 )
+one_way_collision = true
+
+[node name="Ast 4" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 1145.84, 852.611 )
+scale = Vector2( 0.901587, 0.851278 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Ast 4" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ast 4/StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 161.943, 395.8, 175.938, 143.23, 448.313, 80.5259, 722.523, 27.3701, 1062.47, 6.62183, 1021.45, 150.648, 758.573, 194.953, 457.305, 283.562 )
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="0"]
+
+position = Vector2( 999.944, 875.041 )
+scale = Vector2( 33.1696, 87.1565 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" index="1"]
+
+position = Vector2( 928.747, 1539.22 )
+scale = Vector2( 62.1414, 19.2334 )
+shape = SubResource( 11 )
+
+
