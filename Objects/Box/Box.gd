@@ -64,4 +64,5 @@ func resetPos():
 func _on_damageArea_body_entered(body):
 	if damageCD == 0 && body.name == "Onion":
 		damageCD = 1
-		body.health = max(body.health - 1, 0)
+		if motion.y >= 70:
+			body.health = max(body.health - 1, 0)

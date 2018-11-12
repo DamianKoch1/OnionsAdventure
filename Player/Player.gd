@@ -10,6 +10,8 @@ enum {idle, run, jump, fall, climb, dead}
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
 
+onready var ghostjumpTimeframe = 0
+
 export var movespeed = 250
 export var gravity = 20
 export var jumpheight = 550
@@ -56,6 +58,7 @@ func setState(newState):
 			global_scale.x = 0.5
 			global_scale.y = 0.5
 			newAnim = "Onion_JumpDown"
+			
 		climb:
 			global_scale.x = 0.5
 			global_scale.y = 0.5
@@ -70,10 +73,12 @@ func _ready():
 	setState(idle)
 	health = global.maxHealth
 	global.currLevelId = int(get_parent().name)
+	
 
 
 func _physics_process(delta):
 	if state != dead:
+		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
 		if newAnim != anim:
 			anim = newAnim
 			$AnimationPlayer.play(anim)
@@ -100,11 +105,15 @@ func _physics_process(delta):
 				motion.y = 0
 		
 		if Input.is_action_pressed("ui_right"):
+			if is_on_floor():
+				ghostjumpTimeframe = 0.5
 			motion.x = movespeed
 			$Sprite.scale.x = 1	
 			if is_on_floor() && state != climb:
 				setState(run)
 		elif Input.is_action_pressed("ui_left"):
+			if is_on_floor():
+				ghostjumpTimeframe = 0.5
 			motion.x = -movespeed
 			$Sprite.scale.x = -1
 			if is_on_floor() && state != climb:
@@ -112,11 +121,16 @@ func _physics_process(delta):
 		else:	
 			motion.x = 0
 		
+		if  ghostjumpTimeframe!= 0:
+			if Input.is_action_just_pressed("jump"):
+				motion.y = -jumpheight
+				ghostjumpTimeframe = 0
+		
 		if ray.is_colliding() && global_position.distance_to(ray.get_collision_point()) <= 30 && abs(motion.y) <= 70:
 			if motion.x == 0 && state != climb:
 				setState(idle)
-			if Input.is_action_just_pressed("jump"):
-				motion.y = -jumpheight
+				if Input.is_action_just_pressed("jump"):
+					motion.y = -jumpheight
 		else:
 			if state != climb:
 				if motion.y > 40:

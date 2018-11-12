@@ -40,7 +40,7 @@ position = Vector2( 1020.4, -609.308 )
 
 [node name="Onion" parent="." index="1"]
 
-position = Vector2( -150, 50 )
+position = Vector2( 2176, -672 )
 
 [node name="TileMap" parent="." index="2"]
 
