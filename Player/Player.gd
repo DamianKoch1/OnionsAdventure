@@ -11,6 +11,7 @@ onready var worldNode = get_parent()
 onready var ray = $RayCast2D
 
 onready var ghostjumpTimeframe = 0
+export var maxGhostjumpDelay = 0.2
 
 export var movespeed = 250
 export var gravity = 20
@@ -106,14 +107,14 @@ func _physics_process(delta):
 		
 		if Input.is_action_pressed("ui_right"):
 			if is_on_floor():
-				ghostjumpTimeframe = 0.5
+				ghostjumpTimeframe = maxGhostjumpDelay
 			motion.x = movespeed
 			$Sprite.scale.x = 1	
 			if is_on_floor() && state != climb:
 				setState(run)
 		elif Input.is_action_pressed("ui_left"):
 			if is_on_floor():
-				ghostjumpTimeframe = 0.5
+				ghostjumpTimeframe = maxGhostjumpDelay
 			motion.x = -movespeed
 			$Sprite.scale.x = -1
 			if is_on_floor() && state != climb:
