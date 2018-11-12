@@ -187,7 +187,7 @@ _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
 position = Vector2( 416, 128 )
 scale = Vector2( 1.10689, 0.967083 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 camSpeed = 0.05
 
 [node name="Spawnpoint" parent="." index="11" instance=ExtResource( 10 )]

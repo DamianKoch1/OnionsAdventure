@@ -5,6 +5,7 @@
 [node name="Camera" type="Camera2D"]
 
 position = Vector2( -34.7368, -27.3684 )
+z_index = 30
 anchor_mode = 1
 rotating = false
 current = true
@@ -28,6 +29,7 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 camSpeed = 0.1
 
 [node name="HP" type="Label" parent="." index="0"]
