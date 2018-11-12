@@ -57,6 +57,8 @@ func setState(newState):
 			global_scale.y = 0.5
 			newAnim = "Onion_JumpDown"
 		climb:
+			global_scale.x = 0.5
+			global_scale.y = 0.5
 			#cimb anim?
 			newAnim = "Onion_Idle"
 		dead:
@@ -67,6 +69,8 @@ func setState(newState):
 func _ready():
 	setState(idle)
 	health = global.maxHealth
+	global.currLevelId = int(get_parent().name)
+
 
 func _physics_process(delta):
 	if state != dead:
@@ -78,6 +82,8 @@ func _physics_process(delta):
 			motion.y += gravity
 			if abs(rotation_degrees) > 3:
 				rotation_degrees = lerp(rotation_degrees, 0, delta*3)
+				global_scale.x = 0.5
+				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
 		elif state == climb:
@@ -106,17 +112,19 @@ func _physics_process(delta):
 		else:	
 			motion.x = 0
 		
-		if is_on_floor():
-			if motion.x == 0 && state != climb:
-				setState(idle)
-			if Input.is_action_just_pressed("jump"):
-				motion.y = -jumpheight
-		else:
-			if state != climb:
-				if motion.y > 40:
-					setState(fall)
-				elif motion.y < 0:
-					setState(jump)
+		#if is_on_floor():
+		if ray.is_colliding():
+			if global_position.distance_to(ray.get_collision_point()) <= 30 && abs(motion.y) <= 70:
+				if motion.x == 0 && state != climb:
+					setState(idle)
+				if Input.is_action_just_pressed("jump"):
+					motion.y = -jumpheight
+			else:
+				if state != climb:
+					if motion.y > 40:
+						setState(fall)
+					elif motion.y < 0:
+						setState(jump)
 		motion = move_and_slide(motion, UP)
 
 func bounce(bounceStr):
@@ -143,3 +151,5 @@ func attachTo(obj):
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
+		global_scale.x = 0.5
+		global_scale.y = 0.5

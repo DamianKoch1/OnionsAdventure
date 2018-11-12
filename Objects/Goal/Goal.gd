@@ -5,6 +5,6 @@ func _on_Goal_body_entered(body):
 			loadNextLevel()
 
 func loadNextLevel():
-	global.nextLevelId += 1
-	var path = "Levels/Level " + str(global.nextLevelId) + ".tscn"
+	var path = "Levels/Level " + str(global.currLevelId) + ".tscn"
+	global.currLevelId += 1
 	get_tree().change_scene(path)
