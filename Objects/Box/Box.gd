@@ -41,7 +41,7 @@ func rayUpdate():
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
-		if col.get_class() == "Area2D":
+		if col.get_class() == "Area2D" || col.name == "Onion":
 			ray.add_exception(col)
 		if global_position.distance_to(ray.get_collision_point()) <= 40:
 			attachTo(col)
@@ -51,7 +51,7 @@ func rayUpdate():
 		attachTo(worldNode)
 
 func attachTo(obj):
-	if obj.get_class() != "Area2D" && obj != get_parent():
+	if obj.get_class() != "Area2D" && obj != get_parent() && obj.name != "Onion":
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)
