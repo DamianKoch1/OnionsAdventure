@@ -15,14 +15,14 @@ func _ready():
 
 func _physics_process(delta):
 	rayUpdate()
+	motion.y += gravity
 	damageCD = max(damageCD - delta, 0)
 	if isPushed == true:
 		motion.x = player.motion.x
-		if abs(player.motion.y) >= 25 || abs(motion.y) >= 25:
+		if abs(player.motion.y) > 60 || abs(motion.y) > 60:
 			isPushed = false
 	else:
 		motion.x = lerp(motion.x, 0, brakeSpeed)
-	motion.y += gravity
 	motion = move_and_slide(motion)
 
 func _on_Area2D_body_entered(body):
