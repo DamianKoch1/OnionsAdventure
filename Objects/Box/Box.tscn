@@ -1,12 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Objects/Box/Box.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Box/asset_wooden_box_1.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -39,11 +34,12 @@ scale = Vector2( 0.101266, 0.109215 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="1"]
 
-position = Vector2( 0, 5.35284 )
-scale = Vector2( 1, 0.847062 )
-shape = SubResource( 1 )
+position = Vector2( 0.0623041, 5.94025 )
+scale = Vector2( 2.98546, 2.43116 )
+build_mode = 0
+polygon = PoolVector2Array( -10.4521, -10.892, -10.457, 7.66693, 0.0262405, 10.035, 10.3693, 7.70999, 10.3768, -10.8459 )
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
