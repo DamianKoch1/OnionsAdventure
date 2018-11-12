@@ -30,6 +30,7 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+maxGhostjumpDelay = 0.2
 movespeed = 250
 gravity = 20
 jumpheight = 450
