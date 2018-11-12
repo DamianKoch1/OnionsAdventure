@@ -112,19 +112,17 @@ func _physics_process(delta):
 		else:	
 			motion.x = 0
 		
-		#if is_on_floor():
-		if ray.is_colliding():
-			if global_position.distance_to(ray.get_collision_point()) <= 30 && abs(motion.y) <= 70:
-				if motion.x == 0 && state != climb:
-					setState(idle)
-				if Input.is_action_just_pressed("jump"):
-					motion.y = -jumpheight
-			else:
-				if state != climb:
-					if motion.y > 40:
-						setState(fall)
-					elif motion.y < 0:
-						setState(jump)
+		if ray.is_colliding() && global_position.distance_to(ray.get_collision_point()) <= 30 && abs(motion.y) <= 70:
+			if motion.x == 0 && state != climb:
+				setState(idle)
+			if Input.is_action_just_pressed("jump"):
+				motion.y = -jumpheight
+		else:
+			if state != climb:
+				if motion.y > 40:
+					setState(fall)
+				elif motion.y < 0:
+					setState(jump)
 		motion = move_and_slide(motion, UP)
 
 func bounce(bounceStr):
