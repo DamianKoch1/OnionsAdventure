@@ -36,6 +36,7 @@ func open():
 	triggerCD = 1
 	if triggerStartpos != null:
 		var box = boxPacked.instance()
+		get_tree().get_root().add_child(box)
 		box.position = triggerStartpos
 		triggerStartpos = null
 	$AnimationPlayer.play("Open")
