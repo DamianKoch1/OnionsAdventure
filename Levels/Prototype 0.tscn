@@ -34,7 +34,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866, 0, 0, 0, 0, 102.868, 71.1767, 0, 0, 0, 0, -36.7438, 12.451, 0, 0, 0, 0, -147.547, 99.9855, 0, 0, 0, 0, -80.5574, 170.197 )
 }
 
-[node name="Prototype 0" type="Node"]
+[node name="Prototype 0" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -186,7 +186,7 @@ _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
 position = Vector2( 416, 128 )
 scale = Vector2( 1.10689, 0.967083 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 camSpeed = 0.05
 
 [node name="Spawnpoint" parent="." index="11" instance=ExtResource( 10 )]
@@ -216,20 +216,26 @@ position = Vector2( 640, 224 )
 z_index = 5
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Checkpoint" parent="." index="16" instance=ExtResource( 13 )]
+[node name="Box3" parent="." index="16" instance=ExtResource( 12 )]
+
+position = Vector2( 1324.51, -196.362 )
+z_index = 5
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Checkpoint" parent="." index="17" instance=ExtResource( 13 )]
 
 position = Vector2( 832, -32 )
 
-[node name="Checkpoint2" parent="." index="17" instance=ExtResource( 13 )]
+[node name="Checkpoint2" parent="." index="18" instance=ExtResource( 13 )]
 
 position = Vector2( 2304, -32 )
 
-[node name="Trap" parent="." index="18" instance=ExtResource( 14 )]
+[node name="Trap" parent="." index="19" instance=ExtResource( 14 )]
 
 position = Vector2( -97.7994, 240.296 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Sprite" parent="." index="19" instance=ExtResource( 15 )]
+[node name="Sprite" parent="." index="20" instance=ExtResource( 15 )]
 
 editor/display_folded = true
 position = Vector2( 512, 216.91 )
@@ -246,7 +252,7 @@ scale = Vector2( 1, 1.17768 )
 position = Vector2( -5.89149, 40.4562 )
 scale = Vector2( 0.10767, 0.149532 )
 
-[node name="Sprite2" parent="." index="20" instance=ExtResource( 15 )]
+[node name="Sprite2" parent="." index="21" instance=ExtResource( 15 )]
 
 editor/display_folded = true
 position = Vector2( 639.613, 338.115 )
@@ -263,7 +269,7 @@ scale = Vector2( 1, 1.21401 )
 position = Vector2( 17.2571, 80.7451 )
 scale = Vector2( 0.111448, 0.15888 )
 
-[node name="Enemy" parent="." index="21" instance=ExtResource( 17 )]
+[node name="Enemy" parent="." index="22" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 position = Vector2( -636.128, 236.206 )
@@ -273,7 +279,7 @@ pathLooped = false
 
 curve = SubResource( 1 )
 
-[node name="Enemy2" parent="." index="22" instance=ExtResource( 17 )]
+[node name="Enemy2" parent="." index="23" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 position = Vector2( 1475.24, -38.1696 )
@@ -283,11 +289,11 @@ movespeed = 0.2
 
 curve = SubResource( 2 )
 
-[node name="FollowingEnemy" parent="." index="23" instance=ExtResource( 18 )]
+[node name="FollowingEnemy" parent="." index="24" instance=ExtResource( 18 )]
 
 position = Vector2( 2905.98, -38.6253 )
 
-[node name="trappedNPC" parent="." index="24" instance=ExtResource( 19 )]
+[node name="trappedNPC" parent="." index="25" instance=ExtResource( 19 )]
 
 position = Vector2( 384, 224 )
 
