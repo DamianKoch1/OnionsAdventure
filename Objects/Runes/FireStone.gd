@@ -18,7 +18,7 @@ func _on_FireStoneTrigger_body_entered(body):
 		if player == null:
 			player = body
 			player.connect("loseHp", self, "resetObj")
-		if body.motion.y > body.gravity*15:
+		if body.motion.y > body.gravity*10:
 			if triggered == false:
 				var distanceToObject = global_position.distance_to(objToDestroy.global_position)
 				if body.motion.y > 3 && global_position.distance_to(objToDestroy.global_position) < destroyRadius:
