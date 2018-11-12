@@ -15,14 +15,14 @@ func _ready():
 
 func _physics_process(delta):
 	rayUpdate()
+	motion.y += gravity
 	damageCD = max(damageCD - delta, 0)
 	if isPushed == true:
 		motion.x = player.motion.x
-		if abs(player.motion.y) >= 25 || abs(motion.y) >= 25:
+		if abs(player.motion.y) > 60 || abs(motion.y) > 60:
 			isPushed = false
 	else:
 		motion.x = lerp(motion.x, 0, brakeSpeed)
-	motion.y += gravity
 	motion = move_and_slide(motion)
 
 func _on_Area2D_body_entered(body):
@@ -64,4 +64,5 @@ func resetPos():
 func _on_damageArea_body_entered(body):
 	if damageCD == 0 && body.name == "Onion":
 		damageCD = 1
-		body.health = max(body.health - 1, 0)
+		if motion.y >= 70:
+			body.health = max(body.health - 1, 0)
