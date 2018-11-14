@@ -3,22 +3,22 @@
 [ext_resource path="res://Objects/Box/Box.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Box/asset_wooden_box_1.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 46.7717, 36.8304 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Box" type="KinematicBody2D"]
+[node name="Box" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -39,7 +39,7 @@ _sections_unfolded = [ "Visibility" ]
 position = Vector2( 0.0623041, 5.94025 )
 scale = Vector2( 2.98546, 2.43116 )
 build_mode = 0
-polygon = PoolVector2Array( -10.4521, -10.892, -10.457, 7.66693, 0.0262405, 10.035, 10.3693, 7.70999, 10.3768, -10.8459 )
+polygon = PoolVector2Array( -10.2332, -11.0972, 10.1808, -11.0972, 10.3716, 8.17266, 0.0215243, 10.5155, -10.3286, 7.93837 )
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
@@ -56,7 +56,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 0, 10.9564 )
 scale = Vector2( 1, 0.52833 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="3"]
 
@@ -81,7 +81,7 @@ bounce = 0.0
 
 position = Vector2( 0, -27.1617 )
 scale = Vector2( 1, 0.156635 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="damageArea" type="Area2D" parent="." index="5"]
 
@@ -97,7 +97,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 1.56625, 42.7373 )
 scale = Vector2( 2.78646, 0.826997 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
