@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Background/bg placeholder1.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Background/bg placeholder2.png" type="Texture" id=7]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -17,6 +17,7 @@ position = Vector2( 32, 32 )
 [node name="Onion" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 96, 32 )
+climbspeed = 200
 
 [node name="TileMap" parent="." index="2" instance=ExtResource( 3 )]
 
