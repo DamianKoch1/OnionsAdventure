@@ -11,4 +11,4 @@ func _on_Trigger_body_entered(body):
 	if body.name == "Onion" && damageCD == 0:
 		damageCD = 1
 		body.health -= 1
-		print(self)
+

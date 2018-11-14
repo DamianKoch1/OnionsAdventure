@@ -72,6 +72,10 @@ jump=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
  ]
 push=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
  ]
+debugGodmode=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777236,"unicode":0,"echo":false,"script":null)
+ ]
+debugFly=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777235,"unicode":0,"echo":false,"script":null)
+ ]
 
 [locale]
 

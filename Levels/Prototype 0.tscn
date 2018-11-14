@@ -70,6 +70,7 @@ editor/display_folded = true
 position = Vector2( 248.643, 212.61 )
 z_index = 5
 z_as_relative = false
+climbspeed = 200
 
 [node name="RayCast2D" parent="Onion" index="0"]
 
