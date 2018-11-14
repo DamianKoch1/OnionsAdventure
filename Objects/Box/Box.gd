@@ -11,7 +11,10 @@ var startpos
 onready var damageCD = 0
 
 func _ready():
-	startpos = global_position
+	getpos()
+
+func getpos():
+		startpos = global_position
 
 func _physics_process(delta):
 	rayUpdate()
