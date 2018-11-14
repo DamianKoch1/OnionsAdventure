@@ -23,6 +23,9 @@ func _on_Trap_body_entered(body):
 		if body.name != "StaticBody2D" && body.name != "TileMap":
 			if body.name == "Onion":
 				body.health -= 1
+				triggered = true
+				snappedBody.disabled = false
+				$AnimationPlayer.play("Snap")
 			else:
 				if body.get_filename() == boxPacked.get_path():
 					triggerStartpos = body.startpos

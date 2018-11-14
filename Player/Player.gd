@@ -89,16 +89,24 @@ func _physics_process(delta):
 		
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == -1:
+				print("fly ON")
+				$CollisionShape2D.disabled = true
 				setState(climb)
 				climbspeed *= 2
 				movespeed *= 2
 			else:
+				print("fly OFF")
+				$CollisionShape2D.disabled = false
 				setState(fall)
 				climbspeed /= 2
 				movespeed /= 2
 			debugFly *= -1
 		
 		if Input.is_action_just_pressed("debugGodmode"):
+			if debugGodmode == -1:
+				print("Godmode ON")
+			else:
+				print("Godmode OFF")
 			debugGodmode *= -1
 			
 		
