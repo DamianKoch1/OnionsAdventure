@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Menus/PauseMenu.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="Gradient" id=1]
 
@@ -84,7 +83,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
 
-[node name="ResumeButton" type="TextureButton" parent="." index="2"]
+[node name="ResumeButton" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -105,41 +104,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-expand = true
+text = "Resume"
+flat = false
+align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ResumeButton" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 98.0
-margin_top = 38.0
-margin_right = 166.0
-margin_bottom = 58.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Resume"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="MainMenuButton" type="TextureButton" parent="." index="3"]
+[node name="MainMenuButton" type="Button" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -160,41 +130,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-expand = true
+text = "Main Menu (wip)"
+flat = false
+align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="MainMenuButton" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 69.0
-margin_top = 13.0
-margin_right = 163.0
-margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Main Menu wip"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="RestartButton" type="TextureButton" parent="." index="4"]
+[node name="RestartButton" type="Button" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -215,49 +156,20 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-expand = true
+text = "Restart"
+flat = false
+align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="RestartButton" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 88.0
-margin_top = 32.0
-margin_right = 187.0
-margin_bottom = 71.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Restart Level"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="QuitButton" type="TextureButton" parent="." index="5"]
+[node name="QuitButton" type="Button" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 229.0
-margin_top = 117.0
-margin_right = 307.0
+margin_left = 167.0
+margin_top = 81.0
+margin_right = 303.0
 margin_bottom = 139.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -270,39 +182,36 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-expand = true
-_sections_unfolded = [ "Textures" ]
+text = "Quit"
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="QuitButton" index="0"]
+[node name="OptionsButton" type="Button" parent="." index="6"]
 
-modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 21.0
-margin_top = 4.0
-margin_right = 90.0
-margin_bottom = 43.0
+margin_left = 215.0
+margin_top = -113.0
+margin_right = 312.0
+margin_bottom = -91.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
+rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Quit"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Options (wip)"
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags", "Textures" ]
 
 [connection signal="pressed" from="ResumeButton" to="." method="_on_ResumeButton_pressed"]
 
@@ -311,5 +220,7 @@ _sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
 [connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]
 
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
+
+[connection signal="pressed" from="OptionsButton" to="." method="_on_QuitButton_pressed"]
 
 
