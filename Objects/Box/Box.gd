@@ -11,8 +11,7 @@ var startpos
 onready var damageCD = 0
 
 func _ready():
-	if startpos == null:
-		startpos = global_position
+	getpos()
 
 func getpos():
 		startpos = global_position

@@ -37,11 +37,12 @@ func _on_Trap_body_entered(body):
 
 func open():
 	triggerCD = 1
-	if obj.get_filename() == boxPacked.get_path() && player.health >= 1:
-		var box = boxPacked.instance()
-		get_tree().get_root().add_child(box)
-		box.global_position = obj.startpos
-		box.getpos()
+	if obj != null:
+		if obj.get_filename() == boxPacked.get_path() && player.health >= 1:
+			var box = boxPacked.instance()
+			get_tree().get_root().add_child(box)
+			box.global_position = obj.startpos
+			box.getpos()
 	$AnimationPlayer.play("Open")
 	snappedBody.disabled = true
 	triggered = false
