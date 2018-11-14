@@ -5,7 +5,6 @@ onready var snappedBody = $triggeredTrap/CollisionShape2D
 onready var player = get_parent().find_node("Onion")
 var triggerCD = 0
 onready var boxPacked = preload("res://Objects/Box/Box.tscn")
-var triggerStartpos
 
 var obj
 
@@ -16,7 +15,6 @@ func snap():
 			obj.health -= 1
 		else:
 			if obj.get_filename() == boxPacked.get_path():
-				triggerStartpos = obj.startpos
 				obj.get_parent().remove_child(obj)
 
 
@@ -39,11 +37,11 @@ func _on_Trap_body_entered(body):
 
 func open():
 	triggerCD = 1
-	if triggerStartpos != null:
+	if obj.get_filename() == boxPacked.get_path() && player.health >= 1:
 		var box = boxPacked.instance()
 		get_tree().get_root().add_child(box)
-		box.global_position = triggerStartpos
-		triggerStartpos = null
+		box.global_position = obj.startpos
+		box.getpos()
 	$AnimationPlayer.play("Open")
 	snappedBody.disabled = true
 	triggered = false
