@@ -17,6 +17,7 @@ position = Vector2( 32, 32 )
 [node name="Onion" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 96, 32 )
+climbspeed = 200
 
 [node name="TileMap" parent="." index="2" instance=ExtResource( 3 )]
 
