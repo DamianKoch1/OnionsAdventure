@@ -61,7 +61,6 @@ position = Vector2( 11565.1, -1221.69 )
 [node name="Onion" parent="." index="1"]
 
 position = Vector2( -128, 32 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="TileMap" parent="." index="2"]
 
@@ -1165,6 +1164,16 @@ texture = ExtResource( 13 )
 [node name="CollisionShape2D" parent="Ladder4" index="1"]
 
 visible = true
+
+[node name="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+position = Vector2( 5280, -592 )
+scale = Vector2( 2.50964, 6.22222 )
+
+[node name="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+
+position = Vector2( 5664, -544 )
+scale = Vector2( 1.99497, 3.11548 )
 
 
 [editable path="moving Platform"]

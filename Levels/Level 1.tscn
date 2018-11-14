@@ -100,7 +100,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Level 1" instance=ExtResource( 1 )]
+[node name="Level 1" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -952,6 +952,18 @@ position = Vector2( 11290.1, 116.825 )
 [node name="trappedNPC" parent="." index="85" instance=ExtResource( 19 )]
 
 position = Vector2( 4090, 150 )
+
+[node name="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+position = Vector2( 7680, 96 )
+scale = Vector2( 1.9, 2.07407 )
+region_rect = Rect2( -16, 4, 9600, 324 )
+
+[node name="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+
+position = Vector2( 7616, 64 )
+scale = Vector2( 1.2376, 1.03051 )
+region_rect = Rect2( -20, 0, 14717.6, 590 )
 
 
 [editable path="Ladder"]
