@@ -14,6 +14,9 @@ func _ready():
 	if startpos == null:
 		startpos = global_position
 
+func getpos():
+		startpos = global_position
+
 func _physics_process(delta):
 	rayUpdate()
 	motion.y += gravity
