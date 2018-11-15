@@ -4,9 +4,9 @@
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Onion.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/Runes/EarthStone.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Runes/FireStone.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Objects/Runes/EarthStone.gd" type="Script" id=7]
+[ext_resource path="res://Objects/interactable NPCs/Movingplatform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/interactable NPCs/Movingplatform.gd" type="Script" id=7]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=10]
@@ -17,7 +17,7 @@
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=15]
 [ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Enemies/FollowingEnemy.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Objects/TrappedNPC/trappedNPC.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Assets/Background/bg placeholder1.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Background/bg placeholder2.png" type="Texture" id=20]
 [ext_resource path="res://Player/Camera.tscn" type="PackedScene" id=21]
@@ -36,7 +36,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866, 0, 0, 0, 0, 102.868, 71.1767, 0, 0, 0, 0, -36.7438, 12.451, 0, 0, 0, 0, -147.547, 99.9855, 0, 0, 0, 0, -80.5574, 170.197 )
 }
 
-[node name="Prototype 0" type="Node" index="0"]
+[node name="Prototype 0" type="Node"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -316,7 +316,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
-position = Vector2( 0, 304.551 )
+position = Vector2( 3.99438, 201.609 )
 scale = Vector2( 1, 2.29062 )
 texture = ExtResource( 19 )
 region_enabled = true
@@ -332,7 +332,7 @@ _sections_unfolded = [ "Motion" ]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
 
-position = Vector2( 1415.33, 294.161 )
+position = Vector2( 1417.7, 194.4 )
 scale = Vector2( 0.78316, 2.45273 )
 z_index = -99
 texture = ExtResource( 20 )
@@ -341,6 +341,10 @@ region_rect = Rect2( -1804, 0, 15960, 232 )
 _sections_unfolded = [ "Region", "Visibility", "Z Index" ]
 
 [node name="Camera" parent="." index="26" instance=ExtResource( 21 )]
+
+[node name="PauseMenu" parent="Camera" index="2"]
+
+visible = false
 
 
 [editable path="Onion"]

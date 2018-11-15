@@ -41,7 +41,7 @@ _sections_unfolded = [ "Visibility" ]
 position = Vector2( 0.0623041, 5.94025 )
 scale = Vector2( 2.98546, 2.43116 )
 build_mode = 0
-polygon = PoolVector2Array( -10.2332, -11.0972, 10.1808, -11.0972, 10.3716, 8.17266, 0.0215243, 10.5155, -10.3286, 7.93837 )
+polygon = PoolVector2Array( -10.2332, -11.0972, 10.1808, -11.0972, 10.5259, 1.44227, 0.0366836, 10.1725, -10.1806, 1.91933 )
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
