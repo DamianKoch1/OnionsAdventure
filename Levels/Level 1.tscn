@@ -112,7 +112,6 @@ position = Vector2( 12956.2, 93.4388 )
 
 position = Vector2( -100, 110 )
 scale = Vector2( 0.5, 0.503912 )
-climbspeed = 200
 
 [node name="TileMap" parent="." index="2"]
 
@@ -159,7 +158,7 @@ texture = ExtResource( 5 )
 
 editor/display_folded = true
 position = Vector2( 1984, 32 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="stump m 7" parent="." index="11" instance=ExtResource( 6 )]
 
@@ -527,7 +526,7 @@ position = Vector2( 6500, 90 )
 [node name="Box6" parent="." index="42" instance=ExtResource( 2 )]
 
 position = Vector2( 7130, 290 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Trap5" parent="." index="43" instance=ExtResource( 9 )]
 
@@ -836,12 +835,12 @@ position = Vector2( 11870, 100 )
 [node name="Box11" parent="." index="73" instance=ExtResource( 2 )]
 
 position = Vector2( 11834.8, 36.4124 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Box12" parent="." index="74" instance=ExtResource( 2 )]
 
 position = Vector2( 11970, 100 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Ladder11" parent="." index="75" instance=ExtResource( 4 )]
 
@@ -961,9 +960,9 @@ region_rect = Rect2( -16, 4, 9600, 324 )
 
 [node name="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
 
-position = Vector2( 7616, 64 )
-scale = Vector2( 1.2376, 1.03051 )
-region_rect = Rect2( -20, 0, 14717.6, 590 )
+position = Vector2( 7616, 80 )
+scale = Vector2( 1.2376, 2.30508 )
+region_rect = Rect2( 20, 0, 14677.6, 236 )
 
 
 [editable path="Ladder"]
