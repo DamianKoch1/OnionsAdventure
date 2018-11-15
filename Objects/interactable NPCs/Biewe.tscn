@@ -13,13 +13,14 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 5.68353 )
 
-[node name="Biewe" type="Node2D" index="0"]
+[node name="Biewe" type="Node2D"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 bieweCooldown = 8
 bieweRange = 600
+hideDuration = 3
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
@@ -35,7 +36,11 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D" index="1"]
+[node name="Sprite" type="Node2D" parent="StaticBody2D" index="1"]
+
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D/Sprite" index="0"]
 
 texture = ExtResource( 2 )
 
