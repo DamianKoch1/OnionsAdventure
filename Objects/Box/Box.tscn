@@ -38,10 +38,10 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="1"]
 
-position = Vector2( 0.0623041, 5.94025 )
-scale = Vector2( 2.98546, 2.43116 )
+position = Vector2( -0.36083, 4.88073 )
+scale = Vector2( 3.14011, 2.67615 )
 build_mode = 0
-polygon = PoolVector2Array( -10.2332, -11.0972, 10.1808, -11.0972, 10.5259, 1.44227, 0.0366836, 10.1725, -10.1806, 1.91933 )
+polygon = PoolVector2Array( -9.69278, -9.6226, 9.85301, -9.6226, 10.0038, 7.41605, 0.00474931, 9.71538, -9.74302, 7.41605 )
 
 [node name="Area2D" type="Area2D" parent="." index="2"]
 
