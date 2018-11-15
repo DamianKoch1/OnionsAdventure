@@ -33,6 +33,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Enemy" type="Node2D" parent="EnemyPath" index="0"]
 
 position = Vector2( -81.2339, 169.313 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Sprites" type="Node2D" parent="EnemyPath/Enemy" index="0"]
 

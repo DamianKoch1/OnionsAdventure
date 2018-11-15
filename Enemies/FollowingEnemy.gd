@@ -14,8 +14,8 @@ func _ready():
 	startpos = enemy.global_position
 	add_to_group("Enemies")
 
-func flee():
-	print("followingFlee")
+func flee(duration):
+	
 
 func _process(delta):
 	if damageCD != 0:

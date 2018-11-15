@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Assets/Background/bg placeholder1.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Background/bg placeholder2.png" type="Texture" id=20]
 [ext_resource path="res://Player/Camera.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Objects/interactable NPCs/Biewe.tscn" type="PackedScene" id=22]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -36,7 +37,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866, 0, 0, 0, 0, 102.868, 71.1767, 0, 0, 0, 0, -36.7438, 12.451, 0, 0, 0, 0, -147.547, 99.9855, 0, 0, 0, 0, -80.5574, 170.197 )
 }
 
-[node name="Prototype 0" type="Node"]
+[node name="Prototype 0" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -345,6 +346,10 @@ _sections_unfolded = [ "Region", "Visibility", "Z Index" ]
 [node name="PauseMenu" parent="Camera" index="2"]
 
 visible = false
+
+[node name="Biewe" parent="." index="27" instance=ExtResource( 22 )]
+
+position = Vector2( 2698.84, -50.8073 )
 
 
 [editable path="Onion"]

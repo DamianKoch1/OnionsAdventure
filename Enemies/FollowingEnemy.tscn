@@ -42,6 +42,8 @@ shape = SubResource( 1 )
 
 [node name="Sprites" type="Node2D" parent="Enemy" index="1"]
 
+editor/display_folded = true
+
 [node name="Sprite" type="Sprite" parent="Enemy/Sprites" index="0"]
 
 modulate = Color( 1, 0, 0, 1 )
