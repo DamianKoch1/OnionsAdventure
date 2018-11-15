@@ -7,6 +7,9 @@ export (float) var movespeed = 2
 export (bool) var pathLooped = true
 onready var damageCD = 0
 
+func _ready():
+	add_to_group("Enemies")
+
 func _process(delta):
 	if damageCD > 0:
 		damageCD = max(damageCD-delta, 0)
@@ -21,6 +24,8 @@ func _process(delta):
 		pathfollow.unit_offset = i
 	enemy.global_position = pathfollow.global_position
 
+func flee():
+	print("flee")
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Onion" && damageCD == 0:

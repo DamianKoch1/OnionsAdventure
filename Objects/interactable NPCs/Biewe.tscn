@@ -18,6 +18,8 @@ extents = Vector2( 10, 5.68353 )
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
+bieweCooldown = 8
+bieweRange = 600
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
