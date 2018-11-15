@@ -9,7 +9,7 @@
 [ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=8]
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Objects/Runes/FireStone.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=12]
 [ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=13]
@@ -18,7 +18,12 @@
 [ext_resource path="res://Objects/Obstacles/Stump S.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Objects/Obstacles/Stump L.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=18]
-[ext_resource path="res://Objects/TrappedNPC/trappedNPC.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC.tscn" type="PackedScene" id=19]
+
+
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Objects/Runes/EarthStone.gd" type="Script" id=1]
+[ext_resource path="res://Objects/interactable NPCs/Movingplatform.gd" type="Script" id=1]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=2]
 
-[node name="EarthStone" type="Node2D"]
+[node name="Movingplatform" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-platformSpeed = 8
+platformSpeed = 2
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 2 )]
 
