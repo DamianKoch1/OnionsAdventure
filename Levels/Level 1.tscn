@@ -20,11 +20,6 @@
 [ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=18]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC.tscn" type="PackedScene" id=19]
 
-
-
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
