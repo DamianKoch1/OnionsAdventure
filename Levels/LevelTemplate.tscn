@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Background/bg placeholder1.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Background/bg placeholder2.png" type="Texture" id=7]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -60,6 +60,10 @@ texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( -1820, 4, 7676, 324 )
 _sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
 
@@ -81,5 +85,9 @@ texture = ExtResource( 7 )
 region_enabled = true
 region_rect = Rect2( -1784, 0, 7640, 236 )
 _sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 

@@ -34,3 +34,7 @@ func _on_QuitButton_pressed():
 
 func _on_RestartButton_pressed():
 	get_tree().reload_current_scene()
+
+
+func _on_OptionsButton_pressed():
+	pass # replace with function body
