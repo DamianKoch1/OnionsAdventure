@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Background/bg placeholder1.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Background/bg placeholder2.png" type="Texture" id=7]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -75,11 +75,11 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
 
 position = Vector2( -64, 0 )
-scale = Vector2( 0.48, 0.373333 )
+scale = Vector2( 0.48, 1.04918 )
 z_index = -99
 texture = ExtResource( 7 )
 region_enabled = true
-region_rect = Rect2( -1784, 0, 7640, 590 )
+region_rect = Rect2( -1784, 0, 7640, 236 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
 
