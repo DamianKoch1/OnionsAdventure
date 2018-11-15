@@ -36,7 +36,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866, 0, 0, 0, 0, 102.868, 71.1767, 0, 0, 0, 0, -36.7438, 12.451, 0, 0, 0, 0, -147.547, 99.9855, 0, 0, 0, 0, -80.5574, 170.197 )
 }
 
-[node name="Prototype 0" type="Node"]
+[node name="Prototype 0" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -204,19 +204,16 @@ swingSpeed = 0.04
 
 position = Vector2( 96, 224 )
 z_index = 5
-_sections_unfolded = [ "Z Index" ]
 
 [node name="Box2" parent="." index="14" instance=ExtResource( 11 )]
 
 position = Vector2( 640, 224 )
 z_index = 5
-_sections_unfolded = [ "Z Index" ]
 
 [node name="Box3" parent="." index="15" instance=ExtResource( 11 )]
 
 position = Vector2( 1300.42, -141.796 )
 z_index = 5
-_sections_unfolded = [ "Z Index" ]
 
 [node name="Checkpoint" parent="." index="16" instance=ExtResource( 12 )]
 
@@ -335,12 +332,12 @@ _sections_unfolded = [ "Motion" ]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
 
-position = Vector2( 1415.33, 153.577 )
-scale = Vector2( 0.78316, 1.28119 )
+position = Vector2( 1415.33, 294.161 )
+scale = Vector2( 0.78316, 2.45273 )
 z_index = -99
 texture = ExtResource( 20 )
 region_enabled = true
-region_rect = Rect2( -1804, 0, 15960, 604 )
+region_rect = Rect2( -1804, 0, 15960, 232 )
 _sections_unfolded = [ "Region", "Visibility", "Z Index" ]
 
 [node name="Camera" parent="." index="26" instance=ExtResource( 21 )]
