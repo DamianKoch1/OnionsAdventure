@@ -14,17 +14,24 @@ func _ready():
 	add_to_group("Enemies")
 
 func _unique_process(delta):
+	#stop when hitting box etc
 	if $EnemyPath/Enemy/Area2D.get_overlapping_bodies().size() == 1 && colliding == true:
 		colliding = false
+	
+	#reappear when hid by biewe
 	hideTimer = max(hideTimer-delta, 0)
 	if stop == true && hideTimer == 0:
 		reappear()
+	
+	#move enemy
 	if stop == false && colliding == false:
 		i += delta*movespeed
+		#move from a to b and then b to a if path isnt a loop
 		if pathLooped == false:
 			if i >= 20*PI:
 				i = 0
 			pathfollow.unit_offset = acos(cos(i)) / acos(cos(PI))
+		#move from a to a on a path
 		elif pathLooped == true:
 			if i >= 20:
 				i = 0

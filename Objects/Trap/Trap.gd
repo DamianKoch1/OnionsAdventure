@@ -9,6 +9,7 @@ onready var boxPacked = preload("res://Objects/Box/Box.tscn")
 var obj
 
 func snap():
+	#hurt player or remove box that triggered trap, called by snap animation
 	if obj != null:
 		snappedBody.disabled = false
 		if obj.name == "Onion":
@@ -27,6 +28,7 @@ func _physics_process(delta):
 	triggerCD = max(triggerCD-delta, 0)
 
 func _on_Trap_body_entered(body):
+	#make trap snap if triggered
 	if triggered == false && triggerCD == 0:
 		if body.name != "StaticBody2D" && body.name != "TileMap":
 			triggerCD = 1
@@ -36,6 +38,7 @@ func _on_Trap_body_entered(body):
 
 
 func open():
+	#open trap on player respawn
 	triggerCD = 1
 	if obj != null:
 		if obj.get_filename() == boxPacked.get_path() && player.health >= 1:

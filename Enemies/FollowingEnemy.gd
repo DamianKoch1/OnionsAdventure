@@ -36,10 +36,12 @@ func _unique_process(delta):
 		reappear()
 	if stop == false:
 		motion.y += gravity
+		#move towards player if in range
 		if following == true:
 			motion.x = (player.global_position.x - $Enemy.global_position.x)*speed
 			if startpos.distance_to(player.global_position) > loseAggroDistance:
 				following = false
+		#move to original position
 		else:
 			motion.x = startpos.x - $Enemy.global_position.x
 		motion = $Enemy.move_and_slide(motion)

@@ -13,6 +13,7 @@ func _physics_process(delta):
 	cd = max(cd - delta, 0)
 
 func _on_Area2D_body_entered(body):
+	#call flee function in enemies in range if triggered by player while cooldown is 0
 	if body.name == "Onion" && cd == 0:
 		cd = bieweCooldown
 		for i in range(0, enemies.size()):
