@@ -266,7 +266,7 @@ scale = Vector2( 0.111448, 0.15888 )
 [node name="Enemy" parent="." index="21" instance=ExtResource( 16 )]
 
 editor/display_folded = true
-position = Vector2( -636.128, 236.206 )
+position = Vector2( 2425.22, -63.8823 )
 pathLooped = false
 
 [node name="EnemyPath" parent="Enemy" index="0"]
@@ -323,6 +323,10 @@ texture = ExtResource( 19 )
 region_enabled = true
 region_rect = Rect2( -1884, 0, 13456, 335 )
 _sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
 
@@ -340,6 +344,10 @@ texture = ExtResource( 20 )
 region_enabled = true
 region_rect = Rect2( -1804, 0, 15960, 232 )
 _sections_unfolded = [ "Region", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Camera" parent="." index="26" instance=ExtResource( 21 )]
 
@@ -349,7 +357,7 @@ visible = false
 
 [node name="Biewe" parent="." index="27" instance=ExtResource( 22 )]
 
-position = Vector2( 2698.84, -50.8073 )
+position = Vector2( 2644.2, -108.481 )
 
 
 [editable path="Onion"]
