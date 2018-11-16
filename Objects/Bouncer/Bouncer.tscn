@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Bouncer/Bouncer.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Bouncer/bouncer placeholder.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Bouncer" type="Area2D"]
+[node name="Bouncer" type="Area2D" index="0"]
 
 position = Vector2( 32, 32 )
 z_index = -1
@@ -25,11 +25,12 @@ __meta__ = {
 "_edit_group_": true
 }
 maxBounceStr = 900
-baseBounceStr = 300
 
 [node name="icon" type="Sprite" parent="." index="0"]
 
 modulate = Color( 0.851563, 0, 1, 1 )
+position = Vector2( -1.52588e-005, 7.62939e-006 )
+scale = Vector2( 0.106667, 0.161616 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 

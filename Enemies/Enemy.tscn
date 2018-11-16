@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/enemy placeholder 1.png" type="Texture" id=2]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -20,7 +20,7 @@ extents = Vector2( 38.3767, 38.1083 )
 custom_solver_bias = 0.0
 extents = Vector2( 15.8134, 16.2055 )
 
-[node name="Enemy" type="Node2D" groups=[
+[node name="Enemy" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
@@ -42,15 +42,14 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprites" type="Node2D" parent="EnemyPath/Enemy" index="0"]
 
-editor/display_folded = true
 position = Vector2( 0.00422668, 0.00424194 )
 rotation = -0.000132151
 
 [node name="Sprite" type="Sprite" parent="EnemyPath/Enemy/Sprites" index="0"]
 
 modulate = Color( 1, 0, 0, 1 )
-position = Vector2( -0.156357, -0.0539894 )
-scale = Vector2( 0.500416, 0.500855 )
+position = Vector2( -1.91231, -9.29032 )
+scale = Vector2( 0.0624163, 0.0870892 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -69,6 +68,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/Area2D" index="0"]
 
+visible = false
 position = Vector2( 161.009, -339.783 )
 scale = Vector2( 1.00098, 1 )
 shape = SubResource( 2 )
@@ -86,6 +86,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/StaticBody2D" index="0"]
 
+visible = false
 position = Vector2( -0.219439, -0.0857986 )
 scale = Vector2( 1.01166, 0.991932 )
 shape = SubResource( 3 )

@@ -42,7 +42,7 @@ tracks/1/keys = {
 "values": [ 90.0, 0.0 ]
 }
 
-[node name="Trap" type="Area2D"]
+[node name="Trap" type="Area2D" index="0"]
 
 scale = Vector2( 0.407591, 0.407591 )
 input_pickable = true
