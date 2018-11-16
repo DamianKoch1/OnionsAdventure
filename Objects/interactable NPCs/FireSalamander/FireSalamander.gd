@@ -14,7 +14,7 @@ func _ready():
 		
 
 func _on_FireStoneTrigger_body_entered(body):
-	if body.name == "Onion":
+	if body.name == "Onion" && objToDestroyPath != null:
 		if player == null:
 			player = body
 			player.connect("loseHp", self, "resetObj")

@@ -8,6 +8,7 @@ export var gravity = 12
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
 var startpos
+var distance
 
 
 func _ready():
@@ -21,7 +22,7 @@ func _physics_process(delta):
 	motion.y += gravity
 	if isPushed == true:
 		motion.x = player.motion.x
-		if abs(player.motion.y) > 60 || abs(motion.y) > 60:
+		if abs(player.motion.y) > 60 || abs(motion.y) > 60 || global_position.distance_to(player.global_position) > distance + 30:
 			isPushed = false
 	else:
 		motion.x = lerp(motion.x, 0, brakeSpeed)
@@ -38,6 +39,7 @@ func _on_Area2D_body_entered(body):
 			elif isPushed == false:
 				isPushed = true
 				global_position.x = global_position.x + (global_position.x - player.global_position.x)/4.2
+				distance = abs(global_position.x - player.global_position.x)
 
 func rayUpdate():
 	ray.force_raycast_update()
