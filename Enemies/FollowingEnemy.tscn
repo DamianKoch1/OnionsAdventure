@@ -18,11 +18,13 @@ extents = Vector2( 39.881, 44.008 )
 custom_solver_bias = 0.0
 extents = Vector2( 605.487, 163 )
 
-[node name="FollowingEnemy" type="Node2D" index="0" groups=[
+[node name="FollowingEnemy" type="Node2D" groups=[
 "Enemies",
 ]]
 
 script = ExtResource( 1 )
+movespeed = 2
+pathLooped = true
 speed = 2
 loseAggroDistance = 550
 gravity = 12

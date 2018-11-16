@@ -1,26 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/enemy placeholder 1.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Snail.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/enemy placeholder 3.jpg" type="Texture" id=2]
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
 }
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 38.3767, 38.1083 )
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.8134, 16.2055 )
-
-[node name="Enemy" type="Node2D" groups=[
+[node name="Snail" type="Node2D" groups=[
 "Enemies",
 ]]
 
@@ -32,12 +22,13 @@ pathLooped = true
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 81.2339, -169.313 )
-curve = SubResource( 4 )
+curve = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Enemy" type="Node2D" parent="EnemyPath" index="0"]
 
-position = Vector2( -81.2339, 169.313 )
+position = Vector2( -93.9057, 169.698 )
+scale = Vector2( 1.56546, 1.24251 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprites" type="Node2D" parent="EnemyPath/Enemy" index="0"]
@@ -47,9 +38,8 @@ rotation = -0.000132151
 
 [node name="Sprite" type="Sprite" parent="EnemyPath/Enemy/Sprites" index="0"]
 
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( -1.91231, -9.29032 )
-scale = Vector2( 0.0624163, 0.0870892 )
+position = Vector2( -0.455062, -8.01631 )
+scale = Vector2( 0.0860838, 0.117914 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -67,11 +57,12 @@ audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="EnemyPath/Enemy/Area2D" index="0"]
 
 position = Vector2( 160.85, -339.858 )
 scale = Vector2( 0.953475, 0.964443 )
-shape = SubResource( 2 )
+build_mode = 0
+polygon = PoolVector2Array( -43.8, 6.88647, -49.7644, -11.2734, 50.2196, -13.1718, 46.6689, 8.49118 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="EnemyPath/Enemy" index="2"]
@@ -84,11 +75,12 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/StaticBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="EnemyPath/Enemy/StaticBody2D" index="0"]
 
 position = Vector2( -0.219439, -0.0857986 )
 scale = Vector2( 1.01166, 0.991932 )
-shape = SubResource( 3 )
+build_mode = 0
+polygon = PoolVector2Array( -16.6508, -2.38532, -18.7043, -5.41057, -19.617, -22.6312, 2.66791, -22.4761, 3.27637, -4.94515 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 
