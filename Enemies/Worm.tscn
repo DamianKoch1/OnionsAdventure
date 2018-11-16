@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Enemies/Worm.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/enemy placeholder 4.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 38.3767, 36.5009 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 88.8915, 48.7776 )
+
+[node name="Worm" type="Node2D" groups=[
+"Enemies",
+]]
+
+z_index = -999
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+movespeed = 2
+pathLooped = true
+
+[node name="Enemy" type="Node2D" parent="." index="0"]
+
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprites" type="Node2D" parent="Enemy" index="0"]
+
+position = Vector2( 0.00422668, 0.00424194 )
+rotation = -0.000132151
+
+[node name="Sprite" type="Sprite" parent="Enemy/Sprites" index="0"]
+
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 0.1767, 0.695304 )
+scale = Vector2( 0.16899, 0.201866 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Enemy" index="1"]
+
+position = Vector2( -80.7138, 170.143 )
+rotation = -0.000132151
+scale = Vector2( 0.500416, 0.500855 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" index="0"]
+
+position = Vector2( 160.85, -332.873 )
+scale = Vector2( 0.953475, 0.787608 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="visionRange" type="Area2D" parent="." index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="visionRange" index="0"]
+
+position = Vector2( 1.04904e-005, -112 )
+scale = Vector2( 1.31282, 2.02904 )
+build_mode = 0
+polygon = PoolVector2Array( -219.375, 70.9695, -219.375, -39.4275, 219.375, -39.4275, 219.375, 70.9695, -7.99075e-006, 70.9695, 24.375, 86.7405, 243.75, 86.7405, 243.75, -55.1985, -243.75, -55.1985, -243.75, 86.7405, -7.99075e-006, 86.7405, -24.375, 70.9695 )
+
+[node name="detectRange" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectRange" index="0"]
+
+position = Vector2( 1.90735e-006, -67.4183 )
+scale = Vector2( 1.39295, 1.78806 )
+shape = SubResource( 3 )
+
+[node name="diggedOutPos" type="Position2D" parent="." index="3"]
+
+position = Vector2( 0, -24.8303 )
+
+[connection signal="body_entered" from="Enemy/Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="visionRange" to="." method="_on_visionRange_body_entered"]
+
+[connection signal="body_entered" from="detectRange" to="." method="_on_detectRange_body_entered"]
+
+
