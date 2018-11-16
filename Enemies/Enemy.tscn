@@ -3,7 +3,7 @@
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/enemy placeholder 1.png" type="Texture" id=2]
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
@@ -13,14 +13,14 @@ _data = {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 38.3767, 36.5009 )
+extents = Vector2( 15.8134, 16.2055 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15.8134, 16.2055 )
+extents = Vector2( 38.3767, 36.5009 )
 
-[node name="Enemy" type="Node2D" groups=[
+[node name="Enemy" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
@@ -32,26 +32,30 @@ pathLooped = true
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 81.2339, -169.313 )
-curve = SubResource( 4 )
+curve = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Enemy" type="Node2D" parent="EnemyPath" index="0"]
 
 position = Vector2( -81.2339, 169.313 )
-_sections_unfolded = [ "Visibility" ]
+z_index = 50
+_sections_unfolded = [ "Visibility", "Z Index" ]
 
-[node name="Sprites" type="Node2D" parent="EnemyPath/Enemy" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="EnemyPath/Enemy" index="0"]
 
-position = Vector2( 0.00422668, 0.00424194 )
-rotation = -0.000132151
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
-[node name="Sprite" type="Sprite" parent="EnemyPath/Enemy/Sprites" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/StaticBody2D" index="0"]
 
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( -1.91231, -9.29032 )
-scale = Vector2( 0.0624163, 0.0870892 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+position = Vector2( -0.219439, -0.0857986 )
+scale = Vector2( 1.01166, 0.991932 )
+shape = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="EnemyPath/Enemy" index="1"]
 
@@ -71,24 +75,22 @@ _sections_unfolded = [ "Collision" ]
 
 position = Vector2( 160.85, -339.858 )
 scale = Vector2( 0.953475, 0.964443 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="EnemyPath/Enemy" index="2"]
+[node name="Sprites" type="Node2D" parent="EnemyPath/Enemy" index="2"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
+editor/display_folded = true
+position = Vector2( 0.00422668, 0.00424194 )
+rotation = -0.000132151
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/StaticBody2D" index="0"]
+[node name="Sprite" type="Sprite" parent="EnemyPath/Enemy/Sprites" index="0"]
 
-position = Vector2( -0.219439, -0.0857986 )
-scale = Vector2( 1.01166, 0.991932 )
-shape = SubResource( 3 )
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -1.91231, -9.29032 )
+scale = Vector2( 0.0624163, 0.0870892 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 

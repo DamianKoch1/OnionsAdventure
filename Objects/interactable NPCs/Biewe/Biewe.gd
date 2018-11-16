@@ -19,4 +19,3 @@ func _on_Area2D_body_entered(body):
 		for i in range(0, enemies.size()):
 			if enemies[i].global_position.distance_to(global_position) <= bieweRange:
 				enemies[i].flee(hideDuration)
-				
