@@ -13,11 +13,10 @@
 [ext_resource path="res://Player/OnionSprite/Onion_JumpUp.tres" type="Animation" id=11]
 [ext_resource path="res://Player/OnionSprite/Onion_Walk.tres" type="Animation" id=12]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 17.613
-height = 34.0682
+extents = Vector2( 16.1236, 20.6317 )
 
 [node name="Onion" type="KinematicBody2D"]
 
@@ -34,7 +33,7 @@ maxGhostjumpDelay = 0.2
 movespeed = 250
 gravity = 20
 jumpheight = 450
-climbSpeed = 200
+climbspeed = 200
 health = 3
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="0"]
@@ -47,8 +46,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, -32.2171 )
-scale = Vector2( 1, 0.989124 )
+position = Vector2( 0, -27.2174 )
+scale = Vector2( 1, 1.44269 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -59,8 +58,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite" index="0"]
 
-position = Vector2( 0.50386, -18.941 )
-scale = Vector2( 0.5, 0.298058 )
+position = Vector2( 0.50386, -28.823 )
+scale = Vector2( 0.5, 0.450089 )
 z_index = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
@@ -68,7 +67,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="OnionHair" type="Sprite" parent="Sprite/OnionBody" index="0"]
 
 position = Vector2( 7.13066, -40.2171 )
-rotation = 0.00358834
+rotation = -0.00372912
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 3 )
 offset = Vector2( -2.05788, -20.5568 )
@@ -91,7 +90,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="OnionEarL" type="Sprite" parent="Sprite" index="1"]
 
-position = Vector2( 0.468691, -29.7288 )
+position = Vector2( 0.468681, -45.7288 )
 rotation = 0.282815
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
@@ -99,7 +98,7 @@ offset = Vector2( -49.4588, -96.8829 )
 
 [node name="OnionEarR" type="Sprite" parent="Sprite" index="2"]
 
-position = Vector2( -4.04999, -28.8692 )
+position = Vector2( -4.05003, -42.8692 )
 rotation = -0.572655
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
@@ -107,8 +106,8 @@ offset = Vector2( -15.5284, -107.047 )
 
 [node name="OnionTail" type="Sprite" parent="Sprite" index="3"]
 
-position = Vector2( -18.3196, -6.67651 )
-rotation = -0.357424
+position = Vector2( -18.3196, -6.67652 )
+rotation = -0.140249
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 offset = Vector2( -27.0576, -23.7384 )
