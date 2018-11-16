@@ -5,17 +5,20 @@ onready var enemy = $EnemyPath/Enemy
 onready var i = 0
 export (float) var movespeed = 2
 export (bool) var pathLooped = true
-onready var hidden = false
+onready var stop = false
+onready var colliding = false
 onready var hideTimer = 0
 
 func _ready():
 	add_to_group("Enemies")
 
 func _process(delta):
+	if $EnemyPath/Enemy/Area2D.get_overlapping_bodies().size() == 1 && colliding == true:
+		colliding = false
 	hideTimer = max(hideTimer-delta, 0)
-	if hidden == true && hideTimer == 0:
+	if stop == true && hideTimer == 0:
 		reappear()
-	if hidden == false:
+	if stop == false && colliding == false:
 		i += delta*movespeed
 		if pathLooped == false:
 			if i >= 20*PI:
@@ -28,18 +31,21 @@ func _process(delta):
 		enemy.global_position = pathfollow.global_position
 
 func flee(duration):
-	hidden = true
+	stop = true
 	hideTimer = duration
 	#$EnemyPath/Enemy.hide()
 	$EnemyPath/Enemy/StaticBody2D/CollisionShape2D.disabled = true
 	$EnemyPath/Enemy/Area2D/CollisionShape2D.disabled = true
 
 func reappear():
-	hidden = false
+	stop = false
 	#$EnemyPath/Enemy.show()
 	$EnemyPath/Enemy/StaticBody2D/CollisionShape2D.disabled = false
 	$EnemyPath/Enemy/Area2D/CollisionShape2D.disabled = false
 	
 func _on_Area2D_body_entered(body):
+	colliding = true
 	if body.name == "Onion":
 		body.health -= 1
+
+

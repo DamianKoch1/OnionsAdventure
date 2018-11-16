@@ -20,7 +20,7 @@ extents = Vector2( 38.3767, 38.1083 )
 custom_solver_bias = 0.0
 extents = Vector2( 15.8134, 16.2055 )
 
-[node name="Enemy" type="Node2D" index="0" groups=[
+[node name="Enemy" type="Node2D" groups=[
 "Enemies",
 ]]
 
@@ -65,12 +65,12 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/Area2D" index="0"]
 
-visible = false
-position = Vector2( 161.009, -339.783 )
-scale = Vector2( 1.00098, 1 )
+position = Vector2( 160.85, -339.858 )
+scale = Vector2( 0.953475, 0.964443 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
@@ -86,7 +86,6 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/StaticBody2D" index="0"]
 
-visible = false
 position = Vector2( -0.219439, -0.0857986 )
 scale = Vector2( 1.01166, 0.991932 )
 shape = SubResource( 3 )
