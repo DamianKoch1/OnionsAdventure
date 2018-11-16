@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=1]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/fire salamander placeholder.jpg" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -13,7 +13,7 @@ extents = Vector2( 13, 13 )
 custom_solver_bias = 0.0
 extents = Vector2( 11.8311, 11.5305 )
 
-[node name="FireSalamander" type="Node2D"]
+[node name="FireSalamander" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 objToDestroyPath = null
@@ -35,11 +35,12 @@ position = Vector2( 16, 16 )
 scale = Vector2( 1.23077, 1.23077 )
 shape = SubResource( 1 )
 
-[node name="icon" type="Sprite" parent="FireSalamander" index="1"]
+[node name="Sprite" type="Node2D" parent="FireSalamander" index="1"]
 
-modulate = Color( 0.894531, 0.519253, 0.080368, 1 )
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+[node name="icon" type="Sprite" parent="FireSalamander/Sprite" index="0"]
+
+position = Vector2( 21.2832, 14.3249 )
+scale = Vector2( 0.112663, 0.0768505 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
