@@ -322,7 +322,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
-position = Vector2( 3.99438, 201.609 )
+position = Vector2( 1841.37, 228.836 )
 scale = Vector2( 1, 2.29062 )
 texture = ExtResource( 19 )
 region_enabled = true
@@ -355,10 +355,6 @@ __meta__ = {
 }
 
 [node name="Camera" parent="." index="27" instance=ExtResource( 21 )]
-
-[node name="PauseMenu" parent="Camera" index="2"]
-
-visible = false
 
 [node name="Biewe" parent="." index="28" instance=ExtResource( 22 )]
 
