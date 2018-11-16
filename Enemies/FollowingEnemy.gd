@@ -1,17 +1,17 @@
-extends Node2D
+extends "res://Enemies/Enemy.gd"
 
 var player
 var startpos
 onready var following = false
-onready var enemy = $Enemy
+
 export var speed = 2
 export var loseAggroDistance = 550
 var motion = Vector2()
 export var gravity = 12
-onready var stop = false
-onready var hideTimer = 0
+
 
 func _ready():
+	enemy = $Enemy
 	startpos = enemy.global_position
 	add_to_group("Enemies")
 
@@ -30,7 +30,7 @@ func reappear():
 	$Enemy/Area2D/CollisionShape2D.disabled = false
 	$VisionRange/CollisionShape2D.disabled = false
 	
-func _process(delta):
+func _unique_process(delta):
 	hideTimer = max(hideTimer-delta, 0)
 	if stop == true && hideTimer == 0:
 		reappear()

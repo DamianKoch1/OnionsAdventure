@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var pathfollow = $EnemyPath/PathFollow2D
-onready var enemy = $EnemyPath/Enemy
+var enemy
 onready var i = 0
 export (float) var movespeed = 2
 export (bool) var pathLooped = true
@@ -10,9 +10,10 @@ onready var colliding = false
 onready var hideTimer = 0
 
 func _ready():
+	enemy = $EnemyPath/Enemy
 	add_to_group("Enemies")
 
-func _process(delta):
+func _unique_process(delta):
 	if $EnemyPath/Enemy/Area2D.get_overlapping_bodies().size() == 1 && colliding == true:
 		colliding = false
 	hideTimer = max(hideTimer-delta, 0)
@@ -30,6 +31,9 @@ func _process(delta):
 			pathfollow.unit_offset = i
 		enemy.global_position = pathfollow.global_position
 
+func _process(delta):
+	_unique_process(delta)
+	
 func flee(duration):
 	stop = true
 	hideTimer = duration
