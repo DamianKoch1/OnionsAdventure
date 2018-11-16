@@ -18,7 +18,7 @@ func _unique_process(delta):
 	if $EnemyPath/Enemy/Area2D.get_overlapping_bodies().size() == 1 && colliding == true:
 		colliding = false
 	
-	#reappear when hid by biewe
+	#reappear when hidden by biewe
 	hideTimer = max(hideTimer-delta, 0)
 	if stop == true && hideTimer == 0:
 		reappear()
