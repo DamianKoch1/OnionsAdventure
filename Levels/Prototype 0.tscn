@@ -363,8 +363,8 @@ position = Vector2( 2644.2, -108.481 )
 
 [node name="Snail" parent="." index="29" instance=ExtResource( 23 )]
 
-position = Vector2( 2521.05, 22.1053 )
-movespeed = 0.4
+position = Vector2( 2529.11, 14.1165 )
+movespeed = 0.5
 pathLooped = false
 
 
