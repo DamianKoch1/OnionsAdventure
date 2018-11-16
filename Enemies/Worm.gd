@@ -1,6 +1,7 @@
 extends "res://Enemies/Enemy.gd"
 
 onready var diggedOut = false
+onready var player = get_parent().find_node("Onion")
 var startpos
 var diggedOutPos
 
@@ -8,6 +9,7 @@ func _ready():
 	startpos = global_position
 	diggedOutPos = $diggedOutPos.global_position
 	i = 0
+	player.connect("loseHp", self, "digDown")
 
 func _unique_process(delta):
 	#dig in/out of ground depending on player entering different areas
@@ -23,6 +25,7 @@ func _unique_process(delta):
 func _on_Area2D_body_entered(body):
 	if body.name == "Onion":
 		body.health -= 1
+		digDown()
 
 
 func _on_detectRange_body_entered(body):
@@ -33,5 +36,8 @@ func _on_detectRange_body_entered(body):
 
 func _on_visionRange_body_entered(body):
 	if body.name == "Onion" && diggedOut == true:
-		diggedOut = false
-		i = 0
+		digDown()
+
+func digDown():
+	diggedOut = false
+	i = 0
