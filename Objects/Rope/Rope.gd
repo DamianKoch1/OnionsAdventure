@@ -6,6 +6,7 @@ onready var swingAmount = 0
 var player
 
 func _physics_process(delta):
+	#pendulum rotation
 	swingAmount += swingSpeed
 	if swingAmount >= 20*PI:
 		swingAmount = 0
@@ -20,4 +21,5 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.name == "Onion":
 		player.setState(player.jump)
+		#bounce when player leaves rope
 		player.bounce(min(abs(rotation_degrees)*660*swingSpeed, 600))

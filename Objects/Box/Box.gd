@@ -20,6 +20,7 @@ func getpos():
 func _physics_process(delta):
 	rayUpdate()
 	motion.y += gravity
+	#move with player if being pushed
 	if isPushed == true:
 		motion.x = player.motion.x
 		if abs(player.motion.y) > 60 || abs(motion.y) > 60 || global_position.distance_to(player.global_position) > distance + 30:
@@ -33,6 +34,7 @@ func _on_Area2D_body_entered(body):
 		if player == null:
 			player = body
 			player.connect("loseHp", self, "resetPos")
+		#can press "push"button to push when in range
 		if Input.is_action_just_pressed("push"):
 			if isPushed == true:
 				isPushed = false
@@ -42,6 +44,7 @@ func _on_Area2D_body_entered(body):
 				distance = abs(global_position.x - player.global_position.x)
 
 func rayUpdate():
+	#find first object ray downwards hits
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
