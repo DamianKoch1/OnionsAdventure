@@ -23,6 +23,7 @@ export var climbspeed = 200
 onready var debugGodmode = -1
 onready var debugFly = -1
 
+onready var gracePeriod = 0
 
 var rope
 var ropeAttachCD = 0
@@ -37,12 +38,13 @@ signal NPCsaved
 var NPCsavedCount = 0
 
 func setHealth(newHealth):
-	if debugGodmode == -1:
+	if debugGodmode == -1 && gracePeriod == 0:
 		var oldHealth = health
 		health = newHealth
 		if newHealth != oldHealth:
 			emit_signal("changeHp")
 			if newHealth < oldHealth :
+				gracePeriod = 2
 				emit_signal("loseHp")
 		if health <= 0:
 			setState(dead)
@@ -86,7 +88,7 @@ func _ready():
 
 func _physics_process(delta):
 	if state != dead:
-		
+		gracePeriod = max(gracePeriod - delta, 0)
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == -1:
 				print("Fly ON")

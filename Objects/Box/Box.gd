@@ -8,7 +8,7 @@ export var gravity = 12
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
 var startpos
-onready var damageCD = 0
+
 
 func _ready():
 	getpos()
@@ -19,7 +19,6 @@ func getpos():
 func _physics_process(delta):
 	rayUpdate()
 	motion.y += gravity
-	damageCD = max(damageCD - delta, 0)
 	if isPushed == true:
 		motion.x = player.motion.x
 		if abs(player.motion.y) > 60 || abs(motion.y) > 60:
@@ -65,7 +64,6 @@ func resetPos():
 	global_position = startpos
 
 func _on_damageArea_body_entered(body):
-	if damageCD == 0 && body.name == "Onion":
-		damageCD = 1
+	if body.name == "Onion":
 		if motion.y >= 70:
 			body.health = max(body.health - 1, 0)
