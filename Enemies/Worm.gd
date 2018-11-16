@@ -10,6 +10,7 @@ func _ready():
 	i = 0
 
 func _unique_process(delta):
+	#dig in/out of ground depending on player entering different areas
 	if diggedOut == true && i < 1:
 		i = min(i + delta, 1)
 		global_position.y = lerp(global_position.y, diggedOutPos.y, i)

@@ -37,6 +37,7 @@ signal NPCsaved
 
 var NPCsavedCount = 0
 
+#gets called if health value is changed
 func setHealth(newHealth):
 	if debugGodmode == -1 && gracePeriod == 0:
 		var oldHealth = health
@@ -54,6 +55,7 @@ func getHealth():
 	return health
 
 func setState(newState):
+	#set current animation on state changes
 	state = newState
 	match state:
 		idle:
@@ -89,6 +91,8 @@ func _ready():
 func _physics_process(delta):
 	if state != dead:
 		gracePeriod = max(gracePeriod - delta, 0)
+		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
+		#debug fly and godmode
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == -1:
 				print("Fly ON")
@@ -103,19 +107,19 @@ func _physics_process(delta):
 				climbspeed /= 2
 				movespeed /= 2
 			debugFly *= -1
-		
 		if Input.is_action_just_pressed("debugGodmode"):
 			if debugGodmode == -1:
 				print("Godmode ON")
 			else:
 				print("Godmode OFF")
 			debugGodmode *= -1
-			
 		
-		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
+		#play current animation if changed
 		if newAnim != anim:
 			anim = newAnim
 			$AnimationPlayer.play(anim)
+		
+		#attach to ground if not climbing, rotate to 0
 		if state != climb:
 			rayUpdate()
 			motion.y += gravity
@@ -125,6 +129,7 @@ func _physics_process(delta):
 				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
+		#climbing
 		elif state == climb:
 			if rope != null:
 				var transf = get_global_transform()
@@ -138,6 +143,7 @@ func _physics_process(delta):
 			else:
 				motion.y = 0
 		
+		#ovement(run, jump, idle, fall states)
 		if Input.is_action_pressed("ui_right"):
 			if is_on_floor():
 				ghostjumpTimeframe = maxGhostjumpDelay
@@ -178,6 +184,7 @@ func bounce(bounceStr):
 	motion = move_and_slide(motion, UP)
 	
 func rayUpdate():
+	#find object below, attach to it if close enough(smoothes movement on moving platforms)
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
