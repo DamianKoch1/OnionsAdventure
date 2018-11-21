@@ -1,0 +1,272 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Trap/Trap.gd" type="Script" id=5]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=7]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Box/Box.gd" type="Script" id=9]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=11]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=13]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.gd" type="Script" id=14]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.4254 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 447.881, 10 )
+
+[node name="M5" type="Node"]
+
+editor/display_folded = true
+
+[node name="TileMap6" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -720746, 0, 0, -720745, 2, 0, -655210, 8, 0, -655209, 8, 0, -327532, 0, 0, -327531, 2, 0, -327526, 0, 0, -327525, 1, 0, -327524, 1, 0, -327523, 1, 0, -327522, 1, 0, -327521, 1, 0, -327520, 1, 0, -327519, 1, 0, -327518, 1, 0, -327517, 1, 0, -327516, 1, 0, -327515, 2, 0, -327509, 0, 0, -327508, 1, 0, -327507, 1, 0, -327506, 1, 0, -327505, 1, 0, -327504, 1, 0, -327503, 1, 0, -327502, 2, 0, -261996, 8, 0, -261995, 8, 0, -261990, 3, 0, -261989, 4, 0, -261988, 4, 0, -261987, 4, 0, -261986, 4, 0, -261985, 4, 0, -261984, 4, 0, -261983, 4, 0, -261982, 4, 0, -261981, 4, 0, -261980, 4, 0, -261979, 5, 0, -261973, 1610612741, 0, -261972, 4, 0, -261971, 4, 0, -261970, 4, 0, -261969, 4, 0, -261968, 4, 0, -261967, 4, 0, -261966, 5, 0, -196454, 8, 0, -196453, 7, 0, -196452, 7, 0, -196451, 7, 0, -196450, 7, 0, -196449, 7, 0, -196448, 7, 0, -196447, 7, 0, -196446, 7, 0, -196445, 7, 0, -196444, 7, 0, -196443, 8, 0, -196437, 8, 0, -196436, 7, 0, -196435, 7, 0, -196434, 7, 0, -196433, 7, 0, -196432, 7, 0, -196431, 7, 0, -196430, 8, 0, -130889, 0, 0, -130888, 2, 0, -65353, 8, 0, -65352, 8, 0, 196794, 0, 0, 196795, 1, 0, 196796, 1, 0, 196797, 1, 0, 262330, 3, 0, 262331, 4, 0, 262332, 4, 0, 262333, 1610612740, 0, 327866, 3, 0, 327867, 4, 0, 327868, 4, 0, 327869, 1610612740, 0, 393360, 1, 0, 393361, 1, 0, 393362, 1, 0, 393363, 1, 0, 393364, 1, 0, 393365, 1, 0, 393366, 1, 0, 393367, 1, 0, 393368, 1, 0, 393369, 2, 0, 393402, 3, 0, 393403, 4, 0, 393404, 4, 0, 393405, 1610612740, 0, 458896, 1610612740, 0, 458897, 4, 0, 458898, 4, 0, 458899, 4, 0, 458900, 4, 0, 458901, 4, 0, 458902, 4, 0, 458903, 4, 0, 458904, 4, 0, 458905, 5, 0, 458938, 1610612741, 0, 458939, 4, 0, 458940, 4, 0, 458941, 1610612740, 0, 524432, 1610612740, 0, 524433, 4, 0, 524434, 4, 0, 524435, 4, 0, 524436, 4, 0, 524437, 4, 0, 524438, 4, 0, 524439, 4, 0, 524440, 4, 0, 524441, 1610612739, 0, 524474, 1610612741, 0, 524475, 4, 0, 524476, 4, 0, 524477, 1610612740, 0, 589968, 1610612740, 0, 589969, 4, 0, 589970, 4, 0, 589971, 4, 0, 589972, 4, 0, 589973, 4, 0, 589974, 4, 0, 589975, 4, 0, 589976, 4, 0, 589977, 1610612739, 0, 590010, 3, 0, 590011, 4, 0, 590012, 4, 0, 590013, 1610612740, 0, 655504, 1610612740, 0, 655505, 4, 0, 655506, 4, 0, 655507, 4, 0, 655508, 4, 0, 655509, 4, 0, 655510, 4, 0, 655511, 4, 0, 655512, 4, 0, 655513, -1610612727, 0, 655514, 1, 0, 655515, 1, 0, 655516, 1, 0, 655517, 1, 0, 655518, 1, 0, 655519, 1, 0, 655520, 1, 0, 655521, 1, 0, 655522, 1, 0, 655523, 1, 0, 655524, 1, 0, 655525, 1, 0, 655526, 1, 0, 655527, 1, 0, 655528, 1, 0, 655529, 1, 0, 655530, 1, 0, 655531, 1, 0, 655532, 1, 0, 655533, 1, 0, 655534, 1, 0, 655535, 1, 0, 655536, 1, 0, 655537, 1, 0, 655538, 1, 0, 655539, 1, 0, 655540, 1, 0, 655541, 1, 0, 655542, 1, 0, 655543, 1, 0, 655544, 1, 0, 655545, 1, 0, 655546, 9, 0, 655547, 4, 0, 655548, 4, 0, 655549, 1610612740, 0, 721040, 1610612740, 0, 721041, 4, 0, 721042, 4, 0, 721043, 4, 0, 721044, 4, 0, 721045, 4, 0, 721046, 4, 0, 721047, 4, 0, 721048, 4, 0, 721049, 4, 0, 721050, 4, 0, 721051, 4, 0, 721052, 4, 0, 721053, 4, 0, 721054, 4, 0, 721055, 4, 0, 721056, 4, 0, 721057, 4, 0, 721058, 4, 0, 721059, 4, 0, 721060, 4, 0, 721061, 4, 0, 721062, 4, 0, 721063, 4, 0, 721064, 4, 0, 721065, 4, 0, 721066, 4, 0, 721067, 4, 0, 721068, 4, 0, 721069, 4, 0, 721070, 4, 0, 721071, 4, 0, 721072, 4, 0, 721073, 4, 0, 721074, 4, 0, 721075, 4, 0, 721076, 4, 0, 721077, 4, 0, 721078, 4, 0, 721079, 4, 0, 721080, 4, 0, 721081, 4, 0, 721082, 4, 0, 721083, 4, 0, 721084, 4, 0, 721085, 1610612740, 0, 786576, 1610612740, 0, 786577, 4, 0, 786578, 4, 0, 786579, 4, 0, 786580, 4, 0, 786581, 4, 0, 786582, 4, 0, 786583, 4, 0, 786584, 4, 0, 786585, 4, 0, 786586, 4, 0, 786587, 4, 0, 786588, 4, 0, 786589, 4, 0, 786590, 4, 0, 786591, 4, 0, 786592, 4, 0, 786593, 4, 0, 786594, 4, 0, 786595, 4, 0, 786596, 4, 0, 786597, 4, 0, 786598, 4, 0, 786599, 4, 0, 786600, 4, 0, 786601, 4, 0, 786602, 4, 0, 786603, 4, 0, 786604, 4, 0, 786605, 4, 0, 786606, 4, 0, 786607, 4, 0, 786608, 4, 0, 786609, 4, 0, 786610, 4, 0, 786611, 4, 0, 786612, 4, 0, 786613, 4, 0, 786614, 4, 0, 786615, 4, 0, 786616, 4, 0, 786617, 4, 0, 786618, 4, 0, 786619, 4, 0, 786620, 4, 0, 786621, 1610612740, 0, 852112, 1610612740, 0, 852113, 4, 0, 852114, 4, 0, 852115, 4, 0, 852116, 4, 0, 852117, 4, 0, 852118, 4, 0, 852119, 4, 0, 852120, 4, 0, 852121, 4, 0, 852122, 4, 0, 852123, 4, 0, 852124, 4, 0, 852125, 4, 0, 852126, 4, 0, 852127, 4, 0, 852128, 4, 0, 852129, 4, 0, 852130, 4, 0, 852131, 4, 0, 852132, 4, 0, 852133, 4, 0, 852134, 4, 0, 852135, 4, 0, 852136, 4, 0, 852137, 4, 0, 852138, 4, 0, 852139, 4, 0, 852140, 4, 0, 852141, 4, 0, 852142, 4, 0, 852143, 4, 0, 852144, 4, 0, 852145, 4, 0, 852146, 4, 0, 852147, 4, 0, 852148, 4, 0, 852149, 4, 0, 852150, 4, 0, 852151, 4, 0, 852152, 4, 0, 852153, 4, 0, 852154, 4, 0, 852155, 4, 0, 852156, 4, 0, 852157, 1610612740, 0, 917648, 1610612740, 0, 917649, 4, 0, 917650, 4, 0, 917651, 4, 0, 917652, 4, 0, 917653, 4, 0, 917654, 4, 0, 917655, 4, 0, 917656, 4, 0, 917657, 4, 0, 917658, 4, 0, 917659, 4, 0, 917660, 4, 0, 917661, 4, 0, 917662, 4, 0, 917663, 4, 0, 917664, 4, 0, 917665, 4, 0, 917666, 4, 0, 917667, 4, 0, 917668, 4, 0, 917669, 4, 0, 917670, 4, 0, 917671, 4, 0, 917672, 4, 0, 917673, 4, 0, 917674, 4, 0, 917675, 4, 0, 917676, 4, 0, 917677, 4, 0, 917678, 4, 0, 917679, 4, 0, 917680, 4, 0, 917681, 4, 0, 917682, 4, 0, 917683, 4, 0, 917684, 4, 0, 917685, 4, 0, 917686, 4, 0, 917687, 4, 0, 917688, 4, 0, 917689, 4, 0, 917690, 4, 0, 917691, 4, 0, 917692, 4, 0, 917693, 1610612740, 0, 983184, 1610612740, 0, 983185, 4, 0, 983186, 4, 0, 983187, 4, 0, 983188, 4, 0, 983189, 4, 0, 983190, 4, 0, 983191, 4, 0, 983192, 4, 0, 983193, 4, 0, 983194, 4, 0, 983195, 4, 0, 983196, 4, 0, 983197, 4, 0, 983198, 4, 0, 983199, 4, 0, 983200, 4, 0, 983201, 4, 0, 983202, 4, 0, 983203, 4, 0, 983204, 4, 0, 983205, 4, 0, 983206, 4, 0, 983207, 4, 0, 983208, 4, 0, 983209, 4, 0, 983210, 4, 0, 983211, 4, 0, 983212, 4, 0, 983213, 4, 0, 983214, 4, 0, 983215, 4, 0, 983216, 4, 0, 983217, 4, 0, 983218, 4, 0, 983219, 4, 0, 983220, 4, 0, 983221, 4, 0, 983222, 4, 0, 983223, 4, 0, 983224, 4, 0, 983225, 4, 0, 983226, 4, 0, 983227, 4, 0, 983228, 4, 0, 983229, 1610612740, 0, 1048720, 1610612740, 0, 1048721, 1610612740, 0, 1048722, 1610612740, 0, 1048723, 1610612740, 0, 1048724, 1610612740, 0, 1048725, 1610612740, 0, 1048726, 1610612740, 0, 1048727, 1610612740, 0, 1048728, 1610612740, 0, 1048729, 1610612740, 0, 1048730, 1610612740, 0, 1048731, 1610612740, 0, 1048732, 1610612740, 0, 1048733, 1610612740, 0, 1048734, 1610612740, 0, 1048735, 1610612740, 0, 1048736, 1610612740, 0, 1048737, 1610612740, 0, 1048738, 1610612740, 0, 1048739, 1610612740, 0, 1048740, 1610612740, 0, 1048741, 1610612740, 0, 1048742, 1610612740, 0, 1048743, 1610612740, 0, 1048744, 1610612740, 0, 1048745, 1610612740, 0, 1048746, 1610612740, 0, 1048747, 1610612740, 0, 1048748, 1610612740, 0, 1048749, 1610612740, 0, 1048750, 1610612740, 0, 1048751, 1610612740, 0, 1048752, 1610612740, 0, 1048753, 1610612740, 0, 1048754, 1610612740, 0, 1048755, 1610612740, 0, 1048756, 1610612740, 0, 1048757, 1610612740, 0, 1048758, 1610612740, 0, 1048759, 1610612740, 0, 1048760, 1610612740, 0, 1048761, 1610612740, 0, 1048762, 1610612740, 0, 1048763, 1610612740, 0, 1048764, 1610612740, 0, 1048765, 1610612740, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="stump m 26" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 5007.3, 205.162 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="branch 1" type="Sprite" parent="stump m 26" index="0"]
+
+position = Vector2( -310.711, 392.373 )
+texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 26/branch 1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 26/branch 1/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 913.906, 322.579, 911.104, 139.098, 507.594, 47.357, 185.347, 13.7934, 11.6137, 9.31827, 14.4158, 96.5836, 314.246, 141.335, 686.932, 239.788 )
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 26" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 26/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 26/StaticBody2D2" index="1"]
+
+position = Vector2( 899.917, 1078.2 )
+scale = Vector2( 1.45442, 16.2295 )
+shape = SubResource( 4 )
+
+[node name="Trap2" type="Area2D" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 5240, -170 )
+scale = Vector2( 0.407591, 0.407591 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ladder4" type="Area2D" parent="." index="3" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 4767.74, 24.5 )
+scale = Vector2( 1, 4.10938 )
+z_index = -2
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Ladder5" type="Area2D" parent="." index="4" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 4830.74, -163.5 )
+scale = Vector2( 1, 4.14063 )
+z_index = -2
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Box4" type="KinematicBody2D" parent="." index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 5050, -190 )
+z_index = 50
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Z Index" ]
+brakeSpeed = 0.08
+gravity = 12
+
+[node name="Box5" type="KinematicBody2D" parent="." index="6" instance=ExtResource( 8 )]
+
+position = Vector2( 5370, 290 )
+z_index = 50
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 9 )
+_sections_unfolded = [ "Z Index" ]
+brakeSpeed = 0.08
+gravity = 12
+
+[node name="Trap3" type="Area2D" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 5250, 310 )
+scale = Vector2( 0.407591, 0.407591 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FireS" type="Node2D" parent="." index="8" instance=ExtResource( 10 )]
+
+editor/display_folded = true
+position = Vector2( 5590, 270 )
+scale = Vector2( 1.4375, 1.4375 )
+script = ExtResource( 11 )
+objToDestroyPath = NodePath("../thornbush4")
+destroyRadius = 300
+
+[node name="Ladder6" type="Area2D" parent="." index="9" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 5880, 130 )
+scale = Vector2( 1, 4.14063 )
+z_index = -2
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FireS2" type="Node2D" parent="." index="10" instance=ExtResource( 10 )]
+
+editor/display_folded = true
+position = Vector2( 5680, -200 )
+scale = Vector2( 1.4375, 1.4375 )
+script = ExtResource( 11 )
+objToDestroyPath = NodePath("../thornbush6")
+destroyRadius = 300
+
+[node name="thornbush4" type="Sprite" parent="." index="11" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 5710.55, 260.486 )
+scale = Vector2( 0.0415107, 0.0415108 )
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
+
+[node name="thornbush6" type="Sprite" parent="." index="12" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 5890, -120 )
+scale = Vector2( 0.0415107, 0.0415108 )
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
+
+[connection signal="body_entered" from="Trap2" to="Trap2" method="_on_Trap_body_entered"]
+
+[connection signal="body_entered" from="Ladder4" to="Ladder4" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="Ladder4" to="Ladder4" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="Ladder5" to="Ladder5" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="Ladder5" to="Ladder5" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="Trap3" to="Trap3" method="_on_Trap_body_entered"]
+
+[connection signal="body_entered" from="Ladder6" to="Ladder6" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="Ladder6" to="Ladder6" method="_on_Ladder_body_exited"]
+
+
