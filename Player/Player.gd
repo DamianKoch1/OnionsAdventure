@@ -166,7 +166,7 @@ func _physics_process(delta):
 				motion.y = -jumpheight
 				ghostjumpTimeframe = 0
 		
-		if ray.is_colliding() && global_position.distance_to(ray.get_collision_point()) <= 30 && abs(motion.y) <= 70:
+		if ray.is_colliding() && global_position.distance_to(ray.get_collision_point()) <= 30 || abs(motion.y) <= 70:
 			if motion.x == 0 && state != climb:
 				setState(idle)
 				if Input.is_action_just_pressed("jump"):
