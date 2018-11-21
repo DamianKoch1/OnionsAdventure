@@ -4,7 +4,7 @@
 
 resource_name = "JumpDown"
 length = 0.4
-loop = false
+loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Onion/Sprite/OnionBody/OnionHair:position")
@@ -160,7 +160,7 @@ tracks/12/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 16.9174, 37.79 ), Vector2( 16.9174, 37.79 ), Vector2( 16.9174, 37.79 ) ]
+"values": [ Vector2( 12.9174, 59.8063 ), Vector2( 12.9174, 55.7909 ), Vector2( 16.9174, 51.2102 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("Onion/Sprite/OnionBody/onion_mouth:rotation_degrees")
@@ -184,7 +184,7 @@ tracks/14/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.5, 1.5 ), Vector2( 1.5, 1.5 ), Vector2( 1.5, 1.5 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("Onion/Sprite/OnionTail:position")
@@ -193,10 +193,10 @@ tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -18.7597, -9.677 ), Vector2( -18.3196, -6.67651 ) ]
+"values": [ Vector2( -18.7597, -9.677 ), Vector2( -18.3196, -6.67651 ), Vector2( -18.7597, -5.677 ) ]
 }
 tracks/16/type = "value"
 tracks/16/path = NodePath("Onion/Sprite/OnionTail:rotation_degrees")
@@ -205,10 +205,10 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ -27.196, -20.4789 ]
+"values": [ -27.196, -20.4789, -14.6768 ]
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Onion/Sprite/OnionTail:scale")
@@ -217,10 +217,10 @@ tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.5 ) ]
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.5 ) ]
 }
 tracks/18/type = "value"
 tracks/18/path = NodePath("Onion/Sprite/OnionEarL:position")
