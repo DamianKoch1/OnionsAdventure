@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menus/PauseMenu.gd" type="Script" id=1]
-[ext_resource path="res://Menus/YesNoOverlay.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menus/MainMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menus/YesNoOverlay.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Gradient" id=1]
 
@@ -14,7 +15,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="PauseMenu" type="Container" index="0"]
+[node name="PauseMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -36,7 +37,7 @@ _sections_unfolded = [ "Pause" ]
 __meta__ = {
 "_edit_group_": true
 }
-mainMenu = null
+mainMenu = ExtResource( 2 )
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
@@ -194,7 +195,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="YesNoOverlay" parent="." index="6" instance=ExtResource( 2 )]
+[node name="YesNoOverlay" parent="." index="6" instance=ExtResource( 3 )]
 
 visible = false
 

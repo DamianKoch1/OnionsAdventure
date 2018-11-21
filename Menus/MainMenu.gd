@@ -1,9 +1,10 @@
 extends Container
 
 export(PackedScene) var levelSelector
-onready var levelSelectorPath = levelSelector.resource_path
+var levelSelectorPath
 
 func _ready():
+	levelSelectorPath = levelSelector.resource_path 
 	$YesNoOverlay/NoButton.connect("pressed", self, "noPressed")
 	$YesNoOverlay/YesButton.connect("pressed", self, "yesPressed")
 	$YesNoOverlay.hide()

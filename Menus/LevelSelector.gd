@@ -1,12 +1,14 @@
 extends Container
 
+
 func loadLevel():
 	var path = "Levels/Level " + str(global.currLevelId) + ".tscn"
 	get_tree().change_scene(path)
 
 
 func _on_MainMenuButton_pressed():
-	pass # replace with function body
+	get_tree().change_scene("Menus/MainMenu.tscn")
+	pass
 
 
 func _on_Level1Button_pressed():

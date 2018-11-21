@@ -80,7 +80,9 @@ max_lines_visible = -1
 
 [node name="PauseMenu" parent="." index="2" instance=ExtResource( 2 )]
 
-visible = false
-MainMenu = null
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
 
 
