@@ -5,8 +5,8 @@
 [ext_resource path="res://Player/OnionSprite/onion_hair.png" type="Texture" id=3]
 [ext_resource path="res://Player/OnionSprite/onion_eyes.png" type="Texture" id=4]
 [ext_resource path="res://Player/OnionSprite/onion_mouth.png" type="Texture" id=5]
-[ext_resource path="res://Player/OnionSprite/onion_ear_L.png" type="Texture" id=6]
-[ext_resource path="res://Player/OnionSprite/onion_ear_R.png" type="Texture" id=7]
+[ext_resource path="res://Player/OnionSprite/onion_ear_l.png" type="Texture" id=6]
+[ext_resource path="res://Player/OnionSprite/onion_ear_r.png" type="Texture" id=7]
 [ext_resource path="res://Player/OnionSprite/onion_tail.png" type="Texture" id=8]
 [ext_resource path="res://Player/OnionSprite/Onion_Idle.tres" type="Animation" id=9]
 [ext_resource path="res://Player/OnionSprite/Onion_JumpDown.tres" type="Animation" id=10]
@@ -18,9 +18,8 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16.1236, 20.6317 )
 
-[node name="Onion" type="KinematicBody2D"]
+[node name="Onion" type="KinematicBody2D" index="0"]
 
-position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
 z_index = 100
 input_pickable = false
@@ -66,7 +65,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="OnionHair" type="Sprite" parent="Sprite/OnionBody" index="0"]
 
-position = Vector2( 7.13066, -40.2171 )
+position = Vector2( 7.13066, -31.33 )
 rotation = -0.00372912
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 3 )
@@ -75,15 +74,14 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="onion_eyes" type="Sprite" parent="Sprite/OnionBody" index="1"]
 
-position = Vector2( 13.7552, 1.35655 )
+position = Vector2( 17.7552, 1.35655 )
 texture = ExtResource( 4 )
 offset = Vector2( -12.1219, -0.543782 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="onion_mouth" type="Sprite" parent="Sprite/OnionBody" index="2"]
 
-position = Vector2( 16.9174, 37.79 )
-scale = Vector2( 1.5, 1.5 )
+position = Vector2( 20.9174, 51.1207 )
 texture = ExtResource( 5 )
 offset = Vector2( -15.5477, -24.2438 )
 _sections_unfolded = [ "Transform", "Z Index" ]

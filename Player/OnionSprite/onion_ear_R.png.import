@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/onion_ear_R.png-ae51bba40425a0191c3eeee5882ebe16.stex"
+path="res://.import/onion_ear_r.png-f9d75e4edaa2314bb431f77b5d91e39c.stex"
 
 [deps]
 
-source_file="res://Player/OnionSprite/onion_ear_R.png"
-dest_files=[ "res://.import/onion_ear_R.png-ae51bba40425a0191c3eeee5882ebe16.stex" ]
+source_file="res://Player/OnionSprite/onion_ear_r.png"
+dest_files=[ "res://.import/onion_ear_r.png-f9d75e4edaa2314bb431f77b5d91e39c.stex" ]
 
 [params]
 
