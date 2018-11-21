@@ -2,7 +2,7 @@ extends Area2D
 
 var triggered = false
 onready var snappedBody = $triggeredTrap/CollisionShape2D
-onready var player = get_parent().find_node("Onion")
+onready var player = get_tree().get_root().find_node("Onion")
 var triggerCD = 0
 onready var boxPacked = preload("res://Objects/Box/Box.tscn")
 
