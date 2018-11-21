@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menus/PauseMenu.gd" type="Script" id=1]
+[ext_resource path="res://Menus/YesNoOverlay.tscn" type="PackedScene" id=2]
 
 [sub_resource type="Gradient" id=1]
 
@@ -13,15 +14,17 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="PauseMenu" type="Container"]
+[node name="PauseMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 317.0
+margin_top = 156.0
+margin_right = 357.0
+margin_bottom = 196.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -30,10 +33,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
+__meta__ = {
+"_edit_group_": true
+}
+mainMenu = null
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
-modulate = Color( 0.613281, 0.655579, 1, 0.867412 )
+modulate = Color( 0.797577, 1, 0.613281, 0.867412 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -109,7 +116,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="LevelSelectorButton" type="Button" parent="." index="3"]
+[node name="MainMenuButton" type="Button" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -130,7 +137,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Level Selector"
+text = "Main Menu (wip)"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
@@ -156,38 +163,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Restart"
+text = "Restart Level"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="QuitButton" type="Button" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 167.0
-margin_top = 81.0
-margin_right = 303.0
-margin_bottom = 139.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Quit"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags", "Textures" ]
-
-[node name="OptionsButton" type="Button" parent="." index="6"]
+[node name="OptionsButton" type="Button" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -213,13 +194,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
+[node name="YesNoOverlay" parent="." index="6" instance=ExtResource( 2 )]
+
+visible = false
+
 [connection signal="pressed" from="ResumeButton" to="." method="_on_ResumeButton_pressed"]
 
-[connection signal="pressed" from="LevelSelectorButton" to="." method="_on_LevelSelectorButton_pressed"]
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]
-
-[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
 
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 
