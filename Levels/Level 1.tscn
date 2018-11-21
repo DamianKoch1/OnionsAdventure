@@ -1,24 +1,24 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/M1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Modules/M2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Modules/M3.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Obstacles/Stump M.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=8]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Objects/Ladder/asset_vine_1.png" type="Texture" id=10]
-[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=15]
-[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Assets/Stones/asset_stone_large_1.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Stones/asset_stone_inamovable_3.png" type="Texture" id=18]
-[ext_resource path="res://Objects/Obstacles/Stump S.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=4]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Obstacles/Stump M.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=8]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=11]
+[ext_resource path="res://Objects/Obstacles/Stump S.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=14]
+[ext_resource path="res://Objects/Ladder/asset_vine_1.png" type="Texture" id=15]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/Stones/asset_stone_large_1.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Stones/asset_stone_inamovable_3.png" type="Texture" id=19]
 [ext_resource path="res://Objects/Obstacles/Stump L.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=21]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=22]
@@ -33,7 +33,17 @@ extents = Vector2( 10, 11.4254 )
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.4254 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 447.881, 10 )
+
+[sub_resource type="Animation" id=5]
 
 length = 0.1
 loop = false
@@ -63,7 +73,7 @@ tracks/1/keys = {
 "values": [ 0.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=6]
 
 length = 0.1
 loop = false
@@ -93,12 +103,12 @@ tracks/1/keys = {
 "values": [ 0.0, 90.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -133,33 +143,194 @@ position = Vector2( -207.215, 79.8556 )
 
 [node name="M2" parent="." index="6" instance=ExtResource( 3 )]
 
-[node name="M3" parent="." index="7" instance=ExtResource( 4 )]
+[node name="M3" type="Node" parent="." index="7"]
 
-[node name="Checkpoint" parent="." index="8" instance=ExtResource( 5 )]
+editor/display_folded = true
+
+[node name="TileMap4" type="TileMap" parent="M3" index="0"]
+
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -196555, 0, 0, -196554, 2, 0, -131019, 6, 0, -131018, 8, 0, 65620, 0, 0, 65621, 2, 0, 131129, 0, 0, 131130, 1, 0, 131131, 1, 0, 131132, 1, 0, 131133, 1, 0, 131134, 1, 0, 131135, 1, 0, 131136, 1, 0, 131137, 1, 0, 131138, 1, 0, 131139, 1, 0, 131140, 1, 0, 131141, 1, 0, 131142, 1, 0, 131143, 1, 0, 131144, 1, 0, 131145, 1, 0, 131146, 1, 0, 131147, 1, 0, 131148, 1, 0, 131149, 1, 0, 131150, 1, 0, 131151, 2, 0, 131156, 6, 0, 131157, 8, 0, 196665, 3, 0, 196666, 4, 0, 196667, 4, 0, 196668, 4, 0, 196669, 4, 0, 196670, 4, 0, 196671, 4, 0, 196672, 4, 0, 196673, 4, 0, 196674, 4, 0, 196675, 4, 0, 196676, 4, 0, 196677, 4, 0, 196678, 4, 0, 196679, 4, 0, 196680, 4, 0, 196681, 4, 0, 196682, 4, 0, 196683, 4, 0, 196684, 4, 0, 196685, 4, 0, 196686, 4, 0, 196687, 5, 0, 262201, 6, 0, 262202, 7, 0, 262203, 7, 0, 262204, 7, 0, 262205, 7, 0, 262206, 7, 0, 262207, 7, 0, 262208, 7, 0, 262209, 7, 0, 262210, 7, 0, 262211, 7, 0, 262212, 7, 0, 262213, 7, 0, 262214, 7, 0, 262215, 7, 0, 262216, 7, 0, 262217, 7, 0, 262218, 7, 0, 262219, 7, 0, 262220, 7, 0, 262221, 7, 0, 262222, 7, 0, 262223, 8, 0, 327722, 1, 0, 327723, 1, 0, 327724, 1, 0, 327725, 1, 0, 327726, 1, 0, 327727, 1, 0, 327728, 2, 0, 393258, 4, 0, 393259, 4, 0, 393260, 4, 0, 393261, 4, 0, 393262, 4, 0, 393263, 4, 0, 393264, 1610612739, 0, 393303, 0, 0, 393304, 1, 0, 458794, 4, 0, 458795, 4, 0, 458796, 4, 0, 458797, 4, 0, 458798, 4, 0, 458799, 4, 0, 458800, 1610612739, 0, 458839, 1610612741, 0, 458840, 4, 0, 524330, 4, 0, 524331, 4, 0, 524332, 4, 0, 524333, 4, 0, 524334, 4, 0, 524335, 4, 0, 524336, 5, 0, 524375, 3, 0, 524376, 4, 0, 589866, 4, 0, 589867, 4, 0, 589868, 4, 0, 589869, 4, 0, 589870, 4, 0, 589871, 4, 0, 589872, 1610612739, 0, 589911, 3, 0, 589912, 4, 0, 655402, 4, 0, 655403, 4, 0, 655404, 4, 0, 655405, 4, 0, 655406, 4, 0, 655407, 4, 0, 655408, 5, 0, 655447, 1610612741, 0, 655448, 4, 0, 720938, 4, 0, 720939, 4, 0, 720940, 4, 0, 720941, 4, 0, 720942, 4, 0, 720943, 4, 0, 720944, -1610612727, 0, 720945, 1, 0, 720946, 1, 0, 720947, 1, 0, 720948, 1, 0, 720949, 1, 0, 720950, 1, 0, 720951, 1, 0, 720952, 1, 0, 720953, 1, 0, 720954, 1, 0, 720955, 1, 0, 720956, 1, 0, 720957, 1, 0, 720958, 1, 0, 720959, 1, 0, 720960, 1, 0, 720961, 1, 0, 720962, 1, 0, 720963, 1, 0, 720964, 1, 0, 720965, 1, 0, 720966, 1, 0, 720967, 1, 0, 720968, 1, 0, 720969, 1, 0, 720970, 1, 0, 720971, 1, 0, 720972, 1, 0, 720973, 1, 0, 720974, 1, 0, 720975, 1, 0, 720976, 1, 0, 720977, 1, 0, 720978, 1, 0, 720979, 1, 0, 720980, 1, 0, 720981, 1, 0, 720982, 1, 0, 720983, 9, 0, 720984, 4, 0, 786474, 4, 0, 786475, 4, 0, 786476, 4, 0, 786477, 4, 0, 786478, 4, 0, 786479, 4, 0, 786480, 4, 0, 786481, 4, 0, 786482, 4, 0, 786483, 4, 0, 786484, 4, 0, 786485, 4, 0, 786486, 4, 0, 786487, 4, 0, 786488, 4, 0, 786489, 4, 0, 786490, 4, 0, 786491, 4, 0, 786492, 4, 0, 786493, 4, 0, 786494, 4, 0, 786495, 4, 0, 786496, 4, 0, 786497, 4, 0, 786498, 4, 0, 786499, 4, 0, 786500, 4, 0, 786501, 4, 0, 786502, 4, 0, 786503, 4, 0, 786504, 4, 0, 786505, 4, 0, 786506, 4, 0, 786507, 4, 0, 786508, 4, 0, 786509, 4, 0, 786510, 4, 0, 786511, 4, 0, 786512, 4, 0, 786513, 4, 0, 786514, 4, 0, 786515, 4, 0, 786516, 4, 0, 786517, 4, 0, 786518, 4, 0, 786519, 4, 0, 786520, 4, 0, 852010, 4, 0, 852011, 4, 0, 852012, 4, 0, 852013, 4, 0, 852014, 4, 0, 852015, 4, 0, 852016, 4, 0, 852017, 4, 0, 852018, 4, 0, 852019, 4, 0, 852020, 4, 0, 852021, 4, 0, 852022, 4, 0, 852023, 4, 0, 852024, 4, 0, 852025, 4, 0, 852026, 4, 0, 852027, 4, 0, 852028, 4, 0, 852029, 4, 0, 852030, 4, 0, 852031, 4, 0, 852032, 4, 0, 852033, 4, 0, 852034, 4, 0, 852035, 4, 0, 852036, 4, 0, 852037, 4, 0, 852038, 4, 0, 852039, 4, 0, 852040, 4, 0, 852041, 4, 0, 852042, 4, 0, 852043, 4, 0, 852044, 4, 0, 852045, 4, 0, 852046, 4, 0, 852047, 4, 0, 852048, 4, 0, 852049, 4, 0, 852050, 4, 0, 852051, 4, 0, 852052, 4, 0, 852053, 4, 0, 852054, 4, 0, 852055, 4, 0, 852056, 4, 0, 917546, 4, 0, 917547, 4, 0, 917548, 4, 0, 917549, 4, 0, 917550, 4, 0, 917551, 4, 0, 917552, 4, 0, 917553, 4, 0, 917554, 4, 0, 917555, 4, 0, 917556, 4, 0, 917557, 4, 0, 917558, 4, 0, 917559, 4, 0, 917560, 4, 0, 917561, 4, 0, 917562, 4, 0, 917563, 4, 0, 917564, 4, 0, 917565, 4, 0, 917566, 4, 0, 917567, 4, 0, 917568, 4, 0, 917569, 4, 0, 917570, 4, 0, 917571, 4, 0, 917572, 4, 0, 917573, 4, 0, 917574, 4, 0, 917575, 4, 0, 917576, 4, 0, 917577, 4, 0, 917578, 4, 0, 917579, 4, 0, 917580, 4, 0, 917581, 4, 0, 917582, 4, 0, 917583, 4, 0, 917584, 4, 0, 917585, 4, 0, 917586, 4, 0, 917587, 4, 0, 917588, 4, 0, 917589, 4, 0, 917590, 4, 0, 917591, 4, 0, 917592, 4, 0, 983082, 4, 0, 983083, 4, 0, 983084, 4, 0, 983085, 4, 0, 983086, 4, 0, 983087, 4, 0, 983088, 4, 0, 983089, 4, 0, 983090, 4, 0, 983091, 4, 0, 983092, 4, 0, 983093, 4, 0, 983094, 4, 0, 983095, 4, 0, 983096, 4, 0, 983097, 4, 0, 983098, 4, 0, 983099, 4, 0, 983100, 4, 0, 983101, 4, 0, 983102, 4, 0, 983103, 4, 0, 983104, 4, 0, 983105, 4, 0, 983106, 4, 0, 983107, 4, 0, 983108, 4, 0, 983109, 4, 0, 983110, 4, 0, 983111, 4, 0, 983112, 4, 0, 983113, 4, 0, 983114, 4, 0, 983115, 4, 0, 983116, 4, 0, 983117, 4, 0, 983118, 4, 0, 983119, 4, 0, 983120, 4, 0, 983121, 4, 0, 983122, 4, 0, 983123, 4, 0, 983124, 4, 0, 983125, 4, 0, 983126, 4, 0, 983127, 4, 0, 983128, 4, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="Ladder" parent="M3" index="1" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 1726.52, 110.793 )
+scale = Vector2( 1, 4.64753 )
+
+[node name="Box2" parent="M3" index="2" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 1984, 32 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="stump m 9" parent="M3" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 1854.86, 242.475 )
+
+[node name="stump m 10" parent="M3" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( 2249.03, 246.815 )
+
+[node name="stump m 12" type="Sprite" parent="M3" index="5"]
+
+editor/display_folded = true
+position = Vector2( 2261.03, -45.185 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 8 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="M3/stump m 12" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="M3/stump m 12/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="M3/stump m 12/StaticBody2D2" index="1"]
+
+position = Vector2( 899.917, 1078.2 )
+scale = Vector2( 1.45442, 16.2295 )
+shape = SubResource( 2 )
+
+[node name="Ladder2" parent="M3" index="6" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 2720, 192 )
+scale = Vector2( 1, 3.25 )
+
+[node name="Trap7" parent="M3" index="7" instance=ExtResource( 9 )]
+
+position = Vector2( 2131.24, 341.369 )
+
+[node name="thornbush2" parent="M3" index="8" instance=ExtResource( 10 )]
+
+editor/display_folded = true
+position = Vector2( 2440.49, 4.87675 )
+scale = Vector2( 0.0415107, 0.0415108 )
+texture = ExtResource( 11 )
+
+[node name="M4" type="Node" parent="." index="8"]
+
+[node name="TileMap5" type="TileMap" parent="M4" index="0"]
+
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -327578, 0, 0, -327577, 2, 0, -262042, 6, 0, -262041, 8, 0, -65431, 0, 0, -65430, 1, 0, -65429, 1, 0, -65428, 1, 0, -65427, 1, 0, -65426, 1, 0, -65425, 2, 0, 105, 6, 0, 106, 7, 0, 107, 7, 0, 108, 7, 0, 109, 7, 0, 110, 7, 0, 111, 8, 0, 393305, 1, 0, 393306, 1, 0, 393307, 1, 0, 393308, 1, 0, 393309, 1, 0, 393310, 1, 0, 393311, 1, 0, 393312, 1, 0, 393313, 1, 0, 393314, 1, 0, 393315, 1, 0, 393316, 1, 0, 393317, 1, 0, 393318, 1, 0, 393319, 1, 0, 393320, 1, 0, 393321, 1, 0, 393322, 1, 0, 393323, 1, 0, 393324, 1, 0, 393325, 1, 0, 393326, 1, 0, 393327, 1, 0, 393328, 1, 0, 393329, 1, 0, 393330, 1, 0, 393331, 1, 0, 393332, 1, 0, 393333, 1, 0, 393334, 1, 0, 393335, 1, 0, 393336, 1, 0, 393337, 1, 0, 393338, 1, 0, 393339, 1, 0, 393340, 1, 0, 393341, 1, 0, 458841, 4, 0, 458842, 4, 0, 458843, 4, 0, 458844, 4, 0, 458845, 4, 0, 458846, 4, 0, 458847, 4, 0, 458848, 4, 0, 458849, 4, 0, 458850, 4, 0, 458851, 4, 0, 458852, 4, 0, 458853, 4, 0, 458854, 4, 0, 458855, 4, 0, 458856, 4, 0, 458857, 4, 0, 458858, 4, 0, 458859, 4, 0, 458860, 4, 0, 458861, 4, 0, 458862, 4, 0, 458863, 4, 0, 458864, 4, 0, 458865, 4, 0, 458866, 4, 0, 458867, 4, 0, 458868, 4, 0, 458869, 4, 0, 458870, 4, 0, 458871, 4, 0, 458872, 4, 0, 458873, 4, 0, 458874, 4, 0, 458875, 4, 0, 458876, 4, 0, 458877, 4, 0, 524377, 4, 0, 524378, 4, 0, 524379, 4, 0, 524380, 4, 0, 524381, 4, 0, 524382, 4, 0, 524383, 4, 0, 524384, 4, 0, 524385, 4, 0, 524386, 4, 0, 524387, 4, 0, 524388, 4, 0, 524389, 4, 0, 524390, 4, 0, 524391, 4, 0, 524392, 4, 0, 524393, 4, 0, 524394, 4, 0, 524395, 4, 0, 524396, 4, 0, 524397, 4, 0, 524398, 4, 0, 524399, 4, 0, 524400, 4, 0, 524401, 4, 0, 524402, 4, 0, 524403, 4, 0, 524404, 4, 0, 524405, 4, 0, 524406, 4, 0, 524407, 4, 0, 524408, 4, 0, 524409, 4, 0, 524410, 4, 0, 524411, 4, 0, 524412, 4, 0, 524413, 4, 0, 589913, 4, 0, 589914, 4, 0, 589915, 4, 0, 589916, 4, 0, 589917, 4, 0, 589918, 4, 0, 589919, 4, 0, 589920, 4, 0, 589921, 4, 0, 589922, 4, 0, 589923, 4, 0, 589924, 4, 0, 589925, 4, 0, 589926, 4, 0, 589927, 4, 0, 589928, 4, 0, 589929, 4, 0, 589930, 4, 0, 589931, 4, 0, 589932, 4, 0, 589933, 4, 0, 589934, 4, 0, 589935, 4, 0, 589936, 4, 0, 589937, 4, 0, 589938, 4, 0, 589939, 4, 0, 589940, 4, 0, 589941, 4, 0, 589942, 4, 0, 589943, 4, 0, 589944, 4, 0, 589945, 4, 0, 589946, 4, 0, 589947, 4, 0, 589948, 4, 0, 589949, 4, 0, 655449, 4, 0, 655450, 4, 0, 655451, 4, 0, 655452, 4, 0, 655453, 4, 0, 655454, 4, 0, 655455, 4, 0, 655456, 4, 0, 655457, 4, 0, 655458, 4, 0, 655459, 4, 0, 655460, 4, 0, 655461, 4, 0, 655462, 4, 0, 655463, 4, 0, 655464, 4, 0, 655465, 4, 0, 655466, 4, 0, 655467, 4, 0, 655468, 4, 0, 655469, 4, 0, 655470, 4, 0, 655471, 4, 0, 655472, 4, 0, 655473, 4, 0, 655474, 4, 0, 655475, 4, 0, 655476, 4, 0, 655477, 4, 0, 655478, 4, 0, 655479, 4, 0, 655480, 4, 0, 655481, 4, 0, 655482, 4, 0, 655483, 4, 0, 655484, 4, 0, 655485, 4, 0, 720985, 4, 0, 720986, 4, 0, 720987, 4, 0, 720988, 4, 0, 720989, 4, 0, 720990, 4, 0, 720991, 4, 0, 720992, 4, 0, 720993, 4, 0, 720994, 4, 0, 720995, 4, 0, 720996, 4, 0, 720997, 4, 0, 720998, 4, 0, 720999, 4, 0, 721000, 4, 0, 721001, 4, 0, 721002, 4, 0, 721003, 4, 0, 721004, 4, 0, 721005, 4, 0, 721006, 4, 0, 721007, 4, 0, 721008, 4, 0, 721009, 4, 0, 721010, 4, 0, 721011, 4, 0, 721012, 4, 0, 721013, 4, 0, 721014, 4, 0, 721015, 4, 0, 721016, 4, 0, 721017, 4, 0, 721018, 4, 0, 721019, 4, 0, 721020, 4, 0, 721021, 4, 0, 786521, 4, 0, 786522, 4, 0, 786523, 4, 0, 786524, 4, 0, 786525, 4, 0, 786526, 4, 0, 786527, 4, 0, 786528, 4, 0, 786529, 4, 0, 786530, 4, 0, 786531, 4, 0, 786532, 4, 0, 786533, 4, 0, 786534, 4, 0, 786535, 4, 0, 786536, 4, 0, 786537, 4, 0, 786538, 4, 0, 786539, 4, 0, 786540, 4, 0, 786541, 4, 0, 786542, 4, 0, 786543, 4, 0, 786544, 4, 0, 786545, 4, 0, 786546, 4, 0, 786547, 4, 0, 786548, 4, 0, 786549, 4, 0, 786550, 4, 0, 786551, 4, 0, 786552, 4, 0, 786553, 4, 0, 786554, 4, 0, 786555, 4, 0, 786556, 4, 0, 786557, 4, 0, 852056, 4, 0, 852057, 4, 0, 852058, 4, 0, 852059, 4, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="stump m 19" parent="M4" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 3052.44, 80.0076 )
+
+[node name="Ladder3" parent="M4" index="2" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 3299.02, -12.3438 )
+scale = Vector2( 1, 3.25 )
+
+[node name="Box3" parent="M4" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 3520, -64 )
+
+[node name="Trap" parent="M4" index="4" instance=ExtResource( 9 )]
+
+position = Vector2( 3889.04, 184.191 )
+
+[node name="stump s 3" parent="M4" index="5" instance=ExtResource( 12 )]
+
+position = Vector2( 2868.31, 154.217 )
+
+[node name="M6" type="Node" parent="." index="9"]
+
+[node name="TileMap6" type="TileMap" parent="M6" index="0"]
+
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 393360, 1, 0, 393361, 1, 0, 393362, 1, 0, 393363, 1, 0, 393364, 1, 0, 393365, 1, 0, 393366, 1, 0, 393367, 1, 0, 393368, 1, 0, 393369, 2, 0, 458905, 5, 0, 524441, 1610612739, 0, 589977, -1610612731, 0, 655513, -1610612727, 0, 655514, 1, 0, 655515, 1, 0, 655516, 1, 0, 655517, 1, 0, 655518, 1, 0, 655519, 1, 0, 655520, 1, 0, 655521, 1, 0, 655522, 1, 0, 655523, 1, 0, 655524, 1, 0, 655525, 1, 0, 655526, 1, 0, 655527, 1, 0, 655528, 1, 0, 655529, 1, 0, 655530, 1, 0, 655531, 1, 0, 655532, 1, 0, 655533, 1, 0, 655534, 1, 0, 655535, 1, 0, 655536, 1, 0, 655537, 1, 0, 655538, 1, 0, 655539, 1, 0, 655540, 1, 0, 655541, 1, 0, 655542, 1, 0, 655543, 1, 0, 655544, 1, 0, 655545, 1, 0, 655546, 9, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="Checkpoint" parent="." index="10" instance=ExtResource( 13 )]
 
 position = Vector2( 1290, 114.278 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Checkpoint2" parent="." index="9" instance=ExtResource( 5 )]
+[node name="Checkpoint2" parent="." index="11" instance=ExtResource( 13 )]
 
 position = Vector2( 4520.36, 144.698 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Checkpoint5" parent="." index="10" instance=ExtResource( 5 )]
+[node name="Checkpoint5" parent="." index="12" instance=ExtResource( 13 )]
 
 position = Vector2( 6042.84, 49.7698 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="stump m 19" parent="." index="11" instance=ExtResource( 6 )]
-
-position = Vector2( 3052.44, 80.0076 )
-
-[node name="stump m 26" type="Sprite" parent="." index="12"]
+[node name="stump m 26" type="Sprite" parent="." index="13"]
 
 editor/display_folded = true
 position = Vector2( 5007.3, 205.162 )
 scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {
@@ -169,7 +340,7 @@ __meta__ = {
 [node name="branch 1" type="Sprite" parent="stump m 26" index="0"]
 
 position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 8 )
+texture = ExtResource( 14 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
@@ -203,20 +374,20 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 26/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
-[node name="stump m 27" type="Sprite" parent="." index="13"]
+[node name="stump m 27" type="Sprite" parent="." index="14"]
 
 editor/display_folded = true
 position = Vector2( 6273.81, -16.5789 )
 scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {
@@ -226,7 +397,7 @@ __meta__ = {
 [node name="branch 1" type="Sprite" parent="stump m 27" index="0"]
 
 position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 8 )
+texture = ExtResource( 14 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
@@ -260,53 +431,35 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 27/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
-[node name="stump m 22" parent="." index="14" instance=ExtResource( 6 )]
+[node name="stump m 22" parent="." index="15" instance=ExtResource( 7 )]
 
 position = Vector2( 6757.17, -15.5817 )
 
-[node name="stump m 23" parent="." index="15" instance=ExtResource( 6 )]
+[node name="stump m 23" parent="." index="16" instance=ExtResource( 7 )]
 
 position = Vector2( 8527.55, 209.598 )
 
-[node name="stump m 24" parent="." index="16" instance=ExtResource( 6 )]
+[node name="stump m 24" parent="." index="17" instance=ExtResource( 7 )]
 
 position = Vector2( 10444.8, 78.2042 )
 
-[node name="stump m 25" parent="." index="17" instance=ExtResource( 6 )]
+[node name="stump m 25" parent="." index="18" instance=ExtResource( 7 )]
 
 position = Vector2( 10957.4, 170.735 )
 
-[node name="Ladder3" parent="." index="18" instance=ExtResource( 9 )]
-
-editor/display_folded = true
-position = Vector2( 3299.02, -12.3438 )
-scale = Vector2( 1, 3.25 )
-
-[node name="icon" parent="Ladder3" index="0"]
-
-texture = ExtResource( 10 )
-
-[node name="Box3" parent="." index="19" instance=ExtResource( 11 )]
-
-position = Vector2( 3520, -64 )
-
-[node name="Trap" parent="." index="20" instance=ExtResource( 12 )]
-
-position = Vector2( 3889.04, 184.191 )
-
-[node name="Trap2" parent="." index="21" instance=ExtResource( 12 )]
+[node name="Trap2" parent="." index="19" instance=ExtResource( 9 )]
 
 position = Vector2( 5240, -170 )
 
-[node name="Ladder4" parent="." index="22" instance=ExtResource( 9 )]
+[node name="Ladder4" parent="." index="20" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 4767.74, 24.5 )
@@ -314,9 +467,9 @@ scale = Vector2( 1, 4.10938 )
 
 [node name="icon" parent="Ladder4" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 
-[node name="Ladder5" parent="." index="23" instance=ExtResource( 9 )]
+[node name="Ladder5" parent="." index="21" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 4830.74, -163.5 )
@@ -324,42 +477,42 @@ scale = Vector2( 1, 4.14063 )
 
 [node name="icon" parent="Ladder5" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 
-[node name="Box4" parent="." index="24" instance=ExtResource( 11 )]
+[node name="Box4" parent="." index="22" instance=ExtResource( 6 )]
 
 position = Vector2( 5050, -190 )
 
-[node name="Box5" parent="." index="25" instance=ExtResource( 11 )]
+[node name="Box5" parent="." index="23" instance=ExtResource( 6 )]
 
 position = Vector2( 5370, 290 )
 
-[node name="Trap3" parent="." index="26" instance=ExtResource( 12 )]
+[node name="Trap3" parent="." index="24" instance=ExtResource( 9 )]
 
 position = Vector2( 5250, 310 )
 
-[node name="FireS3" parent="." index="27" instance=ExtResource( 13 )]
+[node name="FireS3" parent="." index="25" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 4230, 150 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush3")
 
-[node name="FireS" parent="." index="28" instance=ExtResource( 13 )]
+[node name="FireS" parent="." index="26" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 5590, 270 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush4")
 
-[node name="FireS4" parent="." index="29" instance=ExtResource( 13 )]
+[node name="FireS4" parent="." index="27" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 7200, -50 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush5")
 
-[node name="Ladder6" parent="." index="30" instance=ExtResource( 9 )]
+[node name="Ladder6" parent="." index="28" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 5880, 130 )
@@ -367,9 +520,9 @@ scale = Vector2( 1, 4.14063 )
 
 [node name="icon" parent="Ladder6" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 
-[node name="Ladder7" parent="." index="31" instance=ExtResource( 9 )]
+[node name="Ladder7" parent="." index="29" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 7470, 70 )
@@ -377,41 +530,41 @@ scale = Vector2( 1, 4.41406 )
 
 [node name="icon" parent="Ladder7" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 
-[node name="FireS2" parent="." index="32" instance=ExtResource( 13 )]
+[node name="FireS2" parent="." index="30" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 5680, -200 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush6")
 
-[node name="Trap4" parent="." index="33" instance=ExtResource( 12 )]
+[node name="Trap4" parent="." index="31" instance=ExtResource( 9 )]
 
 position = Vector2( 6500, 90 )
 
-[node name="Box6" parent="." index="34" instance=ExtResource( 11 )]
+[node name="Box6" parent="." index="32" instance=ExtResource( 6 )]
 
 position = Vector2( 7130, 290 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Trap5" parent="." index="35" instance=ExtResource( 12 )]
+[node name="Trap5" parent="." index="33" instance=ExtResource( 9 )]
 
 position = Vector2( 7280, 310 )
 
-[node name="Trap8" parent="." index="36" instance=ExtResource( 12 )]
+[node name="Trap8" parent="." index="34" instance=ExtResource( 9 )]
 
 position = Vector2( 7670, 340 )
 
-[node name="Box7" parent="." index="37" instance=ExtResource( 11 )]
+[node name="Box7" parent="." index="35" instance=ExtResource( 6 )]
 
 position = Vector2( 7630, 0 )
 
-[node name="Box8" parent="." index="38" instance=ExtResource( 11 )]
+[node name="Box8" parent="." index="36" instance=ExtResource( 6 )]
 
 position = Vector2( 7840, 0 )
 
-[node name="Checkpoint3" parent="." index="39" instance=ExtResource( 5 )]
+[node name="Checkpoint3" parent="." index="37" instance=ExtResource( 13 )]
 
 position = Vector2( 7820, 270 )
 scale = Vector2( 0.568831, 0.622471 )
@@ -421,30 +574,30 @@ scale = Vector2( 0.568831, 0.622471 )
 position = Vector2( 0, -33.9867 )
 scale = Vector2( 1, 0.20952 )
 
-[node name="Checkpoint4" parent="." index="40" instance=ExtResource( 5 )]
+[node name="Checkpoint4" parent="." index="38" instance=ExtResource( 13 )]
 
 editor/display_folded = true
 position = Vector2( 9856, 176.752 )
 scale = Vector2( 0.568831, 0.622471 )
 
-[node name="Trap9" parent="." index="41" instance=ExtResource( 12 )]
+[node name="Trap9" parent="." index="39" instance=ExtResource( 9 )]
 
 position = Vector2( 8050, 340 )
 
-[node name="Trap10" parent="." index="42" instance=ExtResource( 12 )]
+[node name="Trap10" parent="." index="40" instance=ExtResource( 9 )]
 
 position = Vector2( 8770, 310 )
 
-[node name="Trap11" parent="." index="43" instance=ExtResource( 12 )]
+[node name="Trap11" parent="." index="41" instance=ExtResource( 9 )]
 
 position = Vector2( 10515.2, 403.346 )
 
-[node name="thornbush3" parent="." index="44" instance=ExtResource( 14 )]
+[node name="thornbush3" parent="." index="42" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 4332.13, 133.868 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 15 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="thornbush3/Collider" index="0"]
 
@@ -456,12 +609,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 47.0887 )
 scale = Vector2( 0.161022, 0.155538 )
 
-[node name="thornbush4" parent="." index="45" instance=ExtResource( 14 )]
+[node name="thornbush4" parent="." index="43" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 5710.55, 260.486 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 15 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="thornbush4/Collider" index="0"]
 
@@ -473,12 +626,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 35.9943 )
 scale = Vector2( 0.161022, 0.154439 )
 
-[node name="thornbush5" parent="." index="46" instance=ExtResource( 14 )]
+[node name="thornbush5" parent="." index="44" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 7290, -60 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 15 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="thornbush5/Collider" index="0"]
 
@@ -490,12 +643,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 57.3953 )
 scale = Vector2( 0.161022, 0.156559 )
 
-[node name="thornbush6" parent="." index="47" instance=ExtResource( 14 )]
+[node name="thornbush6" parent="." index="45" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 5890, -120 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 15 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="thornbush6/Collider" index="0"]
 
@@ -507,23 +660,23 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 74.7951 )
 scale = Vector2( 0.161022, 0.158282 )
 
-[node name="stone" parent="." index="48" instance=ExtResource( 16 )]
+[node name="stone" parent="." index="46" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 position = Vector2( 9070, 220 )
 scale = Vector2( 0.104167, 0.104167 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="CollisionPolygon2D" parent="stone/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 96, 1056, -96, 1056, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1823.99, 95.9998, 1919.99, 191.999, 1919.99, 671.998, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
 
-[node name="stone2" parent="." index="49" instance=ExtResource( 16 )]
+[node name="stone2" parent="." index="47" instance=ExtResource( 17 )]
 
 position = Vector2( 9923.31, 311.022 )
 scale = Vector2( 0.104167, 0.104167 )
 z_index = 90
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 flip_h = true
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
@@ -534,7 +687,7 @@ scale = Vector2( -0.987274, 1.01781 )
 polygon = PoolVector2Array( 96, 1056, -78.6563, 1035.51, 118.734, 780.932, 176.914, 720.217, 278.109, 662.031, 477.961, 586.138, 670.227, 535.542, 718.297, 548.191, 811.891, 649.383, 819.477, 654.442, 824.539, 439.41, 1123.06, 168.722, 1343.15, 34.6428, 1545.53, 42.2322, 1715.02, 70.0601, 1808.63, 191.49, 1836.46, 694.919, 1894.64, 737.925, 1902.23, 869.474, 1598.66, 1044.03, 1080.05, 1104.74, 973.797, 1059.21 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Ladder8" parent="." index="50" instance=ExtResource( 9 )]
+[node name="Ladder8" parent="." index="48" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 9410.65, 55.2861 )
@@ -542,14 +695,14 @@ scale = Vector2( 1, 3.48613 )
 
 [node name="icon" parent="Ladder8" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 
-[node name="thornbush7" parent="." index="51" instance=ExtResource( 14 )]
+[node name="thornbush7" parent="." index="49" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 9640, 170 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 15 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="thornbush7/Collider" index="0"]
 
@@ -561,12 +714,12 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 31.8845 )
 scale = Vector2( 0.161022, 0.154032 )
 
-[node name="thornbush8" parent="." index="52" instance=ExtResource( 14 )]
+[node name="thornbush8" parent="." index="50" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 9710, 170 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 15 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="thornbush8/Collider" index="0"]
 
@@ -578,7 +731,7 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 27.9874 )
 scale = Vector2( 0.161022, 0.153646 )
 
-[node name="Ladder9" parent="." index="53" instance=ExtResource( 9 )]
+[node name="Ladder9" parent="." index="51" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 10303.7, 212.627 )
@@ -586,9 +739,9 @@ scale = Vector2( 1, 3.48613 )
 
 [node name="icon" parent="Ladder9" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 
-[node name="Ladder10" parent="." index="54" instance=ExtResource( 9 )]
+[node name="Ladder10" parent="." index="52" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 11629.8, 87.3631 )
@@ -596,25 +749,25 @@ scale = Vector2( 1, 3.48613 )
 
 [node name="icon" parent="Ladder10" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 
-[node name="big stone" parent="." index="55" instance=ExtResource( 16 )]
+[node name="big stone" parent="." index="53" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 position = Vector2( 10590.1, 288.102 )
 scale = Vector2( 0.0677199, 0.0677199 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="CollisionPolygon2D" parent="big stone/StaticBody2D" index="0"]
 
 polygon = PoolVector2Array( 246.766, 241.127, 131.516, 298.738, 30.7031, 723.619, 9.10938, 781.23, 268.359, 1090.89, 261.156, 1450.96, 167.531, 1458.16, 167.531, 1638.19, 9.10938, 1753.41, 9.10938, 1904.64, 966.875, 1904.64, 830.063, 1501.37, 794.047, 1062.08, 945.281, 853.243, 974.094, 579.592, 729.25, 291.537, 578.016, 147.51, 549.203, 82.6978, 390.781, 10.6841, 239.547, 118.705 )
 
-[node name="thornbush9" parent="." index="56" instance=ExtResource( 14 )]
+[node name="thornbush9" parent="." index="54" instance=ExtResource( 10 )]
 
 editor/display_folded = true
 position = Vector2( 10816, 226.263 )
 scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 15 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="thornbush9/Collider" index="0"]
 
@@ -626,55 +779,55 @@ scale = Vector2( 1, 1.17724 )
 position = Vector2( -1.04904e-005, 27.9874 )
 scale = Vector2( 0.161022, 0.153646 )
 
-[node name="FireS5" parent="." index="57" instance=ExtResource( 13 )]
+[node name="FireS5" parent="." index="55" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 10725.2, 245.068 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../thornbush9")
 
-[node name="Trap12" parent="." index="58" instance=ExtResource( 12 )]
+[node name="Trap12" parent="." index="56" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 11210, 280 )
 
 [node name="AnimationPlayer" parent="Trap12" index="4"]
 
-anims/Snap = SubResource( 3 )
+anims/Snap = SubResource( 5 )
 
-[node name="Trap13" parent="." index="59" instance=ExtResource( 12 )]
+[node name="Trap13" parent="." index="57" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 11560, 280 )
 
 [node name="AnimationPlayer" parent="Trap13" index="4"]
 
-anims/Snap = SubResource( 4 )
+anims/Snap = SubResource( 6 )
 
-[node name="Trap14" parent="." index="60" instance=ExtResource( 12 )]
+[node name="Trap14" parent="." index="58" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 12260, 120 )
 
-[node name="Box9" parent="." index="61" instance=ExtResource( 11 )]
+[node name="Box9" parent="." index="59" instance=ExtResource( 6 )]
 
 position = Vector2( 11800, 100 )
 
-[node name="Box10" parent="." index="62" instance=ExtResource( 11 )]
+[node name="Box10" parent="." index="60" instance=ExtResource( 6 )]
 
 position = Vector2( 11870, 100 )
 
-[node name="Box11" parent="." index="63" instance=ExtResource( 11 )]
+[node name="Box11" parent="." index="61" instance=ExtResource( 6 )]
 
 position = Vector2( 11834.8, 36.4124 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Box12" parent="." index="64" instance=ExtResource( 11 )]
+[node name="Box12" parent="." index="62" instance=ExtResource( 6 )]
 
 position = Vector2( 11970, 100 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Ladder11" parent="." index="65" instance=ExtResource( 9 )]
+[node name="Ladder11" parent="." index="63" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 12320.2, -87.3332 )
@@ -682,31 +835,27 @@ scale = Vector2( 1, 3.48613 )
 
 [node name="icon" parent="Ladder11" index="0"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 15 )
 
-[node name="endstone" parent="." index="66" instance=ExtResource( 16 )]
+[node name="endstone" parent="." index="64" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 position = Vector2( 12859.4, -47.6668 )
 scale = Vector2( 0.121272, 0.121272 )
 
-[node name="stump s 3" parent="." index="67" instance=ExtResource( 19 )]
-
-position = Vector2( 2868.31, 154.217 )
-
-[node name="stump s 4" parent="." index="68" instance=ExtResource( 19 )]
+[node name="stump s 4" parent="." index="65" instance=ExtResource( 12 )]
 
 position = Vector2( 6114.16, 57.6303 )
 
-[node name="stump s 5" parent="." index="69" instance=ExtResource( 19 )]
+[node name="stump s 5" parent="." index="66" instance=ExtResource( 12 )]
 
 position = Vector2( 6605.74, 55.972 )
 
-[node name="stump l 8" parent="." index="70" instance=ExtResource( 20 )]
+[node name="stump l 8" parent="." index="67" instance=ExtResource( 20 )]
 
 position = Vector2( 8843.62, 151.987 )
 
-[node name="stump l 12" type="Sprite" parent="." index="71"]
+[node name="stump l 12" type="Sprite" parent="." index="68"]
 
 position = Vector2( 9418.73, 52.5902 )
 scale = Vector2( 0.0989583, 0.104806 )
@@ -731,15 +880,15 @@ bounce = 0.0
 
 position = Vector2( 999.944, 875.041 )
 scale = Vector2( 33.1696, 87.1565 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump l 12/StaticBody2D2" index="1"]
 
 position = Vector2( 928.747, 1539.22 )
 scale = Vector2( 62.1414, 19.2334 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
-[node name="stump l 13" type="Sprite" parent="." index="72"]
+[node name="stump l 13" type="Sprite" parent="." index="69"]
 
 position = Vector2( 12344.4, -48.0843 )
 scale = Vector2( 0.0989583, 0.104806 )
@@ -764,19 +913,19 @@ bounce = 0.0
 
 position = Vector2( 999.944, 875.041 )
 scale = Vector2( 33.1696, 87.1565 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump l 13/StaticBody2D2" index="1"]
 
 position = Vector2( 928.747, 1539.22 )
 scale = Vector2( 62.1414, 19.2334 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
-[node name="stump l 10" parent="." index="73" instance=ExtResource( 20 )]
+[node name="stump l 10" parent="." index="70" instance=ExtResource( 20 )]
 
 position = Vector2( 11290.1, 116.825 )
 
-[node name="trappedNPC" parent="." index="74" instance=ExtResource( 22 )]
+[node name="trappedNPC" parent="." index="71" instance=ExtResource( 22 )]
 
 position = Vector2( 4090, 150 )
 
@@ -795,8 +944,6 @@ region_rect = Rect2( 20, 0, 14677.6, 236 )
 
 [editable path="M1"]
 [editable path="M2"]
-[editable path="M3"]
-[editable path="Ladder3"]
 [editable path="Ladder4"]
 [editable path="Ladder5"]
 [editable path="FireS3"]
