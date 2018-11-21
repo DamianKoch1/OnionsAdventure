@@ -2,7 +2,7 @@ extends Area2D
 
 var triggered = false
 onready var snappedBody = $triggeredTrap/CollisionShape2D
-onready var player = get_parent().find_node("Onion")
+onready var player = get_parent().get_parent().find_node("Onion")
 var triggerCD = 0
 onready var boxPacked = preload("res://Objects/Box/Box.tscn")
 
@@ -20,6 +20,7 @@ func snap():
 
 
 func _ready():
+	print(player)
 	snappedBody.disabled = true
 	player.connect("loseHp", self, "open")
 	
@@ -31,6 +32,7 @@ func _on_Trap_body_entered(body):
 	#make trap snap if triggered
 	if triggered == false && triggerCD == 0:
 		if body.name != "StaticBody2D" && body.name != "TileMap":
+			
 			triggerCD = 1
 			triggered = true
 			obj = body
