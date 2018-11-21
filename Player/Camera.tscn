@@ -7,7 +7,7 @@
 
 pause_mode = 2
 position = Vector2( 32, 32 )
-z_index = 30
+z_index = 3000
 anchor_mode = 1
 rotating = false
 current = true
@@ -33,6 +33,8 @@ editor_draw_drag_margin = false
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause", "Transform", "Z Index" ]
 camSpeed = 0.1
+upDownSpeed = 0.04
+upDownAmount = 150
 
 [node name="HP" type="Label" parent="." index="0"]
 
@@ -79,5 +81,6 @@ max_lines_visible = -1
 [node name="PauseMenu" parent="." index="2" instance=ExtResource( 2 )]
 
 visible = false
+MainMenu = null
 
 

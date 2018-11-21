@@ -2,7 +2,13 @@ extends Container
 
 onready var paused = false
 
+export(PackedScene) var mainMenu
+onready var mainMenuPath = mainMenu.resource_path
+
 func _ready():
+	$YesNoOverlay/NoButton.connect("pressed", self, "noPressed")
+	$YesNoOverlay/YesButton.connect("pressed", self, "yesPressed")
+	$YesNoOverlay.hide()
 	hide()
 	get_tree().paused = false
 
@@ -22,17 +28,22 @@ func _on_ResumeButton_pressed():
 	hide()
 	get_tree().paused = false
 
-func _on_QuitButton_pressed():
-	get_tree().quit()
-
 
 func _on_RestartButton_pressed():
 	get_tree().reload_current_scene()
 
 
 func _on_OptionsButton_pressed():
-	pass # replace with function body
+	
+	pass
 
 
-func _on_LevelSelectorButton_pressed():
-	get_tree().change_scene("Menus/LevelSelector.tscn")
+func _on_MainMenuButton_pressed():
+	$YesNoOverlay.show()
+	pass
+
+func noPressed():
+	$YesNoOverlay.hide()
+
+func yesPressed():
+	get_tree().change_scene(mainMenuPath)
