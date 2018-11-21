@@ -1,0 +1,186 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=3]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=5]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Box/Box.gd" type="Script" id=7]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Trap/Trap.gd" type="Script" id=9]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.gd" type="Script" id=11]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=13]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.gd" type="Script" id=14]
+
+[node name="M7" type="Node"]
+
+[node name="TileMap8" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -261912, 0, 0, -261911, 1, 0, -261910, 2, 0, -196376, 6, 0, -196375, 7, 0, -196374, 8, 0, 221, 0, 0, 222, 1, 0, 223, 1, 0, 224, 1, 0, 225, 1, 0, 226, 1, 0, 227, 1, 0, 228, 2, 0, 65757, 3, 0, 65758, 4, 0, 65759, 4, 0, 65760, 4, 0, 65761, 4, 0, 65762, 4, 0, 65763, 4, 0, 65764, 5, 0, 65772, 0, 0, 65773, 1, 0, 65774, 1, 0, 65775, 1, 0, 65776, 1, 0, 65777, 1, 0, 65778, 1, 0, 65779, 1, 0, 65780, 1, 0, 65781, 1, 0, 65782, 2, 0, 131293, 6, 0, 131294, 7, 0, 131295, 7, 0, 131296, 7, 0, 131297, 7, 0, 131298, 7, 0, 131299, 7, 0, 131300, 8, 0, 131308, 1610612741, 0, 131309, 4, 0, 131310, 4, 0, 131311, 4, 0, 131312, 4, 0, 131313, 4, 0, 131314, 4, 0, 131315, 4, 0, 131316, 4, 0, 131317, 4, 0, 131318, 5, 0, 196825, 2, 0, 196844, 6, 0, 196845, 7, 0, 196846, 7, 0, 196847, 7, 0, 196848, 7, 0, 196849, 7, 0, 196850, 7, 0, 196851, 7, 0, 196852, 7, 0, 196853, 7, 0, 196854, 8, 0, 262361, 5, 0, 327897, 1610612739, 0, 393433, 5, 0, 458969, 1610612739, 0, 524505, 1610612739, 0, 590041, 5, 0, 655577, -1610612727, 0, 655578, 1, 0, 655579, 1, 0, 655580, 1, 0, 655581, 1, 0, 655582, 1, 0, 655583, 1, 0, 655584, 1, 0, 655585, 1, 0, 655586, 1, 0, 655587, 1, 0, 655588, 1, 0, 655589, 1, 0, 655590, 1, 0, 655591, 1, 0, 655592, 1, 0, 655593, 1, 0, 655594, 1, 0, 655595, 2, 0, 655602, 0, 0, 655603, 1, 0, 655604, 1, 0, 655605, 1, 0, 655606, 1, 0, 655607, 2, 0, 655614, 0, 0, 655615, 1, 0, 655616, 1, 0, 721113, 4, 0, 721114, 4, 0, 721115, 4, 0, 721116, 4, 0, 721117, 4, 0, 721118, 4, 0, 721119, 4, 0, 721120, 4, 0, 721121, 4, 0, 721122, 4, 0, 721123, 4, 0, 721124, 4, 0, 721125, 4, 0, 721126, 4, 0, 721127, 4, 0, 721128, 4, 0, 721129, 4, 0, 721130, 4, 0, 721131, -1610612727, 0, 721132, 1, 0, 721133, 1, 0, 721134, 1, 0, 721135, 1, 0, 721136, 1, 0, 721137, 1, 0, 721138, 9, 0, 721139, 4, 0, 721140, 4, 0, 721141, 4, 0, 721142, 4, 0, 721143, -1610612727, 0, 721144, 1, 0, 721145, 1, 0, 721146, 1, 0, 721147, 1, 0, 721148, 1, 0, 721149, 1, 0, 721150, 9, 0, 721151, 4, 0, 721152, 4, 0, 786649, 4, 0, 786650, 4, 0, 786651, 4, 0, 786652, 4, 0, 786653, 4, 0, 786654, 4, 0, 786655, 4, 0, 786656, 4, 0, 786657, 4, 0, 786658, 4, 0, 786659, 4, 0, 786660, 4, 0, 786661, 4, 0, 786662, 4, 0, 786663, 4, 0, 786664, 4, 0, 786665, 4, 0, 786666, 4, 0, 786667, 4, 0, 786668, 4, 0, 786669, 4, 0, 786670, 4, 0, 786671, 4, 0, 786672, 4, 0, 786673, 4, 0, 786674, 4, 0, 786675, 4, 0, 786676, 4, 0, 786677, 4, 0, 786678, 4, 0, 786679, 4, 0, 786680, 4, 0, 786681, 4, 0, 786682, 4, 0, 786683, 4, 0, 786684, 4, 0, 786685, 4, 0, 786686, 4, 0, 786687, 4, 0, 786688, 4, 0, 852184, 4, 0, 852185, 4, 0, 852186, 4, 0, 852187, 4, 0, 852188, 4, 0, 852189, 4, 0, 852190, 4, 0, 852191, 4, 0, 852192, 4, 0, 852193, 4, 0, 852194, 4, 0, 852195, 4, 0, 852196, 4, 0, 852197, 4, 0, 852198, 4, 0, 852199, 4, 0, 852200, 4, 0, 852201, 4, 0, 852202, 4, 0, 852203, 4, 0, 852204, 4, 0, 852205, 4, 0, 852206, 4, 0, 852207, 4, 0, 852208, 4, 0, 852209, 4, 0, 852210, 4, 0, 852211, 4, 0, 852212, 4, 0, 852213, 4, 0, 852214, 4, 0, 852215, 4, 0, 852216, 4, 0, 852217, 4, 0, 852218, 4, 0, 852219, 4, 0, 852220, 4, 0, 852221, 4, 0, 852222, 4, 0, 852223, 4, 0, 852224, 4, 0, 917720, 4, 0, 917721, 4, 0, 917722, 4, 0, 917723, 4, 0, 917724, 4, 0, 917725, 4, 0, 917726, 4, 0, 917727, 4, 0, 917728, 4, 0, 917729, 4, 0, 917730, 4, 0, 917731, 4, 0, 917732, 4, 0, 917733, 4, 0, 917734, 4, 0, 917735, 4, 0, 917736, 4, 0, 917737, 4, 0, 917738, 4, 0, 917739, 4, 0, 917740, 4, 0, 917741, 4, 0, 917742, 4, 0, 917743, 4, 0, 917744, 4, 0, 917745, 4, 0, 917746, 4, 0, 917747, 4, 0, 917748, 4, 0, 917749, 4, 0, 917750, 4, 0, 917751, 4, 0, 917752, 4, 0, 917753, 4, 0, 917754, 4, 0, 917755, 4, 0, 917756, 4, 0, 917757, 4, 0, 917758, 4, 0, 917759, 4, 0, 917760, 4, 0, 983257, 4, 0, 983258, 4, 0, 983259, 4, 0, 983260, 4, 0, 983261, 4, 0, 983262, 4, 0, 983263, 4, 0, 983264, 4, 0, 983265, 4, 0, 983266, 4, 0, 983267, 4, 0, 983268, 4, 0, 983269, 4, 0, 983270, 4, 0, 983271, 4, 0, 983272, 4, 0, 983273, 4, 0, 983274, 4, 0, 983275, 4, 0, 983276, 4, 0, 983277, 4, 0, 983278, 4, 0, 983279, 4, 0, 983280, 4, 0, 983281, 4, 0, 983282, 4, 0, 983283, 4, 0, 983284, 4, 0, 983285, 4, 0, 983286, 4, 0, 983287, 4, 0, 983288, 4, 0, 983289, 4, 0, 983290, 4, 0, 983291, 4, 0, 983292, 4, 0, 983293, 4, 0, 983294, 4, 0, 983295, 4, 0, 983296, 4, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="FireS4" type="Node2D" parent="." index="1" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+position = Vector2( 7200, -50 )
+scale = Vector2( 1.4375, 1.4375 )
+script = ExtResource( 3 )
+objToDestroyPath = NodePath("../thornbush5")
+destroyRadius = 300
+
+[node name="Ladder7" type="Area2D" parent="." index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( 7470, 70 )
+scale = Vector2( 1, 4.41406 )
+z_index = -2
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Box6" type="KinematicBody2D" parent="." index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 7130, 290 )
+z_index = 50
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+brakeSpeed = 0.08
+gravity = 12
+
+[node name="Trap5" type="Area2D" parent="." index="4" instance=ExtResource( 8 )]
+
+position = Vector2( 7280, 310 )
+scale = Vector2( 0.407591, 0.407591 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Trap8" type="Area2D" parent="." index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 7670, 340 )
+scale = Vector2( 0.407591, 0.407591 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Box7" type="KinematicBody2D" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 7630, 0 )
+z_index = 50
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
+brakeSpeed = 0.08
+gravity = 12
+
+[node name="Box8" type="KinematicBody2D" parent="." index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 7840, 0 )
+z_index = 50
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
+brakeSpeed = 0.08
+gravity = 12
+
+[node name="Checkpoint3" type="Area2D" parent="." index="8" instance=ExtResource( 10 )]
+
+modulate = Color( 0.637146, 1, 0.433594, 1 )
+position = Vector2( 7820, 270 )
+scale = Vector2( 0.568831, 0.622471 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 11 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Trap9" type="Area2D" parent="." index="9" instance=ExtResource( 8 )]
+
+position = Vector2( 8050, 340 )
+scale = Vector2( 0.407591, 0.407591 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="thornbush5" type="Sprite" parent="." index="10" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 7290, -60 )
+scale = Vector2( 0.0415107, 0.0415108 )
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
+
+[connection signal="body_entered" from="Ladder7" to="Ladder7" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="Ladder7" to="Ladder7" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="Trap5" to="Trap5" method="_on_Trap_body_entered"]
+
+[connection signal="body_entered" from="Trap8" to="Trap8" method="_on_Trap_body_entered"]
+
+[connection signal="body_entered" from="Checkpoint3" to="Checkpoint3" method="_on_Checkpoint_body_entered"]
+
+[connection signal="body_entered" from="Trap9" to="Trap9" method="_on_Trap_body_entered"]
+
+
