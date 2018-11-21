@@ -2,7 +2,7 @@ extends Area2D
 
 var triggered = false
 onready var snappedBody = $triggeredTrap/CollisionShape2D
-onready var player = get_parent().get_parent().find_node("Onion")
+var player
 var triggerCD = 0
 onready var boxPacked = preload("res://Objects/Box/Box.tscn")
 
@@ -20,9 +20,19 @@ func snap():
 
 
 func _ready():
-	print(player)
+	#find the player node, works if player is child of 1st or 2nd parent of trap (self)
+	if player == null:
+		player = get_parent().find_node("Onion")
+		if player == null:
+			player = get_parent().get_parent().find_node("Onion")
+			player.connect("loseHp", self, "open")
+		else:
+			print("found player")
+			print(player)
+			player.connect("loseHp", self, "open")
+	#disable body of triggered trap
 	snappedBody.disabled = true
-	player.connect("loseHp", self, "open")
+	
 	
 
 func _physics_process(delta):
