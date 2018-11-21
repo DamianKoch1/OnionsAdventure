@@ -16,7 +16,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.1236, 20.6317 )
+extents = Vector2( 14.0286, 21.1175 )
 
 [node name="Onion" type="KinematicBody2D"]
 
@@ -46,8 +46,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, -27.2174 )
-scale = Vector2( 1, 1.44269 )
+position = Vector2( 0.166331, -30.4876 )
+scale = Vector2( 1.48404, 1.45289 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
