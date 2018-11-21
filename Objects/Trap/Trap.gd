@@ -27,8 +27,6 @@ func _ready():
 			player = get_parent().get_parent().find_node("Onion")
 			player.connect("loseHp", self, "open")
 		else:
-			print("found player")
-			print(player)
 			player.connect("loseHp", self, "open")
 	#disable body of triggered trap
 	snappedBody.disabled = true

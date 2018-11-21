@@ -3,9 +3,10 @@ extends Container
 onready var paused = false
 
 export(PackedScene) var mainMenu
-onready var mainMenuPath = mainMenu.resource_path
+var mainMenuPath
 
 func _ready():
+	mainMenuPath = mainMenu.resource_path
 	$YesNoOverlay/NoButton.connect("pressed", self, "noPressed")
 	$YesNoOverlay/YesButton.connect("pressed", self, "yesPressed")
 	$YesNoOverlay.hide()
