@@ -23,7 +23,8 @@ export var climbspeed = 200
 onready var debugGodmode = -1
 onready var debugFly = -1
 
-onready var gracePeriod = 0
+onready var gracePeriodTimer = 0
+export var gracePeriod = 2
 
 var rope
 var ropeAttachCD = 0
@@ -39,13 +40,13 @@ var NPCsavedCount = 0
 
 #gets called if health value is changed
 func setHealth(newHealth):
-	if debugGodmode == -1 && gracePeriod == 0:
+	if debugGodmode == -1 && gracePeriodTimer == 0:
 		var oldHealth = health
 		health = newHealth
 		if newHealth != oldHealth:
 			emit_signal("changeHp")
 			if newHealth < oldHealth :
-				gracePeriod = 2
+				gracePeriodTimer = gracePeriod
 				emit_signal("loseHp")
 		if health <= 0:
 			setState(dead)
@@ -78,6 +79,7 @@ func setState(newState):
 			newAnim = "Onion_Idle"
 		dead:
 			#death anim
+			#dead code, level restarts on 0hp
 			rotation_degrees = 90
 			$AnimationPlayer.stop()
 
@@ -91,14 +93,14 @@ func _ready():
 
 func _physics_process(delta):
 	if state != dead:
-		gracePeriod = max(gracePeriod - delta, 0)
+		gracePeriodTimer = max(gracePeriodTimer - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
 		#debug fly and godmode
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == -1:
 				print("Fly ON")
-				$CollisionShape2D.disabled = true
 				motion.y = 0
+				$CollisionShape2D.disabled = true
 				setState(climb)
 				climbspeed *= 2
 				movespeed *= 2
