@@ -1,6 +1,6 @@
 extends "res://Enemies/Enemy.gd"
 
-var player
+
 var startpos
 onready var following = false
 
@@ -38,8 +38,8 @@ func _unique_process(delta):
 		motion.y += gravity
 		#move towards player if in range
 		if following == true:
-			motion.x = (player.global_position.x - $Enemy.global_position.x)*speed
-			if startpos.distance_to(player.global_position) > loseAggroDistance:
+			motion.x = (global.player.global_position.x - $Enemy.global_position.x)*speed
+			if startpos.distance_to(global.player.global_position) > loseAggroDistance:
 				following = false
 		#move to original position
 		else:
@@ -47,12 +47,11 @@ func _unique_process(delta):
 		motion = $Enemy.move_and_slide(motion)
 		
 func _on_Area2D_body_entered(body):
-	if body.name == "Onion":
+	if body == global.player:
 		body.health -= 1
 
 
 func _on_VisionRange_body_entered(body):
-	if body.name == "Onion":
-		player = body
+	if body == global.player:
 		if following == false:
 			following = true

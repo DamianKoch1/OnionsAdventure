@@ -10,14 +10,13 @@ var player
 
 func _ready():
 	if objToDestroyPath != null:
+		global.player.connect("loseHp", self, "resetObj")
 		objToDestroy = get_node(objToDestroyPath)
+		objToDestroyParent = objToDestroy.get_parent()
 		
 
 func _on_FireStoneTrigger_body_entered(body):
-	if body.name == "Onion" && objToDestroyPath != null:
-		if player == null:
-			player = body
-			player.connect("loseHp", self, "resetObj")
+	if body == global.player && objToDestroyPath != null:
 		#destroy assigned object if player enters area with certain downwards motion
 		if body.motion.y > body.gravity*10:
 			if triggered == false:

@@ -31,7 +31,7 @@ func _unique_process(delta):
 			if i >= 20*PI:
 				i = 0
 			pathfollow.unit_offset = acos(cos(i)) / acos(cos(PI))
-		#move from a to a on a path
+		#move from a to a if on a closed path
 		elif pathLooped == true:
 			if i >= 20:
 				i = 0
@@ -56,7 +56,7 @@ func reappear():
 	
 func _on_Area2D_body_entered(body):
 	colliding = true
-	if body.name == "Onion":
+	if body == global.player:
 		body.health -= 1
 
 

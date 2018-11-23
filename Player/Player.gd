@@ -82,6 +82,7 @@ func setState(newState):
 			$AnimationPlayer.stop()
 
 func _ready():
+	global.player = self
 	setState(idle)
 	health = global.maxHealth
 	global.currLevelId = int(get_parent().name)
