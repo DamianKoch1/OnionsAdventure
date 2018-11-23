@@ -92,6 +92,7 @@ func _ready():
 
 
 func _physics_process(delta):
+	print(state)
 	if state != dead:
 		gracePeriodTimer = max(gracePeriodTimer - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
@@ -100,14 +101,14 @@ func _physics_process(delta):
 			if debugFly == -1:
 				print("Fly ON")
 				motion.y = 0
-				$CollisionShape2D.disabled = true
 				setState(climb)
+				$CollisionShape2D.disabled = true
 				climbspeed *= 2
 				movespeed *= 2
 			else:
 				print("Fly OFF")
 				$CollisionShape2D.disabled = false
-				setState(fall)
+				setState(idle)
 				climbspeed /= 2
 				movespeed /= 2
 			debugFly *= -1
@@ -170,7 +171,7 @@ func _physics_process(delta):
 				motion.y = -jumpheight
 				ghostjumpTimeframe = 0
 		
-		if is_on_floor() && motion.x == 0:
+		if is_on_floor() && motion.x == 0 && state != climb:
 			setState(idle)
 			if Input.is_action_just_pressed("jump"):
 				motion.y = -jumpheight
