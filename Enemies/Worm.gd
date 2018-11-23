@@ -8,7 +8,8 @@ func _ready():
 	startpos = global_position
 	diggedOutPos = $diggedOutPos.global_position
 	i = 0
-	global.player.connect("loseHp", self, "digDown")
+	if global.player != null:
+		global.player.connect("loseHp", self, "digDown")
 
 func _unique_process(delta):
 	#dig in/out of ground depending on player entering different areas

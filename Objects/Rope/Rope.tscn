@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 7.26522 )
 
-[node name="Rope" type="Node2D" index="0"]
+[node name="Rope" type="Node2D"]
 
 position = Vector2( 144, 80 )
 scale = Vector2( 0.5, 7.5 )

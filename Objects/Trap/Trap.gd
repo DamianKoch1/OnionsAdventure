@@ -19,7 +19,8 @@ func snap():
 
 
 func _ready():
-	global.player.connect("loseHp", self, "open")
+	if global.player != null:
+		global.player.connect("loseHp", self, "open")
 	#disable body of triggered trap
 	snappedBody.disabled = true
 	

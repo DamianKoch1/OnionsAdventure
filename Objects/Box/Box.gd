@@ -11,7 +11,8 @@ var distance
 
 
 func _ready():
-	global.player.connect("loseHp", self, "resetPos")
+	if global.player != null:
+		global.player.connect("loseHp", self, "resetPos")
 	getpos()
 
 func getpos():

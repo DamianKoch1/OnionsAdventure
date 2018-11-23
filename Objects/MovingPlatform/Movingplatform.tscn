@@ -3,7 +3,6 @@
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.gd" type="Script" id=1]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=2]
 
-
 [node name="Movingplatform" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
