@@ -42,7 +42,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VisionRange" index="0"]
 
-position = Vector2( -0.634242, 0.883445 )
+position = Vector2( -0.634239, 0.883445 )
 scale = Vector2( 0.421758, 0.583635 )
 shape = SubResource( 1 )
 
