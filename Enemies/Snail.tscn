@@ -10,7 +10,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
 }
 
-[node name="Snail" type="Node2D" groups=[
+[node name="Snail" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 

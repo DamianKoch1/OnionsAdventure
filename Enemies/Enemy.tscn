@@ -20,7 +20,7 @@ extents = Vector2( 15.8134, 16.2055 )
 custom_solver_bias = 0.0
 extents = Vector2( 38.3767, 36.5009 )
 
-[node name="Enemy" type="Node2D" groups=[
+[node name="Enemy" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
