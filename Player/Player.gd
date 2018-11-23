@@ -97,6 +97,7 @@ func _physics_process(delta):
 			if debugFly == -1:
 				print("Fly ON")
 				$CollisionShape2D.disabled = true
+				motion.y = 0
 				setState(climb)
 				climbspeed *= 2
 				movespeed *= 2

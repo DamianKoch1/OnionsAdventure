@@ -14,7 +14,7 @@ func _ready():
 	add_to_group("Enemies")
 
 func _unique_process(delta):
-	#stop when hitting box etc
+	#start moving again when no longer colliding
 	if $EnemyPath/Enemy/Area2D.get_overlapping_bodies().size() == 1 && colliding == true:
 		colliding = false
 	
@@ -23,7 +23,7 @@ func _unique_process(delta):
 	if stop == true && hideTimer == 0:
 		reappear()
 	
-	#move enemy
+	#move enemy if not stopped by biewe or colliding with box etc
 	if stop == false && colliding == false:
 		i += delta*movespeed
 		#move from a to b and then b to a if path isnt a loop
