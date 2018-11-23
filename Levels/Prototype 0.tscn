@@ -272,7 +272,8 @@ scale = Vector2( 0.111448, 0.15888 )
 
 [node name="Enemy" parent="." index="22" instance=ExtResource( 16 )]
 
-position = Vector2( 2753.99, -100.854 )
+editor/display_folded = true
+position = Vector2( -626.271, 210.772 )
 pathLooped = false
 
 [node name="EnemyPath" parent="Enemy" index="0"]
@@ -295,8 +296,69 @@ region_enabled = true
 region_rect = Rect2( 860, -28, 408, 408 )
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
-[node name="Enemy2" parent="." index="23" instance=ExtResource( 16 )]
+[node name="Enemy5" parent="." index="23" instance=ExtResource( 16 )]
 
+editor/display_folded = true
+position = Vector2( 2727.24, -183.48 )
+pathLooped = false
+
+[node name="Enemy3" parent="." index="24" instance=ExtResource( 16 )]
+
+editor/display_folded = true
+position = Vector2( -628.482, 147.095 )
+scale = Vector2( 1, 1.01431 )
+pathLooped = false
+
+[node name="EnemyPath" parent="Enemy3" index="0"]
+
+curve = SubResource( 1 )
+
+[node name="Sprites" parent="Enemy3/EnemyPath/Enemy" index="2"]
+
+editor/display_folded = false
+position = Vector2( 0.844017, 9.75764 )
+scale = Vector2( 1.26111, 1.22675 )
+
+[node name="Sprite" parent="Enemy3/EnemyPath/Enemy/Sprites" index="0"]
+
+modulate = Color( 1, 1, 1, 1 )
+position = Vector2( -0.0884212, -8.7646 )
+scale = Vector2( 0.100995, 0.119173 )
+texture = ExtResource( 17 )
+region_enabled = true
+region_rect = Rect2( 444, -44, 424, 428 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Enemy4" parent="." index="25" instance=ExtResource( 16 )]
+
+editor/display_folded = true
+position = Vector2( -630.372, 82.1793 )
+scale = Vector2( 1, 1.01431 )
+pathLooped = false
+
+[node name="EnemyPath" parent="Enemy4" index="0"]
+
+curve = SubResource( 1 )
+
+[node name="Sprites" parent="Enemy4/EnemyPath/Enemy" index="2"]
+
+editor/display_folded = false
+position = Vector2( 0.844017, 9.75764 )
+scale = Vector2( 1.26111, 1.22675 )
+
+[node name="Sprite" parent="Enemy4/EnemyPath/Enemy/Sprites" index="0"]
+
+modulate = Color( 1, 1, 1, 1 )
+position = Vector2( -0.0884212, -8.7646 )
+scale = Vector2( 0.100995, 0.119173 )
+texture = ExtResource( 17 )
+region_enabled = true
+region_rect = Rect2( 20, -28, 432, 408 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Enemy2" parent="." index="26" instance=ExtResource( 16 )]
+
+editor/display_folded = true
 position = Vector2( 1475.24, -38.1696 )
 movespeed = 0.2
 
@@ -304,7 +366,7 @@ movespeed = 0.2
 
 curve = SubResource( 2 )
 
-[node name="FollowingEnemy" parent="." index="24" instance=ExtResource( 18 )]
+[node name="FollowingEnemy" parent="." index="27" instance=ExtResource( 18 )]
 
 editor/display_folded = true
 position = Vector2( 2905.98, -38.2072 )
@@ -317,11 +379,11 @@ editor/display_folded = false
 
 editor/display_folded = false
 
-[node name="trappedNPC" parent="." index="25" instance=ExtResource( 19 )]
+[node name="trappedNPC" parent="." index="28" instance=ExtResource( 19 )]
 
 position = Vector2( 384, 224 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="26"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="29"]
 
 editor/display_folded = true
 layer = -1
@@ -379,27 +441,27 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Camera" parent="." index="27" instance=ExtResource( 22 )]
+[node name="Camera" parent="." index="30" instance=ExtResource( 22 )]
 
 editor/display_folded = true
 upDownSpeed = 0.05
 upDownAmount = 100
 
-[node name="Biewe" parent="." index="28" instance=ExtResource( 23 )]
+[node name="Biewe" parent="." index="31" instance=ExtResource( 23 )]
 
 position = Vector2( 2644.2, -108.481 )
 
-[node name="FireSalamander" parent="." index="29" instance=ExtResource( 6 )]
+[node name="FireSalamander" parent="." index="32" instance=ExtResource( 6 )]
 
 position = Vector2( 1697.53, -39.5678 )
 
-[node name="Snail" parent="." index="30" instance=ExtResource( 24 )]
+[node name="Snail" parent="." index="33" instance=ExtResource( 24 )]
 
 position = Vector2( 2503.85, 22.5375 )
 movespeed = 0.5
 pathLooped = false
 
-[node name="Worm" parent="." index="31" instance=ExtResource( 25 )]
+[node name="Worm" parent="." index="34" instance=ExtResource( 25 )]
 
 position = Vector2( 1175.64, 12.7948 )
 
@@ -411,6 +473,8 @@ position = Vector2( 1175.64, 12.7948 )
 [editable path="Sprite"]
 [editable path="Sprite2"]
 [editable path="Enemy"]
+[editable path="Enemy3"]
+[editable path="Enemy4"]
 [editable path="Enemy2"]
 [editable path="FollowingEnemy"]
 [editable path="Camera"]
