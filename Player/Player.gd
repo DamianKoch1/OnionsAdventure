@@ -79,6 +79,7 @@ func setState(newState):
 			newAnim = "Onion_Idle"
 		dead:
 			#death anim
+			
 			#dead code, level restarts on 0hp
 			rotation_degrees = 90
 			$AnimationPlayer.stop()
@@ -92,7 +93,6 @@ func _ready():
 
 
 func _physics_process(delta):
-	print(state)
 	if state != dead:
 		gracePeriodTimer = max(gracePeriodTimer - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
