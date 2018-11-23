@@ -273,7 +273,7 @@ scale = Vector2( 0.111448, 0.15888 )
 [node name="Enemy" parent="." index="22" instance=ExtResource( 16 )]
 
 editor/display_folded = true
-position = Vector2( -626.271, 210.772 )
+position = Vector2( -659.165, 210.308 )
 pathLooped = false
 
 [node name="EnemyPath" parent="Enemy" index="0"]
