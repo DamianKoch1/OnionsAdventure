@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.gd" type="Script" id=4]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Box/Box.gd" type="Script" id=6]
+[ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/MovingPlatform/Movingplatform.gd" type="Script" id=8]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Trap/Trap.gd" type="Script" id=10]
+
+[node name="M13" type="Node"]
+
+editor/display_folded = true
+
+[node name="TileMap14" type="TileMap" parent="." index="0"]
+
+position = Vector2( 0.7, 0 )
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -786390, 0, 0, -786389, 1, 0, -786388, 1, 0, -786387, 1, 0, -786386, 1, 0, -786385, 2, 0, -720854, 3, 0, -720853, 4, 0, -720852, 4, 0, -720851, 4, 0, -720850, 4, 0, -720849, 5, 0, -655318, 6, 0, -655317, 7, 0, -655316, 7, 0, -655315, 7, 0, -655314, 7, 0, -655313, 8, 0, -393181, 1, 0, -393180, 1, 0, -393179, 1, 0, -393178, 1, 0, -393177, 1, 0, -393176, 1, 0, -393175, 1, 0, -393174, 1, 0, -393173, 1, 0, -393172, 1, 0, -393171, 1, 0, -393170, 1, 0, -393169, 1, 0, -393168, 1, 0, -393167, 1, 0, -393166, 1, 0, -393165, 1, 0, -393164, 1, 0, -393163, 1, 0, -393162, 1, 0, -393161, 1, 0, -327645, 4, 0, -327644, 4, 0, -327643, 4, 0, -327642, 4, 0, -327641, 4, 0, -327640, 4, 0, -327639, 4, 0, -327638, 4, 0, -327637, 4, 0, -327636, 4, 0, -327635, 4, 0, -327634, 4, 0, -327633, 4, 0, -327632, 4, 0, -327631, 4, 0, -327630, 4, 0, -327629, 4, 0, -327628, 4, 0, -327627, 4, 0, -327626, 4, 0, -327625, 4, 0, -262109, 4, 0, -262108, 4, 0, -262107, 4, 0, -262106, 4, 0, -262105, 4, 0, -262104, 4, 0, -262103, 4, 0, -262102, 4, 0, -262101, 4, 0, -262100, 4, 0, -262099, 4, 0, -262098, 4, 0, -262097, 4, 0, -262096, 4, 0, -262095, 4, 0, -262094, 4, 0, -262093, 4, 0, -262092, 4, 0, -262091, 4, 0, -262090, 4, 0, -262089, 4, 0, -196573, 4, 0, -196572, 4, 0, -196571, 4, 0, -196570, 4, 0, -196569, 4, 0, -196568, 4, 0, -196567, 4, 0, -196566, 4, 0, -196565, 4, 0, -196564, 4, 0, -196563, 4, 0, -196562, 4, 0, -196561, 4, 0, -196560, 4, 0, -196559, 4, 0, -196558, 4, 0, -196557, 4, 0, -196556, 4, 0, -196555, 4, 0, -196554, 4, 0, -196553, 4, 0, -131037, 4, 0, -131036, 4, 0, -131035, 4, 0, -131034, 4, 0, -131033, 4, 0, -131032, 4, 0, -131031, 4, 0, -131030, 4, 0, -131029, 4, 0, -131028, 4, 0, -131027, 4, 0, -131026, 4, 0, -131025, 4, 0, -131024, 4, 0, -131023, 4, 0, -131022, 4, 0, -131021, 4, 0, -131020, 4, 0, -131019, 4, 0, -131018, 4, 0, -131017, 4, 0, -65501, 4, 0, -65500, 4, 0, -65499, 4, 0, -65498, 4, 0, -65497, 4, 0, -65496, 4, 0, -65495, 4, 0, -65494, 4, 0, -65493, 4, 0, -65492, 4, 0, -65491, 4, 0, -65490, 4, 0, -65489, 4, 0, -65488, 4, 0, -65487, 4, 0, -65486, 4, 0, -65485, 4, 0, -65484, 4, 0, -65483, 4, 0, -65482, 4, 0, -65481, 4, 0, 35, 4, 0, 36, 4, 0, 37, 4, 0, 38, 4, 0, 39, 4, 0, 40, 4, 0, 41, 4, 0, 42, 4, 0, 43, 4, 0, 44, 4, 0, 45, 4, 0, 46, 4, 0, 47, 4, 0, 48, 4, 0, 49, 4, 0, 50, 4, 0, 51, 4, 0, 52, 4, 0, 53, 4, 0, 54, 4, 0, 55, 4, 0, 65571, 4, 0, 65572, 4, 0, 65573, 4, 0, 65574, 4, 0, 65575, 4, 0, 65576, 4, 0, 65577, 4, 0, 65578, 4, 0, 65579, 4, 0, 65580, 4, 0, 65581, 4, 0, 65582, 4, 0, 65583, 4, 0, 65584, 4, 0, 65585, 4, 0, 65586, 4, 0, 65587, 4, 0, 65588, 4, 0, 65589, 4, 0, 65590, 4, 0, 65591, 4, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="thornbush4" type="Sprite" parent="." index="1" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+position = Vector2( 1397.75, -445.949 )
+scale = Vector2( 0.041511, 0.041511 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Box2" type="KinematicBody2D" parent="." index="2" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 1486.26, -433.979 )
+z_index = 50
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 6 )
+_sections_unfolded = [ "Z Index" ]
+brakeSpeed = 0.08
+gravity = 12
+
+[node name="moving Platform3" type="Node2D" parent="." index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 1246.38, -228.786 )
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+platformSpeed = 2
+
+[node name="Trap4" type="Area2D" parent="." index="4" instance=ExtResource( 9 )]
+
+editor/display_folded = true
+position = Vector2( 1710.15, -193.937 )
+scale = Vector2( 0.407591, 0.407591 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="Trap4" to="Trap4" method="_on_Trap_body_entered"]
+
+
