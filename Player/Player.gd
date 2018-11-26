@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 var motion = Vector2()
+
 var anim
 var newAnim
 var state
@@ -9,8 +10,6 @@ enum {idle, run, jump, fall, climb, dead}
 
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
-
-
 
 onready var ghostjumpTimeframe = 0
 export var maxGhostjumpDelay = 0.2
@@ -38,59 +37,12 @@ signal NPCsaved
 
 var NPCsavedCount = 0
 
-#gets called if health value is changed
-func setHealth(newHealth):
-	if debugGodmode == -1 && gracePeriodTimer == 0:
-		var oldHealth = health
-		health = newHealth
-		if newHealth != oldHealth:
-			emit_signal("changeHp")
-			if newHealth < oldHealth :
-				gracePeriodTimer = gracePeriod
-				emit_signal("loseHp")
-		if health <= 0:
-			setState(dead)
-			get_tree().reload_current_scene()
-
-func getHealth():
-	return health
-
-func setState(newState):
-	#set current animation on state changes
-	state = newState
-	match state:
-		idle:
-			newAnim = "Onion_Idle"
-		run:
-			newAnim = "Onion_Walk"
-		jump:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			newAnim = "Onion_JumpUp"
-		fall:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			newAnim = "Onion_JumpDown"
-			
-		climb:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			#cimb anim?
-			newAnim = "Onion_Idle"
-		dead:
-			#death anim
-			
-			#dead code, level restarts on 0hp
-			rotation_degrees = 90
-			$AnimationPlayer.stop()
 
 func _ready():
 	global.player = self
 	setState(idle)
 	health = global.maxHealth
 	global.currLevelId = int(get_parent().name)
-	
-
 
 func _physics_process(delta):
 	if state != dead:
@@ -175,7 +127,6 @@ func _physics_process(delta):
 			setState(idle)
 			if Input.is_action_just_pressed("jump"):
 				motion.y = -jumpheight
-		
 		else:
 			if state != climb:
 				if motion.y > 40:
@@ -184,12 +135,61 @@ func _physics_process(delta):
 					setState(jump)
 		motion = move_and_slide(motion, UP)
 
+#gets called if health value is changed
+func setHealth(newHealth):
+	if debugGodmode == -1 && gracePeriodTimer == 0:
+		var oldHealth = health
+		health = newHealth
+		if newHealth != oldHealth:
+			emit_signal("changeHp")
+			if newHealth < oldHealth :
+				gracePeriodTimer = gracePeriod
+				emit_signal("loseHp")
+		if health <= 0:
+			setState(dead)
+			get_tree().reload_current_scene()
+
+#gets called if health value is accessed from other script
+func getHealth():
+	return health
+
+func setState(newState):
+	#set current animation on state changes
+	state = newState
+	match state:
+		idle:
+			newAnim = "Onion_Idle"
+		run:
+			newAnim = "Onion_Walk"
+		jump:
+			global_scale.x = 0.5
+			global_scale.y = 0.5
+			newAnim = "Onion_JumpUp"
+		fall:
+			global_scale.x = 0.5
+			global_scale.y = 0.5
+			newAnim = "Onion_JumpDown"
+			
+		climb:
+			global_scale.x = 0.5
+			global_scale.y = 0.5
+			#cimb anim?
+			newAnim = "Onion_Idle"
+		dead:
+			#death anim
+			
+			#dead code, level restarts on 0hp
+			rotation_degrees = 90
+			$AnimationPlayer.stop()
+
+
+
 func bounce(bounceStr):
 	motion.y = -bounceStr
 	motion = move_and_slide(motion, UP)
 	
 func rayUpdate():
-	#find object below, attach to it if close enough(smoothes movement on moving platforms)
+	#find object below, attach to it if close enough (smoothes movement on moving platforms)
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()

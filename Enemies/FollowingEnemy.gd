@@ -15,6 +15,22 @@ func _ready():
 	startpos = enemy.global_position
 	add_to_group("Enemies")
 
+func _unique_process(delta):
+	hideTimer = max(hideTimer-delta, 0)
+	if stop == true && hideTimer == 0:
+		reappear()
+	if stop == false:
+		motion.y += gravity
+		#move towards player if player enters Area
+		if following == true:
+			motion.x = (global.player.global_position.x - $Enemy.global_position.x)*speed
+			if startpos.distance_to(global.player.global_position) > loseAggroDistance:
+				following = false
+		#move to original position
+		else:
+			motion.x = startpos.x - $Enemy.global_position.x
+		motion = $Enemy.move_and_slide(motion)
+
 func flee(duration):
 	stop = true
 	hideTimer = duration
@@ -30,22 +46,6 @@ func reappear():
 	$Enemy/Area2D/CollisionShape2D.disabled = false
 	$VisionRange/CollisionShape2D.disabled = false
 	
-func _unique_process(delta):
-	hideTimer = max(hideTimer-delta, 0)
-	if stop == true && hideTimer == 0:
-		reappear()
-	if stop == false:
-		motion.y += gravity
-		#move towards player if in range
-		if following == true:
-			motion.x = (global.player.global_position.x - $Enemy.global_position.x)*speed
-			if startpos.distance_to(global.player.global_position) > loseAggroDistance:
-				following = false
-		#move to original position
-		else:
-			motion.x = startpos.x - $Enemy.global_position.x
-		motion = $Enemy.move_and_slide(motion)
-		
 func _on_Area2D_body_entered(body):
 	if body == global.player:
 		body.health -= 1
