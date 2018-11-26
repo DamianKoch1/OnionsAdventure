@@ -72,7 +72,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Level 1" index="0" instance=ExtResource( 1 )]
+[node name="Level 1" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -109,8 +109,6 @@ tile_data = PoolIntArray( -327699, 1, 0, -327698, 1, 0, -327697, 1, 0, -327696, 
 [node name="M2" parent="." index="6" instance=ExtResource( 3 )]
 
 [node name="M3" type="Node" parent="." index="7"]
-
-editor/display_folded = true
 
 [node name="TileMap4" type="TileMap" parent="M3" index="0"]
 
@@ -152,7 +150,7 @@ position = Vector2( 1854.86, 242.475 )
 
 [node name="stump m 10" parent="M3" index="4" instance=ExtResource( 7 )]
 
-position = Vector2( 2249.03, 246.815 )
+position = Vector2( 2250.39, 246.815 )
 
 [node name="stump m 12" type="Sprite" parent="M3" index="5"]
 
@@ -608,8 +606,6 @@ position = Vector2( 8770, 310 )
 position = Vector2( 8843.62, 151.987 )
 
 [node name="M9" type="Node" parent="." index="13"]
-
-editor/display_folded = true
 
 [node name="TileMap10" type="TileMap" parent="M9" index="0"]
 

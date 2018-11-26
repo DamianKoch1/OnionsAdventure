@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Trap/Trap.gd" type="Script" id=3]
+[ext_resource path="res://Objects/Obstacles/Stump M.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=5]
+
+[node name="M17" type="Node"]
+
+editor/display_folded = true
+
+[node name="TileMap19" type="TileMap" parent="." index="0"]
+
+position = Vector2( 0.7, 0 )
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -2097019, 1, 0, -2097018, 1, 0, -2097017, 1, 0, -2097016, 1, 0, -2097015, 1, 0, -2097014, 1, 0, -2097013, 1, 0, -2097012, 1, 0, -2097011, 1, 0, -2097010, 1, 0, -2097009, 1, 0, -2097008, 1, 0, -2097007, 1, 0, -2097006, 1, 0, -2097005, 1, 0, -2097004, 1, 0, -2097003, 1, 0, -2097002, 1, 0, -2097001, 1, 0, -2097000, 1, 0, -2096999, 1, 0, -2096998, 1, 0, -2031483, 4, 0, -2031482, 4, 0, -2031481, 4, 0, -2031480, 4, 0, -2031479, 4, 0, -2031478, 4, 0, -2031477, 4, 0, -2031476, 4, 0, -2031475, 4, 0, -2031474, 4, 0, -2031473, 4, 0, -2031472, 4, 0, -2031471, 4, 0, -2031470, 4, 0, -2031469, 4, 0, -2031468, 4, 0, -2031467, 4, 0, -2031466, 4, 0, -2031465, 4, 0, -2031464, 4, 0, -2031463, 4, 0, -2031462, 4, 0, -1965947, 4, 0, -1965946, 4, 0, -1965945, 4, 0, -1965944, 4, 0, -1965943, 4, 0, -1965942, 4, 0, -1965941, 4, 0, -1965940, 4, 0, -1965939, 4, 0, -1965938, 4, 0, -1965937, 4, 0, -1965936, 4, 0, -1965935, 4, 0, -1965934, 4, 0, -1965933, 4, 0, -1965932, 4, 0, -1965931, 4, 0, -1965930, 4, 0, -1965929, 4, 0, -1965928, 4, 0, -1965927, 4, 0, -1965926, 4, 0, -1900411, 4, 0, -1900410, 4, 0, -1900409, 4, 0, -1900408, 4, 0, -1900407, 4, 0, -1900406, 4, 0, -1900405, 4, 0, -1900404, 4, 0, -1900403, 4, 0, -1900402, 4, 0, -1900401, 4, 0, -1900400, 4, 0, -1900399, 4, 0, -1900398, 4, 0, -1900397, 4, 0, -1900396, 4, 0, -1900395, 4, 0, -1900394, 4, 0, -1900393, 4, 0, -1900392, 4, 0, -1900391, 4, 0, -1900390, 4, 0, -1834875, 4, 0, -1834874, 4, 0, -1834873, 4, 0, -1834872, 4, 0, -1834871, 4, 0, -1834870, 4, 0, -1834869, 4, 0, -1834868, 4, 0, -1834867, 4, 0, -1834866, 4, 0, -1834865, 4, 0, -1834864, 4, 0, -1834863, 4, 0, -1834862, 4, 0, -1834861, 4, 0, -1834860, 4, 0, -1834859, 4, 0, -1834858, 4, 0, -1834857, 4, 0, -1834856, 4, 0, -1834855, 4, 0, -1834854, 4, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="Trap19" type="Area2D" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 4519.35, -1026.24 )
+scale = Vector2( 0.407591, 0.407591 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="stump m 7" type="Sprite" parent="." index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( 4681.01, -1127.95 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="stump m 8" type="Sprite" parent="." index="3" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( 4269.75, -1127.95 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="body_entered" from="Trap19" to="Trap19" method="_on_Trap_body_entered"]
+
+
