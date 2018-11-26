@@ -1,14 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/MovingPlatform/Movingplatform.gd" type="Script" id=3]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=5]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
 
-[node name="M16" type="Node"]
-
-editor/display_folded = true
+[node name="M16" type="Node" index="0"]
 
 [node name="TileMap18" type="TileMap" parent="." index="0"]
 
@@ -33,47 +29,43 @@ format = 1
 tile_data = PoolIntArray( -2097021, 0, 0, -2097020, 1, 0, -2031485, 3, 0, -2031484, 4, 0, -2031483, 4, 0, -1965949, 3, 0, -1965948, 4, 0, -1965947, 4, 0, -1900413, 3, 0, -1900412, 4, 0, -1900411, 4, 0, -1507224, 1, 0, -1507223, 1, 0, -1507222, 1, 0, -1507221, 2, 0, -1441688, 4, 0, -1441687, 4, 0, -1441686, 4, 0, -1441685, 5, 0, -1376152, 7, 0, -1376151, 7, 0, -1376150, 7, 0, -1376149, 8, 0 )
 _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
-[node name="moving Platform6" type="Node2D" parent="." index="1" instance=ExtResource( 2 )]
+[node name="moving Platform6" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 3590.98, -703.044 )
-script = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
 platformSpeed = 1.0
 
-[node name="moving Platform7" type="Node2D" parent="." index="2" instance=ExtResource( 2 )]
+[node name="State2" parent="moving Platform6" index="2"]
 
-position = Vector2( 3781.56, -929.691 )
-script = ExtResource( 3 )
+position = Vector2( 1.46036, -204.7 )
+scale = Vector2( 1.90297, 1.96438 )
+
+[node name="moving Platform7" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 3824.53, -910.047 )
 _sections_unfolded = [ "Material", "Transform" ]
 platformSpeed = 1.0
 
-[node name="moving Platform8" type="Node2D" parent="." index="3" instance=ExtResource( 2 )]
+[node name="State2" parent="moving Platform7" index="2"]
 
-position = Vector2( 4053.36, -921.254 )
-script = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
+position = Vector2( -0.661645, 214.701 )
+scale = Vector2( 2.94658, 2.70102 )
+
+[node name="moving Platform8" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 4049.68, -1142.25 )
 platformSpeed = 1.0
 
-[node name="Ladder3" type="Area2D" parent="moving Platform8" index="3" instance=ExtResource( 4 )]
+[node name="State2" parent="moving Platform8" index="2"]
+
+position = Vector2( 1.3235, 305.711 )
+scale = Vector2( 1.96437, 1.71883 )
+
+[node name="Ladder3" parent="moving Platform8" index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 2.59277, 142.134 )
 scale = Vector2( 1, 3.73036 )
-z_index = -2
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 5 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[connection signal="body_entered" from="moving Platform8/Ladder3" to="moving Platform8/Ladder3" method="_on_Ladder_body_entered"]
-
-[connection signal="body_exited" from="moving Platform8/Ladder3" to="moving Platform8/Ladder3" method="_on_Ladder_body_exited"]
 
 
+[editable path="moving Platform6"]
+[editable path="moving Platform7"]
+[editable path="moving Platform8"]
