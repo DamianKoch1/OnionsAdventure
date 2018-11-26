@@ -9,14 +9,10 @@ onready var ray = $RayCast2D
 var startpos
 var distance
 
-
 func _ready():
 	if global.player != null:
 		global.player.connect("loseHp", self, "resetPos")
 	getpos()
-
-func getpos():
-		startpos = global_position
 
 func _physics_process(delta):
 	rayUpdate()
@@ -30,6 +26,9 @@ func _physics_process(delta):
 		motion.x = lerp(motion.x, 0, brakeSpeed)
 	motion = move_and_slide(motion)
 
+func getpos():
+		startpos = global_position
+
 func _on_Area2D_body_entered(body):
 		#can press "push"button to push when in range
 		if Input.is_action_just_pressed("push"):
@@ -41,7 +40,7 @@ func _on_Area2D_body_entered(body):
 				distance = abs(global_position.x - global.player.global_position.x)
 
 func rayUpdate():
-	#find first object ray downwards hits
+	#find first object ray downwards hits and attach to it
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
@@ -55,6 +54,7 @@ func rayUpdate():
 		attachTo(worldNode)
 
 func attachTo(obj):
+	#attach self to obj
 	if obj.get_class() != "Area2D" && obj != get_parent() && obj.name != "Onion":
 		var transf = get_global_transform()
 		get_parent().remove_child(self)

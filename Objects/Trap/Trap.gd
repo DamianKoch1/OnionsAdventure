@@ -7,6 +7,16 @@ onready var boxPacked = preload("res://Objects/Box/Box.tscn")
 
 var obj
 
+
+func _ready():
+	if global.player != null:
+		global.player.connect("loseHp", self, "open")
+	#disable body of triggered trap
+	snappedBody.disabled = true
+
+func _physics_process(delta):
+	triggerCD = max(triggerCD-delta, 0)
+
 func snap():
 	#hurt player or remove box that triggered trap, called by snap animation
 	if obj != null:
@@ -17,18 +27,6 @@ func snap():
 			if obj.get_filename() == boxPacked.get_path():
 				obj.get_parent().remove_child(obj)
 
-
-func _ready():
-	if global.player != null:
-		global.player.connect("loseHp", self, "open")
-	#disable body of triggered trap
-	snappedBody.disabled = true
-	
-	
-
-func _physics_process(delta):
-	triggerCD = max(triggerCD-delta, 0)
-
 func _on_Trap_body_entered(body):
 	#make trap snap if triggered
 	if triggered == false && triggerCD == 0:
@@ -37,7 +35,6 @@ func _on_Trap_body_entered(body):
 			triggered = true
 			obj = body
 			$AnimationPlayer.play("Snap")
-
 
 func open():
 	#open trap on player respawn
