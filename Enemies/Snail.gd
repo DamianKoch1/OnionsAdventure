@@ -1,5 +1,7 @@
 extends "res://Enemies/Enemy.gd"
+#has all functions and variables from enemy class if not overwritten
 
+#called by biewe
 func flee(duration):
 	stop = true
 	hideTimer = duration

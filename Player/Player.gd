@@ -25,11 +25,13 @@ onready var debugFly = -1
 onready var gracePeriodTimer = 0
 export var gracePeriod = 2
 
+#rope player attaches to if climbing on it, attach cooldown to save cpu
 var rope
 var ropeAttachCD = 0
 
 export var health = 3 setget setHealth, getHealth
 
+#signals other objects react to
 signal noHp
 signal loseHp
 signal changeHp
@@ -88,7 +90,7 @@ func _physics_process(delta):
 				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
-		#climbing
+		#climbing, attach to rope when climbing, var rope assigned by rope/ladder
 		elif state == climb:
 			if rope != null:
 				var transf = get_global_transform()
@@ -149,6 +151,7 @@ func setHealth(newHealth):
 			if newHealth < oldHealth :
 				gracePeriodTimer = gracePeriod
 				emit_signal("loseHp")
+		#restart from level start if player completely dies
 		if health <= 0:
 			setState(dead)
 			get_tree().reload_current_scene()
@@ -158,7 +161,7 @@ func getHealth():
 	return health
 
 func setState(newState):
-	#set current animation on state changes
+	#set current animation on state changes, scale sets prevent scale glitches when attaching to objects
 	state = newState
 	match state:
 		idle:

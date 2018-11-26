@@ -1,4 +1,5 @@
 extends "res://Enemies/Enemy.gd"
+#has all functions and variables from enemy class if not overwritten
 
 onready var diggedOut = false
 var startpos
@@ -12,14 +13,15 @@ func _ready():
 	if global.player != null:
 		global.player.connect("loseHp", self, "digDown")
 
+#dig in/out of ground depending on player entering different areas
 func _unique_process(delta):
-	#dig in/out of ground depending on player entering different areas
 	if diggedOut == true && i < 1:
 		i = min(i + delta, 1)
 		global_position.y = lerp(global_position.y, diggedOutPos.y, i)
 	elif diggedOut == false && i < 1:
 		i = min(i + delta, 1)
 		global_position.y = lerp(global_position.y, startpos.y, i)
+
 
 func _on_Area2D_body_entered(body):
 	if body == global.player:
