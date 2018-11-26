@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/MovingPlatform/Movingplatform.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.4254 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 447.881, 10 )
+
+[node name="M14" type="Node"]
+
+editor/display_folded = true
+
+[node name="TileMap15" type="TileMap" parent="." index="0"]
+
+position = Vector2( 0.7, 0 )
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -1310654, 0, 0, -1310653, 1, 0, -1310652, 1, 0, -1245118, 3, 0, -1245117, 4, 0, -1245116, 4, 0, -1179582, 6, 0, -1179581, 7, 0, -1179580, 7, 0, -393160, 1, 0, -393159, 1, 0, -393158, 1, 0, -393157, 1, 0, -393156, 1, 0, -393155, 1, 0, -393154, 1, 0, -393153, 1, 0, -393152, 1, 0, -393151, 1, 0, -327624, 4, 0, -327623, 4, 0, -327622, 4, 0, -327621, 4, 0, -327620, 4, 0, -327619, 4, 0, -327618, 4, 0, -327617, 4, 0, -327616, 4, 0, -327615, 4, 0, -262088, 4, 0, -262087, 4, 0, -262086, 4, 0, -262085, 4, 0, -262084, 4, 0, -262083, 4, 0, -262082, 4, 0, -262081, 4, 0, -262080, 4, 0, -262079, 4, 0, -196552, 4, 0, -196551, 4, 0, -196550, 4, 0, -196549, 4, 0, -196548, 4, 0, -196547, 4, 0, -196546, 4, 0, -196545, 4, 0, -196544, 4, 0, -196543, 4, 0, -131016, 4, 0, -131015, 4, 0, -131014, 4, 0, -131013, 4, 0, -131012, 4, 0, -131011, 4, 0, -131010, 4, 0, -131009, 4, 0, -131008, 4, 0, -131007, 4, 0, -65480, 4, 0, -65479, 4, 0, -65478, 4, 0, -65477, 4, 0, -65476, 4, 0, -65475, 4, 0, -65474, 4, 0, -65473, 4, 0, -65472, 4, 0, -65471, 4, 0, 56, 4, 0, 57, 4, 0, 58, 4, 0, 59, 4, 0, 60, 4, 0, 61, 4, 0, 62, 4, 0, 63, 4, 0, 64, 4, 0, 65, 4, 0, 65592, 4, 0, 65593, 4, 0, 65594, 4, 0, 65595, 4, 0, 65596, 4, 0, 65597, 4, 0, 65598, 4, 0, 65599, 4, 0, 65600, 4, 0, 65601, 4, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="moving Platform4" type="Node2D" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 2034.12, -594.404 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+platformSpeed = 1.0
+
+[node name="stump m2" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 1810.23, -293.067 )
+scale = Vector2( 0.0677287, 0.0948985 )
+texture = ExtResource( 4 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="branch 2" type="Sprite" parent="stump m2" index="0"]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m2/branch 2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m2/branch 2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 106.54, 310.559, 81.9783, 146.471, 431.996, 80.2121, 714.984, 27.0116, 1060.56, 12.2434, 1050.56, 142.115, 785.924, 166.172, 576.625, 209.476, 456.338, 233.533, 165.613, 295.791 )
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m2" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m2/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m2/StaticBody2D2" index="1"]
+
+position = Vector2( 899.917, 1078.2 )
+scale = Vector2( 1.45442, 16.2295 )
+shape = SubResource( 2 )
+
+
