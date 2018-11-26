@@ -1,7 +1,6 @@
 extends Node2D
 
 
-
 func _ready():
 	global.spawnpoint = self
 	#make player respawn at own position when taking damage
