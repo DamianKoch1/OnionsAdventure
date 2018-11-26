@@ -46,8 +46,10 @@ func _ready():
 
 func _physics_process(delta):
 	if state != dead:
+		#reducing cooldowns
 		gracePeriodTimer = max(gracePeriodTimer - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
+		
 		#debug fly and godmode
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == -1:
@@ -118,11 +120,13 @@ func _physics_process(delta):
 		else:	
 			motion.x = 0
 		
+		#ghostjump
 		if  ghostjumpTimeframe!= 0:
 			if Input.is_action_just_pressed("jump"):
 				motion.y = -jumpheight
 				ghostjumpTimeframe = 0
 		
+		#jump
 		if is_on_floor() && motion.x == 0 && state != climb:
 			setState(idle)
 			if Input.is_action_just_pressed("jump"):
