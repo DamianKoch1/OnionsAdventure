@@ -21,10 +21,11 @@
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Assets/Background/bg placeholder1.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Background/bg placeholder2.png" type="Texture" id=21]
-[ext_resource path="res://Player/Camera.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Objects/interactable NPCs/Biewe/Biewe.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Enemies/Snail.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Enemies/Worm.tscn" type="PackedScene" id=25]
+
 
 [sub_resource type="Curve2D" id=1]
 
