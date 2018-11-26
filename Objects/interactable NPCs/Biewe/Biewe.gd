@@ -1,8 +1,13 @@
 extends Node2D
 
+#max cooldown and range of Biewe
 export var bieweCooldown = 8
 export var bieweRange = 600
+
+#duration for which enemies are hidden/stopped
 export var hideDuration = 3
+
+#internal cooldown that ticks down
 var cd = 0
 var enemies
 

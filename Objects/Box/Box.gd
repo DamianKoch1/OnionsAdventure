@@ -1,14 +1,22 @@
 extends KinematicBody2D
 
 var motion = Vector2()
+
+#must be in [0, 1], 0 doesnt brake, 1 instantly brakes
 export var brakeSpeed = 0.08
+
 onready var isPushed = false
 export var gravity = 12
+
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
+
 var startpos
+
+#distance player-box, pushing stops if distance too high
 var distance
 
+#make box reset its position if player respawns
 func _ready():
 	if global.player != null:
 		global.player.connect("loseHp", self, "resetPos")
@@ -22,6 +30,7 @@ func _physics_process(delta):
 		motion.x = global.player.motion.x
 		if abs(global.player.motion.y) > 60 || abs(motion.y) > 60 || global_position.distance_to(global.player.global_position) > distance + 30:
 			isPushed = false
+	#slow down if player stops pushing
 	else:
 		motion.x = lerp(motion.x, 0, brakeSpeed)
 	motion = move_and_slide(motion)
@@ -65,6 +74,7 @@ func attachTo(obj):
 func resetPos():
 	global_position = startpos
 
+#prototype func, box kills player if falling at high speed
 func _on_damageArea_body_entered(body):
 	if body == global.player:
 		if motion.y >= 70:
