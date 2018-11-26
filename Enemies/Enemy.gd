@@ -13,6 +13,9 @@ func _ready():
 	enemy = $EnemyPath/Enemy
 	add_to_group("Enemies")
 
+func _process(delta):
+	_unique_process(delta)
+
 func _unique_process(delta):
 	#start moving again when no longer colliding
 	if $EnemyPath/Enemy/Area2D.get_overlapping_bodies().size() == 1 && colliding == true:
@@ -38,9 +41,7 @@ func _unique_process(delta):
 			pathfollow.unit_offset = i
 		enemy.global_position = pathfollow.global_position
 
-func _process(delta):
-	_unique_process(delta)
-	
+
 func flee(duration):
 	stop = true
 	hideTimer = duration
