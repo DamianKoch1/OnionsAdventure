@@ -45,7 +45,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
 }
 
-[node name="Prototype 0" type="Node" index="0"]
+[node name="Prototype 0" type="Node"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -709,7 +709,6 @@ _sections_unfolded = [ "Region", "Visibility" ]
 
 [node name="FollowingEnemy4" parent="enemy color test" index="14" instance=ExtResource( 17 )]
 
-editor/display_folded = true
 position = Vector2( 3132.34, -32.6137 )
 
 [node name="Enemy" parent="enemy color test/FollowingEnemy4" index="1"]
