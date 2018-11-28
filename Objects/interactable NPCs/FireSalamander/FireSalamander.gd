@@ -6,8 +6,8 @@ var objToDestroyParent
 
 var objToDestroy 
 var triggered = false
-var player
 
+#set up destroying object on player jumping on self and resetting it on player respawn
 func _ready():
 	if objToDestroyPath != null:
 		global.player.connect("loseHp", self, "resetObj")

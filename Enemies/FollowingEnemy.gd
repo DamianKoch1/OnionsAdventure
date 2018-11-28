@@ -1,5 +1,5 @@
 extends "res://Enemies/Enemy.gd"
-
+#has all functions and variables from enemy class if not overwritten
 
 var startpos
 onready var following = false
@@ -21,7 +21,7 @@ func _unique_process(delta):
 		reappear()
 	if stop == false:
 		motion.y += gravity
-		#move towards player if player enters Area
+		#unfollow player if too far away
 		if following == true:
 			motion.x = (global.player.global_position.x - $Enemy.global_position.x)*speed
 			if startpos.distance_to(global.player.global_position) > loseAggroDistance:
@@ -29,7 +29,7 @@ func _unique_process(delta):
 		#move to original position
 		else:
 			motion.x = startpos.x - $Enemy.global_position.x
-		motion = $Enemy.move_and_slide(motion)
+		motion = enemy.move_and_slide(motion)
 
 func flee(duration):
 	stop = true
@@ -50,7 +50,7 @@ func _on_Area2D_body_entered(body):
 	if body == global.player:
 		body.health -= 1
 
-
+#follow player if he enters area
 func _on_VisionRange_body_entered(body):
 	if body == global.player:
 		if following == false:

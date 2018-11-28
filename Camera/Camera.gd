@@ -1,10 +1,11 @@
 extends Camera2D
 
 
-#speed must be in [0, 1]
+#speed must be in [0, 1], cam won't move at 0
 export var camSpeed = 0.08
 export var upDownSpeed = 0.05
 
+#distance camera can look up/down on pressing up/down
 export var upDownAmount = 100
 
 func _ready():
@@ -32,6 +33,8 @@ func _physics_process(delta):
 		
 				
 			
+
+#update hud elements
 
 func updateHp():
 	$HP.set_text("Health: "+str(global.player.health))

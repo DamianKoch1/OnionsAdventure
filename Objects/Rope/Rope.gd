@@ -12,13 +12,14 @@ func _physics_process(delta):
 		swingAmount = 0
 	rotation_degrees = swingDegrees*sin(swingAmount)
 
+#give player ladder to attach to and make him climb on contact
 func _on_Area2D_body_entered(body):
 	if body == global.player:
 		body.setState(body.climb)
 		body.rope = self
 
+#bounce when player leaves rope
 func _on_Area2D_body_exited(body):
 	if body == global.player:
 		global.player.setState(global.player.jump)
-		#bounce when player leaves rope
 		global.player.bounce(min(abs(rotation_degrees)*660*swingSpeed, 600))
