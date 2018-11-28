@@ -1,10 +1,16 @@
 extends Node2D
 
 onready var pathfollow = $EnemyPath/PathFollow2D
+
+#the visible enemy object with collider etc
 var enemy
+
+#variable for moving
 onready var i = 0
+
 export (float) var movespeed = 2
 export (bool) var pathLooped = true
+
 onready var stop = false
 onready var colliding = false
 onready var hideTimer = 0
@@ -13,6 +19,7 @@ func _ready():
 	enemy = $EnemyPath/Enemy
 	add_to_group("Enemies")
 
+#used this because godot doesn't allow overwriting _process()
 func _process(delta):
 	_unique_process(delta)
 
@@ -41,7 +48,7 @@ func _unique_process(delta):
 			pathfollow.unit_offset = i
 		enemy.global_position = pathfollow.global_position
 
-
+#called by biewe
 func flee(duration):
 	stop = true
 	hideTimer = duration

@@ -1,12 +1,12 @@
 extends Node2D
 
-
+#setup player respawn at this objects position when taking damage
 func _ready():
 	global.spawnpoint = self
-	#make player respawn at own position when taking damage
 	if global.player != null:
 		global.player.connect("loseHp", self, "respawn")
 
+#reset transform of player if he still has health left
 func respawn():
 	if global.player.health > 0:
 		global.player.global_transform = global_transform
