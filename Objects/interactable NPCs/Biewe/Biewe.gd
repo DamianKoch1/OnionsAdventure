@@ -7,8 +7,9 @@ export var bieweRange = 600
 #duration for which enemies are hidden/stopped
 export var hideDuration = 3
 
-#internal cooldown that ticks down
+#internal cooldown that ticks down if > 0
 var cd = 0
+
 var enemies
 
 

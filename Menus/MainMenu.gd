@@ -10,7 +10,6 @@ func _ready():
 	$YesNoOverlay.hide()
 
 
-
 func _on_NewGameButton_pressed():
 	pass # replace with function body
 
