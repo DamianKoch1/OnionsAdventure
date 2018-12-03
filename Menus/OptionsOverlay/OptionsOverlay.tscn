@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Menus/OptionsMenu/OptionsMenu.gd" type="Script" id=1]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
 
 [sub_resource type="Gradient" id=1]
 
@@ -13,7 +13,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="OptionsMenu" type="Container"]
+[node name="OptionsMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -110,5 +110,7 @@ text = "Main Menu"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
+
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 
 

@@ -8,10 +8,12 @@
 script/source = "extends Container
 
 export(PackedScene) var levelSelector
-var levelSelectorPath
+onready var levelSelectorPath = levelSelector.resource_path 
+
+export(PackedScene) var optionsMenu
+onready var optionsMenuPath = optionsMenu.resource_path
 
 func _ready():
-	levelSelectorPath = levelSelector.resource_path 
 	$YesNoOverlayQuit.connect(\"yesPressed\", self, \"quit\")
 	global.diff = global.normal
 
@@ -41,7 +43,7 @@ func _on_QuitButton_pressed():
 
 
 func _on_OptionsButton_pressed():
-	pass # replace with function body
+	get_tree().change_scene(optionsMenuPath)
 
 func quit():
 	get_tree().quit()
@@ -79,6 +81,7 @@ size_flags_vertical = 1
 script = SubResource( 1 )
 _sections_unfolded = [ "Pause" ]
 levelSelector = ExtResource( 1 )
+optionsMenu = null
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
