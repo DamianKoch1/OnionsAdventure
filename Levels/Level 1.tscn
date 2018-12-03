@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/M1.tscn" type="PackedScene" id=2]
@@ -21,6 +21,10 @@
 [ext_resource path="res://Assets/Stones/asset_stone_large_1.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Stones/asset_stone_inamovable_3.png" type="Texture" id=20]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Assets/Background/BG_layer_1.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Background/BG_layer_2_part1.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Background/BG_layer_2_part2.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Background/BG_layer_2_part3.png" type="Texture" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -84,7 +88,6 @@ position = Vector2( 12956.2, 93.4388 )
 
 position = Vector2( -100, 110 )
 scale = Vector2( 0.5, 0.503912 )
-gracePeriod = 2
 
 [node name="TileMap" parent="." index="2"]
 
@@ -966,21 +969,93 @@ scale = Vector2( 0.121272, 0.121272 )
 editor/display_folded = true
 position = Vector2( 4090, 150 )
 
-[node name="ParallaxBackground" parent="." index="19"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="19"]
 
-editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
 
-[node name="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 
-position = Vector2( 7680, 90 )
-scale = Vector2( 1.9, 2.07407 )
-region_rect = Rect2( -16, 4, 9600, 324 )
+position = Vector2( 0, -9.53674e-007 )
+motion_scale = Vector2( 0.4, 0.4 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
-[node name="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
-position = Vector2( 7616, 80 )
-scale = Vector2( 1.2376, 2.30508 )
-region_rect = Rect2( 20, 0, 14677.6, 236 )
+position = Vector2( 6299.47, -48.1553 )
+scale = Vector2( 0.282482, 0.340108 )
+z_index = -100
+texture = ExtResource( 22 )
+region_enabled = true
+region_rect = Rect2( -1820, 4, 65123, 2000 )
+_sections_unfolded = [ "Region", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
+
+motion_scale = Vector2( 0.5, 0.5 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StoneL" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+
+position = Vector2( 96, 96 )
+scale = Vector2( 0.14593, 0.146019 )
+z_index = -99
+texture = ExtResource( 23 )
+region_enabled = true
+region_rect = Rect2( 644, 228, 2348, 1776 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StoneM" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="1"]
+
+position = Vector2( 350.128, 125.045 )
+scale = Vector2( 0.16205, 0.162149 )
+z_index = -99
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 940, 788, 1536, 1216 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StoneS" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="2"]
+
+position = Vector2( 575.806, 171.758 )
+scale = Vector2( 0.188653, 0.188768 )
+z_index = -99
+texture = ExtResource( 25 )
+region_enabled = true
+region_rect = Rect2( 124, 1408, 1444, 596 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 
 [editable path="M1"]
