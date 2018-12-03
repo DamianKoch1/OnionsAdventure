@@ -2,10 +2,7 @@
 
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/MainMenu/MainMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Menus/YesNoOverlay.tscn" type="PackedScene" id=3]
-
-
-
+[ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Gradient" id=1]
 
@@ -195,7 +192,11 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="YesNoOverlay" parent="." index="6" instance=ExtResource( 3 )]
+[node name="YesNoOverlayMainMenu" parent="." index="6" instance=ExtResource( 3 )]
+
+visible = false
+
+[node name="YesNoOverlayRestart" parent="." index="7" instance=ExtResource( 3 )]
 
 visible = false
 
