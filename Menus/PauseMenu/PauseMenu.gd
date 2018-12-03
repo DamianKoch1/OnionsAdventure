@@ -7,9 +7,8 @@ var mainMenuPath
 
 func _ready():
 	mainMenuPath = mainMenu.resource_path
-	$YesNoOverlay/NoButton.connect("pressed", self, "noPressed")
-	$YesNoOverlay/YesButton.connect("pressed", self, "yesPressed")
-	$YesNoOverlay.hide()
+	$YesNoOverlayMainMenu.connect("yesPressed", self, "loadMainMenu")
+	$YesNoOverlayRestart.connect("yesPressed", self, "restart")
 	hide()
 	get_tree().paused = false
 
@@ -31,7 +30,7 @@ func _on_ResumeButton_pressed():
 
 
 func _on_RestartButton_pressed():
-	get_tree().reload_current_scene()
+	$YesNoOverlayRestart.show()
 
 
 func _on_OptionsButton_pressed():
@@ -40,11 +39,11 @@ func _on_OptionsButton_pressed():
 
 
 func _on_MainMenuButton_pressed():
-	$YesNoOverlay.show()
-	pass
+	$YesNoOverlayMainMenu.show()
 
-func noPressed():
-	$YesNoOverlay.hide()
 
-func yesPressed():
+func loadMainMenu():
 	get_tree().change_scene(mainMenuPath)
+
+func restart():
+	get_tree().reload_current_scene()
