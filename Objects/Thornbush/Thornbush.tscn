@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5285.6, 12019.9 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5984.28, 13709.8 )
+
+[node name="Thornbush" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.041511, 0.041511 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Collider" type="StaticBody2D" parent="Sprite" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Collider" index="0"]
+
+scale = Vector2( 0.13673, 0.140292 )
+shape = SubResource( 1 )
+
+[node name="Trigger" type="Area2D" parent="Sprite" index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Trigger" index="0"]
+
+scale = Vector2( 0.161022, 0.131859 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Sprite/Trigger" to="Sprite" method="_on_Trigger_body_entered"]
+
+

@@ -1,24 +1,22 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=3]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.gd" type="Script" id=4]
-[ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=5]
-[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_large_1.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=4]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=5]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="M9v2" type="Node"]
+[node name="M9v2" type="Node" index="0"]
 
 editor/display_folded = true
 
@@ -45,46 +43,23 @@ format = 1
 tile_data = PoolIntArray( -1507240, 1, 0, -1507239, 1, 0, -1507238, 1, 0, -1507237, 1, 0, -1507236, 1, 0, -1507235, 1, 0, -1507234, 1, 0, -1507233, 1, 0, -1507232, 1, 0, -1507231, 1, 0, -1507230, 1, 0, -1441704, 4, 0, -1441703, 4, 0, -1441702, 4, 0, -1441701, 4, 0, -1441700, 4, 0, -1441699, 4, 0, -1441698, 4, 0, -1441697, 4, 0, -1441696, 4, 0, -1441695, 4, 0, -1441694, 4, 0, -1376168, 7, 0, -1376167, 7, 0, -1376166, 7, 0, -1376165, 7, 0, -1376164, 7, 0, -1376163, 7, 0, -1376162, 7, 0, -1376161, 7, 0, -1376160, 7, 0, -1376159, 7, 0, -1376158, 7, 0 )
 _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
-[node name="thornbush5" type="Sprite" parent="." index="1" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 3009.75, -787.949 )
-scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 3 )
-script = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="thornbush6" type="Sprite" parent="." index="2" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 3079.75, -787.949 )
-scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 3 )
-script = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="stump l 8" type="Sprite" parent="." index="3"]
+[node name="stump l 8" type="Sprite" parent="." index="1"]
 
 editor/display_folded = true
 position = Vector2( 2803.46, -899.034 )
 scale = Vector2( 0.0989583, 0.104806 )
-texture = ExtResource( 5 )
+texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Ast 3" type="Sprite" parent="stump l 8" index="0" instance=ExtResource( 6 )]
+[node name="Ast 3" parent="stump l 8" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 27.5156, 447.684 )
 scale = Vector2( 0.774041, 0.915257 )
-texture = ExtResource( 7 )
-centered = false
-_sections_unfolded = [ "Offset" ]
-__meta__ = {
-"_edit_group_": true
-}
+texture = ExtResource( 4 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump l 8/Ast 3" index="1"]
 
@@ -116,12 +91,20 @@ bounce = 0.0
 
 position = Vector2( 999.944, 875.041 )
 scale = Vector2( 33.1696, 87.1565 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump l 8/StaticBody2D2" index="1"]
 
 position = Vector2( 928.747, 1539.22 )
 scale = Vector2( 62.1414, 19.2334 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
+
+[node name="Thornbush" parent="." index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 3011.33, -787.723 )
+
+[node name="Thornbush2" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 3071.31, -788.211 )
 
 

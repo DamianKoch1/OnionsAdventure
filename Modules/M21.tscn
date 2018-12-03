@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=2]
@@ -8,9 +8,8 @@
 [ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=6]
 [ext_resource path="res://Objects/Obstacles/Stump M.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=10]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -133,22 +132,14 @@ position = Vector2( 10464.9, -961.165 )
 position = Vector2( 10316.6, -1473.43 )
 platformSpeed = 1.0
 
-[node name="thornbush20" parent="." index="8" instance=ExtResource( 9 )]
-
-editor/display_folded = true
-position = Vector2( 10731.2, -1590.29 )
-scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 10 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="FireSalamander4" parent="." index="9" instance=ExtResource( 11 )]
+[node name="FireSalamander4" parent="." index="8" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 10615.7, -1564.71 )
-objToDestroyPath = NodePath("../thornbush20")
+objToDestroyPath = NodePath("../Thornbush")
 destroyRadius = 140
 
-[node name="stump m 11" type="Sprite" parent="." index="10"]
+[node name="stump m 11" type="Sprite" parent="." index="9"]
 
 editor/display_folded = true
 position = Vector2( 10562.2, -1061.64 )
@@ -205,5 +196,9 @@ shape = SubResource( 1 )
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
 shape = SubResource( 2 )
+
+[node name="Thornbush" parent="." index="10" instance=ExtResource( 10 )]
+
+position = Vector2( 10720.5, -1591.09 )
 
 
