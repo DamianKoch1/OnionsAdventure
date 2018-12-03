@@ -30,6 +30,8 @@ var rope
 var ropeAttachCD = 0
 
 export var health = 3 setget setHealth, getHealth
+export var normalHealth = 5
+export var hardHealth = 3
 
 #signals other objects react to
 signal noHp
@@ -43,7 +45,10 @@ var NPCsavedCount = 0
 func _ready():
 	global.player = self
 	setState(idle)
-	health = global.maxHealth
+	if global.diff == global.hard:
+		health = hardHealth
+	else:
+		health = normalHealth
 	global.currLevelId = int(get_parent().name)
 
 func _physics_process(delta):
@@ -145,7 +150,10 @@ func _physics_process(delta):
 func setHealth(newHealth):
 	if debugGodmode == -1 && gracePeriodTimer == 0:
 		var oldHealth = health
-		health = newHealth
+		if global.diff != global.easy:
+			health = newHealth
+		else:
+			health = normalHealth
 		if newHealth != oldHealth:
 			emit_signal("changeHp")
 			if newHealth < oldHealth :
@@ -155,6 +163,7 @@ func setHealth(newHealth):
 		if health <= 0:
 			setState(dead)
 			get_tree().reload_current_scene()
+	
 
 #gets called if health value is accessed from other script
 func getHealth():

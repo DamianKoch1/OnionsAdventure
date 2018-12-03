@@ -17,8 +17,12 @@ func _ready():
 		#update hud values on certain signals
 		global.player.connect("changeHp", self, "updateHp")
 		global.player.connect("NPCsaved", self, "updateNPCsaved")
-		hpFull.region_rect.size.x = global.maxHealth * heartImgWidth
-		hpEmpty.region_rect.size.x = global.maxHealth * heartImgWidth
+		if global.diff == global.hard:
+			hpFull.region_rect.size.x = global.player.hardHealth * heartImgWidth
+			hpEmpty.region_rect.size.x = global.player.hardHealth * heartImgWidth
+		else:
+			hpFull.region_rect.size.x = global.player.normalHealth * heartImgWidth
+			hpEmpty.region_rect.size.x = global.player.normalHealth * heartImgWidth
 		updateHp()
 		updateNPCsaved()
 
@@ -43,6 +47,10 @@ func _physics_process(delta):
 
 func updateHp():
 	hpFull.region_rect.size.x = global.player.health * heartImgWidth
+	if global.diff == global.hard:
+		hpEmpty.region_rect.size.x = global.player.hardHealth * heartImgWidth
+	else:
+		hpEmpty.region_rect.size.x = global.player.normalHealth * heartImgWidth
 
 func updateNPCsaved():
 	$NPCsSaved.set_text("Animals saved: "+str(global.player.NPCsavedCount))
