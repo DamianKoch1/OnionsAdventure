@@ -1,5 +1,8 @@
 extends Camera2D
 
+onready var hpFull = $HP/HealthFull
+onready var hpEmpty = $HP/HealthEmpty
+onready var heartImgWidth = hpFull.region_rect.size.x / 5
 
 #speed must be in [0, 1], cam won't move at 0
 export var camSpeed = 0.08
@@ -14,6 +17,8 @@ func _ready():
 		#update hud values on certain signals
 		global.player.connect("changeHp", self, "updateHp")
 		global.player.connect("NPCsaved", self, "updateNPCsaved")
+		hpFull.region_rect.size.x = global.maxHealth * heartImgWidth
+		hpEmpty.region_rect.size.x = global.maxHealth * heartImgWidth
 		updateHp()
 		updateNPCsaved()
 
@@ -37,7 +42,7 @@ func _physics_process(delta):
 #update hud elements
 
 func updateHp():
-	$HP.set_text("Health: "+str(global.player.health))
+	hpFull.region_rect.size.x = global.player.health * heartImgWidth
 
 func updateNPCsaved():
 	$NPCsSaved.set_text("Animals saved: "+str(global.player.NPCsavedCount))
