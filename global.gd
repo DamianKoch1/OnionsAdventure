@@ -3,8 +3,9 @@ extends Node
 #level the player is in
 var currLevelId = 0
 
-var diff
+
 enum{easy, normal, hard}
+var diff = normal
 
 
 var maxHealth = 3

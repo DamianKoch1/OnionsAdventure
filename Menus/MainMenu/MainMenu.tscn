@@ -103,7 +103,7 @@ expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="RichTextLabel5" type="RichTextLabel" parent="." index="1"]
+[node name="Title" type="RichTextLabel" parent="." index="1"]
 
 modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
@@ -131,7 +131,7 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
+_sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_fonts", "custom_styles" ]
 
 [node name="NewGameButton" type="Button" parent="." index="2"]
 
@@ -298,7 +298,7 @@ anchor_bottom = 0.0
 margin_left = 202.0
 margin_top = -115.0
 margin_right = 299.0
-margin_bottom = -93.0
+margin_bottom = -83.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -321,6 +321,7 @@ visible = false
 
 [node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 3 )]
 
+visible = false
 margin_left = 42.0
 margin_top = 45.0
 margin_right = 74.0

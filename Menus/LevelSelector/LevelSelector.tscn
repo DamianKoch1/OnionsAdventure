@@ -57,7 +57,7 @@ expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="RichTextLabel5" type="RichTextLabel" parent="." index="1"]
+[node name="Title" type="RichTextLabel" parent="." index="1"]
 
 modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
@@ -183,6 +183,7 @@ levelId = 2
 
 [node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 3 )]
 
+visible = false
 margin_left = -21.0
 margin_top = -5.0
 margin_right = 11.0

@@ -59,7 +59,7 @@ expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="RichTextLabel5" type="RichTextLabel" parent="." index="1"]
+[node name="Title" type="RichTextLabel" parent="." index="1"]
 
 modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
@@ -173,9 +173,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 215.0
-margin_top = -113.0
-margin_right = 312.0
+margin_left = 195.0
+margin_top = -124.0
+margin_right = 291.0
 margin_bottom = -91.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -188,7 +188,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Options (wip)"
+text = "Options"
 flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
@@ -203,6 +203,7 @@ visible = false
 
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 4 )]
 
+visible = false
 margin_left = 35.0
 margin_top = 36.0
 margin_right = 67.0

@@ -32,6 +32,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
+easyDescription = "insert description for easy"
+normalDescription = "insert description for normal"
+hardDescription = "insert description for hard"
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
@@ -55,7 +58,7 @@ expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="RichTextLabel5" type="RichTextLabel" parent="." index="1"]
+[node name="Title" type="RichTextLabel" parent="." index="1"]
 
 modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
@@ -111,7 +114,69 @@ flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="HSlider" type="HSlider" parent="." index="3"]
+[node name="Difficulty" type="Node2D" parent="." index="3"]
+
+[node name="Text" type="RichTextLabel" parent="Difficulty" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -249.0
+margin_top = -124.0
+margin_right = -88.0
+margin_bottom = -70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Difficulty"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
+
+[node name="DiffText" type="RichTextLabel" parent="Difficulty" index="1"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 26.0
+margin_top = -124.0
+margin_right = 258.0
+margin_bottom = -24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
+
+[node name="DiffSlider" type="HSlider" parent="Difficulty" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -132,7 +197,7 @@ min_value = 0.0
 max_value = 2.0
 step = 1.0
 page = 0.0
-value = 0.0
+value = 1.0
 exp_edit = false
 rounded = false
 editable = true
@@ -141,5 +206,7 @@ ticks_on_borders = false
 focus_mode = 2
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+
+[connection signal="value_changed" from="Difficulty/DiffSlider" to="." method="_on_DiffSlider_value_changed"]
 
 
