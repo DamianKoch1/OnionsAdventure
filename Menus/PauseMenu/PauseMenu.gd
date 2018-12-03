@@ -34,8 +34,7 @@ func _on_RestartButton_pressed():
 
 
 func _on_OptionsButton_pressed():
-	
-	pass
+	$OptionsOverlay.show()
 
 
 func _on_MainMenuButton_pressed():

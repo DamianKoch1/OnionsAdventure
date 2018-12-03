@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menus/LevelSelector/LevelSelector.gd" type="Script" id=1]
 [ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Gradient" id=1]
 
@@ -14,7 +15,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="LevelSelector" type="Container"]
+[node name="LevelSelector" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -159,7 +160,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Options (wip)"
+text = "Options"
 flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
@@ -179,6 +180,13 @@ margin_right = -184.0
 margin_bottom = -69.0
 text = "Level 2"
 levelId = 2
+
+[node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 3 )]
+
+margin_left = -21.0
+margin_top = -5.0
+margin_right = 11.0
+margin_bottom = 24.0
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 

@@ -13,7 +13,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="OptionsMenu" type="Container" index="0"]
+[node name="OptionsOverlay" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -35,7 +35,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
-modulate = Color( 0.761322, 1, 0.613281, 1 )
+modulate = Color( 1, 1, 1, 0.856353 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -85,14 +85,14 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
 
-[node name="MainMenuButton" type="Button" parent="." index="2"]
+[node name="BackButton" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 75.0
-margin_top = 59.0
+margin_left = 139.0
+margin_top = 91.0
 margin_right = 235.0
 margin_bottom = 123.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -106,11 +106,11 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Main Menu"
+text = "Back"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
 

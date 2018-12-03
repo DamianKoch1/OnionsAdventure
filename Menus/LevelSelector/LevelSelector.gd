@@ -11,7 +11,7 @@ func _on_QuitButton_pressed():
 
 
 func _on_OptionsButton_pressed():
-	pass # replace with function body
+	$OptionsOverlay.show()
 
 
 func _on_Level0Button_pressed():
