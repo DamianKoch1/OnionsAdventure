@@ -13,7 +13,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="OptionsOverlay" type="Container" index="0"]
+[node name="OptionsOverlay" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -110,6 +110,35 @@ text = "Back"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
+
+[node name="HSlider" type="HSlider" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -181.0
+margin_top = -133.0
+margin_right = 11.0
+margin_bottom = -101.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 2.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 

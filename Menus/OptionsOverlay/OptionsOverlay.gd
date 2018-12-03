@@ -1,7 +1,7 @@
 extends Container
 
 
-func ready():
+func _ready():
 	hide()
 
 func _on_BackButton_pressed():
