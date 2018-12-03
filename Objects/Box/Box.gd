@@ -1,50 +1,59 @@
 extends KinematicBody2D
 
 var motion = Vector2()
-var player
+
+#must be in [0, 1], 0 doesnt brake, 1 instantly brakes
 export var brakeSpeed = 0.08
+
 onready var isPushed = false
 export var gravity = 12
+
 onready var worldNode = get_parent()
 onready var ray = $RayCast2D
+
 var startpos
-onready var damageCD = 0
 
+#distance player-box, pushing stops if distance too high
+var distance
+
+#make box reset its position if player respawns
 func _ready():
+	if global.player != null:
+		global.player.connect("loseHp", self, "resetPos")
 	getpos()
-
-func getpos():
-		startpos = global_position
 
 func _physics_process(delta):
 	rayUpdate()
 	motion.y += gravity
-	damageCD = max(damageCD - delta, 0)
+	#move with player if being pushed
 	if isPushed == true:
-		motion.x = player.motion.x
-		if abs(player.motion.y) > 60 || abs(motion.y) > 60:
+		motion.x = global.player.motion.x
+		if abs(global.player.motion.y) > 60 || abs(motion.y) > 60 || global_position.distance_to(global.player.global_position) > distance + 30:
 			isPushed = false
+	#slow down if player stops pushing
 	else:
 		motion.x = lerp(motion.x, 0, brakeSpeed)
 	motion = move_and_slide(motion)
 
+func getpos():
+		startpos = global_position
+
 func _on_Area2D_body_entered(body):
-	if body.name == "Onion":
-		if player == null:
-			player = body
-			player.connect("loseHp", self, "resetPos")
+		#can press "push"button to push when in range
 		if Input.is_action_just_pressed("push"):
 			if isPushed == true:
 				isPushed = false
 			elif isPushed == false:
 				isPushed = true
-				global_position.x = global_position.x + (global_position.x - player.global_position.x)/4.2
+				global_position.x = global_position.x + (global_position.x - global.player.global_position.x)/4.2
+				distance = abs(global_position.x - global.player.global_position.x)
 
 func rayUpdate():
+	#find first object ray downwards hits and attach to it
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
-		if col.get_class() == "Area2D" || col.name == "Onion":
+		if col.get_class() == "Area2D" || col == global.player:
 			ray.add_exception(col)
 		if global_position.distance_to(ray.get_collision_point()) <= 40:
 			attachTo(col)
@@ -54,6 +63,7 @@ func rayUpdate():
 		attachTo(worldNode)
 
 func attachTo(obj):
+	#attach self to obj
 	if obj.get_class() != "Area2D" && obj != get_parent() && obj.name != "Onion":
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
@@ -64,8 +74,8 @@ func attachTo(obj):
 func resetPos():
 	global_position = startpos
 
+#prototype func, box kills player if falling at high speed
 func _on_damageArea_body_entered(body):
-	if damageCD == 0 && body.name == "Onion":
-		damageCD = 1
+	if body == global.player:
 		if motion.y >= 70:
 			body.health = max(body.health - 1, 0)

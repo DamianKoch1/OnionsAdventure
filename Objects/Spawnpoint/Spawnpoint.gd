@@ -1,14 +1,15 @@
 extends Node2D
 
-var player
-
+#setup player respawn at this objects position when taking damage
 func _ready():
-	player = get_parent().find_node("Onion")
-	player.connect("loseHp", self, "respawn")
+	global.spawnpoint = self
+	if global.player != null:
+		global.player.connect("loseHp", self, "respawn")
 
+#reset transform of player if he still has health left
 func respawn():
-	if player.health > 0:
-		player.global_transform = global_transform
-		player.rotation_degrees = 0
-		player.global_scale.x = 0.5
-		player.global_scale.y = 0.5
+	if global.player.health > 0:
+		global.player.global_transform = global_transform
+		global.player.rotation_degrees = 0
+		global.player.global_scale.x = 0.5
+		global.player.global_scale.y = 0.5

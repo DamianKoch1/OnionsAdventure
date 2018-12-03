@@ -1,9 +1,8 @@
 extends Area2D
 
-onready var spawnpoint = get_parent().find_node("Spawnpoint")
-
+#move spawnpoint to checkpoint position if player enters checkpoint
 func _on_Checkpoint_body_entered(body):
-	if body.name == "Onion":
-		spawnpoint.global_position = global_position
+	if body == global.player:
+		global.spawnpoint.global_position = global_position
 		body.health = global.maxHealth
 		queue_free()

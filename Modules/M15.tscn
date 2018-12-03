@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=4]
+
+[node name="M15" type="Node" index="0"]
+
+[node name="TileMap16" type="TileMap" parent="." index="0"]
+
+position = Vector2( 0.7, 0 )
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -1507249, 0, 0, -1507248, 1, 0, -1507247, 1, 0, -1507246, 1, 0, -1507245, 1, 0, -1507244, 1, 0, -1507243, 1, 0, -1507242, 1, 0, -1507241, 1, 0, -1441713, 3, 0, -1441712, 4, 0, -1441711, 4, 0, -1441710, 4, 0, -1441709, 4, 0, -1441708, 4, 0, -1441707, 4, 0, -1441706, 4, 0, -1441705, 4, 0, -1376177, 6, 0, -1376176, 7, 0, -1376175, 7, 0, -1376174, 7, 0, -1376173, 7, 0, -1376172, 7, 0, -1376171, 7, 0, -1376170, 7, 0, -1376169, 7, 0, -1310651, 1, 0, -1310650, 1, 0, -1310649, 1, 0, -1310648, 1, 0, -1310647, 2, 0, -1245115, 4, 0, -1245114, 4, 0, -1245113, 4, 0, -1245112, 4, 0, -1245111, 5, 0, -1179579, 7, 0, -1179578, 7, 0, -1179577, 7, 0, -1179576, 7, 0, -1179575, 8, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="Box3" parent="." index="1" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+position = Vector2( 2270.92, -689.484 )
+
+[node name="Trap12" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 2740.92, -740.01 )
+
+[node name="moving Platform5" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 2442.75, -569.449 )
+platformSpeed = 1.0
+
+[node name="State2" parent="moving Platform5" index="2"]
+
+position = Vector2( 1.14223, -190.967 )
+scale = Vector2( 1.59606, 1.8416 )
+
+
+[editable path="moving Platform5"]
