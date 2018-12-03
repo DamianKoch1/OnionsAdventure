@@ -1,15 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Bouncer/Bouncer.gd" type="Script" id=3]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=5]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.gd" type="Script" id=6]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=3]
 
-[node name="M20" type="Node"]
-
-editor/display_folded = true
+[node name="M20" type="Node" index="0"]
 
 [node name="TileMap22" type="TileMap" parent="." index="0"]
 
@@ -34,52 +29,21 @@ format = 1
 tile_data = PoolIntArray( -2031366, 1, 0, -2031365, 1, 0, -2031364, 1, 0, -2031363, 1, 0, -2031362, 1, 0, -2031361, 1, 0, -2031360, 1, 0, -2031359, 1, 0, -2031358, 1, 0, -2031357, 1, 0, -2031356, 1, 0, -2031355, 1, 0, -2031354, 1, 0, -2031353, 1, 0, -2031352, 1, 0, -1965830, 4, 0, -1965829, 4, 0, -1965828, 4, 0, -1965827, 4, 0, -1965826, 4, 0, -1965825, 4, 0, -1965824, 4, 0, -1965823, 4, 0, -1965822, 4, 0, -1965821, 4, 0, -1965820, 4, 0, -1965819, 4, 0, -1965818, 4, 0, -1965817, 4, 0, -1965816, 4, 0, -1900294, 4, 0, -1900293, 4, 0, -1900292, 4, 0, -1900291, 4, 0, -1900290, 4, 0, -1900289, 4, 0, -1900288, 4, 0, -1900287, 4, 0, -1900286, 4, 0, -1900285, 4, 0, -1900284, 4, 0, -1900283, 4, 0, -1900282, 4, 0, -1900281, 4, 0, -1900280, 4, 0, -1834758, 4, 0, -1834757, 4, 0, -1834756, 4, 0, -1834755, 4, 0, -1834754, 4, 0, -1834753, 4, 0, -1834752, 4, 0, -1834751, 4, 0, -1834750, 4, 0, -1834749, 4, 0, -1834748, 4, 0, -1834747, 4, 0, -1834746, 4, 0, -1834745, 4, 0, -1834744, 4, 0 )
 _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
-[node name="Bouncer4" type="Area2D" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Bouncer4" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 8112.06, -1008.33 )
 scale = Vector2( 0.65625, 0.65625 )
-z_index = -1
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 3 )
-_sections_unfolded = [ "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-maxBounceStr = 900
 
-[node name="thornbush15" type="Sprite" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Thornbush" parent="." index="2" instance=ExtResource( 3 )]
 
-editor/display_folded = true
-position = Vector2( 8192.81, -1048.65 )
-scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
+position = Vector2( 8189.44, -1051.99 )
 
-[node name="thornbush16" type="Sprite" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Thornbush2" parent="." index="3" instance=ExtResource( 3 )]
 
-editor/display_folded = true
-position = Vector2( 8262.2, -1048.65 )
-scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
+position = Vector2( 8259.47, -1051.79 )
 
-[node name="thornbush17" type="Sprite" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Thornbush3" parent="." index="4" instance=ExtResource( 3 )]
 
-editor/display_folded = true
-position = Vector2( 8332.2, -1048.35 )
-scale = Vector2( 0.041511, 0.041511 )
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
-
-[connection signal="body_entered" from="Bouncer4" to="Bouncer4" method="_on_Bouncer_body_entered"]
+position = Vector2( 8324.83, -1051.79 )
 
 

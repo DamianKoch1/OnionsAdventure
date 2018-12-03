@@ -1,33 +1,25 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=3]
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/Trap/Trap.gd" type="Script" id=5]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=7]
-[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Box/Box.gd" type="Script" id=9]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=11]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=13]
-[ext_resource path="res://Objects/Obstacles/DamagingObstacle.gd" type="Script" id=14]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=8]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
 
-[node name="M5" type="Node"]
-
-editor/display_folded = true
+[node name="M5" type="Node" index="0"]
 
 [node name="TileMap6" type="TileMap" parent="." index="0"]
 
@@ -100,173 +92,68 @@ bounce = 0.0
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 26/StaticBody2D2" index="1"]
 
 position = Vector2( 899.917, 1078.2 )
 scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
-[node name="Trap2" type="Area2D" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Trap2" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 5240, -170 )
-scale = Vector2( 0.407591, 0.407591 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="Ladder4" type="Area2D" parent="." index="3" instance=ExtResource( 6 )]
+[node name="Ladder4" parent="." index="3" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 4767.74, 24.5 )
 scale = Vector2( 1, 4.10938 )
-z_index = -2
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="Ladder5" type="Area2D" parent="." index="4" instance=ExtResource( 6 )]
+[node name="Ladder5" parent="." index="4" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 4830.74, -163.5 )
 scale = Vector2( 1, 4.14063 )
-z_index = -2
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="Box4" type="KinematicBody2D" parent="." index="5" instance=ExtResource( 8 )]
+[node name="Box4" parent="." index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 5050, -190 )
-z_index = 50
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-script = ExtResource( 9 )
-_sections_unfolded = [ "Z Index" ]
-brakeSpeed = 0.08
-gravity = 12
 
-[node name="Box5" type="KinematicBody2D" parent="." index="6" instance=ExtResource( 8 )]
+[node name="Box5" parent="." index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 5370, 290 )
-z_index = 50
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-script = ExtResource( 9 )
-_sections_unfolded = [ "Z Index" ]
-brakeSpeed = 0.08
-gravity = 12
 
-[node name="Trap3" type="Area2D" parent="." index="7" instance=ExtResource( 4 )]
+[node name="Trap3" parent="." index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 5250, 310 )
-scale = Vector2( 0.407591, 0.407591 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="FireS" type="Node2D" parent="." index="8" instance=ExtResource( 10 )]
+[node name="FireS" parent="." index="8" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 5590, 270 )
 scale = Vector2( 1.4375, 1.4375 )
-script = ExtResource( 11 )
-objToDestroyPath = NodePath("../thornbush4")
-destroyRadius = 300
+objToDestroyPath = NodePath("../Thornbush")
 
-[node name="Ladder6" type="Area2D" parent="." index="9" instance=ExtResource( 6 )]
+[node name="Ladder6" parent="." index="9" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 5880, 130 )
 scale = Vector2( 1, 4.14063 )
-z_index = -2
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="FireS2" type="Node2D" parent="." index="10" instance=ExtResource( 10 )]
+[node name="FireS2" parent="." index="10" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 5680, -200 )
 scale = Vector2( 1.4375, 1.4375 )
-script = ExtResource( 11 )
-objToDestroyPath = NodePath("../thornbush6")
-destroyRadius = 300
+objToDestroyPath = NodePath("../Thornbush2")
 
-[node name="thornbush4" type="Sprite" parent="." index="11" instance=ExtResource( 12 )]
+[node name="Thornbush" parent="." index="11" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 5710.55, 260.486 )
-scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 13 )
-script = ExtResource( 14 )
+position = Vector2( 5713.08, 260.795 )
 
-[node name="thornbush6" type="Sprite" parent="." index="12" instance=ExtResource( 12 )]
+[node name="Thornbush2" parent="." index="12" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 5890, -120 )
-scale = Vector2( 0.0415107, 0.0415108 )
-texture = ExtResource( 13 )
-script = ExtResource( 14 )
-
-[connection signal="body_entered" from="Trap2" to="Trap2" method="_on_Trap_body_entered"]
-
-[connection signal="body_entered" from="Ladder4" to="Ladder4" method="_on_Ladder_body_entered"]
-
-[connection signal="body_exited" from="Ladder4" to="Ladder4" method="_on_Ladder_body_exited"]
-
-[connection signal="body_entered" from="Ladder5" to="Ladder5" method="_on_Ladder_body_entered"]
-
-[connection signal="body_exited" from="Ladder5" to="Ladder5" method="_on_Ladder_body_exited"]
-
-[connection signal="body_entered" from="Trap3" to="Trap3" method="_on_Trap_body_entered"]
-
-[connection signal="body_entered" from="Ladder6" to="Ladder6" method="_on_Ladder_body_entered"]
-
-[connection signal="body_exited" from="Ladder6" to="Ladder6" method="_on_Ladder_body_exited"]
+position = Vector2( 5888.09, -123.396 )
 
 

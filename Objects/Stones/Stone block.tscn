@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Objects/Obstacles/Obstacle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Stones/asset_stone_inamovable_3.png" type="Texture" id=2]
+
+[node name="Stone block" type="Node2D" index="0"]
+
+[node name="Obstacle" parent="." index="0" instance=ExtResource( 1 )]
+
+scale = Vector2( 0.06772, 0.06772 )
+texture = ExtResource( 2 )
+centered = true
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionPolygon2D" parent="Obstacle/StaticBody2D" index="0"]
+
+polygon = PoolVector2Array( -494.708, -142.213, -356.733, -663.93, -227.382, -711.358, -257.564, -857.956, -123.901, -952.814, 57.1907, -870.892, 173.607, -715.67, 475.427, -392.292, 466.803, -81.8488, 216.724, 168.23, 302.958, 388.128, 233.971, 534.726, 324.517, 573.531, 445.245, 875.351, 359.01, 922.78, -391.227, 927.091, -464.526, 789.116, -322.24, 642.518, -339.487, 513.167, -248.941, 478.673, -236.006, 176.854, -257.564, 120.802 )
+
+
+[editable path="Obstacle"]
