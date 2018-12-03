@@ -12,7 +12,7 @@ extents = Vector2( 465.076, 1133.96 )
 custom_solver_bias = 0.0
 extents = Vector2( 6348.13, 10804 )
 
-[node name="Sprite" type="Sprite"]
+[node name="Sprite" type="Sprite" index="0"]
 
 script = ExtResource( 1 )
 

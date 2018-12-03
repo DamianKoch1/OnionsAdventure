@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Bouncer/Bouncer.gd" type="Script" id=3]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=5]
+[ext_resource path="res://Objects/Obstacles/DamagingObstacle.gd" type="Script" id=6]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=8]
+
+[node name="M18" type="Node"]
+
+editor/display_folded = true
+
+[node name="TileMap20" type="TileMap" parent="." index="0"]
+
+position = Vector2( 0.7, 0 )
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -1441594, 0, 0, -1441593, 1, 0, -1441592, 1, 0, -1441591, 1, 0, -1441590, 1, 0, -1441589, 1, 0, -1441588, 1, 0, -1441587, 1, 0, -1441586, 1, 0, -1441585, 1, 0, -1376058, 3, 0, -1376057, 4, 0, -1376056, 4, 0, -1376055, 4, 0, -1376054, 4, 0, -1376053, 4, 0, -1376052, 4, 0, -1376051, 4, 0, -1376050, 4, 0, -1376049, 4, 0, -1310522, 3, 0, -1310521, 4, 0, -1310520, 4, 0, -1310519, 4, 0, -1310518, 4, 0, -1310517, 4, 0, -1310516, 4, 0, -1310515, 4, 0, -1310514, 4, 0, -1310513, 4, 0, -1244986, 3, 0, -1244985, 4, 0, -1244984, 4, 0, -1244983, 4, 0, -1244982, 4, 0, -1244981, 4, 0, -1244980, 4, 0, -1244979, 4, 0, -1244978, 4, 0, -1244977, 4, 0, -1179450, 3, 0, -1179449, 4, 0, -1179448, 4, 0, -1179447, 4, 0, -1179446, 4, 0, -1179445, 4, 0, -1179444, 4, 0, -1179443, 4, 0, -1179442, 4, 0, -1179441, 4, 0, -1113914, 3, 0, -1113913, 4, 0, -1113912, 4, 0, -1113911, 4, 0, -1113910, 4, 0, -1113909, 4, 0, -1113908, 4, 0, -1113907, 4, 0, -1113906, 4, 0, -1113905, 4, 0, -1048382, 1, 0, -1048381, 1, 0, -1048380, 1, 0, -1048379, 1, 0, -1048378, 9, 0, -1048377, 4, 0, -1048376, 4, 0, -1048375, 4, 0, -1048374, 4, 0, -1048373, 4, 0, -1048372, 4, 0, -1048371, 4, 0, -1048370, 4, 0, -1048369, 4, 0, -982846, 4, 0, -982845, 4, 0, -982844, 4, 0, -982843, 4, 0, -982842, 4, 0, -982841, 4, 0, -982840, 4, 0, -982839, 4, 0, -982838, 4, 0, -982837, 4, 0, -982836, 4, 0, -982835, 4, 0, -982834, 4, 0, -982833, 4, 0, -917310, 4, 0, -917309, 4, 0, -917308, 4, 0, -917307, 4, 0, -917306, 4, 0, -917305, 4, 0, -917304, 4, 0, -917303, 4, 0, -917302, 4, 0, -917301, 4, 0, -917300, 4, 0, -917299, 4, 0, -917298, 4, 0, -917297, 4, 0, -851774, 4, 0, -851773, 4, 0, -851772, 4, 0, -851771, 4, 0, -851770, 4, 0, -851769, 4, 0, -851768, 4, 0, -851767, 4, 0, -851766, 4, 0, -851765, 4, 0, -851764, 4, 0, -851763, 4, 0, -851762, 4, 0, -851761, 4, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="Bouncer" type="Area2D" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 6269.75, -537.949 )
+scale = Vector2( 0.65625, 0.65625 )
+z_index = -1
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 3 )
+_sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+maxBounceStr = 900
+
+[node name="thornbush7" type="Sprite" parent="." index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( 6529.95, -757.651 )
+scale = Vector2( 0.041511, 0.041511 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FireSalamander2" type="Node2D" parent="." index="3" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( 6425.58, -731.432 )
+script = ExtResource( 8 )
+objToDestroyPath = NodePath("../thornbush7")
+destroyRadius = 140
+
+[connection signal="body_entered" from="Bouncer" to="Bouncer" method="_on_Bouncer_body_entered"]
+
+
