@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bitchy_Satu.png-0882b71ebf4ee40998c744a69d54e613.stex"
+path="res://.import/Bitchy_Grey_Grey.png-6a16d18e7904d694e6e37ade2834ad2d.stex"
 
 [deps]
 
-source_file="res://Enemies/Bitchy_Satu.png"
-dest_files=[ "res://.import/Bitchy_Satu.png-0882b71ebf4ee40998c744a69d54e613.stex" ]
+source_file="res://Enemies/Enemy/Bitchy_Grey_Grey.png"
+dest_files=[ "res://.import/Bitchy_Grey_Grey.png-6a16d18e7904d694e6e37ade2834ad2d.stex" ]
 
 [params]
 

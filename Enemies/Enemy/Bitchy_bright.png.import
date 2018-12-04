@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mealy_Variation.png-491c4f27f2bcd3212776dc5549b6d030.stex"
+path="res://.import/Bitchy_bright.png-f1b27e48baf5e2da0b0337009ca10141.stex"
 
 [deps]
 
-source_file="res://Enemies/Mealy_Variation.png"
-dest_files=[ "res://.import/Mealy_Variation.png-491c4f27f2bcd3212776dc5549b6d030.stex" ]
+source_file="res://Enemies/Enemy/Bitchy_bright.png"
+dest_files=[ "res://.import/Bitchy_bright.png-f1b27e48baf5e2da0b0337009ca10141.stex" ]
 
 [params]
 

@@ -15,20 +15,25 @@
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Objects/Obstacles/DamagingObstacle.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/asset_vine_thorns_1.png" type="Texture" id=15]
-[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Enemies/FollowingEnemy.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Enemies/Enemy/Enemy.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Enemies/FollowingEnemy/FollowingEnemy.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Objects/interactable NPCs/Biewe/Biewe.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Enemies/Snail.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Enemies/Worm.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Enemies/Bitchy_Linework_red.png" type="Texture" id=23]
-[ext_resource path="res://Enemies/Bitchy_bright.png" type="Texture" id=24]
-[ext_resource path="res://Enemies/Bitchy_Satu.png" type="Texture" id=25]
-[ext_resource path="res://Enemies/Mealy_Variation.png" type="Texture" id=26]
-[ext_resource path="res://Enemies/Snarki_Snark_Variation.png" type="Texture" id=27]
-[ext_resource path="res://Enemies/Muddy_Variation.png" type="Texture" id=28]
+[ext_resource path="res://Enemies/Snail/Snail.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Enemies/Enemy/Bitchy_Linework_red.png" type="Texture" id=23]
+[ext_resource path="res://Enemies/Enemy/Bitchy_bright.png" type="Texture" id=24]
+[ext_resource path="res://Enemies/Enemy/Bitchy_Satu.png" type="Texture" id=25]
+[ext_resource path="res://Enemies/Worm/Mealy_Variation.png" type="Texture" id=26]
+[ext_resource path="res://Enemies/Snail/Snarki_Snark_Variation.png" type="Texture" id=27]
+[ext_resource path="res://Enemies/Enemy/Muddy_Variation.png" type="Texture" id=28]
 [ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=29]
+
+
+
+
+
 
 [sub_resource type="Curve2D" id=1]
 

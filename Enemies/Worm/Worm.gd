@@ -1,4 +1,4 @@
-extends "res://Enemies/Enemy.gd"
+extends "res://Enemies/Enemy/Enemy.gd"
 #has all functions and variables from enemy class if not overwritten
 
 onready var diggedOut = false

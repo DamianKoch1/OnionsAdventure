@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy placeholder 2.png-c8f09a21dcfbe23e80f8743e33be656f.stex"
+path="res://.import/enemy placeholder 2.png-9101e2b60051bcda21edb1b27b577b93.stex"
 
 [deps]
 
-source_file="res://Enemies/enemy placeholder 2.png"
-dest_files=[ "res://.import/enemy placeholder 2.png-c8f09a21dcfbe23e80f8743e33be656f.stex" ]
+source_file="res://Enemies/FollowingEnemy/enemy placeholder 2.png"
+dest_files=[ "res://.import/enemy placeholder 2.png-9101e2b60051bcda21edb1b27b577b93.stex" ]
 
 [params]
 
