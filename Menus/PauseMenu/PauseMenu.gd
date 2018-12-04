@@ -46,3 +46,4 @@ func loadMainMenu():
 
 func restart():
 	get_tree().reload_current_scene()
+
