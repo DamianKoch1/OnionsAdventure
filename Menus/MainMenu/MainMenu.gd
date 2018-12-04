@@ -8,6 +8,7 @@ func _ready():
 	$YesNoOverlay/NoButton.connect("pressed", self, "noPressed")
 	$YesNoOverlay/YesButton.connect("pressed", self, "yesPressed")
 	$YesNoOverlay.hide()
+	global.diff = global.normal
 
 
 func _on_NewGameButton_pressed():
