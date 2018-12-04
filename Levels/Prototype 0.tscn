@@ -30,11 +30,6 @@
 [ext_resource path="res://Enemies/Enemy/Muddy_Variation.png" type="Texture" id=28]
 [ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=29]
 
-
-
-
-
-
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
