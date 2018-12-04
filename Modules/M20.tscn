@@ -4,11 +4,10 @@
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=3]
 
-[node name="M20" type="Node" index="0"]
+[node name="M20" type="Node2D" index="0"]
 
 [node name="TileMap22" type="TileMap" parent="." index="0"]
 
-position = Vector2( 0.7, 0 )
 scale = Vector2( 0.181818, 0.181818 )
 mode = 0
 tile_set = ExtResource( 1 )

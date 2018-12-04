@@ -5,11 +5,10 @@
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=4]
 
-[node name="M15" type="Node" index="0"]
+[node name="M15" type="Node2D" index="0"]
 
 [node name="TileMap16" type="TileMap" parent="." index="0"]
 
-position = Vector2( 0.7, 0 )
 scale = Vector2( 0.181818, 0.181818 )
 mode = 0
 tile_set = ExtResource( 1 )

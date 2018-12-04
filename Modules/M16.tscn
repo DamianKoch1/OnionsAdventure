@@ -4,11 +4,10 @@
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
 
-[node name="M16" type="Node" index="0"]
+[node name="M16" type="Node2D" index="0"]
 
 [node name="TileMap18" type="TileMap" parent="." index="0"]
 
-position = Vector2( 0.7, 0 )
 scale = Vector2( 0.181818, 0.181818 )
 mode = 0
 tile_set = ExtResource( 1 )
@@ -27,7 +26,7 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -2097021, 0, 0, -2097020, 1, 0, -2031485, 3, 0, -2031484, 4, 0, -2031483, 4, 0, -1965949, 3, 0, -1965948, 4, 0, -1965947, 4, 0, -1900413, 3, 0, -1900412, 4, 0, -1900411, 4, 0, -1507224, 1, 0, -1507223, 1, 0, -1507222, 1, 0, -1507221, 2, 0, -1441688, 4, 0, -1441687, 4, 0, -1441686, 4, 0, -1441685, 5, 0, -1376152, 7, 0, -1376151, 7, 0, -1376150, 7, 0, -1376149, 8, 0 )
-_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+_sections_unfolded = [ "Occluder", "Transform", "Z Index" ]
 
 [node name="moving Platform6" parent="." index="1" instance=ExtResource( 2 )]
 

@@ -21,11 +21,10 @@ extents = Vector2( 10, 11.4254 )
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
 
-[node name="M21" type="Node" index="0"]
+[node name="M21" type="Node2D" index="0"]
 
 [node name="TileMap23" type="TileMap" parent="." index="0"]
 
-position = Vector2( 0.7, 0 )
 scale = Vector2( 0.181818, 0.181818 )
 mode = 0
 tile_set = ExtResource( 1 )
