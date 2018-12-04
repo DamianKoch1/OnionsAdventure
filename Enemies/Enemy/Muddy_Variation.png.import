@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy placeholder 3.jpg-4e9ad76644c8ad7715b553953365d4e0.stex"
+path="res://.import/Muddy_Variation.png-a96c80597eea6f55d7fd88f4f4d34150.stex"
 
 [deps]
 
-source_file="res://Enemies/enemy placeholder 3.jpg"
-dest_files=[ "res://.import/enemy placeholder 3.jpg-4e9ad76644c8ad7715b553953365d4e0.stex" ]
+source_file="res://Enemies/Enemy/Muddy_Variation.png"
+dest_files=[ "res://.import/Muddy_Variation.png-a96c80597eea6f55d7fd88f4f4d34150.stex" ]
 
 [params]
 

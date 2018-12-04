@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Snarki_Snark_Variation.png-52e4d6ee4ef220a115ed2303f38ac498.stex"
+path="res://.import/Bitchy_Satu.png-2c9cbeab55a2f841a275b06d25acfb3e.stex"
 
 [deps]
 
-source_file="res://Enemies/Snarki_Snark_Variation.png"
-dest_files=[ "res://.import/Snarki_Snark_Variation.png-52e4d6ee4ef220a115ed2303f38ac498.stex" ]
+source_file="res://Enemies/Enemy/Bitchy_Satu.png"
+dest_files=[ "res://.import/Bitchy_Satu.png-2c9cbeab55a2f841a275b06d25acfb3e.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Muddy_Variation.png-1814f7a7f2580c43c486a0607db3ad1b.stex"
+path="res://.import/Snarki_Snark_Variation.png-5a68875ef8bcbbe49144a0ada623a525.stex"
 
 [deps]
 
-source_file="res://Enemies/Muddy_Variation.png"
-dest_files=[ "res://.import/Muddy_Variation.png-1814f7a7f2580c43c486a0607db3ad1b.stex" ]
+source_file="res://Enemies/Snail/Snarki_Snark_Variation.png"
+dest_files=[ "res://.import/Snarki_Snark_Variation.png-5a68875ef8bcbbe49144a0ada623a525.stex" ]
 
 [params]
 

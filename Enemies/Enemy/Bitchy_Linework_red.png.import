@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy placeholder 1.png-fe65810c89e92b1f0ab3391888dfffe4.stex"
+path="res://.import/Bitchy_Linework_red.png-4423bb8550805758ca84b5e80dd517ad.stex"
 
 [deps]
 
-source_file="res://Enemies/enemy placeholder 1.png"
-dest_files=[ "res://.import/enemy placeholder 1.png-fe65810c89e92b1f0ab3391888dfffe4.stex" ]
+source_file="res://Enemies/Enemy/Bitchy_Linework_red.png"
+dest_files=[ "res://.import/Bitchy_Linework_red.png-4423bb8550805758ca84b5e80dd517ad.stex" ]
 
 [params]
 
