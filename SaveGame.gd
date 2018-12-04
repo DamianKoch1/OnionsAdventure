@@ -1,12 +1,18 @@
 extends Node
 
-var savePath 
+var savePath = "user://save.cfg"  
 var saveFile
 
 var latestCheckpoint
 
+var loadPlayerState = false
+var NPCsavedCount
+var playerPosX
+var playerPosY
+
+
+
 func _ready():
-	savePath = "user://save.cfg" 
 	saveFile = ConfigFile.new()
 	
 
@@ -24,7 +30,7 @@ func loadGame():
 	global.diff = saveFile.get_value("SaveState", "difficulty") 
 	var path = "Levels/Level " + str(levelToLoadId) + ".tscn"
 	get_tree().change_scene(path)
-	#global.player.NPCsavedCount = saveFile.get_value("Save state", "NPCs saved") 
-	#global.player.position.x = saveFile.get_value("Save state", "spawnPosX")
-	#global.player.position.y= saveFile.get_value("Save state", "spawnPosY")
+	NPCsavedCount = saveFile.get_value("SaveState", "NPCsSaved") 
+	playerPosX = saveFile.get_value("SaveState", "spawnPosX")
+	playerPosY = saveFile.get_value("SaveState", "spawnPosY")
 	

@@ -243,24 +243,7 @@ position = Vector2( 2304, -32 )
 position = Vector2( -97.7994, 240.296 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Sprite" parent="." index="20" instance=ExtResource( 14 )]
-
-editor/display_folded = true
-position = Vector2( 512, 216.91 )
-scale = Vector2( 0.0289622, 0.0262167 )
-texture = ExtResource( 15 )
-
-[node name="CollisionShape2D" parent="Sprite/Collider" index="0"]
-
-position = Vector2( 0, 202.021 )
-scale = Vector2( 1, 1.17768 )
-
-[node name="CollisionShape2D" parent="Sprite/Trigger" index="0"]
-
-position = Vector2( -5.89149, 40.4562 )
-scale = Vector2( 0.10767, 0.149532 )
-
-[node name="Sprite2" parent="." index="21" instance=ExtResource( 14 )]
+[node name="Sprite2" parent="." index="20" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 639.613, 338.115 )
@@ -277,13 +260,13 @@ scale = Vector2( 1, 1.21401 )
 position = Vector2( 17.2571, 80.7451 )
 scale = Vector2( 0.111448, 0.15888 )
 
-[node name="Enemy5" parent="." index="22" instance=ExtResource( 16 )]
+[node name="Enemy5" parent="." index="21" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 2727.24, -183.48 )
 pathLooped = false
 
-[node name="Enemy2" parent="." index="23" instance=ExtResource( 16 )]
+[node name="Enemy2" parent="." index="22" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 1475.24, -38.1696 )
@@ -293,7 +276,7 @@ movespeed = 0.2
 
 curve = SubResource( 1 )
 
-[node name="FollowingEnemy" parent="." index="24" instance=ExtResource( 17 )]
+[node name="FollowingEnemy" parent="." index="23" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 position = Vector2( 2905.98, -38.2072 )
@@ -306,9 +289,13 @@ editor/display_folded = false
 
 editor/display_folded = false
 
-[node name="trappedNPC" parent="." index="25" instance=ExtResource( 18 )]
+[node name="trappedNPC" parent="." index="24" instance=ExtResource( 18 )]
 
 position = Vector2( 384, 224 )
+
+[node name="trappedNPC2" parent="." index="25" instance=ExtResource( 18 )]
+
+position = Vector2( 588.912, 224 )
 
 [node name="Camera" parent="." index="26" instance=ExtResource( 19 )]
 
@@ -685,7 +672,6 @@ scale = Vector2( 0.280875, 0.366181 )
 [editable path="EarthStone"]
 [editable path="EarthStone2"]
 [editable path="EarthStone3"]
-[editable path="Sprite"]
 [editable path="Sprite2"]
 [editable path="Enemy2"]
 [editable path="FollowingEnemy"]
