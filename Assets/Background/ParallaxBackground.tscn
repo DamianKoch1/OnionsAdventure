@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Background/BG_layer_2_part2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Background/BG_layer_2_part3.png" type="Texture" id=4]
 
-[node name="ParallaxBackground" type="ParallaxBackground"]
+[node name="ParallaxBackground" type="ParallaxBackground" index="0"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -61,33 +61,53 @@ scale = Vector2( 0.14593, 0.146019 )
 z_index = -99
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 644, 228, 2348, 1776 )
+region_rect = Rect2( 644, 228, 37920, 1776 )
 _sections_unfolded = [ "Region", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StoneM" type="Sprite" parent="ParallaxLayer2" index="1"]
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="." index="2"]
 
-position = Vector2( 350.128, 125.045 )
-scale = Vector2( 0.16205, 0.162149 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StoneM" type="Sprite" parent="ParallaxLayer3" index="0"]
+
+position = Vector2( -1275.52, 137.504 )
+scale = Vector2( 0.151469, 0.151561 )
 z_index = -99
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 940, 788, 1536, 1216 )
+region_rect = Rect2( 940, 788, 46080, 1216 )
 _sections_unfolded = [ "Region", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StoneS" type="Sprite" parent="ParallaxLayer2" index="2"]
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="." index="3"]
 
-position = Vector2( 575.806, 171.758 )
-scale = Vector2( 0.188653, 0.188768 )
+motion_scale = Vector2( 0.7, 0.7 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StoneS" type="Sprite" parent="ParallaxLayer4" index="0"]
+
+position = Vector2( -676.956, 146.257 )
+scale = Vector2( 0.274175, 0.274342 )
 z_index = -99
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 124, 1408, 1444, 596 )
+region_rect = Rect2( 124, 1276, 23840, 728 )
 _sections_unfolded = [ "Region", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
