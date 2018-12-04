@@ -8,13 +8,7 @@ export var normalDescription = "insert description for normal"
 export var hardDescription = "insert description for hard"
 
 func _ready():
-	match global.diff:
-		global.easy:
-			diffSlider.value = 0
-		global.normal:
-			diffSlider.value = 1
-		global.hard:
-			diffSlider.value = 2
+	diffSlider.value = global.diff
 	setDiffDescr()
 	hide()
 

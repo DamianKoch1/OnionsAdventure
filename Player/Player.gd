@@ -50,6 +50,11 @@ func _ready():
 	else:
 		health = normalHealth
 	global.currLevelId = int(get_parent().name)
+	if SaveGame.loadPlayerState == true:
+		SaveGame.loadPlayerState = false
+		NPCsavedCount = SaveGame.NPCsavedCount
+		position.x = SaveGame.playerPosX
+		position.y = SaveGame.playerPosY
 
 func _physics_process(delta):
 	if state != dead:
