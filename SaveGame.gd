@@ -27,7 +27,8 @@ func saveGame():
 func loadGame():
 	saveFile.load(savePath)
 	var levelToLoadId = saveFile.get_value("SaveState", "latestLevelId") 
-	global.diff = saveFile.get_value("SaveState", "difficulty") 
+	if saveFile.get_value("SaveState", "difficulty") != null:
+		global.diff = saveFile.get_value("SaveState", "difficulty") 
 	var path = "Levels/Level " + str(levelToLoadId) + ".tscn"
 	get_tree().change_scene(path)
 	NPCsavedCount = saveFile.get_value("SaveState", "NPCsSaved") 
