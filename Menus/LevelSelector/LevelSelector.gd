@@ -1,25 +1,9 @@
 extends Container
 
 
-func loadLevel():
-	var path = "Levels/Level " + str(global.currLevelId) + ".tscn"
-	get_tree().change_scene(path)
-
-
 func _on_MainMenuButton_pressed():
 	#hardcoded path because godot crashes when 2 scenes reference each other via exported packed scenes...
-	get_tree().change_scene("Menus/MainMenu.tscn")
-	pass
-
-
-func _on_Level1Button_pressed():
-	global.currLevelId = 1
-	loadLevel()
-
-
-func _on_Level2Button_pressed():
-	global.currLevelId = 2
-	loadLevel()
+	get_tree().change_scene("Menus/MainMenu/MainMenu.tscn")
 
 
 func _on_QuitButton_pressed():
@@ -27,7 +11,7 @@ func _on_QuitButton_pressed():
 
 
 func _on_OptionsButton_pressed():
-	pass # replace with function body
+	$OptionsOverlay.show()
 
 
 func _on_Level0Button_pressed():
