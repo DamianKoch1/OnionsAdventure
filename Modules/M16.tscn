@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/MovingPlatform/Movingplatform.gd" type="Script" id=3]
+[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=5]
 
 [node name="M16" type="Node2D" index="0"]
 
@@ -49,22 +51,33 @@ platformSpeed = 1.0
 position = Vector2( -0.661645, 214.701 )
 scale = Vector2( 2.94658, 2.70102 )
 
-[node name="moving Platform8" parent="." index="3" instance=ExtResource( 2 )]
+[node name="moving Platform8" type="Node2D" parent="." index="3"]
 
-position = Vector2( 4049.68, -1142.25 )
+editor/display_folded = true
+position = Vector2( 4054.57, -1248.95 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 platformSpeed = 1.0
 
-[node name="State2" parent="moving Platform8" index="2"]
+[node name="TileMap" parent="moving Platform8" index="0" instance=ExtResource( 4 )]
+
+tile_data = PoolIntArray( -2, 0, 0, -1, 1, 0, -65536, 1, 0, -65535, 2, 0, 65534, 1610612738, 0, 65535, 1610612737, 0, 0, 1610612737, 0, 1, 1610612736, 0 )
+
+[node name="State1" type="Position2D" parent="moving Platform8" index="1"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="State2" type="Position2D" parent="moving Platform8" index="2"]
 
 position = Vector2( 1.3235, 305.711 )
 scale = Vector2( 1.96437, 1.71883 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="Ladder3" parent="moving Platform8" index="3" instance=ExtResource( 3 )]
+[node name="Ladder3" parent="moving Platform8" index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 2.59277, 142.134 )
+position = Vector2( 2.59277, 143.362 )
 scale = Vector2( 1, 3.73036 )
 
 
 [editable path="moving Platform6"]
 [editable path="moving Platform7"]
-[editable path="moving Platform8"]
