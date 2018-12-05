@@ -12,7 +12,6 @@ export (float) var movespeed = 2
 export (bool) var pathLooped = true
 
 onready var stop = false
-onready var colliding = false
 onready var hideTimer = 0
 
 func _ready():
@@ -24,17 +23,12 @@ func _process(delta):
 	_unique_process(delta)
 
 func _unique_process(delta):
-	#start moving again when no longer colliding
-	if $EnemyPath/Enemy/Area2D.get_overlapping_bodies().size() == 1 && colliding == true:
-		colliding = false
-	
 	#reappear when hidden by biewe
 	hideTimer = max(hideTimer-delta, 0)
 	if stop == true && hideTimer == 0:
 		reappear()
-	
-	#move enemy if not stopped by biewe or colliding with box etc
-	if stop == false && colliding == false:
+	#move enemy if not stopped by biewe
+	if stop == false:
 		i += delta*movespeed
 		#move from a to b and then b to a if path isnt a loop
 		if pathLooped == false:
@@ -63,7 +57,6 @@ func reappear():
 	$EnemyPath/Enemy/Area2D/CollisionShape2D.disabled = false
 	
 func _on_Area2D_body_entered(body):
-	colliding = true
 	if body == global.player:
 		body.health -= 1
 
