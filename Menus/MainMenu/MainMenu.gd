@@ -1,6 +1,6 @@
 extends Container
 
-
+#hardcoded all scene paths because godot crashes if scenes reference each other using exported packedscenes
 onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 
 func _ready():
