@@ -45,6 +45,7 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
 [node name="Camera" parent="." index="3"]
 
+visible = false
 position = Vector2( 7.18484, 7.78357 )
 
 [node name="Spawnpoint" parent="." index="4"]

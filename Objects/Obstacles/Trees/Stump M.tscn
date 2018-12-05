@@ -1,62 +1,39 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Trees/asset_twig_left_1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Obstacles/Trees/BranchL.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Normal_NoBranchesA.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 447.881, 10 )
-
-[node name="stump m 7" type="Sprite"]
+[node name="stump m 7" type="Node2D" index="0"]
 
 scale = Vector2( 0.0765978, 0.0959247 )
-texture = ExtResource( 1 )
-centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="branch 1" type="Sprite" parent="." index="0"]
+[node name="Ast 3" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -310.711, 392.373 )
-texture = ExtResource( 2 )
-centered = false
-_sections_unfolded = [ "Offset" ]
+position = Vector2( -313.218, 349.167 )
+scale = Vector2( 4.00471, 1.96351 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="branch 1" index="0"]
+[node name="Ast 4" parent="." index="1" instance=ExtResource( 2 )]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
+position = Vector2( 1174.53, 504.698 )
+scale = Vector2( 2.99633, 1.6584 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="branch 1/StaticBody2D" index="0"]
+[node name="stump" type="Sprite" parent="." index="2"]
 
-build_mode = 0
-polygon = PoolVector2Array( 913.906, 322.579, 911.104, 139.098, 507.594, 47.357, 185.347, 13.7934, 11.6137, 9.31827, 14.4158, 96.5836, 314.246, 141.335, 686.932, 239.788 )
-one_way_collision = true
-
-[node name="branch 2" type="Sprite" parent="." index="1"]
-
-position = Vector2( 1127.71, 494.169 )
-scale = Vector2( 1.16478, 0.930097 )
+position = Vector2( 949.936, 596.213 )
+scale = Vector2( 3.283, 2.90836 )
 texture = ExtResource( 3 )
-centered = false
-_sections_unfolded = [ "Offset" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="branch 2" index="0"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump" index="0"]
 
+position = Vector2( -289.35, -205 )
+scale = Vector2( 0.3046, 0.343836 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -65,32 +42,10 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="branch 2/StaticBody2D" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 106.54, 310.559, 80.0831, 120.338, 431.996, 80.2121, 756.672, 22.926, 1055.26, 4.92596, 1050.56, 142.115, 785.924, 166.172, 576.625, 209.476, 456.338, 233.533, 165.613, 295.791 )
-one_way_collision = true
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="." index="2"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump/StaticBody2D2" index="0"]
 
 position = Vector2( 921.726, 621.795 )
 scale = Vector2( 37.0807, 54.671 )
 shape = SubResource( 1 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" index="1"]
-
-position = Vector2( 899.917, 1078.2 )
-scale = Vector2( 1.45442, 16.2295 )
-shape = SubResource( 2 )
 
 
