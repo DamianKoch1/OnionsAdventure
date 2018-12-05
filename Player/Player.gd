@@ -69,14 +69,14 @@ func _physics_process(delta):
 				motion.y = 0
 				setState(climb)
 				$CollisionShape2D.disabled = true
-				climbspeed *= 2
-				movespeed *= 2
+				climbspeed *= 2.5
+				movespeed *= 4
 			else:
 				print("Fly OFF")
 				$CollisionShape2D.disabled = false
 				setState(idle)
-				climbspeed /= 2
-				movespeed /= 2
+				climbspeed /= 2.5
+				movespeed /= 4
 			debugFly *= -1
 		if Input.is_action_just_pressed("debugGodmode"):
 			if debugGodmode == -1:
