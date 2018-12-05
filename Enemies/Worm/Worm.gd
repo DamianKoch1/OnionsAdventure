@@ -22,6 +22,7 @@ func _unique_process(delta):
 		i = min(i + delta, 1)
 		global_position.y = lerp(global_position.y, startpos.y, i)
 
+	
 
 func _on_Area2D_body_entered(body):
 	if body == global.player:
@@ -35,3 +36,9 @@ func digDown():
 func digOut():
 	diggedOut = true
 	i = 0
+
+func _on_Timer_timeout():
+	if diggedOut == false:
+		digOut()
+	else:
+		digDown()

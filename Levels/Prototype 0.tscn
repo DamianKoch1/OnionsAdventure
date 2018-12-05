@@ -515,7 +515,6 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 [node name="Worm4" parent="enemy color test" index="8" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 position = Vector2( 1100.19, 9.36528 )
 
 [node name="Enemy" parent="enemy color test/Worm4" index="0"]
