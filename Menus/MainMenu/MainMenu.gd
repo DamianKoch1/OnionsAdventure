@@ -9,9 +9,6 @@ func _ready():
 	global.diff = global.normal
 
 
-func _on_ConceptArtButton_pressed():
-	pass # replace with function body
-
 
 func _on_CreditsButton_pressed():
 	pass # replace with function body
@@ -32,3 +29,7 @@ func quit():
 func _on_PlayButton_pressed():
 	get_tree().change_scene_to(playMenu)
 
+
+
+func _on_ExtrasButton_pressed():
+	pass # replace with function body

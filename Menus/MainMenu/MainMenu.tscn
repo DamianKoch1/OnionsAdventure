@@ -93,9 +93,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -118.0
+margin_left = 42.0
 margin_top = -83.0
-margin_right = 138.0
+margin_right = 298.0
 margin_bottom = -51.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -113,15 +113,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="ConceptArtButton" type="Button" parent="." index="3"]
+[node name="ExtrasButton" type="Button" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -278.0
-margin_top = -51.0
-margin_right = -182.0
+margin_left = 42.0
+margin_top = -19.0
+margin_right = 298.0
 margin_bottom = 13.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -134,7 +134,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Concept Art (wip)"
+text = "Extras (wip)"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
@@ -145,9 +145,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -118.0
+margin_left = 42.0
 margin_top = 109.0
-margin_right = 138.0
+margin_right = 298.0
 margin_bottom = 141.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -171,10 +171,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 202.0
-margin_top = 141.0
-margin_right = 298.0
-margin_bottom = 173.0
+margin_left = 106.0
+margin_top = 173.0
+margin_right = 234.0
+margin_bottom = 205.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -197,10 +197,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 202.0
-margin_top = -115.0
-margin_right = 299.0
-margin_bottom = -83.0
+margin_left = 42.0
+margin_top = 45.0
+margin_right = 298.0
+margin_bottom = 77.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -231,7 +231,7 @@ margin_bottom = 74.0
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 
-[connection signal="pressed" from="ConceptArtButton" to="." method="_on_ConceptArtButton_pressed"]
+[connection signal="pressed" from="ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
 
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
 
