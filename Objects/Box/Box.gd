@@ -71,6 +71,7 @@ func attachTo(obj):
 		set_global_transform(transf)
 		rotation_degrees = 0
 
+#go to startposition on player respawn
 func resetPos():
 	global_position = startpos
 

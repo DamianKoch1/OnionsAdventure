@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/asset_wooden_box_1.png-2985a5a8b0264dae5b7b018a569eb4a6.stex"
+path="res://.import/Asset_Stump_Normal_NoBranchesA.png-0a5dc1883835a7cb35212f6e1d05c3e1.stex"
 
 [deps]
 
-source_file="res://Objects/Box/asset_wooden_box_1.png"
-dest_files=[ "res://.import/asset_wooden_box_1.png-2985a5a8b0264dae5b7b018a569eb4a6.stex" ]
+source_file="res://Objects/Obstacles/Trees/Asset_Stump_Normal_NoBranchesA.png"
+dest_files=[ "res://.import/Asset_Stump_Normal_NoBranchesA.png-0a5dc1883835a7cb35212f6e1d05c3e1.stex" ]
 
 [params]
 
