@@ -28,15 +28,10 @@ func _on_Area2D_body_entered(body):
 		body.health -= 1
 		digDown()
 
-func _on_detectRange_body_entered(body):
-	if body == global.player && diggedOut == false:
-		diggedOut = true
-		i = 0
-
-func _on_visionRange_body_entered(body):
-	if body == global.player && diggedOut == true:
-		digDown()
-
 func digDown():
 	diggedOut = false
+	i = 0
+
+func digOut():
+	diggedOut = true
 	i = 0
