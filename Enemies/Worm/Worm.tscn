@@ -65,6 +65,15 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 position = Vector2( 0, -24.8303 )
 
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
 [connection signal="body_entered" from="Enemy/Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
