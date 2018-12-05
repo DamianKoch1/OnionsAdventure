@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Objects/Obstacles/Stump M.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Obstacles/Stump S.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump S.tscn" type="PackedScene" id=3]
+
 
 [node name="M1" type="Node2D" index="0"]
 

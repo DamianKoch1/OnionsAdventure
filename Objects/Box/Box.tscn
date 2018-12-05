@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Objects/Box/Box.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Box/asset_wooden_box_1.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Box/Asset_Box_4A.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -13,7 +13,7 @@ extents = Vector2( 46.7717, 36.8304 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Box" type="KinematicBody2D"]
+[node name="Box" type="KinematicBody2D" index="0"]
 
 z_index = 50
 input_pickable = false
@@ -27,7 +27,8 @@ gravity = 12
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.101266, 0.109215 )
+position = Vector2( -0.156096, 9.53674e-007 )
+scale = Vector2( 0.312195, 0.313726 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 

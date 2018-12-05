@@ -6,10 +6,11 @@
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=6]
-[ext_resource path="res://Objects/Obstacles/Stump M.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=10]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

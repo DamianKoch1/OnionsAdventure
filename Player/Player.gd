@@ -8,9 +8,13 @@ var newAnim
 var state
 enum {idle, run, jump, fall, climb, dead}
 
+#node to attach to if airborne
 onready var worldNode = get_parent()
+
+#ray that finds downward object to attach to (movingplatforms etc)
 onready var ray = $RayCast2D
 
+#can jump for short time if walking off cliffs
 onready var ghostjumpTimeframe = 0
 export var maxGhostjumpDelay = 0.2
 
@@ -22,6 +26,7 @@ export var climbspeed = 200
 onready var debugGodmode = -1
 onready var debugFly = -1
 
+#has grace period (invincibility) after getting hit
 onready var gracePeriodTimer = 0
 export var gracePeriod = 2
 
