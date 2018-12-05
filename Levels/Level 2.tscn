@@ -12,20 +12,19 @@
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Objects/Ladder/asset_vine_1.png" type="Texture" id=13]
-[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Modules/M14.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Modules/M15.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Modules/M16.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Modules/M17.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Modules/M21.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Modules/M19.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Modules/M13.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Modules/M9v2.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Modules/M18.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Modules/M20.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modules/M14.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Modules/M15.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Modules/M16.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Modules/M17.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modules/M21.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Modules/M19.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Modules/M13.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Modules/M9v2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Modules/M18.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Modules/M20.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -36,6 +35,11 @@ extents = Vector2( 10, 11.4254 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
+
+[sub_resource type="StreamTexture" id=3]
+
+flags = 0
+load_path = "res://.import/asset_vine_1.png-f18d774a0e5971b4cb3aa3f9bcb25298.stex"
 
 [node name="Level 2" instance=ExtResource( 1 )]
 
@@ -294,49 +298,45 @@ scale = Vector2( 1, 3.73036 )
 
 [node name="icon" parent="Level specific/Ladder3" index="0"]
 
-texture = ExtResource( 13 )
+texture = SubResource( 3 )
 
-[node name="CollisionShape2D" parent="Level specific/Ladder3" index="1"]
-
-visible = true
-
-[node name="Thornbush" parent="Level specific" index="30" instance=ExtResource( 14 )]
+[node name="Thornbush" parent="Level specific" index="30" instance=ExtResource( 13 )]
 
 position = Vector2( 6887.54, -507.47 )
 
-[node name="Thornbush2" parent="Level specific" index="31" instance=ExtResource( 14 )]
+[node name="Thornbush2" parent="Level specific" index="31" instance=ExtResource( 13 )]
 
 position = Vector2( 6964.73, -507.47 )
 
-[node name="Thornbush3" parent="Level specific" index="32" instance=ExtResource( 14 )]
+[node name="Thornbush3" parent="Level specific" index="32" instance=ExtResource( 13 )]
 
 position = Vector2( 7037.02, -506.676 )
 
-[node name="Thornbush4" parent="Level specific" index="33" instance=ExtResource( 14 )]
+[node name="Thornbush4" parent="Level specific" index="33" instance=ExtResource( 13 )]
 
 position = Vector2( 7106.13, -506.279 )
 
-[node name="Thornbush5" parent="Level specific" index="34" instance=ExtResource( 14 )]
+[node name="Thornbush5" parent="Level specific" index="34" instance=ExtResource( 13 )]
 
 position = Vector2( 7172.87, -507.073 )
 
-[node name="Thornbush6" parent="Level specific" index="35" instance=ExtResource( 14 )]
+[node name="Thornbush6" parent="Level specific" index="35" instance=ExtResource( 13 )]
 
 position = Vector2( 7242.78, -507.47 )
 
-[node name="Thornbush7" parent="Level specific" index="36" instance=ExtResource( 14 )]
+[node name="Thornbush7" parent="Level specific" index="36" instance=ExtResource( 13 )]
 
 position = Vector2( 7307.13, -508.662 )
 
-[node name="Thornbush8" parent="Level specific" index="37" instance=ExtResource( 14 )]
+[node name="Thornbush8" parent="Level specific" index="37" instance=ExtResource( 13 )]
 
 position = Vector2( 7367.9, -508.662 )
 
-[node name="Thornbush12" parent="Level specific" index="38" instance=ExtResource( 14 )]
+[node name="Thornbush12" parent="Level specific" index="38" instance=ExtResource( 13 )]
 
 position = Vector2( 8935.45, -663.095 )
 
-[node name="Thornbush13" parent="Level specific" index="39" instance=ExtResource( 14 )]
+[node name="Thornbush13" parent="Level specific" index="39" instance=ExtResource( 13 )]
 
 position = Vector2( 9242.3, -665.607 )
 
@@ -347,67 +347,63 @@ scale = Vector2( 1, 3.73036 )
 
 [node name="icon" parent="Level specific/Ladder4" index="0"]
 
-texture = ExtResource( 13 )
+texture = SubResource( 3 )
 
-[node name="CollisionShape2D" parent="Level specific/Ladder4" index="1"]
-
-visible = true
-
-[node name="Thornbush9" parent="Level specific" index="41" instance=ExtResource( 14 )]
+[node name="Thornbush9" parent="Level specific" index="41" instance=ExtResource( 13 )]
 
 position = Vector2( 343.292, 42.3179 )
 
-[node name="Thornbush10" parent="Level specific" index="42" instance=ExtResource( 14 )]
+[node name="Thornbush10" parent="Level specific" index="42" instance=ExtResource( 13 )]
 
 position = Vector2( 276.392, 42.758 )
 
-[node name="Thornbush11" parent="Level specific" index="43" instance=ExtResource( 14 )]
+[node name="Thornbush11" parent="Level specific" index="43" instance=ExtResource( 13 )]
 
 position = Vector2( -262.1, -309.879 )
 
 [node name="Checkpoints" type="Node" parent="." index="6"]
 
-[node name="Checkpoint" parent="Checkpoints" index="0" instance=ExtResource( 15 )]
+[node name="Checkpoint" parent="Checkpoints" index="0" instance=ExtResource( 14 )]
 
 position = Vector2( 779.748, -227.949 )
 
-[node name="Checkpoint3" parent="Checkpoints" index="1" instance=ExtResource( 15 )]
+[node name="Checkpoint3" parent="Checkpoints" index="1" instance=ExtResource( 14 )]
 
 position = Vector2( 3259.75, -777.949 )
 
-[node name="Checkpoint4" parent="Checkpoints" index="2" instance=ExtResource( 15 )]
+[node name="Checkpoint4" parent="Checkpoints" index="2" instance=ExtResource( 14 )]
 
 position = Vector2( 5909.75, -747.949 )
 
-[node name="Checkpoint5" parent="Checkpoints" index="3" instance=ExtResource( 15 )]
+[node name="Checkpoint5" parent="Checkpoints" index="3" instance=ExtResource( 14 )]
 
 position = Vector2( 8522.77, -1035.47 )
 
-[node name="Checkpoint2" parent="Checkpoints" index="4" instance=ExtResource( 15 )]
+[node name="Checkpoint2" parent="Checkpoints" index="4" instance=ExtResource( 14 )]
 
 position = Vector2( 2183.09, -687.533 )
 
-[node name="M14" parent="." index="7" instance=ExtResource( 16 )]
+[node name="M14" parent="." index="7" instance=ExtResource( 15 )]
 
 position = Vector2( 10.252, -2.05054 )
 
-[node name="M15" parent="." index="8" instance=ExtResource( 17 )]
+[node name="M15" parent="." index="8" instance=ExtResource( 16 )]
 
 position = Vector2( 10.252, -2.05054 )
 
-[node name="M16" parent="." index="9" instance=ExtResource( 18 )]
+[node name="M16" parent="." index="9" instance=ExtResource( 17 )]
 
 position = Vector2( 10.252, -2.05054 )
 
-[node name="M17" parent="." index="10" instance=ExtResource( 19 )]
+[node name="M17" parent="." index="10" instance=ExtResource( 18 )]
 
 position = Vector2( 42.252, -2.05054 )
 
-[node name="M21" parent="." index="11" instance=ExtResource( 20 )]
+[node name="M21" parent="." index="11" instance=ExtResource( 19 )]
 
 position = Vector2( 10.252, -2.05054 )
 
-[node name="M19" parent="." index="12" instance=ExtResource( 21 )]
+[node name="M19" parent="." index="12" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
@@ -416,23 +412,23 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 10.24, -2.05 )
 
-[node name="M13" parent="." index="13" instance=ExtResource( 22 )]
+[node name="M13" parent="." index="13" instance=ExtResource( 21 )]
 
 position = Vector2( 10.252, -2.05054 )
 
-[node name="M9v2" parent="." index="14" instance=ExtResource( 23 )]
+[node name="M9v2" parent="." index="14" instance=ExtResource( 22 )]
 
 position = Vector2( 10.252, -2.05054 )
 
-[node name="M18" parent="." index="15" instance=ExtResource( 24 )]
+[node name="M18" parent="." index="15" instance=ExtResource( 23 )]
 
 position = Vector2( 10.252, -2.05054 )
 
-[node name="M20" parent="." index="16" instance=ExtResource( 25 )]
+[node name="M20" parent="." index="16" instance=ExtResource( 24 )]
 
 position = Vector2( 10.252, -2.05054 )
 
-[node name="ParallaxBackground" parent="." index="17" instance=ExtResource( 26 )]
+[node name="ParallaxBackground" parent="." index="17" instance=ExtResource( 25 )]
 
 [node name="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 

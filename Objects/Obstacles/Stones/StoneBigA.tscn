@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Obstacles/Stones/Asset_Stone_BigA.png" type="Texture" id=1]
+
+[node name="StoneBigA" type="Sprite" index="0"]
+
+scale = Vector2( 0.457747, 0.457747 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 55.6993, 257.797, 483.604, 257.133, 474.98, 181.504, 405.984, 170.226, 416.599, 120.469, 386.745, 35.5517, 331.018, 11.0052, 196.344, 74.6934, 178.432, 131.084, 120.051, 119.806, 33.8065, 171.552, 18.5479, 225.289 )
+
+

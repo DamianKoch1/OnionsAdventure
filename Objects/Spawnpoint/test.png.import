@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Stone_Small_4A.png-2d2027e954006bea2aa1b018ed6fec2e.stex"
+path="res://.import/test.png-91554c7b753a95b2e80e337ebdb1bab8.stex"
 
 [deps]
 
-source_file="res://Assets/Stones/Finished/Asset_Stone_Small_4A.png"
-dest_files=[ "res://.import/Asset_Stone_Small_4A.png-2d2027e954006bea2aa1b018ed6fec2e.stex" ]
+source_file="res://Objects/Spawnpoint/test.png"
+dest_files=[ "res://.import/test.png-91554c7b753a95b2e80e337ebdb1bab8.stex" ]
 
 [params]
 
