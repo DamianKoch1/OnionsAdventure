@@ -43,7 +43,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
 }
 
-[node name="Prototype 0" type="Node" index="0"]
+[node name="Prototype 0" type="Node"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -77,6 +77,7 @@ editor/display_folded = true
 position = Vector2( 270.264, 226.72 )
 z_index = 5
 z_as_relative = false
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 gracePeriod = 2
 normalHealth = 5
 hardHealth = 3

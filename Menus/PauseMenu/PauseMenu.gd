@@ -2,11 +2,10 @@ extends Container
 
 onready var paused = false
 
-export(PackedScene) var mainMenu
-var mainMenuPath
+onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
+
 
 func _ready():
-	mainMenuPath = mainMenu.resource_path
 	$YesNoOverlayMainMenu.connect("yesPressed", self, "loadMainMenu")
 	$YesNoOverlayRestart.connect("yesPressed", self, "restart")
 	hide()
@@ -42,8 +41,9 @@ func _on_MainMenuButton_pressed():
 
 
 func loadMainMenu():
-	get_tree().change_scene(mainMenuPath)
+	get_tree().change_scene_to(mainMenu)
 
 func restart():
-	get_tree().reload_current_scene()
+	var path = "Levels/Level " + str(global.currLevelId) + ".tscn"
+	get_tree().change_scene(path)
 
