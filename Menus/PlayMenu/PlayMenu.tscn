@@ -14,7 +14,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="PlayMenu" type="Container"]
+[node name="PlayMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -159,7 +159,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Continue"
+text = "Load Game"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
