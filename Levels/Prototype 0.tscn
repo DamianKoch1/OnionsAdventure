@@ -476,10 +476,6 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 editor/display_folded = true
 position = Vector2( 1225.37, 11.08 )
 
-[node name="Enemy" parent="enemy color test/Worm2" index="0"]
-
-editor/display_folded = false
-
 [node name="Sprites" parent="enemy color test/Worm2/Enemy" index="1"]
 
 editor/display_folded = false
@@ -497,10 +493,6 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 editor/display_folded = true
 position = Vector2( 1137.92, 10.2227 )
 
-[node name="Enemy" parent="enemy color test/Worm3" index="0"]
-
-editor/display_folded = false
-
 [node name="Sprites" parent="enemy color test/Worm3/Enemy" index="1"]
 
 editor/display_folded = false
@@ -516,10 +508,6 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 [node name="Worm4" parent="enemy color test" index="8" instance=ExtResource( 21 )]
 
 position = Vector2( 1100.19, 9.36528 )
-
-[node name="Enemy" parent="enemy color test/Worm4" index="0"]
-
-editor/display_folded = false
 
 [node name="Sprites" parent="enemy color test/Worm4/Enemy" index="1"]
 
