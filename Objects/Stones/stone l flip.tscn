@@ -2,9 +2,8 @@
 
 [ext_resource path="res://Assets/Stones/asset_stone_large_1.png" type="Texture" id=1]
 
-[node name="stone l2" type="Node2D"]
+[node name="stone l2" type="Node2D" index="0"]
 
-editor/display_folded = true
 position = Vector2( 10034.5, 373.93 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
