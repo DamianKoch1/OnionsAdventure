@@ -1,7 +1,6 @@
 extends Container
 
 onready var levelSelector = preload("res://Menus/LevelSelector/LevelSelector.tscn")
-onready var newGamePanels = load("res://Menus/StoryPanels/NewGamePanels/NewGamePanels.tscn")
 onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 
 func _on_ContinueButton_pressed():
@@ -21,5 +20,7 @@ func _on_BackButton_pressed():
 
 
 func _on_NewGameButton_pressed():
+	global.newGame = true
+	var newGamePanels = load("res://Menus/StoryPanels/NewGamePanels/NewGamePanels.tscn")
 	get_tree().change_scene_to(newGamePanels)
 

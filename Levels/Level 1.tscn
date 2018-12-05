@@ -44,6 +44,10 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
 position = Vector2( 7.18484, 7.78357 )
 
+[node name="OptionsOverlay" parent="Camera/PauseMenu" index="8"]
+
+visible = true
+
 [node name="Spawnpoint" parent="." index="4"]
 
 position = Vector2( -207.215, 79.8556 )
@@ -169,6 +173,8 @@ scale = Vector2( 0.294732, 0.294732 )
 region_rect = Rect2( -1820, 4, 77136, 2000 )
 
 
+[editable path="Camera"]
+[editable path="Camera/PauseMenu"]
 [editable path="M1"]
 [editable path="M8"]
 [editable path="Level specific/FireS3"]

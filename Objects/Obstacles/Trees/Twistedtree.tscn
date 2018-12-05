@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Objects/Obstacles/Trees/asset_Tree_Magical_New_2A.png" type="Texture" id=1]
 
-[node name="TwistedTree" type="Sprite" index="0"]
+[node name="TwistedTree" type="Sprite"]
 
 scale = Vector2( 0.418933, 0.418933 )
 texture = ExtResource( 1 )

@@ -43,7 +43,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
 }
 
-[node name="Prototype 0" type="Node" index="0"]
+[node name="Prototype 0" type="Node"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -165,7 +165,7 @@ scale = Vector2( 3.2, 4.8 )
 
 [node name="StoneMedium3A" parent="." index="8" instance=ExtResource( 7 )]
 
-position = Vector2( 699.216, 372.25 )
+position = Vector2( 720, 240 )
 scale = Vector2( 0.283225, 0.25 )
 
 [node name="EarthStone5" type="Node2D" parent="." index="9"]
@@ -241,7 +241,7 @@ position = Vector2( 1380.72, -38.8589 )
 
 [node name="Checkpoint3" parent="." index="19" instance=ExtResource( 13 )]
 
-position = Vector2( 703.475, 222.183 )
+position = Vector2( 550, 100 )
 
 [node name="Checkpoint2" parent="." index="20" instance=ExtResource( 13 )]
 
@@ -570,9 +570,9 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 position = Vector2( 858.342, -4.85547 )
 scale = Vector2( 0.280875, 0.366181 )
 
-[node name="Obstacle" parent="." index="34" instance=ExtResource( 27 )]
+[node name="TwistedTree" parent="." index="34" instance=ExtResource( 27 )]
 
-position = Vector2( 297.892, -88.4203 )
+position = Vector2( 240, -80 )
 
 [node name="stump m 7" parent="." index="35" instance=ExtResource( 28 )]
 
