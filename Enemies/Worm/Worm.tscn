@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Enemies/Worm/Worm.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Worm/enemy placeholder 4.png" type="Texture" id=2]
@@ -6,7 +6,12 @@
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 38.3767, 36.5009 )
+extents = Vector2( 38.3767, 32.2044 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.8834, 30.304 )
 
 [node name="Worm" type="Node2D" groups=[
 "Enemies",
@@ -20,7 +25,6 @@ pathLooped = true
 
 [node name="Enemy" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_group_": true
@@ -60,6 +64,24 @@ position = Vector2( 0.1767, 0.695304 )
 scale = Vector2( 0.16899, 0.201866 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enemy" index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/StaticBody2D" index="0"]
+
+position = Vector2( -0.243919, 3.41125 )
+rotation = -0.000132151
+scale = Vector2( 0.477134, 0.394477 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="diggedOutPos" type="Position2D" parent="." index="1"]
 
