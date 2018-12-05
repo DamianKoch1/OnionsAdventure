@@ -3,7 +3,7 @@
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Spawnpoint/test.png" type="Texture" id=2]
 
-[node name="Spawnpoint" type="Node2D" index="0"]
+[node name="Spawnpoint" type="Node2D"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
