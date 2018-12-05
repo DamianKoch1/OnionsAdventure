@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menus/PlayMenu/PlayMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/LevelSelector/LevelSelector.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Gradient" id=1]
 
@@ -15,7 +16,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="PlayMenu" type="Container"]
+[node name="PlayMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -35,6 +36,7 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
 levelSelector = ExtResource( 2 )
+newGamePanels = ExtResource( 3 )
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
@@ -135,7 +137,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "New Game (wip)"
+text = "New Game"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
@@ -218,7 +220,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 3 )]
+[node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 4 )]
 
 visible = false
 margin_left = -21.0

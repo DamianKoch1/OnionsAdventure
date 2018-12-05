@@ -312,6 +312,7 @@ scale = Vector2( 1, 2.34207 )
 [node name="Checkpoint" parent="." index="17" instance=ExtResource( 12 )]
 
 position = Vector2( 2734.01, 17 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Thornbush" parent="." index="18" instance=ExtResource( 13 )]
 

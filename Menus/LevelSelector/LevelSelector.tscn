@@ -111,7 +111,7 @@ group = null
 text = "Back"
 flat = false
 align = 1
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "custom_styles" ]
 
 [node name="Level0Button" type="Button" parent="." index="3"]
 

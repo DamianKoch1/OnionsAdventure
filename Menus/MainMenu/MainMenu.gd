@@ -1,10 +1,9 @@
 extends Container
 
-export(PackedScene) var playMenu
-var playMenuPath
+
+onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 
 func _ready():
-	playMenuPath = playMenu.resource_path
 	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
 	$YesNoOverlayQuit.hide()
 	global.diff = global.normal
@@ -31,4 +30,5 @@ func quit():
 
 
 func _on_PlayButton_pressed():
-	get_tree().change_scene(playMenuPath)
+	get_tree().change_scene_to(playMenu)
+

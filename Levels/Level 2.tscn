@@ -41,7 +41,7 @@ extents = Vector2( 447.881, 10 )
 flags = 0
 load_path = "res://.import/asset_vine_1.png-f18d774a0e5971b4cb3aa3f9bcb25298.stex"
 
-[node name="Level 2" instance=ExtResource( 1 )]
+[node name="Level 2" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( -10.252, 2.05054 )
 _sections_unfolded = [ "Transform" ]
@@ -63,6 +63,7 @@ _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 [node name="Spawnpoint" parent="." index="4"]
 
 position = Vector2( -228.585, 52.7896 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Level specific" type="Node" parent="." index="5"]
 
@@ -184,54 +185,67 @@ position = Vector2( 2226.72, -70.1341 )
 
 [node name="Trap6" parent="Level specific" index="9" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 2385.56, -70.5107 )
 
 [node name="Trap7" parent="Level specific" index="10" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 2538.92, -70.462 )
 
 [node name="Trap8" parent="Level specific" index="11" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 2695.05, -69.5595 )
 
 [node name="Trap9" parent="Level specific" index="12" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 2852.99, -68.657 )
 
 [node name="Trap10" parent="Level specific" index="13" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 3010.82, -69.2557 )
 
 [node name="Trap11" parent="Level specific" index="14" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 3167.69, -69.2557 )
 
 [node name="Trap13" parent="Level specific" index="15" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 3327.1, -69.7961 )
 
 [node name="Trap14" parent="Level specific" index="16" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 3481.1, -69.7961 )
 
 [node name="Trap15" parent="Level specific" index="17" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 3635.1, -69.7961 )
 
 [node name="Trap16" parent="Level specific" index="18" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 3788.56, -69.7961 )
 
 [node name="Trap17" parent="Level specific" index="19" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 3943.65, -69.7961 )
 
 [node name="Trap18" parent="Level specific" index="20" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 4098.73, -70.3364 )
 
 [node name="moving Platform9" parent="Level specific" index="21" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 position = Vector2( 5259.75, -989.449 )
 platformSpeed = 1.0
 
@@ -251,6 +265,7 @@ position = Vector2( 5679.75, -747.949 )
 
 [node name="Bouncer3" parent="Level specific" index="23" instance=ExtResource( 10 )]
 
+editor/display_folded = true
 position = Vector2( 7299.14, -1009.79 )
 scale = Vector2( 0.65625, 0.65625 )
 
@@ -261,10 +276,12 @@ position = Vector2( 7575.97, -1298.03 )
 
 [node name="Trap20" parent="Level specific" index="25" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 7814.72, -992.969 )
 
 [node name="Bouncer5" parent="Level specific" index="26" instance=ExtResource( 10 )]
 
+editor/display_folded = true
 position = Vector2( 9476.78, -626.221 )
 scale = Vector2( 0.65625, 0.65625 )
 
@@ -342,6 +359,7 @@ position = Vector2( 9242.3, -665.607 )
 
 [node name="Ladder4" parent="Level specific" index="40" instance=ExtResource( 12 )]
 
+editor/display_folded = true
 position = Vector2( 10963.4, -1167.68 )
 scale = Vector2( 1, 3.73036 )
 
@@ -366,6 +384,7 @@ position = Vector2( -262.1, -309.879 )
 [node name="Checkpoint" parent="Checkpoints" index="0" instance=ExtResource( 14 )]
 
 position = Vector2( 779.748, -227.949 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Checkpoint3" parent="Checkpoints" index="1" instance=ExtResource( 14 )]
 
