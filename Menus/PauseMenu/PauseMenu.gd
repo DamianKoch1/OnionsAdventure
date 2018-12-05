@@ -6,7 +6,6 @@ onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 
 
 func _ready():
-	print(global.newGame)
 	$YesNoOverlayMainMenu.connect("yesPressed", self, "loadMainMenu")
 	$YesNoOverlayRestart.connect("yesPressed", self, "restart")
 	if global.newGame == false:
