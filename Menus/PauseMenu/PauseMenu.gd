@@ -10,26 +10,32 @@ func _ready():
 	$YesNoOverlayMainMenu.connect("yesPressed", self, "loadMainMenu")
 	$YesNoOverlayRestart.connect("yesPressed", self, "restart")
 	if global.newGame == false:
-		hide()
-		get_tree().paused = true
-	else:
 		get_tree().paused = false
+		hide()
+	else:
+		paused = true
+		get_tree().paused = true
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
-		if paused == false:
-			paused = true
-			show()
-			get_tree().paused = true
+		if $OptionsOverlay.visible == false:
+			if paused == false:
+				paused = true
+				show()
+				get_tree().paused = true
+			else:
+				paused = false
+				hide()
+				get_tree().paused = false
 		else:
-			paused = false
-			hide()
-			get_tree().paused = false
+			$OptionsOverlay.hide()
+			global.newGame = false
 
 func _on_ResumeButton_pressed():
 	paused = false
-	hide()
 	get_tree().paused = false
+	hide()
+	
 
 
 func _on_RestartButton_pressed():

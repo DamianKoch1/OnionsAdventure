@@ -21,6 +21,5 @@ func _on_BackButton_pressed():
 
 func _on_NewGameButton_pressed():
 	global.newGame = true
-	var newGamePanels = load("res://Menus/StoryPanels/NewGamePanels/NewGamePanels.tscn")
-	get_tree().change_scene_to(newGamePanels)
+	get_tree().change_scene("res://Menus/StoryPanels/NewGamePanels/NewGamePanels.tscn")
 

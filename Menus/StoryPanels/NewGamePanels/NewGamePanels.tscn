@@ -153,12 +153,15 @@ tracks/3/keys = {
 } ]
 }
 
-[node name="NewGamePanels" type="Node"]
+[node name="NewGamePanels" type="Node" index="0"]
 
+pause_mode = 2
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
+pause_mode = 2
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
@@ -168,9 +171,11 @@ anims/1to2 = SubResource( 1 )
 anims/2to3 = SubResource( 2 )
 anims/3 = SubResource( 3 )
 blend_times = [  ]
+_sections_unfolded = [ "Pause" ]
 
 [node name="Panel" type="Panel" parent="." index="1"]
 
+pause_mode = 2
 modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0

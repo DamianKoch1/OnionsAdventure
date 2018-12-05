@@ -13,6 +13,7 @@ func _ready():
 	if global.newGame == false:
 		hide()
 
+
 func setDiffDescr():
 	match global.diff:
 		global.easy:
@@ -23,6 +24,7 @@ func setDiffDescr():
 			diffDescription.text = hardDescription
 
 func _on_BackButton_pressed():
+	global.newGame = false
 	hide()
 
 func _on_DiffSlider_value_changed(value):
