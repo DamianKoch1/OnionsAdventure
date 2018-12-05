@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Stone_BigA.png-b7d4e039391b03b88abb6464f7b7c5e3.stex"
+path="res://.import/Asset_Stone_Inamovable_1A.png-ecfce0b3a10acb4bbf23a18e10b9d222.stex"
 
 [deps]
 
-source_file="res://Assets/Stones/Finished/Asset_Stone_BigA.png"
-dest_files=[ "res://.import/Asset_Stone_BigA.png-b7d4e039391b03b88abb6464f7b7c5e3.stex" ]
+source_file="res://Objects/Obstacles/Stones/Asset_Stone_Inamovable_1A.png"
+dest_files=[ "res://.import/Asset_Stone_Inamovable_1A.png-ecfce0b3a10acb4bbf23a18e10b9d222.stex" ]
 
 [params]
 

@@ -42,7 +42,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
 }
 
-[node name="Prototype 0" type="Node"]
+[node name="Prototype 0" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -196,7 +196,7 @@ _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 [node name="Spawnpoint" parent="." index="10" instance=ExtResource( 9 )]
 
 position = Vector2( 160, 224 )
-scale = Vector2( 1.73437, 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Rope" parent="." index="11" instance=ExtResource( 10 )]
 
@@ -230,18 +230,23 @@ z_index = 5
 
 [node name="Checkpoint" parent="." index="17" instance=ExtResource( 12 )]
 
-position = Vector2( 832, -32 )
+position = Vector2( 1380.72, -38.8589 )
 
-[node name="Checkpoint2" parent="." index="18" instance=ExtResource( 12 )]
+[node name="Checkpoint3" parent="." index="18" instance=ExtResource( 12 )]
+
+position = Vector2( 703.475, 222.183 )
+
+[node name="Checkpoint2" parent="." index="19" instance=ExtResource( 12 )]
 
 position = Vector2( 2304, -32 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Trap" parent="." index="19" instance=ExtResource( 13 )]
+[node name="Trap" parent="." index="20" instance=ExtResource( 13 )]
 
 position = Vector2( -97.7994, 240.296 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Sprite2" parent="." index="20" instance=ExtResource( 14 )]
+[node name="Sprite2" parent="." index="21" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 639.613, 338.115 )
@@ -258,13 +263,13 @@ scale = Vector2( 1, 1.21401 )
 position = Vector2( 17.2571, 80.7451 )
 scale = Vector2( 0.111448, 0.15888 )
 
-[node name="Enemy5" parent="." index="21" instance=ExtResource( 16 )]
+[node name="Enemy5" parent="." index="22" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 2727.24, -183.48 )
 pathLooped = false
 
-[node name="Enemy2" parent="." index="22" instance=ExtResource( 16 )]
+[node name="Enemy2" parent="." index="23" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 1475.24, -38.1696 )
@@ -274,44 +279,44 @@ movespeed = 0.2
 
 curve = SubResource( 1 )
 
-[node name="Enemy" parent="." index="23" instance=ExtResource( 16 )]
+[node name="Enemy" parent="." index="24" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 position = Vector2( 2905.98, -38.2072 )
 
-[node name="trappedNPC" parent="." index="24" instance=ExtResource( 17 )]
+[node name="trappedNPC" parent="." index="25" instance=ExtResource( 17 )]
 
-position = Vector2( 384, 224 )
+position = Vector2( 229.348, 334.261 )
 
-[node name="trappedNPC2" parent="." index="25" instance=ExtResource( 17 )]
+[node name="trappedNPC2" parent="." index="26" instance=ExtResource( 17 )]
 
-position = Vector2( 588.912, 224 )
+position = Vector2( 488.675, 341.421 )
 
-[node name="Camera" parent="." index="26" instance=ExtResource( 18 )]
+[node name="Camera" parent="." index="27" instance=ExtResource( 18 )]
 
 editor/display_folded = true
 upDownSpeed = 0.05
 upDownAmount = 100
 
-[node name="Biewe" parent="." index="27" instance=ExtResource( 19 )]
+[node name="Biewe" parent="." index="28" instance=ExtResource( 19 )]
 
 position = Vector2( 2644.2, -108.481 )
 
-[node name="FireSalamander" parent="." index="28" instance=ExtResource( 6 )]
+[node name="FireSalamander" parent="." index="29" instance=ExtResource( 6 )]
 
 position = Vector2( 1697.53, -39.5678 )
 
-[node name="Snail" parent="." index="29" instance=ExtResource( 20 )]
+[node name="Snail" parent="." index="30" instance=ExtResource( 20 )]
 
 position = Vector2( 2503.85, 22.5375 )
 movespeed = 0.5
 pathLooped = false
 
-[node name="Worm" parent="." index="30" instance=ExtResource( 21 )]
+[node name="Worm" parent="." index="31" instance=ExtResource( 21 )]
 
 position = Vector2( 1175.64, 12.7948 )
 
-[node name="enemy color test" type="Node2D" parent="." index="31"]
+[node name="enemy color test" type="Node2D" parent="." index="32"]
 
 [node name="Enemy" parent="enemy color test" index="0" instance=ExtResource( 16 )]
 
@@ -566,7 +571,7 @@ region_enabled = true
 region_rect = Rect2( 904, 108, 460, 256 )
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
-[node name="ParallaxBackground" parent="." index="32" instance=ExtResource( 27 )]
+[node name="ParallaxBackground" parent="." index="33" instance=ExtResource( 27 )]
 
 [node name="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 

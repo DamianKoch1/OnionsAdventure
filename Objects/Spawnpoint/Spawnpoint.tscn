@@ -1,24 +1,20 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Spawnpoint/asset_respawn_crystal.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Spawnpoint/test.png" type="Texture" id=2]
 
 [node name="Spawnpoint" type="Node2D" index="0"]
 
-position = Vector2( 15, 10 )
-scale = Vector2( 2.2367, 1.49113 )
+position = Vector2( 16, 16 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Visibility" ]
 
-[node name="icon" type="Sprite" parent="." index="0"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( -32, -32 )
-scale = Vector2( 0.0375587, 0.0522449 )
+position = Vector2( -0.112274, -0.106319 )
+scale = Vector2( 0.224561, 0.212625 )
 texture = ExtResource( 2 )
-centered = false
-_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+_sections_unfolded = [ "Visibility" ]
 
 
