@@ -4,6 +4,7 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
 
+
 [node name="M10" type="Node2D" index="0"]
 
 [node name="TileMap11" type="TileMap" parent="." index="0"]
@@ -26,7 +27,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -65277, 0, 0, -65276, 1, 0, -65275, 1, 0, -65274, 1, 0, -65273, 1, 0, -65272, 1, 0, -65271, 1, 0, -65270, 1, 0, -65269, 2, 0, 259, 3, 0, 260, 4, 0, 261, 4, 0, 262, 4, 0, 263, 4, 0, 264, 4, 0, 265, 4, 0, 266, 4, 0, 267, 1610612739, 0, 65795, 6, 0, 65796, 7, 0, 65797, 7, 0, 65798, 7, 0, 65799, 7, 0, 65800, 7, 0, 65801, 7, 0, 65802, 7, 0, 65803, 8, 0 )
+tile_data = PoolIntArray( -327424, 0, 0, -327423, 2, 0, -261888, 6, 0, -261887, 8, 0, -65277, 0, 0, -65276, 1, 0, -65275, 1, 0, -65274, 1, 0, -65273, 1, 0, -65272, 1, 0, -65271, 1, 0, -65270, 1, 0, -65269, 2, 0, 259, 3, 0, 260, 4, 0, 261, 4, 0, 262, 4, 0, 263, 4, 0, 264, 4, 0, 265, 4, 0, 266, 4, 0, 267, 1610612739, 0, 65795, 6, 0, 65796, 7, 0, 65797, 7, 0, 65798, 7, 0, 65799, 7, 0, 65800, 7, 0, 65801, 7, 0, 65802, 7, 0, 65803, 8, 0 )
 _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
 [node name="stump m 24" parent="." index="1" instance=ExtResource( 2 )]

@@ -53,7 +53,7 @@ objToDestroyPath = NodePath("../../Thornbush")
 [node name="Trap4" parent="." index="3" instance=ExtResource( 5 )]
 
 editor/display_folded = true
-position = Vector2( 1718.34, -200.87 )
+position = Vector2( 1710.15, -193.937 )
 
 [node name="Thornbush" parent="." index="4" instance=ExtResource( 6 )]
 
