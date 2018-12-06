@@ -1,9 +1,7 @@
 extends Sprite
 
-onready var spawnpoint = get_parent().find_node("Spawnpoint")
-
-
+#make player lose 1hp if he touches this
 func _on_Trigger_body_entered(body):
-	if body.name == "Onion":
+	if body == global.player:
 		body.health -= 1
 

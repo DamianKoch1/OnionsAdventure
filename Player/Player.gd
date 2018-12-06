@@ -2,16 +2,19 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 var motion = Vector2()
+
 var anim
 var newAnim
 var state
 enum {idle, run, jump, fall, climb, dead}
 
+#node to attach to if airborne
 onready var worldNode = get_parent()
+
+#ray that finds downward object to attach to (movingplatforms etc)
 onready var ray = $RayCast2D
 
-
-
+#can jump for short time if walking off cliffs
 onready var ghostjumpTimeframe = 0
 export var maxGhostjumpDelay = 0.2
 
@@ -23,13 +26,19 @@ export var climbspeed = 200
 onready var debugGodmode = -1
 onready var debugFly = -1
 
-onready var gracePeriod = 0
+#has grace period (invincibility) after getting hit
+onready var gracePeriodTimer = 0
+export var gracePeriod = 2
 
+#rope player attaches to if climbing on it, attach cooldown to save cpu
 var rope
 var ropeAttachCD = 0
 
 export var health = 3 setget setHealth, getHealth
+export var normalHealth = 5
+export var hardHealth = 3
 
+#signals other objects react to
 signal noHp
 signal loseHp
 signal changeHp
@@ -37,75 +46,42 @@ signal NPCsaved
 
 var NPCsavedCount = 0
 
-#gets called if health value is changed
-func setHealth(newHealth):
-	if debugGodmode == -1 && gracePeriod == 0:
-		var oldHealth = health
-		health = newHealth
-		if newHealth != oldHealth:
-			emit_signal("changeHp")
-			if newHealth < oldHealth :
-				gracePeriod = 2
-				emit_signal("loseHp")
-		if health <= 0:
-			setState(dead)
-			get_tree().reload_current_scene()
-
-func getHealth():
-	return health
-
-func setState(newState):
-	#set current animation on state changes
-	state = newState
-	match state:
-		idle:
-			newAnim = "Onion_Idle"
-		run:
-			newAnim = "Onion_Walk"
-		jump:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			newAnim = "Onion_JumpUp"
-		fall:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			newAnim = "Onion_JumpDown"
-			
-		climb:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			#cimb anim?
-			newAnim = "Onion_Idle"
-		dead:
-			#death anim
-			rotation_degrees = 90
-			$AnimationPlayer.stop()
 
 func _ready():
+	global.player = self
 	setState(idle)
-	health = global.maxHealth
+	if global.diff == global.hard:
+		health = hardHealth
+	else:
+		health = normalHealth
 	global.currLevelId = int(get_parent().name)
-	
-
+	if SaveGame.loadPlayerState == true:
+		SaveGame.loadPlayerState = false
+		NPCsavedCount = SaveGame.NPCsavedCount
+		position.x = SaveGame.playerPosX
+		position.y = SaveGame.playerPosY
 
 func _physics_process(delta):
 	if state != dead:
-		gracePeriod = max(gracePeriod - delta, 0)
+		#reducing cooldowns
+		gracePeriodTimer = max(gracePeriodTimer - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
+		
 		#debug fly and godmode
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == -1:
 				print("Fly ON")
-				$CollisionShape2D.disabled = true
+				motion.y = 0
 				setState(climb)
-				climbspeed *= 2
-				movespeed *= 2
+				$CollisionShape2D.disabled = true
+				climbspeed *= 2.5
+				movespeed *= 4
 			else:
 				print("Fly OFF")
 				$CollisionShape2D.disabled = false
-				setState(fall)
-				climbspeed /= 2
-				movespeed /= 2
+				setState(idle)
+				climbspeed /= 2.5
+				movespeed /= 4
 			debugFly *= -1
 		if Input.is_action_just_pressed("debugGodmode"):
 			if debugGodmode == -1:
@@ -129,7 +105,7 @@ func _physics_process(delta):
 				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
-		#climbing
+		#climbing, attach to rope when climbing, var rope assigned by rope/ladder
 		elif state == climb:
 			if rope != null:
 				var transf = get_global_transform()
@@ -161,16 +137,17 @@ func _physics_process(delta):
 		else:	
 			motion.x = 0
 		
+		#ghostjump
 		if  ghostjumpTimeframe!= 0:
 			if Input.is_action_just_pressed("jump"):
 				motion.y = -jumpheight
 				ghostjumpTimeframe = 0
 		
-		if ray.is_colliding() && global_position.distance_to(ray.get_collision_point()) <= 30 && abs(motion.y) <= 70:
-			if motion.x == 0 && state != climb:
-				setState(idle)
-				if Input.is_action_just_pressed("jump"):
-					motion.y = -jumpheight
+		#jump
+		if is_on_floor() && motion.x == 0 && state != climb:
+			setState(idle)
+			if Input.is_action_just_pressed("jump"):
+				motion.y = -jumpheight
 		else:
 			if state != climb:
 				if motion.y > 40:
@@ -179,16 +156,69 @@ func _physics_process(delta):
 					setState(jump)
 		motion = move_and_slide(motion, UP)
 
+#gets called if health value is changed
+func setHealth(newHealth):
+	if debugGodmode == -1 && gracePeriodTimer == 0:
+		var oldHealth = health
+		if global.diff != global.easy:
+			health = newHealth
+		else:
+			health = normalHealth
+		if newHealth != oldHealth:
+			emit_signal("changeHp")
+			if newHealth < oldHealth :
+				gracePeriodTimer = gracePeriod
+				emit_signal("loseHp")
+		#restart from level start if player completely dies
+		if health <= 0:
+#			setState(dead)
+			get_tree().reload_current_scene()
+	
+
+#gets called if health value is accessed from other script
+func getHealth():
+	return health
+
+func setState(newState):
+	#set current animation on state changes, scale sets prevent scale glitches when attaching to objects
+	state = newState
+	match state:
+		idle:
+			newAnim = "Onion_Idle"
+		run:
+			newAnim = "Onion_Walk"
+		jump:
+			global_scale.x = 0.5
+			global_scale.y = 0.5
+			newAnim = "Onion_JumpUp"
+		fall:
+			global_scale.x = 0.5
+			global_scale.y = 0.5
+			newAnim = "Onion_JumpDown"
+			
+		climb:
+			global_scale.x = 0.5
+			global_scale.y = 0.5
+			#cimb anim?
+			newAnim = "Onion_Idle"
+		dead:
+			#death anim
+			
+			#dead code, level restarts on 0hp
+			rotation_degrees = 90
+			$AnimationPlayer.stop()
+
+
+
 func bounce(bounceStr):
 	motion.y = -bounceStr
 	motion = move_and_slide(motion, UP)
 	
 func rayUpdate():
-	#find object below, attach to it if close enough(smoothes movement on moving platforms)
+	#find object below, attach to it if close enough (smoothes movement on moving platforms)
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
-		#add exception if obj is an Area2D
 		if col.get_class() == "Area2D":
 			ray.add_exception(col)
 		else:

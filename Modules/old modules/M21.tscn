@@ -1,0 +1,204 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Assets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Trees/asset_tree_stump_medium_1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Trees/asset_twig_right_1.png" type="Texture" id=6]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=10]
+
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.4254 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 447.881, 10 )
+
+[node name="M21" type="Node2D" index="0"]
+
+[node name="TileMap23" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 0.181818, 0.181818 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 176, 176 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -3145402, 0, 0, -3145401, 1, 0, -3145400, 1, 0, -3145399, 1, 0, -3145398, 1, 0, -3145397, 1, 0, -3145396, 1, 0, -3145395, 1, 0, -3145394, 1, 0, -3145393, 1, 0, -3145392, 1, 0, -3145391, 2, 0, -3079866, 3, 0, -3079865, 4, 0, -3079864, 4, 0, -3079863, 4, 0, -3079862, 4, 0, -3079861, 4, 0, -3079860, 4, 0, -3079859, 4, 0, -3079858, 4, 0, -3079857, 4, 0, -3079856, 4, 0, -3079855, 5, 0, -3014330, 6, 0, -3014329, 7, 0, -3014328, 7, 0, -3014327, 7, 0, -3014326, 7, 0, -3014325, 7, 0, -3014324, 7, 0, -3014323, 7, 0, -3014322, 7, 0, -3014321, 7, 0, -3014320, 7, 0, -3014319, 8, 0, -2555596, 0, 0, -2555595, 1, 0, -2555594, 1, 0, -2555593, 1, 0, -2555592, 1, 0, -2555591, 1, 0, -2555590, 1, 0, -2555589, 1, 0, -2555588, 1, 0, -2555587, 2, 0, -2490060, 3, 0, -2490059, 4, 0, -2490058, 4, 0, -2490057, 4, 0, -2490056, 4, 0, -2490055, 4, 0, -2490054, 4, 0, -2490053, 4, 0, -2490052, 4, 0, -2490051, 5, 0, -2424524, 6, 0, -2424523, 7, 0, -2424522, 7, 0, -2424521, 7, 0, -2424520, 7, 0, -2424519, 7, 0, -2424518, 7, 0, -2424517, 7, 0, -2424516, 7, 0, -2424515, 8, 0, -1965777, 1, 0, -1965776, 1, 0, -1965775, 1, 0, -1965774, 1, 0, -1965773, 1, 0, -1965772, 1, 0, -1965771, 1, 0, -1965770, 1, 0, -1965769, 1, 0, -1965768, 1, 0, -1965767, 1, 0, -1965766, 1, 0, -1965765, 1, 0, -1965764, 1, 0, -1965763, 1, 0, -1965762, 1, 0, -1965761, 1, 0, -1965760, 1, 0, -1965759, 1, 0, -1965758, 1, 0, -1965757, 1, 0, -1965756, 1, 0, -1965755, 1, 0, -1965754, 1, 0, -1965753, 1, 0, -1965752, 1, 0, -1965751, 1, 0, -1965750, 1, 0, -1965749, 1, 0, -1965748, 1, 0, -1965747, 1, 0, -1965746, 1, 0, -1965745, 1, 0, -1965744, 1, 0, -1965743, 1, 0, -1900241, 4, 0, -1900240, 4, 0, -1900239, 4, 0, -1900238, 4, 0, -1900237, 4, 0, -1900236, 4, 0, -1900235, 4, 0, -1900234, 4, 0, -1900233, 4, 0, -1900232, 4, 0, -1900231, 4, 0, -1900230, 4, 0, -1900229, 4, 0, -1900228, 4, 0, -1900227, 4, 0, -1900226, 4, 0, -1900225, 4, 0, -1900224, 4, 0, -1900223, 4, 0, -1900222, 4, 0, -1900221, 4, 0, -1900220, 4, 0, -1900219, 4, 0, -1900218, 4, 0, -1900217, 4, 0, -1900216, 4, 0, -1900215, 4, 0, -1900214, 4, 0, -1900213, 4, 0, -1900212, 4, 0, -1900211, 4, 0, -1900210, 4, 0, -1900209, 4, 0, -1900208, 4, 0, -1900207, 4, 0, -1834705, 4, 0, -1834704, 4, 0, -1834703, 4, 0, -1834702, 4, 0, -1834701, 4, 0, -1834700, 4, 0, -1834699, 4, 0, -1834698, 4, 0, -1834697, 4, 0, -1834696, 4, 0, -1834695, 4, 0, -1834694, 4, 0, -1834693, 4, 0, -1834692, 4, 0, -1834691, 4, 0, -1834690, 4, 0, -1834689, 4, 0, -1834688, 4, 0, -1834687, 4, 0, -1834686, 4, 0, -1834685, 4, 0, -1834684, 4, 0, -1834683, 4, 0, -1834682, 4, 0, -1834681, 4, 0, -1834680, 4, 0, -1834679, 4, 0, -1834678, 4, 0, -1834677, 4, 0, -1834676, 4, 0, -1834675, 4, 0, -1834674, 4, 0, -1834673, 4, 0, -1834672, 4, 0, -1834671, 4, 0, -1769169, 4, 0, -1769168, 4, 0, -1769167, 4, 0, -1769166, 4, 0, -1769165, 4, 0, -1769164, 4, 0, -1769163, 4, 0, -1769162, 4, 0, -1769161, 4, 0, -1769160, 4, 0, -1769159, 4, 0, -1769158, 4, 0, -1769157, 4, 0, -1769156, 4, 0, -1769155, 4, 0, -1769154, 4, 0, -1769153, 4, 0, -1769152, 4, 0, -1769151, 4, 0, -1769150, 4, 0, -1769149, 4, 0, -1769148, 4, 0, -1769147, 4, 0, -1769146, 4, 0, -1769145, 4, 0, -1769144, 4, 0, -1769143, 4, 0, -1769142, 4, 0, -1769141, 4, 0, -1769140, 4, 0, -1769139, 4, 0, -1769138, 4, 0, -1769137, 4, 0, -1769136, 4, 0, -1769135, 4, 0, -1703633, 4, 0, -1703632, 4, 0, -1703631, 4, 0, -1703630, 4, 0, -1703629, 4, 0, -1703628, 4, 0, -1703627, 4, 0, -1703626, 4, 0, -1703625, 4, 0, -1703624, 4, 0, -1703623, 4, 0, -1703622, 4, 0, -1703621, 4, 0, -1703620, 4, 0, -1703619, 4, 0, -1703618, 4, 0, -1703617, 4, 0, -1703616, 4, 0, -1703615, 4, 0, -1703614, 4, 0, -1703613, 4, 0, -1703612, 4, 0, -1703611, 4, 0, -1703610, 4, 0, -1703609, 4, 0, -1703608, 4, 0, -1703607, 4, 0, -1703606, 4, 0, -1703605, 4, 0, -1703604, 4, 0, -1703603, 4, 0, -1703602, 4, 0, -1703601, 4, 0, -1703600, 4, 0, -1703599, 4, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
+
+[node name="Box5" parent="." index="1" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+position = Vector2( 10007.5, -1302.47 )
+
+[node name="Bouncer6" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 9719.86, -978.345 )
+scale = Vector2( 0.65625, 0.65625 )
+
+[node name="Trap21" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 10001.8, -962.598 )
+
+[node name="stump m 9" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 9783.87, -1063.09 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="branch 2" type="Sprite" parent="stump m 9" index="0"]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 6 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 9/branch 2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 9/branch 2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 106.54, 310.559, 81.9783, 146.471, 431.996, 80.2121, 714.984, 27.0116, 1060.56, 12.2434, 1050.56, 142.115, 785.924, 166.172, 576.625, 209.476, 456.338, 233.533, 165.613, 295.791 )
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 9" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 9/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 9/StaticBody2D2" index="1"]
+
+position = Vector2( 899.917, 1078.2 )
+scale = Vector2( 1.45442, 16.2295 )
+shape = SubResource( 2 )
+
+[node name="stump m 10" parent="." index="5" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( 10071.3, -1063.79 )
+
+[node name="Trap22" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 10464.9, -961.165 )
+
+[node name="moving Platform12" parent="." index="7" instance=ExtResource( 8 )]
+
+position = Vector2( 10316.6, -1473.43 )
+platformSpeed = 1.0
+
+[node name="FireSalamander4" parent="." index="8" instance=ExtResource( 9 )]
+
+editor/display_folded = true
+position = Vector2( 10615.7, -1564.71 )
+objToDestroyPath = NodePath("../Thornbush")
+destroyRadius = 140
+
+[node name="stump m 11" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 10562.2, -1061.64 )
+scale = Vector2( 0.0765978, 0.0959247 )
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="branch 2" type="Sprite" parent="stump m 11" index="0"]
+
+position = Vector2( 1127.71, 494.169 )
+scale = Vector2( 1.16478, 0.930097 )
+texture = ExtResource( 6 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stump m 11/branch 2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump m 11/branch 2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 106.54, 310.559, 81.9783, 146.471, 431.996, 80.2121, 714.984, 27.0116, 1060.56, 12.2434, 1050.56, 142.115, 785.924, 166.172, 576.625, 209.476, 456.338, 233.533, 165.613, 295.791 )
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m 11" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump m 11/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="stump m 11/StaticBody2D2" index="1"]
+
+position = Vector2( 899.917, 1078.2 )
+scale = Vector2( 1.45442, 16.2295 )
+shape = SubResource( 2 )
+
+[node name="Thornbush" parent="." index="10" instance=ExtResource( 10 )]
+
+position = Vector2( 10720.5, -1591.09 )
+
+

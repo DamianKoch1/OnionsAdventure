@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Objects/Obstacles/Trees/BranchL.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Normal_NoBranchesA.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.4254 )
+
+[node name="stump m 7" type="Node2D" index="0"]
+
+scale = Vector2( 0.0765978, 0.0959247 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Ast 3" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( -313.218, 349.167 )
+scale = Vector2( 4.00471, 1.96351 )
+
+[node name="Ast 4" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 1174.53, 504.698 )
+scale = Vector2( 2.99633, 1.6584 )
+
+[node name="stump" type="Sprite" parent="." index="2"]
+
+position = Vector2( 949.936, 596.213 )
+scale = Vector2( 3.283, 2.90836 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump" index="0"]
+
+position = Vector2( -289.35, -205 )
+scale = Vector2( 0.3046, 0.343836 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump/StaticBody2D2" index="0"]
+
+position = Vector2( 921.726, 621.795 )
+scale = Vector2( 37.0807, 54.671 )
+shape = SubResource( 1 )
+
+
