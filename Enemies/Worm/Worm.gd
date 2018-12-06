@@ -5,15 +5,14 @@ onready var diggedOut = false
 var startpos
 var diggedOutPos
 
-#set startposition for digging back in, set up digging out if player in range
+#set startposition for digging back in
 func _ready():
 	startpos = global_position
 	diggedOutPos = $diggedOutPos.global_position
 	i = 0
-	if global.player != null:
-		global.player.connect("loseHp", self, "digDown")
 
-#dig in/out of ground depending on player entering different areas
+
+#dig in/out of ground depending on boolean
 func _unique_process(delta):
 	if diggedOut == true && i < 1:
 		i = min(i + delta, 1)
@@ -22,21 +21,23 @@ func _unique_process(delta):
 		i = min(i + delta, 1)
 		global_position.y = lerp(global_position.y, startpos.y, i)
 
+	
 
 func _on_Area2D_body_entered(body):
 	if body == global.player:
 		body.health -= 1
-		digDown()
-
-func _on_detectRange_body_entered(body):
-	if body == global.player && diggedOut == false:
-		diggedOut = true
-		i = 0
-
-func _on_visionRange_body_entered(body):
-	if body == global.player && diggedOut == true:
-		digDown()
+		#digDown()
 
 func digDown():
 	diggedOut = false
 	i = 0
+
+func digOut():
+	diggedOut = true
+	i = 0
+
+func _on_Timer_timeout():
+	if diggedOut == false:
+		digOut()
+	else:
+		digDown()

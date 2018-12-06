@@ -1,63 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Menus/LevelSelector/LevelSelector.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
 
-[sub_resource type="GDScript" id=1]
-
-script/source = "extends Container
-
-export(PackedScene) var levelSelector
-onready var levelSelectorPath = levelSelector.resource_path 
-
-
-func _ready():
-	$YesNoOverlayQuit.connect(\"yesPressed\", self, \"quit\")
-	global.diff = global.normal
-
-
-func _on_NewGameButton_pressed():
-	pass # replace with function body
-
-
-func _on_ContinueButton_pressed():
-	pass # replace with function body
-
-
-func _on_ConceptArtButton_pressed():
-	pass # replace with function body
-
-
-func _on_CreditsButton_pressed():
-	pass # replace with function body
-
-
-func _on_LevelSelectionButton_pressed():
-	get_tree().change_scene(levelSelectorPath)
-
-
-func _on_QuitButton_pressed():
-	$YesNoOverlayQuit.show()
-
-
-func _on_OptionsButton_pressed():
-	$OptionsOverlay.show()
-
-func quit():
-	get_tree().quit()
-
-"
-
-[sub_resource type="Gradient" id=2]
+[sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 1 )
 colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1 )
 
-[sub_resource type="GradientTexture" id=3]
+[sub_resource type="GradientTexture" id=2]
 
 flags = 4
-gradient = SubResource( 2 )
+gradient = SubResource( 1 )
 width = 2048
 
 [node name="MainMenu" type="Container"]
@@ -77,9 +32,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = SubResource( 1 )
-_sections_unfolded = [ "Pause" ]
-levelSelector = ExtResource( 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Mouse", "Pause" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
@@ -98,7 +52,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = SubResource( 3 )
+texture = SubResource( 2 )
 expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
@@ -133,15 +87,15 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_fonts", "custom_styles" ]
 
-[node name="NewGameButton" type="Button" parent="." index="2"]
+[node name="PlayButton" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -118.0
+margin_left = 42.0
 margin_top = -83.0
-margin_right = 138.0
+margin_right = 298.0
 margin_bottom = -51.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -154,20 +108,20 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "New Game (wip)"
+text = "Play"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="ContinueButton" type="Button" parent="." index="3"]
+[node name="ExtrasButton" type="Button" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -118.0
+margin_left = 42.0
 margin_top = -19.0
-margin_right = 138.0
+margin_right = 298.0
 margin_bottom = 13.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -180,72 +134,20 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Continue (wip)"
+text = "Extras (wip)"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="LevelSelectionButton" type="Button" parent="." index="4"]
+[node name="CreditsButton" type="Button" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -118.0
-margin_top = 45.0
-margin_right = 138.0
-margin_bottom = 77.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Level Selection"
-flat = false
-align = 1
-_sections_unfolded = [ "Textures" ]
-
-[node name="ConceptArtButton" type="Button" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -278.0
-margin_top = -51.0
-margin_right = -182.0
-margin_bottom = 13.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Concept Art (wip)"
-flat = false
-align = 1
-_sections_unfolded = [ "Textures" ]
-
-[node name="CreditsButton" type="Button" parent="." index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -118.0
+margin_left = 42.0
 margin_top = 109.0
-margin_right = 138.0
+margin_right = 298.0
 margin_bottom = 141.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -263,16 +165,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="QuitButton" type="Button" parent="." index="7"]
+[node name="QuitButton" type="Button" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 202.0
-margin_top = 141.0
-margin_right = 298.0
-margin_bottom = 173.0
+margin_left = 106.0
+margin_top = 173.0
+margin_right = 234.0
+margin_bottom = 205.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -289,16 +191,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="OptionsButton" type="Button" parent="." index="8"]
+[node name="OptionsButton" type="Button" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 202.0
-margin_top = -115.0
-margin_right = 299.0
-margin_bottom = -83.0
+margin_left = 42.0
+margin_top = 45.0
+margin_right = 298.0
+margin_bottom = 77.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -315,11 +217,11 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="YesNoOverlayQuit" parent="." index="9" instance=ExtResource( 2 )]
+[node name="YesNoOverlayQuit" parent="." index="7" instance=ExtResource( 2 )]
 
 visible = false
 
-[node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 3 )]
+[node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 3 )]
 
 visible = false
 margin_left = 42.0
@@ -327,13 +229,9 @@ margin_top = 45.0
 margin_right = 74.0
 margin_bottom = 74.0
 
-[connection signal="pressed" from="NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 
-[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
-
-[connection signal="pressed" from="LevelSelectionButton" to="." method="_on_LevelSelectionButton_pressed"]
-
-[connection signal="pressed" from="ConceptArtButton" to="." method="_on_ConceptArtButton_pressed"]
+[connection signal="pressed" from="ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
 
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
 

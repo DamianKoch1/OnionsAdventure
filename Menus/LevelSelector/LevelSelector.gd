@@ -1,10 +1,8 @@
 extends Container
 
 
-func _on_MainMenuButton_pressed():
-	#hardcoded path because godot crashes when 2 scenes reference each other via exported packed scenes...
-	get_tree().change_scene("Menus/MainMenu/MainMenu.tscn")
-
+onready var prototype = preload("res://Levels/Prototype 0.tscn")
+onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
@@ -16,4 +14,8 @@ func _on_OptionsButton_pressed():
 
 func _on_Level0Button_pressed():
 	global.currLevelId = 0
-	get_tree().change_scene("Levels/Prototype 0.tscn")
+	get_tree().change_scene_to(prototype)
+
+
+func _on_BackButton_pressed():
+	get_tree().change_scene_to(playMenu)

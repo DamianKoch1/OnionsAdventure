@@ -87,7 +87,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
 
-[node name="MainMenuButton" type="Button" parent="." index="2"]
+[node name="BackButton" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -108,10 +108,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Main Menu"
+text = "Back"
 flat = false
 align = 1
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "custom_styles" ]
 
 [node name="Level0Button" type="Button" parent="." index="3"]
 
@@ -189,7 +189,7 @@ margin_top = -5.0
 margin_right = 11.0
 margin_bottom = 24.0
 
-[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
 [connection signal="pressed" from="Level0Button" to="." method="_on_Level0Button_pressed"]
 

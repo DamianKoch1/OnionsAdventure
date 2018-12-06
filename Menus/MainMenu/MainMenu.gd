@@ -1,46 +1,35 @@
 extends Container
 
-export(PackedScene) var levelSelector
-var levelSelectorPath
+#hardcoded all scene paths because godot crashes if scenes reference each other using exported packedscenes
+onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 
 func _ready():
-	levelSelectorPath = levelSelector.resource_path 
-	$YesNoOverlay/NoButton.connect("pressed", self, "noPressed")
-	$YesNoOverlay/YesButton.connect("pressed", self, "yesPressed")
-	$YesNoOverlay.hide()
+	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
+	$YesNoOverlayQuit.hide()
 	global.diff = global.normal
 
-
-func _on_NewGameButton_pressed():
-	pass # replace with function body
-
-
-func _on_ContinueButton_pressed():
-	pass # replace with function body
-
-
-func _on_ConceptArtButton_pressed():
-	pass # replace with function body
 
 
 func _on_CreditsButton_pressed():
 	pass # replace with function body
 
 
-func _on_LevelSelectionButton_pressed():
-	get_tree().change_scene(levelSelectorPath)
-
 
 func _on_QuitButton_pressed():
-	$YesNoOverlay.show()
+	$YesNoOverlayQuit.show()
 
 
 func _on_OptionsButton_pressed():
-	pass # replace with function body
+	$OptionsOverlay.show()
 
-func yesPressed():
+func quit():
 	get_tree().quit()
 
-func noPressed():
-	$YesNoOverlay.hide()
 
+func _on_PlayButton_pressed():
+	get_tree().change_scene_to(playMenu)
+
+
+
+func _on_ExtrasButton_pressed():
+	pass # replace with function body

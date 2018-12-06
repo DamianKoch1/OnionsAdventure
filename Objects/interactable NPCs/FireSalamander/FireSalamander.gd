@@ -26,6 +26,7 @@ func _on_FireStoneTrigger_body_entered(body):
 					objToDestroyParent.remove_child(objToDestroy)
 					triggered = true
 
+#reset own state on player respawn
 func resetObj():
 	objToDestroyParent.add_child(objToDestroy)
 	triggered = false

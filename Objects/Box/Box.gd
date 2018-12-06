@@ -64,18 +64,14 @@ func rayUpdate():
 
 func attachTo(obj):
 	#attach self to obj
-	if obj.get_class() != "Area2D" && obj != get_parent() && obj.name != "Onion":
+	if obj.get_class() != "Area2D" && obj != get_parent() && obj != global.player:
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
 		rotation_degrees = 0
 
+#go to startposition on player respawn
 func resetPos():
 	global_position = startpos
 
-#prototype func, box kills player if falling at high speed
-func _on_damageArea_body_entered(body):
-	if body == global.player:
-		if motion.y >= 70:
-			body.health = max(body.health - 1, 0)

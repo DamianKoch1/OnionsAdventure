@@ -1,5 +1,7 @@
 extends Area2D
 
+func _ready():
+	add_to_group("Checkpoints")
 
 #move spawnpoint to checkpoint position if player enters checkpoint
 func _on_Checkpoint_body_entered(body):
@@ -9,4 +11,6 @@ func _on_Checkpoint_body_entered(body):
 			body.setHealth(body.hardHealth)
 		else:
 			body.setHealth(body.normalHealth)
+		SaveGame.latestCheckpoint = self
+		SaveGame.saveGame()
 		queue_free()

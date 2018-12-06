@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/Trap/Trap.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Trap/asset_trap_base_1.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Trap/asset_trap_jaw_right_1.png" type="Texture" id=3]
-[ext_resource path="res://Objects/Trap/asset_trap_jaw_left_1.png" type="Texture" id=4]
+[ext_resource path="res://Objects/Trap/Asset_Trap_Right_Jaw.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Trap/Asset_Trap_Left_Jaw.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Trap/Asset_Trap_Central_Body.png" type="Texture" id=4]
 [ext_resource path="res://Objects/Trap/Snap.tres" type="Animation" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -16,7 +16,7 @@ extents = Vector2( 192, 32 )
 resource_name = "Open"
 length = 0.1
 loop = false
-step = 0.1
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("right:rotation_degrees")
 tracks/0/interp = 1
@@ -44,6 +44,7 @@ tracks/1/keys = {
 
 [node name="Trap" type="Area2D" index="0"]
 
+position = Vector2( -0.19371, -5.2302 )
 scale = Vector2( 0.407591, 0.407591 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -54,33 +55,38 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="base" type="Sprite" parent="." index="0"]
+[node name="right" type="Sprite" parent="." index="0"]
 
-position = Vector2( 0.271172, 16 )
-scale = Vector2( 0.17005, 0.175824 )
+position = Vector2( 30.3211, 7.49635 )
+rotation = -9.36268e-008
+scale = Vector2( 0.597556, 0.485692 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
+offset = Vector2( 141.065, -44.5511 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="right" type="Sprite" parent="." index="1"]
+[node name="left" type="Sprite" parent="." index="1"]
 
-position = Vector2( 26.047, -4.52453 )
-scale = Vector2( 0.174292, 0.153846 )
+position = Vector2( -33.8388, 9.87263 )
+rotation = 9.36268e-008
+scale = Vector2( 0.607609, 0.471712 )
 texture = ExtResource( 3 )
-offset = Vector2( 437.039, -183.536 )
+offset = Vector2( -149.505, -42.8196 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="left" type="Sprite" parent="." index="2"]
+[node name="base" type="Sprite" parent="." index="2"]
 
-position = Vector2( -36.0423, -1.85963 )
-scale = Vector2( 0.174292, 0.137339 )
+position = Vector2( -3.65434, 3.50621 )
+scale = Vector2( 0.939464, 0.697094 )
 texture = ExtResource( 4 )
-offset = Vector2( -441.808, -207.951 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( -5.09059, -32.7666 )
+position = Vector2( -4.61533, -20.8852 )
 scale = Vector2( 0.978463, 1.02093 )
 shape = SubResource( 1 )
 
@@ -110,7 +116,7 @@ bounce = 0.0
 position = Vector2( -3.98111, -82.039 )
 scale = Vector2( 1.32291, 0.496618 )
 build_mode = 0
-polygon = PoolVector2Array( -27.08, -155.06, -28.0527, 165.366, -53.3423, 166.23, -65.8074, 233.07, 74.9431, 233.07, 51.3824, 164.502, 26.0714, 164.072, 24.7959, -155.06 )
+polygon = PoolVector2Array( -30.114, -144.129, -29.3955, 150.623, -46.6396, 154.451, -47.7173, 233.882, 49.2807, 231.968, 47.4845, 151.58, 33.4736, 149.667, 33.4736, -144.129 )
 
 [connection signal="body_entered" from="." to="." method="_on_Trap_body_entered"]
 
