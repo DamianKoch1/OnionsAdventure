@@ -57,59 +57,58 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite" index="0"]
 
-position = Vector2( 0.50386, -41.617 )
-scale = Vector2( 0.5, 0.643515 )
+position = Vector2( 0.50386, -26.7644 )
+scale = Vector2( 0.5, 0.449521 )
 z_index = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="OnionHair" type="Sprite" parent="Sprite/OnionBody" index="0"]
 
-position = Vector2( 7.13066, -40.2171 )
-rotation = 1.84031
-scale = Vector2( 1, 1.01406 )
+position = Vector2( 11.1385, -44.6297 )
+rotation = -0.000407963
+scale = Vector2( 1, 1.01106 )
 texture = ExtResource( 3 )
 offset = Vector2( -2.05788, -20.5568 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="onion_eyes" type="Sprite" parent="Sprite/OnionBody" index="1"]
 
-position = Vector2( 13.7552, 1.35655 )
+position = Vector2( 29.7552, -2.63279 )
 texture = ExtResource( 4 )
 offset = Vector2( -12.1219, -0.543782 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="onion_mouth" type="Sprite" parent="Sprite/OnionBody" index="2"]
 
-position = Vector2( 16.9174, 37.9268 )
-scale = Vector2( 1.49638, 1.49638 )
+position = Vector2( 32.9161, 51.121 )
 texture = ExtResource( 5 )
 offset = Vector2( -15.5477, -24.2438 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="OnionEarL" type="Sprite" parent="Sprite" index="1"]
 
-position = Vector2( 0.468807, -67.0516 )
-rotation = -0.873441
+position = Vector2( 2.02899, -39.1896 )
+rotation = 0.282815
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
-offset = Vector2( -49.4588, -96.8829 )
+offset = Vector2( -50.3687, -89.024 )
 
 [node name="OnionEarR" type="Sprite" parent="Sprite" index="2"]
 
-position = Vector2( -4.05004, -65.8786 )
-rotation = -1.45006
+position = Vector2( -2.07955, -36.5952 )
+rotation = -0.576473
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
-offset = Vector2( -15.5284, -107.047 )
+offset = Vector2( -12.5825, -96.3222 )
 
 [node name="OnionTail" type="Sprite" parent="Sprite" index="3"]
 
-position = Vector2( -18.3196, -12.627 )
-rotation = -1.24369
+position = Vector2( -9.37637, -7.97335 )
+rotation = -0.140452
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
-offset = Vector2( -27.0576, -23.7384 )
+offset = Vector2( -29.246, -19.4439 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
