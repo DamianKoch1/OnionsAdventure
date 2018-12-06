@@ -43,6 +43,8 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 [node name="Camera" parent="." index="3"]
 
 position = Vector2( 7.18484, 7.78357 )
+offsetX = 100
+offsetY = 60
 
 [node name="Spawnpoint" parent="." index="4"]
 
@@ -161,12 +163,6 @@ position = Vector2( 4347.17, 135.073 )
 position = Vector2( 10836.2, 231.338 )
 
 [node name="ParallaxBackground" parent="." index="19" instance=ExtResource( 21 )]
-
-[node name="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
-
-position = Vector2( 4090.66, 5.27643 )
-scale = Vector2( 0.294732, 0.294732 )
-region_rect = Rect2( -1820, 4, 77136, 2000 )
 
 
 [editable path="Camera"]

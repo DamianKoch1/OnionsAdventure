@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/Trap/Trap.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Trap/Asset_Trap_Right_Jaw.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Trap/Asset_Trap_Left_Jaw.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Trap/Asset_Trap_Right_Jaw_New.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Trap/Asset_Trap_Left_Jaw_New.png" type="Texture" id=3]
 [ext_resource path="res://Objects/Trap/Asset_Trap_Central_Body.png" type="Texture" id=4]
 [ext_resource path="res://Objects/Trap/Snap.tres" type="Animation" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 192, 32 )
+extents = Vector2( 162.238, 32 )
 
 [sub_resource type="Animation" id=2]
 
@@ -61,33 +61,31 @@ __meta__ = {
 
 [node name="right" type="Sprite" parent="." index="0"]
 
-position = Vector2( 30.3211, 7.49635 )
-rotation = -9.36268e-008
+position = Vector2( 8.74132, 2.70933 )
 scale = Vector2( 0.597556, 0.485692 )
 texture = ExtResource( 2 )
-offset = Vector2( 141.065, -44.5511 )
+offset = Vector2( 140.346, -18.1511 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="left" type="Sprite" parent="." index="1"]
 
-position = Vector2( -33.8388, 9.87263 )
-rotation = 9.36268e-008
+position = Vector2( -24.0984, -1.1336 )
 scale = Vector2( 0.607609, 0.471712 )
 texture = ExtResource( 3 )
-offset = Vector2( -149.505, -42.8196 )
+offset = Vector2( -130.816, -21.4299 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="base" type="Sprite" parent="." index="2"]
 
-position = Vector2( -3.65434, 3.50621 )
-scale = Vector2( 0.939464, 0.697094 )
+position = Vector2( -6.18361, -0.819551 )
+scale = Vector2( 0.853085, 0.797693 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( -4.61533, -20.8852 )
-scale = Vector2( 0.978463, 1.02093 )
+position = Vector2( -4.61533, -11.3511 )
+scale = Vector2( 0.978463, 0.748526 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
@@ -116,7 +114,7 @@ bounce = 0.0
 position = Vector2( -3.98111, -82.039 )
 scale = Vector2( 1.32291, 0.496618 )
 build_mode = 0
-polygon = PoolVector2Array( -30.114, -144.129, -29.3955, 150.623, -46.6396, 154.451, -47.7173, 233.882, 49.2807, 231.968, 47.4845, 151.58, 33.4736, 149.667, 33.4736, -144.129 )
+polygon = PoolVector2Array( -24.8934, -116.421, -24.4492, 138.692, -40.8356, 144.928, -40.8356, 231.449, 40.5109, 232.229, 39.4584, 150.954, 19.9162, 138.995, 18.5958, -115.663 )
 
 [connection signal="body_entered" from="." to="." method="_on_Trap_body_entered"]
 
