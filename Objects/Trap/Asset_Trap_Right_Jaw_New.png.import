@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/asset_trap_jaw_right_1.png-abd5173a0c1bfde97041182c97bf8b94.stex"
+path="res://.import/Asset_Trap_Right_Jaw_New.png-7930bacc4b01709eef69a32d4130d285.stex"
 
 [deps]
 
-source_file="res://Objects/Trap/asset_trap_jaw_right_1.png"
-dest_files=[ "res://.import/asset_trap_jaw_right_1.png-abd5173a0c1bfde97041182c97bf8b94.stex" ]
+source_file="res://Objects/Trap/Asset_Trap_Right_Jaw_New.png"
+dest_files=[ "res://.import/Asset_Trap_Right_Jaw_New.png-7930bacc4b01709eef69a32d4130d285.stex" ]
 
 [params]
 
