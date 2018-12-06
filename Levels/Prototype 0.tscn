@@ -202,7 +202,7 @@ _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
 [node name="Spawnpoint" parent="." index="11" instance=ExtResource( 10 )]
 
-position = Vector2( 160, 224 )
+position = Vector2( 170, 210 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Rope" parent="." index="12" instance=ExtResource( 11 )]
@@ -237,11 +237,11 @@ z_index = 5
 
 [node name="Checkpoint" parent="." index="18" instance=ExtResource( 13 )]
 
-position = Vector2( 1380.72, -38.8589 )
+position = Vector2( 1380, -50 )
 
 [node name="Checkpoint3" parent="." index="19" instance=ExtResource( 13 )]
 
-position = Vector2( 550, 100 )
+position = Vector2( 550, 90 )
 
 [node name="Checkpoint2" parent="." index="20" instance=ExtResource( 13 )]
 
@@ -285,6 +285,7 @@ position = Vector2( 488.675, 341.421 )
 [node name="Camera" parent="." index="27" instance=ExtResource( 17 )]
 
 editor/display_folded = true
+visible = false
 
 [node name="Biewe" parent="." index="28" instance=ExtResource( 18 )]
 
