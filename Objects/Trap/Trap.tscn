@@ -62,7 +62,6 @@ __meta__ = {
 [node name="right" type="Sprite" parent="." index="0"]
 
 position = Vector2( 15.1121, 7.63889 )
-rotation = -1.5708
 scale = Vector2( 0.719738, 0.585001 )
 texture = ExtResource( 2 )
 offset = Vector2( 140.346, -18.1511 )
@@ -71,7 +70,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="left" type="Sprite" parent="." index="1"]
 
 position = Vector2( -25.8982, 2.61061 )
-rotation = 1.5708
 scale = Vector2( 0.729111, 0.566039 )
 texture = ExtResource( 3 )
 offset = Vector2( -130.816, -21.4299 )
