@@ -1,7 +1,62 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Spawnpoint/test.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Spawnpoint/spawnpoint.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
+
+[sub_resource type="Curve" id=2]
+
+min_value = 0.0
+max_value = 3.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0 ), 0.0, 4.74812, 0, 0, Vector2( 1, 0 ), -0.932149, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+
+flags = 4
+width = 2048
+curve = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 18.69
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 0.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.0
+initial_velocity_random = 1.0
+angular_velocity = 0.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 14.31
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 0.04
+scale_random = 0.0
+scale_curve = SubResource( 3 )
+color = Color( 1, 1, 1, 1 )
+hue_variation = 1.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale", "Spread" ]
 
 [node name="Spawnpoint" type="Node2D"]
 
@@ -13,8 +68,33 @@ _sections_unfolded = [ "Visibility" ]
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 position = Vector2( -0.112274, -0.106319 )
-scale = Vector2( 0.224561, 0.212625 )
+scale = Vector2( 0.299415, 0.2835 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Particles2D" type="Particles2D" parent="." index="1"]
+
+modulate = Color( 0.582031, 0.666931, 1, 1 )
+position = Vector2( -0.472293, 9.61021 )
+scale = Vector2( 1.60715, 1.77701 )
+emitting = true
+amount = 15
+lifetime = 1.9
+one_shot = false
+preprocess = 0.0
+speed_scale = 0.92
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 3 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Visibility" ]
 
 

@@ -42,8 +42,9 @@ tracks/1/keys = {
 "values": [ 90.0, 0.0 ]
 }
 
-[node name="Trap" type="Area2D" index="0"]
+[node name="Trap" type="Area2D"]
 
+position = Vector2( -0.19371, -5.2302 )
 scale = Vector2( 0.407591, 0.407591 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -54,11 +55,13 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="right" type="Sprite" parent="." index="0"]
 
 position = Vector2( 30.3211, 7.49635 )
-rotation = -9.36268e-008
 scale = Vector2( 0.597556, 0.485692 )
 texture = ExtResource( 2 )
 offset = Vector2( 141.065, -44.5511 )
@@ -67,7 +70,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="left" type="Sprite" parent="." index="1"]
 
 position = Vector2( -33.8388, 9.87263 )
-rotation = 9.36268e-008
 scale = Vector2( 0.607609, 0.471712 )
 texture = ExtResource( 3 )
 offset = Vector2( -149.505, -42.8196 )
@@ -82,7 +84,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( -5.09059, -16.1326 )
+position = Vector2( -4.61533, -20.8852 )
 scale = Vector2( 0.978463, 1.02093 )
 shape = SubResource( 1 )
 
