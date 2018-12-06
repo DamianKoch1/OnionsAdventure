@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/M1.tscn" type="PackedScene" id=2]
@@ -30,12 +30,9 @@
 [ext_resource path="res://Assets/Background/BG_layer_4_part1_var2.png" type="Texture" id=28]
 [ext_resource path="res://Assets/Background/BG_layer_4_part2_platform.png" type="Texture" id=29]
 [ext_resource path="res://Assets/Background/BG_layer_4_part3_var2.png" type="Texture" id=30]
-[ext_resource path="res://Assets/Background/BG_layer_4_part4_var2.png" type="Texture" id=31]
-[ext_resource path="res://Assets/Background/BG_layer_5_part5_var2.png" type="Texture" id=32]
-[ext_resource path="res://Assets/Background/BG_layer_4_part_6_platform_front.png" type="Texture" id=33]
-[ext_resource path="res://Assets/Background/VG_grass_1.png" type="Texture" id=34]
-[ext_resource path="res://Assets/Background/VG_grass_2.png" type="Texture" id=35]
-[ext_resource path="res://Assets/Background/VG_grass_3.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Background/BG_layer_4_part_6_platform_front.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Background/BG_layer_4_part4_var2.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Background/BG_layer_5_part5_var2.png" type="Texture" id=33]
 
 [node name="Level 1" index="0" instance=ExtResource( 1 )]
 
@@ -60,6 +57,10 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 position = Vector2( 7.18484, 7.78357 )
 offsetX = 100
 offsetY = 60
+
+[node name="PauseMenu" parent="Camera" index="1"]
+
+visible = false
 
 [node name="Spawnpoint" parent="." index="4"]
 
@@ -177,7 +178,7 @@ position = Vector2( 4347.17, 135.073 )
 
 position = Vector2( 10836.2, 231.338 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="19"]
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="." index="19"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -191,22 +192,18 @@ scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = false
 
-[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground2" index="0"]
 
 position = Vector2( 0, -9.53674e-007 )
 motion_scale = Vector2( 0.6, 0.6 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion", "Z Index" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
-[node name="Background" type="Sprite" parent="ParallaxBackground/ParallaxLayer1" index="0"]
+[node name="Background" type="Sprite" parent="ParallaxBackground2/ParallaxLayer1" index="0"]
 
-position = Vector2( 8456.51, -16.5789 )
-scale = Vector2( 0.219042, 0.37027 )
+position = Vector2( 6341.75, 68.983 )
+scale = Vector2( 0.175384, 0.408521 )
 z_index = -100
 texture = ExtResource( 21 )
 region_enabled = true
@@ -216,7 +213,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2" index="1"]
 
 motion_scale = Vector2( 0.7, 0.7 )
 motion_offset = Vector2( 0, 0 )
@@ -226,9 +223,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="part1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+[node name="part1" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2" index="0"]
 
-position = Vector2( -1596.01, 193.544 )
+position = Vector2( 1054.76, 63.686 )
 scale = Vector2( 0.274175, 0.274342 )
 z_index = -99
 texture = ExtResource( 22 )
@@ -238,9 +235,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part4" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="1"]
+[node name="part4" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2" index="1"]
 
-position = Vector2( 4521.78, 60.1133 )
+position = Vector2( -350.971, 14.1549 )
 scale = Vector2( 0.274175, 0.274342 )
 z_index = -99
 texture = ExtResource( 22 )
@@ -250,10 +247,10 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part5" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="2"]
+[node name="part5" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2" index="2"]
 
-position = Vector2( 9436.31, 166.595 )
-scale = Vector2( 0.274175, 0.274342 )
+position = Vector2( 2922.46, 20.0605 )
+scale = Vector2( 0.357424, 0.408095 )
 z_index = -99
 texture = ExtResource( 22 )
 region_rect = Rect2( 124, 188, 23840, 1816 )
@@ -262,9 +259,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="3"]
+[node name="part2" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2" index="3"]
 
-position = Vector2( -1001.9, 196.267 )
+position = Vector2( 406.461, -127.845 )
 scale = Vector2( 0.274175, 0.274342 )
 z_index = -99
 texture = ExtResource( 23 )
@@ -274,9 +271,21 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part3" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="4"]
+[node name="part6" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2" index="4"]
 
-position = Vector2( -556.177, 191.363 )
+position = Vector2( 1531.94, 17.5411 )
+scale = Vector2( 0.389216, 0.346314 )
+z_index = -99
+texture = ExtResource( 23 )
+region_rect = Rect2( 124, 692, 23840, 1312 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part3" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2" index="5"]
+
+position = Vector2( -699.138, -426.732 )
 scale = Vector2( 0.274175, 0.274342 )
 z_index = -99
 texture = ExtResource( 24 )
@@ -286,9 +295,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part6" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="5"]
+[node name="part7" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2" index="6"]
 
-position = Vector2( -556.177, 191.363 )
+position = Vector2( 1946.06, 135.116 )
 scale = Vector2( 0.274175, 0.274342 )
 z_index = -99
 texture = ExtResource( 24 )
@@ -298,7 +307,19 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
+[node name="part8" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2" index="7"]
+
+position = Vector2( 2198.65, 115.603 )
+scale = Vector2( 0.274175, 0.274342 )
+z_index = -99
+texture = ExtResource( 24 )
+region_rect = Rect2( 100.076, 1376, 1484, 624 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground2" index="2"]
 
 motion_scale = Vector2( 0.8, 0.8 )
 motion_offset = Vector2( 0, 0 )
@@ -308,10 +329,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="part1" type="Sprite" parent="ParallaxBackground/ParallaxLayer3" index="0"]
+[node name="part1" type="Sprite" parent="ParallaxBackground2/ParallaxLayer3" index="0"]
 
-position = Vector2( 126.472, 70.0076 )
-scale = Vector2( 0.40388, 0.404126 )
+position = Vector2( 648.13, 65.1114 )
+scale = Vector2( 0.284591, 0.407878 )
 z_index = -99
 texture = ExtResource( 25 )
 region_rect = Rect2( 124, 188, 23840, 1816 )
@@ -320,10 +341,10 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part2" type="Sprite" parent="ParallaxBackground/ParallaxLayer3" index="1"]
+[node name="part2" type="Sprite" parent="ParallaxBackground2/ParallaxLayer3" index="1"]
 
-position = Vector2( 644.938, 73.1718 )
-scale = Vector2( 0.407043, 0.407291 )
+position = Vector2( -565.19, 66.765 )
+scale = Vector2( 0.407043, 0.40877 )
 z_index = -99
 texture = ExtResource( 26 )
 region_rect = Rect2( 124, 692, 23840, 1312 )
@@ -332,22 +353,10 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part4" type="Sprite" parent="ParallaxBackground/ParallaxLayer3" index="2"]
+[node name="part3" type="Sprite" parent="ParallaxBackground2/ParallaxLayer3" index="2"]
 
-position = Vector2( 8221.5, 64.9809 )
-scale = Vector2( 0.407043, 0.407291 )
-z_index = -99
-texture = ExtResource( 26 )
-region_rect = Rect2( 124, 692, 23840, 1312 )
-_sections_unfolded = [ "Region", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="part3" type="Sprite" parent="ParallaxBackground/ParallaxLayer3" index="3"]
-
-position = Vector2( 1174.62, 66.8332 )
-scale = Vector2( 0.396439, 0.396681 )
+position = Vector2( 1296.93, 50.2948 )
+scale = Vector2( 0.530153, 0.391917 )
 z_index = -99
 texture = ExtResource( 27 )
 region_rect = Rect2( 100.076, 1376, 1484, 624 )
@@ -356,19 +365,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part5" type="Sprite" parent="ParallaxBackground/ParallaxLayer3" index="4"]
-
-position = Vector2( 1174.62, 66.8332 )
-scale = Vector2( 0.396439, 0.396681 )
-z_index = -99
-texture = ExtResource( 27 )
-region_rect = Rect2( 100.076, 1376, 1484, 624 )
-_sections_unfolded = [ "Region", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" index="3"]
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground2" index="3"]
 
 motion_scale = Vector2( 0.9, 0.9 )
 motion_offset = Vector2( 0, 0 )
@@ -378,9 +375,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="part1" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="0"]
+[node name="part1" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="0"]
 
-position = Vector2( 1775.5, 128.511 )
+position = Vector2( 2192.82, 15.5593 )
 scale = Vector2( 0.352784, 0.352999 )
 z_index = -99
 texture = ExtResource( 28 )
@@ -390,10 +387,22 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part2" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="1"]
+[node name="part8" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="1"]
 
-position = Vector2( 2224.06, 364.002 )
-scale = Vector2( 0.315106, 0.315298 )
+position = Vector2( 950.656, -108.441 )
+scale = Vector2( 0.276009, 0.291566 )
+z_index = -99
+texture = ExtResource( 28 )
+region_rect = Rect2( 124, 188, 23840, 1816 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part2" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="2"]
+
+position = Vector2( 1543.39, 134.074 )
+scale = Vector2( 0.371552, 0.578462 )
 z_index = -99
 texture = ExtResource( 29 )
 region_rect = Rect2( 124, 692, 23840, 1312 )
@@ -402,10 +411,10 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part3" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="2"]
+[node name="part3" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="3"]
 
-position = Vector2( 2816.27, 119.596 )
-scale = Vector2( 0.35108, 0.351294 )
+position = Vector2( 2691.22, -37.5316 )
+scale = Vector2( 0.223673, 0.23238 )
 z_index = -99
 texture = ExtResource( 30 )
 region_rect = Rect2( 100.076, 1376, 1484, 624 )
@@ -414,46 +423,77 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part4" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="3"]
+[node name="part9" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="4"]
 
-position = Vector2( 3401.78, 104.883 )
-scale = Vector2( 0.35108, 0.351294 )
+position = Vector2( 2462.87, 180.272 )
+scale = Vector2( 0.326305, 0.453995 )
 z_index = -99
+texture = ExtResource( 29 )
+region_rect = Rect2( 124, 692, 23840, 1312 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part10" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="5"]
+
+position = Vector2( 2939.66, 27.484 )
+scale = Vector2( 0.326305, 0.475026 )
+z_index = -99
+texture = ExtResource( 29 )
+region_rect = Rect2( 124, 692, 23840, 1312 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part12" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="6"]
+
+position = Vector2( 4338.83, -38.5116 )
+scale = Vector2( 0.443196, 0.761675 )
+z_index = -99
+texture = ExtResource( 29 )
+region_rect = Rect2( 124, 692, 23840, 1312 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part11" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="7"]
+
+position = Vector2( 4282.09, 14.3296 )
+scale = Vector2( 0.326305, 0.469676 )
+z_index = -99
+texture = ExtResource( 29 )
+region_rect = Rect2( 124, 692, 23840, 1312 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BG_layer_4_part_6_platform_front" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="8"]
+
+visible = false
+position = Vector2( 1552.28, 144.687 )
+scale = Vector2( 0.371552, 0.519361 )
 texture = ExtResource( 31 )
+
+[node name="part7" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="9"]
+
+position = Vector2( -20.4273, -77.6286 )
+scale = Vector2( 0.200029, 0.198597 )
+z_index = -99
+texture = ExtResource( 30 )
 region_rect = Rect2( 100.076, 1376, 1484, 624 )
 _sections_unfolded = [ "Region", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part8" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="4"]
+[node name="part4" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="10"]
 
-position = Vector2( 9898.12, 104.883 )
-scale = Vector2( 0.35108, 0.351294 )
-z_index = -99
-texture = ExtResource( 31 )
-region_rect = Rect2( 100.076, 1376, 1484, 624 )
-_sections_unfolded = [ "Region", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="part7" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="5"]
-
-position = Vector2( 3401.78, 104.883 )
-scale = Vector2( 0.35108, 0.351294 )
-z_index = -99
-texture = ExtResource( 31 )
-region_rect = Rect2( 100.076, 1376, 1484, 624 )
-_sections_unfolded = [ "Region", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="part5" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="6"]
-
-position = Vector2( 3856.2, 124.017 )
-scale = Vector2( 0.35108, 0.351294 )
+position = Vector2( 3442.8, -99.4932 )
+scale = Vector2( 0.309764, 0.291771 )
 z_index = -99
 texture = ExtResource( 32 )
 region_rect = Rect2( 100.076, 1376, 1484, 624 )
@@ -462,10 +502,10 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="part6" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="7"]
+[node name="part5" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="11"]
 
-position = Vector2( 4214.04, 358.795 )
-scale = Vector2( 0.330537, 0.330739 )
+position = Vector2( 3745.9, -170.443 )
+scale = Vector2( 0.35108, 0.351294 )
 z_index = -99
 texture = ExtResource( 33 )
 region_rect = Rect2( 100.076, 1376, 1484, 624 )
@@ -474,71 +514,12 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Grass" type="ParallaxLayer" parent="ParallaxBackground" index="4"]
+[node name="part6" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4" index="12"]
 
-z_index = 1000
-motion_scale = Vector2( 1, 1 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 0, 0 )
-_sections_unfolded = [ "Motion", "Z Index" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="part1" type="Sprite" parent="ParallaxBackground/Grass" index="0"]
-
-position = Vector2( 4602.58, 145.619 )
-scale = Vector2( 0.352784, 0.352999 )
+position = Vector2( 4214.04, 358.795 )
+scale = Vector2( 0.330537, 0.330739 )
 z_index = -99
-texture = ExtResource( 34 )
-region_rect = Rect2( 124, 188, 23840, 1816 )
-_sections_unfolded = [ "Region", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="part2" type="Sprite" parent="ParallaxBackground/Grass" index="1"]
-
-position = Vector2( 5072.24, 127.357 )
-scale = Vector2( 0.467581, 0.467866 )
-z_index = -99
-texture = ExtResource( 35 )
-region_rect = Rect2( 124, 692, 23840, 1312 )
-_sections_unfolded = [ "Region", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="part5" type="Sprite" parent="ParallaxBackground/Grass" index="2"]
-
-position = Vector2( 7436.79, 286.981 )
-scale = Vector2( 0.209807, 0.209935 )
-z_index = 4096
-texture = ExtResource( 35 )
-region_rect = Rect2( 124, 692, 23840, 1312 )
-_sections_unfolded = [ "Region", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="part4" type="Sprite" parent="ParallaxBackground/Grass" index="3"]
-
-position = Vector2( 6425.79, 19.4649 )
-scale = Vector2( 0.467581, 0.467866 )
-z_index = -99
-texture = ExtResource( 35 )
-region_rect = Rect2( 124, 692, 23840, 1312 )
-_sections_unfolded = [ "Region", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="part3" type="Sprite" parent="ParallaxBackground/Grass" index="4"]
-
-position = Vector2( 5568.92, 154.869 )
-scale = Vector2( 0.46945, 0.469735 )
-z_index = -99
-texture = ExtResource( 36 )
+texture = ExtResource( 31 )
 region_rect = Rect2( 100.076, 1376, 1484, 624 )
 _sections_unfolded = [ "Region", "Z Index" ]
 __meta__ = {
