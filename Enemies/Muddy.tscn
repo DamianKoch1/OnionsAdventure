@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/Enemy/Muddy_Finished_Color.png" type="Texture" id=2]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -19,18 +20,13 @@ extents = Vector2( 15.8134, 16.2055 )
 custom_solver_bias = 0.0
 extents = Vector2( 38.3767, 36.5009 )
 
-[sub_resource type="StreamTexture" id=4]
-
-flags = 0
-load_path = "res://.import/enemy placeholder 1.png-771cece3751e2378e2484ea2c8eb12e2.stex"
-
 [node name="Enemy" type="Node2D" groups=[
 "Enemies",
 ]]
 
 script = ExtResource( 1 )
 movespeed = 2
-pathLooped = true
+pathLooped = false
 
 [node name="EnemyPath" type="Path2D" parent="." index="0"]
 
@@ -84,15 +80,13 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprites" type="Node2D" parent="EnemyPath/Enemy" index="2"]
 
-position = Vector2( 0.00422668, 0.00424194 )
 rotation = -0.000132151
 
 [node name="Sprite" type="Sprite" parent="EnemyPath/Enemy/Sprites" index="0"]
 
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( -1.91231, -9.29032 )
-scale = Vector2( 0.0624163, 0.0870892 )
-texture = SubResource( 4 )
+position = Vector2( -2.01647, -0.498512 )
+scale = Vector2( 0.172475, 0.178707 )
+texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]

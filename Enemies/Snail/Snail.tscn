@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Enemies/Snail/Snail.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/Snail/enemy placeholder 3.jpg" type="Texture" id=2]
+[ext_resource path="res://Enemies/Snail/Snarki_Finished_Color.png" type="Texture" id=2]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -65,7 +65,7 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 160.85, -339.858 )
 scale = Vector2( 0.953475, 0.964443 )
 build_mode = 0
-polygon = PoolVector2Array( -43.8, 6.88647, -49.7644, -11.2734, 50.2196, -13.1718, 46.6689, 8.49118 )
+polygon = PoolVector2Array( -24.295, 12.4094, -21.6243, -5.57683, -19.3973, -32.1413, -3.61043, -31.0324, 1.27759, -3.08339, 27.7377, -4.74024, 29.7368, 10.4794 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="EnemyPath/Enemy" index="2"]
@@ -83,7 +83,8 @@ bounce = 0.0
 position = Vector2( -0.219439, -0.0857986 )
 scale = Vector2( 1.01166, 0.991932 )
 build_mode = 0
-polygon = PoolVector2Array( -16.6508, -2.38532, -18.7043, -5.41057, -19.617, -22.6312, 2.66791, -22.4761, 3.27637, -4.94515 )
+polygon = PoolVector2Array( 1.73126, -0.425029, -3.82679, -14.4394, -2.67323, -21.8509, 10.4354, -22.1204, 10.6451, -0.694534 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 

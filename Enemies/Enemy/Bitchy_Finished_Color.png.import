@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy placeholder 1.png-771cece3751e2378e2484ea2c8eb12e2.stex"
+path="res://.import/Bitchy_Finished_Color.png-b173691fa3e53834aa6c534cff8007b1.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/enemy placeholder 1.png"
-dest_files=[ "res://.import/enemy placeholder 1.png-771cece3751e2378e2484ea2c8eb12e2.stex" ]
+source_file="res://Enemies/Enemy/Bitchy_Finished_Color.png"
+dest_files=[ "res://.import/Bitchy_Finished_Color.png-b173691fa3e53834aa6c534cff8007b1.stex" ]
 
 [params]
 
