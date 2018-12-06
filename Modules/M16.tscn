@@ -54,6 +54,10 @@ scale = Vector2( 2.94658, 2.70102 )
 position = Vector2( 4049.68, -1142.25 )
 platformSpeed = 1.0
 
+[node name="TileMap" parent="moving Platform8" index="0"]
+
+tile_data = PoolIntArray(  )
+
 [node name="State2" parent="moving Platform8" index="2"]
 
 position = Vector2( 1.3235, 305.711 )
