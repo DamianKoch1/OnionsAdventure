@@ -4,7 +4,7 @@
 
 resource_name = "JumpUp"
 length = 0.3
-loop = true
+loop = false
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Onion/Sprite/OnionBody/OnionHair:position")
@@ -157,10 +157,10 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.1, 0.1, 0.3, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 16.9174, 57.9203 ), Vector2( 16.9174, 56.6611 ), Vector2( 16.9174, 37.79 ), Vector2( 16.9174, 56.6611 ), Vector2( 16.9174, 37.79 ) ]
+"values": [ Vector2( 16.9174, 37.79 ), Vector2( 16.9174, 37.79 ), Vector2( 16.9174, 37.79 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("Onion/Sprite/OnionBody/onion_mouth:rotation_degrees")
@@ -169,10 +169,10 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.1, 0.1, 0.3, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+"values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("Onion/Sprite/OnionBody/onion_mouth:scale")
@@ -181,10 +181,10 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 0.1, 0.1, 0.3, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
+"values": [ Vector2( 1.5, 1.5 ), Vector2( 1.5, 1.5 ), Vector2( 1.5, 1.5 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("Onion/Sprite/OnionTail:position")

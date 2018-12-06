@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Obstacles/Stones/Asset_Stone_Inamovable_1A.png" type="Texture" id=1]
+
+[node name="StoneInamovable1A" type="Sprite" index="0"]
+
+position = Vector2( 100.255, 98.7507 )
+scale = Vector2( 0.49866, 0.49866 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -163.212, 179.315, 168.367, 180.368, 172.577, 155.105, 125.209, 116.157, 91.5249, -92.2635, 51.525, -173.316, 2.05133, -168.053, -102.159, -81.7372, -136.896, 87.7362, -172.685, 126.684 )
+
+

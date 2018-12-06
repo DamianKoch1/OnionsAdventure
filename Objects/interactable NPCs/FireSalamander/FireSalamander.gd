@@ -6,18 +6,17 @@ var objToDestroyParent
 
 var objToDestroy 
 var triggered = false
-var player
 
+#set up destroying object on player jumping on self and resetting it on player respawn
 func _ready():
 	if objToDestroyPath != null:
+		global.player.connect("loseHp", self, "resetObj")
 		objToDestroy = get_node(objToDestroyPath)
+		objToDestroyParent = objToDestroy.get_parent()
 		
 
 func _on_FireStoneTrigger_body_entered(body):
-	if body.name == "Onion" && objToDestroyPath != null:
-		if player == null:
-			player = body
-			player.connect("loseHp", self, "resetObj")
+	if body == global.player && objToDestroyPath != null:
 		#destroy assigned object if player enters area with certain downwards motion
 		if body.motion.y > body.gravity*10:
 			if triggered == false:
@@ -27,6 +26,7 @@ func _on_FireStoneTrigger_body_entered(body):
 					objToDestroyParent.remove_child(objToDestroy)
 					triggered = true
 
+#reset own state on player respawn
 func resetObj():
 	objToDestroyParent.add_child(objToDestroy)
 	triggered = false

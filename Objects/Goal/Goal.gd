@@ -1,7 +1,7 @@
 extends Area2D
 
 func _on_Goal_body_entered(body):
-	if body.name == "Onion":
+	if body == global.player:
 			loadNextLevel()
 
 func loadNextLevel():

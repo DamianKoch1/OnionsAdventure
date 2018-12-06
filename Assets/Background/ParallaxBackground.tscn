@@ -1,0 +1,230 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Background/BG_layer_1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Background/BG_layer_2_part1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Background/BG_layer_2_part2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Background/BG_layer_2_part3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Background/BG_layer_3_part1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Background/BG_layer_3_part2 - Copy.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Background/BG_layer_3_part3.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Background/BG_layer_4_part1_var2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Background/BG_layer_4_part2_platform.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Background/BG_layer_4_part3_var2.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Background/BG_layer_4_part4_var2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Background/BG_layer_5_part5_var2.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Background/BG_layer_4_part_6_platform_front.png" type="Texture" id=13]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="." index="0"]
+
+position = Vector2( 0, -9.53674e-007 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Background" type="Sprite" parent="ParallaxLayer1" index="0"]
+
+position = Vector2( 8456.51, 3.11707 )
+scale = Vector2( 0.219042, 0.219042 )
+z_index = -100
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -1820, 4, 96420, 2000 )
+_sections_unfolded = [ "Region", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." index="1"]
+
+motion_scale = Vector2( 0.7, 0.7 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="part1" type="Sprite" parent="ParallaxLayer2" index="0"]
+
+position = Vector2( -1596.01, 193.544 )
+scale = Vector2( 0.274175, 0.274342 )
+z_index = -99
+texture = ExtResource( 2 )
+region_rect = Rect2( 124, 188, 23840, 1816 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part2" type="Sprite" parent="ParallaxLayer2" index="1"]
+
+position = Vector2( -1001.9, 196.267 )
+scale = Vector2( 0.274175, 0.274342 )
+z_index = -99
+texture = ExtResource( 3 )
+region_rect = Rect2( 124, 692, 23840, 1312 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part3" type="Sprite" parent="ParallaxLayer2" index="2"]
+
+position = Vector2( -556.177, 191.363 )
+scale = Vector2( 0.274175, 0.274342 )
+z_index = -99
+texture = ExtResource( 4 )
+region_rect = Rect2( 100.076, 1376, 1484, 624 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="." index="2"]
+
+motion_scale = Vector2( 0.8, 0.8 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="part1" type="Sprite" parent="ParallaxLayer3" index="0"]
+
+position = Vector2( 126.472, 70.0076 )
+scale = Vector2( 0.40388, 0.404126 )
+z_index = -99
+texture = ExtResource( 5 )
+region_rect = Rect2( 124, 188, 23840, 1816 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part2" type="Sprite" parent="ParallaxLayer3" index="1"]
+
+position = Vector2( 644.938, 73.1718 )
+scale = Vector2( 0.407043, 0.407291 )
+z_index = -99
+texture = ExtResource( 6 )
+region_rect = Rect2( 124, 692, 23840, 1312 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part3" type="Sprite" parent="ParallaxLayer3" index="2"]
+
+position = Vector2( 1174.62, 66.8332 )
+scale = Vector2( 0.396439, 0.396681 )
+z_index = -99
+texture = ExtResource( 7 )
+region_rect = Rect2( 100.076, 1376, 1484, 624 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="." index="3"]
+
+motion_scale = Vector2( 0.9, 0.9 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="part1" type="Sprite" parent="ParallaxLayer4" index="0"]
+
+position = Vector2( 1775.5, 128.511 )
+scale = Vector2( 0.352784, 0.352999 )
+z_index = -99
+texture = ExtResource( 8 )
+region_rect = Rect2( 124, 188, 23840, 1816 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part2" type="Sprite" parent="ParallaxLayer4" index="1"]
+
+position = Vector2( 2224.06, 364.002 )
+scale = Vector2( 0.315106, 0.315298 )
+z_index = -99
+texture = ExtResource( 9 )
+region_rect = Rect2( 124, 692, 23840, 1312 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part3" type="Sprite" parent="ParallaxLayer4" index="2"]
+
+position = Vector2( 2816.27, 119.596 )
+scale = Vector2( 0.35108, 0.351294 )
+z_index = -99
+texture = ExtResource( 10 )
+region_rect = Rect2( 100.076, 1376, 1484, 624 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part4" type="Sprite" parent="ParallaxLayer4" index="3"]
+
+position = Vector2( 3401.78, 104.883 )
+scale = Vector2( 0.35108, 0.351294 )
+z_index = -99
+texture = ExtResource( 11 )
+region_rect = Rect2( 100.076, 1376, 1484, 624 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part5" type="Sprite" parent="ParallaxLayer4" index="4"]
+
+position = Vector2( 3856.2, 124.017 )
+scale = Vector2( 0.35108, 0.351294 )
+z_index = -99
+texture = ExtResource( 12 )
+region_rect = Rect2( 100.076, 1376, 1484, 624 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="part6" type="Sprite" parent="ParallaxLayer4" index="5"]
+
+position = Vector2( 4214.04, 358.795 )
+scale = Vector2( 0.330537, 0.330739 )
+z_index = -99
+texture = ExtResource( 13 )
+region_rect = Rect2( 100.076, 1376, 1484, 624 )
+_sections_unfolded = [ "Region", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+

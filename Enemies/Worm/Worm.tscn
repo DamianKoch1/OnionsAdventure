@@ -1,0 +1,100 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Enemies/Worm/Worm.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/Worm/Mealy_Finished_Color.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 38.3767, 32.2044 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.8834, 30.304 )
+
+[node name="Worm" type="Node2D" groups=[
+"Enemies",
+]]
+
+z_index = -999
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+movespeed = 2
+pathLooped = true
+
+[node name="Enemy" type="Node2D" parent="." index="0"]
+
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Enemy" index="0"]
+
+position = Vector2( -80.7138, 170.143 )
+rotation = -0.000132151
+scale = Vector2( 0.500416, 0.500855 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" index="0"]
+
+position = Vector2( 160.85, -310.16 )
+scale = Vector2( 0.953475, 1.51027 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprites" type="Node2D" parent="Enemy" index="1"]
+
+position = Vector2( 0.00422668, 0.00424194 )
+rotation = -0.000132151
+
+[node name="Sprite" type="Sprite" parent="Enemy/Sprites" index="0"]
+
+position = Vector2( 0.775484, 6.54105 )
+scale = Vector2( 0.16899, 0.201866 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enemy" index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/StaticBody2D" index="0"]
+
+visible = false
+position = Vector2( -0.242496, 14.1809 )
+rotation = -0.000132151
+scale = Vector2( 0.477134, 0.717852 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="diggedOutPos" type="Position2D" parent="." index="1"]
+
+position = Vector2( 0.27739, -39.2544 )
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[connection signal="body_entered" from="Enemy/Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

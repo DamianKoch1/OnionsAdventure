@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Checkpoint/checkpoint placeholder.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Checkpoint/checkpoint.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -10,7 +10,6 @@ extents = Vector2( 32, 936.576 )
 
 [node name="Checkpoint" type="Area2D" index="0"]
 
-modulate = Color( 0.637146, 1, 0.433594, 1 )
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
 input_pickable = true
@@ -23,17 +22,19 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-
-position = Vector2( 0, -256.818 )
-scale = Vector2( 1, 0.443623 )
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
 position = Vector2( -0.112274, -0.106319 )
-scale = Vector2( 0.224561, 0.212625 )
+scale = Vector2( 0.299415, 0.2835 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0, -256.818 )
+scale = Vector2( 1.33333, 0.591497 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="." to="." method="_on_Checkpoint_body_entered"]
 
