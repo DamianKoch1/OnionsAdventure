@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
@@ -14,34 +14,15 @@
 [ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Enemies/Enemy/Enemy.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Objects/interactable NPCs/Biewe/Biewe.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Enemies/Enemy/Bitchy_Linework_red.png" type="Texture" id=20]
-[ext_resource path="res://Enemies/Enemy/Bitchy_bright.png" type="Texture" id=21]
-[ext_resource path="res://Enemies/Enemy/Bitchy_Satu.png" type="Texture" id=22]
-[ext_resource path="res://Enemies/Worm/Mealy_Variation.png" type="Texture" id=23]
-[ext_resource path="res://Enemies/Snail/Snail.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Enemies/Snail/Snarki_Snark_Variation.png" type="Texture" id=25]
-[ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=28]
-
-[sub_resource type="Curve2D" id=1]
-
-bake_interval = 5.0
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866, 0, 0, 0, 0, 102.868, 71.1767, 0, 0, 0, 0, -36.7438, 12.451, 0, 0, 0, 0, -147.547, 99.9855, 0, 0, 0, 0, -80.5574, 170.197 )
-}
-
-[sub_resource type="Curve2D" id=2]
-
-bake_interval = 5.0
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
-}
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/interactable NPCs/Biewe/Biewe.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
 
 [node name="Prototype 0" type="Node" index="0"]
 
@@ -261,322 +242,63 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 position = Vector2( -97.7994, 240.296 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Enemy5" parent="." index="22" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-position = Vector2( 2727.24, -183.48 )
-pathLooped = false
-
-[node name="Enemy2" parent="." index="23" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-position = Vector2( 1475.24, -38.1696 )
-movespeed = 0.2
-
-[node name="EnemyPath" parent="Enemy2" index="0"]
-
-curve = SubResource( 1 )
-
-[node name="Enemy" parent="." index="24" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-position = Vector2( 2905.98, -38.2072 )
-
-[node name="trappedNPC" parent="." index="25" instance=ExtResource( 16 )]
+[node name="trappedNPC" parent="." index="22" instance=ExtResource( 15 )]
 
 position = Vector2( 229.348, 334.261 )
 
-[node name="trappedNPC2" parent="." index="26" instance=ExtResource( 16 )]
+[node name="trappedNPC2" parent="." index="23" instance=ExtResource( 15 )]
 
 position = Vector2( 488.675, 341.421 )
 
-[node name="Camera" parent="." index="27" instance=ExtResource( 17 )]
+[node name="Camera" parent="." index="24" instance=ExtResource( 16 )]
 
 editor/display_folded = true
-visible = false
 offsetX = 100
 offsetY = 60
 
-[node name="Biewe" parent="." index="28" instance=ExtResource( 18 )]
+[node name="Biewe" parent="." index="25" instance=ExtResource( 17 )]
 
 position = Vector2( 2644.2, -108.481 )
 
-[node name="FireSalamander" parent="." index="29" instance=ExtResource( 6 )]
+[node name="FireSalamander" parent="." index="26" instance=ExtResource( 6 )]
 
 position = Vector2( 1697.53, -39.5678 )
 
-[node name="Worm" parent="." index="30" instance=ExtResource( 19 )]
+[node name="Worm" parent="." index="27" instance=ExtResource( 18 )]
 
 position = Vector2( 1175.64, 12.7948 )
 
-[node name="enemy color test" type="Node2D" parent="." index="31"]
-
-[node name="Enemy" parent="enemy color test" index="0" instance=ExtResource( 15 )]
+[node name="ParallaxBackground" parent="." index="28" instance=ExtResource( 19 )]
 
 editor/display_folded = true
-position = Vector2( -659.165, 210.308 )
-pathLooped = false
 
-[node name="EnemyPath" parent="enemy color test/Enemy" index="0"]
-
-curve = SubResource( 2 )
-
-[node name="Sprites" parent="enemy color test/Enemy/EnemyPath/Enemy" index="2"]
-
-editor/display_folded = false
-position = Vector2( 0.844017, 9.75764 )
-scale = Vector2( 1.26111, 1.22675 )
-
-[node name="Sprite" parent="enemy color test/Enemy/EnemyPath/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-position = Vector2( -0.0884212, -8.7646 )
-scale = Vector2( 0.100995, 0.119173 )
-texture = ExtResource( 20 )
-region_enabled = true
-region_rect = Rect2( 860, -28, 408, 408 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Enemy3" parent="enemy color test" index="1" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-position = Vector2( -628.482, 147.85 )
-scale = Vector2( 1, 1.01431 )
-pathLooped = false
-
-[node name="EnemyPath" parent="enemy color test/Enemy3" index="0"]
-
-curve = SubResource( 2 )
-
-[node name="Sprites" parent="enemy color test/Enemy3/EnemyPath/Enemy" index="2"]
-
-editor/display_folded = false
-position = Vector2( 0.844017, 9.75764 )
-scale = Vector2( 1.26111, 1.22675 )
-
-[node name="Sprite" parent="enemy color test/Enemy3/EnemyPath/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-position = Vector2( -0.0884212, -8.7646 )
-scale = Vector2( 0.100995, 0.119173 )
-texture = ExtResource( 20 )
-region_enabled = true
-region_rect = Rect2( 444, -44, 424, 428 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Enemy4" parent="enemy color test" index="2" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-position = Vector2( -630.372, 82.1793 )
-scale = Vector2( 1, 1.01431 )
-pathLooped = false
-
-[node name="EnemyPath" parent="enemy color test/Enemy4" index="0"]
-
-curve = SubResource( 2 )
-
-[node name="Sprites" parent="enemy color test/Enemy4/EnemyPath/Enemy" index="2"]
-
-editor/display_folded = false
-position = Vector2( 0.844017, 9.75764 )
-scale = Vector2( 1.26111, 1.22675 )
-
-[node name="Sprite" parent="enemy color test/Enemy4/EnemyPath/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-position = Vector2( -0.0884212, -8.7646 )
-scale = Vector2( 0.100995, 0.119173 )
-texture = ExtResource( 20 )
-region_enabled = true
-region_rect = Rect2( 20, -28, 432, 408 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Enemy2" parent="enemy color test" index="3" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-position = Vector2( -648.385, 444.906 )
-pathLooped = false
-
-[node name="EnemyPath" parent="enemy color test/Enemy2" index="0"]
-
-curve = SubResource( 2 )
-
-[node name="Sprites" parent="enemy color test/Enemy2/EnemyPath/Enemy" index="2"]
-
-editor/display_folded = false
-position = Vector2( 0.844017, 9.75764 )
-scale = Vector2( 1.26111, 1.22675 )
-
-[node name="Sprite" parent="enemy color test/Enemy2/EnemyPath/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-position = Vector2( -0.0884212, -8.7646 )
-scale = Vector2( 0.100995, 0.119173 )
-texture = ExtResource( 20 )
-region_enabled = true
-region_rect = Rect2( 860, -28, 408, 408 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Enemy6" parent="enemy color test" index="4" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-position = Vector2( -619.592, 316.777 )
-scale = Vector2( 1, 1.01431 )
-pathLooped = false
-
-[node name="EnemyPath" parent="enemy color test/Enemy6" index="0"]
-
-curve = SubResource( 2 )
-
-[node name="Sprites" parent="enemy color test/Enemy6/EnemyPath/Enemy" index="2"]
-
-editor/display_folded = false
-position = Vector2( 0.844017, 9.75764 )
-scale = Vector2( 1.26111, 1.22675 )
-
-[node name="Sprite" parent="enemy color test/Enemy6/EnemyPath/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-position = Vector2( -0.0884212, -8.7646 )
-scale = Vector2( 0.100995, 0.119173 )
-texture = ExtResource( 21 )
-region_rect = Rect2( 20, -28, 432, 408 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Enemy5" parent="enemy color test" index="5" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-position = Vector2( -617.702, 382.447 )
-scale = Vector2( 1, 1.01431 )
-pathLooped = false
-
-[node name="EnemyPath" parent="enemy color test/Enemy5" index="0"]
-
-curve = SubResource( 2 )
-
-[node name="Sprites" parent="enemy color test/Enemy5/EnemyPath/Enemy" index="2"]
-
-editor/display_folded = false
-position = Vector2( 0.844017, 9.75764 )
-scale = Vector2( 1.26111, 1.22675 )
-
-[node name="Sprite" parent="enemy color test/Enemy5/EnemyPath/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-position = Vector2( -0.0884212, -8.7646 )
-scale = Vector2( 0.100995, 0.119173 )
-texture = ExtResource( 22 )
-region_rect = Rect2( 444, -44, 424, 428 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Worm2" parent="enemy color test" index="6" instance=ExtResource( 19 )]
-
-editor/display_folded = true
-position = Vector2( 1225.37, 11.08 )
-
-[node name="Sprites" parent="enemy color test/Worm2/Enemy" index="1"]
-
-editor/display_folded = false
-
-[node name="Sprite" parent="enemy color test/Worm2/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-texture = ExtResource( 23 )
-region_enabled = true
-region_rect = Rect2( 32, 0, 312, 356 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Worm3" parent="enemy color test" index="7" instance=ExtResource( 19 )]
-
-editor/display_folded = true
-position = Vector2( 1137.92, 10.2227 )
-
-[node name="Sprites" parent="enemy color test/Worm3/Enemy" index="1"]
-
-editor/display_folded = false
-
-[node name="Sprite" parent="enemy color test/Worm3/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-texture = ExtResource( 23 )
-region_enabled = true
-region_rect = Rect2( 376, 20, 284, 320 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Worm4" parent="enemy color test" index="8" instance=ExtResource( 19 )]
-
-position = Vector2( 1100.19, 9.36528 )
-
-[node name="Sprites" parent="enemy color test/Worm4/Enemy" index="1"]
-
-editor/display_folded = false
-
-[node name="Sprite" parent="enemy color test/Worm4/Enemy/Sprites" index="0"]
-
-modulate = Color( 1, 1, 1, 1 )
-texture = ExtResource( 23 )
-region_enabled = true
-region_rect = Rect2( 732, 0, 372, 388 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Snail2" parent="enemy color test" index="9" instance=ExtResource( 24 )]
-
-editor/display_folded = true
-position = Vector2( 2440.59, 17.0049 )
-movespeed = 0.5
-pathLooped = false
-
-[node name="Sprite" parent="enemy color test/Snail2/EnemyPath/Enemy/Sprites" index="0"]
-
-scale = Vector2( -0.086084, 0.117914 )
-texture = ExtResource( 25 )
-region_enabled = true
-region_rect = Rect2( -96, 68, 524, 328 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Snail3" parent="enemy color test" index="10" instance=ExtResource( 24 )]
-
-editor/display_folded = true
-position = Vector2( 2394.04, 145.178 )
-movespeed = 0.5
-pathLooped = false
-
-[node name="Sprite" parent="enemy color test/Snail3/EnemyPath/Enemy/Sprites" index="0"]
-
-scale = Vector2( -0.086084, 0.117914 )
-texture = ExtResource( 25 )
-region_enabled = true
-region_rect = Rect2( 400, 152, 520, 240 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="Snail4" parent="enemy color test" index="11" instance=ExtResource( 24 )]
-
-editor/display_folded = true
-position = Vector2( 2440.83, 189.328 )
-movespeed = 0.5
-pathLooped = false
-
-[node name="Sprite" parent="enemy color test/Snail4/EnemyPath/Enemy/Sprites" index="0"]
-
-scale = Vector2( -0.086084, 0.117914 )
-texture = ExtResource( 25 )
-region_enabled = true
-region_rect = Rect2( 904, 108, 460, 256 )
-_sections_unfolded = [ "Region", "Transform", "Visibility" ]
-
-[node name="ParallaxBackground" parent="." index="32" instance=ExtResource( 26 )]
-
-[node name="TwistedTree" parent="." index="33" instance=ExtResource( 27 )]
+[node name="TwistedTree" parent="." index="29" instance=ExtResource( 20 )]
 
 position = Vector2( 240, -80 )
 z_index = -4
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="stump m 7" parent="." index="34" instance=ExtResource( 28 )]
+[node name="stump m 7" parent="." index="30" instance=ExtResource( 21 )]
 
 position = Vector2( 790, -110 )
 z_index = -5
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Enemy" parent="." index="31" instance=ExtResource( 22 )]
+
+position = Vector2( -587.197, 198.662 )
+
+[node name="Enemy2" parent="." index="32" instance=ExtResource( 22 )]
+
+position = Vector2( 2920.16, -70.3229 )
+
+[node name="Enemy3" parent="." index="33" instance=ExtResource( 23 )]
+
+position = Vector2( 1481.2, -21.0018 )
+
+[node name="Enemy4" parent="." index="34" instance=ExtResource( 23 )]
+
+position = Vector2( 2888.57, 15.4914 )
 
 
 [editable path="Onion"]
@@ -584,19 +306,6 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 [editable path="EarthStone2"]
 [editable path="EarthStone3"]
 [editable path="EarthStone3/TileMap/FireStone"]
-[editable path="Enemy2"]
 [editable path="Camera"]
 [editable path="Camera/PauseMenu"]
-[editable path="enemy color test/Enemy"]
-[editable path="enemy color test/Enemy3"]
-[editable path="enemy color test/Enemy4"]
-[editable path="enemy color test/Enemy2"]
-[editable path="enemy color test/Enemy6"]
-[editable path="enemy color test/Enemy5"]
-[editable path="enemy color test/Worm2"]
-[editable path="enemy color test/Worm3"]
-[editable path="enemy color test/Worm4"]
-[editable path="enemy color test/Snail2"]
-[editable path="enemy color test/Snail3"]
-[editable path="enemy color test/Snail4"]
 [editable path="ParallaxBackground"]

@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 195.074, 32 )
+extents = Vector2( 190.523, 32 )
 
 [sub_resource type="Animation" id=2]
 
@@ -42,7 +42,7 @@ tracks/1/keys = {
 "values": [ 90.0, 0.0 ]
 }
 
-[node name="Trap" type="Area2D" index="0"]
+[node name="Trap" type="Area2D"]
 
 position = Vector2( -0.19371, -5.2302 )
 scale = Vector2( 0.407591, 0.407591 )
@@ -84,8 +84,8 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( -4.61533, -11.3511 )
-scale = Vector2( 0.978463, 0.748526 )
+position = Vector2( -4.61533, -13.4317 )
+scale = Vector2( 0.978463, 0.807972 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]

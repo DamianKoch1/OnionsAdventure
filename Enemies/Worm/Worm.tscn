@@ -1,19 +1,19 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Enemies/Worm/Worm.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/Worm/enemy placeholder 4.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Worm/Mealy_Finished_Color.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 38.3767, 32.2044 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 28.8834, 30.304 )
 
-[node name="Worm" type="Node2D" groups=[
+[node name="Worm" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
@@ -46,21 +46,19 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" index="0"]
 
-position = Vector2( 160.85, -332.873 )
-scale = Vector2( 0.953475, 0.787608 )
-shape = SubResource( 2 )
+position = Vector2( 160.85, -310.16 )
+scale = Vector2( 0.953475, 1.51027 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprites" type="Node2D" parent="Enemy" index="1"]
 
-editor/display_folded = true
 position = Vector2( 0.00422668, 0.00424194 )
 rotation = -0.000132151
 
 [node name="Sprite" type="Sprite" parent="Enemy/Sprites" index="0"]
 
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 0.1767, 0.695304 )
+position = Vector2( 0.775484, 6.54105 )
 scale = Vector2( 0.16899, 0.201866 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -77,15 +75,15 @@ bounce = 0.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/StaticBody2D" index="0"]
 
-position = Vector2( -0.243919, 3.41125 )
+position = Vector2( -0.242496, 14.1809 )
 rotation = -0.000132151
-scale = Vector2( 0.477134, 0.394477 )
-shape = SubResource( 3 )
+scale = Vector2( 0.477134, 0.717852 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="diggedOutPos" type="Position2D" parent="." index="1"]
 
-position = Vector2( 0, -24.8303 )
+position = Vector2( 0.27739, -39.2544 )
 
 [node name="Timer" type="Timer" parent="." index="2"]
 

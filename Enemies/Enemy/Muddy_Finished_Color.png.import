@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bitchy_Linework_red.png-4423bb8550805758ca84b5e80dd517ad.stex"
+path="res://.import/Muddy_Finished_Color.png-f4a65637030d8684ca0b09e03f1d2bd7.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/Bitchy_Linework_red.png"
-dest_files=[ "res://.import/Bitchy_Linework_red.png-4423bb8550805758ca84b5e80dd517ad.stex" ]
+source_file="res://Enemies/Enemy/Muddy_Finished_Color.png"
+dest_files=[ "res://.import/Muddy_Finished_Color.png-f4a65637030d8684ca0b09e03f1d2bd7.stex" ]
 
 [params]
 
