@@ -14,7 +14,7 @@
 [ext_resource path="res://Assets/Background/BG_layer_5_part5_var2.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Background/BG_layer_4_part_6_platform_front.png" type="Texture" id=13]
 
-[node name="ParallaxBackground" type="ParallaxBackground" index="0"]
+[node name="ParallaxBackground" type="ParallaxBackground"]
 
 layer = -1
 offset = Vector2( 0, 0 )

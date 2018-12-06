@@ -42,7 +42,7 @@ tracks/1/keys = {
 "values": [ 90.0, 0.0 ]
 }
 
-[node name="Trap" type="Area2D"]
+[node name="Trap" type="Area2D" index="0"]
 
 position = Vector2( -0.19371, -5.2302 )
 scale = Vector2( 0.407591, 0.407591 )
@@ -62,6 +62,7 @@ __meta__ = {
 [node name="right" type="Sprite" parent="." index="0"]
 
 position = Vector2( 30.3211, 7.49635 )
+rotation = -9.36268e-008
 scale = Vector2( 0.597556, 0.485692 )
 texture = ExtResource( 2 )
 offset = Vector2( 141.065, -44.5511 )
@@ -70,6 +71,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="left" type="Sprite" parent="." index="1"]
 
 position = Vector2( -33.8388, 9.87263 )
+rotation = 9.36268e-008
 scale = Vector2( 0.607609, 0.471712 )
 texture = ExtResource( 3 )
 offset = Vector2( -149.505, -42.8196 )
