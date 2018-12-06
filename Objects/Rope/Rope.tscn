@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Rope/Rope.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Rope/asset_vine_grass_1.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Rope/Asset_Vine_BigB.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 7.26522 )
 
-[node name="Rope" type="Node2D"]
+[node name="Rope" type="Node2D" index="0"]
 
 position = Vector2( 144, 80 )
 scale = Vector2( 0.5, 7.5 )
@@ -18,8 +18,8 @@ swingSpeed = 0.03
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( -0.0497894, 14.9333 )
-scale = Vector2( 0.0995334, 0.0140698 )
+position = Vector2( -4.76837e-007, 14.9333 )
+scale = Vector2( 0.184971, 0.0339298 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 

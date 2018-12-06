@@ -3,7 +3,6 @@
 [ext_resource path="res://Enemies/Snail/Snail.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Snail/enemy placeholder 3.jpg" type="Texture" id=2]
 
-
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
@@ -16,6 +15,9 @@ _data = {
 ]]
 
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 movespeed = 2
 pathLooped = true
 

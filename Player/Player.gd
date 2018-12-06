@@ -8,9 +8,13 @@ var newAnim
 var state
 enum {idle, run, jump, fall, climb, dead}
 
+#node to attach to if airborne
 onready var worldNode = get_parent()
+
+#ray that finds downward object to attach to (movingplatforms etc)
 onready var ray = $RayCast2D
 
+#can jump for short time if walking off cliffs
 onready var ghostjumpTimeframe = 0
 export var maxGhostjumpDelay = 0.2
 
@@ -22,6 +26,7 @@ export var climbspeed = 200
 onready var debugGodmode = -1
 onready var debugFly = -1
 
+#has grace period (invincibility) after getting hit
 onready var gracePeriodTimer = 0
 export var gracePeriod = 2
 
@@ -50,6 +55,11 @@ func _ready():
 	else:
 		health = normalHealth
 	global.currLevelId = int(get_parent().name)
+	if SaveGame.loadPlayerState == true:
+		SaveGame.loadPlayerState = false
+		NPCsavedCount = SaveGame.NPCsavedCount
+		position.x = SaveGame.playerPosX
+		position.y = SaveGame.playerPosY
 
 func _physics_process(delta):
 	if state != dead:
@@ -64,14 +74,14 @@ func _physics_process(delta):
 				motion.y = 0
 				setState(climb)
 				$CollisionShape2D.disabled = true
-				climbspeed *= 2
-				movespeed *= 2
+				climbspeed *= 2.5
+				movespeed *= 4
 			else:
 				print("Fly OFF")
 				$CollisionShape2D.disabled = false
 				setState(idle)
-				climbspeed /= 2
-				movespeed /= 2
+				climbspeed /= 2.5
+				movespeed /= 4
 			debugFly *= -1
 		if Input.is_action_just_pressed("debugGodmode"):
 			if debugGodmode == -1:

@@ -8,15 +8,11 @@ export var normalDescription = "insert description for normal"
 export var hardDescription = "insert description for hard"
 
 func _ready():
-	match global.diff:
-		global.easy:
-			diffSlider.value = 0
-		global.normal:
-			diffSlider.value = 1
-		global.hard:
-			diffSlider.value = 2
+	diffSlider.value = global.diff
 	setDiffDescr()
-	hide()
+	if global.newGame == false:
+		hide()
+
 
 func setDiffDescr():
 	match global.diff:
@@ -28,6 +24,7 @@ func setDiffDescr():
 			diffDescription.text = hardDescription
 
 func _on_BackButton_pressed():
+	global.newGame = false
 	hide()
 
 func _on_DiffSlider_value_changed(value):

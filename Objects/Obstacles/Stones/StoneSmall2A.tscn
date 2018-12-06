@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Obstacles/Stones/Asset_Stone_Small_2A.png" type="Texture" id=1]
+
+[node name="StoneSmall2A" type="Sprite" index="0"]
+
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -117.791, 70.1437, 120.535, 73.5565, 120.535, 32.0342, 86.9763, -59.5425, 54.5547, -68.0745, 6.20682, -63.5241, -43.2787, 11.5574, -82.5259, 8.14459, -105.278, 20.6582, -114.947, 54.2173 )
+
+

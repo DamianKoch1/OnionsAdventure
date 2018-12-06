@@ -3,18 +3,17 @@
 [ext_resource path="res://Enemies/Worm/Worm.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Worm/enemy placeholder 4.png" type="Texture" id=2]
 
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 88.8915, 48.7776 )
-
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 38.3767, 36.5009 )
+extents = Vector2( 38.3767, 32.2044 )
 
-[node name="Worm" type="Node2D" index="0" groups=[
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.8834, 30.304 )
+
+[node name="Worm" type="Node2D" groups=[
 "Enemies",
 ]]
 
@@ -24,45 +23,8 @@ _sections_unfolded = [ "Z Index" ]
 movespeed = 2
 pathLooped = true
 
-[node name="visionRange" type="Area2D" parent="." index="0"]
+[node name="Enemy" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="visionRange" index="0"]
-
-position = Vector2( 1.04904e-005, -112 )
-scale = Vector2( 1.31282, 2.02904 )
-build_mode = 0
-polygon = PoolVector2Array( -219.375, 70.9695, -219.375, -39.4275, 219.375, -39.4275, 219.375, 70.9695, -7.99075e-006, 70.9695, 24.375, 86.7405, 243.75, 86.7405, 243.75, -55.1985, -243.75, -55.1985, -243.75, 86.7405, -7.99075e-006, 86.7405, -24.375, 70.9695 )
-
-[node name="detectRange" type="Area2D" parent="." index="1"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detectRange" index="0"]
-
-position = Vector2( 1.90735e-006, -67.4183 )
-scale = Vector2( 1.39295, 1.78806 )
-z_index = -20
-shape = SubResource( 1 )
-_sections_unfolded = [ "Z Index" ]
-
-[node name="Enemy" type="Node2D" parent="." index="2"]
-
-editor/display_folded = true
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_group_": true
@@ -103,14 +65,37 @@ scale = Vector2( 0.16899, 0.201866 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="diggedOutPos" type="Position2D" parent="." index="3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Enemy" index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/StaticBody2D" index="0"]
+
+position = Vector2( -0.243919, 3.41125 )
+rotation = -0.000132151
+scale = Vector2( 0.477134, 0.394477 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="diggedOutPos" type="Position2D" parent="." index="1"]
 
 position = Vector2( 0, -24.8303 )
 
-[connection signal="body_entered" from="visionRange" to="." method="_on_visionRange_body_entered"]
+[node name="Timer" type="Timer" parent="." index="2"]
 
-[connection signal="body_entered" from="detectRange" to="." method="_on_detectRange_body_entered"]
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
 
 [connection signal="body_entered" from="Enemy/Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
