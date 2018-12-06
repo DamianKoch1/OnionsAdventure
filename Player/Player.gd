@@ -171,7 +171,7 @@ func setHealth(newHealth):
 				emit_signal("loseHp")
 		#restart from level start if player completely dies
 		if health <= 0:
-			setState(dead)
+#			setState(dead)
 			get_tree().reload_current_scene()
 	
 

@@ -13,7 +13,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="OptionsOverlay" type="Container" index="0"]
+[node name="OptionsOverlay" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -32,9 +32,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
-easyDescription = "insert description for easy"
-normalDescription = "insert description for normal"
-hardDescription = "insert description for hard"
+easyDescription = "You never played a platformer before? You don't have many experience playing games with mouse and keyboard? Congratulations, you are the perfect beginner. But don't worry, everyone need to start one day. You will have enough time and even enough life to explore our game and train you jump and run skills step by step. If you choose this setting, you can't die and need to do the whole level again. You will just restart on your last checkpoint. "
+normalDescription = "You already know how to play a platformer? You think you can deal with the basic challenge but don't think you are an expert? This is the setting for you. You have the standard number of 5 lives. This should be enough to solve every level without problems. If you die without having a live, you will have to restart the whole level."
+hardDescription = "You think medium is not a challenge anymore? You are already a expert because of other games? You already played Onions Adventure before and want to have a new challenge? This is the setting for an expert like you. You have a minimum number of lives. There are just 3 tries for every part of the level. If you die without having a live, you will have to restart the whole level. Are you ready for this challenge? "
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
