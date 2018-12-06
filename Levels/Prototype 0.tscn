@@ -24,7 +24,7 @@
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
 
-[node name="Prototype 0" type="Node"]
+[node name="Prototype 0" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -55,7 +55,7 @@ z_as_relative = false
 [node name="Onion" parent="." index="4" instance=ExtResource( 4 )]
 
 editor/display_folded = true
-position = Vector2( 270.264, 226.72 )
+position = Vector2( 1894.72, -33.475 )
 z_index = 5
 z_as_relative = false
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
@@ -215,92 +215,103 @@ z_index = 5
 position = Vector2( 1300.42, -141.796 )
 z_index = 5
 
-[node name="Box4" parent="." index="17" instance=ExtResource( 12 )]
+[node name="Box5" parent="." index="17" instance=ExtResource( 12 )]
+
+position = Vector2( 1991.34, -38.0696 )
+z_index = 5
+gravity = 1
+
+[node name="Box4" parent="." index="18" instance=ExtResource( 12 )]
 
 position = Vector2( 2775.46, -16.9718 )
 z_index = 5
 
-[node name="Checkpoint" parent="." index="18" instance=ExtResource( 13 )]
+[node name="Checkpoint" parent="." index="19" instance=ExtResource( 13 )]
 
 position = Vector2( 1380, -50 )
 z_index = -5
 
-[node name="Checkpoint3" parent="." index="19" instance=ExtResource( 13 )]
+[node name="Checkpoint3" parent="." index="20" instance=ExtResource( 13 )]
 
 position = Vector2( 550, 90 )
 z_index = -5
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
-[node name="Checkpoint2" parent="." index="20" instance=ExtResource( 13 )]
+[node name="Checkpoint2" parent="." index="21" instance=ExtResource( 13 )]
 
 position = Vector2( 2304, -32 )
 z_index = -5
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Trap" parent="." index="21" instance=ExtResource( 14 )]
+[node name="Trap" parent="." index="22" instance=ExtResource( 14 )]
 
 position = Vector2( -97.7994, 240.296 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="trappedNPC" parent="." index="22" instance=ExtResource( 15 )]
+[node name="Trap2" parent="." index="23" instance=ExtResource( 14 )]
+
+position = Vector2( 2032.99, 329.958 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="trappedNPC" parent="." index="24" instance=ExtResource( 15 )]
 
 position = Vector2( 229.348, 334.261 )
 
-[node name="trappedNPC2" parent="." index="23" instance=ExtResource( 15 )]
+[node name="trappedNPC2" parent="." index="25" instance=ExtResource( 15 )]
 
 position = Vector2( 488.675, 341.421 )
 
-[node name="Camera" parent="." index="24" instance=ExtResource( 16 )]
+[node name="Camera" parent="." index="26" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 offsetX = 100
 offsetY = 60
 
-[node name="Biewe" parent="." index="25" instance=ExtResource( 17 )]
+[node name="Biewe" parent="." index="27" instance=ExtResource( 17 )]
 
 position = Vector2( 2644.2, -108.481 )
 
-[node name="FireSalamander" parent="." index="26" instance=ExtResource( 6 )]
+[node name="FireSalamander" parent="." index="28" instance=ExtResource( 6 )]
 
 position = Vector2( 1697.53, -39.5678 )
 
-[node name="Worm" parent="." index="27" instance=ExtResource( 18 )]
+[node name="Worm" parent="." index="29" instance=ExtResource( 18 )]
 
 position = Vector2( 1175.64, 12.7948 )
 
-[node name="ParallaxBackground" parent="." index="28" instance=ExtResource( 19 )]
+[node name="ParallaxBackground" parent="." index="30" instance=ExtResource( 19 )]
 
 editor/display_folded = true
 
-[node name="TwistedTree" parent="." index="29" instance=ExtResource( 20 )]
+[node name="TwistedTree" parent="." index="31" instance=ExtResource( 20 )]
 
 position = Vector2( 240, -80 )
 z_index = -4
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="stump m 7" parent="." index="30" instance=ExtResource( 21 )]
+[node name="stump m 7" parent="." index="32" instance=ExtResource( 21 )]
 
 position = Vector2( 790, -110 )
 z_index = -5
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="Enemy" parent="." index="31" instance=ExtResource( 22 )]
+[node name="Enemy" parent="." index="33" instance=ExtResource( 22 )]
 
 position = Vector2( -587.197, 198.662 )
 
-[node name="Enemy2" parent="." index="32" instance=ExtResource( 22 )]
+[node name="Enemy2" parent="." index="34" instance=ExtResource( 22 )]
 
 position = Vector2( 2920.16, -70.3229 )
 
-[node name="Enemy5" parent="." index="33" instance=ExtResource( 22 )]
+[node name="Enemy5" parent="." index="35" instance=ExtResource( 22 )]
 
 position = Vector2( 1432.99, -139.393 )
 
-[node name="Enemy3" parent="." index="34" instance=ExtResource( 23 )]
+[node name="Enemy3" parent="." index="36" instance=ExtResource( 23 )]
 
 position = Vector2( 1481.2, -21.0018 )
 
-[node name="Enemy4" parent="." index="35" instance=ExtResource( 23 )]
+[node name="Enemy4" parent="." index="37" instance=ExtResource( 23 )]
 
 position = Vector2( 2888.57, 15.4914 )
 

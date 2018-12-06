@@ -219,7 +219,6 @@ func rayUpdate():
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
-		#add exception if obj is an Area2D
 		if col.get_class() == "Area2D":
 			ray.add_exception(col)
 		else:

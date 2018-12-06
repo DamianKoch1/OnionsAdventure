@@ -13,3 +13,4 @@ func respawn():
 		global.player.rotation_degrees = 0
 		global.player.global_scale.x = 0.5
 		global.player.global_scale.y = 0.5
+		$SpawnParticles.emitting = true
