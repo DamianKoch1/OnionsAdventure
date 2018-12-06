@@ -22,7 +22,7 @@
 [ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=21]
 
-[node name="Level 1" instance=ExtResource( 1 )]
+[node name="Level 1" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -163,12 +163,6 @@ position = Vector2( 4347.17, 135.073 )
 position = Vector2( 10836.2, 231.338 )
 
 [node name="ParallaxBackground" parent="." index="19" instance=ExtResource( 21 )]
-
-[node name="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
-
-position = Vector2( 4090.66, 5.27643 )
-scale = Vector2( 0.294732, 0.294732 )
-region_rect = Rect2( -1820, 4, 77136, 2000 )
 
 
 [editable path="Camera"]
