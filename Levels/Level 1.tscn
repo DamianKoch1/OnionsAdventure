@@ -22,18 +22,6 @@
 [ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=21]
 
-
-
-
-
-
-
-
-
-
-
-
-
 [node name="Level 1" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
@@ -55,10 +43,6 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 [node name="Camera" parent="." index="3"]
 
 position = Vector2( 7.18484, 7.78357 )
-
-[node name="OptionsOverlay" parent="Camera/PauseMenu" index="8"]
-
-visible = true
 
 [node name="Spawnpoint" parent="." index="4"]
 
