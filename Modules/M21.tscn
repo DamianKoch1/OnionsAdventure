@@ -11,7 +11,6 @@
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=10]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -58,7 +57,7 @@ scale = Vector2( 0.65625, 0.65625 )
 
 [node name="Trap21" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 10001.8, -962.598 )
+position = Vector2( 10000.8, -969.271 )
 
 [node name="stump m 9" type="Sprite" parent="." index="4"]
 
@@ -125,7 +124,7 @@ position = Vector2( 10071.3, -1063.79 )
 
 [node name="Trap22" parent="." index="6" instance=ExtResource( 4 )]
 
-position = Vector2( 10464.9, -961.165 )
+position = Vector2( 10465.9, -969.378 )
 
 [node name="moving Platform12" parent="." index="7" instance=ExtResource( 8 )]
 
