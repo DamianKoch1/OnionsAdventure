@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 162.238, 32 )
+extents = Vector2( 195.074, 32 )
 
 [sub_resource type="Animation" id=2]
 
@@ -61,24 +61,24 @@ __meta__ = {
 
 [node name="right" type="Sprite" parent="." index="0"]
 
-position = Vector2( 8.74132, 2.70933 )
-scale = Vector2( 0.597556, 0.485692 )
+position = Vector2( 15.1121, 7.63889 )
+scale = Vector2( 0.719738, 0.585001 )
 texture = ExtResource( 2 )
 offset = Vector2( 140.346, -18.1511 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="left" type="Sprite" parent="." index="1"]
 
-position = Vector2( -24.0984, -1.1336 )
-scale = Vector2( 0.607609, 0.471712 )
+position = Vector2( -25.8982, 2.61061 )
+scale = Vector2( 0.729111, 0.566039 )
 texture = ExtResource( 3 )
 offset = Vector2( -130.816, -21.4299 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="base" type="Sprite" parent="." index="2"]
 
-position = Vector2( -6.18361, -0.819551 )
-scale = Vector2( 0.853085, 0.797693 )
+position = Vector2( -4.86202, -4.52514 )
+scale = Vector2( 0.945246, 0.883869 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
 
