@@ -8,10 +8,10 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 936.576 )
 
-[node name="Checkpoint" type="Area2D" index="0"]
+[node name="Checkpoint" type="Area2D"]
 
 position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.648227, 0.648227 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -20,7 +20,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
