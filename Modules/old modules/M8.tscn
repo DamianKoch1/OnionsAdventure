@@ -5,8 +5,9 @@
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump L.tscn" type="PackedScene" id=4]
 
-
 [node name="M8" type="Node2D" index="0"]
+
+position = Vector2( -24.2109, 1.05261 )
 
 [node name="TileMap9" type="TileMap" parent="." index="0"]
 
@@ -33,7 +34,7 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
 [node name="stump m 23" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 8527.55, 209.598 )
+position = Vector2( 8560.18, 205.387 )
 
 [node name="Trap10" parent="." index="2" instance=ExtResource( 3 )]
 
@@ -41,6 +42,6 @@ position = Vector2( 8770, 310 )
 
 [node name="stump l 8" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 8843.62, 151.987 )
+position = Vector2( 8797.3, 146.724 )
 
 
