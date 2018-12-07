@@ -63,10 +63,11 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale", "Spread" ]
 
-[node name="Goal" type="Area2D" groups=[
+[node name="Goal" type="Area2D" index="0" groups=[
 "Persist",
 ]]
 
+scale = Vector2( 1.26161, 1.26161 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

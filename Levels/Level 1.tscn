@@ -61,7 +61,6 @@ offsetY = 60
 [node name="Spawnpoint" parent="." index="4"]
 
 position = Vector2( -207.215, 79.8556 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="M1" parent="." index="5" instance=ExtResource( 2 )]
 
