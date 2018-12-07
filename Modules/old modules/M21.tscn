@@ -21,7 +21,7 @@ extents = Vector2( 10, 11.4254 )
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
 
-[node name="M21" type="Node2D" index="0"]
+[node name="M21" type="Node2D"]
 
 [node name="TileMap23" type="TileMap" parent="." index="0"]
 
@@ -128,8 +128,12 @@ position = Vector2( 10462.6, -969.128 )
 
 [node name="moving Platform12" parent="." index="7" instance=ExtResource( 8 )]
 
-position = Vector2( 10316.6, -1473.43 )
+position = Vector2( 10248.5, -1346.35 )
 platformSpeed = 1.0
+
+[node name="State2" parent="moving Platform12" index="2"]
+
+position = Vector2( 118.225, -115.616 )
 
 [node name="FireSalamander4" parent="." index="8" instance=ExtResource( 9 )]
 
@@ -201,3 +205,4 @@ shape = SubResource( 2 )
 position = Vector2( 10720.5, -1591.09 )
 
 
+[editable path="moving Platform12"]
