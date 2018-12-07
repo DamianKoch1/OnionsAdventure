@@ -94,8 +94,6 @@ position = Vector2( 0, 0 )
 
 [node name="Checkpoints" type="Node" parent="." index="17"]
 
-editor/display_folded = true
-
 [node name="Checkpoint" parent="Checkpoints" index="0" instance=ExtResource( 14 )]
 
 position = Vector2( 1290, 114.278 )
@@ -114,10 +112,6 @@ position = Vector2( 6042.84, 49.7698 )
 
 editor/display_folded = true
 position = Vector2( 9853.48, 176.752 )
-
-[node name="Checkpoint3" parent="Checkpoints" index="4" instance=ExtResource( 14 )]
-
-position = Vector2( 7820, 270 )
 
 [node name="Level specific" type="Node" parent="." index="18"]
 
