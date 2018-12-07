@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 7.82994 )
 
-[node name="stump l 8" type="Node2D" index="0"]
+[node name="stump l 8" type="Node2D"]
 
 scale = Vector2( 0.0989583, 0.104806 )
 _sections_unfolded = [ "Offset", "Transform" ]
@@ -18,9 +18,11 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Ast 4" parent="." index="1" instance=ExtResource( 2 )]
 
+position = Vector2( 1296.09, 736.439 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
 [node name="Stump" type="Sprite" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 1023.42, 754.019 )
 scale = Vector2( 2.10025, 2.34684 )
 texture = ExtResource( 3 )
@@ -49,6 +51,7 @@ shape = SubResource( 1 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stump/StaticBody2D2" index="1"]
 
 build_mode = 0
-polygon = PoolVector2Array( 723.934, 264.086, 1303.55, 250.405, 1165.89, -183.994, 1129.66, -40.3344, 716.689, 134.109 )
+polygon = PoolVector2Array( 669.354, 228.125, 1331.84, 256.482, 1324.12, -52.4717, 666.972, 98.79 )
 
 
+[editable path="Ast 4"]
