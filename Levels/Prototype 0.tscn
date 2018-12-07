@@ -24,7 +24,7 @@
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
 
-[node name="Prototype 0" type="Node"]
+[node name="Prototype 0" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -270,7 +270,7 @@ position = Vector2( 2644.2, -108.481 )
 
 [node name="FireSalamander" parent="." index="28" instance=ExtResource( 6 )]
 
-position = Vector2( 1697.53, -39.5678 )
+position = Vector2( 1542.5, -37.4728 )
 objToDestroyPath = NodePath("../Enemy3")
 
 [node name="Worm" parent="." index="29" instance=ExtResource( 18 )]
@@ -307,7 +307,7 @@ position = Vector2( 1432.99, -139.393 )
 
 [node name="Enemy3" parent="." index="36" instance=ExtResource( 23 )]
 
-position = Vector2( 1481.2, -21.0018 )
+position = Vector2( 1626.45, -24.4935 )
 
 [node name="Enemy4" parent="." index="37" instance=ExtResource( 23 )]
 
