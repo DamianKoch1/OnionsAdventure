@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=1]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/fire salamander placeholder.jpg" type="Texture" id=2]
+[ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,6 +13,45 @@ extents = Vector2( 13, 13 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.8311, 11.5305 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 28.11
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 108.28
+initial_velocity_random = 0.32
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+linear_accel = 34.32
+linear_accel_random = 0.0
+radial_accel = -82.6
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 0.01
+scale_random = 0.02
+color = Color( 1, 0.482971, 0.230469, 1 )
+hue_variation = 1.0
+hue_variation_random = 0.04
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Gravity", "Hue Variation", "Initial Velocity", "Scale", "Spread" ]
 
 [node name="FireSalamander" type="Node2D"]
 
@@ -60,6 +100,29 @@ position = Vector2( 16, -14.9718 )
 scale = Vector2( 1.23077, 1.13804 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="FireParticles" type="Particles2D" parent="." index="1"]
+
+position = Vector2( -12.909, 9.8354 )
+emitting = false
+amount = 77
+lifetime = 0.89
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.34
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = ExtResource( 3 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
 
 [connection signal="body_entered" from="FireSalamander/Trigger" to="." method="_on_FireStoneTrigger_body_entered"]
 
