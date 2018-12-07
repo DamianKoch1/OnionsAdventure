@@ -5,7 +5,7 @@
 [ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=4]
 
-[node name="M15" type="Node2D" index="0"]
+[node name="M15" type="Node2D"]
 
 [node name="TileMap16" type="TileMap" parent="." index="0"]
 
@@ -36,7 +36,7 @@ position = Vector2( 2270.92, -689.484 )
 
 [node name="Trap12" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 2740.92, -740.01 )
+position = Vector2( 2738.82, -746.295 )
 
 [node name="moving Platform5" parent="." index="3" instance=ExtResource( 4 )]
 

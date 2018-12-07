@@ -36,7 +36,7 @@ extents = Vector2( 10, 11.4254 )
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
 
-[node name="Level 2" instance=ExtResource( 1 )]
+[node name="Level 2" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( -10.252, 2.05054 )
 _sections_unfolded = [ "Transform" ]
@@ -151,7 +151,7 @@ shape = SubResource( 2 )
 [node name="Trap3" parent="Level specific" index="3" instance=ExtResource( 7 )]
 
 editor/display_folded = true
-position = Vector2( 1052, -201.859 )
+position = Vector2( 1053.71, -207.003 )
 
 [node name="moving Platform2" parent="Level specific" index="4" instance=ExtResource( 2 )]
 
@@ -406,7 +406,7 @@ position = Vector2( 10.252, -2.05054 )
 
 [node name="M17" parent="." index="10" instance=ExtResource( 18 )]
 
-position = Vector2( 29.9922, -40.5335 )
+position = Vector2( 42.252, -2.05054 )
 
 [node name="M21" parent="." index="11" instance=ExtResource( 19 )]
 
