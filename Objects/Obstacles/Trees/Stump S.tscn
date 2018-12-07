@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="stump s 1" type="Node2D" index="0"]
+[node name="stump s 1" type="Node2D"]
 
 scale = Vector2( 0.0556382, 0.0574858 )
 _sections_unfolded = [ "Offset", "Transform" ]
@@ -39,6 +39,6 @@ shape = SubResource( 1 )
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Sprite/StaticBody2D" index="1"]
 
 build_mode = 0
-polygon = PoolVector2Array( 566.035, 283.096, 1370.8, 228.973, 1305.15, -6.34445, 1125.24, 151.318 )
+polygon = PoolVector2Array( 566.035, 283.096, 1370.8, 228.973, 1358.51, 133.265, 579.267, 212.836 )
 
 
