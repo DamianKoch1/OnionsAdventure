@@ -3,11 +3,11 @@
 [ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Enemy/Bitchy_Finished_Color.png" type="Texture" id=2]
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, 0, 0, 0, 0, 110.766, 137.313, 0, 0, 0, 0, 46.7661, 73.313, 0, 0, 0, 0, -177.234, 105.313, 0, 0, 0, 0, -81.2339, 169.313 )
+"points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -25.1224, 74.9925, 12.3771, -53.8952, 49.9119, 111.749, 8.16484, 12.7371, -82.3015, -47.0295, 8.81271, -14.5705, -20.2379, -141.804, 11.3141, 62.0699, -198.496, 120.211, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -24,7 +24,9 @@ extents = Vector2( 38.3767, 36.5009 )
 "Enemies",
 ]]
 
+scale = Vector2( 1.34763, 1.34763 )
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 movespeed = 0.25
 pathLooped = true
 
@@ -32,7 +34,7 @@ pathLooped = true
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 81.2339, -169.313 )
-curve = SubResource( 4 )
+curve = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Enemy" type="Node2D" parent="EnemyPath" index="0"]
@@ -92,7 +94,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 
 position = Vector2( -81.2339, 169.313 )
-rotation = -0.165147
+rotation = 0.132455
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0
