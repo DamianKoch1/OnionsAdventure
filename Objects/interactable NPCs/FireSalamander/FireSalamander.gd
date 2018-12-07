@@ -22,6 +22,8 @@ func _on_FireStoneTrigger_body_entered(body):
 			if triggered == false:
 				var distanceToObject = global_position.distance_to(objToDestroy.global_position)
 				if body.motion.y > 3 && global_position.distance_to(objToDestroy.global_position) < destroyRadius:
+					$FireParticles.look_at(objToDestroy.global_position)
+					$FireParticles.emitting = true
 					objToDestroyParent = objToDestroy.get_parent()
 					objToDestroyParent.remove_child(objToDestroy)
 					triggered = true

@@ -36,7 +36,7 @@ extents = Vector2( 10, 11.4254 )
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
 
-[node name="Level 2" index="0" instance=ExtResource( 1 )]
+[node name="Level 2" instance=ExtResource( 1 )]
 
 position = Vector2( -10.252, 2.05054 )
 _sections_unfolded = [ "Transform" ]
