@@ -3,7 +3,7 @@
 [ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Enemy/Bitchy_Finished_Color.png" type="Texture" id=2]
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
@@ -18,9 +18,9 @@ extents = Vector2( 15.8134, 16.2055 )
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 38.3767, 36.5009 )
+extents = Vector2( 41.4692, 40.7305 )
 
-[node name="Enemy" type="Node2D" groups=[
+[node name="Enemy" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
@@ -32,7 +32,7 @@ pathLooped = true
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 81.2339, -169.313 )
-curve = SubResource( 4 )
+curve = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Enemy" type="Node2D" parent="EnemyPath" index="0"]
