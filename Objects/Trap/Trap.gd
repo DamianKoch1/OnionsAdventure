@@ -24,7 +24,9 @@ func snap():
 			obj.health -= 1
 		else:
 			if obj.get_filename() == boxPacked.get_path():
+				global.player.attachTo(global.player.worldNode)
 				obj.get_parent().remove_child(obj)
+				
 
 #make trap snap if triggered
 func _on_Trap_body_entered(body):

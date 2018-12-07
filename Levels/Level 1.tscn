@@ -34,7 +34,7 @@
 [ext_resource path="res://Assets/Background/BG_layer_4_part4_var2.png" type="Texture" id=32]
 [ext_resource path="res://Assets/Background/BG_layer_5_part5_var2.png" type="Texture" id=33]
 
-[node name="Level 1" instance=ExtResource( 1 )]
+[node name="Level 1" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -123,10 +123,20 @@ position = Vector2( 7820, 270 )
 
 [node name="FireS3" parent="Level specific" index="0" instance=ExtResource( 15 )]
 
-editor/display_folded = true
-position = Vector2( 4230, 150 )
+position = Vector2( 4233.22, 151.887 )
 scale = Vector2( 1.4375, 1.4375 )
+_sections_unfolded = [ "Transform" ]
 objToDestroyPath = NodePath("../Thornbush")
+
+[node name="Sprite" parent="Level specific/FireS3/FireSalamander" index="1"]
+
+position = Vector2( 24.938, -1.57504 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FireParticles" parent="Level specific/FireS3" index="1"]
+
+position = Vector2( 29.8794, 7.21035 )
 
 [node name="Trap11" parent="Level specific" index="1" instance=ExtResource( 16 )]
 
@@ -212,6 +222,7 @@ __meta__ = {
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2" index="1"]
 
+editor/display_folded = true
 motion_scale = Vector2( 0.7, 0.7 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
@@ -318,6 +329,7 @@ __meta__ = {
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground2" index="2"]
 
+editor/display_folded = true
 motion_scale = Vector2( 0.8, 0.8 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )

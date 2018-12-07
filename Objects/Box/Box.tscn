@@ -13,7 +13,7 @@ extents = Vector2( 46.7717, 36.8304 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Box" type="KinematicBody2D" index="0"]
+[node name="Box" type="KinematicBody2D"]
 
 z_index = 50
 input_pickable = false
@@ -23,7 +23,7 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 brakeSpeed = 0.08
-gravity = 12
+gravity = 15
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
