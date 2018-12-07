@@ -135,6 +135,16 @@ position = Vector2( 5590, 270 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../Thornbush")
 
+[node name="Sprite" parent="FireS/FireSalamander" index="1"]
+
+position = Vector2( 33.6843, -0.7323 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FireParticles" parent="FireS" index="1"]
+
+position = Vector2( 39.8142, 7.6386 )
+
 [node name="Ladder6" parent="." index="9" instance=ExtResource( 5 )]
 
 editor/display_folded = true
@@ -143,10 +153,19 @@ scale = Vector2( 1, 4.14063 )
 
 [node name="FireS2" parent="." index="10" instance=ExtResource( 7 )]
 
-editor/display_folded = true
 position = Vector2( 5680, -200 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../Thornbush2")
+
+[node name="Sprite" parent="FireS2/FireSalamander" index="1"]
+
+position = Vector2( 30.0227, -1.46454 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FireParticles" parent="FireS2" index="1"]
+
+position = Vector2( 34.6882, 9.8354 )
 
 [node name="Thornbush" parent="." index="11" instance=ExtResource( 8 )]
 
@@ -157,3 +176,5 @@ position = Vector2( 5713.08, 260.795 )
 position = Vector2( 5888.09, -123.396 )
 
 
+[editable path="FireS"]
+[editable path="FireS2"]

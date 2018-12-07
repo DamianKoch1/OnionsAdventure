@@ -34,10 +34,19 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
 [node name="FireS4" parent="." index="1" instance=ExtResource( 2 )]
 
-editor/display_folded = true
-position = Vector2( 7200, -50 )
+position = Vector2( 7165.71, -49.1426 )
 scale = Vector2( 1.4375, 1.4375 )
 objToDestroyPath = NodePath("../Thornbush")
+
+[node name="Sprite" parent="FireS4/FireSalamander" index="1"]
+
+position = Vector2( 30.418, -0.596436 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FireParticles" parent="FireS4" index="1"]
+
+position = Vector2( 32.4204, 9.8354 )
 
 [node name="Ladder7" parent="." index="2" instance=ExtResource( 3 )]
 
@@ -80,3 +89,4 @@ position = Vector2( 8050, 340 )
 position = Vector2( 7295.08, -57.1629 )
 
 
+[editable path="FireS4"]

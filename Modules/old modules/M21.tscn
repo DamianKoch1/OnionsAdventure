@@ -21,7 +21,7 @@ extents = Vector2( 10, 11.4254 )
 custom_solver_bias = 0.0
 extents = Vector2( 447.881, 10 )
 
-[node name="M21" type="Node2D"]
+[node name="M21" type="Node2D" index="0"]
 
 [node name="TileMap23" type="TileMap" parent="." index="0"]
 
@@ -137,10 +137,19 @@ position = Vector2( 118.225, -115.616 )
 
 [node name="FireSalamander4" parent="." index="8" instance=ExtResource( 9 )]
 
-editor/display_folded = true
 position = Vector2( 10615.7, -1564.71 )
 objToDestroyPath = NodePath("../Thornbush")
 destroyRadius = 140
+
+[node name="Sprite" parent="FireSalamander4/FireSalamander" index="1"]
+
+position = Vector2( 33.5195, -1.39673 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="FireParticles" parent="FireSalamander4" index="1"]
+
+position = Vector2( 42.2588, 9.83545 )
 
 [node name="stump m 11" type="Sprite" parent="." index="9"]
 
@@ -206,3 +215,4 @@ position = Vector2( 10720.5, -1591.09 )
 
 
 [editable path="moving Platform12"]
+[editable path="FireSalamander4"]
