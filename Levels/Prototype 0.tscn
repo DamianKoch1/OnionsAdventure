@@ -24,7 +24,7 @@
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
 
-[node name="Prototype 0" type="Node" index="0"]
+[node name="Prototype 0" type="Node"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
