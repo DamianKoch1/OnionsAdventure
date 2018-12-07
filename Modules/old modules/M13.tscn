@@ -50,6 +50,16 @@ scale = Vector2( 1.55124, 1.16343 )
 position = Vector2( 11.4434, -66.4591 )
 objToDestroyPath = NodePath("../../Thornbush")
 
+[node name="Sprite" parent="moving Platform3/FireSalamander/FireSalamander" index="1"]
+
+position = Vector2( 29.2601, 0 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FireParticles" parent="moving Platform3/FireSalamander" index="1"]
+
+position = Vector2( 37.9114, 8.80875 )
+
 [node name="Trap4" parent="." index="3" instance=ExtResource( 5 )]
 
 editor/display_folded = true
@@ -61,3 +71,4 @@ position = Vector2( 1400.25, -440.762 )
 
 
 [editable path="moving Platform3"]
+[editable path="moving Platform3/FireSalamander"]

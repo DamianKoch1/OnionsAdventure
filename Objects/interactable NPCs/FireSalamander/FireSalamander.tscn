@@ -77,6 +77,10 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Node2D" parent="FireSalamander" index="1"]
 
+position = Vector2( 29.1989, 0.614712 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
 [node name="icon" type="Sprite" parent="FireSalamander/Sprite" index="0"]
 
 position = Vector2( 21.2832, 14.3249 )
@@ -103,7 +107,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="FireParticles" type="Particles2D" parent="." index="1"]
 
-position = Vector2( -12.909, 9.8354 )
+position = Vector2( 37.4975, 11.3722 )
 emitting = false
 amount = 77
 lifetime = 0.89
@@ -115,14 +119,14 @@ randomness = 0.0
 fixed_fps = 0
 fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
+local_coords = false
 draw_order = 0
 process_material = SubResource( 3 )
 texture = ExtResource( 3 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time" ]
 
 [connection signal="body_entered" from="FireSalamander/Trigger" to="." method="_on_FireStoneTrigger_body_entered"]
 
