@@ -34,14 +34,14 @@ _sections_unfolded = [ "Cell", "Occluder", "Transform", "Z Index" ]
 
 [node name="stump m 23" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 8560.18, 205.387 )
+position = Vector2( 8674.7, 204.613 )
 
 [node name="Trap10" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 8770, 310 )
+position = Vector2( 8884.52, 309.226 )
 
 [node name="stump l 8" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 8797.3, 146.724 )
+position = Vector2( 8911.82, 145.95 )
 
 
