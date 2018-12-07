@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Camera/health empty.png" type="Texture" id=3]
-[ext_resource path="res://Camera/health full.png" type="Texture" id=4]
+[ext_resource path="res://Camera/hp_stone_empty.png" type="Texture" id=3]
+[ext_resource path="res://Camera/hp_stone_full.png" type="Texture" id=4]
 
-[node name="Camera" type="Camera2D"]
+[node name="Camera" type="Camera2D" index="0"]
 
 pause_mode = 2
 position = Vector2( 32, 32 )
@@ -35,8 +35,8 @@ editor_draw_drag_margin = false
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause", "Transform", "Z Index" ]
 camSpeed = 0.1
-upDownSpeed = 0.04
-upDownAmount = 150
+offsetX = 100
+offsetY = 60
 
 [node name="NPCsSaved" type="Label" parent="." index="0"]
 
@@ -76,21 +76,21 @@ __meta__ = {
 [node name="HealthEmpty" type="Sprite" parent="HP" index="0"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 4, 4 )
+scale = Vector2( 0.08, 0.0693719 )
 texture = ExtResource( 3 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 45, 9 )
+region_rect = Rect2( 40, 12, 1795, 796 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="HealthFull" type="Sprite" parent="HP" index="1"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 4, 4 )
+scale = Vector2( 0.08, 0.0693719 )
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 45, 9 )
+region_rect = Rect2( 40, 12, 1795, 796 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 
