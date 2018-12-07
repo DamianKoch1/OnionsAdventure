@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Onion.tscn" type="PackedScene" id=4]
+
+[node name="Bitchy2" type="Node2D" index="0"]
+
+[node name="Enemy" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 2.44348, 100.92 )
+
+[node name="PathFollow2D" parent="Enemy/EnemyPath" index="1"]
+
+rotation = 0.13147
+
+[node name="Camera" parent="." index="1" instance=ExtResource( 2 )]
+
+visible = false
+offsetX = 100
+offsetY = 60
+
+[node name="TileMap" parent="." index="2" instance=ExtResource( 3 )]
+
+tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0, 327669, 1, 0, 327670, 1, 0, 327671, 1, 0, 327672, 1, 0, 327673, 1, 0, 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0 )
+
+[node name="Onion" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( -317.023, 102.64 )
+
+
+[editable path="Enemy"]
