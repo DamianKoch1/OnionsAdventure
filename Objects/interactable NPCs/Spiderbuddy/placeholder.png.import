@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fire salamander placeholder.jpg-cb2650f34a151435aee462977afc058c.stex"
+path="res://.import/placeholder.png-1c56a97a2b2f74875425956786c781e4.stex"
 
 [deps]
 
-source_file="res://Objects/interactable NPCs/FireSalamander/fire salamander placeholder.jpg"
-dest_files=[ "res://.import/fire salamander placeholder.jpg-cb2650f34a151435aee462977afc058c.stex" ]
+source_file="res://Objects/interactable NPCs/Spiderbuddy/placeholder.png"
+dest_files=[ "res://.import/placeholder.png-1c56a97a2b2f74875425956786c781e4.stex" ]
 
 [params]
 
