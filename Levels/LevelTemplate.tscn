@@ -7,20 +7,20 @@
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=6]
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=1]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0, 0 ), 0.0, 8.23475, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=3]
+[sub_resource type="CurveTexture" id=2]
 
 flags = 4
 width = 2048
-curve = SubResource( 2 )
+curve = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
@@ -50,7 +50,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 0.03
 scale_random = 0.06
-scale_curve = SubResource( 3 )
+scale_curve = SubResource( 2 )
 color = Color( 1, 0.996643, 0.785156, 1 )
 hue_variation = 0.0
 hue_variation_random = 0.0
@@ -94,7 +94,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 2000, 2000 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 1 )
+process_material = SubResource( 3 )
 texture = ExtResource( 6 )
 normal_map = null
 h_frames = 1
