@@ -95,7 +95,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 
 position = Vector2( -80.5574, 170.197 )
-rotation = -0.00159685
+rotation = -0.00160074
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0

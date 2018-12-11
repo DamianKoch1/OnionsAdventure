@@ -7,6 +7,8 @@ var objToDestroyParent
 var objToDestroy 
 var triggered = false
 
+onready var anim = $AnimationPlayer
+
 #set up destroying object on player jumping on self and resetting it on player respawn
 func _ready():
 	if objToDestroyPath != null && global.player != null:
@@ -22,11 +24,21 @@ func _on_FireStoneTrigger_body_entered(body):
 			if triggered == false:
 				var distanceToObject = global_position.distance_to(objToDestroy.global_position)
 				if body.motion.y > 3 && global_position.distance_to(objToDestroy.global_position) < destroyRadius:
-					$FireParticles.look_at(objToDestroy.global_position)
-					$FireParticles.emitting = true
-					objToDestroyParent = objToDestroy.get_parent()
-					objToDestroyParent.remove_child(objToDestroy)
 					triggered = true
+					anim.play("burn")
+
+func emit():
+	$FireParticles.look_at(objToDestroy.global_position)
+	$FireParticles.emitting = true
+	#$BurnParticles.global_position = objToDestroy.global_position
+
+func burn():
+	$BurnParticles.global_position = objToDestroy.global_position
+	$BurnParticles.emitting = true
+
+func removeObj():
+	objToDestroyParent = objToDestroy.get_parent()
+	objToDestroyParent.remove_child(objToDestroy)
 
 #reset own state on player respawn
 func resetObj():
