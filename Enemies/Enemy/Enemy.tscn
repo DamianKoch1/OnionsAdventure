@@ -24,7 +24,7 @@ extents = Vector2( 38.3767, 36.5009 )
 flags = 0
 load_path = ""
 
-[node name="Enemy" type="Node2D" index="0" groups=[
+[node name="Enemy" type="Node2D" groups=[
 "Enemies",
 ]]
 
