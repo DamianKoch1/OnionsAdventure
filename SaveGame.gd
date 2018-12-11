@@ -1,5 +1,6 @@
 extends Node
 
+#path: C:\Users\username\AppData\Roaming\Godot\app_userdata\Onion Adventures
 var savePath = "user://save.cfg"  
 var saveFile
 
@@ -15,7 +16,7 @@ var playerPosY
 func _ready():
 	saveFile = ConfigFile.new()
 	
-
+#write and read certain variables into a .cfg file
 func saveGame():
 	saveFile.set_value("SaveState", "latestLevelId", global.currLevelId) 
 	saveFile.set_value("SaveState", "spawnPosX", latestCheckpoint.position.x) 

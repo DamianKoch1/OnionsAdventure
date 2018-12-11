@@ -1,6 +1,7 @@
 extends Node2D
 
 var collected = false
+#path: C:\Users\username\AppData\Roaming\Godot\app_userdata\Onion Adventures
 var savePath = "user://collectibleSave.cfg"
 var saveFile
 
@@ -18,10 +19,12 @@ func _on_Area2D_body_entered(body):
 			saveCollected()
 			queue_free()
 
+#save this objects name and that it was collected into another .cfg
 func saveCollected():
 	saveFile.set_value(str(global.currLevelId,name), "collected", collected)
 	saveFile.save(savePath)
 
+#delete self if already collected in currently saved game
 func checkCollected():
 	saveFile.load(savePath)
 	collected = saveFile.get_value(str(global.currLevelId,name), "collected")

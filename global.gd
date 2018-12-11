@@ -7,6 +7,7 @@ var currLevelId = 0
 enum{easy, normal, hard}
 var diff = normal
 
+#was new game clicked?
 var newGame = false
 
 var maxHealth = 3

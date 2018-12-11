@@ -10,6 +10,7 @@ export var hardDescription = "insert description for hard"
 func _ready():
 	diffSlider.value = global.diff
 	setDiffDescr()
+	#show options if newgame was pressed
 	if global.newGame == false:
 		hide()
 
