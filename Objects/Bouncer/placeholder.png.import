@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bouncer placeholder.png-0b28993ae7967353269812dacb175e97.stex"
+path="res://.import/placeholder.png-6fb96120f38c488a7d3d379887758d31.stex"
 
 [deps]
 
-source_file="res://Objects/Bouncer/bouncer placeholder.png"
-dest_files=[ "res://.import/bouncer placeholder.png-0b28993ae7967353269812dacb175e97.stex" ]
+source_file="res://Objects/Bouncer/placeholder.png"
+dest_files=[ "res://.import/placeholder.png-6fb96120f38c488a7d3d379887758d31.stex" ]
 
 [params]
 

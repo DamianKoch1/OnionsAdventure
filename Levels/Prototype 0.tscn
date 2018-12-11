@@ -25,7 +25,7 @@
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=24]
 
-[node name="Prototype 0" type="Node" index="0"]
+[node name="Prototype 0" type="Node"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -38,7 +38,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 position = Vector2( 864, 368 )
 scale = Vector2( 1, 0.5 )
 z_index = 1
-bounceIncrease = 5
 
 [node name="Bouncer2" parent="." index="2" instance=ExtResource( 2 )]
 
@@ -46,7 +45,6 @@ position = Vector2( 832, 1024 )
 scale = Vector2( 98.9039, 2.25 )
 z_index = 1
 maxBounceStr = 1600
-bounceIncrease = 5
 
 [node name="Ladder" parent="." index="3" instance=ExtResource( 3 )]
 

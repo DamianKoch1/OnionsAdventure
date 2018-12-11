@@ -9,7 +9,7 @@
 
 pause_mode = 2
 position = Vector2( 32, 32 )
-z_index = 3000
+z_index = 4096
 anchor_mode = 1
 rotating = false
 current = true
@@ -71,6 +71,8 @@ margin_bottom = 40.0
 [node name="HP" type="Node2D" parent="." index="2"]
 
 position = Vector2( -283.401, -151.22 )
+z_index = 4096
+_sections_unfolded = [ "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
