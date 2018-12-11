@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=1]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/fire salamander placeholder.jpg" type="Texture" id=2]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/placeholder.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -150,8 +150,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="icon" type="Sprite" parent="FireSalamander/Sprite" index="0"]
 
-position = Vector2( 21.2832, 14.3249 )
-scale = Vector2( 0.112663, 0.0768505 )
+position = Vector2( 19.7114, 13.5294 )
+scale = Vector2( 0.284556, 0.288274 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -174,7 +174,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="FireParticles" type="Particles2D" parent="." index="1"]
 
-position = Vector2( 37.4975, 11.3722 )
+position = Vector2( 51.7345, -1.44284 )
 emitting = false
 amount = 77
 lifetime = 0.89
