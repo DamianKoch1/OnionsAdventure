@@ -42,5 +42,6 @@ func removeObj():
 
 #reset own state on player respawn
 func resetObj():
+	anim.stop()
 	objToDestroyParent.add_child(objToDestroy)
 	triggered = false
