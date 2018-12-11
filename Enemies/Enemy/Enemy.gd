@@ -1,7 +1,5 @@
 extends Node2D
 
-onready var pathfollow = $EnemyPath/PathFollow2D
-
 #the visible enemy object with collider etc
 var enemy
 
@@ -13,6 +11,7 @@ export (bool) var pathLooped = true
 
 onready var stop = false
 onready var hideTimer = 0
+onready var pathfollow = $EnemyPath/PathFollow2D
 
 func _ready():
 	enemy = $EnemyPath/Enemy

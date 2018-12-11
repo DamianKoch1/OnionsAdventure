@@ -22,9 +22,9 @@ extents = Vector2( 38.3767, 36.5009 )
 [sub_resource type="StreamTexture" id=4]
 
 flags = 0
-load_path = "res://.import/enemy placeholder 1.png-771cece3751e2378e2484ea2c8eb12e2.stex"
+load_path = ""
 
-[node name="Enemy" type="Node2D" groups=[
+[node name="Enemy" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
@@ -41,6 +41,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Enemy" type="Node2D" parent="EnemyPath" index="0"]
 
+editor/display_folded = true
 position = Vector2( -81.2339, 169.313 )
 z_index = 50
 _sections_unfolded = [ "Visibility", "Z Index" ]

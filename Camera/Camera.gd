@@ -10,6 +10,9 @@ export var camSpeed = 0.08
 export var offsetX = 100
 export var offsetY = 60
 
+export var topLimit = 800
+export var bottomLimit = 800
+
 func _ready():
 	if global.player != null:
 		global_position = global.player.global_position
@@ -32,9 +35,10 @@ func _physics_process(delta):
 	if global.player != null:
 		global_position.x = lerp(global_position.x, targetPosX, camSpeed)
 		global_position.y = lerp(global_position.y, targetPosY, camSpeed)
-		
-				
-			
+	global_position.y = max(global_position.y, -topLimit)
+	global_position.y = min(global_position.y, bottomLimit)
+	
+
 
 #update hud elements
 
