@@ -1,5 +1,5 @@
 extends Node2D
-#has all functions and variables from enemy class if not overwritten
+
 
 onready var diggedOut = false
 onready var anim = $AnimationPlayer
@@ -18,6 +18,7 @@ func digOut():
 	diggedOut = true
 	anim.play("digOut")
 
+#play correct animation each time the timer runs out
 func _on_Timer_timeout():
 	if diggedOut == false:
 		digOut()

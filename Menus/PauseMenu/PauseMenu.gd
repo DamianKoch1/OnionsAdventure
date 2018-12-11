@@ -8,6 +8,7 @@ onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 func _ready():
 	$YesNoOverlayMainMenu.connect("yesPressed", self, "loadMainMenu")
 	$YesNoOverlayRestart.connect("yesPressed", self, "restart")
+	#pause and show options if newgame was pressed
 	if global.newGame == false:
 		get_tree().paused = false
 		hide()

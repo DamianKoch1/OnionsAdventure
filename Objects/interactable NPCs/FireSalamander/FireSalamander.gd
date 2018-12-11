@@ -27,15 +27,19 @@ func _on_FireStoneTrigger_body_entered(body):
 					triggered = true
 					anim.play("burn")
 
+#called by burn anim
+#fire breath particles
 func emit():
 	$FireParticles.look_at(objToDestroy.global_position)
 	$FireParticles.emitting = true
-	#$BurnParticles.global_position = objToDestroy.global_position
 
+#called by burn anim
+#burning particles at object
 func burn():
 	$BurnParticles.global_position = objToDestroy.global_position
 	$BurnParticles.emitting = true
 
+#called by burn anim
 func removeObj():
 	objToDestroyParent = objToDestroy.get_parent()
 	objToDestroyParent.remove_child(objToDestroy)
