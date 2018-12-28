@@ -10,15 +10,10 @@
 [node name="Camera" parent="." index="0" instance=ExtResource( 1 )]
 
 visible = false
-offsetX = 100
-offsetY = 60
 
 [node name="Onion" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( -386.095, 116.708 )
-gracePeriod = 2
-normalHealth = 5
-hardHealth = 3
 
 [node name="TileMap" parent="." index="2" instance=ExtResource( 3 )]
 
@@ -28,7 +23,6 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 
 editor/display_folded = true
 position = Vector2( -104.088, 161.021 )
-scale = Vector2( 2.36748, 2.36748 )
 
 [node name="EnemyPath" parent="Enemy" index="0"]
 
