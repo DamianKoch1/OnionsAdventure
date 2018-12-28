@@ -3,11 +3,12 @@
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.gd" type="Script" id=1]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=2]
 
-[node name="Movingplatform" type="Node2D" index="0"]
+[node name="Movingplatform" type="Node2D"]
 
+scale = Vector2( 0.885421, 0.885421 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-platformSpeed = 2
+platformSpeed = 1.25
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 2 )]
 
