@@ -16,19 +16,20 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Ast 3" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -313.218, 349.167 )
+position = Vector2( -1244.1, -263.89 )
 scale = Vector2( 4.00471, 1.96351 )
 
 [node name="Ast 4" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 1174.53, 504.698 )
+position = Vector2( 278.307, -291.202 )
 scale = Vector2( 2.99633, 1.6584 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="stump" type="Sprite" parent="." index="2"]
 
-position = Vector2( 949.936, 596.213 )
 scale = Vector2( 3.283, 2.90836 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump" index="0"]
 
