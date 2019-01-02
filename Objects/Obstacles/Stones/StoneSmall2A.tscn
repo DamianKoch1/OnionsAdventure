@@ -4,7 +4,9 @@
 
 [node name="StoneSmall2A" type="Sprite" index="0"]
 
+scale = Vector2( 0.631171, 0.631171 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
