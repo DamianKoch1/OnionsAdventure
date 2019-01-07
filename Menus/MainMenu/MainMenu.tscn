@@ -5,7 +5,7 @@
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=4]
 
-[node name="MainMenu" type="Container"]
+[node name="MainMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -27,7 +27,6 @@ _sections_unfolded = [ "Mouse", "Pause" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
-modulate = Color( 1, 1, 1, 0.867412 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
