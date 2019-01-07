@@ -1,15 +1,22 @@
+<<<<<<< working copy
 [gd_scene load_steps=14 format=2]
+=======
+[gd_scene load_steps=9 format=2]
+>>>>>>> merge rev
 
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/PanelButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel3.jpg" type="Texture" id=3]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=4]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=5]
+<<<<<<< working copy
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=7]
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Audio/Music/StorytellingIntro.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/Music/StorytellingMainpart.wav" type="AudioStream" id=10]
+=======
+>>>>>>> merge rev
 
 [sub_resource type="Animation" id=1]
 
@@ -309,6 +316,7 @@ texture_hover = ExtResource( 5 )
 texture_disabled = ExtResource( 5 )
 texture_focused = ExtResource( 5 )
 expand = true
+<<<<<<< working copy
 
 [node name="Panel5" type="Panel" parent="PanelButton1" index="0"]
 
@@ -358,14 +366,61 @@ _sections_unfolded = [ "Rect", "Size Flags" ]
 stream = ExtResource( 7 )
 
 [node name="BGMPlayer" parent="." index="6" instance=ExtResource( 8 )]
+=======
+>>>>>>> merge rev
 
+<<<<<<< working copy
 [node name="Intro" parent="BGMPlayer" index="0"]
 
 stream = ExtResource( 9 )
+=======
+[node name="Panel5" type="Panel" parent="PanelButton1" index="0"]
+>>>>>>> merge rev
 
-[node name="Mainpart" parent="BGMPlayer" index="1"]
+pause_mode = 2
+modulate = Color( 0.621094, 0.621094, 0.621094, 0.77902 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 905.0
+margin_top = 799.0
+margin_right = 1563.0
+margin_bottom = 1073.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
 
+<<<<<<< working copy
 stream = ExtResource( 10 )
+=======
+[node name="Label" type="Label" parent="PanelButton1" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1097.0
+margin_top = 914.0
+margin_right = 1326.0
+margin_bottom = 1051.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "test text 1"
+percent_visible = -0.0909091
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Size Flags" ]
+>>>>>>> merge rev
 
 [connection signal="pressed" from="PanelButton3" to="." method="_on_PanelButton3_pressed"]
 
@@ -374,4 +429,3 @@ stream = ExtResource( 10 )
 [connection signal="pressed" from="PanelButton1" to="." method="_on_PanelButton1_pressed"]
 
 
-[editable path="BGMPlayer"]
