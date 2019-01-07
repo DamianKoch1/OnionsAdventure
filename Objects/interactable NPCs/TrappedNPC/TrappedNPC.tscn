@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.gd" type="Script" id=1]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped NPC placeholder.jpg" type="Texture" id=2]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 64, 64 )
 
-[node name="trappedNPC" type="Node2D"]
+[node name="trappedNPC" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -30,8 +30,8 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Sprite" index="0"]
 
-position = Vector2( -1.90735e-006, -5.72205e-006 )
-scale = Vector2( 0.0711111, 0.0969697 )
+position = Vector2( -0.138016, -15.7624 )
+scale = Vector2( 0.0502965, 0.06257 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
