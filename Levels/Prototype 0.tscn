@@ -126,14 +126,13 @@ scale = Vector2( 3.2, 3.2 )
 
 [node name="EarthStone3" parent="." index="7" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 992, 576 )
 platformSpeed = 1.0
 
 [node name="FireStone" parent="EarthStone3/TileMap" index="0" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( -352, -352 )
+position = Vector2( -340.197, -422.813 )
 scale = Vector2( 5.50001, 5.50001 )
 objToDestroyPath = NodePath("../../../StoneMedium3A")
 destroyRadius = 262

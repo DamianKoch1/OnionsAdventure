@@ -153,7 +153,7 @@ tracks/3/keys = {
 } ]
 }
 
-[node name="NewGamePanels" type="Node"]
+[node name="NewGamePanels" type="Node" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )
