@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Menus/UISelect.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Gradient" id=1]
 
@@ -16,7 +15,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="PauseMenu" type="Container" index="0"]
+[node name="PauseMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -206,8 +205,6 @@ margin_left = 35.0
 margin_top = 36.0
 margin_right = 67.0
 margin_bottom = 65.0
-
-[node name="UISelect" parent="." index="9" instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="ResumeButton" to="." method="_on_ResumeButton_pressed"]
 

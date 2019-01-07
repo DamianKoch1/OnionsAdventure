@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Menus/UISelect.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Gradient" id=1]
 
@@ -17,7 +16,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -232,8 +231,6 @@ margin_right = 74.0
 margin_bottom = 74.0
 
 [node name="BGMPlayer" parent="." index="9" instance=ExtResource( 4 )]
-
-[node name="UISelect" parent="." index="10" instance=ExtResource( 5 )]
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 

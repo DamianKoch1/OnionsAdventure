@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menus/MainMenu/CreditScreen.gd" type="Script" id=1]
 [ext_resource path="res://Menus/MainMenu/credits.PNG" type="Texture" id=2]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Menus/UISelect.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Gradient" id=1]
 
@@ -16,7 +15,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="CreditScreen" type="Container" index="0"]
+[node name="CreditScreen" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -113,8 +112,6 @@ margin_left = -21.0
 margin_top = -5.0
 margin_right = 11.0
 margin_bottom = 24.0
-
-[node name="UISelect" parent="." index="4" instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
