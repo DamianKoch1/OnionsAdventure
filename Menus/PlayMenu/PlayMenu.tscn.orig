@@ -1,23 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Menus/PlayMenu/PlayMenu.gd" type="Script" id=1]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=2]
-
-[sub_resource type="Gradient" id=1]
-
-offsets = PoolRealArray( 0, 1 )
-colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1 )
+[ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
 
 <<<<<<< working copy
-=======
-[sub_resource type="GradientTexture" id=2]
-
-flags = 4
-gradient = SubResource( 1 )
-width = 2048
-
->>>>>>> destination
 [node name="PlayMenu" type="Container"]
+=======
+[node name="PlayMenu" type="Container" index="0"]
+>>>>>>> merge rev
 
 pause_mode = 2
 anchor_left = 0.0
@@ -39,66 +29,35 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
-modulate = Color( 0.761322, 1, 0.613281, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -373.0
 margin_top = -197.0
-margin_right = 303.0
-margin_bottom = 193.0
+margin_right = 267.0
+margin_bottom = 187.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = SubResource( 2 )
+texture = ExtResource( 2 )
 expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Title" type="RichTextLabel" parent="." index="1"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -53.0
-margin_top = -169.0
-margin_right = 108.0
-margin_bottom = -115.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Play"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="BackButton" type="Button" parent="." index="2"]
+[node name="BackButton" type="Button" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 75.0
-margin_top = 59.0
-margin_right = 235.0
-margin_bottom = 123.0
+margin_left = 91.0
+margin_top = 66.0
+margin_right = 199.0
+margin_bottom = 117.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -110,99 +69,21 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Back"
+text = "BACK"
 flat = false
 align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="NewGameButton" type="Button" parent="." index="3"]
+[node name="NewGameButton" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -149.0
-margin_top = -133.0
-margin_right = 75.0
-margin_bottom = -101.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "New Game"
-flat = false
-align = 1
-_sections_unfolded = [ "Textures" ]
-
-[node name="ContinueButton" type="Button" parent="." index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -149.0
-margin_top = -69.0
-margin_right = 75.0
-margin_bottom = -37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Load Game"
-flat = false
-align = 1
-_sections_unfolded = [ "Textures" ]
-
-[node name="LevelSelectorButton" type="Button" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -149.0
-margin_top = -5.0
-margin_right = 75.0
-margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Level Selection"
-flat = false
-align = 1
-_sections_unfolded = [ "Textures" ]
-
-[node name="OptionsButton" type="Button" parent="." index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 139.0
+margin_left = 43.0
 margin_top = -165.0
-margin_right = 236.0
-margin_bottom = -133.0
+margin_right = 235.0
+margin_bottom = -119.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -214,18 +95,62 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Options"
+text = "NEW GAME"
 flat = false
 align = 1
-_sections_unfolded = [ "Size Flags", "Textures" ]
+_sections_unfolded = [ "Textures" ]
 
-[node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 2 )]
+[node name="ContinueButton" type="Button" parent="." index="3"]
 
-visible = false
-margin_left = -21.0
-margin_top = -5.0
-margin_right = 11.0
-margin_bottom = 24.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 43.0
+margin_top = -101.0
+margin_right = 235.0
+margin_bottom = -54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "LOAD GAME"
+flat = false
+align = 1
+_sections_unfolded = [ "Textures" ]
+
+[node name="LevelSelectorButton" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 43.0
+margin_top = -37.0
+margin_right = 235.0
+margin_bottom = 12.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "LEVEL SELECTION"
+flat = false
+align = 1
+_sections_unfolded = [ "Textures" ]
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
@@ -234,7 +159,5 @@ margin_bottom = 24.0
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
 
 [connection signal="pressed" from="LevelSelectorButton" to="." method="_on_LevelSelectorButton_pressed"]
-
-[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 
 
