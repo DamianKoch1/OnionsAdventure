@@ -71,18 +71,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("SFX/hurt:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
 
 [node name="Onion" type="KinematicBody2D"]
 
@@ -216,7 +204,7 @@ pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
-bus = "Master"
+bus = "Sound Effects"
 area_mask = 1
 
 [node name="jump" parent="SFX" index="1" instance=ExtResource( 14 )]
