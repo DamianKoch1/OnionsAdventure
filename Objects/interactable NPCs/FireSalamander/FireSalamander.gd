@@ -11,11 +11,11 @@ onready var anim = $AnimationPlayer
 
 #set up destroying object on player jumping on self and resetting it on player respawn
 func _ready():
-	if objToDestroyPath != null && global.player != null:
-		global.player.connect("loseHp", self, "resetObj")
+	if objToDestroyPath != null:
 		objToDestroy = get_node(objToDestroyPath)
 		objToDestroyParent = objToDestroy.get_parent()
-		
+	if global.player != null:
+		global.player.connect("loseHp", self, "resetObj")
 
 func _on_FireStoneTrigger_body_entered(body):
 	if body == global.player && objToDestroyPath != null:
