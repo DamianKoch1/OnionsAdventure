@@ -3,7 +3,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
 
-[node name="OptionsOverlay" type="Container"]
+[node name="OptionsOverlay" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
