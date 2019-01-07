@@ -13,11 +13,6 @@ func _on_LevelSelectorButton_pressed():
 	get_tree().change_scene_to(levelSelector)
 
 
-func _on_OptionsButton_pressed():
-	UISelect.playing = true
-	$OptionsOverlay.show()
-
-
 func _on_BackButton_pressed():
 	UISelect.playing = true
 	get_tree().change_scene_to(mainMenu)

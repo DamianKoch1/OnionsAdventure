@@ -1,15 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/PanelButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel3.jpg" type="Texture" id=3]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=4]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=5]
-[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=7]
-[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Audio/Music/StorytellingIntro.wav" type="AudioStream" id=9]
-[ext_resource path="res://Audio/Music/StorytellingMainpart.wav" type="AudioStream" id=10]
 
 [sub_resource type="Animation" id=1]
 
@@ -348,24 +343,10 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 text = "test text 1"
-percent_visible = 1.0
+percent_visible = -0.0909091
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Size Flags" ]
-
-[node name="pageTurn" parent="." index="5" instance=ExtResource( 6 )]
-
-stream = ExtResource( 7 )
-
-[node name="BGMPlayer" parent="." index="6" instance=ExtResource( 8 )]
-
-[node name="Intro" parent="BGMPlayer" index="0"]
-
-stream = ExtResource( 9 )
-
-[node name="Mainpart" parent="BGMPlayer" index="1"]
-
-stream = ExtResource( 10 )
 
 [connection signal="pressed" from="PanelButton3" to="." method="_on_PanelButton3_pressed"]
 
@@ -374,4 +355,3 @@ stream = ExtResource( 10 )
 [connection signal="pressed" from="PanelButton1" to="." method="_on_PanelButton1_pressed"]
 
 
-[editable path="BGMPlayer"]
