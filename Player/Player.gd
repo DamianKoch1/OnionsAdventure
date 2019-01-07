@@ -167,8 +167,10 @@ func setHealth(newHealth):
 		if newHealth != oldHealth:
 			emit_signal("changeHp")
 			if newHealth < oldHealth :
+				$respawnBlinking.play("blinking")
 				gracePeriodTimer = gracePeriod
 				emit_signal("loseHp")
+				
 		#restart from level start if player completely dies
 		if health <= 0:
 #			setState(dead)
