@@ -71,7 +71,7 @@ playback_speed = 1.0
 anims/bounce = SubResource( 2 )
 blend_times = [  ]
 
-[node name="randomPitch" parent="." index="3" instance=ExtResource( 3 )]
+[node name="bounceSound" parent="." index="3" instance=ExtResource( 3 )]
 
 stream = ExtResource( 4 )
 

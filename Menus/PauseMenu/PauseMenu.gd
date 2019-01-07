@@ -32,6 +32,7 @@ func _process(delta):
 			global.newGame = false
 
 func _on_ResumeButton_pressed():
+	$UISelect.playing = true
 	paused = false
 	get_tree().paused = false
 	hide()
@@ -39,14 +40,17 @@ func _on_ResumeButton_pressed():
 
 
 func _on_RestartButton_pressed():
+	$UISelect.playing = true
 	$YesNoOverlayRestart.show()
 
 
 func _on_OptionsButton_pressed():
+	$UISelect.playing = true
 	$OptionsOverlay.show()
 
 
 func _on_MainMenuButton_pressed():
+	$UISelect.playing = true
 	$YesNoOverlayMainMenu.show()
 
 
