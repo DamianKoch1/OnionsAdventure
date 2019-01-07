@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trapped NPC placeholder.jpg-f83210131f52c6d1c59aaf2b4ec6d632.stex"
+path="res://.import/trapped placeholder.png-e523771e60136f3d6882bcfeeea8b1a7.stex"
 
 [deps]
 
-source_file="res://Objects/interactable NPCs/TrappedNPC/trapped NPC placeholder.jpg"
-dest_files=[ "res://.import/trapped NPC placeholder.jpg-f83210131f52c6d1c59aaf2b4ec6d632.stex" ]
+source_file="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png"
+dest_files=[ "res://.import/trapped placeholder.png-e523771e60136f3d6882bcfeeea8b1a7.stex" ]
 
 [params]
 
