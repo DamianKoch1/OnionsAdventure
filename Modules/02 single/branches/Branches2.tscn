@@ -25,12 +25,10 @@ tile_data = PoolIntArray( 327663, 1, 0, 327664, 1, 0, 327665, 1, 0, 327666, 1, 0
 [node name="Onion" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( -324.998, 73.7176 )
-gracePeriod = 2
-normalHealth = 5
-hardHealth = 3
 
 [node name="Camera" parent="." index="4" instance=ExtResource( 5 )]
 
+visible = false
 offsetX = 100
 offsetY = 60
 
