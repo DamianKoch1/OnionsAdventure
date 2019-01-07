@@ -11,9 +11,6 @@
 [node name="Onion" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( -320.012, -125.479 )
-gracePeriod = 2
-normalHealth = 5
-hardHealth = 3
 
 [node name="TileMap" parent="." index="1" instance=ExtResource( 2 )]
 

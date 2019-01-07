@@ -19,8 +19,12 @@ visible = false
 
 [node name="Movingplatform" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -144.167, 150 )
+position = Vector2( -150, 150 )
 scale = Vector2( 1.06771, 0.885421 )
+
+[node name="State2" parent="Movingplatform" index="2"]
+
+position = Vector2( 262.243, 0 )
 
 [node name="FireSalamander" parent="Movingplatform" index="3" instance=ExtResource( 4 )]
 
@@ -37,3 +41,4 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 position = Vector2( 290, 60 )
 
 
+[editable path="Movingplatform"]
