@@ -2,12 +2,10 @@
 
 [ext_resource path="res://Audio/randomPitch.gd" type="Script" id=1]
 
-
-
-[node name="randomPitch" type="AudioStreamPlayer2D" index="0"]
+[node name="randomPitch" type="AudioStreamPlayer2D"]
 
 stream = null
-volume_db = 0.0
+volume_db = -10.0
 pitch_scale = 0.9
 autoplay = false
 max_distance = 2000.0
