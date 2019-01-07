@@ -18,3 +18,4 @@ func _on_PanelButton2_pressed():
 
 func _on_PanelButton3_pressed():
 	anim.play("3")
+	$BGMPlayer.fadeOut()
