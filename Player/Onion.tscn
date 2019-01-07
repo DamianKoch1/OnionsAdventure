@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/OnionSprite/onion_body.png" type="Texture" id=2]
@@ -12,7 +12,10 @@
 [ext_resource path="res://Player/OnionSprite/Onion_JumpDown.tres" type="Animation" id=10]
 [ext_resource path="res://Player/OnionSprite/Onion_JumpUp.tres" type="Animation" id=11]
 [ext_resource path="res://Player/OnionSprite/Onion_Walk.tres" type="Animation" id=12]
-[ext_resource path="res://Audio/SFX/Onion_hurt.wav" type="AudioStream" id=13]
+[ext_resource path="res://Player/SFX/hurt.wav" type="AudioStream" id=13]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Player/SFX/jump.wav" type="AudioStream" id=15]
+[ext_resource path="res://Player/SFX/footstep.wav" type="AudioStream" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -81,7 +84,7 @@ tracks/2/keys = {
 "values": [ true, false ]
 }
 
-[node name="Onion" type="KinematicBody2D"]
+[node name="Onion" type="KinematicBody2D" index="0"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
@@ -215,5 +218,15 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="jump" parent="SFX" index="1" instance=ExtResource( 14 )]
+
+stream = ExtResource( 15 )
+
+[node name="footstep" parent="SFX" index="2" instance=ExtResource( 14 )]
+
+stream = ExtResource( 16 )
+startPitch = 0.8
+pitchRange = 0.3
 
 
