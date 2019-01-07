@@ -12,30 +12,30 @@ func _ready():
 
 
 func _on_CreditsButton_pressed():
-	$UISelect.playing = true
+	UISelect.playing = true
 	get_tree().change_scene_to(creditscreen)
 
 
 func _on_QuitButton_pressed():
-	$UISelect.playing = true
+	UISelect.playing = true
 	$YesNoOverlayQuit.show()
 
 
 func _on_OptionsButton_pressed():
-	$UISelect.playing = true
+	UISelect.playing = true
 	$OptionsOverlay.show()
 
 func quit():
-	$UISelect.playing = true
+	UISelect.playing = true
 	get_tree().quit()
 
 
 func _on_PlayButton_pressed():
-	$UISelect.playing = true
+	UISelect.playing = true
 	get_tree().change_scene_to(playMenu)
 
 
 
 func _on_ExtrasButton_pressed():
-	$UISelect.playing = true
+	UISelect.playing = true
 	pass # replace with function body

@@ -25,7 +25,7 @@ func setDiffDescr():
 			diffDescription.text = hardDescription
 
 func _on_BackButton_pressed():
-	$UISelect.playing = true
+	UISelect.playing = true
 	global.newGame = false
 	hide()
 

@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menus/PlayMenu/PlayMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Menus/UISelect.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Gradient" id=1]
 
@@ -15,7 +14,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="PlayMenu" type="Container" index="0"]
+[node name="PlayMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -224,8 +223,6 @@ margin_left = -21.0
 margin_top = -5.0
 margin_right = 11.0
 margin_bottom = 24.0
-
-[node name="UISelect" parent="." index="8" instance=ExtResource( 3 )]
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 

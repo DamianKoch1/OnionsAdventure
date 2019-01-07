@@ -2,15 +2,14 @@
 
 [ext_resource path="res://Menus/UISelect.wav" type="AudioStream" id=1]
 
-[node name="UISelect" type="AudioStreamPlayer2D"]
+[node name="UISelect" type="AudioStreamPlayer" index="0"]
 
 stream = ExtResource( 1 )
-volume_db = 0.0
+volume_db = -5.0
 pitch_scale = 1.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 
