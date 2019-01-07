@@ -84,7 +84,7 @@ tracks/2/keys = {
 "values": [ true, false ]
 }
 
-[node name="Onion" type="KinematicBody2D" index="0"]
+[node name="Onion" type="KinematicBody2D"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
@@ -211,7 +211,7 @@ blend_times = [  ]
 [node name="hurt" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 
 stream = ExtResource( 13 )
-volume_db = 0.0
+volume_db = -5.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
@@ -222,6 +222,7 @@ area_mask = 1
 [node name="jump" parent="SFX" index="1" instance=ExtResource( 14 )]
 
 stream = ExtResource( 15 )
+volume_db = -5.0
 
 [node name="footstep" parent="SFX" index="2" instance=ExtResource( 14 )]
 

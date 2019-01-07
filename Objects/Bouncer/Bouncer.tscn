@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Objects/Bouncer/Bouncer.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Bouncer/placeholder.png" type="Texture" id=2]
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Bouncer/trampoline.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -28,7 +29,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0.104817, 0.106667 ), Vector2( 0.142222, 0.0800003 ), Vector2( 0.104817, 0.106667 ) ]
 }
 
-[node name="Bouncer" type="Area2D" index="0"]
+[node name="Bouncer" type="Area2D"]
 
 position = Vector2( 32, 32 )
 z_index = -1
@@ -71,6 +72,8 @@ anims/bounce = SubResource( 2 )
 blend_times = [  ]
 
 [node name="randomPitch" parent="." index="3" instance=ExtResource( 3 )]
+
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_Bouncer_body_entered"]
 

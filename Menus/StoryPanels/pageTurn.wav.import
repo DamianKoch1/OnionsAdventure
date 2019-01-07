@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/pageTurn.wav-27ae3a5d13b5dea68709c6fec186b767.sample"
+path="res://.import/pageTurn.wav-ad48be9aa2d96070738435a4605f3230.sample"
 
 [deps]
 
-source_file="res://Audio/pageTurn.wav"
-dest_files=[ "res://.import/pageTurn.wav-27ae3a5d13b5dea68709c6fec186b767.sample" ]
+source_file="res://Menus/StoryPanels/pageTurn.wav"
+dest_files=[ "res://.import/pageTurn.wav-ad48be9aa2d96070738435a4605f3230.sample" ]
 
 [params]
 
