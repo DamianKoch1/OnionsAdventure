@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/OnionSprite/onion_body.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Player/OnionSprite/Onion_JumpDown.tres" type="Animation" id=10]
 [ext_resource path="res://Player/OnionSprite/Onion_JumpUp.tres" type="Animation" id=11]
 [ext_resource path="res://Player/OnionSprite/Onion_Walk.tres" type="Animation" id=12]
+[ext_resource path="res://Audio/SFX/Onion_hurt.wav" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -66,6 +67,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SFX/hurt:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [node name="Onion" type="KinematicBody2D"]
@@ -189,5 +202,18 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/blinking = SubResource( 3 )
 blend_times = [  ]
+
+[node name="SFX" type="Node2D" parent="." index="5"]
+
+[node name="hurt" type="AudioStreamPlayer2D" parent="SFX" index="0"]
+
+stream = ExtResource( 13 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 
