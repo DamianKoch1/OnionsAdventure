@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Audio/randomPitch.gd" type="Script" id=1]
+
+
+
+[node name="randomPitch" type="AudioStreamPlayer2D" index="0"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 0.9
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+script = ExtResource( 1 )
+startPitch = 1
+pitchRange = 0.2
+
+

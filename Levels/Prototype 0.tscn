@@ -25,7 +25,7 @@
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=24]
 
-[node name="Prototype 0" type="Node"]
+[node name="Prototype 0" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 

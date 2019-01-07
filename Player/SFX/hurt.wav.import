@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Onion_hurt.wav-8da3070873e128347f01535ae9fa51c9.sample"
+path="res://.import/hurt.wav-876d5a6804d6231c2ac80d3a92ebd1f7.sample"
 
 [deps]
 
-source_file="res://Audio/SFX/Onion_hurt.wav"
-dest_files=[ "res://.import/Onion_hurt.wav-8da3070873e128347f01535ae9fa51c9.sample" ]
+source_file="res://Player/SFX/hurt.wav"
+dest_files=[ "res://.import/hurt.wav-876d5a6804d6231c2ac80d3a92ebd1f7.sample" ]
 
 [params]
 

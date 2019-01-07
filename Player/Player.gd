@@ -140,6 +140,7 @@ func _physics_process(delta):
 		#ghostjump
 		if  ghostjumpTimeframe!= 0:
 			if Input.is_action_just_pressed("jump"):
+				$SFX/jump.playRandomPitch()
 				motion.y = -jumpheight
 				ghostjumpTimeframe = 0
 		
@@ -147,6 +148,7 @@ func _physics_process(delta):
 		if is_on_floor() && motion.x == 0 && state != climb:
 			setState(idle)
 			if Input.is_action_just_pressed("jump"):
+				$SFX/jump.playRandomPitch()
 				motion.y = -jumpheight
 		else:
 			if state != climb:
@@ -182,13 +184,15 @@ func getHealth():
 	return health
 
 func setState(newState):
-	#set current animation on state changes, scale sets prevent scale glitches when attaching to objects
+	#set current animation on state changes, scale set prevents scale glitches when attaching to objects
 	state = newState
 	match state:
 		idle:
 			newAnim = "Onion_Idle"
 		run:
 			newAnim = "Onion_Walk"
+			if $SFX/footstep.playing == false:
+				$SFX/footstep.playRandomPitch()
 		jump:
 			global_scale.x = 0.5
 			global_scale.y = 0.5
