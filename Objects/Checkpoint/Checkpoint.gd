@@ -7,6 +7,7 @@ func _ready():
 func _on_Checkpoint_body_entered(body):
 	if body == global.player:
 		global.spawnpoint.global_position = global_position
+		global.spawnpoint.playActivationSound()
 		if global.diff == global.hard:
 			body.health = body.hardHealth
 		else:

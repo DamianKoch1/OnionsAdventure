@@ -25,7 +25,7 @@
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=24]
 
-[node name="Prototype 0" type="Node" index="0"]
+[node name="Prototype 0" type="Node"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -292,22 +292,27 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 [node name="Enemy" parent="." index="33" instance=ExtResource( 22 )]
 
 position = Vector2( -587.197, 198.662 )
+mothsound = true
 
 [node name="Enemy2" parent="." index="34" instance=ExtResource( 22 )]
 
 position = Vector2( 2920.16, -70.3229 )
+mothsound = true
 
 [node name="Enemy5" parent="." index="35" instance=ExtResource( 22 )]
 
 position = Vector2( 1432.99, -139.393 )
+mothsound = true
 
 [node name="Enemy3" parent="." index="36" instance=ExtResource( 23 )]
 
 position = Vector2( 1626.45, -24.4935 )
+mothsound = false
 
 [node name="Enemy4" parent="." index="37" instance=ExtResource( 23 )]
 
 position = Vector2( 2888.57, 15.4914 )
+mothsound = false
 
 [node name="Spiderbuddy" parent="." index="38" instance=ExtResource( 24 )]
 
