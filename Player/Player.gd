@@ -49,6 +49,7 @@ var NPCsavedCount = 0
 
 
 func _ready():
+	MenuMusic.playing = false
 	global.player = self
 	setState(idle)
 	if global.diff == global.hard:
@@ -166,6 +167,7 @@ func setHealth(newHealth):
 		if newHealth != oldHealth:
 			emit_signal("changeHp")
 			if newHealth < oldHealth :
+				$SFX/hurt.playing = true
 				$respawnBlinking.play("blinking")
 				gracePeriodTimer = gracePeriod
 				emit_signal("loseHp")
