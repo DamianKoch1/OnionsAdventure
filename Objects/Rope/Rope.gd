@@ -11,6 +11,8 @@ func _physics_process(delta):
 	if swingAmount >= 20*PI:
 		swingAmount = 0
 	rotation_degrees = swingDegrees*sin(swingAmount)
+	if abs(rotation_degrees) <= 3 && $ropeSwing.playing == false:
+		$ropeSwing.playRandomPitch()
 
 #give player ladder to attach to and make him climb on contact
 func _on_Area2D_body_entered(body):
