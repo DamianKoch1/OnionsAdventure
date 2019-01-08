@@ -17,7 +17,7 @@ func _on_Area2D_body_entered(body):
 			global.player.emit_signal("NPCsaved")
 			collected = true
 			saveCollected()
-			queue_free()
+			$AnimationPlayer.play("onCollect")
 
 #save this objects name and that it was collected into another .cfg
 func saveCollected():
