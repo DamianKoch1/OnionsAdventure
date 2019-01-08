@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[node name="mediumstump4" type="Node2D" index="0"]
+[node name="mediumstump4" type="Node2D"]
 
 [node name="stump m 7" parent="." index="0" instance=ExtResource( 1 )]
 
