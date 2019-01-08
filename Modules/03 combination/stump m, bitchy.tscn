@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/Enemy/Bitchy_Finished_Color.png" type="Texture" id=2]
+[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Onion.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -36.6739, 63.8853, 1.2699, -58.7824, 7.81131, 109.95, 8.16484, 12.7371, -94.2973, -20.3722, -21.8704, 35.7452, 17.0823, -101.818, 27.7528, 54.9613, -148.018, 117.37, 0, 0, 0, 0, -81.2339, 169.313 )
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.8134, 16.2055 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 41.4692, 40.7305 )
+
+[node name="stump m, bitchy" type="Node2D"]
+
+[node name="Enemy" type="Node2D" parent="." index="0" groups=[
+"Enemies",
+]]
+
+position = Vector2( 10, 70 )
+scale = Vector2( 1.34763, 1.34763 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+movespeed = 0.25
+pathLooped = true
+
+[node name="EnemyPath" type="Path2D" parent="Enemy" index="0"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+position = Vector2( 66.7839, -148.409 )
+curve = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Enemy" type="Node2D" parent="Enemy/EnemyPath" index="0"]
+
+position = Vector2( -81.2339, 169.313 )
+z_index = 50
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enemy/EnemyPath/Enemy" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/EnemyPath/Enemy/StaticBody2D" index="0"]
+
+position = Vector2( -0.219439, -0.0857986 )
+scale = Vector2( 1.01166, 0.991932 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Enemy/EnemyPath/Enemy" index="1"]
+
+position = Vector2( -80.7138, 170.143 )
+rotation = -0.000132151
+scale = Vector2( 0.500416, 0.500855 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/EnemyPath/Enemy/Area2D" index="0"]
+
+position = Vector2( 160.85, -339.858 )
+scale = Vector2( 0.953475, 0.964443 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprites" type="Node2D" parent="Enemy/EnemyPath/Enemy" index="2"]
+
+rotation = -0.000132151
+
+[node name="Sprite" type="Sprite" parent="Enemy/EnemyPath/Enemy/Sprites" index="0"]
+
+position = Vector2( 1.23274, 4.16361 )
+scale = Vector2( 0.1538, 0.159357 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemy/EnemyPath" index="1"]
+
+position = Vector2( -81.2339, 169.313 )
+rotation = 0.13147
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="TileMap" parent="." index="1" instance=ExtResource( 3 )]
+
+tile_data = PoolIntArray( 327668, 1, 0, 327669, 1, 0, 327670, 1, 0, 327671, 1, 0, 327672, 1, 0, 327673, 1, 0, 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0 )
+
+[node name="Camera" parent="." index="2" instance=ExtResource( 4 )]
+
+visible = false
+
+[node name="Onion" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( -330, 100 )
+
+[node name="stump m 7" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( -220, 70 )
+
+[node name="stump m 8" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 240, 70 )
+
+[connection signal="body_entered" from="Enemy/EnemyPath/Enemy/Area2D" to="Enemy" method="_on_Area2D_body_entered"]
+
+

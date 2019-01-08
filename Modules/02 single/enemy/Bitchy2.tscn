@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Onion.tscn" type="PackedScene" id=4]
 
-[node name="Bitchy2" type="Node2D" index="0"]
+[node name="Bitchy2" type="Node2D"]
 
 [node name="Enemy" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -18,8 +18,6 @@ rotation = 0.13147
 [node name="Camera" parent="." index="1" instance=ExtResource( 2 )]
 
 visible = false
-offsetX = 100
-offsetY = 60
 
 [node name="TileMap" parent="." index="2" instance=ExtResource( 3 )]
 

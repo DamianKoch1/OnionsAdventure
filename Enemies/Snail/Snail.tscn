@@ -7,18 +7,20 @@
 
 bake_interval = 5.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 93.5848, 168.866 )
+"points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 109.743, 170.337, 0, 0, 0, 0, -93.039, 169.723 )
 }
 
-[node name="Snail" type="Node2D" index="0" groups=[
+[node name="Snail" type="Node2D" groups=[
 "Enemies",
 ]]
 
+scale = Vector2( 1.94872, 1.94872 )
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
-movespeed = 2
+movespeed = 0.5
 pathLooped = true
 
 [node name="EnemyPath" type="Path2D" parent="." index="0"]
@@ -89,7 +91,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 
 position = Vector2( -80.5574, 170.197 )
-rotation = -0.0076473
+rotation = 0.000735471
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0
