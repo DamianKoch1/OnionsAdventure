@@ -1,12 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Audio/Music/MainMenu.ogg" type="AudioStream" id=5]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -218,15 +217,6 @@ margin_left = 42.0
 margin_top = 45.0
 margin_right = 74.0
 margin_bottom = 74.0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="9"]
-
-stream = ExtResource( 5 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = true
-mix_target = 0
-bus = "Music"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 
