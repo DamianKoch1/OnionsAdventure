@@ -3,7 +3,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
 
-[node name="OptionsOverlay" type="Container" index="0"]
+[node name="OptionsOverlay" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -314,7 +314,7 @@ min_value = -80.0
 max_value = 0.0
 step = 1.0
 page = 0.0
-value = -10.0
+value = 0.0
 exp_edit = false
 rounded = false
 editable = true
@@ -378,7 +378,7 @@ min_value = -80.0
 max_value = 0.0
 step = 1.0
 page = 0.0
-value = -10.0
+value = 0.0
 exp_edit = false
 rounded = false
 editable = true
@@ -441,7 +441,7 @@ min_value = -80.0
 max_value = 0.0
 step = 1.0
 page = 0.0
-value = -10.0
+value = 0.0
 exp_edit = false
 rounded = false
 editable = true

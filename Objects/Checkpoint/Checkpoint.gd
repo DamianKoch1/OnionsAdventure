@@ -8,9 +8,9 @@ func _on_Checkpoint_body_entered(body):
 	if body == global.player:
 		global.spawnpoint.global_position = global_position
 		if global.diff == global.hard:
-			body.setHealth(body.hardHealth)
+			body.health = body.hardHealth
 		else:
-			body.setHealth(body.normalHealth)
+			body.health = body.normalHealth
 		SaveGame.latestCheckpoint = self
 		SaveGame.saveGame()
 		queue_free()
