@@ -5,7 +5,7 @@
 [node name="TileMap" type="TileMap"]
 
 scale = Vector2( 0.181818, 0.181818 )
-z_index = 4095
+z_index = -4096
 mode = 0
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 176, 176 )
