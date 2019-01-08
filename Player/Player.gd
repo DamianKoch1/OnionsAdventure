@@ -49,6 +49,7 @@ var NPCsavedCount = 0
 
 
 func _ready():
+	MenuMusic.playing = false
 	global.player = self
 	setState(idle)
 	if global.diff == global.hard:
@@ -166,15 +167,15 @@ func setHealth(newHealth):
 		if newHealth != oldHealth:
 			emit_signal("changeHp")
 			if newHealth < oldHealth :
+				$SFX/hurt.playing = true
 				$respawnBlinking.play("blinking")
 				gracePeriodTimer = gracePeriod
 				emit_signal("loseHp")
 				
 		#restart from level start if player completely dies
 		if health <= 0:
-#			setState(dead)
-			get_tree().reload_current_scene()
-	
+			setState(dead)
+
 
 #gets called if health value is accessed from other script
 func getHealth():
@@ -206,10 +207,8 @@ func setState(newState):
 			setAnim("Onion_Idle")
 		dead:
 			#death anim
+			setAnim("Onion_Death")
 			
-			#dead code, level restarts on 0hp
-			rotation_degrees = 90
-			$AnimationPlayer.stop()
 
 func getState():
 	return state
@@ -223,6 +222,9 @@ func setAnim(newAnim):
 
 func getAnim():
 	return anim
+
+func restart():
+	get_tree().reload_current_scene()
 
 func bounce(bounceStr):
 	motion.y = -bounceStr

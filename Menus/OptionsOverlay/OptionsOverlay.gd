@@ -12,9 +12,12 @@ export var normalDescription = "insert description for normal"
 export var hardDescription = "insert description for hard"
 
 func _ready():
-	masterSlider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
-	musicSlider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
-	sfxSlider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SoundEffects"))
+	if global.masterVol != null:
+		masterSlider.value = global.masterVol
+	if global.musicVol != null:
+		musicSlider.value = global.musicVol
+	if global.sfxVol != null:
+		sfxSlider.value = global.sfxVol
 	diffSlider.value = global.diff
 	setDiffDescr()
 	#show options if newgame was pressed
@@ -46,12 +49,13 @@ func _on_DiffSlider_value_changed(value):
 	setDiffDescr()
 
 func _on_SFXSlider_value_changed(value):
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SoundEffects"), value)
-
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SoundEffects"), sqrt(value*sfxSlider.max_value) - 100)
+	global.sfxVol = value
 
 func _on_MusicSlider_value_changed(value):
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), value)
-
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), sqrt(value*musicSlider.max_value) - 100)
+	global.musicVol = value
 
 func _on_MasterSlider_value_changed(value):
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), sqrt(value*masterSlider.max_value) - 100)
+	global.masterVol = value
