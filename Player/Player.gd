@@ -3,9 +3,10 @@ extends KinematicBody2D
 const UP = Vector2(0, -1)
 var motion = Vector2()
 
-var anim
-var newAnim
-var state
+var anim = idle setget setAnim, getAnim
+var oldAnim
+
+var state = idle setget setState, getState
 enum {idle, run, jump, fall, climb, dead}
 
 #node to attach to if airborne
@@ -34,7 +35,7 @@ export var gracePeriod = 2
 var rope
 var ropeAttachCD = 0
 
-export var health = 3 setget setHealth, getHealth
+var health = 3 setget setHealth, getHealth
 export var normalHealth = 5
 export var hardHealth = 3
 
@@ -90,10 +91,6 @@ func _physics_process(delta):
 				print("Godmode OFF")
 			debugGodmode *= -1
 		
-		#play current animation if changed
-		if newAnim != anim:
-			anim = newAnim
-			$AnimationPlayer.play(anim)
 		
 		#attach to ground if not climbing, rotate to 0
 		if state != climb:
@@ -140,6 +137,7 @@ func _physics_process(delta):
 		#ghostjump
 		if  ghostjumpTimeframe!= 0:
 			if Input.is_action_just_pressed("jump"):
+				$SFX/jump.playRandomPitch()
 				motion.y = -jumpheight
 				ghostjumpTimeframe = 0
 		
@@ -147,6 +145,7 @@ func _physics_process(delta):
 		if is_on_floor() && motion.x == 0 && state != climb:
 			setState(idle)
 			if Input.is_action_just_pressed("jump"):
+				$SFX/jump.playRandomPitch()
 				motion.y = -jumpheight
 		else:
 			if state != climb:
@@ -167,8 +166,10 @@ func setHealth(newHealth):
 		if newHealth != oldHealth:
 			emit_signal("changeHp")
 			if newHealth < oldHealth :
+				$respawnBlinking.play("blinking")
 				gracePeriodTimer = gracePeriod
 				emit_signal("loseHp")
+				
 		#restart from level start if player completely dies
 		if health <= 0:
 #			setState(dead)
@@ -180,27 +181,29 @@ func getHealth():
 	return health
 
 func setState(newState):
-	#set current animation on state changes, scale sets prevent scale glitches when attaching to objects
+	#set current animation on state changes, scale set prevents scale glitches when attaching to objects
 	state = newState
 	match state:
 		idle:
-			newAnim = "Onion_Idle"
+			setAnim("Onion_Idle")
 		run:
-			newAnim = "Onion_Walk"
+			setAnim("Onion_Walk")
+			if $SFX/footstep.playing == false:
+				$SFX/footstep.playRandomPitch()
 		jump:
 			global_scale.x = 0.5
 			global_scale.y = 0.5
-			newAnim = "Onion_JumpUp"
+			setAnim("Onion_JumpUp")
 		fall:
 			global_scale.x = 0.5
 			global_scale.y = 0.5
-			newAnim = "Onion_JumpDown"
+			setAnim("Onion_JumpDown")
 			
 		climb:
 			global_scale.x = 0.5
 			global_scale.y = 0.5
 			#cimb anim?
-			newAnim = "Onion_Idle"
+			setAnim("Onion_Idle")
 		dead:
 			#death anim
 			
@@ -208,7 +211,18 @@ func setState(newState):
 			rotation_degrees = 90
 			$AnimationPlayer.stop()
 
+func getState():
+	return state
 
+func setAnim(newAnim):
+	#play current animation if changed
+	if oldAnim != newAnim:
+		oldAnim = newAnim
+		anim = newAnim
+		$AnimationPlayer.play(anim)
+
+func getAnim():
+	return anim
 
 func bounce(bounceStr):
 	motion.y = -bounceStr

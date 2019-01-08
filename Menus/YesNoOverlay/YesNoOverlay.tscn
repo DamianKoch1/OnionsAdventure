@@ -13,7 +13,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="YesNoOverlay" type="Container"]
+[node name="YesNoOverlay" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
