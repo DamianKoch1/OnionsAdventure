@@ -3,7 +3,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
 
-[node name="OptionsOverlay" type="Container"]
+[node name="OptionsOverlay" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -310,11 +310,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
-min_value = -80.0
-max_value = 0.0
+min_value = 20.0
+max_value = 100.0
 step = 1.0
 page = 0.0
-value = 0.0
+value = 100.0
 exp_edit = false
 rounded = false
 editable = true
@@ -374,11 +374,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
-min_value = -80.0
-max_value = 0.0
+min_value = 20.0
+max_value = 100.0
 step = 1.0
 page = 0.0
-value = 0.0
+value = 100.0
 exp_edit = false
 rounded = false
 editable = true
@@ -437,11 +437,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
-min_value = -80.0
-max_value = 0.0
+min_value = 20.0
+max_value = 100.0
 step = 1.0
 page = 0.0
-value = 0.0
+value = 100.0
 exp_edit = false
 rounded = false
 editable = true

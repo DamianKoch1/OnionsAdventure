@@ -58,6 +58,5 @@ func loadMainMenu():
 	get_tree().change_scene_to(mainMenu)
 
 func restart():
-	var path = "Levels/Level " + str(global.currLevelId) + ".tscn"
-	get_tree().change_scene(path)
+	get_tree().reload_current_scene()
 
