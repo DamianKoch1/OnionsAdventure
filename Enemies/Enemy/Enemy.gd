@@ -6,8 +6,11 @@ var enemy
 #variable for moving
 onready var i = 0
 
+export (bool)var mothsound = false
+
 export (float) var movespeed = 2
 export (bool) var pathLooped = true
+
 
 onready var stop = false
 onready var hideTimer = 0
@@ -16,7 +19,9 @@ onready var pathfollow = $EnemyPath/PathFollow2D
 func _ready():
 	enemy = $EnemyPath/Enemy
 	add_to_group("Enemies")
-
+	if mothsound == true:
+		$EnemyPath/Enemy/AudioStreamPlayer2D.playing = true
+	
 #used this because godot doesn't allow overwriting _process()
 func _process(delta):
 	_unique_process(delta)

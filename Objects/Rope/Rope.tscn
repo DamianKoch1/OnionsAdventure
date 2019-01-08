@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Objects/Rope/Rope.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Rope/Asset_Vine_BigB.png" type="Texture" id=2]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Rope/ropeSwing.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 7.26522 )
 
-[node name="Rope" type="Node2D" index="0"]
+[node name="Rope" type="Node2D"]
 
 position = Vector2( 144, 80 )
 scale = Vector2( 0.5, 7.5 )
@@ -38,6 +40,10 @@ audio_bus_name = "Master"
 position = Vector2( 0, 15 )
 scale = Vector2( 1, 2.31368 )
 shape = SubResource( 1 )
+
+[node name="ropeSwing" parent="." index="2" instance=ExtResource( 3 )]
+
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

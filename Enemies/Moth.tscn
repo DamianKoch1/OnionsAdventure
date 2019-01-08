@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Enemy/Bitchy_Finished_Color.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Enemy_flying.ogg" type="AudioStream" id=3]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -20,13 +21,14 @@ extents = Vector2( 15.8134, 16.2055 )
 custom_solver_bias = 0.0
 extents = Vector2( 41.4692, 40.7305 )
 
-[node name="Enemy" type="Node2D" index="0" groups=[
+[node name="Enemy" type="Node2D" groups=[
 "Enemies",
 ]]
 
 scale = Vector2( 1.34763, 1.34763 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+mothsound = false
 movespeed = 0.25
 pathLooped = true
 
@@ -91,10 +93,21 @@ scale = Vector2( 0.1538, 0.159357 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="EnemyPath/Enemy" index="3"]
+
+stream = ExtResource( 3 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 800.0
+attenuation = 1.0
+bus = "SoundEffects"
+area_mask = 1
+
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 
 position = Vector2( -81.2339, 169.313 )
-rotation = 0.132455
+rotation = 0.13147
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0
