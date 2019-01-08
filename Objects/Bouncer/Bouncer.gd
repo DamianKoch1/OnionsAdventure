@@ -11,3 +11,4 @@ func _on_Bouncer_body_entered(body):
 		if body.motion.y > 0:
 			body.bounce(min(body.motion.y+bounceIncrease*body.gravity, maxBounceStr))
 			anim.play("bounce")
+			$bounceSound.playRandomPitch()

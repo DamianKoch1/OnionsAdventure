@@ -3,11 +3,18 @@ extends Container
 onready var diffSlider = $Difficulty/DiffSlider
 onready var diffDescription = $Difficulty/DiffText
 
+onready var masterSlider = $Volume/Master/MasterSlider
+onready var musicSlider = $Volume/Music/MusicSlider
+onready var sfxSlider = $Volume/SFX/SFXSlider
+
 export var easyDescription = "insert description for easy"
 export var normalDescription = "insert description for normal"
 export var hardDescription = "insert description for hard"
 
 func _ready():
+	masterSlider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
+	musicSlider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
+	sfxSlider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SoundEffects"))
 	diffSlider.value = global.diff
 	setDiffDescr()
 	#show options if newgame was pressed
@@ -25,6 +32,7 @@ func setDiffDescr():
 			diffDescription.text = hardDescription
 
 func _on_BackButton_pressed():
+	UISelect.playing = true
 	global.newGame = false
 	hide()
 
@@ -36,3 +44,14 @@ func _on_DiffSlider_value_changed(value):
 	elif value == 2:
 		global.diff = global.hard
 	setDiffDescr()
+
+func _on_SFXSlider_value_changed(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SoundEffects"), value)
+
+
+func _on_MusicSlider_value_changed(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), value)
+
+
+func _on_MasterSlider_value_changed(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
