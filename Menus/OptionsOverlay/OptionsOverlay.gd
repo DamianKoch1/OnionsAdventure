@@ -12,9 +12,11 @@ export var normalDescription = "insert description for normal"
 export var hardDescription = "insert description for hard"
 
 func _ready():
-	if global.masterVol != null && global.musicVol != null && global.sfxVol != null:
+	if global.masterVol != null:
 		masterSlider.value = global.masterVol
+	if global.musicVol != null:
 		musicSlider.value = global.musicVol
+	if global.sfxVol != null:
 		sfxSlider.value = global.sfxVol
 	diffSlider.value = global.diff
 	setDiffDescr()
