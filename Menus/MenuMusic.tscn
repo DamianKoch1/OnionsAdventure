@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Audio/Music/MainMenu.ogg" type="AudioStream" id=1]
 
-[node name="MenuMusic" type="AudioStreamPlayer"]
+[node name="MenuMusic" type="AudioStreamPlayer" index="0"]
 
 stream = ExtResource( 1 )
 volume_db = 0.0
