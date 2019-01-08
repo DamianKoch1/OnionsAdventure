@@ -9,14 +9,16 @@ extents = Vector2( 10, 10 )
 
 [node name="stump s 1" type="Node2D"]
 
+editor/display_folded = true
 scale = Vector2( 0.0556382, 0.0574858 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 964.918, 353.472 )
-scale = Vector2( 3.10078, 3.38633 )
+editor/display_folded = true
+scale = Vector2( 4.43327, 4.84153 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
 

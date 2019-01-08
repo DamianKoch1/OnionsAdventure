@@ -36,10 +36,10 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 script = ExtResource( 1 )
-_sections_unfolded = [ "Limit", "Pause", "Transform", "Z Index" ]
+_sections_unfolded = [ "Limit", "Offset", "Pause", "Transform", "Z Index" ]
 camSpeed = 0.1
-offsetX = 100
-offsetY = 60
+offsetX = 200
+offsetY = 70
 topLimit = 800
 bottomLimit = 800
 
