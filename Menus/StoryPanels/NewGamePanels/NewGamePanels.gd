@@ -4,6 +4,9 @@ onready var anim = $AnimationPlayer
 
 onready var lv1 = preload("res://Levels/Level 1.tscn")
 
+func _ready():
+	MenuMusic.playing = false
+
 func loadLv1():
 	get_tree().change_scene_to(lv1)
 
