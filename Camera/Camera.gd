@@ -3,6 +3,9 @@ extends Camera2D
 onready var hpFull = $HP/HealthFull
 onready var hpEmpty = $HP/HealthEmpty
 onready var heartImgWidth = hpFull.region_rect.size.x / 5
+onready var npcFull = $NPCs/NPCsFull
+onready var npcEmpty = $NPCs/NPCsEmpty
+onready var npcImgWidth  = npcFull.region_rect.size.x / 3
 
 #speed must be in [0, 1], cam won't move at 0
 export var camSpeed = 0.08
@@ -12,6 +15,8 @@ export var offsetY = 60
 
 export var topLimit = 800
 export var bottomLimit = 800
+
+var npcsInLevel
 
 func _ready():
 	if global.player != null:
@@ -26,9 +31,13 @@ func _ready():
 			hpFull.region_rect.size.x = global.player.normalHealth * heartImgWidth
 			hpEmpty.region_rect.size.x = global.player.normalHealth * heartImgWidth
 		updateHp()
-		updateNPCsaved()
 
 func _physics_process(delta):
+	#_ready is called too early for registering npcs in level
+	if npcsInLevel == null:
+		npcsInLevel = get_tree().get_nodes_in_group("trappedNPCs").size()
+		npcEmpty.region_rect.size.x = npcsInLevel * npcImgWidth
+		updateNPCsaved()
 	#move camera to playerposition + offset at certain speed
 	var targetPosX = global.player.global_position.x + offsetX
 	var targetPosY = global.player.global_position.y - offsetY
@@ -50,4 +59,4 @@ func updateHp():
 		hpEmpty.region_rect.size.x = global.player.normalHealth * heartImgWidth
 
 func updateNPCsaved():
-	$NPCsSaved.set_text("Animals saved: "+str(global.player.NPCsavedCount))
+	npcFull.region_rect.size.x = (npcsInLevel - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth
