@@ -12,7 +12,6 @@ tile_data = PoolIntArray( 131075, 0, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0
 
 [node name="Camera" parent="." index="1" instance=ExtResource( 2 )]
 
-offsetX = 200
 offsetY = 80
 
 [node name="Onion" parent="." index="2" instance=ExtResource( 3 )]
