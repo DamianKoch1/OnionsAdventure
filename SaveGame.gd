@@ -8,6 +8,7 @@ var latestCheckpoint
 
 var loadPlayerState = false
 var NPCsavedCount
+var NPCofLevelCount
 var playerPosX
 var playerPosY
 
@@ -15,7 +16,12 @@ var playerPosY
 
 func _ready():
 	saveFile = ConfigFile.new()
-	
+
+func deleteSave():
+	var dir = Directory.new()
+	dir.remove(savePath)
+	dir.remove("user://collectibleSave.cfg")
+
 #write and read certain variables into a .cfg file
 func saveGame():
 	saveFile.set_value("SaveState", "latestLevelId", global.currLevelId) 
