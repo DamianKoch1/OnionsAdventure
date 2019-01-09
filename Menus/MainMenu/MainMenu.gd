@@ -8,6 +8,7 @@ func _ready():
 	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
 	$YesNoOverlayQuit.hide()
 	global.diff = global.normal
+	global.player = null
 	if MenuMusic.playing == false:
 		MenuMusic.playing = true
 
