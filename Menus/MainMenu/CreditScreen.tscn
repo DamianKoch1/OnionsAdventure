@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menus/MainMenu/CreditScreen.gd" type="Script" id=1]
 [ext_resource path="res://Menus/MainMenu/credits.PNG" type="Texture" id=2]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Gradient" id=1]
 
@@ -15,7 +16,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="CreditScreen" type="Container"]
+[node name="CreditScreen" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -77,33 +78,7 @@ expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="BackButton" type="Button" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 171.0
-margin_top = 135.0
-margin_right = 230.0
-margin_bottom = 155.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Back"
-flat = false
-align = 1
-_sections_unfolded = [ "Textures" ]
-
-[node name="OptionsOverlay" parent="." index="3" instance=ExtResource( 3 )]
+[node name="OptionsOverlay" parent="." index="2" instance=ExtResource( 3 )]
 
 visible = false
 margin_left = -21.0
@@ -111,6 +86,19 @@ margin_top = -5.0
 margin_right = 11.0
 margin_bottom = 24.0
 
+[node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
+
+margin_left = 38.0
+margin_top = 131.0
+margin_right = 262.0
+margin_bottom = 167.0
+
+[node name="Label" parent="BackButton" index="0"]
+
+modulate = Color( 1, 1, 1, 1 )
+text = "Back"
+
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
 
+[editable path="BackButton"]
