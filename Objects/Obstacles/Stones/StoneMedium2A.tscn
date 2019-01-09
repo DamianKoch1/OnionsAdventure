@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Objects/Obstacles/Stones/Asset_Stone_Medium_2A.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Stones/Stone Medium New.png" type="Texture" id=1]
 
 [node name="StoneMedium2A" type="Sprite" index="0"]
 

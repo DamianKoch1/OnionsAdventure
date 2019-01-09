@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Stone Small New.png-c59b9e956fcf2005de3aa41a18c3e9a1.stex"
+
+[deps]
+
+source_file="res://Assets/Stones/Stone Small New.png"
+dest_files=[ "res://.import/Stone Small New.png-c59b9e956fcf2005de3aa41a18c3e9a1.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

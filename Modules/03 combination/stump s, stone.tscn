@@ -16,7 +16,7 @@ position = Vector2( -80, 110 )
 
 [node name="StoneMedium2A" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 90, 90 )
+position = Vector2( 88.0139, 96.7527 )
 scale = Vector2( 0.639739, 0.639739 )
 
 
