@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
-[ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
+[ext_resource path="res://Menus/UI_Mock_Up_Damian_BG.jpg" type="Texture" id=2]
 
 [node name="OptionsOverlay" type="Container" index="0"]
 
@@ -28,7 +28,6 @@ hardDescription = "You think medium is not a challenge anymore? You are already 
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
-modulate = Color( 0.269531, 0.760315, 1, 0.696118 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -36,7 +35,7 @@ anchor_bottom = 0.0
 margin_left = -373.0
 margin_top = -197.0
 margin_right = 267.0
-margin_bottom = 187.0
+margin_bottom = 163.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
