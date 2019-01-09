@@ -7,13 +7,11 @@
 
 [node name="stump s 1" parent="." index="0" instance=ExtResource( 1 )]
 
-editor/display_folded = false
-position = Vector2( -175.085, 98.3725 )
+position = Vector2( -176.703, 106.784 )
 
 [node name="stump s 2" parent="." index="1" instance=ExtResource( 1 )]
 
-editor/display_folded = false
-position = Vector2( 101.983, 96.5675 )
+position = Vector2( 100.042, 107.891 )
 
 [node name="TileMap" parent="." index="2" instance=ExtResource( 2 )]
 

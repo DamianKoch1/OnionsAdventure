@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump S.tscn" type="PackedScene" id=2]
 
-[node name="smallstump5" type="Node2D"]
+[node name="smallstump5" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -11,10 +11,10 @@ tile_data = PoolIntArray( 262129, 1, 0, 262130, 1, 0, 262131, 1, 0, 262132, 1, 0
 
 [node name="stump s 1" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -133.532, 193.551 )
+position = Vector2( -134.249, 200.004 )
 
 [node name="stump s 2" parent="." index="2" instance=ExtResource( 2 )]
 
-position = Vector2( 129.083, 195.172 )
+position = Vector2( 128.366, 201.625 )
 
 
