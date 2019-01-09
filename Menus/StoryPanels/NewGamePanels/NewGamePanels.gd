@@ -30,3 +30,14 @@ func _on_PanelButton3_pressed():
 	$pageTurn.playRandomPitch()
 	anim.play("3")
 	$BGMPlayer.fadeOut()
+
+
+func _on_SkipButton_pressed():
+	$PanelButton1.disabled = true
+	$PanelButton2.disabled = true
+	$PanelButton1.hide()
+	$PanelButton2.hide()
+	UISelect.playing = true
+	anim.play("3")
+	$BGMPlayer.fadeOut()
+	
