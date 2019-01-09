@@ -6,11 +6,7 @@ onready var lv1 = preload("res://Levels/Level 1.tscn")
 
 func _ready():
 	MenuMusic.playing = false
-	var fadeOutAnim = $BGMPlayer/AnimationPlayer.get_animation("fadeOut")
-	var introTrack = fadeOutAnim.find_track("Intro:volume_db")
-	var mainpartTrack = fadeOutAnim.find_track("Mainpart:volume_db")
-	fadeOutAnim.track_set_key_value(introTrack, 0, AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
-	fadeOutAnim.track_set_key_value(mainpartTrack, 0, AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
+	
 	
 func loadLv1():
 	get_tree().change_scene_to(lv1)
