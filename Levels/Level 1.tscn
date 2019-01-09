@@ -1,27 +1,31 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/stumps/s/smallstump2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Modules/02 single/stumps/s/smallstump3.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Modules/02 single/stumps/s/smallstump5.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Modules/02 single/stumps/m/mediumstump2.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 1.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Modules/03 combination/stump m, stone big.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 3.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m, stump s.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l 3.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Modules/02 single/stones/stone1.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Modules/02 single/stones/stone2.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Modules/03 combination/stump s, stone 2.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=19]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Modules/03 combination/stump m, stone big.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m, stump s.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l 3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Modules/02 single/tree/tree 1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Modules/03 combination/stump s, stone 2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=21]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=22]
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
+
+position = Vector2( 770.341, 398.452 )
 
 [node name="Start" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -41,72 +45,97 @@ position = Vector2( 2112, -96 )
 
 position = Vector2( 2814, -128 )
 
-[node name="stump s, stump m 1" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Thornbush" parent="mediumstump2" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 189.157, 118.299 )
+rotation = 1.55791
+scale = Vector2( 0.447483, 0.662907 )
+
+[node name="stump s, stump m 1" parent="." index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 3454, -128 )
 
-[node name="stump m, stone big" parent="." index="6" instance=ExtResource( 7 )]
+[node name="stump m, stone big" parent="." index="6" instance=ExtResource( 8 )]
 
 position = Vector2( 4096, -128 )
 
-[node name="stump s, stump m 3" parent="." index="7" instance=ExtResource( 8 )]
+[node name="Thornbush" parent="stump m, stone big" index="4" instance=ExtResource( 6 )]
+
+position = Vector2( -79.4639, 87.1623 )
+scale = Vector2( 0.621284, 0.72858 )
+
+[node name="stump s, stump m 3" parent="." index="7" instance=ExtResource( 9 )]
 
 position = Vector2( 4958, -128 )
 
-[node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 9 )]
+[node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 10 )]
 
 position = Vector2( 5918, -288 )
 
-[node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 10 )]
+[node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 11 )]
 
 position = Vector2( 6814, -288 )
 
-[node name="stone1" parent="." index="10" instance=ExtResource( 11 )]
+[node name="Thornbush" parent="stump s, stump l 3" index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 7328, -288 )
+position = Vector2( 106.208, 113.261 )
+rotation = 1.57376
+scale = Vector2( 0.550652, 0.837665 )
 
-[node name="stone2" parent="." index="11" instance=ExtResource( 12 )]
+[node name="tree 1" parent="." index="10" instance=ExtResource( 12 )]
 
-position = Vector2( 7680, -288 )
+position = Vector2( 7329.66, -288.452 )
 
-[node name="stone stairs" parent="." index="12" instance=ExtResource( 13 )]
+[node name="Jump down2" parent="." index="11" instance=ExtResource( 13 )]
 
-position = Vector2( 8160, -288 )
+position = Vector2( 7457.16, -224.15 )
 
-[node name="Jump down" parent="." index="13" instance=ExtResource( 14 )]
+[node name="platform" parent="." index="12" instance=ExtResource( 14 )]
 
-position = Vector2( 8576, -224 )
+position = Vector2( 7804.24, -314.669 )
 
-[node name="stump s, stone" parent="." index="14" instance=ExtResource( 15 )]
+[node name="stump s, stump l" parent="." index="13" instance=ExtResource( 15 )]
 
-position = Vector2( 9120, -224 )
+position = Vector2( 8070.61, -223.452 )
 
-[node name="stump s, stone 2" parent="." index="15" instance=ExtResource( 16 )]
+[node name="stone stairs" parent="." index="14" instance=ExtResource( 16 )]
 
-position = Vector2( 9568, -224 )
+position = Vector2( 8672.27, -222.795 )
 
-[node name="stump s, stump l 2" parent="." index="16" instance=ExtResource( 17 )]
+[node name="Jump down" parent="." index="15" instance=ExtResource( 13 )]
 
-position = Vector2( 10336, -224 )
+position = Vector2( 9088.27, -158.795 )
 
-[node name="stump s, stump m 2" parent="." index="17" instance=ExtResource( 18 )]
+[node name="stump s, stone" parent="." index="16" instance=ExtResource( 17 )]
 
-position = Vector2( 10944, -224 )
+position = Vector2( 9632.27, -158.795 )
 
-[node name="End2(wall)" parent="." index="18" instance=ExtResource( 19 )]
+[node name="stump s, stone 2" parent="." index="17" instance=ExtResource( 18 )]
 
-position = Vector2( 11360, -224 )
+position = Vector2( 10080.3, -158.795 )
 
-[node name="trappedNPC" parent="." index="19" instance=ExtResource( 20 )]
+[node name="stump s, stump l 2" parent="." index="18" instance=ExtResource( 19 )]
 
-position = Vector2( 1635.47, -41.9513 )
+position = Vector2( 10848.3, -158.795 )
 
-[node name="trappedNPC2" parent="." index="20" instance=ExtResource( 20 )]
+[node name="stump s, stump m 2" parent="." index="19" instance=ExtResource( 20 )]
 
-position = Vector2( 5438.57, -202.755 )
+position = Vector2( 11456.3, -158.795 )
 
-[node name="trappedNPC3" parent="." index="21" instance=ExtResource( 20 )]
+[node name="End2(wall)" parent="." index="20" instance=ExtResource( 21 )]
 
-position = Vector2( 9912.68, -268.192 )
+position = Vector2( 11872.3, -158.795 )
+
+[node name="trappedNPC" parent="." index="21" instance=ExtResource( 22 )]
+
+position = Vector2( 1631.68, -42.7116 )
+
+[node name="trappedNPC2" parent="." index="22" instance=ExtResource( 22 )]
+
+position = Vector2( 7817.87, -358.655 )
+
+[node name="trappedNPC3" parent="." index="23" instance=ExtResource( 22 )]
+
+position = Vector2( 10439.7, -202.715 )
 
 
