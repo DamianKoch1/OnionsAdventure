@@ -47,10 +47,12 @@ bottomLimit = 800
 
 [node name="PauseMenu" parent="." index="0" instance=ExtResource( 2 )]
 
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = -3.0
+margin_top = -26.0
+margin_right = 37.0
+margin_bottom = 14.0
+rect_scale = Vector2( 1.1, 1.1 )
+_sections_unfolded = [ "Pause", "Rect" ]
 
 [node name="HP" type="Node2D" parent="." index="1"]
 
