@@ -1,11 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
-[ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menus/UI_Mock_Up_Damian.jpg" type="Texture" id=2]
+[ext_resource path="res://Alef-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Alef-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 
-[node name="MainMenu" type="Container"]
+[sub_resource type="DynamicFont" id=1]
+
+size = 200
+use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 200
+use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="MainMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -34,7 +52,7 @@ anchor_bottom = 0.0
 margin_left = -310.0
 margin_top = -147.0
 margin_right = 330.0
-margin_bottom = 237.0
+margin_bottom = 213.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -43,49 +61,64 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 2 )
 expand = true
-stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Title" type="RichTextLabel" parent="." index="1"]
+[node name="PlayButton" type="TextureButton" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -214.0
+margin_top = 13.0
+margin_right = -86.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Label" type="Label" parent="PlayButton" index="0"]
 
 modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -52.0
-margin_top = -119.0
-margin_right = 121.0
-margin_bottom = -65.0
+margin_right = 407.0
+margin_bottom = 273.0
+rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
+rect_clip_content = false
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "play"
 percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Onions Adventure"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_fonts", "custom_styles" ]
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 
-[node name="PlayButton" type="Button" parent="." index="2"]
+[node name="ExtrasButton" type="TextureButton" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 42.0
-margin_top = -83.0
-margin_right = 298.0
-margin_bottom = -51.0
+margin_left = -202.0
+margin_top = 58.0
+margin_right = -42.0
+margin_bottom = 90.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -97,21 +130,43 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Play"
-flat = false
-align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="ExtrasButton" type="Button" parent="." index="3"]
+[node name="Label2" type="Label" parent="ExtrasButton" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = -6.0
+margin_right = 419.0
+margin_bottom = 267.0
+rect_scale = Vector2( 0.13, 0.13 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "gallery (wip)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="OptionsButton" type="TextureButton" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 42.0
-margin_top = -19.0
-margin_right = 298.0
-margin_bottom = 13.0
+margin_left = -202.0
+margin_top = 92.0
+margin_right = -42.0
+margin_bottom = 124.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -123,21 +178,43 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Extras (wip)"
-flat = false
-align = 1
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="CreditsButton" type="Button" parent="." index="4"]
+[node name="Label3" type="Label" parent="OptionsButton" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 419.0
+margin_bottom = 270.0
+rect_scale = Vector2( 0.13, 0.13 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "options"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CreditsButton" type="TextureButton" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 42.0
-margin_top = 109.0
-margin_right = 298.0
-margin_bottom = 141.0
+margin_left = -174.0
+margin_top = 127.0
+margin_right = -14.0
+margin_bottom = 159.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -149,12 +226,34 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Credits (wip)"
-flat = false
-align = 1
 _sections_unfolded = [ "Textures" ]
 
-[node name="QuitButton" type="Button" parent="." index="5"]
+[node name="Label4" type="Label" parent="CreditsButton" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 6.0
+margin_top = -3.0
+margin_right = 630.0
+margin_bottom = 270.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "credits"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="QuitButton" type="TextureButton" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -175,42 +274,35 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Quit"
-flat = false
-align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="OptionsButton" type="Button" parent="." index="6"]
+[node name="Label3" type="Label" parent="QuitButton" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 42.0
-margin_top = 45.0
-margin_right = 298.0
-margin_bottom = 77.0
+margin_right = 1125.0
+margin_bottom = 273.0
+rect_scale = Vector2( 0.13, 0.13 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Options"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags", "Textures" ]
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Quit"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 
-[node name="YesNoOverlayQuit" parent="." index="7" instance=ExtResource( 3 )]
+[node name="YesNoOverlayQuit" parent="." index="6" instance=ExtResource( 5 )]
 
 visible = false
 
-[node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 4 )]
+[node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 6 )]
 
 visible = false
 margin_left = 42.0
@@ -222,10 +314,10 @@ margin_bottom = 74.0
 
 [connection signal="pressed" from="ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
 
+[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
+
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
 
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
-
-[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 
 
