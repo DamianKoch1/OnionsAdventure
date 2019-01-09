@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/PanelButton.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Audio/Music/StorytellingIntro.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/Music/StorytellingMainpart.wav" type="AudioStream" id=10]
+[ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Animation" id=1]
 
@@ -158,8 +159,20 @@ tracks/3/keys = {
 "method": "delete"
 } ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("SkipButton:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
-[node name="NewGamePanels" type="Node"]
+[node name="NewGamePanels" type="Node" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -238,11 +251,26 @@ stream = ExtResource( 9 )
 
 stream = ExtResource( 10 )
 
+[node name="SkipButton" parent="." index="7" instance=ExtResource( 11 )]
+
+margin_left = 415.0
+margin_top = 313.0
+margin_right = 639.0
+margin_bottom = 349.0
+
+[node name="Label" parent="SkipButton" index="0"]
+
+modulate = Color( 1, 1, 1, 1 )
+text = "Skip"
+
 [connection signal="pressed" from="PanelButton3" to="." method="_on_PanelButton3_pressed"]
 
 [connection signal="pressed" from="PanelButton2" to="." method="_on_PanelButton2_pressed"]
 
 [connection signal="pressed" from="PanelButton1" to="." method="_on_PanelButton1_pressed"]
 
+[connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
+
 
 [editable path="BGMPlayer"]
+[editable path="SkipButton"]
