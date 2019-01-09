@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Objects/Obstacles/Stones/Asset_Stone_Medium_3A.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Stones/Stone Medium 3 New.png" type="Texture" id=1]
 
 [node name="StoneMedium3A" type="Sprite" index="0"]
 
@@ -22,6 +22,6 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -131.443, 74.1253, 132.48, 81.5197, 133.049, 34.3094, 99.4899, -4.36899, 83.5635, -55.5609, 26.6836, -79.4505, -42.7099, -70.9185, -73.4251, -43.0473, -96.7458, 22.3646, -127.461, 29.1902 )
+polygon = PoolVector2Array( -117.767, 66.1841, 125.32, 68.5791, 137.894, 53.0119, 112.148, -8.05937, 93.5873, -16.4417, 89.3961, -56.5572, 65.4466, -73.3218, -89.6266, -30.8114, -109.984, 8.70529, -121.958, 11.699, -130.939, 30.2598, -137.526, 48.8207 )
 
 

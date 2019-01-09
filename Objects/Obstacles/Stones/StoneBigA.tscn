@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Objects/Obstacles/Stones/Asset_Stone_BigA.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Stones/Stone Big New.png" type="Texture" id=1]
 
 [node name="StoneBigA" type="Sprite" index="0"]
 
 scale = Vector2( 0.457747, 0.457747 )
 texture = ExtResource( 1 )
 centered = false
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -24,7 +24,8 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
+position = Vector2( -10.4131, -45.1235 )
 build_mode = 0
-polygon = PoolVector2Array( 55.6993, 257.797, 483.604, 257.133, 474.98, 181.504, 405.984, 170.226, 416.599, 120.469, 386.745, 35.5517, 331.018, 11.0052, 196.344, 74.6934, 178.432, 131.084, 120.051, 119.806, 33.8065, 171.552, 18.5479, 225.289 )
+polygon = PoolVector2Array( 55.6993, 257.797, 454.76, 260.903, 425.137, 122.521, 402.285, 101.785, 393.821, 100.939, 389.166, 111.095, 382.818, 106.44, 378.587, 89.9361, 375.201, 66.2377, 363.775, 58.1972, 311.3, 45.0785, 235.55, 69.6232, 230.472, 106.863, 186.884, 128.023, 183.075, 147.912, 30.3056, 185.153, 15.071, 194.463, 13.8014, 224.932 )
 
 
