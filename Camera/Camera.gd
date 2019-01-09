@@ -39,13 +39,14 @@ func _physics_process(delta):
 		npcEmpty.region_rect.size.x = npcsInLevel * npcImgWidth
 		updateNPCsaved()
 	#move camera to playerposition + offset at certain speed
-	var targetPosX = global.player.global_position.x + offsetX
-	var targetPosY = global.player.global_position.y - offsetY
 	if global.player != null:
-		global_position.x = lerp(global_position.x, targetPosX, camSpeed)
-		global_position.y = lerp(global_position.y, targetPosY, camSpeed)
-	global_position.y = max(global_position.y, -topLimit)
-	global_position.y = min(global_position.y, bottomLimit)
+		var targetPosX = global.player.global_position.x + offsetX
+		var targetPosY = global.player.global_position.y - offsetY
+		if global.player != null:
+			global_position.x = lerp(global_position.x, targetPosX, camSpeed)
+			global_position.y = lerp(global_position.y, targetPosY, camSpeed)
+		global_position.y = max(global_position.y, -topLimit)
+		global_position.y = min(global_position.y, bottomLimit)
 	
 
 
