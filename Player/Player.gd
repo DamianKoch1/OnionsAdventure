@@ -56,7 +56,7 @@ func _ready():
 		health = hardHealth
 	else:
 		health = normalHealth
-	global.currLevelId = int(get_parent().name)
+	global.currLevelId = int(get_parent().get_parent().name)
 	if SaveGame.loadPlayerState == true:
 		SaveGame.loadPlayerState = false
 		NPCsavedCount = SaveGame.NPCsavedCount
