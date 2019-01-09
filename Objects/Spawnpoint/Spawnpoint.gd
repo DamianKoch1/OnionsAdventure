@@ -1,10 +1,17 @@
 extends Node2D
 
+var foundPlayer = false
+
 #setup player respawn at this objects position when taking damage
 func _ready():
 	global.spawnpoint = self
 	if global.player != null:
+		foundPlayer = true
 		global.player.connect("loseHp", self, "respawn")
+
+func _physics_process(delta):
+	if foundPlayer == false:
+		_ready()
 
 #reset transform of player if he still has health left
 func respawn():
