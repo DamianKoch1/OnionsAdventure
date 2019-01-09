@@ -362,12 +362,10 @@ stream = ExtResource( 7 )
 [node name="Intro" parent="BGMPlayer" index="0"]
 
 stream = ExtResource( 9 )
-volume_db = 0.0
 
 [node name="Mainpart" parent="BGMPlayer" index="1"]
 
 stream = ExtResource( 10 )
-volume_db = 0.0
 
 [connection signal="pressed" from="PanelButton3" to="." method="_on_PanelButton3_pressed"]
 
