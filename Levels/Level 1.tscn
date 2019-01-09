@@ -21,7 +21,7 @@
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=19]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=20]
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 [node name="Start" parent="." index="0" instance=ExtResource( 1 )]
 

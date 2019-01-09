@@ -5,6 +5,7 @@ var collected = false
 var savePath = "user://collectibleSave.cfg"
 var saveFile
 
+
 func _ready():
 	saveFile = ConfigFile.new()
 	checkCollected()
@@ -23,13 +24,15 @@ func _on_Area2D_body_entered(body):
 
 #save this objects name and that it was collected into another .cfg
 func saveCollected():
-	saveFile.set_value(str(global.currLevelId,name), "collected", collected)
+	SaveGame.npcDict[str(global.currLevelId,name)] = collected
+	for key in SaveGame.npcDict.keys():
+		saveFile.set_value("TrappedNPCs", key, SaveGame.npcDict[key])
 	saveFile.save(savePath)
 
 #delete self if already collected in currently saved game
 func checkCollected():
 	saveFile.load(savePath)
-	collected = saveFile.get_value(str(global.currLevelId,name), "collected")
+	collected = saveFile.get_value("TrappedNPCs", str(global.currLevelId,name))
 	if collected == true:
 		queue_free()
 	else:

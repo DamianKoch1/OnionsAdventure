@@ -8,10 +8,10 @@ var latestCheckpoint
 
 var loadPlayerState = false
 var NPCsavedCount
-var NPCofLevelCount
 var playerPosX
 var playerPosY
 
+var npcDict = {}
 
 
 func _ready():

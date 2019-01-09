@@ -58,5 +58,6 @@ func loadMainMenu():
 	get_tree().change_scene_to(mainMenu)
 
 func restart():
+	global.player = null
 	get_tree().reload_current_scene()
 
