@@ -61,3 +61,4 @@ func updateHp():
 
 func updateNPCsaved():
 	npcFull.region_rect.size.x = (npcsInLevel - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth
+	print(npcsInLevel - get_tree().get_nodes_in_group("trappedNPCs").size())
