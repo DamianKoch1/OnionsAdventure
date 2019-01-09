@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/stumps/s/smallstump2.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=21]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=23]
 
 [node name="Level 1" type="Node2D" index="0"]
 
@@ -124,7 +125,7 @@ position = Vector2( 11456.3, -158.795 )
 
 [node name="End2(wall)" parent="." index="20" instance=ExtResource( 21 )]
 
-position = Vector2( 11872.3, -158.795 )
+position = Vector2( 12095.7, -159.02 )
 
 [node name="trappedNPC" parent="." index="21" instance=ExtResource( 22 )]
 
@@ -137,5 +138,9 @@ position = Vector2( 7817.87, -358.655 )
 [node name="trappedNPC3" parent="." index="23" instance=ExtResource( 22 )]
 
 position = Vector2( 10439.7, -202.715 )
+
+[node name="Checkpoint" parent="." index="24" instance=ExtResource( 23 )]
+
+position = Vector2( 5387.01, -218 )
 
 
