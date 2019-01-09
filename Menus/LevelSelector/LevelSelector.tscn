@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Menus/LevelSelector/LevelSelector.gd" type="Script" id=1]
 [ext_resource path="res://Menus/UI_Mock_Up_Damian_BG.jpg" type="Texture" id=2]
-[ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=4]
 
 [node name="LevelSelector" type="Container"]
 
@@ -154,29 +154,36 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="Level1Button" parent="." index="5" instance=ExtResource( 3 )]
-
-margin_left = -341.0
-margin_top = -101.0
-margin_right = -280.0
-margin_bottom = -69.0
-
-[node name="Level2Button" parent="." index="6" instance=ExtResource( 3 )]
-
-margin_left = -245.0
-margin_top = -101.0
-margin_right = -184.0
-margin_bottom = -69.0
-text = "Level 2"
-levelId = 2
-
-[node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 4 )]
+[node name="OptionsOverlay" parent="." index="5" instance=ExtResource( 3 )]
 
 visible = false
-margin_left = -21.0
-margin_top = -5.0
-margin_right = 11.0
-margin_bottom = 24.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 32.0
+margin_bottom = 29.0
+
+[node name="Level1Button" parent="." index="6" instance=ExtResource( 4 )]
+
+margin_left = -277.0
+margin_top = -101.0
+margin_right = -117.0
+margin_bottom = -69.0
+
+[node name="Label" parent="Level1Button" index="0"]
+
+text = "Level 1"
+
+[node name="Level2Button" parent="." index="7" instance=ExtResource( 4 )]
+
+margin_left = -277.0
+margin_top = -69.0
+margin_right = -117.0
+margin_bottom = -37.0
+levelId = 2
+
+[node name="Label" parent="Level2Button" index="0"]
+
+text = "Level 2"
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
@@ -185,3 +192,5 @@ margin_bottom = 24.0
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 
 
+[editable path="Level1Button"]
+[editable path="Level2Button"]
