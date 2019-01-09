@@ -18,8 +18,11 @@ export var bottomLimit = 800
 
 var npcsInLevel
 
+var foundPlayer = false
+
 func _ready():
 	if global.player != null:
+		foundPlayer = true
 		global_position = global.player.global_position
 		#update hud values on certain signals
 		global.player.connect("changeHp", self, "updateHp")
@@ -33,6 +36,8 @@ func _ready():
 		updateHp()
 
 func _physics_process(delta):
+	if foundPlayer == false:
+		_ready()
 	#_ready is called too early for registering npcs in level
 	if npcsInLevel == null:
 		npcsInLevel = get_tree().get_nodes_in_group("trappedNPCs").size()
@@ -61,4 +66,3 @@ func updateHp():
 
 func updateNPCsaved():
 	npcFull.region_rect.size.x = (npcsInLevel - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth
-	print(npcsInLevel - get_tree().get_nodes_in_group("trappedNPCs").size())
