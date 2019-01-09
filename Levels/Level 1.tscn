@@ -17,7 +17,7 @@
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Modules/03 combination/stump s, stone 2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=21]
@@ -111,21 +111,36 @@ position = Vector2( 9088.27, -158.795 )
 
 position = Vector2( 9632.27, -158.795 )
 
-[node name="stump s, stone 2" parent="." index="17" instance=ExtResource( 18 )]
+[node name="Thornbush2" parent="stump s, stone" index="3" instance=ExtResource( 6 )]
 
-position = Vector2( 10080.3, -158.795 )
+position = Vector2( -13.8789, 118.077 )
+scale = Vector2( 0.434731, 0.420608 )
+
+[node name="tree2" parent="." index="17" instance=ExtResource( 18 )]
+
+position = Vector2( 10130, -158.592 )
 
 [node name="stump s, stump l 2" parent="." index="18" instance=ExtResource( 19 )]
 
 position = Vector2( 10848.3, -158.795 )
 
+[node name="Thornbush" parent="stump s, stump l 2" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 58.9463, 88.8194 )
+scale = Vector2( 0.723735, 0.723735 )
+
 [node name="stump s, stump m 2" parent="." index="19" instance=ExtResource( 20 )]
 
 position = Vector2( 11456.3, -158.795 )
 
+[node name="Thornbush2" parent="stump s, stump m 2" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 136.407, 112.393 )
+scale = Vector2( 0.399393, 0.350787 )
+
 [node name="End2(wall)" parent="." index="20" instance=ExtResource( 21 )]
 
-position = Vector2( 12095.7, -159.02 )
+position = Vector2( 12095.1, -158.436 )
 
 [node name="trappedNPC" parent="." index="21" instance=ExtResource( 22 )]
 
