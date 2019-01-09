@@ -64,7 +64,7 @@ __meta__ = {
 [node name="HealthEmpty" type="Sprite" parent="HP" index="0"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 0.08, 0.0693719 )
+scale = Vector2( 0.039427, 0.034189 )
 texture = ExtResource( 3 )
 centered = false
 region_enabled = true
@@ -74,7 +74,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 [node name="HealthFull" type="Sprite" parent="HP" index="1"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 0.08, 0.0693719 )
+scale = Vector2( 0.039427, 0.034189 )
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
@@ -93,7 +93,7 @@ __meta__ = {
 [node name="NPCsEmpty" type="Sprite" parent="NPCs" index="0"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 0.08, 0.0693719 )
+scale = Vector2( 0.04, 0.034686 )
 texture = ExtResource( 5 )
 centered = false
 region_enabled = true
@@ -103,7 +103,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 [node name="NPCsFull" type="Sprite" parent="NPCs" index="1"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 0.08, 0.0693719 )
+scale = Vector2( 0.04, 0.034686 )
 texture = ExtResource( 6 )
 centered = false
 region_enabled = true
