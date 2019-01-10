@@ -22,6 +22,5 @@ func _on_NewGameButton_pressed():
 	SaveGame.deleteSave()
 	SaveGame.loadPlayerState = false
 	UISelect.playing = true
-	global.newGame = true
 	get_tree().change_scene("res://Menus/StoryPanels/NewGamePanels/NewGamePanels.tscn")
 
