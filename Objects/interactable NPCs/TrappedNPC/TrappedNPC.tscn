@@ -59,8 +59,9 @@ tracks/2/keys = {
 
 [node name="trappedNPC" type="Node2D" index="0"]
 
+z_index = -5
 script = ExtResource( 1 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Visibility", "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
