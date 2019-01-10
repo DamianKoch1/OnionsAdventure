@@ -60,6 +60,6 @@ shape = SubResource( 1 )
 
 [node name="stump s 1" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( -170, 100 )
+position = Vector2( -169.603, 107.547 )
 
 

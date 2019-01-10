@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Objects/Obstacles/Stones/Asset_Stone_Inamovable_1A.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Stones/Stone Inamovable New.png" type="Texture" id=1]
 
 [node name="StoneInamovable1A" type="Sprite" index="0"]
 
@@ -24,6 +24,6 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -163.212, 179.315, 168.367, 180.368, 172.577, 155.105, 125.209, 116.157, 91.5249, -92.2635, 51.525, -173.316, 2.05133, -168.053, -102.159, -81.7372, -136.896, 87.7362, -172.685, 126.684 )
+polygon = PoolVector2Array( -132.926, 170.002, 157.82, 166.816, 145.075, 118.225, 129.941, 109.463, 141.889, 82.38, 113.213, -88.8814, 94.8919, -143.048, 50.2842, -172.521, -74.7764, -111.982, -121.774, 44.1449, -111.418, 83.9731, -146.467, 111.853, -156.026, 154.071 )
 
 

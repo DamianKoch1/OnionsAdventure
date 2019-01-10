@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[node name="stump m, stone big" type="Node2D"]
+[node name="stump m, stone big" type="Node2D" index="0"]
 
 position = Vector2( 68.0682, 0 )
 _sections_unfolded = [ "Transform" ]
@@ -63,8 +63,7 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 
 [node name="StoneBigA" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 94.5449, -33.2278 )
+position = Vector2( 98.8678, -8.91158 )
 scale = Vector2( 0.68385, 0.68385 )
-_sections_unfolded = [ "Offset", "Transform" ]
 
 

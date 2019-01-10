@@ -4,7 +4,7 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Stump L.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump S.tscn" type="PackedScene" id=3]
 
-[node name="stump s, stump l 2" type="Node2D"]
+[node name="stump s, stump l 2" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -16,6 +16,6 @@ position = Vector2( 141.091, 38.9475 )
 
 [node name="stump s 1" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -88.033, 101.827 )
+position = Vector2( -88.033, 109.788 )
 
 
