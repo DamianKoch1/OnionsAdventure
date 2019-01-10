@@ -10,7 +10,7 @@
 [ext_resource path="res://Modules/02 single/enemy/Muddy flat.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=9]
 
-[node name="Level 2" type="Node2D" index="0"]
+[node name="Level 2" type="Node2D"]
 
 [node name="Start" parent="." index="0" instance=ExtResource( 1 )]
 
