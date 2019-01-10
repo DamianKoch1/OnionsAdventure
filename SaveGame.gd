@@ -27,15 +27,12 @@ func saveGame():
 	saveFile.set_value("SaveState", "latestLevelId", global.currLevelId) 
 	saveFile.set_value("SaveState", "spawnPosX", latestCheckpoint.position.x) 
 	saveFile.set_value("SaveState", "spawnPosY", latestCheckpoint.position.y) 
-	saveFile.set_value("SaveState", "difficulty", global.diff) 
 	saveFile.set_value("SaveState", "NPCsSaved", global.player.NPCsavedCount) 
 	saveFile.save(savePath)
 
 func loadGame():
 	saveFile.load(savePath)
 	var levelToLoadId = saveFile.get_value("SaveState", "latestLevelId") 
-	if saveFile.get_value("SaveState", "difficulty") != null:
-		global.diff = saveFile.get_value("SaveState", "difficulty") 
 	var path = "Levels/Level " + str(levelToLoadId) + ".tscn"
 	get_tree().change_scene(path)
 	NPCsavedCount = saveFile.get_value("SaveState", "NPCsSaved") 
