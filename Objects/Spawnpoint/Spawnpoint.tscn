@@ -114,12 +114,13 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Animation", "Damping", "Emission Shape", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale" ]
 
-[node name="Spawnpoint" type="Node2D"]
+[node name="Spawnpoint" type="Node2D" index="0"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.648227, 0.648227 )
+z_index = -5
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

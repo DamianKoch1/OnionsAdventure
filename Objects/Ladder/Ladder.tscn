@@ -13,11 +13,11 @@ extents = Vector2( 32, 34.4653 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 3.55226 )
 
-[node name="Ladder" type="Area2D"]
+[node name="Ladder" type="Area2D" index="0"]
 
 position = Vector2( 32, 112 )
 scale = Vector2( 1, 3.5 )
-z_index = -2
+z_index = -6
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

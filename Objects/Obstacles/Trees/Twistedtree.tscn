@@ -5,9 +5,10 @@
 [node name="TwistedTree" type="Sprite" index="0"]
 
 scale = Vector2( 0.418933, 0.418933 )
+z_index = -5
 texture = ExtResource( 1 )
 centered = false
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
