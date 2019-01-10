@@ -43,13 +43,14 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 
 [node name="Start" parent="." index="0" instance=ExtResource( 1 )]
 
 editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
 
 [node name="Spiderbuddy" parent="Start" index="4" instance=ExtResource( 2 )]
 
@@ -64,7 +65,8 @@ use the arrow keys"
 [node name="smallstump2" parent="." index="1" instance=ExtResource( 3 )]
 
 editor/display_folded = true
-position = Vector2( 659.554, 0.347717 )
+position = Vector2( 660, 0 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Spiderbuddy" parent="smallstump2" index="3" instance=ExtResource( 2 )]
 
@@ -78,7 +80,8 @@ text = "press space to jump"
 [node name="smallstump3" parent="." index="2" instance=ExtResource( 4 )]
 
 editor/display_folded = true
-position = Vector2( 1030.01, 1.29675 )
+position = Vector2( 1030, 0 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Spiderbuddy" parent="smallstump3" index="2" instance=ExtResource( 2 )]
 
@@ -96,12 +99,14 @@ position = Vector2( 283.68, -42.7116 )
 
 [node name="smallstump5" parent="." index="3" instance=ExtResource( 6 )]
 
-position = Vector2( 1794.01, -94.7033 )
+position = Vector2( 1798, -96 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="mediumstump2" parent="." index="4" instance=ExtResource( 7 )]
 
 editor/display_folded = true
-position = Vector2( 2328.21, -125.477 )
+position = Vector2( 2328, -128 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Thornbush" parent="mediumstump2" index="3" instance=ExtResource( 8 )]
 
@@ -121,12 +126,13 @@ These thorns will hurt you!"
 
 [node name="stump s, stump m 1" parent="." index="5" instance=ExtResource( 9 )]
 
-position = Vector2( 2968.21, -125.477 )
+position = Vector2( 2965, -128 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="stump m, stone big" parent="." index="6" instance=ExtResource( 10 )]
 
 editor/display_folded = true
-position = Vector2( 3536.92, -122.846 )
+position = Vector2( 3540, -128 )
 
 [node name="Thornbush" parent="stump m, stone big" index="4" instance=ExtResource( 8 )]
 
@@ -136,7 +142,12 @@ scale = Vector2( 0.621284, 0.72858 )
 [node name="stump l, moving tendril" parent="." index="7" instance=ExtResource( 11 )]
 
 editor/display_folded = true
+<<<<<<< working copy
 position = Vector2( 4179.77, -122.43 )
+=======
+position = Vector2( 4178, -128 )
+_sections_unfolded = [ "Transform" ]
+>>>>>>> merge rev
 
 [node name="Spiderbuddy" parent="stump l, moving tendril" index="3" instance=ExtResource( 2 )]
 
@@ -150,13 +161,19 @@ position = Vector2( 577.568, -92.313 )
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 13 )]
 
+<<<<<<< working copy
 editor/display_folded = true
 position = Vector2( 5170.26, -282.438 )
+=======
+position = Vector2( 5170, -288 )
+_sections_unfolded = [ "Transform" ]
+>>>>>>> merge rev
 
 [node name="Enemy" parent="stump l, stump m, stump s" index="4" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 393.786, 88.8056 )
+mothsound = false
 
 [node name="EnemyPath" parent="stump l, stump m, stump s/Enemy" index="0"]
 
@@ -173,7 +190,8 @@ position = Vector2( 292.491, 38.0121 )
 [node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 15 )]
 
 editor/display_folded = true
-position = Vector2( 6066.26, -282.438 )
+position = Vector2( 6066, -288 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Thornbush" parent="stump s, stump l 3" index="4" instance=ExtResource( 8 )]
 
@@ -183,16 +201,19 @@ scale = Vector2( 0.550652, 1.04765 )
 
 [node name="tree 1" parent="." index="10" instance=ExtResource( 16 )]
 
-position = Vector2( 6581.92, -282.89 )
+position = Vector2( 6578, -288 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Jump down2" parent="." index="11" instance=ExtResource( 17 )]
 
-position = Vector2( 6709.42, -218.588 )
+position = Vector2( 6706, -224 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="platform" parent="." index="12" instance=ExtResource( 18 )]
 
 editor/display_folded = true
-position = Vector2( 7056.5, -309.107 )
+position = Vector2( 7056, -309 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC2" parent="platform" index="1" instance=ExtResource( 5 )]
 
@@ -213,12 +234,18 @@ position = Vector2( 368.778, 20.7814 )
 
 [node name="stump s, stump l" parent="." index="14" instance=ExtResource( 21 )]
 
-position = Vector2( 7322.87, -217.89 )
+position = Vector2( 7314, -224 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="stone stairs" parent="." index="15" instance=ExtResource( 22 )]
 
+<<<<<<< working copy
 editor/display_folded = true
 position = Vector2( 7924.53, -217.233 )
+=======
+position = Vector2( 7924, -224 )
+_sections_unfolded = [ "Transform" ]
+>>>>>>> merge rev
 
 [node name="Checkpoint" parent="stone stairs" index="4" instance=ExtResource( 12 )]
 
@@ -226,12 +253,14 @@ position = Vector2( 537.099, 69.5436 )
 
 [node name="Jump down" parent="." index="16" instance=ExtResource( 17 )]
 
-position = Vector2( 8340.53, -153.233 )
+position = Vector2( 8340, -160 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="stump s, stone" parent="." index="17" instance=ExtResource( 23 )]
 
 editor/display_folded = true
-position = Vector2( 8884.53, -153.233 )
+position = Vector2( 8884, -160 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Thornbush2" parent="stump s, stone" index="3" instance=ExtResource( 8 )]
 
@@ -249,7 +278,8 @@ position = Vector2( -208.421, 140.014 )
 [node name="tree2" parent="." index="18" instance=ExtResource( 25 )]
 
 editor/display_folded = true
-position = Vector2( 9379.25, -153.132 )
+position = Vector2( 9364, -160 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC3" parent="tree2" index="2" instance=ExtResource( 5 )]
 
@@ -262,7 +292,8 @@ position = Vector2( 50.623, 140.283 )
 [node name="stump s, stump l 2" parent="." index="19" instance=ExtResource( 26 )]
 
 editor/display_folded = true
-position = Vector2( 10097.2, -153.194 )
+position = Vector2( 10098, -160 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Thornbush" parent="stump s, stump l 2" index="3" instance=ExtResource( 8 )]
 
@@ -271,7 +302,13 @@ scale = Vector2( 0.723735, 0.723735 )
 
 [node name="stump s, stump m 2" parent="." index="20" instance=ExtResource( 27 )]
 
+editor/display_folded = true
+<<<<<<< working copy
 position = Vector2( 10844.2, -153.194 )
+=======
+position = Vector2( 10705, -160 )
+_sections_unfolded = [ "Transform" ]
+>>>>>>> merge rev
 
 [node name="Thornbush2" parent="stump s, stump m 2" index="3" instance=ExtResource( 8 )]
 
@@ -281,10 +318,12 @@ scale = Vector2( 0.399393, 0.350787 )
 [node name="Enemy" parent="stump s, stump m 2" index="4" instance=ExtResource( 14 )]
 
 editor/display_folded = true
-position = Vector2( -442.732, 89.1882 )
+position = Vector2( -407.402, 90.4963 )
+mothsound = false
 
 [node name="EnemyPath" parent="stump s, stump m 2/Enemy" index="0"]
 
+<<<<<<< working copy
 curve = SubResource( 2 )
 
 [node name="PathFollow2D" parent="stump s, stump m 2/Enemy/EnemyPath" index="1"]
@@ -294,6 +333,10 @@ rotation = 0.00912069
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 28 )]
 
 position = Vector2( 11483.1, -152.835 )
+=======
+position = Vector2( 11344, -160 )
+_sections_unfolded = [ "Transform" ]
+>>>>>>> merge rev
 
 
 [editable path="Start/Spiderbuddy"]
