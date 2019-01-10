@@ -20,9 +20,7 @@ func _ready():
 		sfxSlider.value = global.sfxVol
 	diffSlider.value = global.diff
 	setDiffDescr()
-	#show options if newgame was pressed
-	if global.newGame == false:
-		hide()
+	hide()
 
 
 func setDiffDescr():
@@ -36,7 +34,6 @@ func setDiffDescr():
 
 func _on_BackButton_pressed():
 	UISelect.playing = true
-	global.newGame = false
 	hide()
 
 func _on_DiffSlider_value_changed(value):
