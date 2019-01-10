@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Health_Empty.png-78f87a2c41ce895267d3668fb0753bac.stex"
+path="res://.import/Health_Empty (1).png-48693f4a16199ee68c156c517c8a70aa.stex"
 
 [deps]
 
-source_file="res://Camera/Health_Empty.png"
-dest_files=[ "res://.import/Health_Empty.png-78f87a2c41ce895267d3668fb0753bac.stex" ]
+source_file="res://Camera/Health_Empty (1).png"
+dest_files=[ "res://.import/Health_Empty (1).png-48693f4a16199ee68c156c517c8a70aa.stex" ]
 
 [params]
 
