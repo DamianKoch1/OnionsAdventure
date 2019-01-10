@@ -18,7 +18,7 @@ export var bottomLimit = 800
 
 var npcsInLevel
 
-var foundPlayer = false
+onready var foundPlayer = false
 
 func _ready():
 	if global.player != null:
