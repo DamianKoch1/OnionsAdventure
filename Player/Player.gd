@@ -88,7 +88,6 @@ func _physics_process(delta):
 				print("Godmode OFF")
 			debugGodmode *= -1
 		
-		
 		#attach to ground if not climbing, rotate to 0
 		if state != climb:
 			rayUpdate()
@@ -99,6 +98,28 @@ func _physics_process(delta):
 				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
+			
+			#walking animation
+			if state != jump:
+				if Input.is_action_just_pressed("ui_right") || Input.is_action_just_pressed("ui_left"):
+					setState(run)
+			
+			#jump
+			if is_on_floor():
+				if motion.x == 0:
+					setState(idle)
+				else:
+					setState(run)
+				if Input.is_action_just_pressed("jump"):
+					$SFX/jump.playRandomPitch()
+					motion.y = -jumpheight
+					setState(jump)
+			
+			#falling animation
+			if state == jump:
+				if motion.y > 10:
+					setState(fall)
+		
 		#climbing, attach to rope when climbing, var rope assigned by rope/ladder
 		elif state == climb:
 			if rope != null:
@@ -112,22 +133,18 @@ func _physics_process(delta):
 				motion.y = climbspeed
 			else:
 				motion.y = 0
-		
-		#ovement(run, jump, idle, fall states)
+				
+		#movement(run, jump, idle, fall states)
 		if Input.is_action_pressed("ui_right"):
 			if is_on_floor():
 				ghostjumpTimeframe = maxGhostjumpDelay
 			motion.x = movespeed
 			$Sprite.scale.x = 1	
-			if is_on_floor() && state != climb:
-				setState(run)
 		elif Input.is_action_pressed("ui_left"):
 			if is_on_floor():
 				ghostjumpTimeframe = maxGhostjumpDelay
 			motion.x = -movespeed
 			$Sprite.scale.x = -1
-			if is_on_floor() && state != climb:
-				setState(run)
 		else:	
 			motion.x = 0
 		
@@ -137,19 +154,7 @@ func _physics_process(delta):
 				$SFX/jump.playRandomPitch()
 				motion.y = -jumpheight
 				ghostjumpTimeframe = 0
-		
-		#jump
-		if is_on_floor() && motion.x == 0 && state != climb:
-			setState(idle)
-			if Input.is_action_just_pressed("jump"):
-				$SFX/jump.playRandomPitch()
-				motion.y = -jumpheight
-		else:
-			if state != climb:
-				if motion.y > 40:
-					setState(fall)
-				elif motion.y < 0:
-					setState(jump)
+				setState(jump)
 		motion = move_and_slide(motion, UP)
 
 #gets called if health value is changed
@@ -222,6 +227,7 @@ func restart():
 func bounce(bounceStr):
 	motion.y = -bounceStr
 	motion = move_and_slide(motion, UP)
+	setState(jump)
 	
 func rayUpdate():
 	#find object below, attach to it if close enough (smoothes movement on moving platforms)
