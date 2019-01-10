@@ -32,6 +32,7 @@ func _on_FireStoneTrigger_body_entered(body):
 func emit():
 	$FireParticles.look_at(objToDestroy.global_position)
 	$FireParticles.emitting = true
+	$FireParticles/FireSFX.playing = true
 
 #called by burn anim
 #burning particles at object
