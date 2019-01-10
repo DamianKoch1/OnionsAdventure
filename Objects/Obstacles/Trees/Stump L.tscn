@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 7.82994 )
 
-[node name="stump l 8" type="Node2D"]
+[node name="stump l 8" type="Node2D" index="0"]
 
 scale = Vector2( 0.0989583, 0.104806 )
 _sections_unfolded = [ "Offset", "Transform" ]
