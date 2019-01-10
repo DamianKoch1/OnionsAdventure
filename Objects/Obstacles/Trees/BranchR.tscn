@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Objects/Obstacles/Trees/Asset_Branch_RightA.png" type="Texture" id=1]
 
-[node name="BranchR" type="Sprite"]
+[node name="BranchR" type="Sprite" index="0"]
 
 position = Vector2( 1301.99, 817.869 )
 scale = Vector2( 2.86337, 1.6584 )
