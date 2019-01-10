@@ -52,7 +52,8 @@ func _ready():
 	global.player = self
 	setState(idle)
 	setHealth(maxHealth)
-	global.currLevelId = int(get_parent().get_parent().name)
+	if get_parent() != get_tree().get_root():
+		global.currLevelId = int(get_parent().get_parent().name)
 	if SaveGame.loadPlayerState == true:
 		SaveGame.loadPlayerState = false
 		NPCsavedCount = SaveGame.NPCsavedCount
