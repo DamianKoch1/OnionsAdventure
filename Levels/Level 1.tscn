@@ -135,7 +135,6 @@ scale = Vector2( 0.621284, 0.72858 )
 
 [node name="stump l, moving tendril" parent="." index="7" instance=ExtResource( 11 )]
 
-editor/display_folded = true
 position = Vector2( 4179.77, -122.43 )
 
 [node name="Spiderbuddy" parent="stump l, moving tendril" index="3" instance=ExtResource( 2 )]
@@ -166,6 +165,10 @@ curve = SubResource( 1 )
 [node name="PathFollow2D" parent="stump l, stump m, stump s/Enemy/EnemyPath" index="1"]
 
 rotation = 0.00182522
+
+[node name="Spiderbuddy" parent="stump l, stump m, stump s" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 292.491, 38.0121 )
 
 [node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 15 )]
 
@@ -227,6 +230,7 @@ position = Vector2( 8340.53, -153.233 )
 
 [node name="stump s, stone" parent="." index="17" instance=ExtResource( 23 )]
 
+editor/display_folded = true
 position = Vector2( 8884.53, -153.233 )
 
 [node name="Thornbush2" parent="stump s, stone" index="3" instance=ExtResource( 8 )]
@@ -244,6 +248,7 @@ position = Vector2( -208.421, 140.014 )
 
 [node name="tree2" parent="." index="18" instance=ExtResource( 25 )]
 
+editor/display_folded = true
 position = Vector2( 9379.25, -153.132 )
 
 [node name="trappedNPC3" parent="tree2" index="2" instance=ExtResource( 5 )]
@@ -266,6 +271,7 @@ scale = Vector2( 0.723735, 0.723735 )
 
 [node name="stump s, stump m 2" parent="." index="20" instance=ExtResource( 27 )]
 
+editor/display_folded = true
 position = Vector2( 10844.2, -153.194 )
 
 [node name="Thornbush2" parent="stump s, stump m 2" index="3" instance=ExtResource( 8 )]
