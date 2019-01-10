@@ -21,6 +21,7 @@ var npcsInLevel
 onready var foundPlayer = false
 
 func _ready():
+	$BGMPlayer.fadeIn()
 	if global.player != null:
 		foundPlayer = true
 		global_position = global.player.global_position
