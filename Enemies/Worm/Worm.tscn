@@ -37,7 +37,7 @@ tracks/0/keys = {
 ]]
 
 scale = Vector2( 1.63897, 1.63897 )
-z_index = -999
+z_index = -1000
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
