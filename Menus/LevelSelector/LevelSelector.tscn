@@ -3,8 +3,8 @@
 [ext_resource path="res://Menus/LevelSelector/LevelSelector.gd" type="Script" id=1]
 [ext_resource path="res://Menus/UI_Mock_Up_Damian_BG.jpg" type="Texture" id=2]
 [ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=5]
 
 [node name="LevelSelector" type="Container" index="0"]
 
@@ -113,15 +113,7 @@ margin_bottom = -97.0
 margin_right = 1205.0
 text = "Debug Level"
 
-[node name="OptionsOverlay" parent="." index="5" instance=ExtResource( 4 )]
-
-visible = false
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 32.0
-margin_bottom = 29.0
-
-[node name="Level1Button" parent="." index="6" instance=ExtResource( 5 )]
+[node name="Level1Button" parent="." index="5" instance=ExtResource( 4 )]
 
 margin_left = -277.0
 margin_top = -101.0
@@ -132,7 +124,7 @@ margin_bottom = -69.0
 
 text = "Level 1"
 
-[node name="Level2Button" parent="." index="7" instance=ExtResource( 5 )]
+[node name="Level2Button" parent="." index="6" instance=ExtResource( 4 )]
 
 margin_left = -277.0
 margin_top = -69.0
@@ -143,6 +135,14 @@ levelId = 2
 [node name="Label" parent="Level2Button" index="0"]
 
 text = "Level 2"
+
+[node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 5 )]
+
+visible = false
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 32.0
+margin_bottom = 29.0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
