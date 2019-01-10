@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/PanelButton.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Audio/Music/StorytellingIntro.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/Music/StorytellingMainpart.wav" type="AudioStream" id=10]
+[ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Animation" id=1]
 
@@ -158,6 +159,18 @@ tracks/3/keys = {
 "method": "delete"
 } ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("SkipButton:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [node name="NewGamePanels" type="Node" index="0"]
 
@@ -206,49 +219,6 @@ texture_disabled = ExtResource( 3 )
 texture_focused = ExtResource( 3 )
 expand = true
 
-[node name="Panel3" type="Panel" parent="PanelButton3" index="0"]
-
-pause_mode = 2
-modulate = Color( 0.621094, 0.621094, 0.621094, 0.77902 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 437.0
-margin_top = 562.0
-margin_right = 1094.0
-margin_bottom = 836.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Visibility" ]
-
-[node name="Label3" type="Label" parent="PanelButton3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 605.0
-margin_top = 656.0
-margin_right = 834.0
-margin_bottom = 792.0
-rect_scale = Vector2( 5, 5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "test text 3"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Size Flags" ]
-
 [node name="PanelButton2" parent="." index="3" instance=ExtResource( 2 )]
 
 texture_normal = ExtResource( 4 )
@@ -258,49 +228,6 @@ texture_disabled = ExtResource( 4 )
 texture_focused = ExtResource( 4 )
 expand = true
 
-[node name="Panel4" type="Panel" parent="PanelButton2" index="0"]
-
-pause_mode = 2
-modulate = Color( 0.621094, 0.621094, 0.621094, 0.77902 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 121.0
-margin_top = 632.0
-margin_right = 778.0
-margin_bottom = 906.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Visibility" ]
-
-[node name="Label2" type="Label" parent="PanelButton2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 274.0
-margin_top = 731.0
-margin_right = 503.0
-margin_bottom = 867.0
-rect_scale = Vector2( 5, 5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "test text 2"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Size Flags" ]
-
 [node name="PanelButton1" parent="." index="4" instance=ExtResource( 2 )]
 
 texture_normal = ExtResource( 5 )
@@ -309,49 +236,6 @@ texture_hover = ExtResource( 5 )
 texture_disabled = ExtResource( 5 )
 texture_focused = ExtResource( 5 )
 expand = true
-
-[node name="Panel5" type="Panel" parent="PanelButton1" index="0"]
-
-pause_mode = 2
-modulate = Color( 0.621094, 0.621094, 0.621094, 0.77902 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 905.0
-margin_top = 799.0
-margin_right = 1563.0
-margin_bottom = 1073.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Visibility" ]
-
-[node name="Label" type="Label" parent="PanelButton1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1097.0
-margin_top = 914.0
-margin_right = 1326.0
-margin_bottom = 1051.0
-rect_scale = Vector2( 5, 5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "test text 1"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Size Flags" ]
 
 [node name="pageTurn" parent="." index="5" instance=ExtResource( 6 )]
 
@@ -367,11 +251,26 @@ stream = ExtResource( 9 )
 
 stream = ExtResource( 10 )
 
+[node name="SkipButton" parent="." index="7" instance=ExtResource( 11 )]
+
+margin_left = 415.0
+margin_top = 313.0
+margin_right = 639.0
+margin_bottom = 349.0
+
+[node name="Label" parent="SkipButton" index="0"]
+
+modulate = Color( 1, 1, 1, 1 )
+text = "Skip"
+
 [connection signal="pressed" from="PanelButton3" to="." method="_on_PanelButton3_pressed"]
 
 [connection signal="pressed" from="PanelButton2" to="." method="_on_PanelButton2_pressed"]
 
 [connection signal="pressed" from="PanelButton1" to="." method="_on_PanelButton1_pressed"]
 
+[connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
+
 
 [editable path="BGMPlayer"]
+[editable path="SkipButton"]

@@ -1,15 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Obstacles/Trees/BranchL.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Normal_NoBranchesA.png" type="Texture" id=3]
+[ext_resource path="res://Assets/finished/Tree Stump Medium New.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 11.4254 )
-
-[node name="stump m 7" type="Node2D"]
+[node name="stump m 7" type="Node2D" index="0"]
 
 scale = Vector2( 0.0765978, 0.0959247 )
 _sections_unfolded = [ "Offset", "Transform" ]
@@ -43,10 +38,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="stump/StaticBody2D2" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump/StaticBody2D2" index="0"]
 
-position = Vector2( 921.726, 621.795 )
-scale = Vector2( 37.0807, 54.671 )
-shape = SubResource( 1 )
+build_mode = 0
+polygon = PoolVector2Array( 588.051, 14.0042, 1218.34, -3.35095, 1249.39, 16.4835, 1271.12, 98.3008, 1274.23, 666.063, 1212.13, 785.07, 1196.61, 983.415, 1386, 1189.2, 1382.9, 1206.55, 519.743, 1209.03, 507.324, 849.532, 519.743, 733.004, 550.792, 671.022, 532.163, 641.27, 588.051, 336.315 )
 
 
