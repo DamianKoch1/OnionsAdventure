@@ -6,7 +6,8 @@
 
 position = Vector2( 0, 28.3229 )
 scale = Vector2( 0.0556382, 0.0574858 )
-_sections_unfolded = [ "Offset", "Transform" ]
+z_index = -5
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

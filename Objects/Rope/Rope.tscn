@@ -10,11 +10,13 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 7.26522 )
 
-[node name="Rope" type="Node2D"]
+[node name="Rope" type="Node2D" index="0"]
 
 position = Vector2( 144, 80 )
 scale = Vector2( 0.5, 7.5 )
+z_index = -6
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 swingDegrees = 30
 swingSpeed = 0.03
 

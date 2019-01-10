@@ -12,7 +12,8 @@ extents = Vector2( 10, 7.82994 )
 [node name="stump l 8" type="Node2D" index="0"]
 
 scale = Vector2( 0.0989583, 0.104806 )
-_sections_unfolded = [ "Offset", "Transform" ]
+z_index = -5
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ast 3" parent="." index="0" instance=ExtResource( 1 )]
 

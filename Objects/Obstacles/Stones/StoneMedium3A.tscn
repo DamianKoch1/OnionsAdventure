@@ -4,7 +4,9 @@
 
 [node name="StoneMedium3A" type="Sprite" index="0"]
 
+z_index = -5
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }

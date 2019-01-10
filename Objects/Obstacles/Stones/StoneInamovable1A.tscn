@@ -6,7 +6,9 @@
 
 position = Vector2( 100.255, 98.7507 )
 scale = Vector2( 0.49866, 0.49866 )
+z_index = -5
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }

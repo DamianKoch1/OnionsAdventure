@@ -29,10 +29,10 @@ tracks/0/keys = {
 "values": [ Vector2( 0.104817, 0.106667 ), Vector2( 0.142222, 0.0800003 ), Vector2( 0.104817, 0.106667 ) ]
 }
 
-[node name="Bouncer" type="Area2D"]
+[node name="Bouncer" type="Area2D" index="0"]
 
 position = Vector2( 32, 32 )
-z_index = -1
+z_index = -5
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
