@@ -18,7 +18,7 @@ export var bottomLimit = 800
 
 var npcsInLevel
 
-var foundPlayer = false
+onready var foundPlayer = false
 
 func _ready():
 	if global.player != null:
@@ -27,12 +27,8 @@ func _ready():
 		#update hud values on certain signals
 		global.player.connect("changeHp", self, "updateHp")
 		global.player.connect("NPCsaved", self, "updateNPCsaved")
-		if global.diff == global.hard:
-			hpFull.region_rect.size.x = global.player.hardHealth * heartImgWidth
-			hpEmpty.region_rect.size.x = global.player.hardHealth * heartImgWidth
-		else:
-			hpFull.region_rect.size.x = global.player.normalHealth * heartImgWidth
-			hpEmpty.region_rect.size.x = global.player.normalHealth * heartImgWidth
+		hpFull.region_rect.size.x = global.player.maxHealth * heartImgWidth
+		hpEmpty.region_rect.size.x = global.player.maxHealth * heartImgWidth
 		updateHp()
 
 func _physics_process(delta):
@@ -59,10 +55,7 @@ func _physics_process(delta):
 
 func updateHp():
 	hpFull.region_rect.size.x = global.player.health * heartImgWidth
-	if global.diff == global.hard:
-		hpEmpty.region_rect.size.x = global.player.hardHealth * heartImgWidth
-	else:
-		hpEmpty.region_rect.size.x = global.player.normalHealth * heartImgWidth
+	hpEmpty.region_rect.size.x = global.player.maxHealth * heartImgWidth
 
 func updateNPCsaved():
 	npcFull.region_rect.size.x = (npcsInLevel - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth

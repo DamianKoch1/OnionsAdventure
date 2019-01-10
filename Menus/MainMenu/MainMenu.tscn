@@ -26,7 +26,7 @@ use_filter = true
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="MainMenu" type="Container"]
+[node name="MainMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
