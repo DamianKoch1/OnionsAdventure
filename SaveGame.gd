@@ -35,6 +35,7 @@ func loadGame():
 	var levelToLoadId = saveFile.get_value("SaveState", "latestLevelId") 
 	var path = "Levels/Level " + str(levelToLoadId) + ".tscn"
 	get_tree().change_scene(path)
+	get_tree().paused = false
 	NPCsavedCount = saveFile.get_value("SaveState", "NPCsSaved") 
 	playerPosX = saveFile.get_value("SaveState", "spawnPosX")
 	playerPosY = saveFile.get_value("SaveState", "spawnPosY")
