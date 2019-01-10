@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=2]
@@ -13,19 +13,37 @@
 [ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, moving tendril.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m, stump s.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l 3.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Modules/02 single/tree/tree 1.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=24]
+[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l 3.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Modules/02 single/tree/tree 1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modules/03 combination/platform/enemyPlatform.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=28]
 
-[node name="Level 1" type="Node2D" index="0"]
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.07446, 170.337 )
+}
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
+}
+
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 
@@ -117,6 +135,7 @@ scale = Vector2( 0.621284, 0.72858 )
 
 [node name="stump l, moving tendril" parent="." index="7" instance=ExtResource( 11 )]
 
+editor/display_folded = true
 position = Vector2( 4179.77, -122.43 )
 
 [node name="Spiderbuddy" parent="stump l, moving tendril" index="3" instance=ExtResource( 2 )]
@@ -131,9 +150,28 @@ position = Vector2( 577.568, -92.313 )
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 13 )]
 
+editor/display_folded = true
 position = Vector2( 5170.26, -282.438 )
 
-[node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 14 )]
+[node name="Enemy" parent="stump l, stump m, stump s" index="4" instance=ExtResource( 14 )]
+
+editor/display_folded = true
+position = Vector2( 393.786, 88.8056 )
+mothsound = false
+
+[node name="EnemyPath" parent="stump l, stump m, stump s/Enemy" index="0"]
+
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" parent="stump l, stump m, stump s/Enemy/EnemyPath" index="1"]
+
+rotation = 0.00182522
+
+[node name="Spiderbuddy" parent="stump l, stump m, stump s" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 292.491, 38.0121 )
+
+[node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 15 )]
 
 editor/display_folded = true
 position = Vector2( 6066.26, -282.438 )
@@ -144,15 +182,15 @@ position = Vector2( 109.064, 116.501 )
 rotation = 1.57376
 scale = Vector2( 0.550652, 1.04765 )
 
-[node name="tree 1" parent="." index="10" instance=ExtResource( 15 )]
+[node name="tree 1" parent="." index="10" instance=ExtResource( 16 )]
 
 position = Vector2( 6581.92, -282.89 )
 
-[node name="Jump down2" parent="." index="11" instance=ExtResource( 16 )]
+[node name="Jump down2" parent="." index="11" instance=ExtResource( 17 )]
 
 position = Vector2( 6709.42, -218.588 )
 
-[node name="platform" parent="." index="12" instance=ExtResource( 17 )]
+[node name="platform" parent="." index="12" instance=ExtResource( 18 )]
 
 editor/display_folded = true
 position = Vector2( 7056.5, -309.107 )
@@ -161,19 +199,37 @@ position = Vector2( 7056.5, -309.107 )
 
 position = Vector2( 13.6299, -43.986 )
 
-[node name="stump s, stump l" parent="." index="13" instance=ExtResource( 18 )]
+[node name="enemyPlatform" parent="." index="13" instance=ExtResource( 19 )]
+
+editor/display_folded = true
+position = Vector2( 7909.76, -408.802 )
+
+[node name="Ladder" parent="enemyPlatform" index="3" instance=ExtResource( 20 )]
+
+position = Vector2( -315.226, 33.7815 )
+
+[node name="Ladder2" parent="enemyPlatform" index="4" instance=ExtResource( 20 )]
+
+position = Vector2( 368.778, 20.7814 )
+
+[node name="stump s, stump l" parent="." index="14" instance=ExtResource( 21 )]
 
 position = Vector2( 7322.87, -217.89 )
 
-[node name="stone stairs" parent="." index="14" instance=ExtResource( 19 )]
+[node name="stone stairs" parent="." index="15" instance=ExtResource( 22 )]
 
+editor/display_folded = true
 position = Vector2( 7924.53, -217.233 )
 
-[node name="Jump down" parent="." index="15" instance=ExtResource( 16 )]
+[node name="Checkpoint" parent="stone stairs" index="4" instance=ExtResource( 12 )]
+
+position = Vector2( 537.099, 69.5436 )
+
+[node name="Jump down" parent="." index="16" instance=ExtResource( 17 )]
 
 position = Vector2( 8340.53, -153.233 )
 
-[node name="stump s, stone" parent="." index="16" instance=ExtResource( 20 )]
+[node name="stump s, stone" parent="." index="17" instance=ExtResource( 23 )]
 
 editor/display_folded = true
 position = Vector2( 8884.53, -153.233 )
@@ -183,7 +239,15 @@ position = Vector2( 8884.53, -153.233 )
 position = Vector2( -14.9326, 103.25 )
 scale = Vector2( 0.434731, 0.472186 )
 
-[node name="tree2" parent="." index="17" instance=ExtResource( 21 )]
+[node name="Worm" parent="stump s, stone" index="4" instance=ExtResource( 24 )]
+
+position = Vector2( -267.32, 139.473 )
+
+[node name="Worm2" parent="stump s, stone" index="5" instance=ExtResource( 24 )]
+
+position = Vector2( -208.421, 140.014 )
+
+[node name="tree2" parent="." index="18" instance=ExtResource( 25 )]
 
 editor/display_folded = true
 position = Vector2( 9379.25, -153.132 )
@@ -192,7 +256,11 @@ position = Vector2( 9379.25, -153.132 )
 
 position = Vector2( 309.63, -44.124 )
 
-[node name="stump s, stump l 2" parent="." index="18" instance=ExtResource( 22 )]
+[node name="Worm3" parent="tree2" index="3" instance=ExtResource( 24 )]
+
+position = Vector2( 50.623, 140.283 )
+
+[node name="stump s, stump l 2" parent="." index="19" instance=ExtResource( 26 )]
 
 editor/display_folded = true
 position = Vector2( 10097.2, -153.194 )
@@ -202,22 +270,38 @@ position = Vector2( 10097.2, -153.194 )
 position = Vector2( 55.9414, 88.1755 )
 scale = Vector2( 0.723735, 0.723735 )
 
-[node name="stump s, stump m 2" parent="." index="19" instance=ExtResource( 23 )]
+[node name="stump s, stump m 2" parent="." index="20" instance=ExtResource( 27 )]
 
 editor/display_folded = true
-position = Vector2( 10705.2, -153.194 )
+position = Vector2( 10844.2, -153.194 )
 
 [node name="Thornbush2" parent="stump s, stump m 2" index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 136.407, 112.393 )
 scale = Vector2( 0.399393, 0.350787 )
 
-[node name="End2(wall)" parent="." index="20" instance=ExtResource( 24 )]
+[node name="Enemy" parent="stump s, stump m 2" index="4" instance=ExtResource( 14 )]
 
-position = Vector2( 11344.1, -152.835 )
+editor/display_folded = true
+position = Vector2( -407.402, 90.4963 )
+mothsound = false
+
+[node name="EnemyPath" parent="stump s, stump m 2/Enemy" index="0"]
+
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" parent="stump s, stump m 2/Enemy/EnemyPath" index="1"]
+
+rotation = 0.00912069
+
+[node name="End2(wall)" parent="." index="21" instance=ExtResource( 28 )]
+
+position = Vector2( 11483.1, -152.835 )
 
 
 [editable path="Start/Spiderbuddy"]
 [editable path="smallstump2/Spiderbuddy"]
 [editable path="smallstump3/Spiderbuddy"]
 [editable path="mediumstump2/Spiderbuddy"]
+[editable path="stump l, stump m, stump s/Enemy"]
+[editable path="stump s, stump m 2/Enemy"]
