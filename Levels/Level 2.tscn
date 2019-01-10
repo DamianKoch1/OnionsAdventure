@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m 3.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Modules/02 single/tree/tree 1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Modules/02 single/enemy/Muddy flat.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=10]
 
 [node name="Level 2" type="Node2D"]
 
@@ -45,5 +46,9 @@ position = Vector2( 3499.83, -192.144 )
 [node name="Jump down" parent="." index="8" instance=ExtResource( 9 )]
 
 position = Vector2( 3469.11, -128.175 )
+
+[node name="platform" parent="." index="9" instance=ExtResource( 10 )]
+
+position = Vector2( 2747.25, -207.688 )
 
 
