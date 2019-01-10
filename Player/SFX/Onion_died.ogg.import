@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Onion_died.ogg-c67b2a4c6aa0dc631a3904b04343a5e7.oggstr"
+
+[deps]
+
+source_file="res://Player/SFX/Onion_died.ogg"
+dest_files=[ "res://.import/Onion_died.ogg-c67b2a4c6aa0dc631a3904b04343a5e7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
