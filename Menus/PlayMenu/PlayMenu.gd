@@ -10,6 +10,7 @@ func _on_ContinueButton_pressed():
 
 func _on_LevelSelectorButton_pressed():
 	UISelect.playing = true
+	SaveGame.loadPlayerState = false
 	get_tree().change_scene_to(levelSelector)
 
 
@@ -22,6 +23,5 @@ func _on_NewGameButton_pressed():
 	SaveGame.deleteSave()
 	SaveGame.loadPlayerState = false
 	UISelect.playing = true
-	global.newGame = true
 	get_tree().change_scene("res://Menus/StoryPanels/NewGamePanels/NewGamePanels.tscn")
 

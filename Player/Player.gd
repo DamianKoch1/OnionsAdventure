@@ -35,9 +35,8 @@ export var gracePeriod = 2
 var rope
 var ropeAttachCD = 0
 
-var health = 3 setget setHealth, getHealth
-export var normalHealth = 5
-export var hardHealth = 3
+var health = 5 setget setHealth, getHealth
+export var maxHealth = 5
 
 #signals other objects react to
 signal noHp
@@ -52,10 +51,7 @@ func _ready():
 	MenuMusic.playing = false
 	global.player = self
 	setState(idle)
-	if global.diff == global.hard:
-		health = hardHealth
-	else:
-		health = normalHealth
+	setHealth(maxHealth)
 	global.currLevelId = int(get_parent().get_parent().name)
 	if SaveGame.loadPlayerState == true:
 		SaveGame.loadPlayerState = false
@@ -160,10 +156,7 @@ func _physics_process(delta):
 func setHealth(newHealth):
 	if debugGodmode == -1 && gracePeriodTimer == 0:
 		var oldHealth = health
-		if global.diff != global.easy:
-			health = newHealth
-		else:
-			health = normalHealth
+		health = newHealth
 		if newHealth != oldHealth:
 			emit_signal("changeHp")
 			if newHealth < oldHealth :
@@ -171,7 +164,6 @@ func setHealth(newHealth):
 				$respawnBlinking.play("blinking")
 				gracePeriodTimer = gracePeriod
 				emit_signal("loseHp")
-				
 		#restart from level start if player completely dies
 		if health <= 0:
 			setState(dead)

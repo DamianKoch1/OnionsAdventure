@@ -4,7 +4,7 @@
 [ext_resource path="res://Menus/UI_Mock_Up_Damian_BG.jpg" type="Texture" id=2]
 [ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=3]
 
-[node name="OptionsOverlay" type="Container" index="0"]
+[node name="OptionsOverlay" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -78,130 +78,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
 
-[node name="Difficulty" type="Node2D" parent="." index="2"]
-
-editor/display_folded = true
-
-[node name="Text" type="RichTextLabel" parent="Difficulty" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -333.0
-margin_top = -123.0
-margin_right = -185.0
-margin_bottom = -27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Difficulty"
-scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="Text2" type="RichTextLabel" parent="Difficulty" index="1"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -336.0
-margin_top = -102.0
-margin_right = -188.0
-margin_bottom = -6.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "(updates when taking damage or activating checkpoint)"
-scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="DiffText" type="RichTextLabel" parent="Difficulty" index="2"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 26.0
-margin_top = -124.0
-margin_right = 258.0
-margin_bottom = 83.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = ""
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="DiffSlider" type="HSlider" parent="Difficulty" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -181.0
-margin_top = -133.0
-margin_right = 11.0
-margin_bottom = -101.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-min_value = 0.0
-max_value = 2.0
-step = 1.0
-page = 0.0
-value = 1.0
-exp_edit = false
-rounded = false
-editable = true
-tick_count = 0
-ticks_on_borders = false
-focus_mode = 2
-
-[node name="Volume" type="Node2D" parent="." index="3"]
+[node name="Volume" type="Node2D" parent="." index="2"]
 
 editor/display_folded = true
 position = Vector2( 0, 106.315 )
@@ -426,7 +303,7 @@ tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
 
-[node name="BackButton" parent="." index="4" instance=ExtResource( 3 )]
+[node name="BackButton" parent="." index="3" instance=ExtResource( 3 )]
 
 margin_left = 43.0
 margin_top = 91.0
@@ -437,8 +314,6 @@ margin_bottom = 127.0
 
 modulate = Color( 1, 1, 1, 1 )
 text = "Back"
-
-[connection signal="value_changed" from="Difficulty/DiffSlider" to="." method="_on_DiffSlider_value_changed"]
 
 [connection signal="value_changed" from="Volume/Music/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
 
