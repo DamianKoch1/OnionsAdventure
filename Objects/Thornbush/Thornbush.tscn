@@ -6,12 +6,12 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 5285.6, 12019.9 )
+extents = Vector2( 6111.07, 11127.3 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 5984.28, 13709.8 )
+extents = Vector2( 5260.31, 11882.4 )
 
 [node name="Thornbush" type="Node2D"]
 
