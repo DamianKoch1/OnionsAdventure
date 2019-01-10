@@ -13,7 +13,10 @@ extents = Vector2( 6111.07, 11127.3 )
 custom_solver_bias = 0.0
 extents = Vector2( 5260.31, 11882.4 )
 
-[node name="Thornbush" type="Node2D"]
+[node name="Thornbush" type="Node2D" index="0"]
+
+z_index = -5
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
