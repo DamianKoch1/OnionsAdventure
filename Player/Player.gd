@@ -181,32 +181,33 @@ func getHealth():
 
 func setState(newState):
 	#set current animation on state changes, scale set prevents scale glitches when attaching to objects
-	state = newState
-	match state:
-		idle:
-			setAnim("Onion_Idle")
-		run:
-			setAnim("Onion_Walk")
-			if $SFX/footstep.playing == false:
-				$SFX/footstep.playRandomPitch()
-		jump:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			setAnim("Onion_JumpUp")
-		fall:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			setAnim("Onion_JumpDown")
-			
-		climb:
-			global_scale.x = 0.5
-			global_scale.y = 0.5
-			#cimb anim?
-			setAnim("Onion_Idle")
-		dead:
-			#death anim
-			setAnim("Onion_Death")
-			
+	if state != dead:
+		state = newState
+		match state:
+			idle:
+				setAnim("Onion_Idle")
+			run:
+				setAnim("Onion_Walk")
+				if $SFX/footstep.playing == false:
+					$SFX/footstep.playRandomPitch()
+			jump:
+				global_scale.x = 0.5
+				global_scale.y = 0.5
+				setAnim("Onion_JumpUp")
+			fall:
+				global_scale.x = 0.5
+				global_scale.y = 0.5
+				setAnim("Onion_JumpDown")
+				
+			climb:
+				global_scale.x = 0.5
+				global_scale.y = 0.5
+				#cimb anim?
+				setAnim("Onion_Idle")
+			dead:
+				#death anim
+				setAnim("Onion_Death")
+				
 
 func getState():
 	return state
@@ -251,5 +252,3 @@ func attachTo(obj):
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
-		global_scale.x = 0.5
-		global_scale.y = 0.5
