@@ -4,7 +4,7 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Stump S.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Obstacles/Stones/StoneMedium2A.tscn" type="PackedScene" id=3]
 
-[node name="stump s, stone" type="Node2D" index="0"]
+[node name="stump s, stone" type="Node2D"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -12,11 +12,11 @@ tile_data = PoolIntArray( 327670, 1, 0, 327671, 1, 0, 327672, 1, 0, 327673, 1, 0
 
 [node name="stump s 1" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -80, 110 )
+position = Vector2( -80, 105.631 )
 
 [node name="StoneMedium2A" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 88.0139, 96.7527 )
+position = Vector2( 88.0139, 93.575 )
 scale = Vector2( 0.639739, 0.639739 )
 
 
