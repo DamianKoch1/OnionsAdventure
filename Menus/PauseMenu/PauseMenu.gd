@@ -49,9 +49,11 @@ func _on_MainMenuButton_pressed():
 
 
 func loadMainMenu():
+	get_tree().paused = false
 	get_tree().change_scene_to(mainMenu)
 
 func restart():
+	get_tree().paused = false
 	global.player = null
 	get_tree().reload_current_scene()
 
