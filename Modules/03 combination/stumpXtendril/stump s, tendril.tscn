@@ -16,6 +16,6 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 
 [node name="stump s 1" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -160, 100 )
+position = Vector2( -160, 104.877 )
 
 
