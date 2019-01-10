@@ -118,10 +118,12 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 [node name="Intro" parent="BGMPlayer" index="0"]
 
 stream = ExtResource( 8 )
+volume_db = -10.0
 
 [node name="Mainpart" parent="BGMPlayer" index="1"]
 
 stream = ExtResource( 9 )
+volume_db = -10.0
 
 
 [editable path="BGMPlayer"]

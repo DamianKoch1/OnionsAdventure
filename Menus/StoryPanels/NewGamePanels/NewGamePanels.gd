@@ -5,7 +5,8 @@ onready var anim = $AnimationPlayer
 onready var lv1 = preload("res://Levels/Level 1.tscn")
 
 func _ready():
-	MenuMusic.playing = false
+	MenuMusic.fadeOut(2)
+	$BGMPlayer.fadeIn(2)
 	
 	
 func loadLv1():
@@ -29,10 +30,12 @@ func _on_PanelButton3_pressed():
 
 
 func _on_SkipButton_pressed():
-	$PanelButton1.disabled = true
-	$PanelButton2.disabled = true
-	$PanelButton1.hide()
-	$PanelButton2.hide()
+	if has_node("PanelButton1"):
+		$PanelButton1.disabled = true
+		$PanelButton1.hide()
+	if has_node("PanelButton2"):
+		$PanelButton2.disabled = true
+		$PanelButton2.hide()
 	UISelect.playing = true
 	anim.play("3")
 	$BGMPlayer.fadeOut()
