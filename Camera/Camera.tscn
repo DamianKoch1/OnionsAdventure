@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Camera/hp_stone_empty.png" type="Texture" id=3]
-[ext_resource path="res://Camera/hp_stone_full.png" type="Texture" id=4]
-[ext_resource path="res://Camera/uncollected placeholder.png" type="Texture" id=5]
-[ext_resource path="res://Camera/trapped placeholder.png" type="Texture" id=6]
+[ext_resource path="res://Camera/Health_Empty.png" type="Texture" id=3]
+[ext_resource path="res://Camera/Health_Full.png" type="Texture" id=4]
+[ext_resource path="res://Camera/Animals_Trapped.png" type="Texture" id=5]
+[ext_resource path="res://Camera/Animals_Free.png" type="Texture" id=6]
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Audio/Music/EnchantedIntro.wav" type="AudioStream" id=8]
 [ext_resource path="res://Audio/Music/EnchantedMainpart.wav" type="AudioStream" id=9]
@@ -57,7 +57,8 @@ _sections_unfolded = [ "Pause", "Rect" ]
 
 [node name="HP" type="Node2D" parent="." index="1"]
 
-position = Vector2( -283.401, -151.22 )
+position = Vector2( -277.546, -145.365 )
+scale = Vector2( 1.18298, 1.18298 )
 z_index = 4096
 _sections_unfolded = [ "Z Index" ]
 __meta__ = {
@@ -67,26 +68,26 @@ __meta__ = {
 [node name="HealthEmpty" type="Sprite" parent="HP" index="0"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 0.039427, 0.034189 )
+scale = Vector2( 0.273616, 0.237266 )
 texture = ExtResource( 3 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 40, 12, 1795, 796 )
+region_rect = Rect2( 0, 0, 451, 61 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="HealthFull" type="Sprite" parent="HP" index="1"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 0.039427, 0.034189 )
+scale = Vector2( 0.273616, 0.237266 )
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 40, 12, 1795, 796 )
+region_rect = Rect2( 0, 0, 451, 61 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="NPCs" type="Node2D" parent="." index="2"]
 
-position = Vector2( 172.351, -151.22 )
+position = Vector2( 228.14, -151.22 )
 z_index = 4096
 _sections_unfolded = [ "Z Index" ]
 __meta__ = {
@@ -96,21 +97,21 @@ __meta__ = {
 [node name="NPCsEmpty" type="Sprite" parent="NPCs" index="0"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 0.04, 0.034686 )
+scale = Vector2( 0.371773, 0.322383 )
 texture = ExtResource( 5 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 2000, 833 )
+region_rect = Rect2( 0, 0, 225, 100 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="NPCsFull" type="Sprite" parent="NPCs" index="1"]
 
 position = Vector2( -32, -32 )
-scale = Vector2( 0.04, 0.034686 )
+scale = Vector2( 0.371773, 0.322383 )
 texture = ExtResource( 6 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 2000, 833 )
+region_rect = Rect2( 0, 0, 225, 100 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="BGMPlayer" parent="." index="3" instance=ExtResource( 7 )]
