@@ -164,7 +164,7 @@ curve = SubResource( 1 )
 
 [node name="PathFollow2D" parent="stump l, stump m, stump s/Enemy/EnemyPath" index="1"]
 
-rotation = 0.00182522
+rotation = 0.00182911
 
 [node name="Spiderbuddy" parent="stump l, stump m, stump s" index="5" instance=ExtResource( 2 )]
 
@@ -289,11 +289,17 @@ curve = SubResource( 2 )
 
 [node name="PathFollow2D" parent="stump s, stump m 2/Enemy/EnemyPath" index="1"]
 
-rotation = 0.00912069
+rotation = 0.00912847
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 28 )]
 
-position = Vector2( 11483.1, -152.835 )
+position = Vector2( 11484, -153 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Node2D" type="Node2D" parent="." index="22"]
+
+position = Vector2( 13000, 0 )
+_sections_unfolded = [ "Transform" ]
 
 
 [editable path="Start/Spiderbuddy"]
