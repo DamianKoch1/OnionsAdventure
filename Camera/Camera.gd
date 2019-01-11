@@ -21,8 +21,8 @@ var npcsInLevel
 onready var foundPlayer = false
 
 func _ready():
-	$BGMPlayer.fadeIn()
 	if global.player != null:
+		$BGMPlayer.fadeIn()
 		foundPlayer = true
 		global_position = global.player.global_position
 		#update hud values on certain signals
