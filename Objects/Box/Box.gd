@@ -1,5 +1,10 @@
 extends KinematicBody2D
 
+
+#removed feature
+
+
+
 var motion = Vector2()
 
 #must be in [0, 1], 0 doesnt brake, 1 instantly brakes
@@ -12,14 +17,16 @@ onready var worldNode = get_parent()
 onready var ray = $RayCast2D
 
 var startpos
+var player
 
 #distance player-box, pushing stops if distance too high
 var distance
 
 #make box reset its position if player respawns
 func _ready():
-	if global.player != null:
-		global.player.connect("loseHp", self, "resetPos")
+	if get_tree().get_nodes_in_group("Player").size() > 0:
+		player = get_tree().get_nodes_in_group("Player").front()
+		player.connect("loseHp", self, "resetPos")
 	getpos()
 
 func _physics_process(delta):
@@ -27,8 +34,8 @@ func _physics_process(delta):
 	motion.y += gravity
 	#move with player if being pushed
 	if isPushed == true:
-		motion.x = global.player.motion.x
-		if abs(global.player.motion.y) > 60 || abs(motion.y) > 60 || global_position.distance_to(global.player.global_position) > distance + 30:
+		motion.x = player.motion.x
+		if abs(player.motion.y) > 60 || abs(motion.y) > 60 || global_position.distance_to(player.global_position) > distance + 30:
 			isPushed = false
 	#slow down if player stops pushing
 	else:
@@ -45,15 +52,15 @@ func _on_Area2D_body_entered(body):
 				isPushed = false
 			elif isPushed == false:
 				isPushed = true
-				global_position.x = global_position.x + (global_position.x - global.player.global_position.x)/4.2
-				distance = abs(global_position.x - global.player.global_position.x)
+				global_position.x = global_position.x + (global_position.x - player.global_position.x)/4.2
+				distance = abs(global_position.x - player.global_position.x)
 
 func rayUpdate():
 	#find first object ray downwards hits and attach to it
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
-		if col.get_class() == "Area2D" || col == global.player:
+		if col.get_class() == "Area2D" || col == player:
 			ray.add_exception(col)
 		if global_position.distance_to(ray.get_collision_point()) <= 40:
 			attachTo(col)
@@ -64,7 +71,7 @@ func rayUpdate():
 
 func attachTo(obj):
 	#attach self to obj
-	if obj.get_class() != "Area2D" && obj != get_parent() && obj != global.player:
+	if obj.get_class() != "Area2D" && obj != get_parent() && obj != player:
 		var transf = get_global_transform()
 		get_parent().remove_child(self)
 		obj.add_child(self)

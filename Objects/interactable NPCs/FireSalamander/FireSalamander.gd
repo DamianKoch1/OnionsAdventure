@@ -9,16 +9,21 @@ var triggered = false
 
 onready var anim = $AnimationPlayer
 
+onready var players = get_tree().get_nodes_in_group("Player")
+var player
+
+
 #set up destroying object on player jumping on self and resetting it on player respawn
 func _ready():
 	if objToDestroyPath != null:
 		objToDestroy = get_node(objToDestroyPath)
 		objToDestroyParent = objToDestroy.get_parent()
-	if global.player != null:
-		global.player.connect("loseHp", self, "resetObj")
+	if players != null:
+		player = players[0]
+		player.connect("loseHp", self, "resetObj")
 
 func _on_FireStoneTrigger_body_entered(body):
-	if body == global.player && objToDestroyPath != null:
+	if body.is_in_group("Player") && objToDestroyPath != null:
 		#destroy assigned object if player enters area with certain downwards motion
 		if body.motion.y > body.gravity*10:
 			if triggered == false:

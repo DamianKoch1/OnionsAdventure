@@ -1,5 +1,11 @@
 extends Node2D
 
+
+#removed feature
+
+
+
+
 #max cooldown and range of Biewe
 export var bieweCooldown = 8
 export var bieweRange = 600
@@ -18,7 +24,7 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	#call flee function in enemies in range if triggered by player while cooldown is 0
-	if body == global.player && cd == 0:
+	if body.is_in_group("Player") && cd == 0:
 		cd = bieweCooldown
 		enemies = get_tree().get_nodes_in_group("Enemies")
 		for i in enemies:
