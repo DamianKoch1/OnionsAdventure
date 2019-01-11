@@ -25,8 +25,8 @@ func deleteSave():
 #write and read certain variables into a .cfg file
 func saveGame():
 	saveFile.set_value("SaveState", "latestLevelId", global.currLevelId) 
-	saveFile.set_value("SaveState", "spawnPosX", latestCheckpoint.position.x) 
-	saveFile.set_value("SaveState", "spawnPosY", latestCheckpoint.position.y) 
+	saveFile.set_value("SaveState", "spawnPosX", latestCheckpoint.global_position.x) 
+	saveFile.set_value("SaveState", "spawnPosY", latestCheckpoint.global_position.y) 
 	saveFile.set_value("SaveState", "NPCsSaved", global.player.NPCsavedCount) 
 	saveFile.save(savePath)
 

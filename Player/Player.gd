@@ -57,8 +57,8 @@ func _ready():
 	if SaveGame.loadPlayerState == true:
 		SaveGame.loadPlayerState = false
 		NPCsavedCount = SaveGame.NPCsavedCount
-		position.x = SaveGame.playerPosX
-		position.y = SaveGame.playerPosY
+		global_position.x = SaveGame.playerPosX
+		global_position.y = SaveGame.playerPosY
 
 func _physics_process(delta):
 	if state != dead:
