@@ -8,7 +8,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") && playerAttached == true:
 		global.player.state = global.player.jump
 		global.player.bounce(global.player.jumpheight)
-		attachCD = 2
+		attachCD = 1
 		playerAttached = false
 
 #give player ladder to attach to and make him climb on contact

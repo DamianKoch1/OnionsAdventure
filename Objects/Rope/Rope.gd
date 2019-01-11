@@ -18,7 +18,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") && playerAttached == true:
 		global.player.state = global.player.jump
 		global.player.bounce(min(abs(rotation_degrees)*660*swingSpeed, 600))
-		attachCD = 2
+		attachCD = 1
 		playerAttached = false
 	
 
