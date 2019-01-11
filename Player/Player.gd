@@ -181,7 +181,7 @@ func getHealth():
 	return health
 
 func setState(newState):
-	#set current animation on state changes, scale set prevents scale glitches when attaching to objects
+	#set current animation on state changes, tried scale set to prevent scale glitches when attaching to rotated objects
 	if state != dead:
 		state = newState
 		match state:
@@ -224,6 +224,7 @@ func getAnim():
 	return anim
 
 func restart():
+	global.player = null
 	get_tree().reload_current_scene()
 
 func bounce(bounceStr):
