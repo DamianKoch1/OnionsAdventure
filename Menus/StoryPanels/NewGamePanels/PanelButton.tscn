@@ -1,9 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/newgame panel 1.png" type="Texture" id=1]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/PanelButton.gd" type="Script" id=2]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/PanelButton.gd" type="Script" id=1]
 
-[node name="PanelButton" type="TextureButton"]
+[node name="PanelButton" type="TextureButton" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -24,12 +23,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 1 )
-texture_hover = ExtResource( 1 )
-texture_disabled = ExtResource( 1 )
-texture_focused = ExtResource( 1 )
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 _sections_unfolded = [ "Pause", "Rect", "Textures", "Visibility" ]
 
 
