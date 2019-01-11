@@ -1,5 +1,8 @@
 extends Area2D
 
+#removed feature
+
+
 var triggered = false
 onready var snappedBody = $triggeredTrap/CollisionShape2D
 var triggerCD = 0
@@ -9,8 +12,8 @@ var obj
 
 #setup trap reset on player respawn, disable triggered trap body
 func _ready():
-	if global.player != null:
-		global.player.connect("loseHp", self, "open")
+	if get_tree().get_nodes_in_group("Player").size() > 0:
+		get_tree().get_nodes_in_group("Player").front().connect("loseHp", self, "open")
 	snappedBody.disabled = true
 
 func _physics_process(delta):
@@ -20,11 +23,11 @@ func _physics_process(delta):
 func snap():
 	if obj != null:
 		snappedBody.disabled = false
-		if obj == global.player:
-			obj.health -= 1
+		if obj.is_in_group("Player"):
+			obj.emit_signal("loseHp",obj)
 		else:
 			if obj.get_filename() == boxPacked.get_path():
-				global.player.attachTo(global.player.worldNode)
+				get_tree().get_nodes_in_group("Player").front().attachTo(get_tree().get_nodes_in_group("Player").front().worldNode)
 				obj.get_parent().remove_child(obj)
 				
 
@@ -41,7 +44,7 @@ func _on_Trap_body_entered(body):
 func open():
 	triggerCD = 1
 	if obj != null:
-		if obj.get_filename() == boxPacked.get_path() && global.player.health >= 1:
+		if obj.get_filename() == boxPacked.get_path():
 			var box = boxPacked.instance()
 			get_tree().get_root().add_child(box)
 			box.global_position = obj.startpos

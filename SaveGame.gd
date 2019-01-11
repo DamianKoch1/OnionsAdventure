@@ -27,7 +27,7 @@ func saveGame():
 	saveFile.set_value("SaveState", "latestLevelId", global.currLevelId) 
 	saveFile.set_value("SaveState", "spawnPosX", latestCheckpoint.global_position.x) 
 	saveFile.set_value("SaveState", "spawnPosY", latestCheckpoint.global_position.y) 
-	saveFile.set_value("SaveState", "NPCsSaved", global.player.NPCsavedCount) 
+	saveFile.set_value("SaveState", "NPCsSaved", get_tree().get_nodes_in_group("Player")[0].NPCsavedCount) 
 	saveFile.save(savePath)
 
 func loadGame():
