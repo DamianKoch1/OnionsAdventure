@@ -110,7 +110,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Onion" type="KinematicBody2D"]
+[node name="Onion" type="KinematicBody2D" index="0"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
@@ -147,7 +147,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Node2D" parent="." index="2"]
 
-modulate = Color( 1, 1, 1, 0.838374 )
 position = Vector2( -0.463928, 0 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
