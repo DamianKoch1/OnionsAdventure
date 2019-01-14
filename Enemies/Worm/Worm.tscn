@@ -32,7 +32,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -40 ) ]
 }
 
-[node name="Worm" type="Node2D" index="0" groups=[
+[node name="Worm" type="Node2D" groups=[
 "Enemies",
 ]]
 
@@ -103,7 +103,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Timer" type="Timer" parent="." index="1"]
 
 process_mode = 1
-wait_time = 2.0
+wait_time = 2.3
 one_shot = false
 autostart = true
 
@@ -113,9 +113,10 @@ root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
-playback_speed = 1.0
+playback_speed = 1.3
 anims/digOut = SubResource( 3 )
 blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
 
 [connection signal="body_entered" from="Enemy/Area2D" to="." method="_on_Area2D_body_entered"]
 
