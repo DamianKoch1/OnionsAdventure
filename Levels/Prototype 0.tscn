@@ -8,7 +8,7 @@
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/Obstacles/Stones/StoneMedium3A.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.gd" type="Script" id=8]
-[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/old tileset/FinishedTileSet.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=12]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/SpiderbuddyTrigger.tscn" type="PackedScene" id=22]
+
 
 [node name="Prototype 0" type="Node" index="0"]
 

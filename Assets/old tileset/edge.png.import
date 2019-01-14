@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gray-stone.png-33d5d034ccf9170d11e9339d27109a58.stex"
+path="res://.import/edge.png-ed41fc08d1663c80f9dd4d8c09a89e8a.stex"
 
 [deps]
 
-source_file="res://Assets/gray-stone.png"
-dest_files=[ "res://.import/gray-stone.png-33d5d034ccf9170d11e9339d27109a58.stex" ]
+source_file="res://Assets/old tileset/edge.png"
+dest_files=[ "res://.import/edge.png-ed41fc08d1663c80f9dd4d8c09a89e8a.stex" ]
 
 [params]
 
