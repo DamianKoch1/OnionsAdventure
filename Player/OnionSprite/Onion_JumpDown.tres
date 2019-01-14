@@ -121,10 +121,10 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 13.7552, 1.35655 ) ]
+"values": [ Vector2( 25.7552, 4.50173 ), Vector2( 25.7552, 7.15531 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Onion/Sprite/OnionBody/onion_eyes:rotation_degrees")
@@ -145,10 +145,10 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.355163 ) ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("Onion/Sprite/OnionBody/onion_mouth:position")
@@ -160,7 +160,7 @@ tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 12.9174, 59.8063 ) ]
+"values": [ Vector2( 28.9174, 56.6611 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("Onion/Sprite/OnionBody/onion_mouth:rotation_degrees")
