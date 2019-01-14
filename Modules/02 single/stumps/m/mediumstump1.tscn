@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/old tileset/FinishedTileSet.tscn" type="PackedScene" id=2]
+
 
 [node name="mediumstump1" type="Node2D" index="0"]
 

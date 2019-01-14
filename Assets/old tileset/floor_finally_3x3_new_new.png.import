@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/edge.png-3d95d9e95d15b3cd0928d455ac553a5e.stex"
+path="res://.import/floor_finally_3x3_new_new.png-a5e8521770cc4821f7b20c8221d885ec.stex"
 
 [deps]
 
-source_file="res://Assets/edge.png"
-dest_files=[ "res://.import/edge.png-3d95d9e95d15b3cd0928d455ac553a5e.stex" ]
+source_file="res://Assets/old tileset/floor_finally_3x3_new_new.png"
+dest_files=[ "res://.import/floor_finally_3x3_new_new.png-a5e8521770cc4821f7b20c8221d885ec.stex" ]
 
 [params]
 
