@@ -7,7 +7,6 @@ onready var creditscreen = preload("res://Menus/MainMenu/CreditScreen.tscn")
 func _ready():
 	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
 	$YesNoOverlayQuit.hide()
-	global.player = null
 	if MenuMusic.playing == false:
 		MenuMusic.fadeIn()
 
