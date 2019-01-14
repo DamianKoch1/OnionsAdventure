@@ -258,4 +258,28 @@ tracks/20/keys = {
 "update": 0,
 "values": [ Vector2( 0.5, 0.5 ) ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody/onion_eyes_c:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody/onion_mouth_s:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
