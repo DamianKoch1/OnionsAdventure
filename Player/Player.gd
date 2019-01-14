@@ -31,9 +31,8 @@ onready var debugFly = -1
 onready var gracePeriodTimer = 0
 export var gracePeriod = 2
 
-#rope player attaches to if climbing on it, attach cooldown to save cpu
+#rope player attaches to if climbing on it
 var rope
-var ropeAttachCD = 0
 
 
 #signals other objects react to
