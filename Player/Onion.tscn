@@ -1,22 +1,24 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/OnionSprite/onion_body_body.png" type="Texture" id=2]
 [ext_resource path="res://Player/OnionSprite/onion_body_hair.png" type="Texture" id=3]
 [ext_resource path="res://Player/OnionSprite/onion_body_eyes.png" type="Texture" id=4]
 [ext_resource path="res://Player/OnionSprite/onion_body_mouth.png" type="Texture" id=5]
-[ext_resource path="res://Player/OnionSprite/onion_body_earL.png" type="Texture" id=6]
-[ext_resource path="res://Player/OnionSprite/onion_body_earR.png" type="Texture" id=7]
-[ext_resource path="res://Player/OnionSprite/onion_body_tail.png" type="Texture" id=8]
-[ext_resource path="res://Player/OnionSprite/Onion_Idle.tres" type="Animation" id=9]
-[ext_resource path="res://Player/OnionSprite/Onion_JumpDown.tres" type="Animation" id=10]
-[ext_resource path="res://Player/OnionSprite/Onion_JumpUp.tres" type="Animation" id=11]
-[ext_resource path="res://Player/OnionSprite/Onion_Walk.tres" type="Animation" id=12]
-[ext_resource path="res://Player/SFX/hurt.wav" type="AudioStream" id=13]
-[ext_resource path="res://Player/SFX/Onion_died.ogg" type="AudioStream" id=14]
-[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Player/SFX/jump.wav" type="AudioStream" id=16]
-[ext_resource path="res://Player/SFX/footstep.wav" type="AudioStream" id=17]
+[ext_resource path="res://Player/OnionSprite/onion_body_eyes2.png" type="Texture" id=6]
+[ext_resource path="res://Player/OnionSprite/onion_body_mouth2.png" type="Texture" id=7]
+[ext_resource path="res://Player/OnionSprite/onion_body_earL.png" type="Texture" id=8]
+[ext_resource path="res://Player/OnionSprite/onion_body_earR.png" type="Texture" id=9]
+[ext_resource path="res://Player/OnionSprite/onion_body_tail.png" type="Texture" id=10]
+[ext_resource path="res://Player/OnionSprite/Onion_Idle.tres" type="Animation" id=11]
+[ext_resource path="res://Player/OnionSprite/Onion_JumpDown.tres" type="Animation" id=12]
+[ext_resource path="res://Player/OnionSprite/Onion_JumpUp.tres" type="Animation" id=13]
+[ext_resource path="res://Player/OnionSprite/Onion_Walk.tres" type="Animation" id=14]
+[ext_resource path="res://Player/SFX/hurt.wav" type="AudioStream" id=15]
+[ext_resource path="res://Player/SFX/Onion_died.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Player/SFX/jump.wav" type="AudioStream" id=18]
+[ext_resource path="res://Player/SFX/footstep.wav" type="AudioStream" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -75,6 +77,54 @@ tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Onion/Sprite_Onion_Leafes/OnionTail:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -18.3923, -12.4233 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody/onion_eyes:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody/onion_mouth_s:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 16.8922, 28.8426 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody/onion_mouth:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -154,57 +204,73 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body" index="0"]
 
-position = Vector2( 0.50386, -28.3305 )
-scale = Vector2( 0.5, 0.432836 )
+position = Vector2( 0.50386, -25.5855 )
+scale = Vector2( 0.5, 0.429075 )
 z_index = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="OnionHair" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="0"]
 
-position = Vector2( 7.12765, -40.2015 )
-rotation = 0.0153338
-scale = Vector2( 0.900052, 0.890193 )
+position = Vector2( 7.53237, -32.7933 )
+rotation = 0.828935
+scale = Vector2( 1, 0.951445 )
 texture = ExtResource( 3 )
 offset = Vector2( -1.19385, -22.9981 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="onion_eyes" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="1"]
 
-position = Vector2( 29.7552, 1.35655 )
+position = Vector2( 29.7552, 1.73269 )
+scale = Vector2( 1, 0.259429 )
 texture = ExtResource( 4 )
 offset = Vector2( -12.1219, -0.543782 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="onion_mouth" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="2"]
 
-position = Vector2( 32.9174, 56.273 )
+position = Vector2( 32.2278, 51.2866 )
 texture = ExtResource( 5 )
 offset = Vector2( -15.5477, -24.2438 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="onion_eyes_c" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="3"]
+
+visible = false
+position = Vector2( 17.7552, -3.08702 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="onion_mouth_s" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="4"]
+
+visible = false
+position = Vector2( 16.8922, 28.8426 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="OnionEarL" type="Sprite" parent="Sprite_Onion_Leafes" index="1"]
 
-position = Vector2( 0.468679, -44.3603 )
-rotation = 0.274664
+position = Vector2( 0.717029, -42.7728 )
+rotation = 0.210388
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 offset = Vector2( -21.4939, -48.2502 )
 
 [node name="OnionEarR" type="Sprite" parent="Sprite_Onion_Leafes" index="2"]
 
-position = Vector2( -4.05002, -42.4613 )
-rotation = -0.577841
+position = Vector2( -1.19677, -43.3725 )
+rotation = -0.61248
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 offset = Vector2( -12.9789, -49.7987 )
 
 [node name="OnionTail" type="Sprite" parent="Sprite_Onion_Leafes" index="3"]
 
-position = Vector2( -18.3196, -9.30804 )
-rotation = -0.308219
+position = Vector2( -18.3923, -6.42332 )
+rotation = -0.335732
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 offset = Vector2( -27.0576, -23.7384 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
@@ -216,10 +282,10 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Onion_Death = SubResource( 2 )
-anims/Onion_Idle = ExtResource( 9 )
-anims/Onion_JumpDown = ExtResource( 10 )
-anims/Onion_JumpUp = ExtResource( 11 )
-anims/Onion_Walk = ExtResource( 12 )
+anims/Onion_Idle = ExtResource( 11 )
+anims/Onion_JumpDown = ExtResource( 12 )
+anims/Onion_JumpUp = ExtResource( 13 )
+anims/Onion_Walk = ExtResource( 14 )
 blend_times = [  ]
 
 [node name="respawnBlinking" type="AnimationPlayer" parent="." index="4"]
@@ -241,7 +307,7 @@ __meta__ = {
 
 [node name="hurt" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 
-stream = ExtResource( 13 )
+stream = ExtResource( 15 )
 volume_db = -5.0
 pitch_scale = 1.0
 autoplay = false
@@ -255,7 +321,7 @@ __meta__ = {
 
 [node name="death" type="AudioStreamPlayer2D" parent="SFX" index="1"]
 
-stream = ExtResource( 14 )
+stream = ExtResource( 16 )
 volume_db = -5.0
 pitch_scale = 1.0
 autoplay = false
@@ -267,14 +333,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="jump" parent="SFX" index="2" instance=ExtResource( 15 )]
+[node name="jump" parent="SFX" index="2" instance=ExtResource( 17 )]
 
-stream = ExtResource( 16 )
+stream = ExtResource( 18 )
 volume_db = -5.0
 
-[node name="footstep" parent="SFX" index="3" instance=ExtResource( 15 )]
+[node name="footstep" parent="SFX" index="3" instance=ExtResource( 17 )]
 
-stream = ExtResource( 17 )
+stream = ExtResource( 19 )
 startPitch = 0.8
 pitchRange = 0.3
 
