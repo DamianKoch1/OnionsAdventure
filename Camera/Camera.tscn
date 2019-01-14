@@ -1,14 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Camera/Animals_Trapped.png" type="Texture" id=3]
 [ext_resource path="res://Camera/Animals_Free.png" type="Texture" id=4]
-[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Audio/Music/EnchantedIntro.wav" type="AudioStream" id=6]
-[ext_resource path="res://Audio/Music/EnchantedMainpart.wav" type="AudioStream" id=7]
+[ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Audio/Music/EnchantedIntro.wav" type="AudioStream" id=7]
+[ext_resource path="res://Audio/Music/EnchantedMainpart.wav" type="AudioStream" id=8]
 
-[node name="Camera" type="Camera2D"]
+[node name="Camera" type="Camera2D" index="0"]
 
 pause_mode = 2
 position = Vector2( 32, 32 )
@@ -41,7 +42,6 @@ playerId = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
 
-editor/display_folded = true
 layer = 0
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -50,13 +50,12 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="PauseMenu" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
 
-visible = false
 margin_left = 332.0
 margin_top = 166.0
 margin_right = 372.0
 margin_bottom = 206.0
 rect_scale = Vector2( 1.1, 1.1 )
-_sections_unfolded = [ "Pause", "Rect" ]
+_sections_unfolded = [ "Pause", "Rect", "Visibility" ]
 
 [node name="NPCs" type="Node2D" parent="CanvasLayer" index="1"]
 
@@ -88,19 +87,35 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 225, 100 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="BGMPlayer" parent="." index="1" instance=ExtResource( 5 )]
+[node name="Spiderbuddy" parent="CanvasLayer" index="2" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 93.4357, 190.331 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+down = true
+
+[node name="Sprites" parent="CanvasLayer/Spiderbuddy" index="1"]
+
+position = Vector2( 0, 0 )
+
+[node name="Speechbubble" parent="CanvasLayer/Spiderbuddy" index="2"]
+
+modulate = Color( 1, 1, 1, 1 )
+
+[node name="BGMPlayer" parent="." index="1" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 
 [node name="Intro" parent="BGMPlayer" index="0"]
 
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 volume_db = -10.0
 
 [node name="Mainpart" parent="BGMPlayer" index="1"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 8 )
 volume_db = -10.0
 
 
+[editable path="CanvasLayer/Spiderbuddy"]
 [editable path="BGMPlayer"]
