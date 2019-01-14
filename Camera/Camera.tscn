@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Camera/Animals_Trapped.png" type="Texture" id=3]
-[ext_resource path="res://Camera/Animals_Free.png" type="Texture" id=4]
-[ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Camera/Spiderbuddy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Camera/Animals_Trapped.png" type="Texture" id=4]
+[ext_resource path="res://Camera/Animals_Free.png" type="Texture" id=5]
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Audio/Music/EnchantedIntro.wav" type="AudioStream" id=7]
 [ext_resource path="res://Audio/Music/EnchantedMainpart.wav" type="AudioStream" id=8]
@@ -50,14 +50,21 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="PauseMenu" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
 
+visible = false
 margin_left = 332.0
 margin_top = 166.0
 margin_right = 372.0
 margin_bottom = 206.0
 rect_scale = Vector2( 1.1, 1.1 )
-_sections_unfolded = [ "Pause", "Rect", "Visibility" ]
+_sections_unfolded = [ "Material", "Pause", "Visibility" ]
 
-[node name="NPCs" type="Node2D" parent="CanvasLayer" index="1"]
+[node name="Spiderbuddy" parent="CanvasLayer" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 90.869, 90.2304 )
+z_index = -1
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="NPCs" type="Node2D" parent="CanvasLayer" index="2"]
 
 editor/display_folded = true
 position = Vector2( 563.093, 41.0886 )
@@ -71,7 +78,7 @@ __meta__ = {
 
 position = Vector2( -32, -32 )
 scale = Vector2( 0.371773, 0.322383 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 225, 100 )
@@ -81,26 +88,11 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 position = Vector2( -32, -32 )
 scale = Vector2( 0.371773, 0.322383 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 225, 100 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
-
-[node name="Spiderbuddy" parent="CanvasLayer" index="2" instance=ExtResource( 5 )]
-
-editor/display_folded = true
-position = Vector2( 93.4357, 190.331 )
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
-down = true
-
-[node name="Sprites" parent="CanvasLayer/Spiderbuddy" index="1"]
-
-position = Vector2( 0, 0 )
-
-[node name="Speechbubble" parent="CanvasLayer/Spiderbuddy" index="2"]
-
-modulate = Color( 1, 1, 1, 1 )
 
 [node name="BGMPlayer" parent="." index="1" instance=ExtResource( 6 )]
 
