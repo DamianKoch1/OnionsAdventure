@@ -110,7 +110,9 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Onion" type="KinematicBody2D" index="0"]
+[node name="Onion" type="KinematicBody2D" index="0" groups=[
+"Player",
+]]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
@@ -128,7 +130,6 @@ gravity = 20
 jumpheight = 450
 climbspeed = 200
 gracePeriod = 2
-maxHealth = 5
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="0"]
 

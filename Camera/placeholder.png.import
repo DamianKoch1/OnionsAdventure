@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/asset_stone_large_1.png-e5435c8987f42f1445ddf3a74bdf94df.stex"
+path="res://.import/placeholder.png-84df7cad8edd411f6cb26e8281afa644.stex"
 
 [deps]
 
-source_file="res://Assets/Stones/asset_stone_large_1.png"
-dest_files=[ "res://.import/asset_stone_large_1.png-e5435c8987f42f1445ddf3a74bdf94df.stex" ]
+source_file="res://Camera/placeholder.png"
+dest_files=[ "res://.import/placeholder.png-84df7cad8edd411f6cb26e8281afa644.stex" ]
 
 [params]
 
