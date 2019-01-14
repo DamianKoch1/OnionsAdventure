@@ -13,12 +13,11 @@ func _ready():
 
 #delete self and increase counter if player presses button in area
 func _on_Area2D_body_entered(body):
-	if body == global.player:
+	if body.is_in_group("Player"):
 		if Input.is_action_just_pressed("push") && collected != true:
-
 			remove_from_group("trappedNPCs")
-			global.player.NPCsavedCount += 1
-			global.player.emit_signal("NPCsaved")
+			body.NPCsavedCount += 1
+			body.emit_signal("NPCsaved")
 			collected = true
 			saveCollected()
 			$AnimationPlayer.play("onCollect")

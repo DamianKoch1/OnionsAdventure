@@ -23,7 +23,6 @@ func _process(delta):
 				get_tree().paused = false
 		else:
 			$OptionsOverlay.hide()
-			global.newGame = false
 
 func _on_ResumeButton_pressed():
 	UISelect.playing = true
@@ -54,6 +53,5 @@ func loadMainMenu():
 
 func restart():
 	get_tree().paused = false
-	global.player = null
 	get_tree().reload_current_scene()
 
