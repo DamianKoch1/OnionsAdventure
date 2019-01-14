@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
@@ -11,27 +11,21 @@
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Objects/Box/Box.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Objects/Trap/Trap.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Objects/interactable NPCs/Biewe/Biewe.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=20]
 
-[node name="Prototype 0" type="Node"]
+[node name="Prototype 0" type="Node" index="0"]
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 3222.2, 25.1553 )
-z_index = -5
-_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Bouncer" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -145,8 +139,6 @@ scale = Vector2( 3.2, 4.8 )
 
 position = Vector2( 720, 240 )
 scale = Vector2( 0.283225, 0.25 )
-z_index = -5
-_sections_unfolded = [ "Z Index" ]
 
 [node name="EarthStone5" type="Node2D" parent="." index="9"]
 
@@ -181,8 +173,6 @@ tile_data = PoolIntArray( -720832, 0, 0, -720831, 0, 0, -655296, 0, 0, -655295, 
 [node name="Spawnpoint" parent="." index="11" instance=ExtResource( 10 )]
 
 position = Vector2( 176.272, 205.401 )
-z_index = -5
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Rope" parent="." index="12" instance=ExtResource( 11 )]
 
@@ -194,128 +184,74 @@ position = Vector2( 2079, -280.147 )
 swingDegrees = 50
 swingSpeed = 0.04
 
-[node name="Box" parent="." index="14" instance=ExtResource( 12 )]
-
-position = Vector2( 96, 224 )
-z_index = 5
-_sections_unfolded = [ "Transform", "Z Index" ]
-
-[node name="Box2" parent="." index="15" instance=ExtResource( 12 )]
-
-position = Vector2( 640, 224 )
-z_index = 5
-
-[node name="Box3" parent="." index="16" instance=ExtResource( 12 )]
-
-position = Vector2( 1300.42, -141.796 )
-z_index = 5
-
-[node name="Box5" parent="." index="17" instance=ExtResource( 12 )]
-
-position = Vector2( 1991.34, -38.0696 )
-z_index = 5
-gravity = 1
-
-[node name="Box4" parent="." index="18" instance=ExtResource( 12 )]
-
-position = Vector2( 2775.46, -16.9718 )
-z_index = 5
-
-[node name="Checkpoint" parent="." index="19" instance=ExtResource( 13 )]
+[node name="Checkpoint" parent="." index="14" instance=ExtResource( 12 )]
 
 position = Vector2( 1380, -50 )
-z_index = -5
 
-[node name="Checkpoint3" parent="." index="20" instance=ExtResource( 13 )]
+[node name="Checkpoint3" parent="." index="15" instance=ExtResource( 12 )]
 
 position = Vector2( 550, 90 )
-z_index = -5
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="Checkpoint2" parent="." index="21" instance=ExtResource( 13 )]
+[node name="Checkpoint2" parent="." index="16" instance=ExtResource( 12 )]
 
 position = Vector2( 2304, -32 )
-z_index = -5
 
-[node name="Trap" parent="." index="22" instance=ExtResource( 14 )]
-
-position = Vector2( -97.7994, 240.296 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Trap2" parent="." index="23" instance=ExtResource( 14 )]
-
-position = Vector2( 2032.99, 329.958 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="trappedNPC" parent="." index="24" instance=ExtResource( 15 )]
+[node name="trappedNPC" parent="." index="17" instance=ExtResource( 13 )]
 
 position = Vector2( 229.348, 334.261 )
 
-[node name="trappedNPC2" parent="." index="25" instance=ExtResource( 15 )]
+[node name="trappedNPC2" parent="." index="18" instance=ExtResource( 13 )]
 
 position = Vector2( 488.675, 341.421 )
 
-[node name="Camera" parent="." index="26" instance=ExtResource( 16 )]
+[node name="Camera" parent="." index="19" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 
-[node name="Biewe" parent="." index="27" instance=ExtResource( 17 )]
-
-position = Vector2( 2644.2, -108.481 )
-
-[node name="FireSalamander" parent="." index="28" instance=ExtResource( 6 )]
+[node name="FireSalamander" parent="." index="20" instance=ExtResource( 6 )]
 
 position = Vector2( 1542.5, -37.4728 )
 objToDestroyPath = NodePath("../Enemy3")
 
-[node name="Worm" parent="." index="29" instance=ExtResource( 18 )]
+[node name="Worm" parent="." index="21" instance=ExtResource( 15 )]
 
 position = Vector2( 1175.64, 12.7948 )
 
-[node name="ParallaxBackground" parent="." index="30" instance=ExtResource( 19 )]
+[node name="ParallaxBackground" parent="." index="22" instance=ExtResource( 16 )]
 
 editor/display_folded = true
 
-[node name="TwistedTree" parent="." index="31" instance=ExtResource( 20 )]
+[node name="TwistedTree" parent="." index="23" instance=ExtResource( 17 )]
 
 position = Vector2( 240, -80 )
 z_index = -4
-_sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="stump m 7" parent="." index="32" instance=ExtResource( 21 )]
+[node name="stump m 7" parent="." index="24" instance=ExtResource( 18 )]
 
 position = Vector2( 790, -110 )
-z_index = -5
-_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="Enemy" parent="." index="33" instance=ExtResource( 22 )]
+[node name="Enemy" parent="." index="25" instance=ExtResource( 19 )]
 
 position = Vector2( -587.197, 198.662 )
 mothsound = true
 
-[node name="Enemy2" parent="." index="34" instance=ExtResource( 22 )]
+[node name="Enemy2" parent="." index="26" instance=ExtResource( 19 )]
 
 position = Vector2( 2920.16, -70.3229 )
 mothsound = true
 
-[node name="Enemy5" parent="." index="35" instance=ExtResource( 22 )]
+[node name="Enemy5" parent="." index="27" instance=ExtResource( 19 )]
 
 position = Vector2( 1432.99, -139.393 )
 mothsound = true
 
-[node name="Enemy3" parent="." index="36" instance=ExtResource( 23 )]
+[node name="Enemy3" parent="." index="28" instance=ExtResource( 20 )]
 
 position = Vector2( 1626.45, -24.4935 )
-mothsound = false
 
-[node name="Enemy4" parent="." index="37" instance=ExtResource( 23 )]
+[node name="Enemy4" parent="." index="29" instance=ExtResource( 20 )]
 
 position = Vector2( 2888.57, 15.4914 )
-mothsound = false
-
-[node name="Spiderbuddy" parent="." index="38" instance=ExtResource( 24 )]
-
-position = Vector2( 1065.14, -113.457 )
 
 
 [editable path="Onion"]
@@ -324,5 +260,4 @@ position = Vector2( 1065.14, -113.457 )
 [editable path="EarthStone3"]
 [editable path="EarthStone3/TileMap/FireStone"]
 [editable path="Camera"]
-[editable path="Camera/PauseMenu"]
 [editable path="ParallaxBackground"]
