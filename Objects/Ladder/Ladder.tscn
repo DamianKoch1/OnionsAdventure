@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Ladder/Asset_Vine_BigA.png" type="Texture" id=2]
@@ -7,11 +7,6 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 34.4653 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 3.55226 )
 
 [node name="Ladder" type="Area2D" index="0"]
 
@@ -42,28 +37,10 @@ _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, 1.3182 )
-scale = Vector2( 1, 0.77643 )
+position = Vector2( 0, -1.50676 )
+scale = Vector2( 1, 0.851832 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
-
-position = Vector2( 0.540344, 6.48431 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
-
-position = Vector2( -0.440125, -34.6762 )
-scale = Vector2( 1, 0.5 )
-shape = SubResource( 2 )
-one_way_collision = true
 
 [connection signal="body_entered" from="." to="." method="_on_Ladder_body_entered"]
 
