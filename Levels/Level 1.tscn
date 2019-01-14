@@ -42,7 +42,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 
@@ -92,12 +92,15 @@ scale = Vector2( 0.621284, 0.72858 )
 
 [node name="stump l, moving tendril" parent="." index="7" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 position = Vector2( 4179.77, -122.43 )
 
 [node name="Checkpoint" parent="stump l, moving tendril" index="3" instance=ExtResource( 11 )]
 
 position = Vector2( 577.568, -92.313 )
+
+[node name="Checkpoint2" parent="stump l, moving tendril" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( -2389.52, 191.1 )
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 12 )]
 

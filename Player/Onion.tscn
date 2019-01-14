@@ -130,6 +130,7 @@ gravity = 20
 jumpheight = 450
 climbspeed = 200
 gracePeriod = 2
+maxHealth = 5
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="0"]
 
@@ -153,55 +154,56 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite" index="0"]
 
-position = Vector2( 0.50386, -26.0478 )
-scale = Vector2( 0.5, 0.438294 )
+position = Vector2( 0.50386, -16.941 )
+scale = Vector2( 0.5, 0.251319 )
 z_index = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="OnionHair" type="Sprite" parent="Sprite/OnionBody" index="0"]
 
-position = Vector2( 9.04927, -38.4664 )
-rotation = 0.0652712
-scale = Vector2( 1, 0.951707 )
+position = Vector2( 7.13066, -40.2171 )
+rotation = 0.00358834
+scale = Vector2( 1, 1.33063 )
 texture = ExtResource( 3 )
 offset = Vector2( -1.19385, -22.9981 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="onion_eyes" type="Sprite" parent="Sprite/OnionBody" index="1"]
 
-position = Vector2( 29.7552, -0.642428 )
+position = Vector2( 25.7552, 7.15531 )
+scale = Vector2( 1, 0.355163 )
 texture = ExtResource( 4 )
 offset = Vector2( -12.1219, -0.543782 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="onion_mouth" type="Sprite" parent="Sprite/OnionBody" index="2"]
 
-position = Vector2( 32.7324, 51.1652 )
+position = Vector2( 28.9174, 56.6611 )
 texture = ExtResource( 5 )
 offset = Vector2( -15.5477, -24.2438 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="OnionEarL" type="Sprite" parent="Sprite" index="1"]
 
-position = Vector2( 1.86983, -40.3877 )
-rotation = 0.282815
+position = Vector2( 0.468689, -25.7288 )
+rotation = 0.28195
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 offset = Vector2( -21.4939, -48.2502 )
 
 [node name="OnionEarR" type="Sprite" parent="Sprite" index="2"]
 
-position = Vector2( 0.713048, -40.5244 )
-rotation = -0.652194
+position = Vector2( -4.04999, -26.8692 )
+rotation = -0.0332256
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 offset = Vector2( -12.9789, -49.7987 )
 
 [node name="OnionTail" type="Sprite" parent="Sprite" index="3"]
 
-position = Vector2( -18.3923, -6.42332 )
-rotation = -0.250124
+position = Vector2( -14.7597, -5.677 )
+rotation = -0.0204963
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 offset = Vector2( -27.0576, -23.7384 )
@@ -233,6 +235,7 @@ blend_times = [  ]
 
 [node name="SFX" type="Node2D" parent="." index="5"]
 
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
