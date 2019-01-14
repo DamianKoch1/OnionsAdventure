@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/floor_w_grass_1_3.png-6cba9d356194c0eb0190bbc0432adf75.stex"
+path="res://.import/floor_w_grass_1_1.png-b8817e61a6fa6ec32455f148aa675b3e.stex"
 
 [deps]
 
-source_file="res://Assets/floor_w_grass_1_3.png"
-dest_files=[ "res://.import/floor_w_grass_1_3.png-6cba9d356194c0eb0190bbc0432adf75.stex" ]
+source_file="res://Assets/old tileset/floor_w_grass_1_1.png"
+dest_files=[ "res://.import/floor_w_grass_1_1.png-b8817e61a6fa6ec32455f148aa675b3e.stex" ]
 
 [params]
 
