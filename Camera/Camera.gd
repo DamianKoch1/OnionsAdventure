@@ -15,8 +15,9 @@ var player
 func _ready():
 	$BGMPlayer.fadeIn()
 	#update hud values on certain signals
-	player = players[playerId]
-	player.connect("NPCsaved", self, "updateNPCsaved")
+	if players.size() > 0:
+		player = players[playerId]
+		player.connect("NPCsaved", self, "updateNPCsaved")
 
 
 func _physics_process(delta):
@@ -25,7 +26,8 @@ func _physics_process(delta):
 		npcsInLevel = get_tree().get_nodes_in_group("trappedNPCs").size()
 		npcEmpty.region_rect.size.x = npcsInLevel * npcImgWidth
 		updateNPCsaved()
-	global_position = player.global_position
+	if player != null:
+		global_position = player.global_position
 
 
 #update hud elements
