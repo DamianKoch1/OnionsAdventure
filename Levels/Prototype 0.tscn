@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=21]
 
 [node name="Prototype 0" type="Node" index="0"]
 
@@ -252,6 +253,10 @@ position = Vector2( 1626.45, -24.4935 )
 [node name="Enemy4" parent="." index="29" instance=ExtResource( 20 )]
 
 position = Vector2( 2888.57, 15.4914 )
+
+[node name="Collectable" parent="." index="30" instance=ExtResource( 21 )]
+
+position = Vector2( 35.0641, 208.437 )
 
 
 [editable path="Onion"]
