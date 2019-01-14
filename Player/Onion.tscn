@@ -152,55 +152,55 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite" index="0"]
 
-position = Vector2( 0.50386, -26.823 )
-scale = Vector2( 0.5, 0.450089 )
+position = Vector2( 0.50386, -16.941 )
+scale = Vector2( 0.5, 0.251319 )
 z_index = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="OnionHair" type="Sprite" parent="Sprite/OnionBody" index="0"]
 
-position = Vector2( 7.53237, -32.7933 )
-rotation = 0.721982
-scale = Vector2( 1, 1.01406 )
+position = Vector2( 7.13066, -40.2171 )
+rotation = 0.00358834
+scale = Vector2( 1, 1.33063 )
 texture = ExtResource( 3 )
 offset = Vector2( -1.19385, -22.9981 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="onion_eyes" type="Sprite" parent="Sprite/OnionBody" index="1"]
 
-position = Vector2( 29.7552, -3.08702 )
+position = Vector2( 13.7552, 1.35655 )
 texture = ExtResource( 4 )
 offset = Vector2( -12.1219, -0.543782 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="onion_mouth" type="Sprite" parent="Sprite/OnionBody" index="2"]
 
-position = Vector2( 32.9174, 51.1207 )
+position = Vector2( 12.9174, 59.8063 )
 texture = ExtResource( 5 )
 offset = Vector2( -15.5477, -24.2438 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="OnionEarL" type="Sprite" parent="Sprite" index="1"]
 
-position = Vector2( 0.71703, -43.7446 )
-rotation = 0.282815
+position = Vector2( 0.468689, -25.7288 )
+rotation = 0.28195
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 offset = Vector2( -21.4939, -48.2502 )
 
 [node name="OnionEarR" type="Sprite" parent="Sprite" index="2"]
 
-position = Vector2( -1.16557, -44.0317 )
-rotation = -0.572655
+position = Vector2( -4.04999, -26.8692 )
+rotation = -0.0332256
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 offset = Vector2( -12.9789, -49.7987 )
 
 [node name="OnionTail" type="Sprite" parent="Sprite" index="3"]
 
-position = Vector2( -18.3923, -6.42332 )
-rotation = -0.140249
+position = Vector2( -14.7597, -5.677 )
+rotation = -0.0204963
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 offset = Vector2( -27.0576, -23.7384 )
