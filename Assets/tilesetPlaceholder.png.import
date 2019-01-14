@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/floor_finally_3x3_new_new.png-6d8c09acaf4128c05f10aae3cc063f78.stex"
+path="res://.import/tilesetPlaceholder.png-8ccb75ac8e574e0bc8039fbd5f514dd5.stex"
 
 [deps]
 
-source_file="res://Assets/floor_finally_3x3_new_new.png"
-dest_files=[ "res://.import/floor_finally_3x3_new_new.png-6d8c09acaf4128c05f10aae3cc063f78.stex" ]
+source_file="res://Assets/tilesetPlaceholder.png"
+dest_files=[ "res://.import/tilesetPlaceholder.png-8ccb75ac8e574e0bc8039fbd5f514dd5.stex" ]
 
 [params]
 
