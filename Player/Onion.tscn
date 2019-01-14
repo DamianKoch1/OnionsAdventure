@@ -1,13 +1,13 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Player/OnionSprite/onion_body.png" type="Texture" id=2]
-[ext_resource path="res://Player/OnionSprite/onion_hair.png" type="Texture" id=3]
-[ext_resource path="res://Player/OnionSprite/onion_eyes.png" type="Texture" id=4]
-[ext_resource path="res://Player/OnionSprite/onion_mouth.png" type="Texture" id=5]
-[ext_resource path="res://Player/OnionSprite/onion_ear_L.png" type="Texture" id=6]
-[ext_resource path="res://Player/OnionSprite/onion_ear_R.png" type="Texture" id=7]
-[ext_resource path="res://Player/OnionSprite/onion_tail.png" type="Texture" id=8]
+[ext_resource path="res://Player/OnionSprite/onion_body_body.png" type="Texture" id=2]
+[ext_resource path="res://Player/OnionSprite/onion_body_hair.png" type="Texture" id=3]
+[ext_resource path="res://Player/OnionSprite/onion_body_eyes.png" type="Texture" id=4]
+[ext_resource path="res://Player/OnionSprite/onion_body_mouth.png" type="Texture" id=5]
+[ext_resource path="res://Player/OnionSprite/onion_body_earL.png" type="Texture" id=6]
+[ext_resource path="res://Player/OnionSprite/onion_body_earR.png" type="Texture" id=7]
+[ext_resource path="res://Player/OnionSprite/onion_body_tail.png" type="Texture" id=8]
 [ext_resource path="res://Player/OnionSprite/Onion_Idle.tres" type="Animation" id=9]
 [ext_resource path="res://Player/OnionSprite/Onion_JumpDown.tres" type="Animation" id=10]
 [ext_resource path="res://Player/OnionSprite/Onion_JumpUp.tres" type="Animation" id=11]
@@ -152,60 +152,59 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="OnionBody" type="Sprite" parent="Sprite" index="0"]
 
-position = Vector2( 0.50386, -28.823 )
-scale = Vector2( 0.5, 0.450089 )
+position = Vector2( 0.50386, -26.0478 )
+scale = Vector2( 0.5, 0.438294 )
 z_index = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="OnionHair" type="Sprite" parent="Sprite/OnionBody" index="0"]
 
-position = Vector2( 7.13066, -40.2171 )
-rotation = -0.00372912
-scale = Vector2( 1, 1.01406 )
+position = Vector2( 9.04927, -38.4664 )
+rotation = 0.0652712
+scale = Vector2( 1, 0.951707 )
 texture = ExtResource( 3 )
-offset = Vector2( -2.05788, -20.5568 )
+offset = Vector2( -1.19385, -22.9981 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="onion_eyes" type="Sprite" parent="Sprite/OnionBody" index="1"]
 
-position = Vector2( 13.7552, 1.35655 )
+position = Vector2( 29.7552, -0.642428 )
 texture = ExtResource( 4 )
 offset = Vector2( -12.1219, -0.543782 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="onion_mouth" type="Sprite" parent="Sprite/OnionBody" index="2"]
 
-position = Vector2( 16.9174, 37.79 )
-scale = Vector2( 1.5, 1.5 )
+position = Vector2( 32.7324, 51.1652 )
 texture = ExtResource( 5 )
 offset = Vector2( -15.5477, -24.2438 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="OnionEarL" type="Sprite" parent="Sprite" index="1"]
 
-position = Vector2( 0.468681, -45.7288 )
+position = Vector2( 1.86983, -40.3877 )
 rotation = 0.282815
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
-offset = Vector2( -49.4588, -96.8829 )
+offset = Vector2( -21.4939, -48.2502 )
 
 [node name="OnionEarR" type="Sprite" parent="Sprite" index="2"]
 
-position = Vector2( -4.05003, -42.8692 )
-rotation = -0.572655
+position = Vector2( 0.713048, -40.5244 )
+rotation = -0.652194
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
-offset = Vector2( -15.5284, -107.047 )
+offset = Vector2( -12.9789, -49.7987 )
 
 [node name="OnionTail" type="Sprite" parent="Sprite" index="3"]
 
-position = Vector2( -18.3196, -6.67652 )
-rotation = -0.140249
+position = Vector2( -18.3923, -6.42332 )
+rotation = -0.250124
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 offset = Vector2( -27.0576, -23.7384 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 
@@ -233,6 +232,10 @@ blend_times = [  ]
 
 [node name="SFX" type="Node2D" parent="." index="5"]
 
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="hurt" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 
 stream = ExtResource( 13 )
@@ -243,6 +246,9 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="death" type="AudioStreamPlayer2D" parent="SFX" index="1"]
 
@@ -254,6 +260,9 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="jump" parent="SFX" index="2" instance=ExtResource( 15 )]
 

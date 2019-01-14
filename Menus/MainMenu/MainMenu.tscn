@@ -92,7 +92,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Spread" ]
 
-[node name="MainMenu" type="Container"]
+[node name="MainMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -238,6 +238,7 @@ margin_bottom = 79.0
 
 [node name="GlowbugVFX" parent="." index="8" instance=ExtResource( 10 )]
 
+visible = false
 position = Vector2( -1.95227, 37.2379 )
 amount = 30
 process_material = SubResource( 7 )
