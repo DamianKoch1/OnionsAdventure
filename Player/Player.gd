@@ -9,7 +9,7 @@ var anim = idle setget setAnim, getAnim
 var oldAnim
 
 var state = idle setget setState, getState
-enum {idle, run, jump, fall, climb, dead}
+enum {idle, run, jump, fall, climb, noControl}
 
 #node to attach to if airborne
 onready var worldNode = get_parent()
@@ -35,7 +35,6 @@ export var gracePeriod = 2
 #rope player attaches to if climbing on it
 var rope
 
-
 #signals other objects react to
 signal loseHp
 signal NPCsaved
@@ -47,7 +46,7 @@ func _ready():
 	MenuMusic.playing = false
 	setState(idle)
 	
-	#will use better solution later
+	#replace this by script on levels
 	if get_parent() != get_tree().get_root():
 		global.currLevelId = int(get_parent().get_parent().name)
 		
@@ -58,7 +57,7 @@ func _ready():
 		global_position.y = SaveGame.playerPosY
 
 func _physics_process(delta):
-	if state != dead:
+	if state != noControl:
 		#reducing cooldowns
 		gracePeriodTimer = max(gracePeriodTimer - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
@@ -90,12 +89,10 @@ func _physics_process(delta):
 				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
-			
 			#walking animation
 			if state != jump:
 				if Input.is_action_just_pressed("ui_right") || Input.is_action_just_pressed("ui_left"):
 					setState(run)
-			
 			#jump
 			if is_on_floor():
 				if motion.x == 0:
@@ -106,12 +103,10 @@ func _physics_process(delta):
 					$SFX/jump.playRandomPitch()
 					motion.y = -jumpheight
 					setState(jump)
-			
 			#falling animation
 			if state == jump:
 				if motion.y > 10:
 					setState(fall)
-		
 		#climbing, attach to rope when climbing, var rope assigned by rope/ladder
 		elif state == climb:
 			if rope != null:
@@ -125,7 +120,6 @@ func _physics_process(delta):
 				motion.y = climbspeed
 			else:
 				motion.y = 0
-				
 		#movement(run, jump, idle, fall states)
 		if Input.is_action_pressed("ui_right"):
 			if is_on_floor():
@@ -139,7 +133,6 @@ func _physics_process(delta):
 			sprite.scale.x = -1
 		else:	
 			motion.x = 0
-		
 		#ghostjump
 		if  ghostjumpTimeframe!= 0:
 			if Input.is_action_just_pressed("jump"):
@@ -151,7 +144,7 @@ func _physics_process(delta):
 
 func setState(newState):
 	#set current animation on state changes, tried scale set to prevent scale glitches when attaching to rotated objects
-	if state != dead:
+	if state != noControl:
 		state = newState
 		match state:
 			idle:
@@ -168,16 +161,11 @@ func setState(newState):
 				global_scale.x = 0.5
 				global_scale.y = 0.5
 				setAnim("Onion_JumpDown")
-				
 			climb:
 				global_scale.x = 0.5
 				global_scale.y = 0.5
 				#cimb anim?
 				setAnim("Onion_Idle")
-			dead:
-				#death anim
-				setAnim("Onion_Death")
-				
 
 func getState():
 	return state
