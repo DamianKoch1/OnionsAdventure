@@ -3,6 +3,8 @@ extends KinematicBody2D
 const UP = Vector2(0, -1)
 var motion = Vector2()
 
+onready var sprite = $Sprite_Onion_Leafes
+
 var anim = idle setget setAnim, getAnim
 var oldAnim
 
@@ -136,12 +138,12 @@ func _physics_process(delta):
 			if is_on_floor():
 				ghostjumpTimeframe = maxGhostjumpDelay
 			motion.x = movespeed
-			$Sprite.scale.x = 1	
+			sprite.scale.x = 1	
 		elif Input.is_action_pressed("ui_left"):
 			if is_on_floor():
 				ghostjumpTimeframe = maxGhostjumpDelay
 			motion.x = -movespeed
-			$Sprite.scale.x = -1
+			sprite.scale.x = -1
 		else:	
 			motion.x = 0
 		
