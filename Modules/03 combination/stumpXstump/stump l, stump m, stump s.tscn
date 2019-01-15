@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[node name="stump l, stump m, stump s" type="Node2D" index="0"]
+[node name="stump l, stump m, stump s" type="Node2D"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
