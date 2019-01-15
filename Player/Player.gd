@@ -31,17 +31,12 @@ onready var debugFly = -1
 onready var gracePeriodTimer = 0
 export var gracePeriod = 2
 
-#rope player attaches to if climbing on it, attach cooldown to save cpu
+#rope player attaches to if climbing on it
 var rope
-var ropeAttachCD = 0
 
-var health = 5 setget setHealth, getHealth
-export var maxHealth = 5
 
 #signals other objects react to
-signal noHp
 signal loseHp
-signal changeHp
 signal NPCsaved
 
 var NPCsavedCount = 0
@@ -49,11 +44,12 @@ var NPCsavedCount = 0
 
 func _ready():
 	MenuMusic.playing = false
-	global.player = self
 	setState(idle)
-	setHealth(maxHealth)
+	
+	#will use better solution later
 	if get_parent() != get_tree().get_root():
 		global.currLevelId = int(get_parent().get_parent().name)
+		
 	if SaveGame.loadPlayerState == true:
 		SaveGame.loadPlayerState = false
 		NPCsavedCount = SaveGame.NPCsavedCount
@@ -158,28 +154,6 @@ func _physics_process(delta):
 				setState(jump)
 		motion = move_and_slide(motion, UP)
 
-#gets called if health value is changed
-func setHealth(newHealth):
-	if debugGodmode == -1 && gracePeriodTimer == 0:
-		var oldHealth = health
-		health = newHealth
-		if newHealth != oldHealth:
-			emit_signal("changeHp")
-			if newHealth < oldHealth :
-				$SFX/hurt.playing = true
-				if newHealth > 0:
-					$respawnBlinking.play("blinking")
-					gracePeriodTimer = gracePeriod
-				emit_signal("loseHp")
-		#restart from level start if player completely dies
-		if health <= 0:
-			setState(dead)
-
-
-#gets called if health value is accessed from other script
-func getHealth():
-	return health
-
 func setState(newState):
 	#set current animation on state changes, tried scale set to prevent scale glitches when attaching to rotated objects
 	if state != dead:
@@ -222,10 +196,6 @@ func setAnim(newAnim):
 
 func getAnim():
 	return anim
-
-func restart():
-	global.player = null
-	get_tree().reload_current_scene()
 
 func bounce(bounceStr):
 	motion.y = -bounceStr

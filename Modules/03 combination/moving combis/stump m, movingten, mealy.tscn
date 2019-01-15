@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/old tileset/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=4]
+
 
 [node name="stump m, movingten, mealy" type="Node2D" index="0"]
 

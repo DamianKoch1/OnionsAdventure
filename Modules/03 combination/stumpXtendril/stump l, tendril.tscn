@@ -1,9 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/old tileset/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Big_NobranchesA.png" type="Texture" id=3]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=4]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

@@ -5,9 +5,6 @@ onready var masterSlider = $Volume/Master/MasterSlider
 onready var musicSlider = $Volume/Music/MusicSlider
 onready var sfxSlider = $Volume/SFX/SFXSlider
 
-export var easyDescription = "insert description for easy"
-export var normalDescription = "insert description for normal"
-export var hardDescription = "insert description for hard"
 
 func _ready():
 	if global.masterVol != null:
