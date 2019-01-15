@@ -97,10 +97,6 @@ func _physics_process(delta):
 				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
-			#walking animation
-			if state != jump:
-				if Input.is_action_just_pressed("ui_right") || Input.is_action_just_pressed("ui_left"):
-					setState(run)
 			#jump
 			if is_on_floor():
 				if motion.x == 0:
