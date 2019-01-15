@@ -42,7 +42,7 @@ playerId = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
 
-layer = 0
+layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )

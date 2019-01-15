@@ -26,7 +26,8 @@ export var gravity = 20
 export var jumpheight = 550
 export var climbspeed = 200
 
-onready var debugFly = -1
+onready var debugFly = false
+onready var debugGodmode = false
 
 #has grace period (invincibility) after getting hit
 onready var gracePeriodTimer = 0
@@ -64,21 +65,28 @@ func _physics_process(delta):
 		
 		#debug fly and godmode
 		if Input.is_action_just_pressed("debugFly"):
-			if debugFly == -1:
+			if debugFly == false:
 				print("Fly ON")
 				motion.y = 0
 				setState(climb)
 				$CollisionShape2D.disabled = true
 				climbspeed *= 2.5
 				movespeed *= 4
+				debugFly = true
 			else:
 				print("Fly OFF")
 				$CollisionShape2D.disabled = false
 				setState(idle)
 				climbspeed /= 2.5
 				movespeed /= 4
-			debugFly *= -1
-		
+				debugFly = false
+		if Input.is_action_just_pressed("debugGodmode"):
+			if debugGodmode == false:
+				print("Invincible ON")
+				debugGodmode = true
+			else:
+				print("Invincible OFF")
+				debugGodmode = false
 		#attach to ground if not climbing, rotate to 0
 		if state != climb:
 			rayUpdate()
@@ -154,17 +162,13 @@ func setState(newState):
 				if $SFX/footstep.playing == false:
 					$SFX/footstep.playRandomPitch()
 			jump:
-				global_scale.x = 0.5
-				global_scale.y = 0.5
 				setAnim("Onion_JumpUp")
 			fall:
-				global_scale.x = 0.5
-				global_scale.y = 0.5
 				setAnim("Onion_JumpDown")
 			climb:
-				global_scale.x = 0.5
-				global_scale.y = 0.5
 				#cimb anim?
+				setAnim("Onion_Idle")
+			noControl:
 				setAnim("Onion_Idle")
 
 func getState():
@@ -181,7 +185,7 @@ func getAnim():
 	return anim
 
 func loseHp():
-	if gracePeriodTimer == 0:
+	if gracePeriodTimer == 0 && state != noControl && debugGodmode != true:
 		gracePeriodTimer = gracePeriod
 		$respawnBlinking.play("blinking")
 		emit_signal("loseHp", self)
@@ -213,3 +217,5 @@ func attachTo(obj):
 		get_parent().remove_child(self)
 		obj.add_child(self)
 		set_global_transform(transf)
+		global_scale.x = 0.5
+		global_scale.y = 0.5
