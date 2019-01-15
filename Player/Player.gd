@@ -26,7 +26,6 @@ export var gravity = 20
 export var jumpheight = 550
 export var climbspeed = 200
 
-onready var debugGodmode = -1
 onready var debugFly = -1
 
 #has grace period (invincibility) after getting hit
@@ -80,12 +79,6 @@ func _physics_process(delta):
 				climbspeed /= 2.5
 				movespeed /= 4
 			debugFly *= -1
-		if Input.is_action_just_pressed("debugGodmode"):
-			if debugGodmode == -1:
-				print("Godmode ON")
-			else:
-				print("Godmode OFF")
-			debugGodmode *= -1
 		
 		#attach to ground if not climbing, rotate to 0
 		if state != climb:
