@@ -192,6 +192,12 @@ func setAnim(newAnim):
 func getAnim():
 	return anim
 
+func loseHp():
+	if gracePeriodTimer == 0:
+		gracePeriodTimer = gracePeriod
+		$respawnBlinking.play("blinking")
+		emit_signal("loseHp", self)
+
 func bounce(bounceStr):
 	motion.y = -bounceStr
 	motion = move_and_slide(motion, UP)

@@ -10,9 +10,6 @@ func _ready():
 func respawn(player):
 	$respawn.playing = true
 	player.global_transform = global_transform
-	player.rotation_degrees = 0
-	player.global_scale.x = 0.5
-	player.global_scale.y = 0.5
 	$SpawnParticles.emitting = true
 
 func playActivationSound():

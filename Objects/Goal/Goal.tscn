@@ -174,7 +174,7 @@ _sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Vis
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
-layer = 1
+layer = 0
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
@@ -182,7 +182,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Panel" type="Panel" parent="CanvasLayer" index="0"]
 
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0, 0, 0, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
