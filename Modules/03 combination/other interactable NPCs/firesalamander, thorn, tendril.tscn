@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/old tileset/FinishedTileSet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=5]
+
 
 
 [node name="firesalamander, thorn, tendril" type="Node2D" index="0"]
