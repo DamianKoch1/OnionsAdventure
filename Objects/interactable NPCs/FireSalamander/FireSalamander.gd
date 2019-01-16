@@ -11,8 +11,7 @@ onready var anim = $AnimationPlayer
 
 var player
 
-
-#set up destroying object on player jumping on self and resetting it on player respawn
+#set up destroying and respawning object
 func _ready():
 	if objToDestroyPath != null:
 		objToDestroy = get_node(objToDestroyPath)
@@ -49,7 +48,7 @@ func removeObj():
 	objToDestroyParent = objToDestroy.get_parent()
 	objToDestroyParent.remove_child(objToDestroy)
 
-#reset own state on player respawn
+#reset on player respawn
 func resetObj():
 	anim.stop()
 	objToDestroyParent.add_child(objToDestroy)

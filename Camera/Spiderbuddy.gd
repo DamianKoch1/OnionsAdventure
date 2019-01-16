@@ -11,7 +11,6 @@ func _ready():
 		trigger.connect("triggered", self, "playAnim")
 
 
-
 func playAnim(text):
 	label.text = text
 	if fullAnim.is_playing() == false:

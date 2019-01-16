@@ -3,8 +3,8 @@ extends TextureButton
 export var levelId = 1
 
 func loadLevel(id):
-	global.currLevelId = id
-	var path = "Levels/Level " + str(global.currLevelId) + ".tscn"
+	SaveGame.currLevelId = id
+	var path = "Levels/Level " + str(SaveGame.currLevelId) + ".tscn"
 	get_tree().change_scene(path)
 
 

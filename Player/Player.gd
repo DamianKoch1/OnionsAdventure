@@ -9,7 +9,7 @@ var anim = idle setget setAnim, getAnim
 var oldAnim
 
 var state = idle setget setState, getState
-enum {idle, run, jump, fall, climb, noControl}
+enum {idle, run, jump, fall, climb, frozen}
 
 #node to attach to if airborne
 onready var worldNode = get_parent()
@@ -17,7 +17,7 @@ onready var worldNode = get_parent()
 #ray that finds downward object to attach to (movingplatforms etc)
 onready var ray = $RayCast2D
 
-#can jump for short time if walking off cliffs
+#can jump for short time after walking off cliffs
 onready var ghostjumpTimeframe = 0
 export var maxGhostjumpDelay = 0.2
 
@@ -29,19 +29,19 @@ export var climbspeed = 200
 onready var debugFly = false
 onready var debugGodmode = false
 
-#has grace period (invincibility) after getting hit
+#grace period (invincibility) after getting hit
 onready var gracePeriodTimer = 0
 export var gracePeriod = 2
 
 #rope player attaches to if climbing on it
 var rope
 
-#signals other objects react to
 signal loseHp
 signal NPCsaved
 
-var NPCsavedCount = 0
-
+#amoumt of collectables
+var trappedNPCs = 0
+var dandelions = 0
 
 func _ready():
 	MenuMusic.playing = false
@@ -49,16 +49,18 @@ func _ready():
 	
 	#replace this by script on levels
 	if get_parent() != get_tree().get_root():
-		global.currLevelId = int(get_parent().get_parent().name)
-		
+		SaveGame.currLevelId = int(get_parent().get_parent().name)
+	#
+	
 	if SaveGame.loadPlayerState == true:
 		SaveGame.loadPlayerState = false
-		NPCsavedCount = SaveGame.NPCsavedCount
 		global_position.x = SaveGame.playerPosX
 		global_position.y = SaveGame.playerPosY
+		trappedNPCs = SaveGame.trappedNPCs
+		dandelions = SaveGame.dandelions
 
 func _physics_process(delta):
-	if state != noControl:
+	if state != frozen:
 		#reducing cooldowns
 		gracePeriodTimer = max(gracePeriodTimer - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
@@ -148,7 +150,7 @@ func _physics_process(delta):
 
 func setState(newState):
 	#set current animation on state changes, tried scale set to prevent scale glitches when attaching to rotated objects
-	if state != noControl:
+	if state != frozen:
 		state = newState
 		match state:
 			idle:
@@ -164,7 +166,7 @@ func setState(newState):
 			climb:
 				#cimb anim?
 				setAnim("Onion_Idle")
-			noControl:
+			frozen:
 				setAnim("Onion_Idle")
 
 func getState():
@@ -181,7 +183,7 @@ func getAnim():
 	return anim
 
 func loseHp():
-	if gracePeriodTimer == 0 && state != noControl && debugGodmode != true:
+	if gracePeriodTimer == 0 && state != frozen && debugGodmode != true:
 		gracePeriodTimer = gracePeriod
 		$respawnBlinking.play("blinking")
 		emit_signal("loseHp", self)
