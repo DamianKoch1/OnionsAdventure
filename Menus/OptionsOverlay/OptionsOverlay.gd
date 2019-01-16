@@ -26,11 +26,10 @@ func saveVolume():
 	saveFile.save(savePath)
 
 func loadVolume():
-	if File.new().file_exists(savePath):
-		saveFile.load(savePath)
-		masterSlider.value = saveFile.get_value("Volume", "master")
-		musicSlider.value = saveFile.get_value("Volume", "music")
-		sfxSlider.value = saveFile.get_value("Volume", "sfx")
+	saveFile.load(savePath)
+	masterSlider.value = saveFile.get_value("Volume", "master", 100)
+	musicSlider.value = saveFile.get_value("Volume", "music", 100)
+	sfxSlider.value = saveFile.get_value("Volume", "sfx", 100)
 
 func _on_BackButton_pressed():
 	UISelect.playing = true
