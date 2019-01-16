@@ -11,6 +11,5 @@ func _on_Checkpoint_body_entered(body):
 	if body.is_in_group("Player"):
 		spawnpoint.global_position = global_position
 		spawnpoint.playActivationSound()
-		SaveGame.latestCheckpoint = self
 		SaveGame.saveGame()
 		queue_free()

@@ -2,7 +2,7 @@ extends Node2D
 
 var collected = false
 
-var savePath = "user://collectibleSave.cfg"
+var savePath = "user://trappedNPCs.cfg"
 var saveFile
 
 
@@ -21,10 +21,11 @@ func _on_Area2D_body_entered(body):
 			collected = true
 			saveCollected()
 			$AnimationPlayer.play("onCollect")
+			SaveGame.saveGame()
 
 #save this objects name and that it was collected into another .cfg
 func saveCollected():
-	SaveGame.npcDict[str(global.currLevelId,name)] = collected
+	SaveGame.npcDict[str(SaveGame.currLevelId,name)] = collected
 	for key in SaveGame.npcDict.keys():
 		saveFile.set_value("TrappedNPCs", key, SaveGame.npcDict[key])
 	saveFile.save(savePath)
