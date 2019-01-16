@@ -1,7 +1,7 @@
 extends Node2D
 
 var collected = false
-#path: C:\Users\username\AppData\Roaming\Godot\app_userdata\Onion Adventures
+
 var savePath = "user://collectibleSave.cfg"
 var saveFile
 

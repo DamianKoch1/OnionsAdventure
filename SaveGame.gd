@@ -23,6 +23,7 @@ func deleteSave():
 	dir.remove(savePath)
 	dir.remove("user://trappedNPCs.cfg")
 	dir.remove("user://dandelions.cfg")
+	dir.remove("user://settings.cfg")
 
 
 func saveGame():
@@ -43,4 +44,5 @@ func loadGame():
 	dandelions = saveFile.get_value("SaveState", "dandelions")
 	playerPosX = saveFile.get_value("SaveState", "spawnPosX")
 	playerPosY = saveFile.get_value("SaveState", "spawnPosY")
+
 	
