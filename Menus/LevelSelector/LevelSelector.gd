@@ -16,7 +16,7 @@ func _on_OptionsButton_pressed():
 
 func _on_Level0Button_pressed():
 	UISelect.playing = true
-	global.currLevelId = 0
+	SaveGame.currLevelId = 0
 	get_tree().change_scene_to(prototype)
 
 

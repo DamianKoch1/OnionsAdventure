@@ -9,7 +9,7 @@ func _ready():
 func _on_Goal_body_entered(body):
 	if body.is_in_group("Player") && anim.is_playing() == false:
 			anim.play("end")
-			body.state = body.noControl
+			body.state = body.frozen
 
 func loadNextLevel():
 	global.currLevelId += 1
