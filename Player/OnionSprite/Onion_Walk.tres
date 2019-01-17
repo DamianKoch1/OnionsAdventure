@@ -7,7 +7,7 @@ length = 0.5
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody:scale")
+tracks/0/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0.5, 0.432831 ), Vector2( 0.5, 0.431951 ), Vector2( 0.5, 0.399412 ), Vector2( 0.5, 0.432831 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionEarR:rotation_degrees")
+tracks/1/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionEarR:rotation_degrees")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ -32.8107, -45.6214, -25.3391, -32.8107 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionEarL:rotation_degrees")
+tracks/2/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionEarL:rotation_degrees")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -43,7 +43,7 @@ tracks/2/keys = {
 "values": [ 16.2041, -4.14643, 21.3488, 16.2041 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody/OnionHair:rotation_degrees")
+tracks/3/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionHair:rotation_degrees")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -55,7 +55,7 @@ tracks/3/keys = {
 "values": [ 0.205597, 30.6712, 27.4564, 0.205597 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionTail:rotation_degrees")
+tracks/4/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionTail:rotation_degrees")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -67,15 +67,27 @@ tracks/4/keys = {
 "values": [ -17.3806, -29.2229, -4.57633, -17.3806 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body:position")
+tracks/5/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_eyes:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Onion/Colisionposition:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -70 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -32.6221 ), Vector2( 0, 0 ) ]
 }
 
