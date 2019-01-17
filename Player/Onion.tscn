@@ -129,6 +129,30 @@ tracks/7/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/8/type = "value"
+tracks/8/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody/onion_eyes_c:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Onion/Sprite_Onion_Leafes/Onion_Body/OnionBody/onion_mouth_s:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=3]
 
@@ -180,7 +204,6 @@ gravity = 20
 jumpheight = 450
 climbspeed = 200
 gracePeriod = 2
-maxHealth = 5
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="0"]
 
@@ -223,6 +246,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="onion_eyes" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="1"]
 
+visible = false
 position = Vector2( 29.7552, 1.73269 )
 scale = Vector2( 1, 0.259429 )
 texture = ExtResource( 4 )
@@ -231,6 +255,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="onion_mouth" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="2"]
 
+visible = false
 position = Vector2( 32.2278, 51.2866 )
 texture = ExtResource( 5 )
 offset = Vector2( -15.5477, -24.2438 )
@@ -238,15 +263,12 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="onion_eyes_c" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="3"]
 
-visible = false
 position = Vector2( 17.7552, -3.08702 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="onion_mouth_s" type="Sprite" parent="Sprite_Onion_Leafes/Onion_Body/OnionBody" index="4"]
 
-visible = false
 position = Vector2( 16.8922, 28.8426 )
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -269,7 +291,7 @@ offset = Vector2( -12.9789, -49.7987 )
 
 [node name="OnionTail" type="Sprite" parent="Sprite_Onion_Leafes" index="3"]
 
-position = Vector2( -18.3923, -6.42332 )
+position = Vector2( -18.3923, -12.4233 )
 rotation = -0.335732
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 10 )
