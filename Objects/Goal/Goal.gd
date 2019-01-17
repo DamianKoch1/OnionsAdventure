@@ -12,6 +12,5 @@ func _on_Goal_body_entered(body):
 			body.state = body.frozen
 
 func loadNextLevel():
-	global.currLevelId += 1
-	var path = "Levels/Level " + str(global.currLevelId) + ".tscn"
+	var path = "Levels/Level " + str(SaveGame.currLevelId+1) + ".tscn"
 	get_tree().change_scene(path)

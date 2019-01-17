@@ -33,7 +33,7 @@ func saveCollected():
 #delete self if already collected in currently saved game
 func checkCollected():
 	saveFile.load(savePath)
-	collected = saveFile.get_value("TrappedNPCs", str(SaveGame.currLevelId,name))
+	collected = saveFile.get_value("TrappedNPCs", str(SaveGame.currLevelId,name), false)
 	if collected == true:
 		queue_free()
 	else:

@@ -44,9 +44,9 @@ func loadGame():
 	var path = "Levels/Level " + str(levelToLoadId) + ".tscn"
 	get_tree().change_scene(path)
 	get_tree().paused = false
-	trappedNPCs = saveFile.get_value("SaveState", "NPCsSaved") 
-	dandelions = saveFile.get_value("SaveState", "dandelions")
-	playerPosX = saveFile.get_value("SaveState", "spawnPosX")
-	playerPosY = saveFile.get_value("SaveState", "spawnPosY")
+	trappedNPCs = saveFile.get_value("SaveState", "NPCsSaved", 0) 
+	dandelions = saveFile.get_value("SaveState", "dandelions", 0)
+	playerPosX = saveFile.get_value("SaveState", "spawnPosX", 0)
+	playerPosY = saveFile.get_value("SaveState", "spawnPosY", 0)
 
 	
