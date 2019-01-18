@@ -5,14 +5,12 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Big_NobranchesA.png" type="Texture" id=3]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=4]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 7.82994 )
 
-[node name="stump l, tendril" type="Node2D" index="0"]
+[node name="stump l, tendril" type="Node2D"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
