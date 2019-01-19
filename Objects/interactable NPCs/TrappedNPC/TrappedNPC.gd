@@ -22,6 +22,7 @@ func _on_Area2D_body_entered(body):
 			saveCollected()
 			$AnimationPlayer.play("onCollect")
 			SaveGame.saveGame()
+			$WebDestroyedDustVFX.emitting = true
 
 #save this objects name and that it was collected into another .cfg
 func saveCollected():
