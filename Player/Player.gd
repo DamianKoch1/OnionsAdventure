@@ -3,7 +3,7 @@ extends KinematicBody2D
 const UP = Vector2(0, -1)
 var motion = Vector2()
 
-onready var sprite = $Sprite_Onion_Leafes
+onready var sprite = $Onion
 
 var anim = idle setget setAnim, getAnim
 var oldAnim
@@ -177,7 +177,7 @@ func setAnim(newAnim):
 	if oldAnim != newAnim:
 		oldAnim = newAnim
 		anim = newAnim
-		$AnimationPlayer.play(anim)
+		$Onion/AnimationPlayer.play(anim)
 
 func getAnim():
 	return anim
