@@ -24,7 +24,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 14.0286, 21.1175 )
 
-[node name="Onion" type="KinematicBody2D" index="0" groups=[
+[node name="Onion" type="KinematicBody2D" groups=[
 "Player",
 ]]
 
