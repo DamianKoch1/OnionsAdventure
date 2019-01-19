@@ -33,15 +33,15 @@ func _on_FireStoneTrigger_body_entered(body):
 #called by burn anim
 #fire breath particles
 func emit():
-	$FireParticles.look_at(objToDestroy.global_position)
-	$FireParticles.emitting = true
-	$FireParticles/FireSFX.playing = true
+	$Fire_salamander_FlameVFX.look_at(objToDestroy.global_position)
+	$Fire_salamander_FlameVFX.emitting = true
+	$Fire_salamander_FlameVFX/FireSFX.playing = true
 
 #called by burn anim
 #burning particles at object
 func burn():
-	$BurnParticles.global_position = objToDestroy.global_position
-	$BurnParticles.emitting = true
+	$Burning_Thorns_FlameVFX.global_position = objToDestroy.global_position
+	$Burning_Thorns_FlameVFX.emitting = true
 
 #called by burn anim
 func removeObj():

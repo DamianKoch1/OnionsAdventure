@@ -177,7 +177,7 @@ func loseHp():
 	if gracePeriodTimer == 0 && state != frozen && debugGodmode != true:
 		$SFX/hurt.playing = true
 		gracePeriodTimer = gracePeriod
-		$respawnBlinking.play("blinking")
+		#blinking
 		emit_signal("loseHp", self)
 
 func bounce(bounceStr):
