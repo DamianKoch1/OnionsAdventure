@@ -4,9 +4,8 @@ const UP = Vector2(0, -1)
 var motion = Vector2()
 
 onready var sprite = $Onion
-
-var anim = idle setget setAnim, getAnim
-var oldAnim
+onready var anim = $Onion/AnimationPlayer
+onready var animTreePlayer = $Onion/AnimationTreePlayer1
 
 var state = idle setget setState, getState
 enum {idle, run, jump, fall, climb, frozen}
@@ -154,33 +153,25 @@ func setState(newState):
 		state = newState
 		match state:
 			idle:
-				setAnim("Onion_Idle")
+				animTreePlayer.oneshot_node_stop("fallOneshot")
+				animTreePlayer.transition_node_set_current("idle/walk", 0)
 			run:
-				setAnim("Onion_Walk")
+				animTreePlayer.oneshot_node_stop("fallOneshot")
+				animTreePlayer.transition_node_set_current("idle/walk", 1)
 				if $SFX/footstep.playing == false:
 					$SFX/footstep.playRandomPitch()
 			jump:
-				setAnim("Onion_JumpUp")
+				animTreePlayer.oneshot_node_start("jumpOneshot")
 			fall:
-				setAnim("Onion_JumpDown")
+				animTreePlayer.oneshot_node_start("fallOneshot")
 			climb:
 				#cimb anim?
-				setAnim("Onion_Idle")
+				animTreePlayer.transition_node_set_current("idle/walk", 0)
 			frozen:
-				setAnim("Onion_Idle")
+				animTreePlayer.transition_node_set_current("idle/walk", 0)
 
 func getState():
 	return state
-
-func setAnim(newAnim):
-	#play current animation if changed
-	if oldAnim != newAnim:
-		oldAnim = newAnim
-		anim = newAnim
-		$Onion/AnimationPlayer.play(anim)
-
-func getAnim():
-	return anim
 
 func loseHp():
 	if gracePeriodTimer == 0 && state != frozen && debugGodmode != true:
