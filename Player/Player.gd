@@ -25,6 +25,9 @@ export var gravity = 20
 export var jumpheight = 550
 export var climbspeed = 200
 
+onready var highestFallSpeed = 0
+export var fallVFXspeedThreshhold = 700
+
 onready var debugFly = false
 onready var debugGodmode = false
 
@@ -92,6 +95,7 @@ func _physics_process(delta):
 		if state != climb:
 			rayUpdate()
 			motion.y += gravity
+			trackFallSpeed()
 			if abs(rotation_degrees) > 3:
 				rotation_degrees = lerp(rotation_degrees, 0, delta*3)
 				global_scale.x = 0.5
@@ -150,6 +154,10 @@ func _physics_process(delta):
 func setState(newState):
 	#set current animation on state changes, tried scale set to prevent scale glitches when attaching to rotated objects
 	if state != frozen:
+		if state == fall && highestFallSpeed >= fallVFXspeedThreshhold:
+			if newState == run || newState == idle:
+				$landingTest.emitting = true
+				highestFallSpeed = 0
 		state = newState
 		match state:
 			idle:
@@ -199,6 +207,11 @@ func rayUpdate():
 				attachTo(worldNode)
 	else:
 		attachTo(worldNode)
+
+#track highest fall speed, fall vfx plays on landing if high enough
+func trackFallSpeed():
+	if motion.y > highestFallSpeed:
+		highestFallSpeed = motion.y
 
 #remove self from current parent, attach to new parent and keep transform
 func attachTo(obj):
