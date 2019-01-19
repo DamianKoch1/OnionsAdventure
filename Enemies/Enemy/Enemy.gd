@@ -17,13 +17,15 @@ onready var pathfollow = $EnemyPath/PathFollow2D
 func _ready():
 	add_to_group("Enemies")
 	if mothsound == true:
-		$EnemyPath/Enemy/AudioStreamPlayer2D.playing = true
+		$EnemyPath/Enemy/mothSound.playing = true
 	
 #used this because godot doesn't allow overwriting _process()
 func _process(delta):
 	_unique_process(delta)
 
 func _unique_process(delta):
+	if mothsound == false && $EnemyPath/Enemy/muddySound.playing == false:
+		$EnemyPath/Enemy/muddySound.playRandomPitch()
 	i += delta*movespeed
 	#move from a to b and then b to a if path isnt a loop
 	if pathLooped == false:
