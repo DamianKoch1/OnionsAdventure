@@ -112,6 +112,10 @@ func _physics_process(delta):
 					$SFX/jump.playRandomPitch()
 					motion.y = -jumpheight
 					setState(jump)
+			else:
+				if motion.y >= 100:
+					if state == run || state == idle:
+						setState(fall)
 			#falling animation
 			if state == jump:
 				if motion.y > 10:
