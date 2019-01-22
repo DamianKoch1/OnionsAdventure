@@ -13,7 +13,7 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player") && collected != true:
-		body.dandelions += 1
+		SaveGame.dandelions += 1
 		collected = true
 		saveCollected()
 		SaveGame.saveGame()

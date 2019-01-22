@@ -178,7 +178,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 text = "play"
-percent_visible = -0.166667
+percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 0
 _sections_unfolded = [ "Rect", "Theme", "Visibility", "custom_colors", "custom_fonts" ]
@@ -194,7 +194,6 @@ margin_bottom = 108.0
 
 margin_left = 81.0
 margin_right = 979.0
-_sections_unfolded = [ "Visibility", "custom_fonts" ]
 
 [node name="OptionsButton" parent="." index="3" instance=ExtResource( 6 )]
 
@@ -207,7 +206,6 @@ margin_bottom = 133.0
 
 custom_fonts/font = SubResource( 2 )
 text = "options"
-_sections_unfolded = [ "Visibility", "custom_fonts" ]
 
 [node name="CreditsButton" parent="." index="4" instance=ExtResource( 6 )]
 
