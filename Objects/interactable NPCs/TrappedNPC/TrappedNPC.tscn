@@ -6,7 +6,7 @@
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/destroy_spider_web.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/WebDestroyedDustVFX.tscn" type="PackedScene" id=5]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 64, 64 )
@@ -17,25 +17,13 @@ resource_name = "onCollect"
 length = 2.0
 loop = false
 step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
+tracks/0/type = "method"
+tracks/0/path = NodePath("randomPitch")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.8 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("randomPitch")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
@@ -43,19 +31,31 @@ tracks/1/keys = {
 "method": "playRandomPitch"
 } ]
 }
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 2 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "queue_free"
 } ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [node name="trappedNPC" type="Node2D" index="0"]
@@ -76,9 +76,11 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="Sprite" type="Node2D" parent="." index="1"]
+
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Sprite" index="0"]
 

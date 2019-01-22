@@ -41,9 +41,6 @@ var rope
 signal loseHp
 signal NPCsaved
 
-#amoumt of collectables
-var trappedNPCs = 0
-var dandelions = 0
 
 func _ready():
 	MenuMusic.playing = false
@@ -58,8 +55,6 @@ func _ready():
 		SaveGame.loadPlayerState = false
 		global_position.x = SaveGame.playerPosX
 		global_position.y = SaveGame.playerPosY
-		trappedNPCs = SaveGame.trappedNPCs
-		dandelions = SaveGame.dandelions
 
 func _physics_process(delta):
 	if state != frozen:
