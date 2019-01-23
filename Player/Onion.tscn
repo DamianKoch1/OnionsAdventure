@@ -24,7 +24,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 14.0286, 21.1175 )
 
-[node name="Onion" type="KinematicBody2D" groups=[
+[node name="Onion" type="KinematicBody2D" index="0" groups=[
 "Player",
 ]]
 
@@ -63,13 +63,13 @@ _sections_unfolded = [ "Transform" ]
 [node name="AnimationTreePlayer1" type="AnimationTreePlayer" parent="." index="2"]
 
 playback_process_mode = 1
-master_player = NodePath("../AnimationPlayer")
+master_player = NodePath("")
 base_path = NodePath("../..")
 active = false
 data = {
 "active": false,
 "connections": [ "idle", "blend", 0, "walk", "blend", 1, "oneshot 2", "out", 0, "oneshot", "oneshot 2", 0, "jumpdown", "oneshot 2", 1, "blend", "oneshot", 0, "jumpup", "oneshot", 1 ],
-"master": NodePath("../AnimationPlayer"),
+"master": NodePath(""),
 "nodes": [ {
 "blend": 0.0,
 "filter": [  ],
@@ -87,12 +87,6 @@ data = {
 "position": Vector2( 1016, 127 ),
 "type": "output"
 }, {
-"filter": [  ],
-"from": "Onion_Walk",
-"id": "walk",
-"position": Vector2( 34, 159 ),
-"type": "animation"
-}, {
 "autorestart": false,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 0.807843,
@@ -104,18 +98,6 @@ data = {
 "position": Vector2( 798, 79 ),
 "type": "oneshot"
 }, {
-"filter": [  ],
-"from": "Onion_JumpDown",
-"id": "jumpdown",
-"position": Vector2( 502, 295 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Onion_JumpUp",
-"id": "jumpup",
-"position": Vector2( 189, 293 ),
-"type": "animation"
-}, {
 "autorestart": false,
 "autorestart_delay": 1.0,
 "autorestart_random_delay": 0.807843,
@@ -126,6 +108,24 @@ data = {
 "mix": false,
 "position": Vector2( 507, 55 ),
 "type": "oneshot"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "jumpup",
+"position": Vector2( 189, 293 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "walk",
+"position": Vector2( 34, 159 ),
+"type": "animation"
+}, {
+"animation": null,
+"filter": [  ],
+"id": "jumpdown",
+"position": Vector2( 502, 295 ),
+"type": "animation"
 } ]
 }
 _sections_unfolded = [ "Pause", "Playback" ]
@@ -172,7 +172,6 @@ pitchRange = 0.3
 
 [node name="Onion" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="Colisionposition" type="Node2D" parent="Onion" index="0"]
@@ -184,6 +183,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="OnionBody" type="Sprite" parent="Onion/Colisionposition/Höhenposition" index="0"]
 
+editor/display_folded = true
 position = Vector2( 0.50386, -30.1882 )
 scale = Vector2( 0.5, 0.450089 )
 z_index = 1
