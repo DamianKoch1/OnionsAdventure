@@ -47,7 +47,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.4, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, -9.73214, 0.0 ]
+"values": [ 0.0, -15.5131, 0.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Collissionposition/Höhenposition/Bitchy/Feet_A:position")
@@ -56,10 +56,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.399034, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 4.81503, -0.575197 ), Vector2( 4.81503, -2.5752 ), Vector2( 4.81503, -0.575197 ) ]
+"values": [ Vector2( 4.81503, -0.575197 ), Vector2( 4.81503, -4.57037 ), Vector2( 4.81503, -4.5752 ), Vector2( 4.81503, -0.575197 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Collissionposition/Höhenposition/Bitchy/Feet_A:rotation_degrees")
@@ -71,7 +71,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.4, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 11.3857, 0.0 ]
+"values": [ 0.0, 20.4538, 0.0 ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Collissionposition/Höhenposition/Bitchy/Feet_B:position")
@@ -107,7 +107,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 0.4, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -33 ), Vector2( 1.89245e-006, -33 ), Vector2( 0, -33 ) ]
+"values": [ Vector2( 0, -33 ), Vector2( -1.99999, -35 ), Vector2( 0, -33 ) ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("Collissionposition/Höhenposition/Bitchy/Head:rotation_degrees")
@@ -119,7 +119,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 0.4, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0163833, -4.24094, 0.0163833 ]
+"values": [ 0.0163833, -12.5282, 0.0163833 ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Collissionposition/Höhenposition:position")
@@ -166,21 +166,21 @@ data = {
 
 [node name="Höhenposition" type="Node2D" parent="Bitchy/Collissionposition" index="0"]
 
-position = Vector2( 0, -1.28811 )
+position = Vector2( 0, -6.02166 )
 
 [node name="Bitchy" type="Sprite" parent="Bitchy/Collissionposition/Höhenposition" index="0"]
 
 [node name="wing_b" type="Sprite" parent="Bitchy/Collissionposition/Höhenposition/Bitchy" index="0"]
 
 position = Vector2( 1.31767, -21.9104 )
-rotation = -0.0273494
+rotation = -0.203799
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 
 [node name="Feet_B" type="Sprite" parent="Bitchy/Collissionposition/Höhenposition/Bitchy" index="1"]
 
-position = Vector2( -11.0543, -5.33361 )
-rotation = 0.0441401
+position = Vector2( -11.9966, -7.34253 )
+rotation = 0.206347
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 offset = Vector2( -6.81507, 4.7904 )
@@ -188,7 +188,7 @@ offset = Vector2( -6.81507, 4.7904 )
 [node name="Body" type="Sprite" parent="Bitchy/Collissionposition/Höhenposition/Bitchy" index="2"]
 
 position = Vector2( 11.7452, 3.61608 )
-rotation = -0.0187247
+rotation = -0.0875344
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
@@ -196,23 +196,23 @@ _sections_unfolded = [ "Transform" ]
 [node name="wing_f" type="Sprite" parent="Bitchy/Collissionposition/Höhenposition/Bitchy" index="3"]
 
 position = Vector2( 19.954, -9.08474 )
-rotation = 0.040901
+rotation = 0.191205
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 offset = Vector2( 58.5286, -30.5462 )
 
 [node name="Head" type="Sprite" parent="Bitchy/Collissionposition/Höhenposition/Bitchy" index="4"]
 
-position = Vector2( 3.04709e-007, -33 )
-rotation = -0.011678
+position = Vector2( -1.50541, -34.5054 )
+rotation = -0.164515
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Feet_A" type="Sprite" parent="Bitchy/Collissionposition/Höhenposition/Bitchy" index="5"]
 
-position = Vector2( 4.81503, -0.897223 )
-rotation = 0.0319963
+position = Vector2( 4.81503, -3.58967 )
+rotation = 0.268707
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 
