@@ -16,16 +16,17 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		if Input.is_action_just_pressed("push") && collected != true:
 			remove_from_group("trappedNPCs")
-			body.trappedNPCs += 1
+			SaveGame.trappedNPCs += 1
 			body.emit_signal("NPCsaved")
 			collected = true
 			saveCollected()
 			$AnimationPlayer.play("onCollect")
 			SaveGame.saveGame()
+			$WebDestroyedDustVFX.emitting = true
 
 #save this objects name and that it was collected into another .cfg
 func saveCollected():
-	SaveGame.npcDict[str(SaveGame.currLevelId,name)] = collected
+	SaveGame.npcDict[str(SaveGame.currLevelId,self)] = collected
 	for key in SaveGame.npcDict.keys():
 		saveFile.set_value("TrappedNPCs", key, SaveGame.npcDict[key])
 	saveFile.save(savePath)
@@ -33,7 +34,7 @@ func saveCollected():
 #delete self if already collected in currently saved game
 func checkCollected():
 	saveFile.load(savePath)
-	collected = saveFile.get_value("TrappedNPCs", str(SaveGame.currLevelId,name), false)
+	collected = saveFile.get_value("TrappedNPCs", str(SaveGame.currLevelId,self), false)
 	if collected == true:
 		queue_free()
 	else:
