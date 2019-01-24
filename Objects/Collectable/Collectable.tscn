@@ -8,7 +8,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 38.4315, 54.4014 )
 
-[node name="Collectable" type="Node2D" index="0"]
+[node name="Collectable" type="Node2D" groups=[
+"dandelions",
+]]
 
 script = ExtResource( 1 )
 

@@ -40,7 +40,7 @@ var rope
 
 signal loseHp
 signal NPCsaved
-
+signal collectedDandelion
 
 func _ready():
 	MenuMusic.playing = false

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menus/LevelSelector/LevelSelector.tscn" type="PackedScene" id=1]
+
+[node name="LevelSelector" instance=ExtResource( 1 )]
+
+script = null
+
+
+[editable path="BackButton"]
+[editable path="OptionsButton"]
+[editable path="Level0Button"]
+[editable path="Level1Button"]
+[editable path="Level2Button"]
