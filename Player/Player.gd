@@ -45,12 +45,6 @@ signal NPCsaved
 func _ready():
 	MenuMusic.playing = false
 	setState(idle)
-	
-	#replace this by script on levels
-	if get_parent() != get_tree().get_root():
-		SaveGame.currLevelId = int(get_parent().get_parent().name)
-	#
-	
 	if SaveGame.loadPlayerState == true:
 		SaveGame.loadPlayerState = false
 		global_position.x = SaveGame.playerPosX
