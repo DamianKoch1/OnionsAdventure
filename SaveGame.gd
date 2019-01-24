@@ -36,7 +36,6 @@ func saveGame():
 	saveFile.set_value("SaveState", "spawnPosY", spawnpoint.global_position.y) 
 	saveFile.set_value("SaveState", "NPCsSaved", trappedNPCs) 
 	saveFile.set_value("SaveState", "dandelions", dandelions) 
-	print(get_tree().get_nodes_in_group("Player")[0].dandelions)
 	saveFile.save(savePath)
 
 func loadGame():

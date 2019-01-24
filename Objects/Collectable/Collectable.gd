@@ -20,7 +20,7 @@ func _on_Area2D_body_entered(body):
 		queue_free()
 
 func saveCollected():
-	SaveGame.dandelionDict[str(SaveGame.currLevelId,name)] = collected
+	SaveGame.dandelionDict[str(SaveGame.currLevelId,self)] = collected
 	for key in SaveGame.dandelionDict.keys():
 		saveFile.set_value("Dandelions", key, SaveGame.dandelionDict[key])
 	saveFile.save(savePath)
@@ -28,6 +28,6 @@ func saveCollected():
 #delete self if already collected in currently saved game
 func checkCollected():
 	saveFile.load(savePath)
-	collected = saveFile.get_value("Dandelions", str(SaveGame.currLevelId,name), false)
+	collected = saveFile.get_value("Dandelions", str(SaveGame.currLevelId,self), false)
 	if collected == true:
 		queue_free()
