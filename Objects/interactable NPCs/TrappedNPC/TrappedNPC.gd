@@ -37,7 +37,5 @@ func checkCollected():
 	collected = saveFile.get_value("TrappedNPCs", str(SaveGame.currLevelId,name), false)
 	if collected == true:
 		queue_free()
-	else:
-		add_to_group("trappedNPCs")
-	
+
 		
