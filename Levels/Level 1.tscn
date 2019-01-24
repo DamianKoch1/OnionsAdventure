@@ -53,7 +53,6 @@ script = ExtResource( 1 )
 
 [node name="smallstump2" parent="." index="1" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 position = Vector2( 660, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -71,7 +70,6 @@ position = Vector2( -32.4216, 51.8746 )
 
 [node name="smallstump3" parent="." index="2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 1030, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -86,7 +84,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="mediumstump2" parent="." index="4" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 position = Vector2( 2328, -128 )
 _sections_unfolded = [ "Transform" ]
 
@@ -115,7 +112,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="stump m, stone big" parent="." index="6" instance=ExtResource( 11 )]
 
-editor/display_folded = true
 position = Vector2( 3544, -128 )
 
 [node name="Thornbush" parent="stump m, stone big" index="4" instance=ExtResource( 9 )]
@@ -137,7 +133,6 @@ position = Vector2( -354.267, -31.1808 )
 
 [node name="stump l, moving tendril" parent="." index="7" instance=ExtResource( 12 )]
 
-editor/display_folded = true
 position = Vector2( 4184, -128 )
 _sections_unfolded = [ "Transform" ]
 
@@ -204,7 +199,6 @@ position = Vector2( 254.966, -158.66 )
 
 [node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 16 )]
 
-editor/display_folded = true
 position = Vector2( 6066, -288 )
 _sections_unfolded = [ "Transform" ]
 
@@ -238,7 +232,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="platform" parent="." index="12" instance=ExtResource( 19 )]
 
-editor/display_folded = true
 position = Vector2( 7056, -310 )
 _sections_unfolded = [ "Transform" ]
 
@@ -284,7 +277,6 @@ position = Vector2( -344.902, -7.20886 )
 
 [node name="enemyPlatform" parent="." index="13" instance=ExtResource( 20 )]
 
-editor/display_folded = true
 position = Vector2( 7910, -408 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
@@ -303,7 +295,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="stone stairs" parent="." index="15" instance=ExtResource( 23 )]
 
-editor/display_folded = true
 position = Vector2( 7924, -224 )
 _sections_unfolded = [ "Transform" ]
 
@@ -346,7 +337,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="stump s, stone" parent="." index="17" instance=ExtResource( 24 )]
 
-editor/display_folded = true
 position = Vector2( 8884, -160 )
 _sections_unfolded = [ "Transform" ]
 
@@ -377,7 +367,6 @@ position = Vector2( -9.92773, 9.02502 )
 
 [node name="tree2" parent="." index="18" instance=ExtResource( 26 )]
 
-editor/display_folded = true
 position = Vector2( 9380, -160 )
 _sections_unfolded = [ "Transform" ]
 
@@ -399,7 +388,6 @@ position = Vector2( 43, -38 )
 
 [node name="stump s, stump l 2" parent="." index="19" instance=ExtResource( 27 )]
 
-editor/display_folded = true
 position = Vector2( 10098, -160 )
 _sections_unfolded = [ "Transform" ]
 
