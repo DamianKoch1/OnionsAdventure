@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Enemy/Muddy_Finished_Color.png" type="Texture" id=2]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -91,6 +92,8 @@ position = Vector2( -2.01647, -0.498512 )
 scale = Vector2( 0.172475, 0.178707 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="muddySound" parent="EnemyPath/Enemy" index="3" instance=ExtResource( 3 )]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 

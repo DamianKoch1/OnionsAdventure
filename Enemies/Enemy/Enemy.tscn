@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemies/footstep.wav" type="AudioStream" id=3]
+[ext_resource path="res://Enemies/Enemy_flying.ogg" type="AudioStream" id=4]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -24,11 +27,12 @@ extents = Vector2( 38.3767, 36.5009 )
 flags = 0
 load_path = ""
 
-[node name="Enemy" type="Node2D" groups=[
+[node name="Enemy" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
 script = ExtResource( 1 )
+mothsound = false
 movespeed = 2
 pathLooped = true
 
@@ -41,7 +45,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Enemy" type="Node2D" parent="EnemyPath" index="0"]
 
-editor/display_folded = true
 position = Vector2( -81.2339, 169.313 )
 z_index = 50
 _sections_unfolded = [ "Visibility", "Z Index" ]
@@ -95,6 +98,21 @@ position = Vector2( -1.91231, -9.29032 )
 scale = Vector2( 0.0624163, 0.0870892 )
 texture = SubResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="muddySound" parent="EnemyPath/Enemy" index="3" instance=ExtResource( 2 )]
+
+stream = ExtResource( 3 )
+
+[node name="mothSound" type="AudioStreamPlayer2D" parent="EnemyPath/Enemy" index="4"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 

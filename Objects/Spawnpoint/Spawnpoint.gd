@@ -10,7 +10,7 @@ func _ready():
 func respawn(player):
 	$respawn.playing = true
 	player.global_transform = global_transform
-	$SpawnParticles.emitting = true
+	$OnionRespawnVFX.emitting = true
 
 func playActivationSound():
 	$activate.playing = true

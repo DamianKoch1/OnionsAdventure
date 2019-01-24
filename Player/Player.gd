@@ -4,9 +4,8 @@ const UP = Vector2(0, -1)
 var motion = Vector2()
 
 onready var sprite = $Onion
-
-var anim = idle setget setAnim, getAnim
-var oldAnim
+onready var anim = $Onion/AnimationPlayer
+onready var animTreePlayer = $Onion/AnimationTreePlayer1
 
 var state = idle setget setState, getState
 enum {idle, run, jump, fall, climb, frozen}
@@ -26,6 +25,9 @@ export var gravity = 20
 export var jumpheight = 550
 export var climbspeed = 200
 
+onready var highestFallSpeed = 0
+export var fallVFXspeedThreshhold = 700
+
 onready var debugFly = false
 onready var debugGodmode = false
 
@@ -39,9 +41,6 @@ var rope
 signal loseHp
 signal NPCsaved
 
-#amoumt of collectables
-var trappedNPCs = 0
-var dandelions = 0
 
 func _ready():
 	MenuMusic.playing = false
@@ -56,8 +55,6 @@ func _ready():
 		SaveGame.loadPlayerState = false
 		global_position.x = SaveGame.playerPosX
 		global_position.y = SaveGame.playerPosY
-		trappedNPCs = SaveGame.trappedNPCs
-		dandelions = SaveGame.dandelions
 
 func _physics_process(delta):
 	if state != frozen:
@@ -93,6 +90,7 @@ func _physics_process(delta):
 		if state != climb:
 			rayUpdate()
 			motion.y += gravity
+			trackFallSpeed()
 			if abs(rotation_degrees) > 3:
 				rotation_degrees = lerp(rotation_degrees, 0, delta*3)
 				global_scale.x = 0.5
@@ -109,6 +107,10 @@ func _physics_process(delta):
 					$SFX/jump.playRandomPitch()
 					motion.y = -jumpheight
 					setState(jump)
+			else:
+				if motion.y >= 100:
+					if state == run || state == idle:
+						setState(fall)
 			#falling animation
 			if state == jump:
 				if motion.y > 10:
@@ -151,41 +153,38 @@ func _physics_process(delta):
 func setState(newState):
 	#set current animation on state changes, tried scale set to prevent scale glitches when attaching to rotated objects
 	if state != frozen:
+		if state == fall && highestFallSpeed >= fallVFXspeedThreshhold:
+			if newState == run || newState == idle:
+				$landingTest.emitting = true
+				highestFallSpeed = 0
 		state = newState
 		match state:
 			idle:
-				setAnim("Onion_Idle")
+				animTreePlayer.oneshot_node_stop("fallOneshot")
+				animTreePlayer.transition_node_set_current("idle/walk", 0)
 			run:
-				setAnim("Onion_Walk")
+				animTreePlayer.oneshot_node_stop("fallOneshot")
+				animTreePlayer.transition_node_set_current("idle/walk", 1)
 				if $SFX/footstep.playing == false:
 					$SFX/footstep.playRandomPitch()
 			jump:
-				setAnim("Onion_JumpUp")
+				animTreePlayer.oneshot_node_start("jumpOneshot")
 			fall:
-				setAnim("Onion_JumpDown")
+				animTreePlayer.oneshot_node_start("fallOneshot")
 			climb:
 				#cimb anim?
-				setAnim("Onion_Idle")
+				animTreePlayer.transition_node_set_current("idle/walk", 0)
 			frozen:
-				setAnim("Onion_Idle")
+				animTreePlayer.transition_node_set_current("idle/walk", 0)
 
 func getState():
 	return state
-
-func setAnim(newAnim):
-	#play current animation if changed
-	if oldAnim != newAnim:
-		oldAnim = newAnim
-		anim = newAnim
-		$Onion/AnimationPlayer.play(anim)
-
-func getAnim():
-	return anim
 
 func loseHp():
 	if gracePeriodTimer == 0 && state != frozen && debugGodmode != true:
 		$SFX/hurt.playing = true
 		gracePeriodTimer = gracePeriod
+		#blinking
 		emit_signal("loseHp", self)
 
 func bounce(bounceStr):
@@ -207,6 +206,11 @@ func rayUpdate():
 				attachTo(worldNode)
 	else:
 		attachTo(worldNode)
+
+#track highest fall speed, fall vfx plays on landing if high enough
+func trackFallSpeed():
+	if motion.y > highestFallSpeed:
+		highestFallSpeed = motion.y
 
 #remove self from current parent, attach to new parent and keep transform
 func attachTo(obj):

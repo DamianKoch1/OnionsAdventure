@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Goal/goal.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Spawnpoint/RespawnCrystalVFX.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -149,6 +150,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Particles2D" type="Particles2D" parent="." index="2"]
 
+visible = false
 modulate = Color( 0.609375, 0.707031, 1, 1 )
 position = Vector2( -0.450276, -3.84955 )
 scale = Vector2( 0.899116, 0.994144 )
@@ -207,6 +209,11 @@ playback_speed = 1.0
 anims/end = SubResource( 5 )
 anims/start = SubResource( 6 )
 blend_times = [  ]
+
+[node name="OnionRespawnVFX" parent="." index="5" instance=ExtResource( 4 )]
+
+position = Vector2( -2.72102, 11.2872 )
+scale = Vector2( 0.745897, 0.745897 )
 
 [connection signal="body_entered" from="." to="." method="_on_Goal_body_entered"]
 
