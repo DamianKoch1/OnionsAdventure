@@ -21,6 +21,7 @@ var dandelionDict = {}
 
 func _ready():
 	saveFile = ConfigFile.new()
+	loadCollectableCount()
 
 func deleteSave():
 	var dir = Directory.new()
@@ -49,4 +50,7 @@ func loadGame():
 	playerPosX = saveFile.get_value("SaveState", "spawnPosX", 0)
 	playerPosY = saveFile.get_value("SaveState", "spawnPosY", 0)
 
-	
+func loadCollectableCount():
+	saveFile.load(savePath)
+	trappedNPCs = saveFile.get_value("SaveState", "NPCsSaved", 0) 
+	dandelions = saveFile.get_value("SaveState", "dandelions", 0)
