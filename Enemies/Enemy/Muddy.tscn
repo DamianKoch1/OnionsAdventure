@@ -3,9 +3,9 @@
 [ext_resource path="res://Enemies/Enemy/feet_b_b.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/Enemy/feet_f_b.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Enemy/body.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/Enemy/feet_b_a.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/Enemy/feet_f_a.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/Enemy/head.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/Enemy/head.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Enemy/feet_b_a.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/Enemy/feet_f_a.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -20,7 +20,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.7 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -29.6592, 32.4263 ), Vector2( -27.5867, 23.913 ), Vector2( -22.5867, 29.913 ), Vector2( -28.5867, 29.913 ) ]
@@ -32,7 +32,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, -9.61724, 0.626775 ]
@@ -50,7 +50,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -2 ), Vector2( 0, 1 ), Vector2( 0, -2 ), Vector2( 0, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Muddy/head:rotation_degrees")
+tracks/3/path = NodePath("Muddy/body/head:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -68,10 +68,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -17.9492, 29.5964 ), Vector2( -20.9492, 30.0964 ), Vector2( -23.9492, 26.5964 ), Vector2( -10.6748, 23.7954 ), Vector2( -17.9492, 29.5964 ) ]
+"values": [ Vector2( -12.9492, 29.5964 ), Vector2( -20.9492, 30.0964 ), Vector2( -12.9492, 29.5964 ), Vector2( -11.812, 24.6959 ), Vector2( -10.6748, 23.7954 ), Vector2( -12.9492, 29.5964 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Muddy/feet_b_b:rotation_degrees")
@@ -80,7 +80,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7 ),
+"times": PoolRealArray( 0, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 14.3298, 0.598688 ]
@@ -92,7 +92,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.7 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.5, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 12.7951, 40.5953 ), Vector2( 8.79507, 40.5953 ), Vector2( 6.79507, 40.5953 ), Vector2( 14.2363, 36.3894 ), Vector2( 12.7951, 40.5953 ) ]
@@ -141,7 +141,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 __meta__ = {
-"_edit_horizontal_guides_": [  ]
+"_edit_horizontal_guides_": [ 42.5822, 39.0072 ]
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
@@ -175,49 +175,42 @@ position = Vector2( 0, -8 )
 
 [node name="feet_b_b" type="Sprite" parent="Muddy/Muddy" index="0"]
 
-position = Vector2( -21.2142, 29.7872 )
-rotation = 0.0588576
+position = Vector2( -12.9492, 29.5964 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 offset = Vector2( -0.548801, 17.602 )
 
 [node name="feet_f_b" type="Sprite" parent="Muddy/Muddy" index="1"]
 
-position = Vector2( 30.3554, 30.0899 )
-rotation = -0.132398
+position = Vector2( 32.437, 34.0998 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 offset = Vector2( 4.86993, 12.7265 )
 
 [node name="body" type="Sprite" parent="Muddy/Muddy" index="2"]
 
-position = Vector2( 0, -1.73499 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="head" type="Sprite" parent="Muddy/Muddy/body" index="0"]
+
+position = Vector2( 49.5132, 20.5869 )
+texture = ExtResource( 4 )
+offset = Vector2( 36.1708, -18.6199 )
+
 [node name="feet_b_a" type="Sprite" parent="Muddy/Muddy" index="3"]
 
-position = Vector2( -27.145, 24.443 )
-rotation = -0.152059
+position = Vector2( -29.6592, 32.4263 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 offset = Vector2( -4.14488, 17.0266 )
 
 [node name="feet_f_a" type="Sprite" parent="Muddy/Muddy" index="4"]
 
-position = Vector2( 8.6184, 40.5953 )
-rotation = 0.0428482
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
-
-[node name="head" type="Sprite" parent="Muddy/Muddy" index="5"]
-
-position = Vector2( 24.7566, 9.79347 )
-rotation = 0.0803858
+position = Vector2( 12.7951, 40.5953 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
-offset = Vector2( 36.1708, -18.6199 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Muddy" index="3"]
 
