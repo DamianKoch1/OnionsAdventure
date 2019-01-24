@@ -15,6 +15,7 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player") && collected != true:
 		SaveGame.dandelions += 1
 		collected = true
+		remove_from_group("dandelions")
 		body.emit_signal("collectedDandelion")
 		saveCollected()
 		SaveGame.saveGame()

@@ -28,6 +28,8 @@ func deleteSave():
 	dir.remove(savePath)
 	dir.remove("user://trappedNPCs.cfg")
 	dir.remove("user://dandelions.cfg")
+	trappedNPCs = 0
+	dandelions = 0
 
 
 
