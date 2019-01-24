@@ -3,6 +3,7 @@ extends Container
 #hardcoded all scene paths because godot crashes if scenes reference each other using exported packedscenes
 onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 onready var creditscreen = preload("res://Menus/MainMenu/CreditScreen.tscn")
+onready var extrasMenu = preload("res://Menus/ExtrasMenu/ExtrasMenu.tscn")
 
 func _ready():
 	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
@@ -38,4 +39,5 @@ func _on_PlayButton_pressed():
 
 func _on_ExtrasButton_pressed():
 	UISelect.playing = true
+	get_tree().change_scene_to(extrasMenu)
 	

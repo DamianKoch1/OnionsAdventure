@@ -56,15 +56,15 @@ script = ExtResource( 1 )
 position = Vector2( 660, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable" parent="smallstump2" index="3" instance=ExtResource( 4 )]
+[node name="Collectable01" parent="smallstump2" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 205.337, 71.868 )
 
-[node name="Collectable3" parent="smallstump2" index="4" instance=ExtResource( 4 )]
+[node name="Collectable02" parent="smallstump2" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 862.177, -68.0943 )
 
-[node name="Collectable2" parent="smallstump2" index="5" instance=ExtResource( 4 )]
+[node name="Collectable03" parent="smallstump2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -32.4216, 51.8746 )
 
@@ -73,7 +73,7 @@ position = Vector2( -32.4216, 51.8746 )
 position = Vector2( 1030, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="trappedNPC" parent="smallstump3" index="2" instance=ExtResource( 6 )]
+[node name="trappedNPC1" parent="smallstump3" index="2" instance=ExtResource( 6 )]
 
 position = Vector2( 283.68, -42.7116 )
 
@@ -93,15 +93,15 @@ position = Vector2( 197.156, 117.031 )
 rotation = 1.55791
 scale = Vector2( 0.447483, 0.889559 )
 
-[node name="Collectable" parent="mediumstump2" index="4" instance=ExtResource( 4 )]
+[node name="Collectable04" parent="mediumstump2" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( -21.8928, -50.42 )
 
-[node name="Collectable3" parent="mediumstump2" index="5" instance=ExtResource( 4 )]
+[node name="Collectable05" parent="mediumstump2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -401.264, 94.4532 )
 
-[node name="Collectable2" parent="mediumstump2" index="6" instance=ExtResource( 4 )]
+[node name="Collectable06" parent="mediumstump2" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 276.647, 8.62445 )
 
@@ -119,15 +119,15 @@ position = Vector2( 3544, -128 )
 position = Vector2( -79.4639, 87.1623 )
 scale = Vector2( 0.621284, 0.72858 )
 
-[node name="Collectable" parent="stump m, stone big" index="5" instance=ExtResource( 4 )]
+[node name="Collectable07" parent="stump m, stone big" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( 125.387, -11.9416 )
 
-[node name="Collectable3" parent="stump m, stone big" index="6" instance=ExtResource( 4 )]
+[node name="Collectable08" parent="stump m, stone big" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 125.387, -11.9416 )
 
-[node name="Collectable2" parent="stump m, stone big" index="7" instance=ExtResource( 4 )]
+[node name="Collectable09" parent="stump m, stone big" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( -354.267, -31.1808 )
 
@@ -144,23 +144,23 @@ position = Vector2( 577.568, -92.313 )
 
 position = Vector2( -2389.52, 191.1 )
 
-[node name="Collectable" parent="stump l, moving tendril" index="5" instance=ExtResource( 4 )]
+[node name="Collectable10" parent="stump l, moving tendril" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -193.719, -50.42 )
 
-[node name="Collectable2" parent="stump l, moving tendril" index="6" instance=ExtResource( 4 )]
+[node name="Collectable11" parent="stump l, moving tendril" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( -86.2446, -13.9318 )
 
-[node name="Collectable3" parent="stump l, moving tendril" index="7" instance=ExtResource( 4 )]
+[node name="Collectable12" parent="stump l, moving tendril" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 51.0835, -35.1613 )
 
-[node name="Collectable5" parent="stump l, moving tendril" index="8" instance=ExtResource( 4 )]
+[node name="Collectable13" parent="stump l, moving tendril" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 280.67, 93.7513 )
 
-[node name="Collectable4" parent="stump l, moving tendril" index="9" instance=ExtResource( 4 )]
+[node name="Collectable14" parent="stump l, moving tendril" index="9" instance=ExtResource( 4 )]
 
 position = Vector2( 390.963, -74.9346 )
 
@@ -171,6 +171,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Enemy" parent="stump l, stump m, stump s" index="4" instance=ExtResource( 15 )]
 
+editor/display_folded = true
 position = Vector2( 393.786, 88.8056 )
 
 [node name="EnemyPath" parent="stump l, stump m, stump s/Enemy" index="0"]
@@ -181,24 +182,25 @@ curve = SubResource( 1 )
 
 rotation = 0.00182911
 
-[node name="Collectable" parent="stump l, stump m, stump s" index="5" instance=ExtResource( 4 )]
+[node name="Collectable15" parent="stump l, stump m, stump s" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -83.0801, 28.5078 )
 
-[node name="Collectable3" parent="stump l, stump m, stump s" index="6" instance=ExtResource( 4 )]
+[node name="Collectable16" parent="stump l, stump m, stump s" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 417.027, -26.0642 )
 
-[node name="Collectable4" parent="stump l, stump m, stump s" index="7" instance=ExtResource( 4 )]
+[node name="Collectable17" parent="stump l, stump m, stump s" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 522.613, 29.184 )
 
-[node name="Collectable5" parent="stump l, stump m, stump s" index="8" instance=ExtResource( 4 )]
+[node name="Collectable18" parent="stump l, stump m, stump s" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 254.966, -158.66 )
 
 [node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 16 )]
 
+editor/display_folded = true
 position = Vector2( 6066, -288 )
 _sections_unfolded = [ "Transform" ]
 
@@ -208,15 +210,15 @@ position = Vector2( 109.064, 116.501 )
 rotation = 1.57376
 scale = Vector2( 0.550652, 1.04765 )
 
-[node name="Collectable" parent="stump s, stump l 3" index="5" instance=ExtResource( 4 )]
+[node name="Collectable19" parent="stump s, stump l 3" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -93.668, 80.6362 )
 
-[node name="Collectable2" parent="stump s, stump l 3" index="6" instance=ExtResource( 4 )]
+[node name="Collectable20" parent="stump s, stump l 3" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 186.522, 32.5803 )
 
-[node name="Collectable3" parent="stump s, stump l 3" index="7" instance=ExtResource( 4 )]
+[node name="Collectable21" parent="stump s, stump l 3" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 7.14893, -161.867 )
 
@@ -239,44 +241,45 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 13.6299, -43.986 )
 
-[node name="Collectable" parent="platform" index="2" instance=ExtResource( 4 )]
+[node name="Collectable22" parent="platform" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( -75.749, 175.119 )
 
-[node name="Collectable2" parent="platform" index="3" instance=ExtResource( 4 )]
+[node name="Collectable23" parent="platform" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 1.62891, 172.676 )
 
-[node name="Collectable8" parent="platform" index="4" instance=ExtResource( 4 )]
+[node name="Collectable24" parent="platform" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( -131.136, -45.6124 )
 
-[node name="Collectable3" parent="platform" index="5" instance=ExtResource( 4 )]
+[node name="Collectable25" parent="platform" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( 83.0796, 173.49 )
 
-[node name="Collectable6" parent="platform" index="6" instance=ExtResource( 4 )]
+[node name="Collectable26" parent="platform" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 149.869, -39.9108 )
 
-[node name="Collectable7" parent="platform" index="7" instance=ExtResource( 4 )]
+[node name="Collectable27" parent="platform" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 149.869, -39.9108 )
 
-[node name="Collectable9" parent="platform" index="8" instance=ExtResource( 4 )]
+[node name="Collectable28" parent="platform" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 395.565, -65.5356 )
 
-[node name="Collectable4" parent="platform" index="9" instance=ExtResource( 4 )]
+[node name="Collectable29" parent="platform" index="9" instance=ExtResource( 4 )]
 
 position = Vector2( 275.303, 178.377 )
 
-[node name="Collectable5" parent="platform" index="10" instance=ExtResource( 4 )]
+[node name="Collectable30" parent="platform" index="10" instance=ExtResource( 4 )]
 
 position = Vector2( -344.902, -7.20886 )
 
 [node name="enemyPlatform" parent="." index="13" instance=ExtResource( 20 )]
 
+editor/display_folded = true
 position = Vector2( 7910, -408 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
@@ -302,31 +305,31 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 537.099, 69.5436 )
 
-[node name="Collectable" parent="stone stairs" index="5" instance=ExtResource( 4 )]
+[node name="Collectable31" parent="stone stairs" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -349.424, 88.7813 )
 
-[node name="Collectable2" parent="stone stairs" index="6" instance=ExtResource( 4 )]
+[node name="Collectable32" parent="stone stairs" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( -235.393, 41.5398 )
 
-[node name="Collectable3" parent="stone stairs" index="7" instance=ExtResource( 4 )]
+[node name="Collectable33" parent="stone stairs" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( -40.7256, 21.1772 )
 
-[node name="Collectable4" parent="stone stairs" index="8" instance=ExtResource( 4 )]
+[node name="Collectable34" parent="stone stairs" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 135.208, 32.5803 )
 
-[node name="Collectable5" parent="stone stairs" index="9" instance=ExtResource( 4 )]
+[node name="Collectable35" parent="stone stairs" index="9" instance=ExtResource( 4 )]
 
 position = Vector2( 152.313, -228.062 )
 
-[node name="Collectable6" parent="stone stairs" index="10" instance=ExtResource( 4 )]
+[node name="Collectable36" parent="stone stairs" index="10" instance=ExtResource( 4 )]
 
 position = Vector2( 45.6123, -302.997 )
 
-[node name="Collectable7" parent="stone stairs" index="11" instance=ExtResource( 4 )]
+[node name="Collectable37" parent="stone stairs" index="11" instance=ExtResource( 4 )]
 
 position = Vector2( -128.516, -406.385 )
 
@@ -353,15 +356,15 @@ position = Vector2( -267.32, 139.473 )
 
 position = Vector2( -208.421, 140.014 )
 
-[node name="Collectable" parent="stump s, stone" index="6" instance=ExtResource( 4 )]
+[node name="Collectable38" parent="stump s, stone" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( -254.506, 2.70752 )
 
-[node name="Collectable2" parent="stump s, stone" index="7" instance=ExtResource( 4 )]
+[node name="Collectable39" parent="stump s, stone" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( -144.4, 25.2701 )
 
-[node name="Collectable3" parent="stump s, stone" index="8" instance=ExtResource( 4 )]
+[node name="Collectable40" parent="stump s, stone" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( -9.92773, 9.02502 )
 
@@ -378,11 +381,11 @@ position = Vector2( 309.63, -44.124 )
 
 position = Vector2( 50.623, 140.283 )
 
-[node name="Collectable" parent="tree2" index="4" instance=ExtResource( 4 )]
+[node name="Collectable41" parent="tree2" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( -127, 3 )
 
-[node name="Collectable2" parent="tree2" index="5" instance=ExtResource( 4 )]
+[node name="Collectable42" parent="tree2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( 43, -38 )
 
@@ -396,43 +399,43 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 55.9414, 88.1755 )
 scale = Vector2( 0.723735, 0.723735 )
 
-[node name="Collectable" parent="stump s, stump l 2" index="4" instance=ExtResource( 4 )]
+[node name="Collectable43" parent="stump s, stump l 2" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( -27, -5 )
 
-[node name="Collectable2" parent="stump s, stump l 2" index="5" instance=ExtResource( 4 )]
+[node name="Collectable44" parent="stump s, stump l 2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( 319, -1.99997 )
 
-[node name="Collectable10" parent="stump s, stump l 2" index="6" instance=ExtResource( 4 )]
+[node name="Collectable45" parent="stump s, stump l 2" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 146.253, -170.336 )
 
-[node name="Collectable3" parent="stump s, stump l 2" index="7" instance=ExtResource( 4 )]
+[node name="Collectable46" parent="stump s, stump l 2" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 466, 83.0001 )
 
-[node name="Collectable9" parent="stump s, stump l 2" index="8" instance=ExtResource( 4 )]
+[node name="Collectable47" parent="stump s, stump l 2" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 621.84, -100.038 )
 
-[node name="Collectable4" parent="stump s, stump l 2" index="9" instance=ExtResource( 4 )]
+[node name="Collectable48" parent="stump s, stump l 2" index="9" instance=ExtResource( 4 )]
 
 position = Vector2( 725, 78.0001 )
 
-[node name="Collectable5" parent="stump s, stump l 2" index="10" instance=ExtResource( 4 )]
+[node name="Collectable49" parent="stump s, stump l 2" index="10" instance=ExtResource( 4 )]
 
 position = Vector2( 961, 86.0001 )
 
-[node name="Collectable6" parent="stump s, stump l 2" index="11" instance=ExtResource( 4 )]
+[node name="Collectable50" parent="stump s, stump l 2" index="11" instance=ExtResource( 4 )]
 
 position = Vector2( 1140, -12 )
 
-[node name="Collectable7" parent="stump s, stump l 2" index="12" instance=ExtResource( 4 )]
+[node name="Collectable51" parent="stump s, stump l 2" index="12" instance=ExtResource( 4 )]
 
 position = Vector2( 1224, -10 )
 
-[node name="Collectable8" parent="stump s, stump l 2" index="13" instance=ExtResource( 4 )]
+[node name="Collectable52" parent="stump s, stump l 2" index="13" instance=ExtResource( 4 )]
 
 position = Vector2( 1312, -10 )
 

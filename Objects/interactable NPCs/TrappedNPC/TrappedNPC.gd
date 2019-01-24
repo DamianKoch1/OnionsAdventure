@@ -26,7 +26,7 @@ func _on_Area2D_body_entered(body):
 
 #save this objects name and that it was collected into another .cfg
 func saveCollected():
-	SaveGame.npcDict[str(SaveGame.currLevelId,self)] = collected
+	SaveGame.npcDict[str(SaveGame.currLevelId,name)] = collected
 	for key in SaveGame.npcDict.keys():
 		saveFile.set_value("TrappedNPCs", key, SaveGame.npcDict[key])
 	saveFile.save(savePath)
@@ -34,7 +34,7 @@ func saveCollected():
 #delete self if already collected in currently saved game
 func checkCollected():
 	saveFile.load(savePath)
-	collected = saveFile.get_value("TrappedNPCs", str(SaveGame.currLevelId,self), false)
+	collected = saveFile.get_value("TrappedNPCs", str(SaveGame.currLevelId,name), false)
 	if collected == true:
 		queue_free()
 	else:
