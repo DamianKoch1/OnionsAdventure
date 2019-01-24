@@ -10,7 +10,7 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "Showing up"
-length = 1.5
+length = 1.4
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -74,7 +74,7 @@ tracks/4/keys = {
 "values": [ 0.0, 0.0, -16.5441, 0.0, -16.5441, 0.0, -16.5441, 0.0 ]
 }
 
-[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
