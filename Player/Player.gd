@@ -168,13 +168,21 @@ func setState(newState):
 				if $SFX/footstep.playing == false:
 					$SFX/footstep.playRandomPitch()
 			jump:
+				animTreePlayer.oneshot_node_stop("fallOneshot")
 				animTreePlayer.oneshot_node_start("jumpOneshot")
 			fall:
+				animTreePlayer.oneshot_node_stop("jumpOneshot")
 				animTreePlayer.oneshot_node_start("fallOneshot")
 			climb:
+				highestFallSpeed = 0
 				#cimb anim?
+				animTreePlayer.oneshot_node_stop("jumpOneshot")
+				animTreePlayer.oneshot_node_stop("fallOneshot")
 				animTreePlayer.transition_node_set_current("idle/walk", 0)
 			frozen:
+				highestFallSpeed = 0
+				animTreePlayer.oneshot_node_stop("jumpOneshot")
+				animTreePlayer.oneshot_node_stop("fallOneshot")
 				animTreePlayer.transition_node_set_current("idle/walk", 0)
 
 func getState():

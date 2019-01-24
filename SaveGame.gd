@@ -7,8 +7,8 @@ var saveFile
 var spawnpoint
 
 var loadPlayerState = false
-var trappedNPCs
-var dandelions
+var trappedNPCs = 0
+var dandelions = 0
 var playerPosX
 var playerPosY
 
