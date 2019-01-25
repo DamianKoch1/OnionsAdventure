@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat4.tscn" type="PackedScene" id=2]
@@ -21,6 +21,12 @@
 [ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, tendril.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, stump m, tendril.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Modules/02 single/platform/platform long.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=27]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -184,6 +190,7 @@ position = Vector2( 7.37842, -47.9892 )
 
 [node name="Enemy" parent="platform" index="2" instance=ExtResource( 21 )]
 
+editor/display_folded = true
 position = Vector2( 9.72656, -44.85 )
 movespeed = 0.15
 
@@ -194,6 +201,50 @@ curve = SubResource( 2 )
 [node name="PathFollow2D" parent="platform/Enemy/EnemyPath" index="1"]
 
 rotation = 0.237247
+
+[node name="stump l, tendril" parent="." index="12" instance=ExtResource( 22 )]
+
+position = Vector2( 6363.41, -445.585 )
+
+[node name="moving salamander" parent="." index="13" instance=ExtResource( 23 )]
+
+position = Vector2( 7796, -285.523 )
+
+[node name="stump l, stump m, tendril" parent="." index="14" instance=ExtResource( 24 )]
+
+position = Vector2( 6969.42, -285.561 )
+
+[node name="platform long" parent="." index="15" instance=ExtResource( 25 )]
+
+editor/display_folded = true
+position = Vector2( 7094.53, -480.903 )
+
+[node name="Ladder" parent="platform long" index="1" instance=ExtResource( 26 )]
+
+position = Vector2( -345.173, -58.9086 )
+
+[node name="Bouncer" parent="platform long" index="2" instance=ExtResource( 27 )]
+
+position = Vector2( -153.094, -52.2546 )
+
+[node name="Bouncer2" parent="platform long" index="3" instance=ExtResource( 27 )]
+
+position = Vector2( 151.834, -51.6588 )
+
+[node name="Worm" parent="platform long" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( -59.4955, 8.29045 )
+diggedOut = false
+
+[node name="Worm2" parent="platform long" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( -2.33336, 8.28048 )
+diggedOut = true
+
+[node name="Worm3" parent="platform long" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 54.0073, 8.25138 )
+diggedOut = false
 
 
 [editable path="movingten1/Enemy"]
