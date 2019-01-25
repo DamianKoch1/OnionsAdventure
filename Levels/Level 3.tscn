@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat4.tscn" type="PackedScene" id=2]
@@ -27,6 +27,15 @@
 [ext_resource path="res://Modules/02 single/platform/platform long.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander 2 platform.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Modules/02 single/stones/stone 4 flip.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Modules/03 combination/moving combis/stump l, movingten, stone, muddy.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=35]
+[ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=36]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -204,7 +213,12 @@ rotation = 0.237247
 
 [node name="stump l, tendril" parent="." index="12" instance=ExtResource( 22 )]
 
+editor/display_folded = true
 position = Vector2( 6363.41, -445.585 )
+
+[node name="Checkpoint" parent="stump l, tendril" index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 243.963, 62.9247 )
 
 [node name="moving salamander" parent="." index="13" instance=ExtResource( 23 )]
 
@@ -245,6 +259,95 @@ diggedOut = true
 
 position = Vector2( 54.0073, 8.25138 )
 diggedOut = false
+
+[node name="Ladder2" parent="platform long" index="7" instance=ExtResource( 26 )]
+
+position = Vector2( 370.734, 35.8189 )
+
+[node name="stump m, movingten, mealy" parent="." index="16" instance=ExtResource( 28 )]
+
+editor/display_folded = true
+position = Vector2( 8595.49, -285.424 )
+
+[node name="Checkpoint" parent="stump m, movingten, mealy" index="6" instance=ExtResource( 8 )]
+
+position = Vector2( -344.111, 63.6455 )
+
+[node name="platform short" parent="." index="17" instance=ExtResource( 29 )]
+
+editor/display_folded = true
+position = Vector2( 7087.7, -854.907 )
+
+[node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 20 )]
+
+position = Vector2( 5.36426, -49.7429 )
+
+[node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 30 )]
+
+editor/display_folded = true
+position = Vector2( 9536.91, -596.15 )
+
+[node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 26 )]
+
+position = Vector2( -585.001, 167 )
+
+[node name="trappedNPC" parent="moving salamander 2 platform" index="4" instance=ExtResource( 20 )]
+
+position = Vector2( 316.825, -140.403 )
+
+[node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 29 )]
+
+editor/display_folded = true
+position = Vector2( 612.643, -54.0206 )
+
+[node name="FireSalamander" parent="moving salamander 2 platform/platform short" index="1" instance=ExtResource( 31 )]
+
+position = Vector2( 19.6162, -24.6447 )
+
+[node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 29 )]
+
+editor/display_folded = true
+position = Vector2( 828.726, -22.0994 )
+
+[node name="Thornbush" parent="moving salamander 2 platform/platform short2" index="1" instance=ExtResource( 32 )]
+
+position = Vector2( -28.5078, -63.5316 )
+
+[node name="Thornbush2" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 32 )]
+
+position = Vector2( 39.9111, -62.7172 )
+
+[node name="Ladder2" parent="moving salamander 2 platform" index="7" instance=ExtResource( 26 )]
+
+position = Vector2( 1064.17, -13.2639 )
+
+[node name="Ladder4" parent="moving salamander 2 platform" index="8" instance=ExtResource( 26 )]
+
+position = Vector2( 1069.19, 310.752 )
+
+[node name="stone 4 flip" parent="." index="19" instance=ExtResource( 33 )]
+
+position = Vector2( 9153.87, -157.479 )
+
+[node name="stump l, movingten, stone, muddy" parent="." index="20" instance=ExtResource( 34 )]
+
+position = Vector2( 9851.25, -30.0439 )
+
+[node name="Jump down2" parent="." index="21" instance=ExtResource( 13 )]
+
+position = Vector2( 9088.91, -93.2902 )
+
+[node name="Jump down3" parent="." index="22" instance=ExtResource( 13 )]
+
+position = Vector2( 9376.75, -29.0538 )
+
+[node name="Krakenmushroom2 (up)" parent="." index="23" instance=ExtResource( 35 )]
+
+position = Vector2( 10362.3, -30.0473 )
+
+[node name="End3(down)" parent="." index="24" instance=ExtResource( 36 )]
+
+position = Vector2( 11055.9, -157.855 )
 
 
 [editable path="movingten1/Enemy"]
