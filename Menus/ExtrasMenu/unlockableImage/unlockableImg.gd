@@ -1,15 +1,27 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+onready var dandelionText = $Overlay/Dandelions/Label
+onready var npcText = $Overlay/TrappedNPCs/Label
+onready var anim = $AnimationPlayer
+
+export var dandelionsNeeded = 0
+export var NPCsNeeded = 0
+
+
+
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	if dandelionsNeeded > 0:
+		dandelionText.text = "x " + str(dandelionsNeeded)
+	else:
+		$Overlay/Dandelions.hide()
+	if NPCsNeeded > 0:
+		npcText.text = "x " + str(NPCsNeeded)
+	else:
+		$Overlay/TrappedNPCs.hide()
+	_on_TextureButton_pressed()
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+
+func _on_TextureButton_pressed():
+	if SaveGame.dandelions >= dandelionsNeeded && SaveGame.trappedNPCs >= NPCsNeeded:
+		anim.play("unlock")
