@@ -47,6 +47,7 @@ _sections_unfolded = [ "Visibility", "Z Index" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="EnemyPath/Enemy" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -63,6 +64,7 @@ shape = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="EnemyPath/Enemy" index="1"]
 
+editor/display_folded = true
 position = Vector2( -80.7138, 170.143 )
 rotation = -0.000132151
 scale = Vector2( 0.500416, 0.500855 )
