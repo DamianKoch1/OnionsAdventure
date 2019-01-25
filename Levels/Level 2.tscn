@@ -30,7 +30,7 @@
 [ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, thorn, krake.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=29]
 
-[node name="Level 2" type="Node2D" index="0"]
+[node name="Level 2" type="Node2D"]
 
 script = ExtResource( 1 )
 
