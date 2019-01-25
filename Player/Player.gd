@@ -144,6 +144,10 @@ func _physics_process(delta):
 				setState(jump)
 		motion = move_and_slide(motion, UP)
 
+#used to unfreeze player from other scripts (trappedNPC)
+func setIdle():
+	state = idle
+
 func setState(newState):
 	#set current animation on state changes, tried scale set to prevent scale glitches when attaching to rotated objects
 	if state != frozen:
