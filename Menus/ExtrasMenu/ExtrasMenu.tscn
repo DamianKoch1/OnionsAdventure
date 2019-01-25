@@ -607,49 +607,47 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Page1" type="Node2D" parent="." index="9"]
 
-editor/display_folded = true
-
 [node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( -277, -69 )
-dandelionsNeeded = 4
+dandelionsNeeded = 5
 NPCsNeeded = 1
 
 [node name="unlockableImg2" parent="Page1" index="1" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( -85, -69 )
-dandelionsNeeded = 4
+dandelionsNeeded = 10
 NPCsNeeded = 1
 
 [node name="unlockableImg3" parent="Page1" index="2" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 107, -69 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 15
+NPCsNeeded = 2
 
 [node name="unlockableImg4" parent="Page1" index="3" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( -277, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 20
+NPCsNeeded = 2
 
 [node name="unlockableImg5" parent="Page1" index="4" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( -85, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 25
+NPCsNeeded = 3
 
 [node name="unlockableImg6" parent="Page1" index="5" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 107, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 30
+NPCsNeeded = 3
 
 [node name="Page2" type="Node2D" parent="." index="10"]
 
@@ -660,8 +658,8 @@ visible = false
 
 editor/display_folded = true
 position = Vector2( -277, -69 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 40
+NPCsNeeded = 4
 
 [node name="Sprite" parent="Page2/unlockableImg" index="0"]
 
@@ -676,8 +674,8 @@ anims/unlock = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( -85, -69 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 50
+NPCsNeeded = 4
 
 [node name="Sprite" parent="Page2/unlockableImg2" index="0"]
 
@@ -692,8 +690,8 @@ anims/unlock = SubResource( 2 )
 
 editor/display_folded = true
 position = Vector2( 107, -69 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 60
+NPCsNeeded = 5
 
 [node name="Sprite" parent="Page2/unlockableImg3" index="0"]
 
@@ -708,8 +706,8 @@ anims/unlock = SubResource( 3 )
 
 editor/display_folded = true
 position = Vector2( -277, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 70
+NPCsNeeded = 5
 
 [node name="Sprite" parent="Page2/unlockableImg4" index="0"]
 
@@ -724,8 +722,8 @@ anims/unlock = SubResource( 4 )
 
 editor/display_folded = true
 position = Vector2( -85, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 80
+NPCsNeeded = 6
 
 [node name="Sprite" parent="Page2/unlockableImg5" index="0"]
 
@@ -740,8 +738,8 @@ anims/unlock = SubResource( 5 )
 
 editor/display_folded = true
 position = Vector2( 107, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 90
+NPCsNeeded = 6
 
 [node name="Sprite" parent="Page2/unlockableImg6" index="0"]
 
@@ -761,8 +759,8 @@ visible = false
 
 editor/display_folded = true
 position = Vector2( -277, -69 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 100
+NPCsNeeded = 7
 
 [node name="Sprite" parent="Page3/unlockableImg" index="0"]
 
@@ -777,8 +775,8 @@ anims/unlock = SubResource( 7 )
 
 editor/display_folded = true
 position = Vector2( -85, -69 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 110
+NPCsNeeded = 7
 
 [node name="Sprite" parent="Page3/unlockableImg2" index="0"]
 
@@ -793,8 +791,8 @@ anims/unlock = SubResource( 8 )
 
 editor/display_folded = true
 position = Vector2( 107, -69 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 120
+NPCsNeeded = 8
 
 [node name="Sprite" parent="Page3/unlockableImg3" index="0"]
 
@@ -809,8 +807,8 @@ anims/unlock = SubResource( 9 )
 
 editor/display_folded = true
 position = Vector2( -277, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 130
+NPCsNeeded = 8
 
 [node name="Sprite" parent="Page3/unlockableImg4" index="0"]
 
@@ -825,8 +823,8 @@ anims/unlock = SubResource( 10 )
 
 editor/display_folded = true
 position = Vector2( -85, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 140
+NPCsNeeded = 9
 
 [node name="Sprite" parent="Page3/unlockableImg5" index="0"]
 
@@ -841,8 +839,8 @@ anims/unlock = SubResource( 11 )
 
 editor/display_folded = true
 position = Vector2( 107, 59 )
-dandelionsNeeded = 4
-NPCsNeeded = 1
+dandelionsNeeded = 150
+NPCsNeeded = 9
 
 [node name="Sprite" parent="Page3/unlockableImg6" index="0"]
 
