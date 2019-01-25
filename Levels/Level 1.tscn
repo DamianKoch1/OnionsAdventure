@@ -156,11 +156,7 @@ position = Vector2( -86.2446, -13.9318 )
 
 position = Vector2( 51.0835, -35.1613 )
 
-[node name="Collectable13" parent="stump l, moving tendril" index="8" instance=ExtResource( 4 )]
-
-position = Vector2( 280.67, 93.7513 )
-
-[node name="Collectable14" parent="stump l, moving tendril" index="9" instance=ExtResource( 4 )]
+[node name="Collectable14" parent="stump l, moving tendril" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 390.963, -74.9346 )
 
@@ -363,10 +359,6 @@ position = Vector2( -254.506, 2.70752 )
 [node name="Collectable39" parent="stump s, stone" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( -144.4, 25.2701 )
-
-[node name="Collectable40" parent="stump s, stone" index="8" instance=ExtResource( 4 )]
-
-position = Vector2( -9.92773, 9.02502 )
 
 [node name="tree2" parent="." index="18" instance=ExtResource( 26 )]
 
