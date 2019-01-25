@@ -81,6 +81,7 @@ _sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
 
 [node name="BackButton" parent="." index="2" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 11.0
 margin_top = 123.0
 margin_right = 235.0
@@ -166,9 +167,41 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="unlockableImg" parent="." index="6" instance=ExtResource( 7 )]
+[node name="Page1" type="Node2D" parent="." index="6"]
+
+[node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( -277, -69 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg2" parent="Page1" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( -85, -69 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg3" parent="Page1" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 107, -69 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg4" parent="Page1" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( -277, 59 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg5" parent="Page1" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( -85, 59 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg6" parent="Page1" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 107, 59 )
 dandelionsNeeded = 4
 NPCsNeeded = 1
 
