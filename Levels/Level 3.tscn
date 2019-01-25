@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat4.tscn" type="PackedScene" id=2]
@@ -15,10 +15,12 @@
 [ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Modules/03 combination/stumpXthorn/stump m, thorn 2.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Modules/02 single/moving platform/MovingPlat5(cliffx3).tscn" type="PackedScene" id=16]
-[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/finished/Tree Stump Medium New.png" type="Texture" id=17]
+[ext_resource path="res://Modules/02 single/moving platform/MovingPlat5(cliffx3).tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -26,6 +28,11 @@ bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 12.4875, 170.161 )
 }
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 363.126, 640.44 )
 
 [sub_resource type="Curve2D" id=2]
 
@@ -66,10 +73,12 @@ rotation = -0.000393503
 [node name="Worm" parent="movingten1" index="3" instance=ExtResource( 5 )]
 
 position = Vector2( -375.834, 139.963 )
+diggedOut = false
 
 [node name="Worm2" parent="movingten1" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( -237.608, 139.228 )
+diggedOut = false
 
 [node name="tendril4" parent="." index="3" instance=ExtResource( 6 )]
 
@@ -103,39 +112,77 @@ position = Vector2( -461, 62.0001 )
 
 [node name="Checkpoint2" parent="moving ten hard part" index="5" instance=ExtResource( 8 )]
 
-position = Vector2( 510.76, 64.698 )
+position = Vector2( 689.783, 62.9018 )
 
 [node name="tree 1" parent="." index="7" instance=ExtResource( 12 )]
 
-position = Vector2( 4283.15, -606.985 )
+position = Vector2( 4494.13, -606.844 )
 
 [node name="Jump down" parent="." index="8" instance=ExtResource( 13 )]
 
-position = Vector2( 4410.65, -543.158 )
+position = Vector2( 4621.62, -543.016 )
 
 [node name="stump m, thorn 2" parent="." index="9" instance=ExtResource( 14 )]
 
 editor/display_folded = true
-position = Vector2( 4985.58, -543.141 )
+position = Vector2( 5196.55, -543 )
 
 [node name="Rope" parent="stump m, thorn 2" index="3" instance=ExtResource( 15 )]
 
 position = Vector2( 244.708, -198.6 )
+mirrorSwing = false
 
-[node name="MovingPlat5" parent="." index="10" instance=ExtResource( 16 )]
-
-position = Vector2( 5687.32, -447.371 )
-
-[node name="platform" parent="." index="11" instance=ExtResource( 17 )]
+[node name="stump m 8" type="Node2D" parent="stump m, thorn 2" index="4"]
 
 editor/display_folded = true
-position = Vector2( 5662.28, -548.937 )
+position = Vector2( 119.148, 166.06 )
+scale = Vector2( 0.0765978, 0.0959247 )
+z_index = -5
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="trappedNPC" parent="platform" index="1" instance=ExtResource( 18 )]
+[node name="Ast 4" parent="stump m, thorn 2/stump m 8" index="0" instance=ExtResource( 16 )]
+
+position = Vector2( 278.307, -291.202 )
+scale = Vector2( 2.99633, 1.6584 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="stump" type="Sprite" parent="stump m, thorn 2/stump m 8" index="1"]
+
+scale = Vector2( 3.283, 2.90836 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m, thorn 2/stump m 8/stump" index="0"]
+
+position = Vector2( -289.35, -205 )
+scale = Vector2( 0.3046, 0.343836 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump m, thorn 2/stump m 8/stump/StaticBody2D2" index="0"]
+
+position = Vector2( 915.729, 640.662 )
+shape = SubResource( 3 )
+
+[node name="MovingPlat5" parent="." index="10" instance=ExtResource( 18 )]
+
+position = Vector2( 5898.29, -447.23 )
+
+[node name="platform" parent="." index="11" instance=ExtResource( 19 )]
+
+editor/display_folded = true
+position = Vector2( 5873.26, -548.796 )
+
+[node name="trappedNPC" parent="platform" index="1" instance=ExtResource( 20 )]
 
 position = Vector2( 7.37842, -47.9892 )
 
-[node name="Enemy" parent="platform" index="2" instance=ExtResource( 19 )]
+[node name="Enemy" parent="platform" index="2" instance=ExtResource( 21 )]
 
 position = Vector2( 9.72656, -44.85 )
 movespeed = 0.15
@@ -143,6 +190,10 @@ movespeed = 0.15
 [node name="EnemyPath" parent="platform/Enemy" index="0"]
 
 curve = SubResource( 2 )
+
+[node name="PathFollow2D" parent="platform/Enemy/EnemyPath" index="1"]
+
+rotation = 0.237247
 
 
 [editable path="movingten1/Enemy"]
