@@ -32,7 +32,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -40 ) ]
 }
 
-[node name="Worm" type="Node2D" groups=[
+[node name="Worm" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
@@ -40,6 +40,7 @@ scale = Vector2( 1.63897, 1.63897 )
 z_index = -1000
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+diggedOut = false
 
 [node name="Enemy" type="Node2D" parent="." index="0"]
 
