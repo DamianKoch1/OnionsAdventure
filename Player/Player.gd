@@ -188,6 +188,9 @@ func loseHp():
 		gracePeriodTimer = gracePeriod
 		#blinking
 		emit_signal("loseHp", self)
+		setState(idle)
+		motion.x = 0
+		motion.y = 0
 
 func bounce(bounceStr):
 	motion.y = -bounceStr
