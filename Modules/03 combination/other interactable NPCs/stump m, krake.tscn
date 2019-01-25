@@ -6,8 +6,6 @@
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=5]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -94,6 +92,6 @@ tile_data = PoolIntArray( 327670, 1, 0, 327671, 1, 0, 327672, 1, 0, 327673, 1, 0
 
 [node name="Bouncer" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 0, 80 )
+position = Vector2( 0, 96 )
 
 

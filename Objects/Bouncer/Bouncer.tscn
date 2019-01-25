@@ -51,14 +51,12 @@ bounceIncrease = 5
 [node name="icon" type="Sprite" parent="." index="0"]
 
 modulate = Color( 0.939697, 0.59375, 1, 1 )
-position = Vector2( 1.90735e-006, 24.0001 )
 scale = Vector2( 0.104817, 0.106667 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
