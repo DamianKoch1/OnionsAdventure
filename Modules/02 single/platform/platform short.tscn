@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
+
+[node name="platform short" type="Node2D"]
+
+[node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
+
+tile_data = PoolIntArray( 65533, 0, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 2, 0, 131069, 6, 0, 131070, 7, 0, 131071, 7, 0, 65536, 7, 0, 65537, 7, 0, 65538, 8, 0 )
+
+

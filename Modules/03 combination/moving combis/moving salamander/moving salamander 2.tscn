@@ -5,9 +5,7 @@
 [ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=4]
 
-
-
-[node name="moving salamander 2" type="Node2D" index="0"]
+[node name="moving salamander 2" type="Node2D"]
 
 [node name="Movingplatform" parent="." index="0" instance=ExtResource( 1 )]
 
