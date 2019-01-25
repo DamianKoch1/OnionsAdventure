@@ -41,68 +41,6 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-
-resource_name = "unlock"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-
-resource_name = "unlock"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
 [sub_resource type="Animation" id=4]
 
 resource_name = "unlock"
@@ -198,6 +136,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=7]
 
+resource_name = "unlock"
 length = 1.0
 loop = false
 step = 0.1
@@ -227,6 +166,37 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=8]
+
+resource_name = "unlock"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
 
 resource_name = "unlock"
 length = 1.0
@@ -381,6 +351,37 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="Animation" id=13]
+
+resource_name = "unlock"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
 [node name="Gallery" type="Container" index="0"]
 
 pause_mode = 2
@@ -485,6 +486,7 @@ _sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
 
 [node name="MainMenuButton" parent="." index="3" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 11.0
 margin_top = 123.0
 margin_right = 235.0
@@ -605,9 +607,15 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
+<<<<<<< working copy
+[node name="Page1" type="Node2D" parent="." index="6"]
+
+[node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 7 )]
+=======
 [node name="Page1" type="Node2D" parent="." index="9"]
 
 editor/display_folded = true
+visible = false
 
 [node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 7 )]
 
@@ -631,6 +639,7 @@ dandelionsNeeded = 4
 NPCsNeeded = 1
 
 [node name="unlockableImg4" parent="Page1" index="3" instance=ExtResource( 7 )]
+>>>>>>> merge rev
 
 editor/display_folded = true
 position = Vector2( -277, 59 )
@@ -663,6 +672,37 @@ position = Vector2( -277, -69 )
 dandelionsNeeded = 4
 NPCsNeeded = 1
 
+<<<<<<< working copy
+[node name="unlockableImg2" parent="Page1" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( -85, -69 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg3" parent="Page1" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 107, -69 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg4" parent="Page1" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( -277, 59 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg5" parent="Page1" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( -85, 59 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+
+[node name="unlockableImg6" parent="Page1" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 107, 59 )
+dandelionsNeeded = 4
+NPCsNeeded = 1
+=======
 [node name="Sprite" parent="Page2/unlockableImg" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
@@ -686,7 +726,7 @@ texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg2" index="1"]
 
-anims/unlock = SubResource( 2 )
+anims/unlock = SubResource( 4 )
 
 [node name="unlockableImg3" parent="Page2" index="2" instance=ExtResource( 7 )]
 
@@ -702,7 +742,7 @@ texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg3" index="1"]
 
-anims/unlock = SubResource( 3 )
+anims/unlock = SubResource( 5 )
 
 [node name="unlockableImg4" parent="Page2" index="3" instance=ExtResource( 7 )]
 
@@ -718,7 +758,7 @@ texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg4" index="1"]
 
-anims/unlock = SubResource( 4 )
+anims/unlock = SubResource( 6 )
 
 [node name="unlockableImg5" parent="Page2" index="4" instance=ExtResource( 7 )]
 
@@ -734,7 +774,7 @@ texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg5" index="1"]
 
-anims/unlock = SubResource( 5 )
+anims/unlock = SubResource( 7 )
 
 [node name="unlockableImg6" parent="Page2" index="5" instance=ExtResource( 7 )]
 
@@ -750,12 +790,11 @@ texture = ExtResource( 8 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg6" index="1"]
 
-anims/unlock = SubResource( 6 )
+anims/unlock = SubResource( 8 )
 
 [node name="Page3" type="Node2D" parent="." index="11"]
 
 editor/display_folded = true
-visible = false
 
 [node name="unlockableImg" parent="Page3" index="0" instance=ExtResource( 7 )]
 
@@ -771,7 +810,7 @@ texture = ExtResource( 9 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg" index="1"]
 
-anims/unlock = SubResource( 7 )
+anims/unlock = SubResource( 3 )
 
 [node name="unlockableImg2" parent="Page3" index="1" instance=ExtResource( 7 )]
 
@@ -787,7 +826,7 @@ texture = ExtResource( 9 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg2" index="1"]
 
-anims/unlock = SubResource( 8 )
+anims/unlock = SubResource( 9 )
 
 [node name="unlockableImg3" parent="Page3" index="2" instance=ExtResource( 7 )]
 
@@ -803,7 +842,7 @@ texture = ExtResource( 9 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg3" index="1"]
 
-anims/unlock = SubResource( 9 )
+anims/unlock = SubResource( 10 )
 
 [node name="unlockableImg4" parent="Page3" index="3" instance=ExtResource( 7 )]
 
@@ -819,7 +858,7 @@ texture = ExtResource( 9 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg4" index="1"]
 
-anims/unlock = SubResource( 10 )
+anims/unlock = SubResource( 11 )
 
 [node name="unlockableImg5" parent="Page3" index="4" instance=ExtResource( 7 )]
 
@@ -835,7 +874,7 @@ texture = ExtResource( 9 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg5" index="1"]
 
-anims/unlock = SubResource( 11 )
+anims/unlock = SubResource( 12 )
 
 [node name="unlockableImg6" parent="Page3" index="5" instance=ExtResource( 7 )]
 
@@ -851,9 +890,10 @@ texture = ExtResource( 9 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg6" index="1"]
 
-anims/unlock = SubResource( 12 )
+anims/unlock = SubResource( 13 )
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+>>>>>>> merge rev
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
