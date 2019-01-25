@@ -64,7 +64,6 @@ blend_times = [  ]
 
 [node name="Overlay" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Panel" type="Panel" parent="Overlay" index="0"]
@@ -88,7 +87,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Dandelions" type="Node2D" parent="Overlay" index="1"]
 
-editor/display_folded = true
 position = Vector2( 27.4132, 12.5864 )
 scale = Vector2( 0.652807, 0.652807 )
 

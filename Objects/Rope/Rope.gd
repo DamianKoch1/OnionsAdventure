@@ -8,13 +8,18 @@ var attachCD = 0
 
 var player
 
+export var mirrorSwing = false
+
 func _physics_process(delta):
 	attachCD = max(attachCD - delta, 0)
 	#pendulum rotation
 	swingAmount += swingSpeed
 	if swingAmount >= 20*PI:
 		swingAmount = 0
-	rotation_degrees = swingDegrees*sin(swingAmount)
+	if mirrorSwing != true:
+		rotation_degrees = swingDegrees*sin(swingAmount)
+	else:
+		rotation_degrees = -swingDegrees*sin(swingAmount)
 	if abs(rotation_degrees) <= 3 && $ropeSwing.playing == false:
 		$ropeSwing.playRandomPitch()
 	if Input.is_action_just_pressed("jump") && playerAttached == true:
