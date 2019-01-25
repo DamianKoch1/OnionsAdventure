@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Menus/ExtrasMenu/ExtrasMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/UI_Mock_Up_Damian_BG.jpg" type="Texture" id=2]
@@ -6,8 +6,10 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=5]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png" type="Texture" id=6]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.gd" type="Script" id=8]
 
-[node name="Gallery" type="Container"]
+[node name="Gallery" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -55,10 +57,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -92.0
-margin_top = -172.0
-margin_right = 69.0
-margin_bottom = -118.0
+margin_left = -341.0
+margin_top = -165.0
+margin_right = -180.0
+margin_bottom = -111.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -81,9 +83,9 @@ _sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
 [node name="BackButton" parent="." index="2" instance=ExtResource( 3 )]
 
 margin_left = 11.0
-margin_top = 91.0
+margin_top = 123.0
 margin_right = 235.0
-margin_bottom = 127.0
+margin_bottom = 159.0
 
 [node name="Label" parent="BackButton" index="0"]
 
@@ -101,10 +103,13 @@ margin_bottom = 29.0
 
 [node name="Dandelions" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
+position = Vector2( -149, -133 )
+
 [node name="Sprite" type="Sprite" parent="Dandelions" index="0"]
 
-position = Vector2( -277, -69 )
-scale = Vector2( 0.173125, 0.173125 )
+position = Vector2( -18.3922, -29.4368 )
+scale = Vector2( 0.0853825, 0.0853824 )
 texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="Dandelions" index="1"]
@@ -113,10 +118,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -245.0
-margin_top = -69.0
-margin_right = -192.0
-margin_bottom = -55.0
+margin_top = -39.0
+margin_right = 53.0
+margin_bottom = -25.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -132,10 +136,12 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="TrappedNPCs" type="Node2D" parent="." index="5"]
 
+editor/display_folded = true
+position = Vector2( 50.6818, -157.442 )
+
 [node name="Sprite2" type="Sprite" parent="TrappedNPCs" index="0"]
 
-position = Vector2( 43, -69 )
-scale = Vector2( 0.0398, 0.0398 )
+scale = Vector2( 0.019993, 0.019993 )
 texture = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="TrappedNPCs" index="1"]
@@ -144,10 +150,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 107.0
-margin_top = -69.0
-margin_right = 147.0
-margin_bottom = -55.0
+margin_left = 38.0
+margin_top = -10.0
+margin_right = 78.0
+margin_bottom = 4.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -160,6 +166,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
+
+[node name="unlockableImg" parent="." index="6" instance=ExtResource( 7 )]
+
+script = ExtResource( 8 )
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
