@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=1]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/feet_b_sala.png" type="Texture" id=2]
@@ -103,34 +103,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Emission Shape", "Gravity", "Hue Variation", "Scale", "Spread", "Tangential Accel" ]
 
-[sub_resource type="Animation" id=5]
-
-resource_name = "burn"
-length = 1.0
-loop = false
-step = 0.05
-tracks/0/type = "method"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "emit"
-}, {
-"args": [  ],
-"method": "burn"
-}, {
-"args": [  ],
-"method": "removeObj"
-} ]
-}
-
-[node name="FireSalamander" type="Node2D" index="0"]
+[node name="FireSalamander" type="Node2D"]
 
 z_index = -7
 script = ExtResource( 1 )
@@ -293,7 +266,6 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/burn = SubResource( 5 )
 "anims/jumped on" = ExtResource( 10 )
 blend_times = [  ]
 
