@@ -44,7 +44,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -146,15 +146,15 @@ position = Vector2( -2389.52, 191.1 )
 
 [node name="Collectable10" parent="stump l, moving tendril" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( -193.719, -50.42 )
+position = Vector2( -172.847, -110.579 )
 
 [node name="Collectable11" parent="stump l, moving tendril" index="6" instance=ExtResource( 4 )]
 
-position = Vector2( -86.2446, -13.9318 )
+position = Vector2( -88.7002, -59.3581 )
 
 [node name="Collectable12" parent="stump l, moving tendril" index="7" instance=ExtResource( 4 )]
 
-position = Vector2( 51.0835, -35.1613 )
+position = Vector2( 60.9053, -99.0038 )
 
 [node name="Collectable14" parent="stump l, moving tendril" index="8" instance=ExtResource( 4 )]
 
