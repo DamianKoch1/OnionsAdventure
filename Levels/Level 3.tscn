@@ -192,15 +192,15 @@ position = Vector2( -378.149, -28.8801 )
 
 [node name="Collectable2" parent="moving ten hard part" index="7" instance=ExtResource( 3 )]
 
-position = Vector2( -86.2158, -55.8413 )
+position = Vector2( -71.5854, -87.5403 )
 
 [node name="Collectable3" parent="moving ten hard part" index="8" instance=ExtResource( 3 )]
 
-position = Vector2( 254.321, -65.0516 )
+position = Vector2( 285.532, -83.0956 )
 
 [node name="Collectable4" parent="moving ten hard part" index="9" instance=ExtResource( 3 )]
 
-position = Vector2( 581.034, -65.4693 )
+position = Vector2( 575.034, -85.4694 )
 
 [node name="tree 1" parent="." index="7" instance=ExtResource( 13 )]
 
@@ -457,13 +457,13 @@ objToDestroyPath = NodePath("../../platform short2/Thornbush")
 
 position = Vector2( 828.726, -22.0994 )
 
-[node name="Thornbush" parent="moving salamander 2 platform/platform short2" index="1" instance=ExtResource( 33 )]
+[node name="Collectable" parent="moving salamander 2 platform/platform short2" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 50.3945, -47.2071 )
+
+[node name="Thornbush" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 33 )]
 
 position = Vector2( -28.5078, -63.5316 )
-
-[node name="Collectable" parent="moving salamander 2 platform/platform short2/Thornbush" index="1" instance=ExtResource( 3 )]
-
-position = Vector2( 78.9023, 16.3245 )
 
 [node name="Ladder2" parent="moving salamander 2 platform" index="7" instance=ExtResource( 27 )]
 
@@ -527,7 +527,7 @@ position = Vector2( -290.918, -144.705 )
 
 [node name="Collectable2" parent="End3(down)" index="3" instance=ExtResource( 3 )]
 
-position = Vector2( -158.271, -73.8599 )
+position = Vector2( -205.375, -65.2354 )
 
 [node name="Collectable3" parent="End3(down)" index="4" instance=ExtResource( 3 )]
 
