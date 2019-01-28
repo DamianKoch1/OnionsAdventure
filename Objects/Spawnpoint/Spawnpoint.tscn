@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Spawnpoint/spawnpoint.png" type="Texture" id=2]
@@ -116,6 +116,11 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Animation", "Damping", "Emission Shape", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale" ]
 
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 117.754, 134.469 )
+
 [node name="Spawnpoint" type="Node2D" index="0" groups=[
 "Spawnpoint",
 ]]
@@ -217,5 +222,21 @@ scale = Vector2( 1.60368, 1.60368 )
 modulate = Color( 0.824219, 0.921722, 1, 1 )
 scale = Vector2( 2.2966, 2.2966 )
 _sections_unfolded = [ "Process Material", "Textures", "Time", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="." index="7"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+shape = SubResource( 7 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 
