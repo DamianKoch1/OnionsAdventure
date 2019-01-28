@@ -130,7 +130,7 @@ tracks/0/keys = {
 } ]
 }
 
-[node name="FireSalamander" type="Node2D" index="0"]
+[node name="FireSalamander" type="Node2D"]
 
 z_index = -7
 script = ExtResource( 1 )
