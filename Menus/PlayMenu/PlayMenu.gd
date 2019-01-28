@@ -9,6 +9,7 @@ func _on_ContinueButton_pressed():
 	SaveGame.loadPlayerState = true
 
 func _on_LevelSelectorButton_pressed():
+	SaveGame.checkLevelProgress()
 	UISelect.playing = true
 	SaveGame.loadPlayerState = false
 	get_tree().change_scene_to(levelSelector)

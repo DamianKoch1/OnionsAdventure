@@ -7,7 +7,7 @@ onready var sprite = $Onion
 onready var anim = $Onion/AnimationPlayer
 onready var animTreePlayer = $Onion/AnimationTreePlayer1
 
-var state = idle setget setState, getState
+var state = idle setget setState
 enum {idle, run, jump, fall, climb, frozen}
 
 #node to attach to if airborne
@@ -182,9 +182,6 @@ func setState(newState):
 				animTreePlayer.oneshot_node_stop("jumpOneshot")
 				animTreePlayer.oneshot_node_stop("fallOneshot")
 				animTreePlayer.transition_node_set_current("idle/walk", 0)
-
-func getState():
-	return state
 
 func loseHp():
 	if gracePeriodTimer == 0 && state != frozen && debugGodmode != true:
