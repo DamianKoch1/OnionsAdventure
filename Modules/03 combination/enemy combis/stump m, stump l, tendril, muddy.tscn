@@ -7,19 +7,19 @@
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=6]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 7.82994 )
 
-[sub_resource type="Curve2D" id=5]
+[sub_resource type="Curve2D" id=2]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 61.5737, 169.831 )
 }
 
-[node name="stump m, stump l, tendril, muddy" type="Node2D" index="0"]
+[node name="stump m, stump l, tendril, muddy" type="Node2D"]
 
 [node name="stump l 8" type="Node2D" parent="." index="0"]
 
@@ -58,7 +58,7 @@ bounce = 0.0
 
 position = Vector2( 999.944, 973.152 )
 scale = Vector2( 33.1696, 96.2157 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stump l 8/Stump/StaticBody2D2" index="1"]
 
@@ -79,11 +79,15 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 
 [node name="Enemy" parent="." index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 66.315, 90.5252 )
+position = Vector2( 78.2566, 97.8228 )
 
 [node name="EnemyPath" parent="Enemy" index="0"]
 
-curve = SubResource( 5 )
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" parent="Enemy/EnemyPath" index="1"]
+
+rotation = -0.00257338
 
 
 [editable path="Enemy"]

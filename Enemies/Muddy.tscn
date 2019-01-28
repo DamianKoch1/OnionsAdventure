@@ -21,11 +21,11 @@ extents = Vector2( 15.8134, 16.2055 )
 custom_solver_bias = 0.0
 extents = Vector2( 38.3767, 36.5009 )
 
-[node name="Enemy" type="Node2D" groups=[
+[node name="Enemy" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
-scale = Vector2( 1.95469, 1.95469 )
+scale = Vector2( 1.56875, 1.56875 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 mothsound = false
