@@ -16,7 +16,7 @@
 [ext_resource path="res://Modules/03 combination/stumpXthorn/stump m, thorn 2.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Assets/finished/Tree Stump Medium New.png" type="Texture" id=17]
+[ext_resource path="res://Objects/Obstacles/Trees/Tree Stump Medium New.png" type="Texture" id=17]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat5(cliffx3).tscn" type="PackedScene" id=18]
 [ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=20]
@@ -36,6 +36,7 @@
 [ext_resource path="res://Modules/03 combination/moving combis/stump l, movingten, stone, muddy.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=35]
 [ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=36]
+
 
 [sub_resource type="Curve2D" id=1]
 
