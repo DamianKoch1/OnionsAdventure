@@ -22,7 +22,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ast 4" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 237.27, 22.3374 )
+position = Vector2( 230.731, -70.272 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Stump" type="Sprite" parent="." index="2"]
