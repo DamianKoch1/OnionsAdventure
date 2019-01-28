@@ -20,11 +20,8 @@ func _process(delta):
 				anim.play("1to2")
 			2:
 				$pageTurn.playRandomPitch()
-				anim.play("2to3")
-			3:
-				$pageTurn.playRandomPitch()
-				atPanel = 4
-				anim.play("3")
+				atPanel = 3
+				anim.play("2")
 	
 func loadMainMenu():
 	get_tree().change_scene_to(mainMenu)
@@ -38,20 +35,14 @@ func _on_PanelButton1_pressed():
 
 func _on_PanelButton2_pressed():
 	if anim.is_playing() == false:
+		atPanel = 3
 		$pageTurn.playRandomPitch()
-		anim.play("2to3")
-
-
-func _on_PanelButton3_pressed():
-	if anim.is_playing() == false:
-		atPanel = 4
-		$pageTurn.playRandomPitch()
-		anim.play("3")
+		anim.play("2")
 		$BGMPlayer.fadeOut()
 
 
 func _on_SkipButton_pressed():
-	atPanel = 4
+	atPanel = 3
 	if has_node("PanelButton1"):
 		$PanelButton1.disabled = true
 		$PanelButton1.hide()
@@ -59,6 +50,6 @@ func _on_SkipButton_pressed():
 		$PanelButton2.disabled = true
 		$PanelButton2.hide()
 	UISelect.playing = true
-	anim.play("3")
+	anim.play("2")
 	$BGMPlayer.fadeOut()
 	
