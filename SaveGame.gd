@@ -13,7 +13,8 @@ var playerPosX
 var playerPosY
 
 #level the player is in
-var currLevelId = 0
+var currLevelId = 0 setget setCurrLevelId
+var highestLevelId = 1
 
 var npcDict = {}
 var dandelionDict = {}
@@ -22,6 +23,11 @@ var dandelionDict = {}
 func _ready():
 	saveFile = ConfigFile.new()
 	loadCollectableCount()
+
+func setCurrLevelId(newId):
+	if newId > currLevelId:
+		highestLevelId = newId
+	currLevelId = newId
 
 func deleteSave():
 	var dir = Directory.new()
@@ -35,6 +41,7 @@ func deleteSave():
 
 func saveGame():
 	saveFile.set_value("SaveState", "latestLevelId", currLevelId) 
+	saveFile.set_value("SaveState", "highestLevelId", highestLevelId)
 	saveFile.set_value("SaveState", "spawnPosX", spawnpoint.global_position.x) 
 	saveFile.set_value("SaveState", "spawnPosY", spawnpoint.global_position.y) 
 	saveFile.set_value("SaveState", "NPCsSaved", trappedNPCs) 
@@ -51,6 +58,11 @@ func loadGame():
 	dandelions = saveFile.get_value("SaveState", "dandelions", 0)
 	playerPosX = saveFile.get_value("SaveState", "spawnPosX", 0)
 	playerPosY = saveFile.get_value("SaveState", "spawnPosY", 0)
+	
+
+func checkLevelProgress():
+	saveFile.load(savePath)
+	highestLevelId = saveFile.get_value("SaveState", "highestLevelId", 1)
 
 func loadCollectableCount():
 	saveFile.load(savePath)
