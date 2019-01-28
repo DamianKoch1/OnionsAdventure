@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/UI_Mock_Up_Damian.jpg" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GlowbugVFX.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Menus/StartFadeIn.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -254,6 +255,13 @@ position = Vector2( -1.95227, 37.2379 )
 amount = 30
 process_material = SubResource( 7 )
 
+[node name="StartFadeIn" parent="." index="9" instance=ExtResource( 11 )]
+
+margin_left = -396.0
+margin_top = -168.0
+margin_right = 372.0
+margin_bottom = 280.0
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 
 [connection signal="pressed" from="ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
@@ -269,3 +277,4 @@ process_material = SubResource( 7 )
 [editable path="OptionsButton"]
 [editable path="CreditsButton"]
 [editable path="QuitButton"]
+[editable path="StartFadeIn"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=1]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/feet_b_sala.png" type="Texture" id=2]
@@ -103,34 +103,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Emission Shape", "Gravity", "Hue Variation", "Scale", "Spread", "Tangential Accel" ]
 
-[sub_resource type="Animation" id=5]
-
-resource_name = "burn"
-length = 1.0
-loop = false
-step = 0.05
-tracks/0/type = "method"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "emit"
-}, {
-"args": [  ],
-"method": "burn"
-}, {
-"args": [  ],
-"method": "removeObj"
-} ]
-}
-
-[node name="FireSalamander" type="Node2D"]
+[node name="FireSalamander" type="Node2D" index="0"]
 
 z_index = -7
 script = ExtResource( 1 )
@@ -156,8 +129,7 @@ shape = SubResource( 1 )
 
 [node name="FireSalamander" type="Node2D" parent="FireSalamander" index="1"]
 
-position = Vector2( 29.1989, 0.614712 )
-scale = Vector2( -1, 1 )
+position = Vector2( -4.07375, -1.70664 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="feet_b_sala" type="Sprite" parent="FireSalamander/FireSalamander" index="0"]
@@ -293,14 +265,13 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/burn = SubResource( 5 )
 "anims/jumped on" = ExtResource( 10 )
 blend_times = [  ]
 
 [node name="Fire_salamander_FlameVFX" parent="." index="4" instance=ExtResource( 11 )]
 
 editor/display_folded = true
-position = Vector2( 51.847, 0 )
+position = Vector2( 47.7602, 18.0499 )
 
 [node name="FireSFX" type="AudioStreamPlayer2D" parent="Fire_salamander_FlameVFX" index="0"]
 
