@@ -65,27 +65,27 @@ enabled = false
 
 [node name="OnionBody" parent="Onion/Onion/Colisionposition/Höhenposition" index="0"]
 
-scale = Vector2( 0.5, 0.449423 )
+scale = Vector2( 0.5, 0.437633 )
 
 [node name="OnionHair" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
-rotation = 0.725415
+rotation = 0.780087
 
 [node name="onion_eyes" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="1"]
 
-scale = Vector2( 1, 0.975004 )
+scale = Vector2( 1, 0.46017 )
 
 [node name="OnionEarL" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
-rotation = 0.28049
+rotation = 0.243467
 
 [node name="OnionTail" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
-rotation = -0.14642
+rotation = -0.256754
 
 [node name="OnionEarR" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
-rotation = -0.573933
+rotation = -0.594291
 
 [node name="AnimationTreePlayer1" parent="Onion/Onion" index="1"]
 
