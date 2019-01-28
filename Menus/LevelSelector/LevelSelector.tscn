@@ -6,7 +6,7 @@
 [ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=5]
 
-[node name="LevelSelector" type="Container" index="0"]
+[node name="LevelSelector" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -136,7 +136,19 @@ levelId = 2
 
 text = "Level 2"
 
-[node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 5 )]
+[node name="Level3Button" parent="." index="7" instance=ExtResource( 4 )]
+
+margin_left = -277.0
+margin_top = -37.0
+margin_right = -117.0
+margin_bottom = -5.0
+levelId = 3
+
+[node name="Label" parent="Level3Button" index="0"]
+
+text = "Level 3"
+
+[node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 5 )]
 
 visible = false
 margin_left = 0.0
@@ -156,3 +168,4 @@ margin_bottom = 29.0
 [editable path="Level0Button"]
 [editable path="Level1Button"]
 [editable path="Level2Button"]
+[editable path="Level3Button"]
