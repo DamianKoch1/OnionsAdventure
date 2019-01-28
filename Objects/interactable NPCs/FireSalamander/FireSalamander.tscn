@@ -103,7 +103,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Emission Shape", "Gravity", "Hue Variation", "Scale", "Spread", "Tangential Accel" ]
 
-[node name="FireSalamander" type="Node2D"]
+[node name="FireSalamander" type="Node2D" index="0"]
 
 z_index = -7
 script = ExtResource( 1 )
@@ -129,8 +129,7 @@ shape = SubResource( 1 )
 
 [node name="FireSalamander" type="Node2D" parent="FireSalamander" index="1"]
 
-position = Vector2( 29.1989, 0.614712 )
-scale = Vector2( -1, 1 )
+position = Vector2( -4.07375, -1.70664 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="feet_b_sala" type="Sprite" parent="FireSalamander/FireSalamander" index="0"]
@@ -272,7 +271,7 @@ blend_times = [  ]
 [node name="Fire_salamander_FlameVFX" parent="." index="4" instance=ExtResource( 11 )]
 
 editor/display_folded = true
-position = Vector2( 51.847, 0 )
+position = Vector2( 47.7602, 18.0499 )
 
 [node name="FireSFX" type="AudioStreamPlayer2D" parent="Fire_salamander_FlameVFX" index="0"]
 
