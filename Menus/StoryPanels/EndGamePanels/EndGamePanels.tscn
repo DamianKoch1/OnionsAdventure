@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/EndGamePanels/EndGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/PanelButton.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Audio/Music/StorytellingMainpart.wav" type="AudioStream" id=10]
 [ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Alef-Regular.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Menus/StartFadeIn.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -167,7 +168,7 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "loadLv1"
+"method": "loadMainMenu"
 } ]
 }
 tracks/3/type = "method"
@@ -205,11 +206,12 @@ use_filter = false
 font_data = ExtResource( 12 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="EndGamePanels" type="Node" index="0"]
+[node name="EndGamePanels" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
+atPanel = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
@@ -324,24 +326,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 
-[node name="StartFadeIn" type="Panel" parent="." index="9"]
-
-pause_mode = 2
-visible = false
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 768.0
-margin_bottom = 448.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Visibility" ]
+[node name="StartFadeIn" parent="." index="9" instance=ExtResource( 13 )]
 
 [connection signal="pressed" from="PanelButton3" to="." method="_on_PanelButton3_pressed"]
 
