@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/head.png-2d52e608ab7603a77709afef79260231.stex"
+path="res://.import/tongue_sala.png-6102c59c66bef19f8b917e73184f41aa.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/head.png"
-dest_files=[ "res://.import/head.png-2d52e608ab7603a77709afef79260231.stex" ]
+source_file="res://Objects/interactable NPCs/FireSalamander/tongue_sala.png"
+dest_files=[ "res://.import/tongue_sala.png-6102c59c66bef19f8b917e73184f41aa.stex" ]
 
 [params]
 
