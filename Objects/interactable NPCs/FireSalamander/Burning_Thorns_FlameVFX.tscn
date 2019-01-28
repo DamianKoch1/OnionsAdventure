@@ -55,13 +55,13 @@ randomness = 0.0
 fixed_fps = 0
 fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
+local_coords = false
 draw_order = 0
 process_material = SubResource( 1 )
 texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time" ]
 
 
