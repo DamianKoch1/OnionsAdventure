@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/head.png-2d52e608ab7603a77709afef79260231.stex"
+path="res://.import/fire_sala.png-d892db58d42929d5cc78a74a706339bd.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/head.png"
-dest_files=[ "res://.import/head.png-2d52e608ab7603a77709afef79260231.stex" ]
+source_file="res://Objects/interactable NPCs/FireSalamander/fire_sala.png"
+dest_files=[ "res://.import/fire_sala.png-d892db58d42929d5cc78a74a706339bd.stex" ]
 
 [params]
 
