@@ -37,7 +37,6 @@
 [ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=35]
 [ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=36]
 
-
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
@@ -45,12 +44,12 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 12.4875, 170.161 )
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 363.126, 640.44 )
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=3]
 
 bake_interval = 5.0
 _data = {
@@ -69,7 +68,6 @@ position = Vector2( 480.387, 0.465195 )
 
 [node name="movingten1" parent="." index="2" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 position = Vector2( 1164.13, -223.809 )
 
 [node name="Enemy" parent="movingten1" index="2" instance=ExtResource( 4 )]
@@ -88,13 +86,12 @@ rotation = -0.000393503
 
 [node name="Worm" parent="movingten1" index="3" instance=ExtResource( 5 )]
 
-position = Vector2( -375.834, 139.963 )
-diggedOut = false
+position = Vector2( -353.401, 140.938 )
 
 [node name="Worm2" parent="movingten1" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( -237.608, 139.228 )
-diggedOut = false
+diggedOut = true
 
 [node name="tendril4" parent="." index="3" instance=ExtResource( 6 )]
 
@@ -146,7 +143,6 @@ position = Vector2( 5196.55, -543 )
 [node name="Rope" parent="stump m, thorn 2" index="3" instance=ExtResource( 15 )]
 
 position = Vector2( 244.708, -198.6 )
-mirrorSwing = false
 
 [node name="stump m 8" type="Node2D" parent="stump m, thorn 2" index="4"]
 
@@ -183,7 +179,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump m, thorn 2/stump m 8/stump/StaticBody2D2" index="0"]
 
 position = Vector2( 915.729, 640.662 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="MovingPlat5" parent="." index="10" instance=ExtResource( 18 )]
 
@@ -206,11 +202,11 @@ movespeed = 0.15
 
 [node name="EnemyPath" parent="platform/Enemy" index="0"]
 
-curve = SubResource( 2 )
+curve = SubResource( 3 )
 
 [node name="PathFollow2D" parent="platform/Enemy/EnemyPath" index="1"]
 
-rotation = 0.237247
+rotation = 0.237251
 
 [node name="stump l, tendril" parent="." index="12" instance=ExtResource( 22 )]
 
@@ -231,7 +227,6 @@ position = Vector2( 6969.42, -285.561 )
 
 [node name="platform long" parent="." index="15" instance=ExtResource( 25 )]
 
-editor/display_folded = true
 position = Vector2( 7094.53, -480.903 )
 
 [node name="Ladder" parent="platform long" index="1" instance=ExtResource( 26 )]
@@ -240,16 +235,15 @@ position = Vector2( -345.173, -58.9086 )
 
 [node name="Bouncer" parent="platform long" index="2" instance=ExtResource( 27 )]
 
-position = Vector2( -153.094, -52.2546 )
+position = Vector2( -155.478, -26.8328 )
 
 [node name="Bouncer2" parent="platform long" index="3" instance=ExtResource( 27 )]
 
-position = Vector2( 151.834, -51.6588 )
+position = Vector2( 151.437, -25.8398 )
 
 [node name="Worm" parent="platform long" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( -59.4955, 8.29045 )
-diggedOut = false
 
 [node name="Worm2" parent="platform long" index="5" instance=ExtResource( 5 )]
 
@@ -259,7 +253,6 @@ diggedOut = true
 [node name="Worm3" parent="platform long" index="6" instance=ExtResource( 5 )]
 
 position = Vector2( 54.0073, 8.25138 )
-diggedOut = false
 
 [node name="Ladder2" parent="platform long" index="7" instance=ExtResource( 26 )]
 
@@ -285,7 +278,6 @@ position = Vector2( 5.36426, -49.7429 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 30 )]
 
-editor/display_folded = true
 position = Vector2( 9536.91, -596.15 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 26 )]
@@ -298,25 +290,20 @@ position = Vector2( 316.825, -140.403 )
 
 [node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 29 )]
 
-editor/display_folded = true
 position = Vector2( 612.643, -54.0206 )
 
 [node name="FireSalamander" parent="moving salamander 2 platform/platform short" index="1" instance=ExtResource( 31 )]
 
 position = Vector2( 19.6162, -24.6447 )
+objToDestroyPath = NodePath("../../platform short2/Thornbush")
 
 [node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 29 )]
 
-editor/display_folded = true
 position = Vector2( 828.726, -22.0994 )
 
 [node name="Thornbush" parent="moving salamander 2 platform/platform short2" index="1" instance=ExtResource( 32 )]
 
 position = Vector2( -28.5078, -63.5316 )
-
-[node name="Thornbush2" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 32 )]
-
-position = Vector2( 39.9111, -62.7172 )
 
 [node name="Ladder2" parent="moving salamander 2 platform" index="7" instance=ExtResource( 26 )]
 
