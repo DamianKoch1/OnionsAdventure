@@ -5,8 +5,6 @@
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=4]
 
-
-
 [node name="stump s, mealy, krake" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
@@ -19,7 +17,7 @@ position = Vector2( 130, 100 )
 
 [node name="Bouncer" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -170, 80 )
+position = Vector2( -172.702, 104.316 )
 
 [node name="Worm" parent="." index="3" instance=ExtResource( 4 )]
 
