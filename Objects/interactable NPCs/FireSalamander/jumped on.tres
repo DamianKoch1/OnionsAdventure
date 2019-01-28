@@ -3,7 +3,7 @@
 [resource]
 
 resource_name = "jumped on"
-length = 0.4
+length = 1.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -77,5 +77,25 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 51.0342, 21.8339 ), Vector2( 51.0342, 19.8339 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2, 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "emit"
+}, {
+"args": [  ],
+"method": "burn"
+}, {
+"args": [  ],
+"method": "removeObj"
+} ]
 }
 
