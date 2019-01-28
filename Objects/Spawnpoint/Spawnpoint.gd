@@ -3,8 +3,6 @@ extends Node2D
 
 func _ready():
 	SaveGame.spawnpoint = self
-	for p in get_tree().get_nodes_in_group("Player"):
-		p.connect("loseHp", self, "respawn")
 
 
 func respawn(player):
@@ -14,3 +12,7 @@ func respawn(player):
 
 func playActivationSound():
 	$activate.playing = true
+
+func _on_Area2D_body_entered(body):
+	if body.is_in_group("Player"):
+		body.connect("loseHp", self, "respawn")
