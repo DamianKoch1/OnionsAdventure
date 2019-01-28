@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/asset_tree_stump_medium_grass_1.png-ffc250f075b656b1d9941876eabc7fdb.stex"
+path="res://.import/Tree Stump Medium New.png-f5feb1825ded88a529079c27277bf73f.stex"
 
 [deps]
 
-source_file="res://Assets/Trees/asset_tree_stump_medium_grass_1.png"
-dest_files=[ "res://.import/asset_tree_stump_medium_grass_1.png-ffc250f075b656b1d9941876eabc7fdb.stex" ]
+source_file="res://Objects/Obstacles/Trees/Tree Stump Medium New.png"
+dest_files=[ "res://.import/Tree Stump Medium New.png-f5feb1825ded88a529079c27277bf73f.stex" ]
 
 [params]
 

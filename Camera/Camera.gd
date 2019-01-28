@@ -6,8 +6,6 @@ onready var npcEmpty = $CanvasLayer/NPCs/NPCsEmpty
 onready var npcImgWidth  = npcFull.region_rect.size.x / 3
 
 
-onready var players = get_tree().get_nodes_in_group("Player")
-export var playerId = 0
 var player
 
 onready var dandelionCounter = $CanvasLayer/Dandelions/Label
@@ -17,10 +15,10 @@ onready var hudUpdated = false
 #get player to follow by id, setup npc hud updating
 func _ready():
 	$BGMPlayer.fadeIn()
-	if players.size() > 0:
-		player = players[playerId]
-		player.connect("NPCsaved", self, "updateNPCsaved")
-		player.connect("collectedDandelion", self, "updateCollectables")
+	
+func connectSignals():
+	player.connect("NPCsaved", self, "updateNPCsaved")
+	player.connect("collectedDandelion", self, "updateCollectables")
 
 func _physics_process(delta):
 	if player != null:
