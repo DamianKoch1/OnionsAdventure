@@ -7,6 +7,7 @@ onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 export var atPanel = 1
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	MenuMusic.fadeOut(2)
 	$BGMPlayer.fadeIn(2)
 	atPanel = 1
