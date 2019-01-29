@@ -31,10 +31,6 @@ export var fallVFXspeedThreshhold = 700
 onready var debugFly = false
 onready var debugGodmode = false
 
-#grace period (invincibility) after getting hit
-onready var gracePeriodTimer = 0
-export var gracePeriod = 2
-
 #rope player attaches to if climbing on it
 var rope
 
@@ -52,10 +48,6 @@ func _ready():
 
 func _physics_process(delta):
 	if state != frozen:
-		#reducing cooldowns
-		gracePeriodTimer = max(gracePeriodTimer - delta, 0)
-		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
-		
 		#debug fly and godmode
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == false:
@@ -186,10 +178,9 @@ func setState(newState):
 				animTreePlayer.transition_node_set_current("idle/walk", 0)
 
 func loseHp():
-	if gracePeriodTimer == 0 && state != frozen && debugGodmode != true:
+	if state != frozen && debugGodmode != true:
 		$SFX/hurt.playing = true
-		gracePeriodTimer = gracePeriod
-		#blinking
+		#blinking? modulating alpha turns black in animationTreePlayer...
 		emit_signal("loseHp", self)
 		setState(idle)
 		motion.x = 0
