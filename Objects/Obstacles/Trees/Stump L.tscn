@@ -2,14 +2,14 @@
 
 [ext_resource path="res://Objects/Obstacles/Trees/BranchL.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Big_NobranchesA.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Obstacles/Trees/Tree Stump Big New v2.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 7.82994 )
+extents = Vector2( 9.3325, 9.25747 )
 
-[node name="stump l 8" type="Node2D"]
+[node name="stump l 8" type="Node2D" index="0"]
 
 scale = Vector2( 0.0989583, 0.104806 )
 z_index = -5
@@ -27,6 +27,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Stump" type="Sprite" parent="." index="2"]
 
+position = Vector2( 18.1129, 78.6706 )
 scale = Vector2( 2.10025, 2.34684 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
@@ -48,14 +49,9 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stump/StaticBody2D2" index="0"]
 
-position = Vector2( 999.944, 973.152 )
+position = Vector2( 1019.23, 801.484 )
 scale = Vector2( 33.1696, 96.2157 )
 shape = SubResource( 1 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stump/StaticBody2D2" index="1"]
-
-build_mode = 0
-polygon = PoolVector2Array( 669.354, 228.125, 1331.84, 256.482, 1324.12, -52.4717, 666.972, 98.79 )
 
 
 [editable path="Ast 4"]

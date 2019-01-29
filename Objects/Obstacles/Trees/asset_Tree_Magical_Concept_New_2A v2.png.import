@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Branch_LeftA.png-a498b3635b26a77ea53dab67f82ee62f.stex"
+path="res://.import/asset_Tree_Magical_Concept_New_2A v2.png-336858d5c30c73ec815f9e11a853c8f0.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Trees/Asset_Branch_LeftA.png"
-dest_files=[ "res://.import/Asset_Branch_LeftA.png-a498b3635b26a77ea53dab67f82ee62f.stex" ]
+source_file="res://Objects/Obstacles/Trees/asset_Tree_Magical_Concept_New_2A v2.png"
+dest_files=[ "res://.import/asset_Tree_Magical_Concept_New_2A v2.png-336858d5c30c73ec815f9e11a853c8f0.stex" ]
 
 [params]
 

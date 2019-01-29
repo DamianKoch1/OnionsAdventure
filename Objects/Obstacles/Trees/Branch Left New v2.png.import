@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree Stump Small New.png-a41b3a1fe28ba12615c082af9d7cd934.stex"
+path="res://.import/Branch Left New v2.png-de8ef66368820d928cd24ac6b2b4d024.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Trees/Tree Stump Small New.png"
-dest_files=[ "res://.import/Tree Stump Small New.png-a41b3a1fe28ba12615c082af9d7cd934.stex" ]
+source_file="res://Objects/Obstacles/Trees/Branch Left New v2.png"
+dest_files=[ "res://.import/Branch Left New v2.png-de8ef66368820d928cd24ac6b2b4d024.stex" ]
 
 [params]
 

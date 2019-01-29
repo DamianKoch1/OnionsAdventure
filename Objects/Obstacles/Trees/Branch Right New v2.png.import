@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Branch_RightA.png-224cb15333bfe1e8d35f4f72b44c9c20.stex"
+path="res://.import/Branch Right New v2.png-bfb5912846bf542608498e6a1ea7801c.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Trees/Asset_Branch_RightA.png"
-dest_files=[ "res://.import/Asset_Branch_RightA.png-224cb15333bfe1e8d35f4f72b44c9c20.stex" ]
+source_file="res://Objects/Obstacles/Trees/Branch Right New v2.png"
+dest_files=[ "res://.import/Branch Right New v2.png-bfb5912846bf542608498e6a1ea7801c.stex" ]
 
 [params]
 
