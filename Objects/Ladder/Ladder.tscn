@@ -8,7 +8,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 34.4653 )
 
-[node name="Ladder" type="Area2D" index="0"]
+[node name="Ladder" type="Area2D" index="0" groups=[
+"rayIgnore",
+]]
 
 position = Vector2( 32, 112 )
 scale = Vector2( 1, 3.5 )

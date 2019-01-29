@@ -149,7 +149,9 @@ func setIdle():
 	state = idle
 
 func setState(newState):
-	#set current animation on state changes, tried scale set to prevent scale glitches when attaching to rotated objects
+	#play animations on state changes, tried scale set to prevent scale glitches when attaching to rotated/scaled objects
+	global_scale.x = 0.5
+	global_scale.y = 0.5
 	if state != frozen:
 		if state == fall && highestFallSpeed >= fallVFXspeedThreshhold:
 			if newState == run || newState == idle:
@@ -203,7 +205,7 @@ func rayUpdate():
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
-		if col.get_class() == "Area2D":
+		if col.is_in_group("rayIgnore"):
 			ray.add_exception(col)
 		else:
 			if global_position.distance_to(ray.get_collision_point()) <= 30:
