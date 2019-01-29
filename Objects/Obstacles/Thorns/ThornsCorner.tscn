@@ -13,7 +13,9 @@ extents = Vector2( 9276.05, 7976.64 )
 custom_solver_bias = 0.0
 extents = Vector2( 5260.31, 6232.19 )
 
-[node name="ThornsCorner" type="Node2D" index="0"]
+[node name="ThornsCorner" type="Node2D" index="0" groups=[
+"rayIgnore",
+]]
 
 z_index = -5
 _sections_unfolded = [ "Z Index" ]
