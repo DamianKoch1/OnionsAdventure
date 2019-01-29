@@ -1,0 +1,104 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Objects/Obstacles/Stones/StoneSmall3A.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Modules/03 combination/moving combis/stump l, movingten, stones.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Modules/02 single/moving platform/movingplatdown.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/movingsalamander3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, thorn, krake.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Modules/03 combination/TreeDown.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, moving tendril.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=18]
+
+[node name="Level 4" type="Node2D" index="0"]
+
+[node name="PLEASEDELETEME" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 6528, 0 )
+
+[node name="short start" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 320, 320 )
+
+[node name="stump m, movingten, mealy" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 704, 320 )
+
+[node name="stump l, movingten, stones" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 1248, 320 )
+
+[node name="Jump down" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 1408, 384 )
+
+[node name="Enemy" parent="Jump down" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 224, 32 )
+movespeed = 0.2
+
+[node name="movingplatdown" parent="." index="5" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( 1952, 384 )
+
+[node name="Ladder" parent="movingplatdown" index="12" instance=ExtResource( 8 )]
+
+position = Vector2( 704, 256 )
+
+[node name="Checkpoint" parent="movingplatdown" index="13" instance=ExtResource( 9 )]
+
+position = Vector2( 704, 480 )
+
+[node name="movingsalamander3" parent="." index="6" instance=ExtResource( 10 )]
+
+position = Vector2( 3232, 480 )
+
+[node name="stump s, thorn, krake" parent="." index="7" instance=ExtResource( 11 )]
+
+editor/display_folded = true
+position = Vector2( 3040, 800 )
+
+[node name="Worm" parent="stump s, thorn, krake" index="4" instance=ExtResource( 12 )]
+
+position = Vector2( 285.689, 43.3773 )
+
+[node name="TreeDown" parent="." index="8" instance=ExtResource( 13 )]
+
+position = Vector2( 3552, 704 )
+
+[node name="stump l, moving tendril" parent="." index="9" instance=ExtResource( 14 )]
+
+position = Vector2( 4160, 928 )
+
+[node name="platform" parent="." index="10" instance=ExtResource( 15 )]
+
+position = Vector2( 4160, 544 )
+
+[node name="Rope" parent="platform" index="1" instance=ExtResource( 16 )]
+
+position = Vector2( -354.654, -236.097 )
+
+[node name="Enemy" parent="platform" index="2" instance=ExtResource( 17 )]
+
+position = Vector2( -146.284, -26.4634 )
+movespeed = 1.0
+
+[node name="trappedNPC" parent="platform" index="3" instance=ExtResource( 18 )]
+
+position = Vector2( 11.0029, -49.2944 )
+
+[node name="Ladder" parent="platform" index="4" instance=ExtResource( 8 )]
+
+position = Vector2( 388.529, 85.0029 )
+
+
