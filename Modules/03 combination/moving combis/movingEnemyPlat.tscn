@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=2]
+
+[node name="movingEnemyPlat" type="Node2D"]
+
+[node name="Movingplatform" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( -55.0641, 0 )
+platformSpeed = 0.75
+
+[node name="TileMap" parent="Movingplatform" index="0"]
+
+tile_data = PoolIntArray( -5, 0, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 2, 0, 65531, 1610612738, 0, 65532, 1610612737, 0, 65533, 1610612737, 0, 65534, 1610612737, 0, 65535, 1610612737, 0, 0, 1610612737, 0, 1, 1610612737, 0, 2, 1610612737, 0, 3, 1610612737, 0, 4, 1610612736, 0 )
+
+[node name="State2" parent="Movingplatform" index="2"]
+
+position = Vector2( 517.54, -0.694716 )
+
+[node name="Worm" parent="Movingplatform" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 0, -15.5531 )
+scale = Vector2( 1.85106, 1.85106 )
+
+
+[editable path="Movingplatform"]
