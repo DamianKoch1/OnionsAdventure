@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Objects/Obstacles/Stones/StoneSmall3A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=2]
@@ -27,12 +27,18 @@
 [ext_resource path="res://Modules/02 single/tendril/tendril6.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Modules/03 combination/moving combis/movingPlat4.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Modules/02 single/enemy/Muddy flat.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, Krake.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Modules/03 combination/stumpXthorn/stump m, thorn 3.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump m, stump l, tendril, thorn.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Modules/02 single/moving platform/elevator.tscn" type="PackedScene" id=33]
 
 [node name="Level 4" type="Node2D" index="0"]
 
 [node name="PLEASEDELETEME" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 9088, 160 )
+position = Vector2( 12832, 352 )
 
 [node name="short start" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -198,6 +204,7 @@ position = Vector2( -302.049, -32.5403 )
 
 [node name="platform2" parent="." index="17" instance=ExtResource( 15 )]
 
+editor/display_folded = true
 position = Vector2( 8095.86, 840.084 )
 
 [node name="Worm" parent="platform2" index="1" instance=ExtResource( 12 )]
@@ -211,5 +218,50 @@ position = Vector2( 99.9736, 11.0264 )
 [node name="trappedNPC" parent="platform2" index="3" instance=ExtResource( 18 )]
 
 position = Vector2( -0.735352, -53.662 )
+
+[node name="Rope" parent="platform2" index="4" instance=ExtResource( 16 )]
+
+position = Vector2( 448.14, -200.084 )
+
+[node name="Ladder" parent="platform2" index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 768.14, -8.08398 )
+
+[node name="Muddy flat" parent="." index="18" instance=ExtResource( 28 )]
+
+position = Vector2( 8928, 1344 )
+
+[node name="platform short" parent="." index="19" instance=ExtResource( 29 )]
+
+position = Vector2( 9184, 832 )
+
+[node name="platform short2" parent="." index="20" instance=ExtResource( 29 )]
+
+editor/display_folded = true
+position = Vector2( 9504, 960 )
+
+[node name="Checkpoint" parent="platform short2" index="1" instance=ExtResource( 9 )]
+
+position = Vector2( 0, 160 )
+
+[node name="stump s, Krake" parent="." index="21" instance=ExtResource( 30 )]
+
+position = Vector2( 9248, 1344 )
+
+[node name="stump m, thorn 3" parent="." index="22" instance=ExtResource( 31 )]
+
+position = Vector2( 9888, 1056 )
+
+[node name="stump m, stump l, tendril, thorn" parent="." index="23" instance=ExtResource( 32 )]
+
+position = Vector2( 10560, 1056 )
+
+[node name="elevator" parent="." index="24" instance=ExtResource( 33 )]
+
+position = Vector2( 11200, 1056 )
+
+[node name="Rope" parent="elevator" index="5" instance=ExtResource( 16 )]
+
+position = Vector2( 288, -256 )
 
 
