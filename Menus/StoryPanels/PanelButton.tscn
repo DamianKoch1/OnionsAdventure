@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/PanelButton.gd" type="Script" id=1]
+[ext_resource path="res://Menus/StoryPanels/PanelButton.gd" type="Script" id=1]
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=3]
 
@@ -74,6 +74,7 @@ shortcut = null
 group = null
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause", "Rect", "Textures", "Visibility" ]
+animSpeed = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
