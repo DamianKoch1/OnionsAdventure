@@ -10,6 +10,7 @@ func _ready():
 	$YesNoOverlayQuit.hide()
 	if MenuMusic.playing == false:
 		MenuMusic.fadeIn()
+	
 
 
 func _on_CreditsButton_pressed():
