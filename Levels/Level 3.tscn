@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat4.tscn" type="PackedScene" id=2]
@@ -10,34 +10,33 @@
 [ext_resource path="res://Modules/02 single/tendril/tendril6.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Objects/Obstacles/DeathZone.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Modules/03 combination/enemy combis/stump s, mealy, krake.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Modules/02 single/tendril/movingtendril/moving ten hard part.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Modules/02 single/tree/tree 1.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Modules/03 combination/stumpXthorn/stump m, thorn 2.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Objects/Obstacles/Trees/Tree Stump Medium New.png" type="Texture" id=19]
-[ext_resource path="res://Modules/02 single/moving platform/MovingPlat5(cliffx3).tscn" type="PackedScene" id=20]
-[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, tendril.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, stump m, tendril.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Modules/02 single/platform/platform long.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander 2 platform.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=34]
-[ext_resource path="res://Modules/02 single/stones/stone 4 flip.tscn" type="PackedScene" id=35]
-[ext_resource path="res://Modules/03 combination/moving combis/stump l, movingten, stone, muddy.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=37]
-[ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=38]
+[ext_resource path="res://Modules/03 combination/enemy combis/stump s, mealy, krake.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Modules/02 single/tendril/movingtendril/moving ten hard part.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Modules/02 single/tree/tree 1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modules/03 combination/stumpXthorn/stump m, thorn 2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Objects/Obstacles/Trees/Tree Stump Medium New.png" type="Texture" id=18]
+[ext_resource path="res://Modules/02 single/moving platform/MovingPlat5(cliffx3).tscn" type="PackedScene" id=19]
+[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, tendril.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, stump m, tendril.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Modules/02 single/platform/platform long.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander 2 platform.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Modules/02 single/stones/stone 4 flip.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Modules/03 combination/moving combis/stump l, movingten, stone, muddy.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=36]
+[ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=37]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -58,7 +57,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -25.1224, 74.9925, 12.3771, -53.8952, 63.8638, 126.586, 11.6109, 10.768, -120.7, -15.5231, 2.90527, 61.3841, 37.3597, -109.313, 11.3141, 62.0699, -217.64, 126.858, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D" index="0"]
+[node name="Level 3" type="Node2D"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -151,7 +150,6 @@ position = Vector2( 1760.23, -223.969 )
 
 [node name="tendril6" parent="." index="4" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 position = Vector2( 2291.5, -511.843 )
 
 [node name="Checkpoint" parent="tendril6" index="2" instance=ExtResource( 9 )]
@@ -160,19 +158,14 @@ position = Vector2( -220.7, 63.781 )
 
 [node name="TileMap2" parent="tendril6" index="3" instance=ExtResource( 10 )]
 
-tile_data = PoolIntArray( 720910, 4, 0, 720912, 4, 0, 720913, 4, 0, 720914, 4, 0, 786440, 4, 0, 786441, 4, 0, 786442, 4, 0, 786443, 4, 0, 786444, 4, 0, 786445, 4, 0, 786446, 4, 0, 786447, 4, 0, 786448, 4, 0, 786449, 4, 0, 786450, 4, 0, 786451, 4, 0, 786452, 4, 0, 786453, 4, 0, 786454, 4, 0, 786455, 4, 0, 786456, 4, 0, 786457, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 851988, 4, 0, 851989, 4, 0, 851990, 4, 0, 851991, 4, 0, 851992, 4, 0, 851993, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0, 917524, 4, 0, 917525, 4, 0, 917526, 4, 0, 917527, 4, 0, 917528, 4, 0, 917529, 4, 0, 983048, 4, 0, 983049, 4, 0, 983050, 4, 0, 983051, 4, 0, 983052, 4, 0, 983053, 4, 0, 983054, 4, 0, 983055, 4, 0, 983056, 4, 0, 983057, 4, 0, 983058, 4, 0, 983059, 4, 0, 983060, 4, 0, 983061, 4, 0, 983062, 4, 0, 983063, 4, 0, 983064, 4, 0, 983065, 4, 0, 1048584, 4, 0, 1048585, 4, 0, 1048586, 4, 0, 1048587, 4, 0, 1048588, 4, 0, 1048589, 4, 0, 1048590, 4, 0, 1048591, 4, 0, 1048592, 4, 0, 1048593, 4, 0, 1048594, 4, 0, 1048595, 4, 0, 1048596, 4, 0, 1048597, 4, 0, 1048598, 4, 0, 1048599, 4, 0, 1048600, 4, 0, 1048601, 4, 0, 1179643, 5, 0, 1114116, 3, 0, 1114117, 4, 0, 1114118, 4, 0, 1114119, 4, 0, 1114120, 4, 0, 1114121, 4, 0, 1114122, 4, 0, 1114123, 4, 0, 1114124, 4, 0, 1114125, 4, 0, 1114126, 4, 0, 1114127, 4, 0, 1114128, 4, 0, 1114129, 4, 0, 1114130, 4, 0, 1114131, 4, 0, 1114132, 4, 0, 1114133, 4, 0, 1114134, 4, 0, 1114135, 4, 0, 1114136, 4, 0, 1114137, 4, 0, 1245179, 5, 0, 1179652, 3, 0, 1179653, 4, 0, 1179654, 4, 0, 1179655, 4, 0, 1179656, 4, 0, 1179657, 4, 0, 1179658, 4, 0, 1179659, 4, 0, 1179660, 4, 0, 1179661, 4, 0, 1179662, 4, 0, 1179663, 4, 0, 1179664, 4, 0, 1179665, 4, 0, 1179666, 4, 0, 1179667, 4, 0, 1179668, 4, 0, 1179669, 4, 0, 1179670, 4, 0, 1179671, 4, 0, 1179672, 4, 0, 1179673, 4, 0, 1310715, 1610612739, 0, 1245188, 3, 0, 1245189, 4, 0, 1245190, 4, 0, 1245191, 4, 0, 1245192, 4, 0, 1245193, 4, 0, 1245194, 4, 0, 1245195, 4, 0, 1245196, 4, 0, 1245197, 4, 0, 1245198, 4, 0, 1245199, 4, 0, 1245200, 4, 0, 1245201, 4, 0, 1245202, 4, 0, 1245203, 4, 0, 1245204, 4, 0, 1245205, 4, 0, 1245206, 4, 0, 1245207, 4, 0, 1245208, 4, 0, 1245209, 4, 0, 1376227, 4, 0, 1376228, 4, 0, 1376229, 4, 0, 1376230, 4, 0, 1376231, 4, 0, 1376232, 4, 0, 1376233, 4, 0, 1376234, 4, 0, 1376235, 4, 0, 1376236, 4, 0, 1376237, 4, 0, 1376238, 4, 0, 1376239, 4, 0, 1376240, 4, 0, 1376241, 4, 0, 1376242, 4, 0, 1376243, 4, 0, 1376244, 4, 0, 1376245, 4, 0, 1376246, 4, 0, 1376247, 4, 0, 1376248, 4, 0, 1376249, 4, 0, 1376250, 4, 0, 1376251, 5, 0, 1310724, 3, 0, 1310725, 4, 0, 1310726, 4, 0, 1310727, 4, 0, 1310728, 4, 0, 1310729, 4, 0, 1310730, 4, 0, 1310731, 4, 0, 1310732, 4, 0, 1310733, 4, 0, 1310734, 4, 0, 1310735, 4, 0, 1310736, 4, 0, 1310737, 4, 0, 1310738, 4, 0, 1310739, 4, 0, 1310740, 4, 0, 1310741, 4, 0, 1310742, 4, 0, 1310743, 4, 0, 1310744, 4, 0, 1310745, 4, 0, 1441763, 4, 0, 1441764, 4, 0, 1441765, 4, 0, 1441766, 4, 0, 1441767, 4, 0, 1441768, 4, 0, 1441769, 4, 0, 1441770, 4, 0, 1441771, 4, 0, 1441772, 4, 0, 1441773, 4, 0, 1441774, 4, 0, 1441775, 4, 0, 1441776, 4, 0, 1441777, 4, 0, 1441778, 4, 0, 1441779, 4, 0, 1441780, 4, 0, 1441781, 4, 0, 1441782, 4, 0, 1441783, 4, 0, 1441784, 4, 0, 1441785, 4, 0, 1441786, 4, 0, 1441787, 1610612739, 0, 1376260, 3, 0, 1376261, 4, 0, 1376262, 4, 0, 1376263, 4, 0, 1376264, 4, 0, 1376265, 4, 0, 1376266, 4, 0, 1376267, 4, 0, 1376268, 4, 0, 1376269, 4, 0, 1376270, 4, 0, 1376271, 4, 0, 1376272, 4, 0, 1376273, 4, 0, 1376274, 4, 0, 1376275, 4, 0, 1376276, 4, 0, 1376277, 4, 0, 1376278, 4, 0, 1376279, 4, 0, 1376280, 4, 0, 1376281, 4, 0, 1507299, 4, 0, 1507300, 4, 0, 1507301, 4, 0, 1507302, 4, 0, 1507303, 4, 0, 1507304, 4, 0, 1507305, 4, 0, 1507306, 4, 0, 1507307, 4, 0, 1507308, 4, 0, 1507309, 4, 0, 1507310, 4, 0, 1507311, 4, 0, 1507312, 4, 0, 1507313, 4, 0, 1507314, 4, 0, 1507315, 4, 0, 1507316, 4, 0, 1507317, 4, 0, 1507318, 4, 0, 1507319, 4, 0, 1507320, 4, 0, 1507321, 4, 0, 1507322, 4, 0, 1507323, 1610612739, 0, 1441796, 3, 0, 1441797, 4, 0, 1441798, 4, 0, 1441799, 4, 0, 1441800, 4, 0, 1441801, 4, 0, 1441802, 4, 0, 1441803, 4, 0, 1441804, 4, 0, 1441805, 4, 0, 1441806, 4, 0, 1441807, 4, 0, 1441808, 4, 0, 1441809, 4, 0, 1441810, 4, 0, 1441811, 4, 0, 1441812, 4, 0, 1441813, 4, 0, 1441814, 4, 0, 1441815, 4, 0, 1441816, 4, 0, 1441817, 4, 0, 1572835, 4, 0, 1572836, 4, 0, 1572837, 4, 0, 1572838, 4, 0, 1572839, 4, 0, 1572840, 4, 0, 1572841, 4, 0, 1572842, 4, 0, 1572843, 4, 0, 1572844, 4, 0, 1572845, 4, 0, 1572846, 4, 0, 1572847, 4, 0, 1572848, 4, 0, 1572849, 4, 0, 1572850, 4, 0, 1572851, 4, 0, 1572852, 4, 0, 1572853, 4, 0, 1572854, 4, 0, 1572855, 4, 0, 1572856, 4, 0, 1572857, 4, 0, 1572858, 4, 0, 1572859, 1610612739, 0, 1507332, 3, 0, 1507333, 4, 0, 1507334, 4, 0, 1507335, 4, 0, 1507336, 4, 0, 1507337, 4, 0, 1507338, 4, 0, 1507339, 4, 0, 1507340, 4, 0, 1507341, 4, 0, 1507342, 4, 0, 1507343, 4, 0, 1507344, 4, 0, 1507345, 4, 0, 1507346, 4, 0, 1507347, 4, 0, 1507348, 4, 0, 1507349, 4, 0, 1507350, 4, 0, 1507351, 4, 0, 1507352, 4, 0, 1507353, 4, 0, 1638371, 4, 0, 1638372, 4, 0, 1638373, 4, 0, 1638374, 4, 0, 1638375, 4, 0, 1638376, 4, 0, 1638377, 4, 0, 1638378, 4, 0, 1638379, 4, 0, 1638380, 4, 0, 1638381, 4, 0, 1638382, 4, 0, 1638383, 4, 0, 1638384, 4, 0, 1638385, 4, 0, 1638386, 4, 0, 1638387, 4, 0, 1638388, 4, 0, 1638389, 4, 0, 1638390, 4, 0, 1638391, 4, 0, 1638392, 4, 0, 1638393, 4, 0, 1638394, 4, 0, 1638395, 1610612739, 0, 1572868, 3, 0, 1572869, 4, 0, 1572870, 4, 0, 1572871, 4, 0, 1572872, 4, 0, 1572873, 4, 0, 1572874, 4, 0, 1572875, 4, 0, 1572876, 4, 0, 1572877, 4, 0, 1572878, 4, 0, 1572879, 4, 0, 1572880, 4, 0, 1572881, 4, 0, 1572882, 4, 0, 1572883, 4, 0, 1572884, 4, 0, 1572885, 4, 0, 1572886, 4, 0, 1572887, 4, 0, 1572888, 4, 0, 1572889, 4, 0, 1703907, 4, 0, 1703908, 4, 0, 1703909, 4, 0, 1703910, 4, 0, 1703911, 4, 0, 1703912, 4, 0, 1703913, 4, 0, 1703914, 4, 0, 1703915, 4, 0, 1703916, 4, 0, 1703917, 4, 0, 1703918, 4, 0, 1703919, 4, 0, 1703920, 4, 0, 1703921, 4, 0, 1703922, 4, 0, 1703923, 4, 0, 1703924, 4, 0, 1703925, 4, 0, 1703926, 4, 0, 1703927, 4, 0, 1703928, 4, 0, 1703929, 4, 0, 1703930, 4, 0, 1703931, 1610612739, 0, 1638404, 3, 0, 1638405, 4, 0, 1638406, 4, 0, 1638407, 4, 0, 1638408, 4, 0, 1638409, 4, 0, 1638410, 4, 0, 1638411, 4, 0, 1638412, 4, 0, 1638413, 4, 0, 1638414, 4, 0, 1638415, 4, 0, 1638416, 4, 0, 1638417, 4, 0, 1638418, 4, 0, 1638419, 4, 0, 1638420, 4, 0, 1638421, 4, 0, 1638422, 4, 0, 1638423, 4, 0, 1638424, 4, 0, 1638425, 4, 0, 1769443, 4, 0, 1769444, 4, 0, 1769445, 4, 0, 1769446, 4, 0, 1769447, 4, 0, 1769448, 4, 0, 1769449, 4, 0, 1769450, 4, 0, 1769451, 4, 0, 1769452, 4, 0, 1769453, 4, 0, 1769454, 4, 0, 1769455, 4, 0, 1769456, 4, 0, 1769457, 4, 0, 1769458, 4, 0, 1769459, 4, 0, 1769460, 4, 0, 1769461, 4, 0, 1769462, 4, 0, 1769463, 4, 0, 1769464, 4, 0, 1769465, 4, 0, 1769466, 4, 0, 1769467, 5, 0, 1703940, 3, 0, 1703941, 4, 0, 1703942, 4, 0, 1703943, 4, 0, 1703944, 4, 0, 1703945, 4, 0, 1703946, 4, 0, 1703947, 4, 0, 1703948, 4, 0, 1703949, 4, 0, 1703950, 4, 0, 1703951, 4, 0, 1703952, 4, 0, 1703953, 4, 0, 1703954, 4, 0, 1703955, 4, 0, 1703956, 4, 0, 1703957, 4, 0, 1703958, 4, 0, 1703959, 4, 0, 1703960, 4, 0, 1703961, 4, 0, 1834979, 4, 0, 1834980, 4, 0, 1834981, 4, 0, 1834982, 4, 0, 1834983, 4, 0, 1834984, 4, 0, 1834985, 4, 0, 1834986, 4, 0, 1834987, 4, 0, 1834988, 4, 0, 1834989, 4, 0, 1834990, 4, 0, 1834991, 4, 0, 1834992, 4, 0, 1834993, 4, 0, 1834994, 4, 0, 1834995, 4, 0, 1834996, 4, 0, 1834997, 4, 0, 1834998, 4, 0, 1834999, 4, 0, 1835000, 4, 0, 1835001, 4, 0, 1835002, 4, 0, 1835003, 5, 0, 1769476, 3, 0, 1769477, 4, 0, 1769478, 4, 0, 1769479, 4, 0, 1769480, 4, 0, 1769481, 4, 0, 1769482, 4, 0, 1769483, 4, 0, 1769484, 4, 0, 1769485, 4, 0, 1769486, 4, 0, 1769487, 4, 0, 1769488, 4, 0, 1769489, 4, 0, 1769490, 4, 0, 1769491, 4, 0, 1769492, 4, 0, 1769493, 4, 0, 1769494, 4, 0, 1769495, 4, 0, 1769496, 4, 0, 1769497, 4, 0, 1900515, 4, 0, 1900516, 4, 0, 1900517, 4, 0, 1900518, 4, 0, 1900519, 4, 0, 1900520, 4, 0, 1900521, 4, 0, 1900522, 4, 0, 1900523, 4, 0, 1900524, 4, 0, 1900525, 4, 0, 1900526, 4, 0, 1900527, 4, 0, 1900528, 4, 0, 1900529, 4, 0, 1900530, 4, 0, 1900531, 4, 0, 1900532, 4, 0, 1900533, 4, 0, 1900534, 4, 0, 1900535, 4, 0, 1900536, 4, 0, 1900537, 4, 0, 1900538, 4, 0, 1900539, 1610612739, 0, 1966051, 4, 0, 1966052, 4, 0, 1966053, 4, 0, 1966054, 4, 0, 1966055, 4, 0, 1966056, 4, 0, 1966057, 4, 0, 1966058, 4, 0, 1966059, 4, 0, 1966060, 4, 0, 1966061, 4, 0, 1966062, 4, 0, 1966063, 4, 0, 1966064, 4, 0, 1966065, 4, 0, 1966066, 4, 0, 1966067, 4, 0, 1966068, 4, 0, 1966069, 4, 0, 1966070, 4, 0, 1966071, 4, 0, 1966072, 4, 0, 1966073, 4, 0, 1966074, 4, 0, 1966075, 5, 0, 2031587, 4, 0, 2031588, 4, 0, 2031589, 4, 0, 2031590, 4, 0, 2031591, 4, 0, 2031592, 4, 0, 2031593, 4, 0, 2031594, 4, 0, 2031595, 4, 0, 2031596, 4, 0, 2031597, 4, 0, 2031598, 4, 0, 2031599, 4, 0, 2031600, 4, 0, 2031601, 4, 0, 2031602, 4, 0, 2031603, 4, 0, 2031604, 4, 0, 2031605, 4, 0, 2031606, 4, 0, 2031607, 4, 0, 2031608, 4, 0, 2031609, 4, 0, 2031610, 4, 0, 2031611, 5, 0 )
+tile_data = PoolIntArray( 720910, 4, 0, 720912, 4, 0, 720913, 4, 0, 720914, 4, 0, 786440, 4, 0, 786441, 4, 0, 786442, 4, 0, 786443, 4, 0, 786444, 4, 0, 786445, 4, 0, 786446, 4, 0, 786447, 4, 0, 786448, 4, 0, 786449, 4, 0, 786450, 4, 0, 786451, 4, 0, 786452, 4, 0, 786453, 4, 0, 786454, 4, 0, 786455, 4, 0, 786456, 4, 0, 786457, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 851988, 4, 0, 851989, 4, 0, 851990, 4, 0, 851991, 4, 0, 851992, 4, 0, 851993, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0, 917524, 4, 0, 917525, 4, 0, 917526, 4, 0, 917527, 4, 0, 917528, 4, 0, 917529, 4, 0, 983048, 4, 0, 983049, 4, 0, 983050, 4, 0, 983051, 4, 0, 983052, 4, 0, 983053, 4, 0, 983054, 4, 0, 983055, 4, 0, 983056, 4, 0, 983057, 4, 0, 983058, 4, 0, 983059, 4, 0, 983060, 4, 0, 983061, 4, 0, 983062, 4, 0, 983063, 4, 0, 983064, 4, 0, 983065, 4, 0, 1048584, 4, 0, 1048585, 4, 0, 1048586, 4, 0, 1048587, 4, 0, 1048588, 4, 0, 1048589, 4, 0, 1048590, 4, 0, 1048591, 4, 0, 1048592, 4, 0, 1048593, 4, 0, 1048594, 4, 0, 1048595, 4, 0, 1048596, 4, 0, 1048597, 4, 0, 1048598, 4, 0, 1048599, 4, 0, 1048600, 4, 0, 1048601, 4, 0, 1179643, -1610612732, 0, 1114116, -1610612732, 0, 1114117, 4, 0, 1114118, 4, 0, 1114119, 4, 0, 1114120, 4, 0, 1114121, 4, 0, 1114122, 4, 0, 1114123, 4, 0, 1114124, 4, 0, 1114125, 4, 0, 1114126, 4, 0, 1114127, 4, 0, 1114128, 4, 0, 1114129, 4, 0, 1114130, 4, 0, 1114131, 4, 0, 1114132, 4, 0, 1114133, 4, 0, 1114134, 4, 0, 1114135, 4, 0, 1114136, 4, 0, 1114137, 4, 0, 1245179, -1610612732, 0, 1179652, -1610612732, 0, 1179653, 4, 0, 1179654, 4, 0, 1179655, 4, 0, 1179656, 4, 0, 1179657, 4, 0, 1179658, 4, 0, 1179659, 4, 0, 1179660, 4, 0, 1179661, 4, 0, 1179662, 4, 0, 1179663, 4, 0, 1179664, 4, 0, 1179665, 4, 0, 1179666, 4, 0, 1179667, 4, 0, 1179668, 4, 0, 1179669, 4, 0, 1179670, 4, 0, 1179671, 4, 0, 1179672, 4, 0, 1179673, 4, 0, 1310715, -1610612732, 0, 1245188, -1610612732, 0, 1245189, 4, 0, 1245190, 4, 0, 1245191, 4, 0, 1245192, 4, 0, 1245193, 4, 0, 1245194, 4, 0, 1245195, 4, 0, 1245196, 4, 0, 1245197, 4, 0, 1245198, 4, 0, 1245199, 4, 0, 1245200, 4, 0, 1245201, 4, 0, 1245202, 4, 0, 1245203, 4, 0, 1245204, 4, 0, 1245205, 4, 0, 1245206, 4, 0, 1245207, 4, 0, 1245208, 4, 0, 1245209, 4, 0, 1376227, 4, 0, 1376228, 4, 0, 1376229, 4, 0, 1376230, 4, 0, 1376231, 4, 0, 1376232, 4, 0, 1376233, 4, 0, 1376234, 4, 0, 1376235, 4, 0, 1376236, 4, 0, 1376237, 4, 0, 1376238, 4, 0, 1376239, 4, 0, 1376240, 4, 0, 1376241, 4, 0, 1376242, 4, 0, 1376243, 4, 0, 1376244, 4, 0, 1376245, 4, 0, 1376246, 4, 0, 1376247, 4, 0, 1376248, 4, 0, 1376249, 4, 0, 1376250, 4, 0, 1376251, -1610612732, 0, 1310724, -1610612732, 0, 1310725, 4, 0, 1310726, 4, 0, 1310727, 4, 0, 1310728, 4, 0, 1310729, 4, 0, 1310730, 4, 0, 1310731, 4, 0, 1310732, 4, 0, 1310733, 4, 0, 1310734, 4, 0, 1310735, 4, 0, 1310736, 4, 0, 1310737, 4, 0, 1310738, 4, 0, 1310739, 4, 0, 1310740, 4, 0, 1310741, 4, 0, 1310742, 4, 0, 1310743, 4, 0, 1310744, 4, 0, 1310745, 4, 0, 1441763, 4, 0, 1441764, 4, 0, 1441765, 4, 0, 1441766, 4, 0, 1441767, 4, 0, 1441768, 4, 0, 1441769, 4, 0, 1441770, 4, 0, 1441771, 4, 0, 1441772, 4, 0, 1441773, 4, 0, 1441774, 4, 0, 1441775, 4, 0, 1441776, 4, 0, 1441777, 4, 0, 1441778, 4, 0, 1441779, 4, 0, 1441780, 4, 0, 1441781, 4, 0, 1441782, 4, 0, 1441783, 4, 0, 1441784, 4, 0, 1441785, 4, 0, 1441786, 4, 0, 1441787, -1610612732, 0, 1376260, -1610612732, 0, 1376261, 4, 0, 1376262, 4, 0, 1376263, 4, 0, 1376264, 4, 0, 1376265, 4, 0, 1376266, 4, 0, 1376267, 4, 0, 1376268, 4, 0, 1376269, 4, 0, 1376270, 4, 0, 1376271, 4, 0, 1376272, 4, 0, 1376273, 4, 0, 1376274, 4, 0, 1376275, 4, 0, 1376276, 4, 0, 1376277, 4, 0, 1376278, 4, 0, 1376279, 4, 0, 1376280, 4, 0, 1376281, 4, 0, 1507299, 4, 0, 1507300, 4, 0, 1507301, 4, 0, 1507302, 4, 0, 1507303, 4, 0, 1507304, 4, 0, 1507305, 4, 0, 1507306, 4, 0, 1507307, 4, 0, 1507308, 4, 0, 1507309, 4, 0, 1507310, 4, 0, 1507311, 4, 0, 1507312, 4, 0, 1507313, 4, 0, 1507314, 4, 0, 1507315, 4, 0, 1507316, 4, 0, 1507317, 4, 0, 1507318, 4, 0, 1507319, 4, 0, 1507320, 4, 0, 1507321, 4, 0, 1507322, 4, 0, 1507323, -1610612732, 0, 1441796, -1610612732, 0, 1441797, 4, 0, 1441798, 4, 0, 1441799, 4, 0, 1441800, 4, 0, 1441801, 4, 0, 1441802, 4, 0, 1441803, 4, 0, 1441804, 4, 0, 1441805, 4, 0, 1441806, 4, 0, 1441807, 4, 0, 1441808, 4, 0, 1441809, 4, 0, 1441810, 4, 0, 1441811, 4, 0, 1441812, 4, 0, 1441813, 4, 0, 1441814, 4, 0, 1441815, 4, 0, 1441816, 4, 0, 1441817, 4, 0, 1572835, 4, 0, 1572836, 4, 0, 1572837, 4, 0, 1572838, 4, 0, 1572839, 4, 0, 1572840, 4, 0, 1572841, 4, 0, 1572842, 4, 0, 1572843, 4, 0, 1572844, 4, 0, 1572845, 4, 0, 1572846, 4, 0, 1572847, 4, 0, 1572848, 4, 0, 1572849, 4, 0, 1572850, 4, 0, 1572851, 4, 0, 1572852, 4, 0, 1572853, 4, 0, 1572854, 4, 0, 1572855, 4, 0, 1572856, 4, 0, 1572857, 4, 0, 1572858, 4, 0, 1572859, -1610612732, 0, 1507332, -1610612732, 0, 1507333, 4, 0, 1507334, 4, 0, 1507335, 4, 0, 1507336, 4, 0, 1507337, 4, 0, 1507338, 4, 0, 1507339, 4, 0, 1507340, 4, 0, 1507341, 4, 0, 1507342, 4, 0, 1507343, 4, 0, 1507344, 4, 0, 1507345, 4, 0, 1507346, 4, 0, 1507347, 4, 0, 1507348, 4, 0, 1507349, 4, 0, 1507350, 4, 0, 1507351, 4, 0, 1507352, 4, 0, 1507353, 4, 0, 1638371, 4, 0, 1638372, 4, 0, 1638373, 4, 0, 1638374, 4, 0, 1638375, 4, 0, 1638376, 4, 0, 1638377, 4, 0, 1638378, 4, 0, 1638379, 4, 0, 1638380, 4, 0, 1638381, 4, 0, 1638382, 4, 0, 1638383, 4, 0, 1638384, 4, 0, 1638385, 4, 0, 1638386, 4, 0, 1638387, 4, 0, 1638388, 4, 0, 1638389, 4, 0, 1638390, 4, 0, 1638391, 4, 0, 1638392, 4, 0, 1638393, 4, 0, 1638394, 4, 0, 1638395, -1610612732, 0, 1572868, -1610612732, 0, 1572869, 4, 0, 1572870, 4, 0, 1572871, 4, 0, 1572872, 4, 0, 1572873, 4, 0, 1572874, 4, 0, 1572875, 4, 0, 1572876, 4, 0, 1572877, 4, 0, 1572878, 4, 0, 1572879, 4, 0, 1572880, 4, 0, 1572881, 4, 0, 1572882, 4, 0, 1572883, 4, 0, 1572884, 4, 0, 1572885, 4, 0, 1572886, 4, 0, 1572887, 4, 0, 1572888, 4, 0, 1572889, 4, 0, 1703907, 4, 0, 1703908, 4, 0, 1703909, 4, 0, 1703910, 4, 0, 1703911, 4, 0, 1703912, 4, 0, 1703913, 4, 0, 1703914, 4, 0, 1703915, 4, 0, 1703916, 4, 0, 1703917, 4, 0, 1703918, 4, 0, 1703919, 4, 0, 1703920, 4, 0, 1703921, 4, 0, 1703922, 4, 0, 1703923, 4, 0, 1703924, 4, 0, 1703925, 4, 0, 1703926, 4, 0, 1703927, 4, 0, 1703928, 4, 0, 1703929, 4, 0, 1703930, 4, 0, 1703931, -1610612732, 0, 1638404, -1610612732, 0, 1638405, 4, 0, 1638406, 4, 0, 1638407, 4, 0, 1638408, 4, 0, 1638409, 4, 0, 1638410, 4, 0, 1638411, 4, 0, 1638412, 4, 0, 1638413, 4, 0, 1638414, 4, 0, 1638415, 4, 0, 1638416, 4, 0, 1638417, 4, 0, 1638418, 4, 0, 1638419, 4, 0, 1638420, 4, 0, 1638421, 4, 0, 1638422, 4, 0, 1638423, 4, 0, 1638424, 4, 0, 1638425, 4, 0, 1769443, 4, 0, 1769444, 4, 0, 1769445, 4, 0, 1769446, 4, 0, 1769447, 4, 0, 1769448, 4, 0, 1769449, 4, 0, 1769450, 4, 0, 1769451, 4, 0, 1769452, 4, 0, 1769453, 4, 0, 1769454, 4, 0, 1769455, 4, 0, 1769456, 4, 0, 1769457, 4, 0, 1769458, 4, 0, 1769459, 4, 0, 1769460, 4, 0, 1769461, 4, 0, 1769462, 4, 0, 1769463, 4, 0, 1769464, 4, 0, 1769465, 4, 0, 1769466, 4, 0, 1769467, -1610612732, 0, 1703940, -1610612732, 0, 1703941, 4, 0, 1703942, 4, 0, 1703943, 4, 0, 1703944, 4, 0, 1703945, 4, 0, 1703946, 4, 0, 1703947, 4, 0, 1703948, 4, 0, 1703949, 4, 0, 1703950, 4, 0, 1703951, 4, 0, 1703952, 4, 0, 1703953, 4, 0, 1703954, 4, 0, 1703955, 4, 0, 1703956, 4, 0, 1703957, 4, 0, 1703958, 4, 0, 1703959, 4, 0, 1703960, 4, 0, 1703961, 4, 0, 1834979, 4, 0, 1834980, 4, 0, 1834981, 4, 0, 1834982, 4, 0, 1834983, 4, 0, 1834984, 4, 0, 1834985, 4, 0, 1834986, 4, 0, 1834987, 4, 0, 1834988, 4, 0, 1834989, 4, 0, 1834990, 4, 0, 1834991, 4, 0, 1834992, 4, 0, 1834993, 4, 0, 1834994, 4, 0, 1834995, 4, 0, 1834996, 4, 0, 1834997, 4, 0, 1834998, 4, 0, 1834999, 4, 0, 1835000, 4, 0, 1835001, 4, 0, 1835002, 4, 0, 1835003, -1610612732, 0, 1769476, -1610612732, 0, 1769477, 4, 0, 1769478, 4, 0, 1769479, 4, 0, 1769480, 4, 0, 1769481, 4, 0, 1769482, 4, 0, 1769483, 4, 0, 1769484, 4, 0, 1769485, 4, 0, 1769486, 4, 0, 1769487, 4, 0, 1769488, 4, 0, 1769489, 4, 0, 1769490, 4, 0, 1769491, 4, 0, 1769492, 4, 0, 1769493, 4, 0, 1769494, 4, 0, 1769495, 4, 0, 1769496, 4, 0, 1769497, 4, 0, 1900515, 4, 0, 1900516, 4, 0, 1900517, 4, 0, 1900518, 4, 0, 1900519, 4, 0, 1900520, 4, 0, 1900521, 4, 0, 1900522, 4, 0, 1900523, 4, 0, 1900524, 4, 0, 1900525, 4, 0, 1900526, 4, 0, 1900527, 4, 0, 1900528, 4, 0, 1900529, 4, 0, 1900530, 4, 0, 1900531, 4, 0, 1900532, 4, 0, 1900533, 4, 0, 1900534, 4, 0, 1900535, 4, 0, 1900536, 4, 0, 1900537, 4, 0, 1900538, 4, 0, 1900539, -1610612732, 0, 1966051, 4, 0, 1966052, 4, 0, 1966053, 4, 0, 1966054, 4, 0, 1966055, 4, 0, 1966056, 4, 0, 1966057, 4, 0, 1966058, 4, 0, 1966059, 4, 0, 1966060, 4, 0, 1966061, 4, 0, 1966062, 4, 0, 1966063, 4, 0, 1966064, 4, 0, 1966065, 4, 0, 1966066, 4, 0, 1966067, 4, 0, 1966068, 4, 0, 1966069, 4, 0, 1966070, 4, 0, 1966071, 4, 0, 1966072, 4, 0, 1966073, 4, 0, 1966074, 4, 0, 1966075, -1610612732, 0, 2031587, 4, 0, 2031588, 4, 0, 2031589, 4, 0, 2031590, 4, 0, 2031591, 4, 0, 2031592, 4, 0, 2031593, 4, 0, 2031594, 4, 0, 2031595, 4, 0, 2031596, 4, 0, 2031597, 4, 0, 2031598, 4, 0, 2031599, 4, 0, 2031600, 4, 0, 2031601, 4, 0, 2031602, 4, 0, 2031603, 4, 0, 2031604, 4, 0, 2031605, 4, 0, 2031606, 4, 0, 2031607, 4, 0, 2031608, 4, 0, 2031609, 4, 0, 2031610, 4, 0, 2031611, -1610612732, 0 )
 
 [node name="Collectable" parent="tendril6" index="4" instance=ExtResource( 3 )]
 
 position = Vector2( 0, 104.85 )
 
-[node name="DeathZone" parent="tendril6" index="5" instance=ExtResource( 11 )]
+[node name="stump s, mealy, krake" parent="." index="5" instance=ExtResource( 11 )]
 
-position = Vector2( -4.0813, 601.288 )
-
-[node name="stump s, mealy, krake" parent="." index="5" instance=ExtResource( 12 )]
-
-editor/display_folded = true
 position = Vector2( 2821.59, -511.289 )
 
 [node name="Collectable2" parent="stump s, mealy, krake" index="5" instance=ExtResource( 3 )]
@@ -183,9 +176,8 @@ position = Vector2( -35.0164, -108.514 )
 
 position = Vector2( -176.325, -108.514 )
 
-[node name="moving ten hard part" parent="." index="6" instance=ExtResource( 13 )]
+[node name="moving ten hard part" parent="." index="6" instance=ExtResource( 12 )]
 
-editor/display_folded = true
 position = Vector2( 3619.13, -607.031 )
 
 [node name="Checkpoint" parent="moving ten hard part" index="4" instance=ExtResource( 9 )]
@@ -212,12 +204,11 @@ position = Vector2( 285.532, -83.0956 )
 
 position = Vector2( 575.034, -85.4694 )
 
-[node name="DeathZone" parent="moving ten hard part" index="10" instance=ExtResource( 11 )]
+[node name="TileMap2" parent="moving ten hard part" index="18" instance=ExtResource( 10 )]
 
-position = Vector2( 111.779, 348.594 )
-scale = Vector2( 2.44254, 1 )
+tile_data = PoolIntArray( 720924, 4, 0, 720925, 4, 0, 720926, 4, 0, 720927, 4, 0, 720928, 4, 0, 720929, 4, 0, 786454, 4, 0, 786455, 4, 0, 786456, 4, 0, 786457, 4, 0, 786458, 4, 0, 786459, 4, 0, 786460, 4, 0, 786461, 4, 0, 786462, 4, 0, 786463, 4, 0, 786464, 4, 0, 786465, 4, 0, 786466, 4, 0, 851990, 4, 0, 851991, 4, 0, 851992, 4, 0, 851993, 4, 0, 851994, 4, 0, 851995, 4, 0, 851996, 4, 0, 851997, 4, 0, 851998, 4, 0, 851999, 4, 0, 852000, 4, 0, 852001, 4, 0, 852002, 4, 0, 917526, 4, 0, 917527, 4, 0, 917528, 4, 0, 917529, 4, 0, 917530, 4, 0, 917531, 4, 0, 917532, 4, 0, 917533, 4, 0, 917534, 4, 0, 917535, 4, 0, 917536, 4, 0, 917537, 4, 0, 917538, 4, 0, 1048560, 4, 0, 983062, 4, 0, 983063, 4, 0, 983064, 4, 0, 983065, 4, 0, 983066, 4, 0, 983067, 4, 0, 983068, 4, 0, 983069, 4, 0, 983070, 4, 0, 983071, 4, 0, 983072, 4, 0, 983073, 4, 0, 983074, 4, 0, 1114096, 4, 0, 1114097, 4, 0, 1048598, 4, 0, 1048599, 4, 0, 1048600, 4, 0, 1048601, 4, 0, 1048602, 4, 0, 1048603, 4, 0, 1048604, 4, 0, 1048605, 4, 0, 1048606, 4, 0, 1048607, 4, 0, 1048608, 4, 0, 1048609, 4, 0, 1048610, 4, 0, 1179632, 4, 0, 1179633, 4, 0, 1114134, 4, 0, 1114135, 4, 0, 1114136, 4, 0, 1114137, 4, 0, 1114138, 4, 0, 1114139, 4, 0, 1114140, 4, 0, 1114141, 4, 0, 1114142, 4, 0, 1114143, 4, 0, 1114144, 4, 0, 1114145, 4, 0, 1114146, 4, 0, 1245168, 4, 0, 1245169, 4, 0, 1179670, 4, 0, 1179671, 4, 0, 1179672, 4, 0, 1179673, 4, 0, 1179674, 4, 0, 1179675, 4, 0, 1179676, 4, 0, 1179677, 4, 0, 1179678, 4, 0, 1179679, 4, 0, 1179680, 4, 0, 1179681, 4, 0, 1179682, 4, 0, 1310704, 4, 0, 1245206, 4, 0, 1245207, 4, 0, 1245208, 4, 0, 1245209, 4, 0, 1245210, 4, 0, 1245211, 4, 0, 1245212, 4, 0, 1245213, 4, 0, 1245214, 4, 0, 1245215, 4, 0, 1245216, 4, 0, 1245217, 4, 0, 1245218, 4, 0, 1376240, 4, 0, 1310742, 4, 0, 1310743, 4, 0, 1310744, 4, 0, 1310745, 4, 0, 1310746, 4, 0, 1310747, 4, 0, 1310748, 4, 0, 1310749, 4, 0, 1310750, 4, 0, 1310751, 4, 0, 1310752, 4, 0, 1310753, 4, 0, 1310754, 4, 0, 1441776, 4, 0, 1376277, 4, 0, 1376278, 4, 0, 1376279, 4, 0, 1376280, 4, 0, 1376281, 4, 0, 1376282, 4, 0, 1376283, 4, 0, 1376284, 4, 0, 1376285, 4, 0, 1376286, 4, 0, 1376287, 4, 0, 1376288, 4, 0, 1376289, 4, 0, 1376290, 4, 0 )
 
-[node name="tree 1" parent="." index="7" instance=ExtResource( 14 )]
+[node name="tree 1" parent="." index="7" instance=ExtResource( 13 )]
 
 position = Vector2( 4579.28, -606.953 )
 
@@ -229,7 +220,7 @@ position = Vector2( -55.084, -44.3066 )
 
 position = Vector2( 59.874, 86.8172 )
 
-[node name="Jump down" parent="." index="8" instance=ExtResource( 15 )]
+[node name="Jump down" parent="." index="8" instance=ExtResource( 14 )]
 
 editor/display_folded = true
 position = Vector2( 4706.77, -543.125 )
@@ -242,12 +233,11 @@ position = Vector2( 150.718, -129.96 )
 
 position = Vector2( 245.48, -55.9552 )
 
-[node name="stump m, thorn 2" parent="." index="9" instance=ExtResource( 16 )]
+[node name="stump m, thorn 2" parent="." index="9" instance=ExtResource( 15 )]
 
-editor/display_folded = true
 position = Vector2( 5281.7, -543.109 )
 
-[node name="Rope" parent="stump m, thorn 2" index="3" instance=ExtResource( 17 )]
+[node name="Rope" parent="stump m, thorn 2" index="3" instance=ExtResource( 16 )]
 
 position = Vector2( 244.708, -198.6 )
 
@@ -259,7 +249,7 @@ scale = Vector2( 0.0765978, 0.0959247 )
 z_index = -5
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="Ast 4" parent="stump m, thorn 2/stump m 8" index="0" instance=ExtResource( 18 )]
+[node name="Ast 4" parent="stump m, thorn 2/stump m 8" index="0" instance=ExtResource( 17 )]
 
 position = Vector2( 278.307, -291.202 )
 scale = Vector2( 2.99633, 1.6584 )
@@ -268,7 +258,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="stump" type="Sprite" parent="stump m, thorn 2/stump m 8" index="1"]
 
 scale = Vector2( 3.283, 2.90836 )
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump m, thorn 2/stump m 8/stump" index="0"]
@@ -296,9 +286,8 @@ position = Vector2( 118.104, -34.2094 )
 
 position = Vector2( 316.975, 115.961 )
 
-[node name="MovingPlat5" parent="." index="10" instance=ExtResource( 20 )]
+[node name="MovingPlat5" parent="." index="10" instance=ExtResource( 19 )]
 
-editor/display_folded = true
 position = Vector2( 5983.44, -447.339 )
 
 [node name="Collectable" parent="MovingPlat5" index="4" instance=ExtResource( 3 )]
@@ -313,21 +302,20 @@ position = Vector2( 3.61035, 27.0751 )
 
 position = Vector2( 169.671, 184.111 )
 
-[node name="DeathZone" parent="MovingPlat5" index="7" instance=ExtResource( 11 )]
+[node name="TileMap2" parent="MovingPlat5" index="12" instance=ExtResource( 10 )]
 
-position = Vector2( 4.11523, 442.92 )
-scale = Vector2( 1.57715, 1 )
+tile_data = PoolIntArray( 851946, 4, 0, 851947, 4, 0, 851948, 4, 0, 851949, 4, 0, 851950, 4, 0, 851951, 4, 0, 851952, 4, 0, 786444, 4, 0, 786445, 4, 0, 786446, 4, 0, 786447, 4, 0, 786448, 4, 0, 786449, 4, 0, 786450, 4, 0, 786451, 4, 0, 917482, 4, 0, 917483, 4, 0, 917484, 4, 0, 917485, 4, 0, 917486, 4, 0, 917487, 4, 0, 917488, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 983018, 4, 0, 983019, 4, 0, 983020, 4, 0, 983021, 4, 0, 983022, 4, 0, 983023, 4, 0, 983024, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0, 1048554, 4, 0, 1048555, 4, 0, 1048556, 4, 0, 1048557, 4, 0, 1048558, 4, 0, 1048559, 4, 0, 1048560, 4, 0, 983055, 4, 0, 983056, 4, 0, 983057, 4, 0, 983058, 4, 0, 983059, 4, 0, 1114090, 4, 0, 1114091, 4, 0, 1114092, 4, 0, 1114093, 4, 0, 1114094, 4, 0, 1114095, 4, 0, 1114096, 4, 0, 1048591, 4, 0, 1048592, 4, 0, 1048593, 4, 0, 1048594, 4, 0, 1048595, 4, 0, 1179626, 4, 0, 1179627, 4, 0, 1179628, 4, 0, 1179629, 4, 0, 1179630, 4, 0, 1179631, 4, 0, 1179632, 4, 0, 1114127, 4, 0, 1114128, 4, 0, 1114129, 4, 0, 1114130, 4, 0, 1114131, 4, 0, 1245162, 4, 0, 1245163, 4, 0, 1245164, 4, 0, 1245165, 4, 0, 1245166, 4, 0, 1245167, 4, 0, 1245168, 4, 0, 1179663, 4, 0, 1179664, 4, 0, 1179665, 4, 0, 1179666, 4, 0, 1179667, 4, 0, 1310698, 4, 0, 1310699, 4, 0, 1310700, 4, 0, 1310701, 4, 0, 1310702, 4, 0, 1310703, 4, 0, 1310704, 4, 0, 1245199, 4, 0, 1245200, 4, 0, 1245201, 4, 0, 1245202, 4, 0, 1245203, 4, 0, 1376234, 4, 0, 1376235, 4, 0, 1376236, 4, 0, 1376237, 4, 0, 1376238, 4, 0, 1376239, 4, 0, 1376240, 4, 0, 1310735, 4, 0, 1310736, 4, 0, 1310737, 4, 0, 1310738, 4, 0, 1310739, 4, 0, 1441770, 4, 0, 1441771, 4, 0, 1441772, 4, 0, 1441773, 4, 0, 1441774, 4, 0, 1441775, 4, 0, 1441776, 4, 0, 1376271, 4, 0, 1376272, 4, 0, 1376273, 4, 0, 1376274, 4, 0, 1376275, 4, 0 )
 
-[node name="platform" parent="." index="11" instance=ExtResource( 21 )]
+[node name="platform" parent="." index="11" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 position = Vector2( 5958.41, -548.905 )
 
-[node name="trappedNPC" parent="platform" index="1" instance=ExtResource( 22 )]
+[node name="trappedNPC" parent="platform" index="1" instance=ExtResource( 21 )]
 
 position = Vector2( 7.37842, -47.9892 )
 
-[node name="Enemy" parent="platform" index="2" instance=ExtResource( 23 )]
+[node name="Enemy" parent="platform" index="2" instance=ExtResource( 22 )]
 
 editor/display_folded = true
 position = Vector2( 9.72656, -44.85 )
@@ -341,7 +329,7 @@ curve = SubResource( 3 )
 
 rotation = 0.237251
 
-[node name="stump l, tendril" parent="." index="12" instance=ExtResource( 24 )]
+[node name="stump l, tendril" parent="." index="12" instance=ExtResource( 23 )]
 
 editor/display_folded = true
 position = Vector2( 6448.56, -445.694 )
@@ -350,9 +338,8 @@ position = Vector2( 6448.56, -445.694 )
 
 position = Vector2( 243.963, 62.9247 )
 
-[node name="moving salamander" parent="." index="13" instance=ExtResource( 25 )]
+[node name="moving salamander" parent="." index="13" instance=ExtResource( 24 )]
 
-editor/display_folded = true
 position = Vector2( 7881.15, -285.632 )
 
 [node name="Collectable" parent="moving salamander" index="3" instance=ExtResource( 3 )]
@@ -363,12 +350,7 @@ position = Vector2( -70.585, -1.11931 )
 
 position = Vector2( 97.6582, -4.69423 )
 
-[node name="DeathZone" parent="moving salamander" index="5" instance=ExtResource( 11 )]
-
-position = Vector2( -10.7134, 321.937 )
-scale = Vector2( 1.3701, 1 )
-
-[node name="stump l, stump m, tendril" parent="." index="14" instance=ExtResource( 26 )]
+[node name="stump l, stump m, tendril" parent="." index="14" instance=ExtResource( 25 )]
 
 editor/display_folded = true
 position = Vector2( 7054.57, -285.67 )
@@ -381,20 +363,20 @@ position = Vector2( -220.001, -38.0002 )
 
 position = Vector2( -222.001, 56.0002 )
 
-[node name="platform long" parent="." index="15" instance=ExtResource( 27 )]
+[node name="platform long" parent="." index="15" instance=ExtResource( 26 )]
 
 editor/display_folded = true
 position = Vector2( 7179.68, -481.012 )
 
-[node name="Ladder" parent="platform long" index="1" instance=ExtResource( 28 )]
+[node name="Ladder" parent="platform long" index="1" instance=ExtResource( 27 )]
 
 position = Vector2( -345.173, -58.9086 )
 
-[node name="Bouncer" parent="platform long" index="2" instance=ExtResource( 29 )]
+[node name="Bouncer" parent="platform long" index="2" instance=ExtResource( 28 )]
 
 position = Vector2( -155.478, -26.8328 )
 
-[node name="Bouncer2" parent="platform long" index="3" instance=ExtResource( 29 )]
+[node name="Bouncer2" parent="platform long" index="3" instance=ExtResource( 28 )]
 
 position = Vector2( 151.437, -25.8398 )
 
@@ -411,7 +393,7 @@ diggedOut = true
 
 position = Vector2( 54.0073, 8.25138 )
 
-[node name="Ladder2" parent="platform long" index="7" instance=ExtResource( 28 )]
+[node name="Ladder2" parent="platform long" index="7" instance=ExtResource( 27 )]
 
 position = Vector2( 370.734, 35.8189 )
 
@@ -431,7 +413,7 @@ position = Vector2( 142.571, 274.672 )
 
 position = Vector2( 36.4619, 133.192 )
 
-[node name="stump m, movingten, mealy" parent="." index="16" instance=ExtResource( 30 )]
+[node name="stump m, movingten, mealy" parent="." index="16" instance=ExtResource( 29 )]
 
 editor/display_folded = true
 position = Vector2( 8680.64, -285.533 )
@@ -448,12 +430,12 @@ position = Vector2( -29.7832, -50.5401 )
 
 position = Vector2( 210.282, -27.9776 )
 
-[node name="platform short" parent="." index="17" instance=ExtResource( 31 )]
+[node name="platform short" parent="." index="17" instance=ExtResource( 30 )]
 
 editor/display_folded = true
 position = Vector2( 7172.85, -855.016 )
 
-[node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 22 )]
+[node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 21 )]
 
 position = Vector2( 5.36426, -49.7429 )
 
@@ -465,29 +447,28 @@ position = Vector2( -155.84, -5.88074 )
 
 position = Vector2( 149.959, -0.735107 )
 
-[node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 32 )]
+[node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 9622.06, -596.259 )
 
-[node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 28 )]
+[node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
 
 position = Vector2( -585.001, 167 )
 
-[node name="trappedNPC" parent="moving salamander 2 platform" index="4" instance=ExtResource( 22 )]
+[node name="trappedNPC" parent="moving salamander 2 platform" index="4" instance=ExtResource( 21 )]
 
 position = Vector2( 316.825, -140.403 )
 
-[node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 31 )]
+[node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 30 )]
 
 position = Vector2( 612.643, -54.0206 )
 
-[node name="FireSalamander" parent="moving salamander 2 platform/platform short" index="1" instance=ExtResource( 33 )]
+[node name="FireSalamander" parent="moving salamander 2 platform/platform short" index="1" instance=ExtResource( 32 )]
 
-position = Vector2( 19.6162, -24.6447 )
+position = Vector2( 21.043, -26.5474 )
 objToDestroyPath = NodePath("../../platform short2/Thornbush")
 
-[node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 31 )]
+[node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 30 )]
 
 position = Vector2( 828.726, -22.0994 )
 
@@ -495,15 +476,15 @@ position = Vector2( 828.726, -22.0994 )
 
 position = Vector2( 50.3945, -47.2071 )
 
-[node name="Thornbush" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 34 )]
+[node name="Thornbush" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 33 )]
 
 position = Vector2( -28.5078, -63.5316 )
 
-[node name="Ladder2" parent="moving salamander 2 platform" index="7" instance=ExtResource( 28 )]
+[node name="Ladder2" parent="moving salamander 2 platform" index="7" instance=ExtResource( 27 )]
 
 position = Vector2( 1064.17, -13.2639 )
 
-[node name="Ladder4" parent="moving salamander 2 platform" index="8" instance=ExtResource( 28 )]
+[node name="Ladder4" parent="moving salamander 2 platform" index="8" instance=ExtResource( 27 )]
 
 position = Vector2( 1069.19, 310.752 )
 
@@ -511,7 +492,7 @@ position = Vector2( 1069.19, 310.752 )
 
 position = Vector2( -252.633, -190.582 )
 
-[node name="stone 4 flip" parent="." index="19" instance=ExtResource( 35 )]
+[node name="stone 4 flip" parent="." index="19" instance=ExtResource( 34 )]
 
 editor/display_folded = true
 position = Vector2( 9239.02, -157.588 )
@@ -536,23 +517,23 @@ position = Vector2( 653.159, 111.725 )
 
 position = Vector2( 1065.01, 38.0822 )
 
-[node name="stump l, movingten, stone, muddy" parent="." index="20" instance=ExtResource( 36 )]
+[node name="stump l, movingten, stone, muddy" parent="." index="20" instance=ExtResource( 35 )]
 
 position = Vector2( 9936.4, -30.1533 )
 
-[node name="Jump down2" parent="." index="21" instance=ExtResource( 15 )]
+[node name="Jump down2" parent="." index="21" instance=ExtResource( 14 )]
 
 position = Vector2( 9174.06, -93.3995 )
 
-[node name="Jump down3" parent="." index="22" instance=ExtResource( 15 )]
+[node name="Jump down3" parent="." index="22" instance=ExtResource( 14 )]
 
 position = Vector2( 9461.9, -29.1631 )
 
-[node name="Krakenmushroom2 (up)" parent="." index="23" instance=ExtResource( 37 )]
+[node name="Krakenmushroom2 (up)" parent="." index="23" instance=ExtResource( 36 )]
 
 position = Vector2( 10447.4, -30.1566 )
 
-[node name="End3(down)" parent="." index="24" instance=ExtResource( 38 )]
+[node name="End3(down)" parent="." index="24" instance=ExtResource( 37 )]
 
 editor/display_folded = true
 position = Vector2( 11143.8, -158.276 )
