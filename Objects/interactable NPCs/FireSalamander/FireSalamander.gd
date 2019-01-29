@@ -24,11 +24,14 @@ func _on_FireStoneTrigger_body_entered(body):
 			player = body
 			player.connect("loseHp", self, "resetObj")
 		if body.motion.y > body.gravity*10:
-			if triggered == false:
-				var distanceToObject = global_position.distance_to(objToDestroy.global_position)
-				if body.motion.y > 3 && global_position.distance_to(objToDestroy.global_position) < destroyRadius:
+			var distanceToObject = global_position.distance_to(objToDestroy.global_position)
+			if body.motion.y > 3:
+				if global_position.distance_to(objToDestroy.global_position) < destroyRadius && triggered != true:
 					triggered = true
-					anim.play("jumped on")
+					anim.play("burnObj")
+				else:
+					if anim.is_playing() != true:
+						anim.play("spitFire")
 
 #called by burn anim
 #fire breath particles
