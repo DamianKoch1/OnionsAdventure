@@ -5,6 +5,8 @@ onready var panel1 = $CanvasLayer/Level2Start
 onready var panel2 = $CanvasLayer/Level3Start
 onready var anim = $AnimationPlayer
 
+onready var endPanels = preload("res://Menus/StoryPanels/EndGamePanels/EndGamePanels.tscn")
+
 func _ready():
 	match SaveGame.currLevelId:
 		0:
@@ -48,7 +50,7 @@ func _on_Goal_body_entered(body):
 					panel1.hide()
 					panel2.show()
 				3:
-					anim.play("end")
+					anim.play("endGame")
 					panel.show()
 					panel1.hide()
 					panel2.hide()
@@ -58,3 +60,7 @@ func loadNextLevel():
 	SaveGame.currLevelId += 1
 	var path = "Levels/Level " + str(SaveGame.currLevelId) + ".tscn"
 	get_tree().change_scene(path)
+
+func loadEndPanels():
+	get_tree().change_scene_to(endPanels)
+	
