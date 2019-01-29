@@ -205,7 +205,7 @@ func rayUpdate():
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
-		if col.is_in_group("rayIgnore"):
+		if col.is_in_group("rayIgnore") || col.get_class() == "Area2D":
 			ray.add_exception(col)
 		else:
 			if global_position.distance_to(ray.get_collision_point()) <= 30:

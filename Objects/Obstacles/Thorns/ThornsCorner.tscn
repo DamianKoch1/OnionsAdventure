@@ -28,7 +28,9 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collider" type="StaticBody2D" parent="Sprite" index="0"]
+[node name="Collider" type="StaticBody2D" parent="Sprite" index="0" groups=[
+"rayIgnore",
+]]
 
 input_pickable = false
 collision_layer = 1
@@ -44,7 +46,9 @@ position = Vector2( -10.0182, 16.8362 )
 scale = Vector2( 0.019992, 0.0205128 )
 shape = SubResource( 1 )
 
-[node name="Trigger" type="Area2D" parent="Sprite" index="1"]
+[node name="Trigger" type="Area2D" parent="Sprite" index="1" groups=[
+"rayIgnore",
+]]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
