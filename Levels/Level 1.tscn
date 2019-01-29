@@ -392,6 +392,7 @@ position = Vector2( 43, -38 )
 
 [node name="stump s, stump l 2" parent="." index="19" instance=ExtResource( 27 )]
 
+editor/display_folded = true
 position = Vector2( 10098, -160 )
 _sections_unfolded = [ "Transform" ]
 
