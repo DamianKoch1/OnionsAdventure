@@ -28,7 +28,7 @@
 [ext_resource path="res://Modules/03 combination/moving combis/movingPlat4.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=27]
 
-[node name="Level 4" type="Node2D"]
+[node name="Level 4" type="Node2D" index="0"]
 
 [node name="PLEASEDELETEME" parent="." index="0" instance=ExtResource( 1 )]
 
