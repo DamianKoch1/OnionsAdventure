@@ -5,7 +5,7 @@
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=4]
 
-[node name="stump s, mealy, krake" type="Node2D"]
+[node name="stump s, mealy, krake" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -13,11 +13,11 @@ tile_data = PoolIntArray( 65543, 0, 0, 65544, 1, 0, 65545, 1, 0, 131079, 3, 0, 1
 
 [node name="stump s 1" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 130, 100 )
+position = Vector2( 130, 101.717 )
 
 [node name="Bouncer" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -172.702, 104.316 )
+position = Vector2( -173.06, 94.2784 )
 
 [node name="Worm" parent="." index="3" instance=ExtResource( 4 )]
 

@@ -16,14 +16,13 @@ extents = Vector2( 10, 7.82994 )
 
 [node name="stump l 8" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( -80, 30 )
 scale = Vector2( 0.0989583, 0.104806 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Ast 4" parent="stump l 8" index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 237.27, 22.3374 )
+position = Vector2( 231.398, 22.3374 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Stump" type="Sprite" parent="stump l 8" index="1"]
@@ -72,6 +71,6 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 
 [node name="Muddy" parent="." index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 78.2566, 97.8228 )
+position = Vector2( 77.1759, 104.847 )
 
 

@@ -44,7 +44,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -166,14 +166,13 @@ position = Vector2( 390.963, -74.9346 )
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 14 )]
 
-editor/display_folded = true
 position = Vector2( 5170, -288 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Enemy" parent="stump l, stump m, stump s" index="4" instance=ExtResource( 15 )]
 
 editor/display_folded = true
-position = Vector2( 397.758, 99.5304 )
+position = Vector2( 398.198, 103.051 )
 
 [node name="EnemyPath" parent="stump l, stump m, stump s/Enemy" index="0"]
 
@@ -443,7 +442,6 @@ position = Vector2( 1312, -10 )
 
 [node name="stump s, stump m 2" parent="." index="20" instance=ExtResource( 28 )]
 
-editor/display_folded = true
 position = Vector2( 10844, -160 )
 _sections_unfolded = [ "Transform" ]
 
@@ -455,7 +453,7 @@ scale = Vector2( 0.399393, 0.350787 )
 [node name="Enemy" parent="stump s, stump m 2" index="4" instance=ExtResource( 15 )]
 
 editor/display_folded = true
-position = Vector2( -444.053, 97.9908 )
+position = Vector2( -444.053, 103.843 )
 
 [node name="EnemyPath" parent="stump s, stump m 2/Enemy" index="0"]
 

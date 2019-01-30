@@ -3,11 +3,11 @@
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=2]
 
-[node name="Krakenmushroom2 (up)" type="Node2D"]
+[node name="Krakenmushroom2 (up)" type="Node2D" index="0"]
 
 [node name="Bouncer" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 108, 100 )
+position = Vector2( 107.029, 95.4705 )
 
 [node name="TileMap" parent="." index="1" instance=ExtResource( 2 )]
 

@@ -57,7 +57,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -25.1224, 74.9925, 12.3771, -53.8952, 63.8638, 126.586, 11.6109, 10.768, -120.7, -15.5231, 2.90527, 61.3841, 37.3597, -109.313, 11.3141, 62.0699, -217.64, 126.858, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D"]
+[node name="Level 3" type="Node2D" index="0"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -90,13 +90,12 @@ position = Vector2( 125.084, -220.157 )
 
 [node name="movingten1" parent="." index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 position = Vector2( 1249.28, -223.918 )
 
 [node name="Enemy" parent="movingten1" index="2" instance=ExtResource( 5 )]
 
 editor/display_folded = true
-position = Vector2( -105.678, 162.389 )
+position = Vector2( -94.1378, 167.889 )
 
 [node name="EnemyPath" parent="movingten1/Enemy" index="0"]
 
@@ -333,7 +332,8 @@ curve = SubResource( 3 )
 
 [node name="PathFollow2D" parent="platform/Enemy/EnemyPath" index="1"]
 
-rotation = 0.237251
+position = Vector2( -22.9915, 176.199 )
+rotation = -0.0236237
 
 [node name="stump l, tendril" parent="." index="12" instance=ExtResource( 23 )]
 
@@ -372,7 +372,6 @@ position = Vector2( -222.001, 56.0002 )
 
 [node name="platform long" parent="." index="15" instance=ExtResource( 26 )]
 
-editor/display_folded = true
 position = Vector2( 7179.68, -481.012 )
 
 [node name="Ladder" parent="platform long" index="1" instance=ExtResource( 27 )]
@@ -381,11 +380,11 @@ position = Vector2( -345.173, -58.9086 )
 
 [node name="Bouncer" parent="platform long" index="2" instance=ExtResource( 28 )]
 
-position = Vector2( -155.478, -26.8328 )
+position = Vector2( -156.554, -35.078 )
 
 [node name="Bouncer2" parent="platform long" index="3" instance=ExtResource( 28 )]
 
-position = Vector2( 151.437, -25.8398 )
+position = Vector2( 150.361, -34.085 )
 
 [node name="Worm" parent="platform long" index="4" instance=ExtResource( 6 )]
 

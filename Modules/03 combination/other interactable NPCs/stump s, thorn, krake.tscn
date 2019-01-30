@@ -9,11 +9,11 @@
 
 [node name="Bouncer" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 110, 192.8 )
+position = Vector2( 110.194, 190.669 )
 
 [node name="stump s 1" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -150, 100 )
+position = Vector2( -150.194, 101.162 )
 
 [node name="Thornbush" parent="." index="2" instance=ExtResource( 3 )]
 
