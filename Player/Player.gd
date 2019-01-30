@@ -48,6 +48,7 @@ func _ready():
 
 func _physics_process(delta):
 	if state != frozen:
+		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
 		#debug fly and godmode
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == false:
@@ -128,7 +129,7 @@ func _physics_process(delta):
 		else:	
 			motion.x = 0
 		#ghostjump
-		if  ghostjumpTimeframe!= 0:
+		if  ghostjumpTimeframe != 0:
 			if Input.is_action_just_pressed("jump"):
 				$SFX/jump.playRandomPitch()
 				motion.y = -jumpheight
