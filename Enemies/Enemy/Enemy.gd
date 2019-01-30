@@ -6,7 +6,7 @@ onready var enemy = $EnemyPath/Enemy
 #variable for moving
 onready var i = 0
 
-export (bool)var mothsound = false
+export (bool)var moth = false
 
 export (float) var movespeed = 2
 export (bool) var pathLooped = true
@@ -18,7 +18,7 @@ onready var muddySound = $EnemyPath/Enemy/muddySound
 
 func _ready():
 	add_to_group("Enemies")
-	if mothsound == true:
+	if moth == true:
 		$EnemyPath/Enemy/mothSound.playing = true
 	
 #used this because godot doesn't allow overwriting _process()
@@ -27,7 +27,7 @@ func _physics_process(delta):
 
 func _unique_process(delta):
 	if muddySound != null:
-		if mothsound == false && $EnemyPath/Enemy/muddySound.playing == false:
+		if moth == false && $EnemyPath/Enemy/muddySound.playing == false:
 			$EnemyPath/Enemy/muddySound.playRandomPitch()
 	i += delta*movespeed
 	#move from a to b and then b to a if path isnt a loop

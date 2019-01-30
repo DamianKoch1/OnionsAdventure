@@ -141,14 +141,14 @@ tracks/8/keys = {
 "values": [ 0.0163833, -12.5282, 0.0163833 ]
 }
 
-[node name="Enemy" type="Node2D" groups=[
+[node name="Moth" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
 scale = Vector2( 1.34763, 1.34763 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-mothsound = true
+moth = false
 movespeed = 0.25
 pathLooped = true
 
