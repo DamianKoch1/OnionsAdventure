@@ -60,7 +60,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="stump s, tendril, thorn" parent="." index="3" instance=ExtResource( 6 )]
 
-editor/display_folded = true
 position = Vector2( 1184.93, 0 )
 
 [node name="Collectable03" parent="stump s, tendril, thorn" index="4" instance=ExtResource( 4 )]
@@ -87,7 +86,6 @@ position = Vector2( -88.0142, -109.569 )
 
 [node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 9 )]
 
-editor/display_folded = true
 position = Vector2( 2336.93, -32 )
 
 [node name="Collectable06" parent="stump m, stump l, tendril, muddy" index="5" instance=ExtResource( 4 )]
@@ -359,20 +357,19 @@ position = Vector2( 110.264, -6.61581 )
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 29 )]
 
-editor/display_folded = true
 position = Vector2( 9567.79, -415.638 )
 
 [node name="Bouncer" parent="End2(wall)" index="2" instance=ExtResource( 23 )]
 
-position = Vector2( -307.671, 102.649 )
+position = Vector2( -307.087, 93.5974 )
 
 [node name="Bouncer2" parent="End2(wall)" index="3" instance=ExtResource( 23 )]
 
-position = Vector2( -227.397, 101.323 )
+position = Vector2( -226.813, 92.2714 )
 
 [node name="Bouncer3" parent="End2(wall)" index="4" instance=ExtResource( 23 )]
 
-position = Vector2( -155.748, 99.3324 )
+position = Vector2( -155.164, 90.2808 )
 
 [node name="Collectable46" parent="End2(wall)" index="5" instance=ExtResource( 4 )]
 

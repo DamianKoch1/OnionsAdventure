@@ -3,9 +3,7 @@
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=2]
 
-
-
-[node name="tree2" type="Node2D"]
+[node name="tree2" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -13,6 +11,6 @@ tile_data = PoolIntArray( 4, 0, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 
 
 [node name="TwistedTree" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -270, -210 )
+position = Vector2( -270, -190 )
 
 
