@@ -10,6 +10,8 @@ func _unique_process(delta):
 		i = 0
 	#graph alternates between 0 and 1 every pi steps
 	pathfollow.unit_offset = acos(cos(i)) / acos(cos(PI))
-	#graph jumps fron 1 to -1 and back every PI steps
-	$EnemyPath/Enemy/Muddy.scale.x = sin(i)/(sqrt(1-(cos(i)*cos(i))))
+	#preventing division by 0
+	if sqrt(1-(cos(i)*cos(i))) != 0:
+		#graph jumps fron 1 to -1 and back every PI steps
+		$EnemyPath/Enemy/Muddy.scale.x = sin(i)/(sqrt(1-(cos(i)*cos(i))))
 	enemy.global_position = pathfollow.global_position
