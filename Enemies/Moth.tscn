@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/Enemy/Bitchy_Finished_Color.png" type="Texture" id=2]
-[ext_resource path="res://Enemies/Enemy_flying.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Enemies/Enemy/wing_b.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Enemy/Feet_B.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Enemy/Body.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Enemy/wing_f.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/Enemy/Head.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/Enemy/Feet_A.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/Enemy_flying.ogg" type="AudioStream" id=8]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -19,9 +24,124 @@ extents = Vector2( 15.8134, 16.2055 )
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 41.4692, 40.7305 )
+extents = Vector2( 49.6743, 52.7579 )
 
-[node name="Enemy" type="Node2D" index="0" groups=[
+[sub_resource type="Animation" id=4]
+
+resource_name = "flight"
+length = 0.8
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bitchy/Body:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -6.66308, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bitchy/wing_f:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 14.5544, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Bitchy/wing_b:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -15.5131, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Bitchy/Feet_A:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.399034, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.81503, -0.575197 ), Vector2( 4.81503, -4.57037 ), Vector2( 4.81503, -4.5752 ), Vector2( 4.81503, -0.575197 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Bitchy/Feet_A:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 20.4538, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Bitchy/Feet_B:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10.7979, -4.78694 ), Vector2( -12.3904, -8.18214 ), Vector2( -10.7979, -4.78694 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Bitchy/Feet_B:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 15.707, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Bitchy/Head:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -33 ), Vector2( -1.99999, -35 ), Vector2( 0, -33 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Bitchy/Head:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0163833, -12.5282, 0.0163833 ]
+}
+
+[node name="Enemy" type="Node2D" groups=[
 "Enemies",
 ]]
 
@@ -77,25 +197,79 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPath/Enemy/Area2D" index="0"]
 
-position = Vector2( 160.85, -339.858 )
+position = Vector2( 166.754, -340.7 )
 scale = Vector2( 0.953475, 0.964443 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprites" type="Node2D" parent="EnemyPath/Enemy" index="2"]
+[node name="Bitchy" type="Node2D" parent="EnemyPath/Enemy" index="2"]
 
-rotation = -0.000132151
+position = Vector2( -2.95451, 5.48697 )
+scale = Vector2( 0.522125, 0.522125 )
 
-[node name="Sprite" type="Sprite" parent="EnemyPath/Enemy/Sprites" index="0"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyPath/Enemy/Bitchy" index="0"]
 
-position = Vector2( 1.23274, 4.16361 )
-scale = Vector2( 0.1538, 0.159357 )
+root_node = NodePath("..")
+autoplay = "flight"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/flight = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Bitchy" type="Sprite" parent="EnemyPath/Enemy/Bitchy" index="1"]
+
+position = Vector2( 0, -4.63926 )
+
+[node name="wing_b" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="0"]
+
+position = Vector2( 1.31767, -21.9104 )
+rotation = -0.173989
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Feet_B" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="1"]
+
+position = Vector2( -11.8213, -6.96872 )
+rotation = 0.176164
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+offset = Vector2( -6.81507, 4.7904 )
+
+[node name="Body" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="2"]
+
+position = Vector2( 11.7452, 3.61608 )
+rotation = -0.0747307
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wing_f" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="3"]
+
+position = Vector2( 19.954, -9.08474 )
+rotation = 0.163237
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+offset = Vector2( 58.5286, -30.5462 )
+
+[node name="Head" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="4"]
+
+position = Vector2( -1.28521, -34.2852 )
+rotation = -0.140409
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Feet_A" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="5"]
+
+position = Vector2( 4.81503, -3.14874 )
+rotation = 0.229402
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
 
 [node name="mothSound" type="AudioStreamPlayer2D" parent="EnemyPath/Enemy" index="3"]
 
-stream = ExtResource( 3 )
+stream = ExtResource( 8 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = false
