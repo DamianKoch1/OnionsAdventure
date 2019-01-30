@@ -1,13 +1,12 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Moth.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Enemy/wing_b.png" type="Texture" id=2]
-[ext_resource path="res://Enemies/Enemy/Feet_B.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/Enemy/Body.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Enemy/mothFeet_B.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Enemy/mothBody.png" type="Texture" id=4]
 [ext_resource path="res://Enemies/Enemy/wing_f.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/Enemy/Head.png" type="Texture" id=6]
-[ext_resource path="res://Enemies/Enemy/Feet_A.png" type="Texture" id=7]
-[ext_resource path="res://Enemies/Enemy_flying.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Enemies/Enemy/mothHead.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/Enemy_flying.ogg" type="AudioStream" id=7]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -204,7 +203,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Bitchy" type="Node2D" parent="EnemyPath/Enemy" index="2"]
 
-editor/display_folded = true
 position = Vector2( -2.95451, 5.48697 )
 _sections_unfolded = [ "Transform" ]
 
@@ -220,21 +218,20 @@ blend_times = [  ]
 
 [node name="Bitchy" type="Node2D" parent="EnemyPath/Enemy/Bitchy" index="1"]
 
-editor/display_folded = true
 position = Vector2( 0, -4.63926 )
 scale = Vector2( 0.591196, 0.591196 )
 
 [node name="wing_b" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="0"]
 
 position = Vector2( 1.31767, -21.9104 )
-rotation = -0.173989
+rotation = -0.152184
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="Feet_B" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="1"]
 
-position = Vector2( -11.8213, -6.96872 )
-rotation = 0.176164
+position = Vector2( -11.693, -6.69529 )
+rotation = 0.154086
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 offset = Vector2( -6.81507, 4.7904 )
@@ -242,7 +239,7 @@ offset = Vector2( -6.81507, 4.7904 )
 [node name="Body" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="2"]
 
 position = Vector2( 11.7452, 3.61608 )
-rotation = -0.0747307
+rotation = -0.065365
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
@@ -250,29 +247,29 @@ _sections_unfolded = [ "Transform" ]
 [node name="wing_f" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="3"]
 
 position = Vector2( 19.954, -9.08474 )
-rotation = 0.163237
+rotation = 0.142779
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 offset = Vector2( 58.5286, -30.5462 )
 
 [node name="Head" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="4"]
 
-position = Vector2( -1.28521, -34.2852 )
-rotation = -0.140409
+position = Vector2( -1.12414, -34.1241 )
+rotation = -0.122777
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Feet_A" type="Sprite" parent="EnemyPath/Enemy/Bitchy/Bitchy" index="5"]
 
-position = Vector2( 4.81503, -3.14874 )
-rotation = 0.229402
+position = Vector2( 4.81503, -2.82349 )
+rotation = 0.200652
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 3 )
 
 [node name="mothSound" type="AudioStreamPlayer2D" parent="EnemyPath/Enemy" index="3"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 7 )
 volume_db = -10.0
 pitch_scale = 1.0
 autoplay = true
@@ -284,8 +281,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 
-position = Vector2( -81.2339, 169.313 )
-rotation = 0.13147
+position = Vector2( -81.234, 169.313 )
+rotation = 0.131467
 offset = 742.99
 h_offset = 0.0
 v_offset = 0.0
