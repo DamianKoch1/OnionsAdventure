@@ -10,12 +10,11 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 42.0712, 170.339 )
 }
 
-[node name="Muddy flat" type="Node2D" index="0"]
+[node name="Muddy flat" type="Node2D"]
 
 [node name="Muddy" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -215.495, 98.7758 )
-scale = Vector2( 2.04783, 2.04783 )
+position = Vector2( -215.495, 104.14 )
 movespeed = 1.0
 
 [node name="EnemyPath" parent="Muddy" index="0"]
@@ -24,7 +23,7 @@ curve = SubResource( 1 )
 
 [node name="PathFollow2D" parent="Muddy/EnemyPath" index="1"]
 
-rotation = -0.00238606
+rotation = 0.00115677
 
 [node name="TileMap" parent="." index="1" instance=ExtResource( 2 )]
 
