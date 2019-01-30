@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menus/LevelSelector/LevelSelector.gd" type="Script" id=1]
 [ext_resource path="res://Menus/UI_Mock_Up_Damian_BG.jpg" type="Texture" id=2]
 [ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Audio/Music/BGMPlayerIntro.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Menus/LevelSelector/Woodland Fantasy.wav" type="AudioStream" id=7]
 
 [node name="LevelSelector" type="Container"]
 
@@ -297,6 +299,13 @@ margin_right = 32.0
 margin_bottom = 29.0
 _sections_unfolded = [ "Pause", "Visibility" ]
 
+[node name="BGMPlayerIntro" parent="." index="7" instance=ExtResource( 6 )]
+
+[node name="Intro" parent="BGMPlayerIntro" index="0"]
+
+stream = ExtResource( 7 )
+autoplay = true
+
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
@@ -315,3 +324,4 @@ _sections_unfolded = [ "Pause", "Visibility" ]
 [editable path="LevelButtons/Level2Button"]
 [editable path="LevelButtons/Level3Button"]
 [editable path="LevelButtons/Level4Button"]
+[editable path="BGMPlayerIntro"]

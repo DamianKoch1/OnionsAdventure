@@ -153,7 +153,7 @@ tracks/9/keys = {
 "values": [ 0.0, -8.3243, 0.0353112 ]
 }
 
-[node name="Muddy" type="Node2D" groups=[
+[node name="Muddy" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
@@ -227,21 +227,23 @@ scale = Vector2( 0.41218, 0.41218 )
 
 [node name="feet_b_b" type="Sprite" parent="EnemyPath/Enemy/Muddy/Muddy" index="0"]
 
-position = Vector2( -12.9492, 29.5964 )
-rotation = 0.0104491
+position = Vector2( -20.4039, 30.0623 )
+rotation = 0.0890498
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 offset = Vector2( -0.548801, 17.602 )
 
 [node name="feet_f_b" type="Sprite" parent="EnemyPath/Enemy/Muddy/Muddy" index="1"]
 
-position = Vector2( 30.0021, 33.7366 )
+position = Vector2( 32.2747, 32.0092 )
+rotation = -0.0623902
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 offset = Vector2( 4.86993, 12.7265 )
 
 [node name="body" type="Sprite" parent="EnemyPath/Enemy/Muddy/Muddy" index="2"]
 
+position = Vector2( 0, -0.295517 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
@@ -249,21 +251,22 @@ _sections_unfolded = [ "Transform" ]
 [node name="head" type="Sprite" parent="EnemyPath/Enemy/Muddy/Muddy/body" index="0"]
 
 position = Vector2( 49.5132, 20.5869 )
-rotation = 0.00347019
+rotation = -0.0178639
 texture = ExtResource( 5 )
 offset = Vector2( 36.1708, -18.6199 )
 
 [node name="feet_b_a" type="Sprite" parent="EnemyPath/Enemy/Muddy/Muddy" index="3"]
 
-position = Vector2( -28.5867, 29.913 )
+position = Vector2( -27.2459, 24.322 )
+rotation = -0.155666
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 offset = Vector2( -4.14488, 17.0266 )
 
 [node name="feet_f_a" type="Sprite" parent="EnemyPath/Enemy/Muddy/Muddy" index="4"]
 
-position = Vector2( 12.7951, 40.5953 )
-rotation = 0.0117423
+position = Vector2( 8.65875, 40.5953 )
+rotation = 0.0777932
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 

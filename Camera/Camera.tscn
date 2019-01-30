@@ -10,7 +10,6 @@
 [ext_resource path="res://Audio/Music/EnchantedIntro.wav" type="AudioStream" id=8]
 [ext_resource path="res://Audio/Music/EnchantedMainpart.wav" type="AudioStream" id=9]
 
-
 [node name="Camera" type="Camera2D"]
 
 pause_mode = 2
@@ -40,7 +39,6 @@ editor_draw_limits = false
 editor_draw_drag_margin = true
 script = ExtResource( 1 )
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Pause", "Transform", "Z Index" ]
-playerId = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
 
@@ -137,8 +135,6 @@ scale = Vector2( 0.0972979, 0.0972979 )
 texture = ExtResource( 6 )
 
 [node name="BGMPlayer" parent="." index="1" instance=ExtResource( 7 )]
-
-editor/display_folded = true
 
 [node name="Intro" parent="BGMPlayer" index="0"]
 

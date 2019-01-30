@@ -12,7 +12,7 @@
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Menus/StoryPanels/EndGamePanels/Woodland Fantasy.wav" type="AudioStream" id=11]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 
 size = 130
 use_mipmaps = true
@@ -20,7 +20,7 @@ use_filter = false
 font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="EndGamePanels" type="Node" index="0"]
+[node name="EndGamePanels" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -121,7 +121,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "(click anywhere to continue)"
 percent_visible = 1.0
 lines_skipped = 0
