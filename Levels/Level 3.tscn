@@ -456,7 +456,6 @@ position = Vector2( 149.959, -0.735107 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 9622.06, -596.259 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
@@ -494,7 +493,7 @@ position = Vector2( 1064.17, -13.2639 )
 
 [node name="Ladder4" parent="moving salamander 2 platform" index="8" instance=ExtResource( 27 )]
 
-position = Vector2( 1069.19, 310.752 )
+position = Vector2( 1070.82, 253.736 )
 
 [node name="Collectable" parent="moving salamander 2 platform" index="9" instance=ExtResource( 3 )]
 
