@@ -5,8 +5,6 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Stump S.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=4]
 
-
-
 [node name="stump s, tendril, thorn" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
@@ -21,13 +19,13 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 
 [node name="stump s 1" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -160, 100 )
+position = Vector2( -159.527, 102.051 )
 
 [node name="Thornbush" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( -2.24445, 173.451 )
 rotation = 1.5708
 scale = Vector2( 1, 1.66232 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 

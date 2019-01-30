@@ -4,7 +4,7 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
 
-[node name="TreeDown" type="Node2D"]
+[node name="TreeDown" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -12,7 +12,7 @@ tile_data = PoolIntArray( 327671, 1, 0, 327672, 1, 0, 327673, 1, 0, 327674, 1, 0
 
 [node name="TwistedTree" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 0, 32 )
+position = Vector2( -0.88028, 33.7605 )
 
 [node name="Ladder" parent="." index="2" instance=ExtResource( 3 )]
 

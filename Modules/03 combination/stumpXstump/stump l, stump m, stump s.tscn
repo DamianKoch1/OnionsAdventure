@@ -6,14 +6,12 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Normal_NoBranchesA.png" type="Texture" id=4]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump S.tscn" type="PackedScene" id=5]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[node name="stump l, stump m, stump s" type="Node2D"]
+[node name="stump l, stump m, stump s" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -21,7 +19,7 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 
 [node name="stump l 8" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 250, 30 )
+position = Vector2( 250, 31.7605 )
 
 [node name="stump m 7" type="Node2D" parent="." index="2"]
 
