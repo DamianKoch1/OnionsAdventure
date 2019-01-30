@@ -29,6 +29,11 @@ func _ready():
 			panel.hide()
 			panel1.hide()
 			panel2.show()
+		4:
+			anim.play("start")
+			panel.show()
+			panel1.hide()
+			panel2.hide()
 		
 
 func _on_Goal_body_entered(body):
@@ -50,6 +55,11 @@ func _on_Goal_body_entered(body):
 					panel1.hide()
 					panel2.show()
 				3:
+					anim.play("endLevel2")
+					panel.hide()
+					panel1.hide()
+					panel2.show()
+				4:
 					anim.play("endGame")
 					panel.show()
 					panel1.hide()
