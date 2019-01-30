@@ -1,15 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=3]
-
-[sub_resource type="Curve2D" id=1]
-
-bake_interval = 5.0
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -73.2012, 172.427, 0, 0, 0, 0, -78.2908, 167.338, 0, 0, 0, 0, -98.8587, 167.33, 0, 0, 0, 0, -125.617, 146.747, 0, 0, 0, 0, -143.524, 117.313, 0, 0, 0, 0, -126.869, 52.1916, 0, 0, 0, 0, -109.564, 32.7766, 0, 0, 0, 0, -89.7274, 26.0235, 0, 0, 0, 0, -54.2738, 31.0883, 0, 0, 0, 0, -17.9761, 38.6855, 0, 0, 0, 0, 2.2831, 58.9447, 0, 0, 0, 0, 13.2568, 102.418, 0, 0, 0, 0, 6.50378, 122.255, 0, 0, 0, 0, -20.0864, 151.377, 0, 0, 0, 0, -52.1635, 167.416, 0, 0, 0, 0, -73.2012, 172.427 )
-}
 
 [node name="stump m, bitchy" type="Node2D" index="0"]
 
@@ -25,13 +18,9 @@ position = Vector2( -220, 70 )
 
 position = Vector2( 240, 70 )
 
-[node name="Enemy2" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Moth" parent="." index="3" instance=ExtResource( 3 )]
 
 position = Vector2( -15.4325, 95.1668 )
-
-[node name="EnemyPath" parent="Enemy2" index="0"]
-
-curve = SubResource( 1 )
+moth = true
 
 
-[editable path="Enemy2"]
