@@ -135,6 +135,10 @@ func _physics_process(delta):
 				ghostjumpTimeframe = 0
 				setState(jump)
 		motion = move_and_slide(motion, UP)
+	else:
+		motion.x = 0
+		motion.y += gravity
+		motion = move_and_slide(motion, UP)
 
 #used to unfreeze player from other scripts (trappedNPC)
 func setIdle():
