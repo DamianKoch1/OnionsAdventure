@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/Muddy.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Enemy/feet_b_b.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Enemy/feet_f_b.png" type="Texture" id=3]
 [ext_resource path="res://Enemies/Enemy/body.png" type="Texture" id=4]
@@ -153,16 +153,14 @@ tracks/9/keys = {
 "values": [ 0.0, -8.3243, 0.0353112 ]
 }
 
-[node name="Muddy" type="Node2D" index="0" groups=[
+[node name="Muddy" type="Node2D" groups=[
 "Enemies",
 ]]
 
 scale = Vector2( 1.56875, 1.56875 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-moth = false
-movespeed = 1.3
-pathLooped = false
+movespeed = 2
 
 [node name="EnemyPath" type="Path2D" parent="." index="0"]
 
