@@ -12,7 +12,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 7.82994 )
 
-[node name="stump m, stump l, tendril, muddy" type="Node2D" index="0"]
+[node name="stump m, stump l, tendril, muddy" type="Node2D"]
 
 [node name="stump l 8" type="Node2D" parent="." index="0"]
 
@@ -71,6 +71,7 @@ tile_data = PoolIntArray( 327665, 1, 0, 327666, 1, 0, 327667, 1, 0, 327668, 1, 0
 
 [node name="Muddy" parent="." index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 77.1759, 104.847 )
+position = Vector2( 46.8071, 106.608 )
+movespeed = 1.25
 
 
