@@ -6,7 +6,7 @@ func _unique_process(delta):
 	if i >= 1:
 		i = 0
 	pathfollow.unit_offset = i
-	if pathfollow.unit_offset <= 0.5:
+	if pathfollow.unit_offset >= 0.75 || pathfollow.unit_offset < 0.25:
 		$EnemyPath/Enemy/Bitchy.scale.x = -1
 	else:
 		$EnemyPath/Enemy/Bitchy.scale.x = 1
