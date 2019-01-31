@@ -39,6 +39,7 @@
 [ext_resource path="res://Modules/03 combination/enemy combis/krake, bitchy, plat.tscn" type="PackedScene" id=37]
 [ext_resource path="res://Modules/01 basic/End1(flat).tscn" type="PackedScene" id=38]
 
+<<<<<<< working copy
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
@@ -47,6 +48,9 @@ _data = {
 }
 
 [node name="Level 4" type="Node2D" index="0"]
+=======
+[node name="Level 4" type="Node2D"]
+>>>>>>> merge rev
 
 [node name="short start" parent="." index="0" instance=ExtResource( 1 )]
 
