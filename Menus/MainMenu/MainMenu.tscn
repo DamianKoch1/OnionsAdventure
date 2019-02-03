@@ -93,7 +93,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Spread" ]
 
-[node name="MainMenu" type="Container"]
+[node name="MainMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -238,11 +238,8 @@ text = "Quit"
 
 [node name="YesNoOverlayQuit" parent="." index="6" instance=ExtResource( 8 )]
 
-visible = false
-
 [node name="OptionsOverlay" parent="." index="7" instance=ExtResource( 9 )]
 
-visible = false
 margin_left = 63.0
 margin_top = 50.0
 margin_right = 95.0
@@ -257,6 +254,7 @@ process_material = SubResource( 7 )
 
 [node name="StartFadeIn" parent="." index="9" instance=ExtResource( 11 )]
 
+visible = true
 margin_left = -396.0
 margin_top = -168.0
 margin_right = 372.0

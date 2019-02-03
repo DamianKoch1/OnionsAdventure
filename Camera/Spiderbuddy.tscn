@@ -1,8 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Camera/Spiderbuddy.gd" type="Script" id=1]
-[ext_resource path="res://Camera/placeholder.png" type="Texture" id=2]
-
+[ext_resource path="res://Camera/spiddy_net.png" type="Texture" id=2]
+[ext_resource path="res://Camera/spiddy_body.png" type="Texture" id=3]
+[ext_resource path="res://Camera/spiddy_leaf2.png" type="Texture" id=4]
+[ext_resource path="res://Camera/spiddy_leaf1.png" type="Texture" id=5]
+[ext_resource path="res://Camera/spiddy_feet1.png" type="Texture" id=6]
+[ext_resource path="res://Camera/spiddy_head.png" type="Texture" id=7]
+[ext_resource path="res://Camera/spiddy_feet2.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -90,7 +95,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource_name = "anim"
 length = 7.0
@@ -136,11 +141,45 @@ blend_times = [  ]
 position = Vector2( 0, -300 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="Sprites" index="0"]
+[node name="spiddy_net" type="Sprite" parent="Sprites" index="0"]
+
+position = Vector2( -0.00414919, -45.0156 )
+scale = Vector2( 0.0396121, 0.0396121 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Sprites" index="1"]
 
 position = Vector2( 0, -32 )
 scale = Vector2( 0.0396121, 0.0396121 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
+
+[node name="spiddy_leaf2" type="Sprite" parent="Sprites/Sprite" index="0"]
+
+position = Vector2( 22.3747, 12.959 )
+texture = ExtResource( 4 )
+
+[node name="spiddy_leaf1" type="Sprite" parent="Sprites/Sprite" index="1"]
+
+position = Vector2( -24.1059, 12.252 )
+texture = ExtResource( 5 )
+
+[node name="spiddy_feet1" type="Sprite" parent="Sprites/Sprite" index="2"]
+
+position = Vector2( -0.385377, 75.4401 )
+texture = ExtResource( 6 )
+
+[node name="spiddy_head" type="Sprite" parent="Sprites/Sprite" index="3"]
+
+position = Vector2( -0.341075, 50.0365 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spiddy_feet2" type="Sprite" parent="Sprites/Sprite" index="4"]
+
+show_behind_parent = true
+position = Vector2( 0.614202, -49.7156 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Speechbubble" type="Node2D" parent="." index="2"]
 
@@ -179,7 +218,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/anim = SubResource( 4 )
+anims/anim = SubResource( 3 )
 blend_times = [  ]
 
 
