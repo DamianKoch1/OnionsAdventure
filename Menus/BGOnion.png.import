@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_Mock_Up_Royal__Blue_2.jpg-93ed413bbc454a8ab3f2b429c3f0644b.stex"
+path="res://.import/BGOnion.png-549e4151e1ec7d06c0ab4543a7f3c543.stex"
 
 [deps]
 
-source_file="res://Menus/UI_Mock_Up_Royal__Blue_2.jpg"
-dest_files=[ "res://.import/UI_Mock_Up_Royal__Blue_2.jpg-93ed413bbc454a8ab3f2b429c3f0644b.stex" ]
+source_file="res://Menus/BGOnion.png"
+dest_files=[ "res://.import/BGOnion.png-549e4151e1ec7d06c0ab4543a7f3c543.stex" ]
 
 [params]
 
