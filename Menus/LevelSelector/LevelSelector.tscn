@@ -1,11 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menus/LevelSelector/LevelSelector.gd" type="Script" id=1]
-[ext_resource path="res://Menus/UI_Mock_Up_Damian_BG.jpg" type="Texture" id=2]
+[ext_resource path="res://Menus/BG.png" type="Texture" id=2]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=5]
-
 
 [node name="LevelSelector" type="Container" index="0"]
 
