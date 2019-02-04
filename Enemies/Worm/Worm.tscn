@@ -33,7 +33,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -40 ) ]
 }
 
-[node name="Worm" type="Node2D" index="0" groups=[
+[node name="Worm" type="Node2D" groups=[
 "Enemies",
 ]]
 
