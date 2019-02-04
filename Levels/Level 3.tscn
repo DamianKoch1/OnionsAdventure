@@ -32,7 +32,7 @@
 [ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander 2 platform.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Modules/02 single/stones/stone 4 flip.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Modules/03 combination/moving combis/stump l, movingten, stone, muddy.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=36]
@@ -57,7 +57,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -25.1224, 74.9925, 12.3771, -53.8952, 63.8638, 126.586, 11.6109, 10.768, -120.7, -15.5231, 2.90527, 61.3841, 37.3597, -109.313, 11.3141, 62.0699, -217.64, 126.858, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D"]
+[node name="Level 3" type="Node2D" index="0"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -472,7 +472,7 @@ position = Vector2( 612.643, -54.0206 )
 [node name="FireSalamander" parent="moving salamander 2 platform/platform short" index="1" instance=ExtResource( 32 )]
 
 position = Vector2( 21.043, -26.5474 )
-objToDestroyPath = NodePath("../../platform short2/Thornbush")
+objToDestroyPath = NodePath("../../platform short2/ThornsUp")
 
 [node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 30 )]
 
@@ -482,9 +482,10 @@ position = Vector2( 828.726, -22.0994 )
 
 position = Vector2( 50.3945, -47.2071 )
 
-[node name="Thornbush" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 33 )]
+[node name="ThornsUp" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 33 )]
 
-position = Vector2( -28.5078, -63.5316 )
+position = Vector2( -30.3721, -63.3244 )
+scale = Vector2( 0.806852, 0.806852 )
 
 [node name="Ladder2" parent="moving salamander 2 platform" index="7" instance=ExtResource( 27 )]
 
