@@ -5,11 +5,11 @@ var attachCD = 0
 
 var player
 
+#player can jump off if attached
 func _physics_process(delta):
 	attachCD = max(attachCD - delta, 0)
 	if Input.is_action_just_pressed("jump") && playerAttached == true:
-		player.state = player.jump
-		player.bounce(player.jumpheight)
+		player.jump(player.jumpheight)
 		attachCD = 1
 		playerAttached = false
 		player = null
@@ -22,6 +22,7 @@ func _on_Ladder_body_entered(body):
 		playerAttached = true
 		player = body
 
+#detach player if he exits body
 func _on_Ladder_body_exited(body):
 	if body.is_in_group("Player"):
 		body.state = body.jump

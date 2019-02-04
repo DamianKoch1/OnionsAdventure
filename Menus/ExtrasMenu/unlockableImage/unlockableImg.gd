@@ -8,8 +8,7 @@ export var dandelionsNeeded = 0
 export var NPCsNeeded = 0
 
 
-
-
+#make texts display correct number, hide if unlock requirements arent met
 func _ready():
 	if dandelionsNeeded > 0:
 		dandelionText.text = "x " + str(dandelionsNeeded)

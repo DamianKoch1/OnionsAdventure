@@ -1,5 +1,6 @@
 extends Node2D
 
+#path of object to burn, max trigger radius and node to attach object back to on respawn
 export(NodePath) var objToDestroyPath
 export var destroyRadius = 300
 var objToDestroyParent
@@ -17,7 +18,7 @@ func _ready():
 		objToDestroy = get_node(objToDestroyPath)
 		objToDestroyParent = objToDestroy.get_parent()
 	
-
+#burns object if object is in range and player has certain y motion, else just spits fire
 func _on_FireStoneTrigger_body_entered(body):
 	if body.is_in_group("Player") && objToDestroyPath != null:
 		if player == null:

@@ -35,6 +35,7 @@ func _on_BackButton_pressed():
 	UISelect.playing = true
 	hide()
 
+#set volume bus values if sliders change
 func _on_SFXSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SoundEffects"), sqrt(value*sfxSlider.max_value) - 100)
 	saveVolume()
