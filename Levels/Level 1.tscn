@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=32]
+[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=33]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -264,7 +265,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="platform" parent="." index="12" instance=ExtResource( 22 )]
 
 editor/display_folded = true
-position = Vector2( 7665, -406.271 )
+position = Vector2( 7645.35, -365.755 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC2" parent="platform" index="1" instance=ExtResource( 12 )]
@@ -486,6 +487,7 @@ rotation = 0.00912847
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 32 )]
 
+editor/display_folded = true
 position = Vector2( 11210.6, -160.362 )
 _sections_unfolded = [ "Transform" ]
 
@@ -493,6 +495,10 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -513.278, 110.508 )
 scale = Vector2( 0.403203, 0.403203 )
+
+[node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 33 )]
+
+position = Vector2( -255.331, 33.9647 )
 
 
 [editable path="stump l, stump m, stump s/Enemy"]
