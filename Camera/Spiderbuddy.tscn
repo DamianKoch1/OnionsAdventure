@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Camera/Spiderbuddy.gd" type="Script" id=1]
 [ext_resource path="res://Camera/placeholder.png" type="Texture" id=2]
-
+[ext_resource path="res://Camera/Capture5.PNG" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -90,7 +90,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource_name = "anim"
 length = 7.0
@@ -114,7 +114,7 @@ tracks/0/keys = {
 } ]
 }
 
-[node name="Spiderbuddy" type="Node2D" index="0"]
+[node name="Spiderbuddy" type="Node2D"]
 
 z_index = 10
 script = ExtResource( 1 )
@@ -141,6 +141,13 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 0, -32 )
 scale = Vector2( 0.0396121, 0.0396121 )
 texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Sprites" index="1"]
+
+position = Vector2( -4.19688, 8.39374 )
+rotation = 0.265285
+scale = Vector2( 0.105512, 0.105512 )
+texture = ExtResource( 3 )
 
 [node name="Speechbubble" type="Node2D" parent="." index="2"]
 
@@ -179,7 +186,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/anim = SubResource( 4 )
+anims/anim = SubResource( 3 )
 blend_times = [  ]
 
 
