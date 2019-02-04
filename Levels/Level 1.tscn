@@ -48,7 +48,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
