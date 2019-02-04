@@ -4,13 +4,12 @@ onready var paused = false
 
 onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 
-
 func _ready():
 	$YesNoOverlayMainMenu.connect("yesPressed", self, "loadMainMenu")
 	$YesNoOverlayRestart.connect("yesPressed", self, "restart")
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
-
+#cursor/pause menu on pressing escape, hide cursor ingame
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		if $OptionsOverlay.visible == false:
@@ -33,22 +32,17 @@ func _on_ResumeButton_pressed():
 	get_tree().paused = false
 	hide()
 	
-
-
 func _on_RestartButton_pressed():
 	UISelect.playing = true
 	$YesNoOverlayRestart.show()
-
 
 func _on_OptionsButton_pressed():
 	UISelect.playing = true
 	$OptionsOverlay.show()
 
-
 func _on_MainMenuButton_pressed():
 	UISelect.playing = true
 	$YesNoOverlayMainMenu.show()
-
 
 func loadMainMenu():
 	get_tree().paused = false
@@ -57,4 +51,4 @@ func loadMainMenu():
 func restart():
 	get_tree().paused = false
 	get_tree().reload_current_scene()
-
+	
