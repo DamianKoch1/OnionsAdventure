@@ -32,7 +32,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -40 ) ]
 }
 
-[node name="Worm" type="Node2D" index="0" groups=[
+[node name="Worm" type="Node2D" groups=[
 "Enemies",
 ]]
 
@@ -74,6 +74,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 0.00422668, 0.00424194 )
 rotation = -0.000132151
+_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Enemy/Sprites" index="0"]
 

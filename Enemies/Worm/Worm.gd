@@ -4,14 +4,13 @@ extends Node2D
 export var diggedOut = false
 onready var anim = $AnimationPlayer
 
+#dig in or out at start depending on diggedOut
 func _ready():
 	_on_Timer_timeout()
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		body.loseHp()
-
-
 
 func digDown():
 	diggedOut = false
