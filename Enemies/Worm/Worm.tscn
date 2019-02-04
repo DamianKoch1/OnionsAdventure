@@ -1,42 +1,13 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Enemies/Worm/Worm.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/Enemy/Feet_B.png" type="Texture" id=2]
-[ext_resource path="res://Enemies/Enemy/body_m.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/Enemy/beak_b.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/Enemy/beak_f.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/Enemy/dirt.png" type="Texture" id=6]
-[ext_resource path="res://Enemies/Enemy/feet_f.png" type="Texture" id=7]
-[ext_resource path="res://Enemies/Enemy/Mealy_Idle.tres" type="Animation" id=8]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 38.3767, 32.2044 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 28.8834, 30.304 )
-
-[sub_resource type="Animation" id=3]
-
-resource_name = "digOut"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Enemy:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -40 ) ]
-}
+[ext_resource path="res://Enemies/Worm/Mealy_Idle.tres" type="Animation" id=2]
+[ext_resource path="res://Enemies/Enemy/feet_b.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Worm/body_m.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Worm/beak_b.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/Worm/beak_f.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/Worm/dirt.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/Worm/feet_f.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=4]
 
@@ -57,11 +28,38 @@ tracks/0/keys = {
 "values": [ Vector2( -0.0715665, 41.3882 ), Vector2( -0.0715665, 29.9565 ), Vector2( -0.0715665, 17.0052 ), Vector2( -0.0715665, 7.00531 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 50.2848, 69.9113 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.8834, 30.304 )
+
+[sub_resource type="Animation" id=3]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Enemy:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -40 ) ]
+}
+
 [node name="Worm" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
-scale = Vector2( 1.63897, 1.63897 )
 z_index = -1000
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -69,18 +67,60 @@ diggedOut = false
 
 [node name="Enemy" type="Node2D" parent="." index="0"]
 
-position = Vector2( 0, -40 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D" type="Area2D" parent="Enemy" index="0"]
+[node name="Sprites" type="Node2D" parent="Enemy" index="0"]
+
+position = Vector2( 0.00422668, 0.00424194 )
+rotation = -0.000132151
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Sprites" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Idle = ExtResource( 2 )
+"anims/dig out" = SubResource( 4 )
+blend_times = [  ]
+
+[node name="feet_b" type="Sprite" parent="Enemy/Sprites" index="1"]
+
+position = Vector2( -0.67403, 18.839 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="body_m" type="Sprite" parent="Enemy/Sprites" index="2"]
 
 editor/display_folded = true
-position = Vector2( -80.7138, 170.143 )
-rotation = -0.000132151
-scale = Vector2( 0.500416, 0.500855 )
+position = Vector2( -0.553917, -5.64682 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="beak_b" type="Sprite" parent="Enemy/Sprites/body_m" index="0"]
+
+position = Vector2( -12.4218, -64.836 )
+texture = ExtResource( 5 )
+offset = Vector2( -3.54817, -20.3804 )
+
+[node name="beak_f" type="Sprite" parent="Enemy/Sprites/body_m" index="1"]
+
+position = Vector2( 10.6571, -65.7147 )
+texture = ExtResource( 6 )
+offset = Vector2( 4.64221, -19.5664 )
+
+[node name="Area2D" type="Area2D" parent="Enemy/Sprites/body_m" index="2"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( -160.373, 351.55 )
+scale = Vector2( 1.00083, 1.00171 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -90,53 +130,29 @@ audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Sprites/body_m/Area2D" index="0"]
 
-position = Vector2( 160.85, -310.16 )
+position = Vector2( 160.104, -368.926 )
 scale = Vector2( 0.953475, 1.51027 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprites" type="Node2D" parent="Enemy" index="1"]
+[node name="dirt" type="Sprite" parent="Enemy/Sprites" index="3"]
 
-scale = Vector2( 1, 1 )
-
-[node name="Feet_B" type="Sprite" parent="Enemy/Sprites" index="0"]
-
-position = Vector2( -0.00546729, 17.283 )
-scale = Vector2( 0.211066, 0.211066 )
-texture = ExtResource( 2 )
-
-[node name="body_m" type="Sprite" parent="Enemy/Sprites" index="1"]
-
-editor/display_folded = true
-position = Vector2( -0.0715665, 7.00531 )
-scale = Vector2( 0.211066, 0.211066 )
-texture = ExtResource( 3 )
-
-[node name="beak_b" type="Sprite" parent="Enemy/Sprites/body_m" index="0"]
-
-position = Vector2( -15.3126, -85.0713 )
-texture = ExtResource( 4 )
-
-[node name="beak_f" type="Sprite" parent="Enemy/Sprites/body_m" index="1"]
-
-position = Vector2( 13.5479, -83.0592 )
-texture = ExtResource( 5 )
-
-[node name="dirt" type="Sprite" parent="Enemy/Sprites" index="2"]
-
-position = Vector2( 0.0786116, 27.3689 )
-scale = Vector2( 0.211066, 0.211066 )
-texture = ExtResource( 6 )
-
-[node name="feet_f" type="Sprite" parent="Enemy/Sprites" index="3"]
-
-position = Vector2( -0.0540848, 19.6469 )
-scale = Vector2( 0.211066, 0.211066 )
+position = Vector2( -0.81759, 38.616 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Enemy" index="2"]
+[node name="feet_f" type="Sprite" parent="Enemy/Sprites" index="4"]
+
+position = Vector2( -0.47639, 20.4444 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enemy" index="1"]
 
 input_pickable = false
 collision_layer = 1
@@ -173,18 +189,7 @@ anims/digOut = SubResource( 3 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
-[node name="AnimationPlayerNastja" type="AnimationPlayer" parent="." index="3"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/Idle = ExtResource( 8 )
-"anims/dig out" = SubResource( 4 )
-blend_times = [  ]
-
-[connection signal="body_entered" from="Enemy/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Enemy/Sprites/body_m/Area2D" to="." method="_on_Area2D_body_entered"]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
