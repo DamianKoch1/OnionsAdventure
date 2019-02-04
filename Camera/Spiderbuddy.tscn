@@ -2,13 +2,79 @@
 
 [ext_resource path="res://Camera/Spiderbuddy.gd" type="Script" id=1]
 [ext_resource path="res://Camera/spiddy_net.png" type="Texture" id=2]
-[ext_resource path="res://Camera/placeholder.png" type="Texture" id=3]
-[ext_resource path="res://Camera/spiddy_body.png" type="Texture" id=4]
-[ext_resource path="res://Camera/spiddy_feet2.png" type="Texture" id=5]
-[ext_resource path="res://Camera/spiddy_head.png" type="Texture" id=6]
-[ext_resource path="res://Camera/spiddy_leaf2.png" type="Texture" id=7]
-[ext_resource path="res://Camera/spiddy_leaf1.png" type="Texture" id=8]
-[ext_resource path="res://Camera/spiddy_feet1.png" type="Texture" id=9]
+[ext_resource path="res://Camera/spiddy_body.png" type="Texture" id=3]
+[ext_resource path="res://Camera/spiddy_feet2.png" type="Texture" id=4]
+[ext_resource path="res://Camera/spiddy_head.png" type="Texture" id=5]
+[ext_resource path="res://Camera/spiddy_leaf2.png" type="Texture" id=6]
+[ext_resource path="res://Camera/spiddy_leaf1.png" type="Texture" id=7]
+[ext_resource path="res://Camera/spiddy_feet1.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "blabbing"
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprites/Sprite/spiddy_head:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 1, 1.3, 1.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -4.81563, -3.71494, 0.0, -4.81563, -3.71494, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprites/Sprite/spiddy_body/spiddy_feet2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 1, 1.3, 1.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -0.783485, 2.87688, 0.0, -0.783485, 2.87688, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprites/Sprite/spiddy_head/spiddy_leaf2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 0.9, 1.2, 1.3, 1.5, 1.7, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.291831, 13.8664, 5.02916, -1.96698, -18.3468, 37.1643, 13.8664, 5.02916, -1.96698, -18.3468, 37.1643, 0.291831 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprites/Sprite/spiddy_head/spiddy_leaf1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 0.9, 1.2, 1.3, 1.5, 1.7, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -0.0149427, -19.112, -4.95281, -29.2759, 15.4268, -34.4844, -19.112, -4.95281, -29.2759, 15.4268, -34.4844, -0.0149427 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprites/Sprite/spiddy_head/spiddy_feet1:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.3, 1.6, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 11.7889, -4.63186, 2.86606, 11.7889, -4.63186, 2.86606, 0.0 ]
+}
 
 [sub_resource type="Animation" id=1]
 
@@ -52,11 +118,47 @@ tracks/2/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprites/Sprite/spiddy_head/spiddy_leaf1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -40.4381 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprites/Sprite/spiddy_head/spiddy_leaf2:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 40.533 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprites/Sprite/spiddy_body/spiddy_feet2:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -8.41763, 8.34622, 0.0 ]
+}
 
 [sub_resource type="Animation" id=2]
 
 resource_name = "show"
-length = 2.0
+length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -66,7 +168,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.2 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 0.527985, 0.527985 ),
 "update": 0,
 "values": [ Vector2( 0, -300 ), Vector2( 0, 0 ) ]
@@ -78,7 +180,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.3, 1.9 ),
+"times": PoolRealArray( 0.8, 1.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -90,10 +192,34 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprites/Sprite/spiddy_head/spiddy_leaf1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 23.6217, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprites/Sprite/spiddy_head/spiddy_leaf2:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -24.1365, 0.0 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -133,6 +259,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
+anims/blabbing = SubResource( 4 )
 anims/hide = SubResource( 1 )
 anims/show = SubResource( 2 )
 blend_times = [  ]
@@ -146,71 +273,66 @@ position = Vector2( 0, -300 )
 position = Vector2( 0, -300 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="spiddy_net" type="Sprite" parent="Sprites" index="0"]
+[node name="Sprite" type="Sprite" parent="Sprites" index="0"]
 
-position = Vector2( -0.00414919, -45.0156 )
-scale = Vector2( 0.0396121, 0.0396121 )
-texture = ExtResource( 2 )
-
-[node name="placeholder" type="Sprite" parent="." index="3"]
-
-position = Vector2( 0.030164, -332.063 )
-scale = Vector2( 0.0396121, 0.0396121 )
-texture = ExtResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="." index="4"]
-
-position = Vector2( -0.132126, -301.792 )
+position = Vector2( -0.132126, -1.79242 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="spiddy_net" type="Sprite" parent="Sprite" index="0"]
+[node name="spiddy_net" type="Sprite" parent="Sprites/Sprite" index="0"]
 
 position = Vector2( 0.0985856, -78.2631 )
 scale = Vector2( 0.250901, 0.250901 )
 texture = ExtResource( 2 )
 
-[node name="spiddy_body" type="Sprite" parent="Sprite" index="1"]
+[node name="spiddy_body" type="Sprite" parent="Sprites/Sprite" index="1"]
 
 position = Vector2( -0.0226416, 3.20615 )
 scale = Vector2( 0.250901, 0.250901 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
-[node name="spiddy_feet2" type="Sprite" parent="Sprite/spiddy_body" index="0"]
+[node name="spiddy_feet2" type="Sprite" parent="Sprites/Sprite/spiddy_body" index="0"]
 
 show_behind_parent = true
 position = Vector2( -0.622275, -46.281 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="spiddy_head" type="Sprite" parent="Sprite" index="2"]
+[node name="spiddy_head" type="Sprite" parent="Sprites/Sprite" index="2"]
 
-editor/display_folded = true
 position = Vector2( -0.152225, 14.4275 )
 scale = Vector2( 0.250901, 0.250901 )
+texture = ExtResource( 5 )
+offset = Vector2( -0.759516, -8.66906 )
+
+[node name="spiddy_leaf2" type="Sprite" parent="Sprites/Sprite/spiddy_head" index="0"]
+
+show_behind_parent = true
+position = Vector2( 20.9251, -24.1214 )
+rotation = 0.707435
 texture = ExtResource( 6 )
+offset = Vector2( 6.08418, -19.3283 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="spiddy_leaf2" type="Sprite" parent="Sprite/spiddy_head" index="0"]
+[node name="spiddy_leaf1" type="Sprite" parent="Sprites/Sprite/spiddy_head" index="1"]
 
 show_behind_parent = true
-position = Vector2( 27.7688, -34.7806 )
+position = Vector2( -21.6818, -23.6705 )
+rotation = -0.705778
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Visibility" ]
+offset = Vector2( -5.08087, -19.0104 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="spiddy_leaf1" type="Sprite" parent="Sprite/spiddy_head" index="1"]
+[node name="spiddy_feet1" type="Sprite" parent="Sprites/Sprite/spiddy_head" index="2"]
 
 show_behind_parent = true
-position = Vector2( -26.0031, -34.0118 )
+position = Vector2( -5.96046e-008, -18.0727 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Visibility" ]
+offset = Vector2( -0.120561, 40.4556 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="spiddy_feet1" type="Sprite" parent="Sprite/spiddy_head" index="2"]
+[node name="Speechbubble" type="Node2D" parent="." index="3"]
 
-show_behind_parent = true
-position = Vector2( 0.638955, 31.052 )
-texture = ExtResource( 9 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="Speechbubble" type="Node2D" parent="." index="5"]
-
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -239,7 +361,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Sprite" type="Sprite" parent="Speechbubble" index="1"]
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="6"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="4"]
 
 root_node = NodePath("..")
 autoplay = ""
