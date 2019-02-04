@@ -13,12 +13,13 @@ extents = Vector2( 8882.36, 4419.15 )
 custom_solver_bias = 0.0
 extents = Vector2( 5260.31, 3438.07 )
 
-[node name="ThornsGround" type="Node2D" index="0" groups=[
+[node name="ThornsGround" type="Node2D" groups=[
 "rayIgnore",
 ]]
 
+scale = Vector2( 0.536891, 0.536891 )
 z_index = -5
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
