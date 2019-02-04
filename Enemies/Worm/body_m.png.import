@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dirt.png-714c07ba5271f5cc3ee4922a288b0eb1.stex"
+path="res://.import/body_m.png-7e2a6e0c5f56499c5915b05f5ec8818b.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/dirt.png"
-dest_files=[ "res://.import/dirt.png-714c07ba5271f5cc3ee4922a288b0eb1.stex" ]
+source_file="res://Enemies/Worm/body_m.png"
+dest_files=[ "res://.import/body_m.png-7e2a6e0c5f56499c5915b05f5ec8818b.stex" ]
 
 [params]
 

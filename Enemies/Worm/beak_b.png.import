@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/feet_f.png-51b51a19b9b93b070ebf190bdcedf5c0.stex"
+path="res://.import/beak_b.png-b6a45cbc5b64386552999c44b5c681bc.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/feet_f.png"
-dest_files=[ "res://.import/feet_f.png-51b51a19b9b93b070ebf190bdcedf5c0.stex" ]
+source_file="res://Enemies/Worm/beak_b.png"
+dest_files=[ "res://.import/beak_b.png-b6a45cbc5b64386552999c44b5c681bc.stex" ]
 
 [params]
 
