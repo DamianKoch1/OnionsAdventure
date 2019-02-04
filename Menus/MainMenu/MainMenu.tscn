@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Menus/UI_Mock_Up_Damian.jpg" type="Texture" id=2]
+[ext_resource path="res://Menus/BGOnion.png" type="Texture" id=2]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Fonts/hoboBold.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
