@@ -1,5 +1,7 @@
 extends AudioStreamPlayer
 
+
+#fades in audioplayer volume from 0 to previous volume
 func fadeIn(speed = 1.0):
 	var fadeInAnim = $AnimationPlayer.get_animation("fadeIn")
 	var track = fadeInAnim.find_track("volume_db")

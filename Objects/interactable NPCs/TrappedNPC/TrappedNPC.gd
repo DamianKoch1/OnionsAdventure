@@ -13,7 +13,7 @@ func _ready():
 	
 
 
-#delete self and increase counter if player presses button in area
+#delete self and increase counter if player presses push button in area, shortly freeze player until timer runs out
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		if Input.is_action_just_pressed("push") && collected != true:
@@ -29,7 +29,7 @@ func _on_Area2D_body_entered(body):
 			SaveGame.saveGame()
 			$WebDestroyedDustVFX.emitting = true
 
-#save this objects name and that it was collected into another .cfg
+#save level number, this objects name and that it was collected into another .cfg
 func saveCollected():
 	SaveGame.npcDict[str(SaveGame.currLevelId,name)] = collected
 	for key in SaveGame.npcDict.keys():
@@ -42,9 +42,6 @@ func checkCollected():
 	collected = saveFile.get_value("TrappedNPCs", str(SaveGame.currLevelId,name), false)
 	if collected == true:
 		queue_free()
-
-		
-
 
 func _on_unfreezePlayer_timeout():
 	if player != null:

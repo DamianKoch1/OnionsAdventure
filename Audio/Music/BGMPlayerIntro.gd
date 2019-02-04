@@ -4,6 +4,7 @@ extends Node
 func _on_Intro_finished():
 	$Mainpart.playing = true
 
+#fades in audioplayer volumes from 0 to previous volume
 func fadeOut(speed = 1.0):
 	var fadeOutAnim = $AnimationPlayer.get_animation("fadeOut")
 	var introTrack = fadeOutAnim.find_track("Intro:volume_db")
