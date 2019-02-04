@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsDown.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=5]
 
 [node name="movingplatdown" type="Node2D"]
 
@@ -12,12 +14,16 @@ tile_data = PoolIntArray( 327671, 1, 0, 327672, 1, 0, 327673, 1, 0, 327674, 1, 0
 
 [node name="Movingplatform" parent="." index="1" instance=ExtResource( 2 )]
 
-editor/display_folded = true
 position = Vector2( 68.7533, 159.606 )
 
 [node name="State2" parent="Movingplatform" index="2"]
 
 position = Vector2( 0.113937, 145.974 )
+
+[node name="ThornsDown" parent="Movingplatform" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 1.40803, 124.68 )
+scale = Vector2( 0.67647, 0.67647 )
 
 [node name="Movingplatform2" parent="." index="2" instance=ExtResource( 2 )]
 
@@ -36,45 +42,41 @@ position = Vector2( 450, 400 )
 
 position = Vector2( 0, 169.411 )
 
-[node name="Thornbush" parent="." index="4" instance=ExtResource( 3 )]
+[node name="ThornsUp" parent="." index="4" instance=ExtResource( 4 )]
 
-position = Vector2( -0.887604, 799.986 )
-rotation = 1.56839
+position = Vector2( -30, 750 )
 
-[node name="Thornbush2" parent="." index="5" instance=ExtResource( 3 )]
+[node name="ThornsUp2" parent="." index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 121.133, 801.021 )
-rotation = 1.56839
+position = Vector2( 100, 750 )
 
-[node name="Thornbush3" parent="." index="6" instance=ExtResource( 3 )]
+[node name="ThornsUp3" parent="." index="6" instance=ExtResource( 4 )]
 
-position = Vector2( 215.961, 800.794 )
-rotation = 1.56839
+position = Vector2( 460, 750 )
 
-[node name="Thornbush4" parent="." index="7" instance=ExtResource( 3 )]
+[node name="ThornsUp4" parent="." index="7" instance=ExtResource( 4 )]
 
-position = Vector2( 337.248, 797.844 )
-rotation = 1.56839
+position = Vector2( 610, 750 )
 
-[node name="Thornbush5" parent="." index="8" instance=ExtResource( 3 )]
+[node name="ThornsGround" parent="." index="8" instance=ExtResource( 5 )]
 
-position = Vector2( 429.134, 797.622 )
-rotation = 1.56839
+position = Vector2( 40, 810 )
 
-[node name="Thornbush6" parent="." index="9" instance=ExtResource( 3 )]
+[node name="ThornsGround2" parent="." index="9" instance=ExtResource( 5 )]
 
-position = Vector2( 531.315, 796.048 )
-rotation = 1.56839
+position = Vector2( 180, 810 )
 
-[node name="Thornbush7" parent="." index="10" instance=ExtResource( 3 )]
+[node name="ThornsGround3" parent="." index="10" instance=ExtResource( 5 )]
 
-position = Vector2( 624.677, 794.494 )
-rotation = 1.56839
+position = Vector2( 290, 810 )
 
-[node name="Thornbush8" parent="." index="11" instance=ExtResource( 3 )]
+[node name="ThornsGround4" parent="." index="11" instance=ExtResource( 5 )]
 
-position = Vector2( 624.677, 794.494 )
-rotation = 1.56839
+position = Vector2( 400, 810 )
+
+[node name="ThornsGround5" parent="." index="12" instance=ExtResource( 5 )]
+
+position = Vector2( 540, 800 )
 
 
 [editable path="Movingplatform"]
