@@ -1,9 +1,13 @@
 extends Node2D
 
+#max degrees the rope will swing to
 export var swingDegrees = 30
+
 export var swingSpeed = 0.03
 onready var swingAmount = 0
 onready var playerAttached = false
+
+#short reattach delay if player jumps off
 var attachCD = 0
 
 var player
@@ -22,9 +26,9 @@ func _physics_process(delta):
 		rotation_degrees = -swingDegrees*sin(swingAmount)
 	if abs(rotation_degrees) <= 3 && $ropeSwing.playing == false:
 		$ropeSwing.playRandomPitch()
+	#player can jump off, bounce gets stronger depending on current rotation degrees
 	if Input.is_action_just_pressed("jump") && playerAttached == true:
-		player.state = player.jump
-		player.bounce(min(abs(rotation_degrees)*660*swingSpeed, 600))
+		player.jump(min(abs(rotation_degrees)*660*swingSpeed, 600))
 		attachCD = 1
 		playerAttached = false
 		player = null
@@ -38,7 +42,7 @@ func _on_Area2D_body_entered(body):
 		playerAttached = true
 		player = body
 
-#bounce when player leaves rope
+#detach player when exiting body
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("Player"):
 		body.state = body.jump

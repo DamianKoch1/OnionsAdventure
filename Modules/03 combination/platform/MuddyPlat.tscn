@@ -20,6 +20,7 @@ tile_data = PoolIntArray( 327670, 0, 0, 327671, 1, 0, 327672, 1, 0, 327673, 1, 0
 
 editor/display_folded = true
 position = Vector2( -192.88, 105.683 )
+movespeed = 1.5
 
 [node name="EnemyPath" parent="Enemy" index="0"]
 
@@ -34,6 +35,7 @@ rotation = -0.00725692
 
 editor/display_folded = true
 position = Vector2( 95.1197, 105.683 )
+movespeed = 1.5
 
 [node name="EnemyPath" parent="Enemy2" index="0"]
 

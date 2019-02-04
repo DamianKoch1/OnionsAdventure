@@ -6,7 +6,9 @@ var saveFile
 
 var spawnpoint
 
+#true on new game, player loads position when entering level if true
 var loadPlayerState = false
+
 var trappedNPCs = 0
 var dandelions = 0
 var playerPosX
@@ -14,6 +16,7 @@ var playerPosY
 
 #level the player is in
 var currLevelId = 0 setget setCurrLevelId
+#highest level the player has been in, determines if level buttons show in level selection
 var highestLevelId = 1
 
 var npcDict = {}
@@ -37,8 +40,6 @@ func deleteSave():
 	trappedNPCs = 0
 	dandelions = 0
 
-
-
 func saveGame():
 	saveFile.set_value("SaveState", "latestLevelId", currLevelId) 
 	saveFile.set_value("SaveState", "highestLevelId", highestLevelId)
@@ -59,7 +60,6 @@ func loadGame():
 	playerPosX = saveFile.get_value("SaveState", "spawnPosX", 0)
 	playerPosY = saveFile.get_value("SaveState", "spawnPosY", 0)
 	
-
 func checkLevelProgress():
 	saveFile.load(savePath)
 	highestLevelId = saveFile.get_value("SaveState", "highestLevelId", 1)
