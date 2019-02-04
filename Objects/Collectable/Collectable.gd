@@ -1,7 +1,7 @@
 extends Node2D
 
 
-#incase of collect animation
+#incase of collect animation later
 var collected = false
 
 var savePath = "user://dandelions.cfg"
@@ -21,6 +21,7 @@ func _on_Area2D_body_entered(body):
 		SaveGame.saveGame()
 		queue_free()
 
+#save level number, own name and collected state
 func saveCollected():
 	SaveGame.dandelionDict[str(SaveGame.currLevelId,name)] = collected
 	for key in SaveGame.dandelionDict.keys():

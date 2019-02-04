@@ -10,10 +10,10 @@ onready var animTreePlayer = $Onion/AnimationTreePlayer1
 var state = idle setget setState
 enum {idle, run, jump, fall, climb, frozen}
 
-#node to attach to if airborne
+#origin node to attach to if airborne
 onready var worldNode = get_parent()
 
-#ray that finds downward object to attach to (movingplatforms etc)
+#ray that finds object below to attach to (movingplatforms etc)
 onready var ray = $RayCast2D
 
 #can jump for short time after walking off cliffs
@@ -25,6 +25,7 @@ export var gravity = 20
 export var jumpheight = 550
 export var climbspeed = 200
 
+#determines if fall particles should play when landing
 onready var highestFallSpeed = 0
 export var fallVFXspeedThreshhold = 700
 
@@ -53,6 +54,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == false:
 				print("Fly ON")
+				$debugFly.show()
 				motion.y = 0
 				setState(climb)
 				$CollisionShape2D.disabled = true
@@ -61,6 +63,7 @@ func _physics_process(delta):
 				debugFly = true
 			else:
 				print("Fly OFF")
+				$debugFly.hide()
 				$CollisionShape2D.disabled = false
 				setState(idle)
 				climbspeed /= 2.5
@@ -69,9 +72,11 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("debugGodmode"):
 			if debugGodmode == false:
 				print("Invincible ON")
+				$debugInvincible.show()
 				debugGodmode = true
 			else:
 				print("Invincible OFF")
+				$debugInvincible.hide()
 				debugGodmode = false
 		#attach to ground if not climbing, rotate to 0
 		if state != climb:
@@ -84,21 +89,19 @@ func _physics_process(delta):
 				global_scale.y = 0.5
 			else:
 				rotation_degrees = 0
-			#jump
 			if is_on_floor():
 				if motion.x == 0:
 					setState(idle)
 				else:
 					setState(run)
+				#jump
 				if Input.is_action_just_pressed("jump"):
-					$SFX/jump.playRandomPitch()
-					motion.y = -jumpheight
-					setState(jump)
+					jump(jumpheight)
 			else:
 				if motion.y >= 100:
 					if state == run || state == idle:
 						setState(fall)
-			#falling animation
+			#fall
 			if state == jump:
 				if motion.y > 10:
 					setState(fall)
@@ -115,7 +118,7 @@ func _physics_process(delta):
 				motion.y = climbspeed
 			else:
 				motion.y = 0
-		#movement(run, jump, idle, fall states)
+		#movement
 		if Input.is_action_pressed("ui_right"):
 			if is_on_floor():
 				ghostjumpTimeframe = maxGhostjumpDelay
@@ -131,17 +134,16 @@ func _physics_process(delta):
 		#ghostjump
 		if  ghostjumpTimeframe != 0:
 			if Input.is_action_just_pressed("jump"):
-				$SFX/jump.playRandomPitch()
-				motion.y = -jumpheight
 				ghostjumpTimeframe = 0
-				setState(jump)
+				jump(jumpheight)
 		motion = move_and_slide(motion, UP)
 	else:
+		#if frozen, finish jump if in air and freeze x motion
 		motion.x = 0
 		motion.y += gravity
 		motion = move_and_slide(motion, UP)
 
-#used to unfreeze player from other scripts (trappedNPC)
+#used to unfreeze player without setState from other scripts (trappedNPC)
 func setIdle():
 	state = idle
 
@@ -191,13 +193,20 @@ func loseHp():
 		motion.x = 0
 		motion.y = 0
 
+#no sound, used for uncontrolled jumps (krakenmushroom)
 func bounce(bounceStr):
 	motion.y = -bounceStr
 	motion = move_and_slide(motion, UP)
 	setState(jump)
-	
+
+#sound, for controlled jumps using space
+func jump(strength):
+	$SFX/jump.playRandomPitch()
+	motion.y = -strength
+	setState(jump)
+
+#find object below, attach to it if close enough (smoothes movement on moving platforms)
 func rayUpdate():
-	#find object below, attach to it if close enough (smoothes movement on moving platforms)
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var col = ray.get_collider()
