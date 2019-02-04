@@ -7,7 +7,7 @@ length = 0.3
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mealy2/body_m/beak_b:position")
+tracks/0/path = NodePath("Enemy/Sprites/body_m/beak_b:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -16,10 +16,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -12.4218, -64.836 ), Vector2( -12.4218, -66.836 ), Vector2( -12.4218, -64.836 ) ]
+"values": [ Vector2( -15.3126, -85.0713 ), Vector2( -9.53104, -84.1805 ), Vector2( -15.3126, -85.0713 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Mealy2/body_m/beak_b:rotation_degrees")
+tracks/1/path = NodePath("Enemy/Sprites/body_m/beak_b:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,7 +31,7 @@ tracks/1/keys = {
 "values": [ 0.0, 18.5043, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Mealy2/body_m/beak_f:position")
+tracks/2/path = NodePath("Enemy/Sprites/body_m/beak_f:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -40,10 +40,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.1, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 10.6571, -65.7147 ), Vector2( 8.65712, -65.7147 ), Vector2( 10.6571, -65.7147 ) ]
+"values": [ Vector2( 13.5479, -83.0592 ), Vector2( 5.76636, -83.0592 ), Vector2( 13.5479, -83.0592 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Mealy2/body_m/beak_f:rotation_degrees")
+tracks/3/path = NodePath("Enemy/Sprites/body_m/beak_f:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
