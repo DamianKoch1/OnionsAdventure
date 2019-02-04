@@ -1,19 +1,17 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Worm/Worm.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/Worm/Mealy_Idle.tres" type="Animation" id=2]
-[ext_resource path="res://Enemies/Enemy/feet_b.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/Worm/body_m.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/Worm/beak_b.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/Worm/beak_f.png" type="Texture" id=6]
-[ext_resource path="res://Enemies/Worm/dirt.png" type="Texture" id=7]
-[ext_resource path="res://Enemies/Worm/feet_f.png" type="Texture" id=8]
+[ext_resource path="res://Enemies/Worm/Feet_B.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Worm/body_m.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Worm/beak_b.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Worm/beak_f.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/Worm/dirt.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/Worm/feet_f.png" type="Texture" id=7]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 
-resource_name = "dig out"
-length = 0.3
-loop = true
+length = 0.8
+loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Enemy/Sprites/body_m:position")
@@ -22,39 +20,76 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 0.569396, 1 ),
 "update": 0,
-"values": [ Vector2( -0.0715665, 41.3882 ), Vector2( -0.0715665, 29.9565 ), Vector2( -0.0715665, 17.0052 ), Vector2( -0.0715665, 7.00531 ) ]
+"values": [ Vector2( -0.0715665, 41.3882 ), Vector2( -0.82462, -5.44734 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="Animation" id=1]
 
-custom_solver_bias = 0.0
-extents = Vector2( 50.2848, 69.9113 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 28.8834, 30.304 )
-
-[sub_resource type="Animation" id=3]
-
-length = 1.0
-loop = false
+resource_name = "idle"
+length = 0.3
+loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Enemy:position")
+tracks/0/path = NodePath("Enemy/Sprites/body_m/beak_b:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -40 ) ]
+"values": [ Vector2( -12.4218, -65 ), Vector2( -9.53104, -65 ), Vector2( -15.3126, -65 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Enemy/Sprites/body_m/beak_b:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 18.5043, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Enemy/Sprites/body_m/beak_f:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 10.6571, -65 ), Vector2( 5.76636, -65 ), Vector2( 13.5479, -65 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Enemy/Sprites/body_m/beak_f:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -16.5441, 0.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 50.2848, 69.9113 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.8834, 38.4867 )
 
 [node name="Worm" type="Node2D" index="0" groups=[
 "Enemies",
@@ -65,7 +100,18 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 diggedOut = false
 
-[node name="Enemy" type="Node2D" parent="." index="0"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/digOut = SubResource( 2 )
+anims/idle = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Enemy" type="Node2D" parent="." index="1"]
 
 _sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
@@ -78,42 +124,34 @@ position = Vector2( 0.00422668, 0.00424194 )
 rotation = -0.000132151
 _sections_unfolded = [ "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Sprites" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/Idle = ExtResource( 2 )
-"anims/dig out" = SubResource( 4 )
-blend_times = [  ]
-
-[node name="feet_b" type="Sprite" parent="Enemy/Sprites" index="1"]
+[node name="feet_b" type="Sprite" parent="Enemy/Sprites" index="0"]
 
 position = Vector2( -0.67403, 18.839 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
-[node name="body_m" type="Sprite" parent="Enemy/Sprites" index="2"]
+[node name="body_m" type="Sprite" parent="Enemy/Sprites" index="1"]
 
-editor/display_folded = true
-position = Vector2( -0.553917, -5.64682 )
+position = Vector2( -0.82462, -5.44734 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="beak_b" type="Sprite" parent="Enemy/Sprites/body_m" index="0"]
 
-position = Vector2( -12.4218, -64.836 )
-texture = ExtResource( 5 )
+position = Vector2( -12.4218, -65 )
+z_index = -1
+texture = ExtResource( 4 )
 offset = Vector2( -3.54817, -20.3804 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="beak_f" type="Sprite" parent="Enemy/Sprites/body_m" index="1"]
 
-position = Vector2( 10.6571, -65.7147 )
-texture = ExtResource( 6 )
+position = Vector2( 10.6571, -65 )
+z_index = -1
+texture = ExtResource( 5 )
 offset = Vector2( 4.64221, -19.5664 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="Enemy/Sprites/body_m" index="2"]
 
@@ -134,26 +172,16 @@ _sections_unfolded = [ "Collision" ]
 
 position = Vector2( 160.104, -368.926 )
 scale = Vector2( 0.953475, 1.51027 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="dirt" type="Sprite" parent="Enemy/Sprites" index="3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Enemy/Sprites/body_m" index="3"]
 
-position = Vector2( -0.81759, 38.616 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="feet_f" type="Sprite" parent="Enemy/Sprites" index="4"]
-
-position = Vector2( -0.47639, 20.4444 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 8 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Enemy" index="1"]
-
+editor/display_folded = true
+visible = false
+position = Vector2( 1.64078, 10.8862 )
+rotation = 0.000132151
+scale = Vector2( 2, 2 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -162,32 +190,37 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/StaticBody2D" index="0"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/Sprites/body_m/StaticBody2D" index="0"]
 
-visible = false
-position = Vector2( -0.242496, 14.1809 )
+position = Vector2( -0.857193, -5.18239 )
 rotation = -0.000132151
 scale = Vector2( 0.477134, 0.717852 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Timer" type="Timer" parent="." index="1"]
+[node name="dirt" type="Sprite" parent="Enemy/Sprites" index="2"]
+
+position = Vector2( -0.81759, 38.616 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="feet_f" type="Sprite" parent="Enemy/Sprites" index="3"]
+
+position = Vector2( -0.47639, 20.4444 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="Timer" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 2.3
 one_shot = false
 autostart = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.3
-anims/digOut = SubResource( 3 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [connection signal="body_entered" from="Enemy/Sprites/body_m/Area2D" to="." method="_on_Area2D_body_entered"]
 
