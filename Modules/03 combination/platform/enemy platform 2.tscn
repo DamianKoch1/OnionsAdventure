@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=2]
@@ -8,17 +8,10 @@
 
 bake_interval = 5.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -25.1224, 74.9925, 6.49843, -53.242, 1.82367, 105.407, 30.0465, 5.87866, -81.9749, -8.49158, -65.4544, 22.7787, -12.0731, -40.2337, 11.3141, 62.0699, -152.328, 115.204, 0, 0, 0, 0, -81.2339, 169.313 )
+"points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, 0, 0, 0, 0, -15.2528, 230.102, -49.5606, 24.7803, 44.121, -39.2859, 83.2641, 254.882, 0, 0, 0, 0, 101.396, 154.552, 32.0331, 21.7583, -46.5386, -22.3627, 60.297, 124.333, 0, 0, 0, 0, -18.8792, 114.058, 0, 0, 0, 0, -62.3958, 152.135, 0, 0, 0, 0, -149.429, 230.707, 33.8463, 7.85717, -46.5386, -0.604398, -212.286, 253.069, 0, 0, 0, 0, -258.221, 185.377, -13.9011, 16.9231, -7.85717, 4.23078, -249.759, 141.256, -35.6595, 10.2748, 48.9562, 7.85717, -197.176, 116.475, 0, 0, 0, 0, -126.462, 135.816, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[sub_resource type="Curve2D" id=2]
-
-bake_interval = 5.0
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -25.1224, 74.9925, -0.686603, -51.9356, 3.01657, 108.848, 11.4308, 8.81799, -86.5472, -22.2085, -31.9288, 33.4055, 6.2161, -86.2833, 11.3141, 62.0699, -153.421, 116.36, 0, 0, 0, 0, -81.2339, 169.313 )
-}
-
-[node name="enemy platform 2" type="Node2D"]
+[node name="enemy platform 2" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -26,9 +19,7 @@ tile_data = PoolIntArray( 65529, 0, 0, 65530, 1, 0, 65531, 1, 0, 65532, 1, 0, 65
 
 [node name="Enemy" parent="." index="1" instance=ExtResource( 2 )]
 
-editor/display_folded = true
-position = Vector2( -207.257, -33.3271 )
-movespeed = 0.2
+position = Vector2( -46.7996, -161.204 )
 
 [node name="EnemyPath" parent="Enemy" index="0"]
 
@@ -37,27 +28,12 @@ curve = SubResource( 1 )
 
 [node name="PathFollow2D" parent="Enemy/EnemyPath" index="1"]
 
-rotation = 0.108686
+position = Vector2( -259.167, 176.826 )
+rotation = -1.59638
 
-[node name="Enemy2" parent="." index="2" instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 144.566, -41.2092 )
-movespeed = 0.2
-
-[node name="EnemyPath" parent="Enemy2" index="0"]
-
-position = Vector2( 82.0276, -164.334 )
-curve = SubResource( 2 )
-
-[node name="PathFollow2D" parent="Enemy2/EnemyPath" index="1"]
-
-rotation = 0.163549
-
-[node name="stump m 7" parent="." index="3" instance=ExtResource( 3 )]
+[node name="stump m 7" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 10.8072, -52.4148 )
 
 
 [editable path="Enemy"]
-[editable path="Enemy2"]
