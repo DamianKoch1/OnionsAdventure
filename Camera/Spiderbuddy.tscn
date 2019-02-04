@@ -1,13 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Camera/Spiderbuddy.gd" type="Script" id=1]
 [ext_resource path="res://Camera/spiddy_net.png" type="Texture" id=2]
-[ext_resource path="res://Camera/spiddy_body.png" type="Texture" id=3]
-[ext_resource path="res://Camera/spiddy_leaf2.png" type="Texture" id=4]
-[ext_resource path="res://Camera/spiddy_leaf1.png" type="Texture" id=5]
-[ext_resource path="res://Camera/spiddy_feet1.png" type="Texture" id=6]
-[ext_resource path="res://Camera/spiddy_head.png" type="Texture" id=7]
-[ext_resource path="res://Camera/spiddy_feet2.png" type="Texture" id=8]
+[ext_resource path="res://Camera/placeholder.png" type="Texture" id=3]
+[ext_resource path="res://Camera/spiddy_body.png" type="Texture" id=4]
+[ext_resource path="res://Camera/spiddy_feet2.png" type="Texture" id=5]
+[ext_resource path="res://Camera/spiddy_head.png" type="Texture" id=6]
+[ext_resource path="res://Camera/spiddy_leaf2.png" type="Texture" id=7]
+[ext_resource path="res://Camera/spiddy_leaf1.png" type="Texture" id=8]
+[ext_resource path="res://Camera/spiddy_feet1.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
 
@@ -136,7 +137,11 @@ anims/hide = SubResource( 1 )
 anims/show = SubResource( 2 )
 blend_times = [  ]
 
-[node name="Sprites" type="Node2D" parent="." index="1"]
+[node name="Node2D" type="Node2D" parent="." index="1"]
+
+position = Vector2( 0, -300 )
+
+[node name="Sprites" type="Node2D" parent="." index="2"]
 
 position = Vector2( 0, -300 )
 _sections_unfolded = [ "Transform" ]
@@ -147,41 +152,64 @@ position = Vector2( -0.00414919, -45.0156 )
 scale = Vector2( 0.0396121, 0.0396121 )
 texture = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Sprites" index="1"]
+[node name="placeholder" type="Sprite" parent="." index="3"]
 
-position = Vector2( 0, -32 )
+position = Vector2( 0.030164, -332.063 )
 scale = Vector2( 0.0396121, 0.0396121 )
 texture = ExtResource( 3 )
 
-[node name="spiddy_leaf2" type="Sprite" parent="Sprites/Sprite" index="0"]
+[node name="Sprite" type="Sprite" parent="." index="4"]
 
-position = Vector2( 22.3747, 12.959 )
-texture = ExtResource( 4 )
-
-[node name="spiddy_leaf1" type="Sprite" parent="Sprites/Sprite" index="1"]
-
-position = Vector2( -24.1059, 12.252 )
-texture = ExtResource( 5 )
-
-[node name="spiddy_feet1" type="Sprite" parent="Sprites/Sprite" index="2"]
-
-position = Vector2( -0.385377, 75.4401 )
-texture = ExtResource( 6 )
-
-[node name="spiddy_head" type="Sprite" parent="Sprites/Sprite" index="3"]
-
-position = Vector2( -0.341075, 50.0365 )
-texture = ExtResource( 7 )
+position = Vector2( -0.132126, -301.792 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="spiddy_feet2" type="Sprite" parent="Sprites/Sprite" index="4"]
+[node name="spiddy_net" type="Sprite" parent="Sprite" index="0"]
+
+position = Vector2( 0.0985856, -78.2631 )
+scale = Vector2( 0.250901, 0.250901 )
+texture = ExtResource( 2 )
+
+[node name="spiddy_body" type="Sprite" parent="Sprite" index="1"]
+
+position = Vector2( -0.0226416, 3.20615 )
+scale = Vector2( 0.250901, 0.250901 )
+texture = ExtResource( 4 )
+
+[node name="spiddy_feet2" type="Sprite" parent="Sprite/spiddy_body" index="0"]
 
 show_behind_parent = true
-position = Vector2( 0.614202, -49.7156 )
+position = Vector2( -0.622275, -46.281 )
+texture = ExtResource( 5 )
+
+[node name="spiddy_head" type="Sprite" parent="Sprite" index="2"]
+
+editor/display_folded = true
+position = Vector2( -0.152225, 14.4275 )
+scale = Vector2( 0.250901, 0.250901 )
+texture = ExtResource( 6 )
+
+[node name="spiddy_leaf2" type="Sprite" parent="Sprite/spiddy_head" index="0"]
+
+show_behind_parent = true
+position = Vector2( 27.7688, -34.7806 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="spiddy_leaf1" type="Sprite" parent="Sprite/spiddy_head" index="1"]
+
+show_behind_parent = true
+position = Vector2( -26.0031, -34.0118 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Speechbubble" type="Node2D" parent="." index="2"]
+[node name="spiddy_feet1" type="Sprite" parent="Sprite/spiddy_head" index="2"]
+
+show_behind_parent = true
+position = Vector2( 0.638955, 31.052 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Speechbubble" type="Node2D" parent="." index="5"]
 
 modulate = Color( 1, 1, 1, 0 )
 _sections_unfolded = [ "Visibility" ]
@@ -211,7 +239,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Sprite" type="Sprite" parent="Speechbubble" index="1"]
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="3"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="6"]
 
 root_node = NodePath("..")
 autoplay = ""
