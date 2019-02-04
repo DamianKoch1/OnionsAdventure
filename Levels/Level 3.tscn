@@ -90,6 +90,7 @@ position = Vector2( 125.084, -220.157 )
 
 [node name="movingten1" parent="." index="2" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 position = Vector2( 1249.28, -223.918 )
 
 [node name="Enemy" parent="movingten1" index="2" instance=ExtResource( 5 )]

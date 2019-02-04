@@ -26,7 +26,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 14.0286, 21.1175 )
 
-[node name="Onion" type="KinematicBody2D" index="0" groups=[
+[node name="Onion" type="KinematicBody2D" groups=[
 "Player",
 ]]
 
@@ -116,7 +116,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="OnionBody" type="Sprite" parent="Onion/Colisionposition/Höhenposition" index="0"]
 
 position = Vector2( 0.50386, -30.1882 )
-scale = Vector2( 0.5, 0.429466 )
+scale = Vector2( 0.5, 0.449996 )
 z_index = 1
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -124,7 +124,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="OnionHair" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
 position = Vector2( 7.13066, -33.507 )
-rotation = 0.935385
+rotation = 0.72248
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 8 )
 offset = Vector2( -1.19385, -22.9981 )
@@ -133,7 +133,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="onion_eyes" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="1"]
 
 position = Vector2( 25.7552, 4.50173 )
-scale = Vector2( 1, 0.923468 )
+scale = Vector2( 1, 0.996118 )
 texture = ExtResource( 9 )
 offset = Vector2( -12.1219, -0.543782 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
@@ -148,7 +148,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 [node name="OnionEarL" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
 position = Vector2( -0.070208, -36.7456 )
-rotation = 0.138302
+rotation = 0.282478
 scale = Vector2( 1.00907, 1.10266 )
 z_index = -2
 texture = ExtResource( 11 )
@@ -158,7 +158,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 [node name="OnionTail" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
 position = Vector2( -30.5271, 45.5714 )
-rotation = -0.345927
+rotation = -0.141106
 scale = Vector2( 1.00228, 1.10883 )
 z_index = -2
 texture = ExtResource( 12 )
@@ -168,7 +168,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="OnionEarR" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
 position = Vector2( -9.10822, -35.8578 )
-rotation = -0.652117
+rotation = -0.57284
 scale = Vector2( 1.03379, 1.07951 )
 z_index = -2
 texture = ExtResource( 13 )

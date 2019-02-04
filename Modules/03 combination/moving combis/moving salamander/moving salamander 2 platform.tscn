@@ -5,7 +5,7 @@
 [ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=4]
 
-[node name="moving salamander 2 platform" type="Node2D"]
+[node name="moving salamander 2 platform" type="Node2D" index="0"]
 
 [node name="Movingplatform" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -19,7 +19,7 @@ position = Vector2( 0, -248.469 )
 
 position = Vector2( -2.24753, -67.7644 )
 scale = Vector2( 1.12941, 1.12941 )
-objToDestroyPath = NodePath("../../ThornsGround")
+objToDestroyPath = NodePath("../../Movingplatform2/ThornsGround")
 destroyRadius = 250
 
 [node name="Movingplatform2" parent="." index="1" instance=ExtResource( 1 )]
