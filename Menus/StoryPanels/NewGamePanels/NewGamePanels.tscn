@@ -10,8 +10,9 @@
 [ext_resource path="res://Audio/Music/BGMPlayerIntro.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Audio/Music/StorytellingIntro.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/Music/StorytellingMainpart.wav" type="AudioStream" id=10]
-[ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Alef-Regular.ttf" type="DynamicFontData" id=12]
+
 
 [sub_resource type="DynamicFont" id=1]
 

@@ -17,22 +17,19 @@ position = Vector2( -140, 70 )
 
 [node name="Worm" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 22.447, 142.447 )
-diggedOut = false
+position = Vector2( 22, 82 )
 
 [node name="Worm2" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 82.447, 142.447 )
+position = Vector2( 82, 82 )
 diggedOut = true
 
 [node name="Worm3" parent="." index="4" instance=ExtResource( 3 )]
 
-position = Vector2( 142.447, 142.447 )
-diggedOut = false
+position = Vector2( 142, 82 )
 
 [node name="Rope" parent="." index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 90, -200 )
-mirrorSwing = false
+position = Vector2( 90, -220 )
 
 

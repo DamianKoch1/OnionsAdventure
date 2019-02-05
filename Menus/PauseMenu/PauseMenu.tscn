@@ -1,19 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/UI_Mock_Up_Pause_BG.png" type="Texture" id=2]
-[ext_resource path="res://Alef-Bold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-
-size = 200
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="PauseMenu" type="Container" index="0"]
 
@@ -63,19 +55,19 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -61.0
+margin_left = -49.0
 margin_top = -124.0
-margin_right = 1160.0
+margin_right = 1172.0
 margin_bottom = 149.0
-rect_scale = Vector2( 0.13, 0.13 )
+rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "paused"
+custom_fonts/font = ExtResource( 3 )
+text = "Paused"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -83,61 +75,61 @@ _sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 
 [node name="ResumeButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -157.0
+margin_left = -145.0
 margin_top = -60.0
-margin_right = 67.0
+margin_right = 79.0
 margin_bottom = -24.0
 
 [node name="Label" parent="ResumeButton" index="0"]
 
 modulate = Color( 0.295288, 0.324413, 0.640625, 1 )
-margin_left = 97.0
-margin_right = 1222.0
-text = "resume"
+margin_left = 96.0
+margin_right = 1221.0
+text = "Resume"
 
 [node name="RestartButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -157.0
-margin_top = -17.0
-margin_right = 67.0
-margin_bottom = 19.0
+margin_left = -145.0
+margin_top = -15.0
+margin_right = 79.0
+margin_bottom = 21.0
 
 [node name="Label" parent="RestartButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 73.0
-margin_right = 1171.0
-text = "restart level"
+margin_left = 69.0
+margin_right = 1167.0
+text = "Restart level"
 
 [node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = -157.0
-margin_top = 23.0
-margin_right = 67.0
-margin_bottom = 59.0
+margin_left = -145.0
+margin_top = 30.0
+margin_right = 79.0
+margin_bottom = 66.0
 
 [node name="Label" parent="OptionsButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 99.0
-margin_right = 1197.0
-text = "options"
+margin_left = 95.0
+margin_right = 1193.0
+text = "Options"
 
 [node name="MainMenuButton" parent="." index="5" instance=ExtResource( 4 )]
 
-margin_left = -157.0
-margin_top = 57.0
-margin_right = 67.0
-margin_bottom = 93.0
+margin_left = -145.0
+margin_top = 75.0
+margin_right = 79.0
+margin_bottom = 111.0
 
 [node name="Label" parent="MainMenuButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 74.0
+margin_left = 80.0
 margin_top = 2.0
-margin_right = 1172.0
+margin_right = 1178.0
 margin_bottom = 275.0
-text = "main menu"
+text = "Main Menu"
 
 [node name="YesNoOverlayMainMenu" parent="." index="6" instance=ExtResource( 5 )]
 

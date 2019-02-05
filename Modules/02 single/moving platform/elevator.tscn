@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Thornbush/Thornbush.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsCorner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=5]
 
 [node name="elevator" type="Node2D"]
 
@@ -19,20 +21,21 @@ position = Vector2( 0, -64 )
 
 position = Vector2( 0, 325.269 )
 
-[node name="Thornbush" parent="." index="2" instance=ExtResource( 3 )]
+[node name="ThornsCorner" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -107.02, 322.635 )
-rotation = -1.55834
+position = Vector2( -123.631, 321.986 )
 
-[node name="Thornbush2" parent="." index="3" instance=ExtResource( 3 )]
+[node name="ThornsUp2" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 13.6298, 322.809 )
-rotation = -1.55834
+position = Vector2( 128.32, 272.987 )
 
-[node name="Thornbush3" parent="." index="4" instance=ExtResource( 3 )]
+[node name="ThornsGround" parent="." index="4" instance=ExtResource( 5 )]
 
-position = Vector2( 129.981, 325.587 )
-rotation = -1.55834
+position = Vector2( 47.2876, 325.022 )
+
+[node name="ThornsGround2" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( -46.0694, 326.492 )
 
 
 [editable path="Movingplatform"]
