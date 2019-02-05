@@ -115,11 +115,11 @@ rotation = -0.000393503
 
 [node name="Worm" parent="movingten1" index="3" instance=ExtResource( 7 )]
 
-position = Vector2( -394.813, 141.262 )
+position = Vector2( -389.621, 76.2827 )
 
 [node name="Worm2" parent="movingten1" index="4" instance=ExtResource( 7 )]
 
-position = Vector2( -237.608, 139.228 )
+position = Vector2( -232.416, 74.2487 )
 diggedOut = true
 
 [node name="Collectable" parent="movingten1" index="5" instance=ExtResource( 3 )]
@@ -392,16 +392,16 @@ position = Vector2( 150.361, -34.085 )
 
 [node name="Worm" parent="platform long" index="4" instance=ExtResource( 7 )]
 
-position = Vector2( -59.4955, 8.29045 )
+position = Vector2( -60.0209, -48.6182 )
 
 [node name="Worm2" parent="platform long" index="5" instance=ExtResource( 7 )]
 
-position = Vector2( -2.33336, 8.28048 )
+position = Vector2( -2.85875, -48.6282 )
 diggedOut = true
 
 [node name="Worm3" parent="platform long" index="6" instance=ExtResource( 7 )]
 
-position = Vector2( 54.0073, 8.25138 )
+position = Vector2( 53.4819, -48.6573 )
 
 [node name="Ladder2" parent="platform long" index="7" instance=ExtResource( 28 )]
 

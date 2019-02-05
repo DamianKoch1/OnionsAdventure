@@ -48,7 +48,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -372,11 +372,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Worm" parent="stump s, stone" index="3" instance=ExtResource( 28 )]
 
-position = Vector2( -267.32, 139.473 )
+position = Vector2( -268.961, 73.91 )
 
 [node name="Worm2" parent="stump s, stone" index="4" instance=ExtResource( 28 )]
 
-position = Vector2( -208.421, 140.014 )
+position = Vector2( -210.062, 74.451 )
 
 [node name="Collectable38" parent="stump s, stone" index="5" instance=ExtResource( 5 )]
 
@@ -397,7 +397,6 @@ scale = Vector2( 0.356969, 0.356969 )
 
 [node name="tree2" parent="." index="18" instance=ExtResource( 29 )]
 
-editor/display_folded = true
 position = Vector2( 9106.62, -160.362 )
 _sections_unfolded = [ "Transform" ]
 
@@ -407,7 +406,7 @@ position = Vector2( 309.63, -44.124 )
 
 [node name="Worm3" parent="tree2" index="3" instance=ExtResource( 28 )]
 
-position = Vector2( 50.623, 140.283 )
+position = Vector2( 53.0391, 81.91 )
 
 [node name="Collectable41" parent="tree2" index="4" instance=ExtResource( 5 )]
 

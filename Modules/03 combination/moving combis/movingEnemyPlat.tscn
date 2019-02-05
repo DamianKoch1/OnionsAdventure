@@ -20,8 +20,7 @@ position = Vector2( 403.471, 0.225201 )
 
 [node name="Worm" parent="Movingplatform" index="3" instance=ExtResource( 2 )]
 
-position = Vector2( 0, -15.5531 )
-scale = Vector2( 1.85106, 1.85106 )
+position = Vector2( 5.71943, -79.0584 )
 
 
 [editable path="Movingplatform"]
