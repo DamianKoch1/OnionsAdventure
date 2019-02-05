@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_Mock_Up_Damian_BG.jpg-c871a7df124c0d3c84397abe5f18f286.stex"
+path="res://.import/goku-ss-2-a.png-d02645f376423e1926119551a9bb72b8.stex"
 
 [deps]
 
-source_file="res://Menus/UI_Mock_Up_Damian_BG.jpg"
-dest_files=[ "res://.import/UI_Mock_Up_Damian_BG.jpg-c871a7df124c0d3c84397abe5f18f286.stex" ]
+source_file="res://Player/goku-ss-2-a.png"
+dest_files=[ "res://.import/goku-ss-2-a.png-d02645f376423e1926119551a9bb72b8.stex" ]
 
 [params]
 

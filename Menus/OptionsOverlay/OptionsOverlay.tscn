@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
-[ext_resource path="res://Menus/UI_Mock_Up_Damian_BG.jpg" type="Texture" id=2]
-[ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menus/BG.png" type="Texture" id=2]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=3]
 
 [node name="OptionsOverlay" type="Container" index="0"]
 

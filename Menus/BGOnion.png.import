@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/beak_f.png-59895faf2a8757bc24560a964dd8b5f2.stex"
+path="res://.import/BGOnion.png-549e4151e1ec7d06c0ab4543a7f3c543.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/beak_f.png"
-dest_files=[ "res://.import/beak_f.png-59895faf2a8757bc24560a964dd8b5f2.stex" ]
+source_file="res://Menus/BGOnion.png"
+dest_files=[ "res://.import/BGOnion.png-549e4151e1ec7d06c0ab4543a7f3c543.stex" ]
 
 [params]
 

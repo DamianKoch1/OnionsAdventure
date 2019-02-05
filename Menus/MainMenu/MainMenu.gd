@@ -1,6 +1,6 @@
 extends Container
 
-#hardcoded all scene paths because godot crashes if scenes reference each other using exported packedscenes
+#hardcoded all scene paths because godot crashes if two scenes reference each other using exported packedscenes
 onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 onready var creditscreen = preload("res://Menus/MainMenu/CreditScreen.tscn")
 onready var extrasMenu = preload("res://Menus/ExtrasMenu/ExtrasMenu.tscn")

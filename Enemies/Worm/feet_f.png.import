@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_Mock_Up_Royal__Blue_2.jpg-93ed413bbc454a8ab3f2b429c3f0644b.stex"
+path="res://.import/feet_f.png-62f9f3d5905f9c193cb3f5a5aa44c77d.stex"
 
 [deps]
 
-source_file="res://Menus/UI_Mock_Up_Royal__Blue_2.jpg"
-dest_files=[ "res://.import/UI_Mock_Up_Royal__Blue_2.jpg-93ed413bbc454a8ab3f2b429c3f0644b.stex" ]
+source_file="res://Enemies/Worm/feet_f.png"
+dest_files=[ "res://.import/feet_f.png-62f9f3d5905f9c193cb3f5a5aa44c77d.stex" ]
 
 [params]
 
