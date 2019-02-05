@@ -382,7 +382,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Gallery" type="Container" index="0"]
+[node name="Gallery" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -430,28 +430,20 @@ margin_top = -165.0
 margin_right = -80.0
 margin_bottom = -39.0
 
-[node name="Page" parent="." index="2" instance=ExtResource( 3 )]
+[node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -277.0
+margin_left = -143.0
 margin_top = 123.0
-margin_right = -16.0
-margin_bottom = 249.0
-text = "Page 1/3"
-
-[node name="MainMenuButton" parent="." index="3" instance=ExtResource( 4 )]
-
-margin_left = -85.0
-margin_top = 123.0
-margin_right = 139.0
+margin_right = 81.0
 margin_bottom = 159.0
 
 [node name="Label" parent="MainMenuButton" index="0"]
 
 margin_right = 1189.0
 margin_bottom = 273.0
-text = "Main Menu"
+text = "Back"
 
-[node name="BackButton" parent="." index="4" instance=ExtResource( 4 )]
+[node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 margin_left = -373.0
@@ -465,7 +457,7 @@ margin_right = 1189.0
 margin_bottom = 273.0
 text = "Back"
 
-[node name="NextButton" parent="." index="5" instance=ExtResource( 4 )]
+[node name="NextButton" parent="." index="4" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 margin_left = 43.0
@@ -479,7 +471,7 @@ margin_right = 1189.0
 margin_bottom = 273.0
 text = "Next"
 
-[node name="OptionsOverlay" parent="." index="6" instance=ExtResource( 5 )]
+[node name="OptionsOverlay" parent="." index="5" instance=ExtResource( 5 )]
 
 visible = false
 margin_left = 0.0
@@ -487,10 +479,9 @@ margin_top = 0.0
 margin_right = 32.0
 margin_bottom = 29.0
 
-[node name="Dandelions" type="Node2D" parent="." index="7"]
+[node name="Dandelions" type="Node2D" parent="." index="6"]
 
-editor/display_folded = true
-position = Vector2( -149, -133 )
+position = Vector2( -125.117, -117.741 )
 
 [node name="Sprite" type="Sprite" parent="Dandelions" index="0"]
 
@@ -506,10 +497,9 @@ margin_right = 265.0
 margin_bottom = 82.0
 text = "000/150"
 
-[node name="TrappedNPCs" type="Node2D" parent="." index="8"]
+[node name="TrappedNPCs" type="Node2D" parent="." index="7"]
 
-editor/display_folded = true
-position = Vector2( 50.6818, -157.442 )
+position = Vector2( 32.106, -146.164 )
 
 [node name="Sprite2" type="Sprite" parent="TrappedNPCs" index="0"]
 
@@ -524,12 +514,12 @@ margin_right = 376.0
 margin_bottom = 110.0
 text = "000/150"
 
-[node name="Page1" type="Node2D" parent="." index="9"]
+[node name="Page1" type="Node2D" parent="." index="8"]
 
 [node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( -277, -69 )
+position = Vector2( -245, -69 )
 dandelionsNeeded = 5
 NPCsNeeded = 1
 
@@ -543,14 +533,14 @@ NPCsNeeded = 1
 [node name="unlockableImg3" parent="Page1" index="2" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 107, -69 )
+position = Vector2( 75, -69 )
 dandelionsNeeded = 15
 NPCsNeeded = 2
 
 [node name="unlockableImg4" parent="Page1" index="3" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( -277, 59 )
+position = Vector2( -245, 59 )
 dandelionsNeeded = 20
 NPCsNeeded = 2
 
@@ -564,11 +554,11 @@ NPCsNeeded = 3
 [node name="unlockableImg6" parent="Page1" index="5" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 107, 59 )
+position = Vector2( 75, 59 )
 dandelionsNeeded = 30
 NPCsNeeded = 3
 
-[node name="Page2" type="Node2D" parent="." index="10"]
+[node name="Page2" type="Node2D" parent="." index="9"]
 
 editor/display_folded = true
 visible = false
@@ -669,7 +659,7 @@ texture = ExtResource( 9 )
 
 anims/unlock = SubResource( 6 )
 
-[node name="Page3" type="Node2D" parent="." index="11"]
+[node name="Page3" type="Node2D" parent="." index="10"]
 
 editor/display_folded = true
 visible = false
