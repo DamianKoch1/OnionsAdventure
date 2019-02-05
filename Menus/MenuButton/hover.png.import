@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/beak_b.png-7cc00ceab1a61e1c8b597413aae0152b.stex"
+path="res://.import/hover.png-1e766efa1a97803335c1d351ac3fb65e.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/beak_b.png"
-dest_files=[ "res://.import/beak_b.png-7cc00ceab1a61e1c8b597413aae0152b.stex" ]
+source_file="res://Menus/MenuButton/hover.png"
+dest_files=[ "res://.import/hover.png-1e766efa1a97803335c1d351ac3fb65e.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_Mock_Up_Damian.jpg-77cc3156c720c7f7a3950c7a72f5555a.stex"
+path="res://.import/pressed.png-8e91dd7eb26f691f022ec79ff5fbc45f.stex"
 
 [deps]
 
-source_file="res://Menus/UI_Mock_Up_Damian.jpg"
-dest_files=[ "res://.import/UI_Mock_Up_Damian.jpg-77cc3156c720c7f7a3950c7a72f5555a.stex" ]
+source_file="res://Menus/MenuButton/pressed.png"
+dest_files=[ "res://.import/pressed.png-8e91dd7eb26f691f022ec79ff5fbc45f.stex" ]
 
 [params]
 

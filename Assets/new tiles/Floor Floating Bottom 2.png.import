@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/button hover.png-dab58a2d97403250fb8eb4172d4a5e00.stex"
+path="res://.import/Floor Floating Bottom 2.png-9bb0ce46ed11e3f6307de40e288cf47f.stex"
 
 [deps]
 
-source_file="res://Menus/button hover.png"
-dest_files=[ "res://.import/button hover.png-dab58a2d97403250fb8eb4172d4a5e00.stex" ]
+source_file="res://Assets/new tiles/Floor Floating Bottom 2.png"
+dest_files=[ "res://.import/Floor Floating Bottom 2.png-9bb0ce46ed11e3f6307de40e288cf47f.stex" ]
 
 [params]
 

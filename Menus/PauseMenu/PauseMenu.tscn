@@ -3,9 +3,10 @@
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/UI_Mock_Up_Pause_BG.png" type="Texture" id=2]
 [ext_resource path="res://Alef-Bold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Menus/MenuButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
+
 
 [sub_resource type="DynamicFont" id=1]
 

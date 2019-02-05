@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=3]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png" type="Texture" id=4]
+[ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -36,7 +37,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="unlockableImg" type="Node2D"]
+[node name="unlockableImg" type="Node2D" index="0"]
 
 position = Vector2( 32, 32 )
 script = ExtResource( 1 )
@@ -96,62 +97,33 @@ position = Vector2( -18.3922, -29.4368 )
 scale = Vector2( 0.0853825, 0.0853824 )
 texture = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="Overlay/Dandelions" index="1"]
+[node name="Label" parent="Overlay/Dandelions" index="1" instance=ExtResource( 4 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_top = -34.0
-margin_right = 61.0
-margin_bottom = -20.0
-rect_scale = Vector2( 2, 2 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
+modulate = Color( 1, 1, 1, 1 )
+margin_left = 10.0
+margin_top = -39.0
+margin_right = 271.0
+margin_bottom = 87.0
 text = "x 0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
 
 [node name="TrappedNPCs" type="Node2D" parent="Overlay" index="2"]
 
-editor/display_folded = true
 position = Vector2( 14.0469, 28.1057 )
 scale = Vector2( 0.663696, 0.663696 )
 
 [node name="Sprite2" type="Sprite" parent="Overlay/TrappedNPCs" index="0"]
 
 scale = Vector2( 0.019993, 0.019993 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
-[node name="Label" type="Label" parent="Overlay/TrappedNPCs" index="1"]
+[node name="Label" parent="Overlay/TrappedNPCs" index="1" instance=ExtResource( 4 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 27.0
-margin_top = -10.0
-margin_right = 67.0
-margin_bottom = 4.0
-rect_scale = Vector2( 2, 2 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
+modulate = Color( 1, 1, 1, 1 )
+margin_left = 29.0
+margin_top = -17.0
+margin_right = 290.0
+margin_bottom = 109.0
 text = "x 0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
 
 [node name="TextureButton" type="TextureButton" parent="." index="3"]
 
