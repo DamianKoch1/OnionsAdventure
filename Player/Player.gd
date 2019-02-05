@@ -54,7 +54,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("debugFly"):
 			if debugFly == false:
 				print("Fly ON")
-				$debugFly.show()
+				$Onion/debugFly.show()
 				motion.y = 0
 				setState(climb)
 				$CollisionShape2D.disabled = true
@@ -63,7 +63,7 @@ func _physics_process(delta):
 				debugFly = true
 			else:
 				print("Fly OFF")
-				$debugFly.hide()
+				$Onion/debugFly.hide()
 				$CollisionShape2D.disabled = false
 				setState(idle)
 				climbspeed /= 2.5

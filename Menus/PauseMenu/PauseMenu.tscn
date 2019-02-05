@@ -83,8 +83,8 @@ margin_bottom = -24.0
 [node name="Label" parent="ResumeButton" index="0"]
 
 modulate = Color( 0.295288, 0.324413, 0.640625, 1 )
-margin_left = 97.0
-margin_right = 1222.0
+margin_left = 96.0
+margin_right = 1221.0
 text = "Resume"
 
 [node name="RestartButton" parent="." index="3" instance=ExtResource( 4 )]
@@ -97,8 +97,8 @@ margin_bottom = 21.0
 [node name="Label" parent="RestartButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 73.0
-margin_right = 1171.0
+margin_left = 69.0
+margin_right = 1167.0
 text = "Restart level"
 
 [node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
@@ -111,8 +111,8 @@ margin_bottom = 66.0
 [node name="Label" parent="OptionsButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 99.0
-margin_right = 1197.0
+margin_left = 95.0
+margin_right = 1193.0
 text = "Options"
 
 [node name="MainMenuButton" parent="." index="5" instance=ExtResource( 4 )]
@@ -125,9 +125,9 @@ margin_bottom = 111.0
 [node name="Label" parent="MainMenuButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 74.0
+margin_left = 80.0
 margin_top = 2.0
-margin_right = 1172.0
+margin_right = 1178.0
 margin_bottom = 275.0
 text = "Main Menu"
 
