@@ -4,6 +4,7 @@ extends Container
 onready var prototype = preload("res://Levels/Prototype 0.tscn")
 onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 
+#remove level button if player hasnt unlocked (entered) corresponding level
 func _ready():
 	$removeLater/Label2.text = "highest level id: " + str(SaveGame.highestLevelId)
 	for button in $LevelButtons.get_children():

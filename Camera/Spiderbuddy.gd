@@ -4,12 +4,10 @@ onready var anim = $AnimationPlayer
 onready var fullAnim = $AnimationPlayer2
 onready var label = $Speechbubble/Label
 
-var player
-
+#setup spiderbuddy triggers
 func _ready():
 	for trigger in get_tree().get_nodes_in_group("SpiderbuddyTrigger"):
 		trigger.connect("triggered", self, "playAnim")
-
 
 func playAnim(text):
 	label.text = text
@@ -18,7 +16,6 @@ func playAnim(text):
 
 func show():
 	anim.play("show")
-
 
 func hide():
 	anim.play("hide")

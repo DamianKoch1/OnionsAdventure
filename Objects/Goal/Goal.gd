@@ -7,6 +7,7 @@ onready var anim = $AnimationPlayer
 
 onready var endPanels = preload("res://Menus/StoryPanels/EndGamePanels/EndGamePanels.tscn")
 
+#show story panel depending on current level
 func _ready():
 	match SaveGame.currLevelId:
 		0:
@@ -35,7 +36,7 @@ func _ready():
 			panel1.hide()
 			panel2.hide()
 		
-
+#show story panel depending on level, end game at last level
 func _on_Goal_body_entered(body):
 	if body.is_in_group("Player") && anim.is_playing() == false:
 			match SaveGame.currLevelId:
