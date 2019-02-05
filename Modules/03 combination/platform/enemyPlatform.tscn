@@ -22,7 +22,7 @@ position = Vector2( -108.752, -52.6691 )
 
 [node name="Worm" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 58.5546, 11.6437 )
+position = Vector2( 59.7769, -54.2421 )
 z_index = -4096
 
 
