@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
-[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 
-[node name="OptionsOverlay" type="Container" index="0"]
+[node name="OptionsOverlay" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -45,105 +46,15 @@ expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Title" type="RichTextLabel" parent="." index="1"]
+[node name="Volume" type="Node2D" parent="." index="1"]
 
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -92.0
-margin_top = -172.0
-margin_right = 69.0
-margin_bottom = -118.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Options"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
+position = Vector2( 43, -5 )
 
-[node name="Volume" type="Node2D" parent="." index="2"]
-
-position = Vector2( 0, 106.315 )
-
-[node name="Text" type="RichTextLabel" parent="Volume" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -333.0
-margin_top = -123.0
-margin_right = -185.0
-margin_bottom = -27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Volume"
-scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="Music" type="Node2D" parent="Volume" index="1"]
+[node name="Music" type="Node2D" parent="Volume" index="0"]
 
 position = Vector2( 0, 37.05 )
 
-[node name="Text2" type="RichTextLabel" parent="Volume/Music" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -313.0
-margin_top = -91.0
-margin_right = -165.0
-margin_bottom = 5.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Music"
-scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="MusicSlider" type="HSlider" parent="Volume/Music" index="1"]
+[node name="MusicSlider" type="HSlider" parent="Volume/Music" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -172,42 +83,20 @@ tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
 
-[node name="Master" type="Node2D" parent="Volume" index="2"]
+[node name="Music" parent="Volume/Music" index="1" instance=ExtResource( 3 )]
+
+margin_left = -352.0
+margin_top = -101.0
+margin_right = -70.0
+margin_bottom = 25.0
+text = "Music"
+
+[node name="Master" type="Node2D" parent="Volume" index="1"]
 
 position = Vector2( 0, -1.36462 )
 scale = Vector2( 1, 0.999999 )
 
-[node name="Text2" type="RichTextLabel" parent="Volume/Master" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -313.0
-margin_top = -91.0
-margin_right = -165.0
-margin_bottom = 5.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Master"
-scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="MasterSlider" type="HSlider" parent="Volume/Master" index="1"]
+[node name="MasterSlider" type="HSlider" parent="Volume/Master" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -236,41 +125,19 @@ tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
 
-[node name="SFX" type="Node2D" parent="Volume" index="3"]
+[node name="Master" parent="Volume/Master" index="1" instance=ExtResource( 3 )]
+
+margin_left = -352.0
+margin_top = -95.0
+margin_right = -70.0
+margin_bottom = 31.0
+text = "Master"
+
+[node name="SFX" type="Node2D" parent="Volume" index="2"]
 
 position = Vector2( 0, 40.85 )
 
-[node name="Text3" type="RichTextLabel" parent="Volume/SFX" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -313.0
-margin_top = -58.0
-margin_right = -165.0
-margin_bottom = 38.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Sound Effects"
-scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility" ]
-
-[node name="SFXSlider" type="HSlider" parent="Volume/SFX" index="1"]
+[node name="SFXSlider" type="HSlider" parent="Volume/SFX" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -299,17 +166,40 @@ tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
 
-[node name="BackButton" parent="." index="3" instance=ExtResource( 3 )]
+[node name="SFX" parent="Volume/SFX" index="1" instance=ExtResource( 3 )]
 
-margin_left = 43.0
-margin_top = 91.0
-margin_right = 267.0
-margin_bottom = 127.0
+margin_left = -352.0
+margin_top = -73.0
+margin_right = 182.0
+margin_bottom = 53.0
+text = "Sound Effects"
+
+[node name="Volume" parent="Volume" index="3" instance=ExtResource( 3 )]
+
+margin_left = -384.0
+margin_top = -128.0
+margin_right = -102.0
+margin_bottom = -2.0
+text = "Volume"
+
+[node name="BackButton" parent="." index="2" instance=ExtResource( 4 )]
+
+margin_left = -149.0
+margin_top = 59.0
+margin_right = 75.0
+margin_bottom = 95.0
 
 [node name="Label" parent="BackButton" index="0"]
 
-modulate = Color( 1, 1, 1, 1 )
 text = "Back"
+
+[node name="Options" parent="." index="3" instance=ExtResource( 3 )]
+
+margin_left = -85.0
+margin_top = -176.0
+margin_right = 209.0
+margin_bottom = -50.0
+text = "Options"
 
 [connection signal="value_changed" from="Volume/Music/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
 

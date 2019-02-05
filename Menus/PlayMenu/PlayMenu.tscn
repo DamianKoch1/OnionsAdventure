@@ -4,7 +4,7 @@
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=3]
 
-[node name="PlayMenu" type="Container" index="0"]
+[node name="PlayMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -47,9 +47,9 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="NewGameButton" parent="." index="1" instance=ExtResource( 3 )]
 
-margin_left = -53.0
+margin_left = -181.0
 margin_top = -133.0
-margin_right = 171.0
+margin_right = 43.0
 margin_bottom = -97.0
 
 [node name="Label" parent="NewGameButton" index="0"]
@@ -58,9 +58,9 @@ text = "new game"
 
 [node name="ContinueButton" parent="." index="2" instance=ExtResource( 3 )]
 
-margin_left = -53.0
+margin_left = -181.0
 margin_top = -69.0
-margin_right = 171.0
+margin_right = 43.0
 margin_bottom = -33.0
 
 [node name="Label" parent="ContinueButton" index="0"]
@@ -69,27 +69,32 @@ text = "load game"
 
 [node name="LevelSelectorButton" parent="." index="3" instance=ExtResource( 3 )]
 
-margin_left = -53.0
+margin_left = -181.0
 margin_top = -5.0
-margin_right = 171.0
+margin_right = 43.0
 margin_bottom = 31.0
 
 [node name="Label" parent="LevelSelectorButton" index="0"]
 
+margin_left = 41.0
+margin_top = -1.0
+margin_right = 576.0
+margin_bottom = 125.0
 text = "level selection"
 
 [node name="BackButton" parent="." index="4" instance=ExtResource( 3 )]
 
-margin_left = -53.0
-margin_top = 91.0
-margin_right = 171.0
-margin_bottom = 127.0
+margin_left = -202.0
+margin_top = 58.0
+margin_right = 22.0
+margin_bottom = 94.0
 
 [node name="Label" parent="BackButton" index="0"]
 
-modulate = Color( 1, 1, 1, 1 )
-margin_left = 119.0
-margin_right = 1244.0
+margin_left = 117.0
+margin_top = -2.0
+margin_right = 1242.0
+margin_bottom = 124.0
 text = "back"
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_NewGameButton_pressed"]
