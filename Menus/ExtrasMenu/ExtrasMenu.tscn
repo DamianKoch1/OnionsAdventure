@@ -382,7 +382,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Gallery" type="Container"]
+[node name="Gallery" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -516,6 +516,8 @@ text = "000/150"
 
 [node name="Page1" type="Node2D" parent="." index="8"]
 
+editor/display_folded = true
+
 [node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 8 )]
 
 editor/display_folded = true
@@ -566,7 +568,7 @@ visible = false
 [node name="unlockableImg" parent="Page2" index="0" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( -277, -69 )
+position = Vector2( -245, -69 )
 dandelionsNeeded = 40
 NPCsNeeded = 4
 
@@ -598,7 +600,7 @@ anims/unlock = SubResource( 2 )
 [node name="unlockableImg3" parent="Page2" index="2" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 107, -69 )
+position = Vector2( 75, -69 )
 dandelionsNeeded = 60
 NPCsNeeded = 5
 
@@ -614,7 +616,7 @@ anims/unlock = SubResource( 3 )
 [node name="unlockableImg4" parent="Page2" index="3" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( -277, 59 )
+position = Vector2( -245, 59 )
 dandelionsNeeded = 70
 NPCsNeeded = 5
 
@@ -646,7 +648,7 @@ anims/unlock = SubResource( 5 )
 [node name="unlockableImg6" parent="Page2" index="5" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 107, 59 )
+position = Vector2( 75, 59 )
 dandelionsNeeded = 90
 NPCsNeeded = 6
 
@@ -667,7 +669,7 @@ visible = false
 [node name="unlockableImg" parent="Page3" index="0" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( -277, -69 )
+position = Vector2( -245, -69 )
 dandelionsNeeded = 100
 NPCsNeeded = 7
 
@@ -699,7 +701,7 @@ anims/unlock = SubResource( 8 )
 [node name="unlockableImg3" parent="Page3" index="2" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 107, -69 )
+position = Vector2( 75, -69 )
 dandelionsNeeded = 120
 NPCsNeeded = 8
 
@@ -715,7 +717,7 @@ anims/unlock = SubResource( 9 )
 [node name="unlockableImg4" parent="Page3" index="3" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( -277, 59 )
+position = Vector2( -245, 59 )
 dandelionsNeeded = 130
 NPCsNeeded = 8
 
@@ -747,7 +749,7 @@ anims/unlock = SubResource( 11 )
 [node name="unlockableImg6" parent="Page3" index="5" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 107, 59 )
+position = Vector2( 75, 59 )
 dandelionsNeeded = 150
 NPCsNeeded = 9
 
