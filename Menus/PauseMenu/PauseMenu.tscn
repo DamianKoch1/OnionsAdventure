@@ -7,7 +7,7 @@
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 
-[node name="PauseMenu" type="Container"]
+[node name="PauseMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -67,7 +67,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 3 )
-text = "paused"
+text = "Paused"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -83,53 +83,53 @@ margin_bottom = -24.0
 [node name="Label" parent="ResumeButton" index="0"]
 
 modulate = Color( 0.295288, 0.324413, 0.640625, 1 )
-margin_left = 97.0
-margin_right = 1222.0
-text = "resume"
+margin_left = 96.0
+margin_right = 1221.0
+text = "Resume"
 
 [node name="RestartButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -159.0
-margin_top = -14.0
-margin_right = 65.0
-margin_bottom = 22.0
+margin_left = -157.0
+margin_top = -15.0
+margin_right = 67.0
+margin_bottom = 21.0
 
 [node name="Label" parent="RestartButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 73.0
-margin_right = 1171.0
-text = "restart level"
+margin_left = 69.0
+margin_right = 1167.0
+text = "Restart level"
 
 [node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = -159.0
-margin_top = 31.0
-margin_right = 65.0
-margin_bottom = 67.0
+margin_left = -157.0
+margin_top = 30.0
+margin_right = 67.0
+margin_bottom = 66.0
 
 [node name="Label" parent="OptionsButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 99.0
-margin_right = 1197.0
-text = "options"
+margin_left = 95.0
+margin_right = 1193.0
+text = "Options"
 
 [node name="MainMenuButton" parent="." index="5" instance=ExtResource( 4 )]
 
-margin_left = -154.0
-margin_top = 70.0
-margin_right = 70.0
-margin_bottom = 106.0
+margin_left = -157.0
+margin_top = 75.0
+margin_right = 67.0
+margin_bottom = 111.0
 
 [node name="Label" parent="MainMenuButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 74.0
+margin_left = 80.0
 margin_top = 2.0
-margin_right = 1172.0
+margin_right = 1178.0
 margin_bottom = 275.0
-text = "main menu"
+text = "Main Menu"
 
 [node name="YesNoOverlayMainMenu" parent="." index="6" instance=ExtResource( 5 )]
 
