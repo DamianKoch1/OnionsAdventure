@@ -1,11 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.gd" type="Script" id=1]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_net.png" type="Texture" id=2]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_feet2.png" type="Texture" id=3]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_leaf2.png" type="Texture" id=4]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_body.png" type="Texture" id=5]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_leaf1.png" type="Texture" id=6]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_body.png" type="Texture" id=3]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_leaf1.png" type="Texture" id=4]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_leaf2.png" type="Texture" id=5]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_feet2.png" type="Texture" id=6]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_feet1.png" type="Texture" id=7]
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/destroy_spider_web.ogg" type="AudioStream" id=9]
@@ -51,6 +51,73 @@ tracks/1/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=3]
+
+resource_name = "wiggle"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite/Sprite/bunny_feet1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -21.388, 10.8265, 0.0, -21.388, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Sprite/bunny_body/bunny_leaf1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 14.4441, -30.5853, -49.7216, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/Sprite/bunny_body/bunny_feet2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -29.6071, 20.9286, 0.0, -29.6071, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/Sprite/bunny_body/bunny_leaf2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 28.8468, -26.4706, -42.084, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/Sprite/bunny_body:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -14.3794, -0.134704, 13.888, 0.0, -14.3794, 0.0 ]
+}
+
 [node name="trappedNPC" type="Node2D" index="0" groups=[
 "trappedNPCs",
 ]]
@@ -75,7 +142,12 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Node2D" parent="." index="1"]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="Sprite" type="Sprite" parent="Sprite" index="0"]
+
+scale = Vector2( 0.7, 0.7 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="bunny_net" type="Sprite" parent="Sprite/Sprite" index="0"]
 
@@ -83,35 +155,44 @@ position = Vector2( -0.065341, -0.126484 )
 scale = Vector2( 0.452017, 0.452017 )
 texture = ExtResource( 2 )
 
-[node name="bunny_feet2" type="Sprite" parent="Sprite/Sprite" index="1"]
-
-position = Vector2( -25.2018, 3.87626 )
-scale = Vector2( 0.452017, 0.452017 )
-texture = ExtResource( 3 )
-
-[node name="bunny_leaf2" type="Sprite" parent="Sprite/Sprite" index="2"]
-
-position = Vector2( 9.94711, -46.968 )
-scale = Vector2( 0.452017, 0.452017 )
-texture = ExtResource( 4 )
-
-[node name="bunny_body" type="Sprite" parent="Sprite/Sprite" index="3"]
+[node name="bunny_body" type="Sprite" parent="Sprite/Sprite" index="1"]
 
 position = Vector2( -0.0804413, -0.624099 )
 scale = Vector2( 0.452017, 0.452017 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bunny_leaf1" type="Sprite" parent="Sprite/Sprite/bunny_body" index="0"]
+
+position = Vector2( 18.5442, -36.528 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 39.1177, -40.9572 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bunny_leaf2" type="Sprite" parent="Sprite/Sprite/bunny_body" index="1"]
+
+show_behind_parent = true
+position = Vector2( 2.29657, -47.868 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
+offset = Vector2( 23.3202, -48.6971 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="bunny_leaf1" type="Sprite" parent="Sprite/Sprite" index="4"]
+[node name="bunny_feet2" type="Sprite" parent="Sprite/Sprite/bunny_body" index="2"]
 
-position = Vector2( 23.0445, -36.528 )
-scale = Vector2( 0.452017, 0.452017 )
+show_behind_parent = true
+position = Vector2( -55.5761, 9.95617 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="bunny_feet1" type="Sprite" parent="Sprite/Sprite" index="5"]
+[node name="bunny_feet1" type="Sprite" parent="Sprite/Sprite" index="2"]
 
 position = Vector2( -5.43764, 11.8331 )
 scale = Vector2( 0.452017, 0.452017 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Free" type="Node2D" parent="." index="2"]
 
@@ -131,12 +212,14 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/onCollect = SubResource( 2 )
+anims/wiggle = SubResource( 3 )
 blend_times = [  ]
 
 [node name="WebDestroyedDustVFX" parent="." index="5" instance=ExtResource( 10 )]
 
+position = Vector2( -0.142395, 0 )
 z_index = -5
-_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Z Index" ]
+_sections_unfolded = [ "Process Material", "Textures", "Transform", "Z Index" ]
 
 [node name="unfreezePlayer" type="Timer" parent="." index="6"]
 
