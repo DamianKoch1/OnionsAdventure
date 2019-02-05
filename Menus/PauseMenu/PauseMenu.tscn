@@ -55,9 +55,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -61.0
+margin_left = -49.0
 margin_top = -124.0
-margin_right = 1160.0
+margin_right = 1172.0
 margin_bottom = 149.0
 rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -75,9 +75,9 @@ _sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 
 [node name="ResumeButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -157.0
+margin_left = -145.0
 margin_top = -60.0
-margin_right = 67.0
+margin_right = 79.0
 margin_bottom = -24.0
 
 [node name="Label" parent="ResumeButton" index="0"]
@@ -89,9 +89,9 @@ text = "Resume"
 
 [node name="RestartButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -157.0
+margin_left = -145.0
 margin_top = -15.0
-margin_right = 67.0
+margin_right = 79.0
 margin_bottom = 21.0
 
 [node name="Label" parent="RestartButton" index="0"]
@@ -103,9 +103,9 @@ text = "Restart level"
 
 [node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = -157.0
+margin_left = -145.0
 margin_top = 30.0
-margin_right = 67.0
+margin_right = 79.0
 margin_bottom = 66.0
 
 [node name="Label" parent="OptionsButton" index="0"]
@@ -117,9 +117,9 @@ text = "Options"
 
 [node name="MainMenuButton" parent="." index="5" instance=ExtResource( 4 )]
 
-margin_left = -157.0
+margin_left = -145.0
 margin_top = 75.0
-margin_right = 67.0
+margin_right = 79.0
 margin_bottom = 111.0
 
 [node name="Label" parent="MainMenuButton" index="0"]
