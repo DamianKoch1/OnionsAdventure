@@ -33,7 +33,7 @@
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=31]
 [ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=32]
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 2" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -63,6 +63,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="SpiderbuddyTrigger" parent="firesalamander, thorn" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -9.8219, 67.5255 )
+text = "Jump onto him!"
 
 [node name="stump s, tendril, thorn" parent="." index="3" instance=ExtResource( 7 )]
 
@@ -156,7 +157,6 @@ position = Vector2( -14.7329, -12.2774 )
 
 [node name="MovingPlat2" parent="." index="7" instance=ExtResource( 13 )]
 
-editor/display_folded = true
 position = Vector2( 3584.93, 96 )
 
 [node name="Collectable19" parent="MovingPlat2" index="2" instance=ExtResource( 4 )]
@@ -170,6 +170,7 @@ position = Vector2( 82, -97 )
 [node name="SpiderbuddyTrigger" parent="MovingPlat2" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 44.1987, 74.8918 )
+text = "Jump onto them!"
 
 [node name="stone 2 (up)" parent="." index="8" instance=ExtResource( 14 )]
 
