@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/VG_grass_3.png-f2eca699caa5ee9bd13c08b313f1f800.stex"
+path="res://.import/BG_layer_3_part2 - Copy.png-82def0494e7ebbdb1426190ab405b7cc.stex"
 
 [deps]
 
-source_file="res://Assets/Background/VG_grass_3.png"
-dest_files=[ "res://.import/VG_grass_3.png-f2eca699caa5ee9bd13c08b313f1f800.stex" ]
+source_file="res://Assets/Background/old/BG_layer_3_part2 - Copy.png"
+dest_files=[ "res://.import/BG_layer_3_part2 - Copy.png-82def0494e7ebbdb1426190ab405b7cc.stex" ]
 
 [params]
 

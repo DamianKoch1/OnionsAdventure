@@ -21,10 +21,10 @@ position = Vector2( -173.06, 94.2784 )
 
 [node name="Worm" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( -60, 140 )
+position = Vector2( -59.463, 91.2658 )
 
 [node name="Worm2" parent="." index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 0, 140 )
+position = Vector2( 0.536987, 91.2658 )
 
 

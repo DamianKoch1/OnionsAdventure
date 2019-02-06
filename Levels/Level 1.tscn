@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=32]
 [ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=34]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -379,11 +380,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Worm" parent="stump s, stone" index="3" instance=ExtResource( 28 )]
 
-position = Vector2( -267.32, 139.473 )
+position = Vector2( -268.421, 93.363 )
 
 [node name="Worm2" parent="stump s, stone" index="4" instance=ExtResource( 28 )]
 
-position = Vector2( -208.421, 140.014 )
+position = Vector2( -209.522, 93.904 )
 
 [node name="Collectable38" parent="stump s, stone" index="5" instance=ExtResource( 5 )]
 
@@ -405,7 +406,6 @@ scale = Vector2( 0.356969, 0.356969 )
 
 [node name="tree2" parent="." index="18" instance=ExtResource( 29 )]
 
-editor/display_folded = true
 position = Vector2( 9106.62, -160.362 )
 _sections_unfolded = [ "Transform" ]
 
@@ -415,7 +415,7 @@ position = Vector2( 309.63, -44.124 )
 
 [node name="Worm3" parent="tree2" index="3" instance=ExtResource( 28 )]
 
-position = Vector2( 50.623, 140.283 )
+position = Vector2( 53.7559, 91.5891 )
 
 [node name="Collectable41" parent="tree2" index="4" instance=ExtResource( 5 )]
 
@@ -507,6 +507,8 @@ scale = Vector2( 0.403203, 0.403203 )
 [node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 33 )]
 
 position = Vector2( -255.331, 33.9647 )
+
+[node name="Background" parent="." index="22" instance=ExtResource( 34 )]
 
 
 [editable path="stump l, stump m, stump s/Enemy"]

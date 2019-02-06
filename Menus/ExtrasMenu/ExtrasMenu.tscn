@@ -490,10 +490,17 @@ texture = ExtResource( 6 )
 [node name="Label" parent="Dandelions" index="1" instance=ExtResource( 3 )]
 
 margin_left = 4.0
+<<<<<<< working copy
 margin_top = -40.0
 margin_right = 342.0
 margin_bottom = 86.0
 text = "000/150"
+=======
+margin_top = -44.0
+margin_right = 265.0
+margin_bottom = 82.0
+text = "000/200"
+>>>>>>> merge rev
 
 [node name="TrappedNPCs" type="Node2D" parent="." index="7"]
 
@@ -509,8 +516,13 @@ texture = ExtResource( 7 )
 margin_left = 38.0
 margin_top = -12.0
 margin_right = 376.0
+<<<<<<< working copy
 margin_bottom = 114.0
 text = "000/150"
+=======
+margin_bottom = 110.0
+text = "00/12"
+>>>>>>> merge rev
 
 [node name="Page1" type="Node2D" parent="." index="8"]
 

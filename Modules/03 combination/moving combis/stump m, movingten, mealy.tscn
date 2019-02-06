@@ -5,7 +5,7 @@
 [ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=4]
 
-[node name="stump m, movingten, mealy" type="Node2D"]
+[node name="stump m, movingten, mealy" type="Node2D" index="0"]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -17,16 +17,16 @@ position = Vector2( -140, 70 )
 
 [node name="Worm" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 22, 82 )
+position = Vector2( 22.4401, 91.6828 )
 
 [node name="Worm2" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 82, 82 )
+position = Vector2( 82.4401, 91.6828 )
 diggedOut = true
 
 [node name="Worm3" parent="." index="4" instance=ExtResource( 3 )]
 
-position = Vector2( 142, 82 )
+position = Vector2( 142.44, 91.6828 )
 
 [node name="Rope" parent="." index="5" instance=ExtResource( 4 )]
 
