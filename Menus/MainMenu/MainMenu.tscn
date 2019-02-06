@@ -2,14 +2,14 @@
 
 [ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BGOnion.png" type="Texture" id=2]
-[ext_resource path="res://Menus/MainMenu/Main Menu Title_Hobo.png" type="Texture" id=3]
+[ext_resource path="res://Menus/MainMenu/Main Menu Title.png" type="Texture" id=3]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GlowbugVFX.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Menus/StartFadeIn.tscn" type="PackedScene" id=8]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
