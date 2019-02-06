@@ -8,6 +8,8 @@ func _ready():
 	MenuMusic.fadeOut(2)
 	$BGMPlayer.fadeIn(2)
 
+func _process(delta):
+	print($BGMPlayer.volume_db)
 
 func loadLv1():
 	get_tree().change_scene_to(lv1)

@@ -124,7 +124,7 @@ _sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 [node name="BGMPlayer" parent="." index="7" instance=ExtResource( 10 )]
 
 stream = ExtResource( 11 )
-volume_db = 3.0
+volume_db = 10.0
 
 [connection signal="animFinished" from="PanelButton3" to="." method="_on_PanelButton3_animFinished"]
 
