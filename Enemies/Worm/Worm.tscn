@@ -88,7 +88,7 @@ extents = Vector2( 50.2848, 69.9113 )
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 28.8834, 38.4867 )
+extents = Vector2( 74.6466, 35.155 )
 
 [node name="Worm" type="Node2D" index="0" groups=[
 "Enemies",
@@ -155,8 +155,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="Enemy/Sprites/body_m" index="2"]
 
-editor/display_folded = true
-visible = false
 position = Vector2( -160.373, 351.55 )
 scale = Vector2( 1.00083, 1.00171 )
 input_pickable = true
@@ -173,29 +171,6 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 160.104, -368.926 )
 scale = Vector2( 0.953475, 1.51027 )
 shape = SubResource( 3 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Enemy/Sprites/body_m" index="3"]
-
-editor/display_folded = true
-visible = false
-position = Vector2( 1.64078, 10.8862 )
-rotation = 0.000132151
-scale = Vector2( 2, 2 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/Sprites/body_m/StaticBody2D" index="0"]
-
-position = Vector2( -0.857193, -5.18239 )
-rotation = -0.000132151
-scale = Vector2( 0.477134, 0.717852 )
-shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="dirt" type="Sprite" parent="Enemy/Sprites" index="2"]
@@ -219,6 +194,27 @@ process_mode = 1
 wait_time = 2.3
 one_shot = false
 autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
+
+position = Vector2( -3.96112e-006, 2.06667e-006 )
+scale = Vector2( 1, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+visible = false
+position = Vector2( -0.857193, 34.5908 )
+rotation = -0.000132151
+scale = Vector2( 0.477134, 0.717852 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
