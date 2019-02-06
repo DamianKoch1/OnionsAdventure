@@ -1,28 +1,31 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=3]
 
-[node name="enemyPlatform" type="Node2D" index="0"]
+[node name="enemyPlatform" type="Node2D"]
 
 position = Vector2( 0.223083, 34.2421 )
 z_index = -4096
 z_as_relative = false
 _sections_unfolded = [ "Z Index" ]
 
-[node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
-
-z_index = -4000
-tile_data = PoolIntArray( 65529, 0, 0, 65530, 1, 0, 65531, 1, 0, 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 2, 0, 131065, 6, 0, 131066, 7, 0, 131067, 7, 0, 131068, 7, 0, 131069, 7, 0, 131070, 7, 0, 131071, 7, 0, 65536, 7, 0, 65537, 7, 0, 65538, 7, 0, 65539, 7, 0, 65540, 7, 0, 65541, 7, 0, 65542, 8, 0 )
-
-[node name="stump m 7" parent="." index="1" instance=ExtResource( 2 )]
+[node name="stump m 7" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( -108.752, -52.6691 )
 
-[node name="Worm" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Worm" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 49.2138, -36.1969 )
 z_index = -4096
+
+[node name="new tiles" type="Node2D" parent="." index="2"]
+
+position = Vector2( -0.223083, -14.2421 )
+
+[node name="TileMap" parent="new tiles" index="0" instance=ExtResource( 3 )]
+
+tile_data = PoolIntArray( 65528, 536870921, 0, 65529, 2, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 9, 0, 131064, 536870926, 0, 131065, 13, 0, 131066, 13, 0, 131067, 11, 0, 131068, 11, 0, 131069, 13, 0, 131070, 12, 0, 131071, 11, 0, 65536, 13, 0, 65537, 11, 0, 65538, 13, 0, 65539, 13, 0, 65540, 11, 0, 65541, 13, 0, 65542, 13, 0, 65543, 14, 0 )
 
 
