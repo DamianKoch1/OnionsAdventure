@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BGM_End_Screen_Loop.ogg-fdb5586cc9e245a9b32d8eef32cee119.oggstr"
+
+[deps]
+
+source_file="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Loop.ogg"
+dest_files=[ "res://.import/BGM_End_Screen_Loop.ogg-fdb5586cc9e245a9b32d8eef32cee119.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

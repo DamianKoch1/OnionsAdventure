@@ -1,7 +1,6 @@
 extends Container
 
 
-onready var prototype = preload("res://Levels/Prototype 0.tscn")
 onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 
 #remove level button if player hasnt unlocked (entered) corresponding level
@@ -24,7 +23,7 @@ func _on_OptionsButton_pressed():
 func _on_Level0Button_pressed():
 	UISelect.playing = true
 	SaveGame.currLevelId = 0
-	get_tree().change_scene_to(prototype)
+	get_tree().change_scene("res://Levels/Prototype 0.tscn")
 
 
 func _on_BackButton_pressed():
