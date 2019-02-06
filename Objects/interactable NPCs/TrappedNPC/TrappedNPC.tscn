@@ -118,7 +118,7 @@ tracks/4/keys = {
 "values": [ 0.0, -14.3794, -0.134704, 13.888, 0.0, -14.3794, 0.0 ]
 }
 
-[node name="trappedNPC" type="Node2D" groups=[
+[node name="trappedNPC" type="Node2D" index="0" groups=[
 "trappedNPCs",
 ]]
 
@@ -165,7 +165,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="bunny_leaf1" type="Sprite" parent="Sprite/Sprite/bunny_body" index="0"]
 
 position = Vector2( 18.5442, -36.528 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 4 )
 offset = Vector2( 39.1177, -40.9572 )
 _sections_unfolded = [ "Transform" ]
@@ -174,7 +173,6 @@ _sections_unfolded = [ "Transform" ]
 
 show_behind_parent = true
 position = Vector2( 2.29657, -47.868 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 offset = Vector2( 23.3202, -48.6971 )
 _sections_unfolded = [ "Transform" ]
@@ -183,7 +181,6 @@ _sections_unfolded = [ "Transform" ]
 
 show_behind_parent = true
 position = Vector2( -55.5761, 9.95617 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -217,9 +214,9 @@ blend_times = [  ]
 
 [node name="WebDestroyedDustVFX" parent="." index="5" instance=ExtResource( 10 )]
 
-position = Vector2( -0.142395, 0 )
+position = Vector2( 0, 15 )
 z_index = -5
-_sections_unfolded = [ "Process Material", "Textures", "Transform", "Z Index" ]
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Z Index" ]
 
 [node name="unfreezePlayer" type="Timer" parent="." index="6"]
 
