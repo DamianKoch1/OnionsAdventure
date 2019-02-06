@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG_layer_3_part3.png-02c499ee287a9d94488982b51b2ad4f7.stex"
+path="res://.import/BG_layer_4_part2_platform.png-7c52c50df79be8bd008eaa4aa38daa97.stex"
 
 [deps]
 
-source_file="res://Assets/Background/BG_layer_3_part3.png"
-dest_files=[ "res://.import/BG_layer_3_part3.png-02c499ee287a9d94488982b51b2ad4f7.stex" ]
+source_file="res://Assets/Background/old/BG_layer_4_part2_platform.png"
+dest_files=[ "res://.import/BG_layer_4_part2_platform.png-7c52c50df79be8bd008eaa4aa38daa97.stex" ]
 
 [params]
 

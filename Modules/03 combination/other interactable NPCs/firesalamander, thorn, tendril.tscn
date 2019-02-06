@@ -6,12 +6,13 @@
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=5]
 
-[node name="firesalamander, thorn, tendril" type="Node2D"]
+[node name="firesalamander, thorn, tendril" type="Node2D" index="0"]
 
 [node name="FireSalamander" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( -56.9679, 66.6053 )
 objToDestroyPath = NodePath("../thorns")
+useHorizontalFlames = true
 
 [node name="TileMap" parent="." index="1" instance=ExtResource( 2 )]
 
