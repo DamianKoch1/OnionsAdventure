@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG_layer_5_part5_var2.png-bbb520f8fced8669d071aeb49b64eb35.stex"
+path="res://.import/BG_layer_3_treebridge - Copy.png-aa9fa035296392b2e19866981cb6e345.stex"
 
 [deps]
 
-source_file="res://Assets/Background/BG_layer_5_part5_var2.png"
-dest_files=[ "res://.import/BG_layer_5_part5_var2.png-bbb520f8fced8669d071aeb49b64eb35.stex" ]
+source_file="res://Assets/Background/old/BG_layer_3_treebridge - Copy.png"
+dest_files=[ "res://.import/BG_layer_3_treebridge - Copy.png-aa9fa035296392b2e19866981cb6e345.stex" ]
 
 [params]
 

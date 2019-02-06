@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG_layer_4_part4_var2.png-a2f0e6493f930431a1cc4615dab89377.stex"
+path="res://.import/Main Menu Title_Hobo.png-c3ae817457154e7e280db1edb2931942.stex"
 
 [deps]
 
-source_file="res://Assets/Background/BG_layer_4_part4_var2.png"
-dest_files=[ "res://.import/BG_layer_4_part4_var2.png-a2f0e6493f930431a1cc4615dab89377.stex" ]
+source_file="res://Menus/MainMenu/Main Menu Title_Hobo.png"
+dest_files=[ "res://.import/Main Menu Title_Hobo.png-c3ae817457154e7e280db1edb2931942.stex" ]
 
 [params]
 

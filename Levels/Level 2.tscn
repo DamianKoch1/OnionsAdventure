@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, thorn, krake.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=31]
 [ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=33]
 
 [node name="Level 2" type="Node2D" index="0"]
 
@@ -57,6 +58,7 @@ position = Vector2( 47.6684, 42.0298 )
 
 [node name="firesalamander, thorn" parent="." index="2" instance=ExtResource( 5 )]
 
+editor/display_folded = true
 position = Vector2( 768.93, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -67,6 +69,7 @@ text = "Jump onto him!"
 
 [node name="stump s, tendril, thorn" parent="." index="3" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 1184.93, 0 )
 
 [node name="Collectable03" parent="stump s, tendril, thorn" index="4" instance=ExtResource( 4 )]
@@ -83,6 +86,7 @@ position = Vector2( 100.831, 7.75626 )
 
 [node name="firesalamander, thorn, tendril" parent="." index="4" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 position = Vector2( 1632.93, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -92,6 +96,7 @@ position = Vector2( -94.3317, -180.866 )
 
 [node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 10 )]
 
+editor/display_folded = true
 position = Vector2( 2336.93, -32 )
 
 [node name="Collectable06" parent="stump m, stump l, tendril, muddy" index="5" instance=ExtResource( 4 )]
@@ -178,6 +183,7 @@ position = Vector2( 3904.93, -160 )
 
 [node name="Jump down" parent="." index="9" instance=ExtResource( 15 )]
 
+editor/display_folded = true
 position = Vector2( 3936.93, -192 )
 
 [node name="trappedNPC3" parent="Jump down" index="1" instance=ExtResource( 9 )]
@@ -186,6 +192,7 @@ position = Vector2( 1688.13, 73.8575 )
 
 [node name="stump m, bitchy" parent="." index="10" instance=ExtResource( 16 )]
 
+editor/display_folded = true
 position = Vector2( 4544.93, -192 )
 
 [node name="Collectable21" parent="stump m, bitchy" index="4" instance=ExtResource( 4 )]
@@ -290,6 +297,7 @@ position = Vector2( 7135.79, -319.638 )
 
 [node name="platform long" parent="." index="17" instance=ExtResource( 23 )]
 
+editor/display_folded = true
 position = Vector2( 7857.77, -508.567 )
 
 [node name="Bouncer" parent="platform long" index="1" instance=ExtResource( 24 )]
@@ -344,6 +352,7 @@ position = Vector2( 160.833, -52.7927 )
 
 [node name="stump s, stump m 2" parent="." index="18" instance=ExtResource( 27 )]
 
+editor/display_folded = true
 position = Vector2( 7871.79, -319.638 )
 
 [node name="StoneBigA" parent="stump s, stump m 2" index="3" instance=ExtResource( 28 )]
@@ -369,6 +378,7 @@ position = Vector2( 110.264, -6.61581 )
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 31 )]
 
+editor/display_folded = true
 position = Vector2( 9567.79, -415.638 )
 
 [node name="Bouncer" parent="End2(wall)" index="2" instance=ExtResource( 24 )]
@@ -407,4 +417,11 @@ position = Vector2( 188.421, -233.402 )
 
 position = Vector2( 146.708, -187.12 )
 
+[node name="Background" parent="." index="22" instance=ExtResource( 33 )]
 
+[node name="Sprite" parent="Background/ParallaxLayer" index="0"]
+
+position = Vector2( 350.008, 40.528 )
+
+
+[editable path="Background"]
