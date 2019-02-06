@@ -115,7 +115,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1.00907, 1.10266 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_eyes:position")
+tracks/9/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionTail:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -124,10 +124,10 @@ tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 25.7552, 4.50173 ) ]
+"values": [ Vector2( -30.5271, 45.5714 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_eyes:rotation_degrees")
+tracks/10/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionTail:rotation_degrees")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -136,10 +136,10 @@ tracks/10/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ -8.91316 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_eyes:scale")
+tracks/11/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionTail:scale")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -148,10 +148,10 @@ tracks/11/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ) ]
+"values": [ Vector2( 1.00228, 1.10883 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionTail:position")
+tracks/12/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -160,10 +160,10 @@ tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -30.5271, 45.5714 ) ]
+"values": [ Vector2( 0.50386, -30.1882 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionTail:rotation_degrees")
+tracks/13/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:rotation_degrees")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -172,10 +172,10 @@ tracks/13/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -8.91316 ]
+"values": [ 0.0 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionTail:scale")
+tracks/14/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:scale")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -184,10 +184,10 @@ tracks/14/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1.00228, 1.10883 ) ]
+"values": [ Vector2( 0.5, 0.450089 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:position")
+tracks/15/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionHair:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -196,10 +196,10 @@ tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.50386, -30.1882 ) ]
+"values": [ Vector2( 7.13066, -33.507 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:rotation_degrees")
+tracks/16/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionHair:rotation_degrees")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -208,10 +208,10 @@ tracks/16/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 41.3665 ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:scale")
+tracks/17/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionHair:scale")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -220,87 +220,15 @@ tracks/17/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0.450089 ) ]
+"values": [ Vector2( 1, 1.01406 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_mouth:position")
+tracks/18/path = NodePath("Onion/Colisionposition:position")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
 tracks/18/enabled = true
 tracks/18/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 32.224, 51.2875 ) ]
-}
-tracks/19/type = "value"
-tracks/19/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_mouth:rotation_degrees")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/20/type = "value"
-tracks/20/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_mouth:scale")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/21/type = "value"
-tracks/21/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionHair:position")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 7.13066, -33.507 ) ]
-}
-tracks/22/type = "value"
-tracks/22/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionHair:rotation_degrees")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 41.3665 ]
-}
-tracks/23/type = "value"
-tracks/23/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionHair:scale")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1.01406 ) ]
-}
-tracks/24/type = "value"
-tracks/24/path = NodePath("Onion/Colisionposition:position")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
