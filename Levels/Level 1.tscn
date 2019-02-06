@@ -58,6 +58,7 @@ script = ExtResource( 1 )
 [node name="SpiderbuddyTrigger" parent="Start" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( -97.0325, 41.9004 )
+text = "Press “A”, “D” or narrow keys"
 
 [node name="smallstump2" parent="." index="1" instance=ExtResource( 4 )]
 
@@ -75,6 +76,7 @@ position = Vector2( -32.4216, 51.8746 )
 [node name="SpiderbuddyTrigger" parent="smallstump2" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( -237.436, 43.3706 )
+text = "Good! … Press “Space”"
 
 [node name="smallstoneup" parent="." index="2" instance=ExtResource( 6 )]
 
@@ -96,6 +98,7 @@ position = Vector2( 276.647, 8.62445 )
 [node name="SpiderbuddyTrigger" parent="mediumstump2" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( 158.78, 49.2513 )
+text = "They will hurt you!"
 
 [node name="ThornsCorner" parent="mediumstump2" index="6" instance=ExtResource( 8 )]
 
@@ -120,10 +123,12 @@ position = Vector2( 401.336, 44.016 )
 [node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( 336.745, 10.0663 )
+text = "Press “E”"
 
 [node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 3 )]
 
 position = Vector2( -11.6511, 137.912 )
+text = "It’s like a checkpoint"
 
 [node name="stump s, stump m 1" parent="." index="5" instance=ExtResource( 13 )]
 
@@ -187,6 +192,7 @@ position = Vector2( 390.963, -74.9346 )
 [node name="SpiderbuddyTrigger" parent="stump l, moving tendril" index="8" instance=ExtResource( 3 )]
 
 position = Vector2( -255.813, -43.3706 )
+text = "Jump onto that tendril"
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 17 )]
 
@@ -226,6 +232,7 @@ position = Vector2( 254.966, -158.66 )
 
 position = Vector2( 422.643, 29.857 )
 scale = Vector2( 1.23411, 1.2233 )
+text = "Don’t touch these insects!"
 
 [node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 19 )]
 
@@ -389,6 +396,7 @@ position = Vector2( -144.4, 25.2701 )
 [node name="SpiderbuddyTrigger" parent="stump s, stone" index="7" instance=ExtResource( 3 )]
 
 position = Vector2( -236.456, 2.70749 )
+text = ""
 
 [node name="ThornsCorner" parent="stump s, stone" index="8" instance=ExtResource( 8 )]
 
