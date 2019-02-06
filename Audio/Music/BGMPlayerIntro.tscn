@@ -75,7 +75,7 @@ tracks/1/keys = {
 "values": [ 0.0, -80.0 ]
 }
 
-[node name="BGMPlayerIntro" type="Node"]
+[node name="BGMPlayerIntro" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
