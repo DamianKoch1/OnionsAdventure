@@ -47,7 +47,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 20.7729, 169.765 )
 }
 
-[node name="Level 4" type="Node2D"]
+[node name="Level 4" type="Node2D" index="0"]
 
 [node name="short start" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -130,7 +130,7 @@ position = Vector2( 3040, 800 )
 
 [node name="Worm" parent="stump s, thorn, krake" index="4" instance=ExtResource( 12 )]
 
-position = Vector2( 290, -20 )
+position = Vector2( 290.599, -5.03149 )
 
 [node name="Collectable" parent="stump s, thorn, krake" index="5" instance=ExtResource( 3 )]
 
@@ -358,11 +358,11 @@ position = Vector2( 7807.86, 840.084 )
 
 [node name="Worm" parent="platform2" index="1" instance=ExtResource( 12 )]
 
-position = Vector2( -95.8598, -47.3489 )
+position = Vector2( -99.9282, -35.754 )
 
 [node name="Worm2" parent="platform2" index="2" instance=ExtResource( 12 )]
 
-position = Vector2( 101.146, -48.084 )
+position = Vector2( 100.882, -33.8538 )
 
 [node name="trappedNPC" parent="platform2" index="3" instance=ExtResource( 18 )]
 

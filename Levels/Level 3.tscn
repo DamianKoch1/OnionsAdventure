@@ -60,7 +60,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -18.132, -24.176, 7.85721, 8.46162, -9.04248, 204.421, 0, 0, 9.06602, 25.3848, 4.74219, 248.234, 0, 0, 0, 0, 40.9175, 277.071, -7.25281, 12.6924, 11.4836, -34.4509, 81.4121, 266.796, 0, 0, 0, 0, 80.8081, 193.059, 8.46162, 5.43961, -21.154, -22.3628, 56.0273, 151.96, 0, 0, 0, 0, -21.3359, 147.125, 0, 0, 0, 0, -53.3691, 169.488, 6.64841, -7.25281, -11.4836, 6.04401, -120.458, 194.268, 0, 0, 0, 0, -139.798, 220.257, 19.9452, -19.3408, -47.7477, 9.06602, -152.491, 277.676, 0, 0, -16.3188, -10.2748, -218.975, 262.566, 0, 0, 0, 0, -237.711, 216.027, -12.6924, 19.3408, 4.83521, -20.5496, -223.206, 150.751, 0, 0, 0, 0, -148.26, 138.663, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D"]
+[node name="Level 3" type="Node2D" index="0"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -115,11 +115,11 @@ rotation = -0.000393503
 
 [node name="Worm" parent="movingten1" index="3" instance=ExtResource( 7 )]
 
-position = Vector2( -389.621, 76.2827 )
+position = Vector2( -393.213, 94.8437 )
 
 [node name="Worm2" parent="movingten1" index="4" instance=ExtResource( 7 )]
 
-position = Vector2( -232.416, 74.2487 )
+position = Vector2( -236.008, 92.8097 )
 diggedOut = true
 
 [node name="Collectable" parent="movingten1" index="5" instance=ExtResource( 3 )]
@@ -392,16 +392,16 @@ position = Vector2( 150.361, -34.085 )
 
 [node name="Worm" parent="platform long" index="4" instance=ExtResource( 7 )]
 
-position = Vector2( -60.0209, -48.6182 )
+position = Vector2( -56.4282, -37.2421 )
 
 [node name="Worm2" parent="platform long" index="5" instance=ExtResource( 7 )]
 
-position = Vector2( -2.85875, -48.6282 )
+position = Vector2( 0.733972, -37.2521 )
 diggedOut = true
 
 [node name="Worm3" parent="platform long" index="6" instance=ExtResource( 7 )]
 
-position = Vector2( 53.4819, -48.6573 )
+position = Vector2( 57.0746, -37.2812 )
 
 [node name="Ladder2" parent="platform long" index="7" instance=ExtResource( 28 )]
 
