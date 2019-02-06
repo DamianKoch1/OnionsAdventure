@@ -195,7 +195,7 @@ rotation = -0.00426639
 
 [node name="trappedNPC" parent="platform up" index="3" instance=ExtResource( 18 )]
 
-position = Vector2( 148.254, -119.001 )
+position = Vector2( 150.195, -106.06 )
 
 [node name="Ladder" parent="platform up" index="4" instance=ExtResource( 8 )]
 
@@ -367,7 +367,7 @@ position = Vector2( 100.882, -33.8538 )
 
 [node name="trappedNPC" parent="platform2" index="3" instance=ExtResource( 18 )]
 
-position = Vector2( -0.735352, -53.662 )
+position = Vector2( 0.0551758, -41.2764 )
 
 [node name="Rope" parent="platform2" index="4" instance=ExtResource( 17 )]
 
@@ -505,7 +505,7 @@ position = Vector2( 12448, 800 )
 
 [node name="trappedNPC" parent="platform short3" index="1" instance=ExtResource( 18 )]
 
-position = Vector2( 3.98047, -58.5369 )
+position = Vector2( 4.69727, -38.4616 )
 
 [node name="stone, krake down" parent="." index="26" instance=ExtResource( 37 )]
 

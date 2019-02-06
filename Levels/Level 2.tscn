@@ -34,7 +34,7 @@
 [ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=33]
 
-[node name="Level 2" type="Node2D" index="0"]
+[node name="Level 2" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -86,13 +86,12 @@ position = Vector2( 100.831, 7.75626 )
 
 [node name="firesalamander, thorn, tendril" parent="." index="4" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 position = Vector2( 1632.93, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC1" parent="firesalamander, thorn, tendril" index="5" instance=ExtResource( 9 )]
 
-position = Vector2( -94.3317, -180.866 )
+position = Vector2( -96.3756, -168.019 )
 
 [node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 10 )]
 
@@ -183,12 +182,11 @@ position = Vector2( 3904.93, -160 )
 
 [node name="Jump down" parent="." index="9" instance=ExtResource( 15 )]
 
-editor/display_folded = true
 position = Vector2( 3936.93, -192 )
 
 [node name="trappedNPC3" parent="Jump down" index="1" instance=ExtResource( 9 )]
 
-position = Vector2( 1688.13, 73.8575 )
+position = Vector2( 1686.81, 88.3816 )
 
 [node name="stump m, bitchy" parent="." index="10" instance=ExtResource( 16 )]
 
@@ -297,7 +295,6 @@ position = Vector2( 7135.79, -319.638 )
 
 [node name="platform long" parent="." index="17" instance=ExtResource( 23 )]
 
-editor/display_folded = true
 position = Vector2( 7857.77, -508.567 )
 
 [node name="Bouncer" parent="platform long" index="1" instance=ExtResource( 24 )]
@@ -348,7 +345,7 @@ scale = Vector2( 0.607996, 0.607996 )
 
 [node name="trappedNPC" parent="platform long" index="12" instance=ExtResource( 9 )]
 
-position = Vector2( 160.833, -52.7927 )
+position = Vector2( 160.833, -39.6847 )
 
 [node name="stump s, stump m 2" parent="." index="18" instance=ExtResource( 27 )]
 
