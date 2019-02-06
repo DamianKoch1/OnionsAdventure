@@ -72,7 +72,7 @@ position = Vector2( 307.218, 1.72031 )
 
 [node name="Collectable03" parent="smallstump2" index="4" instance=ExtResource( 5 )]
 
-position = Vector2( -32.4216, 51.8746 )
+position = Vector2( -31.4462, 89.9133 )
 
 [node name="SpiderbuddyTrigger" parent="smallstump2" index="5" instance=ExtResource( 3 )]
 
@@ -94,7 +94,7 @@ position = Vector2( -21.8928, -50.42 )
 
 [node name="Collectable06" parent="mediumstump2" index="4" instance=ExtResource( 5 )]
 
-position = Vector2( 276.647, 8.62445 )
+position = Vector2( 275.767, -32.3074 )
 
 [node name="SpiderbuddyTrigger" parent="mediumstump2" index="5" instance=ExtResource( 3 )]
 
@@ -119,11 +119,11 @@ position = Vector2( 0.479736, 159.1 )
 
 [node name="trappedNPC1" parent="smallstone2" index="4" instance=ExtResource( 12 )]
 
-position = Vector2( 401.336, 44.016 )
+position = Vector2( 402.63, 54.3691 )
 
 [node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 3 )]
 
-position = Vector2( 336.745, 10.0663 )
+position = Vector2( 338.039, 20.4194 )
 text = "Press “E”!"
 
 [node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 3 )]
@@ -158,7 +158,7 @@ position = Vector2( 125.387, -11.9416 )
 
 [node name="Collectable09" parent="stump m, stone big" index="6" instance=ExtResource( 5 )]
 
-position = Vector2( -354.267, -31.1808 )
+position = Vector2( -354.267, -55.1994 )
 
 [node name="ThornsUp" parent="stump m, stone big" index="7" instance=ExtResource( 15 )]
 
@@ -184,7 +184,7 @@ position = Vector2( -88.7002, -59.3581 )
 
 [node name="Collectable12" parent="stump l, moving tendril" index="6" instance=ExtResource( 5 )]
 
-position = Vector2( 60.9053, -99.0038 )
+position = Vector2( 59.2764, -133.213 )
 
 [node name="Collectable14" parent="stump l, moving tendril" index="7" instance=ExtResource( 5 )]
 
@@ -223,7 +223,7 @@ position = Vector2( 417.027, -26.0642 )
 
 [node name="Collectable17" parent="stump l, stump m, stump s" index="7" instance=ExtResource( 5 )]
 
-position = Vector2( 522.613, 29.184 )
+position = Vector2( 564.249, 25.2312 )
 
 [node name="Collectable18" parent="stump l, stump m, stump s" index="8" instance=ExtResource( 5 )]
 
@@ -272,7 +272,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="platform" parent="." index="12" instance=ExtResource( 22 )]
 
-editor/display_folded = true
 position = Vector2( 7645.35, -365.755 )
 _sections_unfolded = [ "Transform" ]
 
@@ -286,7 +285,7 @@ position = Vector2( -131.136, -45.6124 )
 
 [node name="Collectable26" parent="platform" index="3" instance=ExtResource( 5 )]
 
-position = Vector2( -4561.81, 258.039 )
+position = Vector2( -4544.6, 253.379 )
 
 [node name="Collectable27" parent="platform" index="4" instance=ExtResource( 5 )]
 
@@ -362,7 +361,7 @@ position = Vector2( -711.393, -182.842 )
 
 [node name="Collectable36" parent="stone stairs" index="10" instance=ExtResource( 5 )]
 
-position = Vector2( -818.094, -257.777 )
+position = Vector2( -828.77, -288.189 )
 
 [node name="Collectable37" parent="stone stairs" index="11" instance=ExtResource( 5 )]
 
