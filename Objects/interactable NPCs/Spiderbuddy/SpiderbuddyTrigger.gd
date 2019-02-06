@@ -2,6 +2,9 @@ extends Node2D
 
 #text that spiderbuddy will "say" for this trigger
 export var text = "insert text"
+export var spiderCooldown = 15
+
+onready
 
 signal triggered
 
