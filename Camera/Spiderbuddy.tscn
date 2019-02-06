@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Camera/Spiderbuddy.gd" type="Script" id=1]
 [ext_resource path="res://Camera/spiddy_net.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Camera/spiddy_leaf2.png" type="Texture" id=6]
 [ext_resource path="res://Camera/spiddy_leaf1.png" type="Texture" id=7]
 [ext_resource path="res://Camera/spiddy_feet1.png" type="Texture" id=8]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=9]
 
 [sub_resource type="Animation" id=1]
 
@@ -326,7 +327,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Speechbubble" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Label" type="Label" parent="Speechbubble" index="0"]
@@ -337,20 +337,21 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 64.0
 margin_top = -64.0
-margin_right = 160.0
-margin_bottom = -18.0
-rect_scale = Vector2( 2, 2 )
+margin_right = 462.0
+margin_bottom = 62.0
+rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 9 )
 text = "insert text"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Sprite" type="Sprite" parent="Speechbubble" index="1"]
 
