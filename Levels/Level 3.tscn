@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat4.tscn" type="PackedScene" id=2]
@@ -40,6 +40,7 @@
 [ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=38]
 [ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=41]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -60,7 +61,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -18.132, -24.176, 7.85721, 8.46162, -9.04248, 204.421, 0, 0, 9.06602, 25.3848, 4.74219, 248.234, 0, 0, 0, 0, 40.9175, 277.071, -7.25281, 12.6924, 11.4836, -34.4509, 81.4121, 266.796, 0, 0, 0, 0, 80.8081, 193.059, 8.46162, 5.43961, -21.154, -22.3628, 56.0273, 151.96, 0, 0, 0, 0, -21.3359, 147.125, 0, 0, 0, 0, -53.3691, 169.488, 6.64841, -7.25281, -11.4836, 6.04401, -120.458, 194.268, 0, 0, 0, 0, -139.798, 220.257, 19.9452, -19.3408, -47.7477, 9.06602, -152.491, 277.676, 0, 0, -16.3188, -10.2748, -218.975, 262.566, 0, 0, 0, 0, -237.711, 216.027, -12.6924, 19.3408, 4.83521, -20.5496, -223.206, 150.751, 0, 0, 0, 0, -148.26, 138.663, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D"]
+[node name="Level 3" type="Node2D" index="0"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -68,7 +69,6 @@ position = Vector2( 2.34106, 71.6693 )
 
 [node name="MovingPlat4" parent="." index="1" instance=ExtResource( 2 )]
 
-editor/display_folded = true
 position = Vector2( 480.387, 0.465195 )
 
 [node name="Collectable" parent="MovingPlat4" index="3" instance=ExtResource( 3 )]
@@ -98,7 +98,6 @@ scale = Vector2( 0.406276, 0.406276 )
 
 [node name="movingten1" parent="." index="2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 1249.28, -223.918 )
 
 [node name="Enemy" parent="movingten1" index="2" instance=ExtResource( 6 )]
@@ -175,7 +174,6 @@ position = Vector2( 0, 104.85 )
 
 [node name="stump s, mealy, krake" parent="." index="5" instance=ExtResource( 12 )]
 
-editor/display_folded = true
 position = Vector2( 2821.59, -511.289 )
 
 [node name="Collectable2" parent="stump s, mealy, krake" index="5" instance=ExtResource( 3 )]
@@ -322,7 +320,6 @@ tile_data = PoolIntArray( 851946, 4, 0, 851947, 4, 0, 851948, 4, 0, 851949, 4, 0
 
 [node name="platform" parent="." index="11" instance=ExtResource( 21 )]
 
-editor/display_folded = true
 position = Vector2( 5958.41, -548.905 )
 
 [node name="trappedNPC" parent="platform" index="1" instance=ExtResource( 22 )]
@@ -380,7 +377,6 @@ position = Vector2( -222.001, 56.0002 )
 
 [node name="platform long" parent="." index="15" instance=ExtResource( 27 )]
 
-editor/display_folded = true
 position = Vector2( 7179.68, -481.012 )
 
 [node name="Ladder" parent="platform long" index="1" instance=ExtResource( 28 )]
@@ -447,7 +443,6 @@ position = Vector2( 210.282, -27.9776 )
 
 [node name="platform short" parent="." index="17" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 2808.03, -722.226 )
 
 [node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 22 )]
@@ -464,7 +459,6 @@ position = Vector2( 205.914, 6.48486 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 32 )]
 
-editor/display_folded = true
 position = Vector2( 9622.06, -596.259 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 28 )]
@@ -483,7 +477,6 @@ position = Vector2( 612.643, -54.0206 )
 
 position = Vector2( 21.043, -26.5474 )
 objToDestroyPath = NodePath("../../platform short2/ThornsUp")
-useHorizontalFlames = false
 
 [node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 31 )]
 
@@ -553,7 +546,6 @@ position = Vector2( 10447.4, -30.1566 )
 
 [node name="End3(down)" parent="." index="24" instance=ExtResource( 38 )]
 
-editor/display_folded = true
 position = Vector2( 11143.8, -158.276 )
 
 [node name="Collectable" parent="End3(down)" index="2" instance=ExtResource( 3 )]
@@ -576,6 +568,17 @@ position = Vector2( -336.141, 36.6067 )
 
 position = Vector2( -436.141, 76.6067 )
 
+[node name="Background" parent="." index="25" instance=ExtResource( 41 )]
+
+[node name="ParallaxLayer" parent="Background" index="0"]
+
+motion_scale = Vector2( 0.065, 0.1 )
+
+[node name="Sprite" parent="Background/ParallaxLayer" index="0"]
+
+position = Vector2( 393.601, 7.44489 )
+
 
 [editable path="movingten1/Enemy"]
 [editable path="platform/Enemy"]
+[editable path="Background"]
