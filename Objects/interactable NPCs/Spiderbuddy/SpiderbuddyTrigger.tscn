@@ -13,6 +13,7 @@ extents = Vector2( 160, 96 )
 
 script = ExtResource( 1 )
 text = "insert text"
+spiderCooldown = 15
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
