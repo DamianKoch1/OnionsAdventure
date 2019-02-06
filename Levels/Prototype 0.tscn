@@ -27,7 +27,7 @@
 [ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/SpiderbuddyTrigger.tscn" type="PackedScene" id=26]
 
-[node name="Prototype 0" type="Node2D" index="0"]
+[node name="Prototype 0" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -71,23 +71,27 @@ enabled = false
 
 [node name="OnionBody" parent="Onion/Onion/Colisionposition/Höhenposition" index="0"]
 
-scale = Vector2( 0.5, 0.448853 )
+scale = Vector2( 0.5, 0.426973 )
 
 [node name="OnionHair" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
-rotation = 0.742983
+rotation = 0.845725
+
+[node name="onion_eyes" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="1"]
+
+scale = Vector2( 1, 0.347965 )
 
 [node name="OnionEarL" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
-rotation = 0.268593
+rotation = 0.199018
 
 [node name="OnionTail" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
-rotation = -0.154743
+rotation = -0.354533
 
 [node name="OnionEarR" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
-rotation = -0.580475
+rotation = -0.618732
 
 [node name="AnimationTreePlayer1" parent="Onion/Onion" index="1"]
 
