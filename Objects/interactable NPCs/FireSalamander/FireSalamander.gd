@@ -4,12 +4,15 @@ extends Node2D
 export(NodePath) var objToDestroyPath
 export var destroyRadius = 300
 var objToDestroyParent
+export var useHorizontalFlames = false
 
 var objToDestroy 
 var triggered = false
 
 onready var anim = $AnimationPlayer
-onready var burnVFX = $Burning_Thorns_FlameVFX
+
+onready var cone = $FireCone
+var flames
 
 var player
 
@@ -38,16 +41,20 @@ func _on_FireStoneTrigger_body_entered(body):
 #called by burn anim
 #fire breath particles
 func emit():
-	$Fire_salamander_FlameVFX.look_at(objToDestroy.global_position)
-	$Fire_salamander_FlameVFX.emitting = true
-	$Fire_salamander_FlameVFX/FireSFX.playing = true
+	cone.look_at(objToDestroy.global_position)
+	cone.emitting = true
+	$FireCone/FireSFX.playing = true
 
 #called by burn anim
 #burning particles at object
 func burn():
-	burnVFX.global_position = objToDestroy.global_position
-	attachBurningVFX(burnVFX, objToDestroy)
-	burnVFX.emitting = true
+	if useHorizontalFlames == false:
+		flames = $VerticalFlames
+	else:
+		flames = $HorizontalFlames
+	flames.global_position = objToDestroy.global_position
+	attachBurningVFX(flames, objToDestroy)
+	flames.emitting = true
 
 #called by burn anim
 func removeObj():
