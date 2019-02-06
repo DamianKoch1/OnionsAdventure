@@ -74,7 +74,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -113,7 +113,7 @@ size_flags_vertical = 1
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Mouse", "Visibility" ]
+_sections_unfolded = [ "Margin", "Mouse", "Rect", "Visibility" ]
 
 [node name="TextureRect" type="TextureRect" parent="." index="1"]
 
