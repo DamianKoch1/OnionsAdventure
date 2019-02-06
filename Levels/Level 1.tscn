@@ -71,7 +71,7 @@ position = Vector2( 307.218, 1.72031 )
 
 [node name="Collectable03" parent="smallstump2" index="4" instance=ExtResource( 5 )]
 
-position = Vector2( -32.4216, 51.8746 )
+position = Vector2( -32.4216, 36.7445 )
 
 [node name="SpiderbuddyTrigger" parent="smallstump2" index="5" instance=ExtResource( 3 )]
 
@@ -157,7 +157,7 @@ position = Vector2( 125.387, -11.9416 )
 
 [node name="Collectable09" parent="stump m, stone big" index="6" instance=ExtResource( 5 )]
 
-position = Vector2( -354.267, -31.1808 )
+position = Vector2( -357.525, -41.7694 )
 
 [node name="ThornsUp" parent="stump m, stone big" index="7" instance=ExtResource( 15 )]
 
@@ -284,7 +284,7 @@ position = Vector2( -131.136, -45.6124 )
 
 [node name="Collectable26" parent="platform" index="3" instance=ExtResource( 5 )]
 
-position = Vector2( -4561.81, 258.039 )
+position = Vector2( -4549.19, 251.568 )
 
 [node name="Collectable27" parent="platform" index="4" instance=ExtResource( 5 )]
 
