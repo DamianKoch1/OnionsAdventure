@@ -382,7 +382,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Gallery" type="Container" index="0"]
+[node name="Gallery" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -423,12 +423,12 @@ expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Title" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Gallery Title" parent="." index="1" instance=ExtResource( 3 )]
 
 margin_left = -341.0
-margin_top = -165.0
+margin_top = -164.0
 margin_right = -80.0
-margin_bottom = -39.0
+margin_bottom = -38.0
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -445,7 +445,6 @@ text = "Back"
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = -373.0
 margin_top = -5.0
 margin_right = -149.0
@@ -455,21 +454,20 @@ margin_bottom = 31.0
 
 margin_right = 1189.0
 margin_bottom = 273.0
-text = "Back"
+text = "back"
 
 [node name="NextButton" parent="." index="4" instance=ExtResource( 4 )]
 
-editor/display_folded = true
-margin_left = 43.0
+margin_left = 96.0
 margin_top = -5.0
-margin_right = 267.0
+margin_right = 320.0
 margin_bottom = 31.0
 
 [node name="Label" parent="NextButton" index="0"]
 
 margin_right = 1189.0
 margin_bottom = 273.0
-text = "Next"
+text = "next"
 
 [node name="OptionsOverlay" parent="." index="5" instance=ExtResource( 5 )]
 
@@ -492,9 +490,9 @@ texture = ExtResource( 6 )
 [node name="Label" parent="Dandelions" index="1" instance=ExtResource( 3 )]
 
 margin_left = 4.0
-margin_top = -44.0
-margin_right = 265.0
-margin_bottom = 82.0
+margin_top = -40.0
+margin_right = 342.0
+margin_bottom = 86.0
 text = "000/150"
 
 [node name="TrappedNPCs" type="Node2D" parent="." index="7"]
@@ -509,14 +507,12 @@ texture = ExtResource( 7 )
 [node name="Label" parent="TrappedNPCs" index="1" instance=ExtResource( 3 )]
 
 margin_left = 38.0
-margin_top = -16.0
+margin_top = -12.0
 margin_right = 376.0
-margin_bottom = 110.0
+margin_bottom = 114.0
 text = "000/150"
 
 [node name="Page1" type="Node2D" parent="." index="8"]
-
-editor/display_folded = true
 
 [node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 8 )]
 
@@ -562,7 +558,6 @@ NPCsNeeded = 3
 
 [node name="Page2" type="Node2D" parent="." index="9"]
 
-editor/display_folded = true
 visible = false
 
 [node name="unlockableImg" parent="Page2" index="0" instance=ExtResource( 8 )]
@@ -663,7 +658,6 @@ anims/unlock = SubResource( 6 )
 
 [node name="Page3" type="Node2D" parent="." index="10"]
 
-editor/display_folded = true
 visible = false
 
 [node name="unlockableImg" parent="Page3" index="0" instance=ExtResource( 8 )]
