@@ -48,7 +48,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -76,7 +76,7 @@ position = Vector2( -32.4216, 51.8746 )
 [node name="SpiderbuddyTrigger" parent="smallstump2" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( -237.436, 43.3706 )
-text = "Good! … Press “Space”"
+text = "Good! … Press “Space”!"
 
 [node name="smallstoneup" parent="." index="2" instance=ExtResource( 6 )]
 
@@ -123,12 +123,12 @@ position = Vector2( 401.336, 44.016 )
 [node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( 336.745, 10.0663 )
-text = "Press “E”"
+text = "Press “E”!"
 
 [node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 3 )]
 
 position = Vector2( -11.6511, 137.912 )
-text = "It’s like a checkpoint"
+text = "It’s like a checkpoint."
 
 [node name="stump s, stump m 1" parent="." index="5" instance=ExtResource( 13 )]
 
@@ -192,7 +192,7 @@ position = Vector2( 390.963, -74.9346 )
 [node name="SpiderbuddyTrigger" parent="stump l, moving tendril" index="8" instance=ExtResource( 3 )]
 
 position = Vector2( -255.813, -43.3706 )
-text = "Jump onto that tendril"
+text = "Jump onto that tendril!"
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 17 )]
 

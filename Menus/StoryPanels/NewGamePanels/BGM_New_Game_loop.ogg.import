@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BGM_New_Game_loop.ogg-1b25d722364b82960b0217fefbd6cdd7.oggstr"
+
+[deps]
+
+source_file="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg"
+dest_files=[ "res://.import/BGM_New_Game_loop.ogg-1b25d722364b82960b0217fefbd6cdd7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
