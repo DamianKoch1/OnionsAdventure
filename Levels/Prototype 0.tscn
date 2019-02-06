@@ -26,7 +26,7 @@
 [ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/SpiderbuddyTrigger.tscn" type="PackedScene" id=25]
 
-[node name="Prototype 0" type="Node2D"]
+[node name="Prototype 0" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -56,8 +56,13 @@ z_as_relative = false
 
 [node name="Onion" parent="." index="4" instance=ExtResource( 5 )]
 
+editor/display_folded = true
 position = Vector2( 287.613, 229.506 )
 z_index = 5
+maxGhostjumpDelay = 3.0
+movespeed = 500
+jumpheight = 700
+climbspeed = 500
 
 [node name="RayCast2D" parent="Onion" index="0"]
 
@@ -65,29 +70,29 @@ enabled = false
 
 [node name="OnionBody" parent="Onion/Onion/Colisionposition/Höhenposition" index="0"]
 
-scale = Vector2( 0.5, 0.442919 )
+scale = Vector2( 0.5, 0.447397 )
 
 [node name="OnionHair" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
-rotation = 0.832903
+rotation = 0.766586
 
 [node name="OnionEarL" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
-rotation = 0.207701
+rotation = 0.252609
 
 [node name="OnionTail" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
-rotation = -0.226402
+rotation = -0.172771
 
 [node name="OnionEarR" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
-rotation = -0.613957
+rotation = -0.589264
 
 [node name="AnimationTreePlayer1" parent="Onion/Onion" index="1"]
 
 data = {
 "active": true,
-"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1 ],
+"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "id": "scale",
@@ -112,23 +117,6 @@ data = {
 "type": "animation"
 }, {
 "filter": [  ],
-"from": "Onion_JumpDown",
-"id": "jumpdown",
-"position": Vector2( 408, 268 ),
-"type": "animation"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.1,
-"filter": [  ],
-"id": "fallOneshot",
-"mix": false,
-"position": Vector2( 541, 92 ),
-"type": "oneshot"
-}, {
-"filter": [  ],
 "from": "Onion_JumpUp",
 "id": "jumpup",
 "position": Vector2( 77, 356 ),
@@ -143,6 +131,23 @@ data = {
 } ],
 "type": "transition",
 "xfade": 0.3
+}, {
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.1,
+"filter": [  ],
+"id": "fallOneshot",
+"mix": false,
+"position": Vector2( 541, 92 ),
+"type": "oneshot"
+}, {
+"filter": [  ],
+"from": "Onion_JumpDown",
+"id": "jumpdown",
+"position": Vector2( 408, 268 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 0.0,
