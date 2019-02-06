@@ -137,11 +137,11 @@ _sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 
 stream = ExtResource( 11 )
 volume_db = 0.0
-autoplay = true
 
 [node name="Mainpart" parent="BGMPlayerIntro" index="1"]
 
 stream = ExtResource( 12 )
+volume_db = 0.0
 
 [connection signal="animFinished" from="PanelButton2" to="." method="_on_PanelButton2_animFinished"]
 
