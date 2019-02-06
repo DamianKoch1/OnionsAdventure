@@ -186,7 +186,6 @@ position = Vector2( -170.91, -51.6563 )
 
 [node name="moving ten hard part" parent="." index="6" instance=ExtResource( 13 )]
 
-editor/display_folded = true
 position = Vector2( 3619.13, -607.031 )
 
 [node name="Checkpoint" parent="moving ten hard part" index="4" instance=ExtResource( 10 )]
@@ -199,7 +198,7 @@ position = Vector2( 689.783, 62.9018 )
 
 [node name="Collectable" parent="moving ten hard part" index="6" instance=ExtResource( 3 )]
 
-position = Vector2( -378.149, -28.8801 )
+position = Vector2( -330.057, -24.0169 )
 
 [node name="Collectable2" parent="moving ten hard part" index="7" instance=ExtResource( 3 )]
 
@@ -455,7 +454,7 @@ position = Vector2( -155.84, -5.88074 )
 
 [node name="Collectable2" parent="platform short" index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 205.914, 6.48486 )
+position = Vector2( 123.337, -54.5004 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 32 )]
 
