@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG_layer_2_part2.png-3ebdea6daf920b9af44ab2c3d4efcbc8.stex"
+path="res://.import/Particle_Flame_FireSalamander.png-baff817e710997ff21f7bb318a758771.stex"
 
 [deps]
 
-source_file="res://Assets/Background/BG_layer_2_part2.png"
-dest_files=[ "res://.import/BG_layer_2_part2.png-3ebdea6daf920b9af44ab2c3d4efcbc8.stex" ]
+source_file="res://Assets/Particle_Flame_FireSalamander.png"
+dest_files=[ "res://.import/Particle_Flame_FireSalamander.png-baff817e710997ff21f7bb318a758771.stex" ]
 
 [params]
 
@@ -15,9 +15,9 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/VG_grass_3.png-f2eca699caa5ee9bd13c08b313f1f800.stex"
+path="res://.import/BG_layer_2_part1.png-d1ceac25031a7d16640f2d8c9d41437f.stex"
 
 [deps]
 
-source_file="res://Assets/Background/VG_grass_3.png"
-dest_files=[ "res://.import/VG_grass_3.png-f2eca699caa5ee9bd13c08b313f1f800.stex" ]
+source_file="res://Assets/Background/old/BG_layer_2_part1.png"
+dest_files=[ "res://.import/BG_layer_2_part1.png-d1ceac25031a7d16640f2d8c9d41437f.stex" ]
 
 [params]
 
@@ -15,9 +15,9 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
