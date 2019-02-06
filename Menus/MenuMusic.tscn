@@ -1,8 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Menus/MainMenu/MainMenu.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Menus/MainMenu/BGM_Main_Menu_loop_final.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Audio/Music/BGMPlayer.gd" type="Script" id=2]
-
 
 [sub_resource type="Animation" id=1]
 
@@ -66,7 +65,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[node name="MenuMusic" type="AudioStreamPlayer" index="0"]
+[node name="MenuMusic" type="AudioStreamPlayer"]
 
 stream = ExtResource( 1 )
 volume_db = -65.7387

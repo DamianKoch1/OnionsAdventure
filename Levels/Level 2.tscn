@@ -57,7 +57,6 @@ position = Vector2( 47.6684, 42.0298 )
 
 [node name="firesalamander, thorn" parent="." index="2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 768.93, 0 )
 _sections_unfolded = [ "Transform" ]
 
