@@ -323,7 +323,7 @@ position = Vector2( 5958.41, -548.905 )
 
 [node name="trappedNPC" parent="platform" index="1" instance=ExtResource( 22 )]
 
-position = Vector2( 7.37842, -47.9892 )
+position = Vector2( 8.54639, -35.1416 )
 
 [node name="Enemy" parent="platform" index="2" instance=ExtResource( 23 )]
 
@@ -446,7 +446,7 @@ position = Vector2( 2808.03, -722.226 )
 
 [node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 22 )]
 
-position = Vector2( 5.36426, -49.7429 )
+position = Vector2( 5.00562, -39.3468 )
 
 [node name="Collectable" parent="platform short" index="2" instance=ExtResource( 3 )]
 
@@ -466,7 +466,7 @@ position = Vector2( -585.001, 167 )
 
 [node name="trappedNPC" parent="moving salamander 2 platform" index="4" instance=ExtResource( 22 )]
 
-position = Vector2( 316.825, -140.403 )
+position = Vector2( 315.752, -127.31 )
 
 [node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 31 )]
 
