@@ -1,57 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Particle_Dust.png" type="Texture" id=1]
-
-[sub_resource type="Gradient" id=4]
-
-offsets = PoolRealArray( 0, 0.0769231, 0.650888, 1 )
-colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
-
-[sub_resource type="GradientTexture" id=5]
-
-flags = 4
-gradient = SubResource( 4 )
-width = 2048
-
-[sub_resource type="ParticlesMaterial" id=3]
-
-render_priority = 0
-trail_divisor = 1
-emission_shape = 2
-emission_box_extents = Vector3( 40, 1, 0 )
-flag_align_y = false
-flag_rotate_y = false
-flag_disable_z = true
-spread = 180.0
-flatness = 0.0
-gravity = Vector3( 0, -15, 0 )
-initial_velocity = 16.0
-initial_velocity_random = 0.5
-angular_velocity = 0.0
-angular_velocity_random = 0.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel = 0.0
-linear_accel_random = 0.0
-radial_accel = 0.0
-radial_accel_random = 0.0
-tangential_accel = 0.0
-tangential_accel_random = 0.0
-damping = 10.0
-damping_random = 0.25
-angle = 0.0
-angle_random = 0.0
-scale = 1.0
-scale_random = 0.0
-color_ramp = SubResource( 5 )
-hue_variation = 0.0
-hue_variation_random = 0.0
-anim_speed = 0.0
-anim_speed_random = 0.0
-anim_offset = 0.0
-anim_offset_random = 0.0
-anim_loop = false
-_sections_unfolded = [ "Angular Velocity", "Color", "Damping", "Emission Shape", "Gravity", "Hue Variation", "Initial Velocity", "Scale", "Spread" ]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/WebDestroyedDustVFX.tres" type="Material" id=1]
+[ext_resource path="res://Assets/Particle_Dust.png" type="Texture" id=2]
 
 [node name="WebDestroyedDustVFX" type="Particles2D"]
 
@@ -68,8 +18,8 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 3 )
-texture = ExtResource( 1 )
+process_material = ExtResource( 1 )
+texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
 v_frames = 1
