@@ -9,7 +9,7 @@
 [ext_resource path="res://Menus/StartFadeIn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Menus/MainMenu/Main Menu Title.png" type="Texture" id=8]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0

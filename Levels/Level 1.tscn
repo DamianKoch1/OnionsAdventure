@@ -118,11 +118,11 @@ position = Vector2( 0.479736, 159.1 )
 
 [node name="trappedNPC1" parent="smallstone2" index="4" instance=ExtResource( 12 )]
 
-position = Vector2( 401.336, 44.016 )
+position = Vector2( 401.733, 53.9464 )
 
 [node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 3 )]
 
-position = Vector2( 336.745, 10.0663 )
+position = Vector2( 337.142, 19.9967 )
 text = "Press “E”"
 
 [node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 3 )]
@@ -271,13 +271,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="platform" parent="." index="12" instance=ExtResource( 22 )]
 
-editor/display_folded = true
 position = Vector2( 7645.35, -365.755 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC2" parent="platform" index="1" instance=ExtResource( 12 )]
 
-position = Vector2( 13.6299, -43.986 )
+position = Vector2( 14.3643, -38.8403 )
 
 [node name="Collectable24" parent="platform" index="2" instance=ExtResource( 5 )]
 
@@ -410,7 +409,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC3" parent="tree2" index="2" instance=ExtResource( 12 )]
 
-position = Vector2( 309.63, -44.124 )
+position = Vector2( 309.63, -40.1518 )
 
 [node name="Worm3" parent="tree2" index="3" instance=ExtResource( 28 )]
 
