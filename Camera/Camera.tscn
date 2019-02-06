@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
@@ -7,9 +7,8 @@
 [ext_resource path="res://Camera/Animals_Free.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=7]
-[ext_resource path="res://Audio/Music/BGMPlayerIntro.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Audio/Music/EnchantedIntro.wav" type="AudioStream" id=9]
-[ext_resource path="res://Audio/Music/EnchantedMainpart.wav" type="AudioStream" id=10]
+[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=9]
 
 [node name="Camera" type="Camera2D" index="0"]
 
@@ -138,15 +137,8 @@ texture = ExtResource( 7 )
 
 [node name="BGMPlayer" parent="." index="1" instance=ExtResource( 8 )]
 
-[node name="Intro" parent="BGMPlayer" index="0"]
-
 stream = ExtResource( 9 )
-volume_db = -10.0
-
-[node name="Mainpart" parent="BGMPlayer" index="1"]
-
-stream = ExtResource( 10 )
-volume_db = -10.0
+volume_db = -65.74
 
 
 [editable path="CanvasLayer/Spiderbuddy"]
