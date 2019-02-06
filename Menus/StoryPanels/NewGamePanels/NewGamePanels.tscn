@@ -20,7 +20,7 @@ use_filter = false
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="NewGamePanels" type="Node" index="0"]
+[node name="NewGamePanels" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )

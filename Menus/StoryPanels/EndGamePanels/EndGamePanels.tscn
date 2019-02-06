@@ -21,7 +21,7 @@ use_filter = false
 font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="EndGamePanels" type="Node"]
+[node name="EndGamePanels" type="Node" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )
