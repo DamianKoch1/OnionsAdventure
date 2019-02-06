@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG_layer_2_part1.png-7234246e50d7c071aaeaa42c5729623d.stex"
+path="res://.import/BG_layer_3_part3.png-f9a5aed88c71f618038cdcb1201c64bb.stex"
 
 [deps]
 
-source_file="res://Assets/Background/BG_layer_2_part1.png"
-dest_files=[ "res://.import/BG_layer_2_part1.png-7234246e50d7c071aaeaa42c5729623d.stex" ]
+source_file="res://Assets/Background/old/BG_layer_3_part3.png"
+dest_files=[ "res://.import/BG_layer_3_part3.png-f9a5aed88c71f618038cdcb1201c64bb.stex" ]
 
 [params]
 
@@ -15,9 +15,9 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
