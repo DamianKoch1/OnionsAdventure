@@ -11,10 +11,10 @@ tile_data = PoolIntArray( 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0
 
 [node name="Worm" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -105.148, 140.266 )
+position = Vector2( -98, 82 )
 
 [node name="Worm2" parent="." index="2" instance=ExtResource( 2 )]
 
-position = Vector2( 126.794, 140.266 )
+position = Vector2( 133.942, 82 )
 
 
