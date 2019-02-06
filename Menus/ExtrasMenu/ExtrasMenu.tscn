@@ -495,7 +495,7 @@ margin_left = 4.0
 margin_top = -44.0
 margin_right = 265.0
 margin_bottom = 82.0
-text = "000/150"
+text = "000/200"
 
 [node name="TrappedNPCs" type="Node2D" parent="." index="7"]
 
@@ -512,7 +512,7 @@ margin_left = 38.0
 margin_top = -16.0
 margin_right = 376.0
 margin_bottom = 110.0
-text = "000/150"
+text = "00/12"
 
 [node name="Page1" type="Node2D" parent="." index="8"]
 

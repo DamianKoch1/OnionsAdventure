@@ -7,8 +7,8 @@ onready var atPage = 1
 
 
 func _ready():
-	dandelionCounter.text = str(SaveGame.dandelions) + "/150"
-	NPCCounter.text = str(SaveGame.trappedNPCs) + "/9"
+	dandelionCounter.text = str(SaveGame.dandelions) + "/200"
+	NPCCounter.text = str(SaveGame.trappedNPCs) + "/12"
 	$Page1.show()
 	$Page2.hide()
 	$Page3.hide()
