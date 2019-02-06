@@ -1,13 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Particle_Flame_placeholder.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Particle_Flame_Thorns.png" type="Texture" id=1]
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 0.662722, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
 emission_shape = 2
-emission_box_extents = Vector3( 16, 32, 0 )
+emission_box_extents = Vector3( 24, 48, 0 )
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
@@ -32,15 +43,15 @@ angle = 0.0
 angle_random = 0.0
 scale = 0.1
 scale_random = 0.0
-color = Color( 1, 1, 1, 1 )
-hue_variation = 0.1
-hue_variation_random = 0.1
+color_ramp = SubResource( 2 )
+hue_variation = 0.0
+hue_variation_random = 0.0
 anim_speed = 0.0
 anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Emission Shape", "Gravity", "Hue Variation", "Initial Velocity", "Scale", "Spread" ]
+_sections_unfolded = [ "Color", "Emission Shape", "Gravity", "Hue Variation", "Initial Velocity", "Scale", "Spread" ]
 
 [node name="Burning_Thorns_FlameVFX" type="Particles2D" index="0"]
 
@@ -57,7 +68,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 0
-process_material = SubResource( 1 )
+process_material = SubResource( 3 )
 texture = ExtResource( 1 )
 normal_map = null
 h_frames = 1
