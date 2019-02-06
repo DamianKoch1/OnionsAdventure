@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat4.tscn" type="PackedScene" id=2]
@@ -40,6 +40,7 @@
 [ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=38]
 [ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=41]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -567,6 +568,17 @@ position = Vector2( -336.141, 36.6067 )
 
 position = Vector2( -436.141, 76.6067 )
 
+[node name="Background" parent="." index="25" instance=ExtResource( 41 )]
+
+[node name="ParallaxLayer" parent="Background" index="0"]
+
+motion_scale = Vector2( 0.065, 0.1 )
+
+[node name="Sprite" parent="Background/ParallaxLayer" index="0"]
+
+position = Vector2( 393.601, 7.44489 )
+
 
 [editable path="movingten1/Enemy"]
 [editable path="platform/Enemy"]
+[editable path="Background"]

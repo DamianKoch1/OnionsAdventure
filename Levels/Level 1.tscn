@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=32]
 [ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=34]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -48,7 +49,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -505,6 +506,8 @@ scale = Vector2( 0.403203, 0.403203 )
 [node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 33 )]
 
 position = Vector2( -255.331, 33.9647 )
+
+[node name="Background" parent="." index="22" instance=ExtResource( 34 )]
 
 
 [editable path="stump l, stump m, stump s/Enemy"]
