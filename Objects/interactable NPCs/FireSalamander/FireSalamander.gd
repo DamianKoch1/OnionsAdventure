@@ -9,6 +9,7 @@ var objToDestroy
 var triggered = false
 
 onready var anim = $AnimationPlayer
+onready var burnVFX = $Burning_Thorns_FlameVFX
 
 var player
 
@@ -44,8 +45,9 @@ func emit():
 #called by burn anim
 #burning particles at object
 func burn():
-	$Burning_Thorns_FlameVFX.global_position = objToDestroy.global_position
-	$Burning_Thorns_FlameVFX.emitting = true
+	burnVFX.global_position = objToDestroy.global_position
+	attachBurningVFX(burnVFX, objToDestroy)
+	burnVFX.emitting = true
 
 #called by burn anim
 func removeObj():
@@ -57,3 +59,9 @@ func resetObj():
 	anim.stop()
 	objToDestroyParent.add_child(objToDestroy)
 	triggered = false
+
+func attachBurningVFX(object, target):
+	var transf = object.get_global_transform()
+	get_parent().remove_child(object)
+	target.add_child(object)
+	object.set_global_transform(transf)

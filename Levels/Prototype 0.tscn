@@ -18,7 +18,7 @@
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Assets/Background/ParallaxBackground.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Assets/Background/old/ParallaxBackground.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=22]
@@ -56,8 +56,13 @@ z_as_relative = false
 
 [node name="Onion" parent="." index="4" instance=ExtResource( 5 )]
 
+editor/display_folded = true
 position = Vector2( 287.613, 229.506 )
 z_index = 5
+maxGhostjumpDelay = 3.0
+movespeed = 500
+jumpheight = 700
+climbspeed = 500
 
 [node name="RayCast2D" parent="Onion" index="0"]
 
@@ -65,27 +70,23 @@ enabled = false
 
 [node name="OnionBody" parent="Onion/Onion/Colisionposition/Höhenposition" index="0"]
 
-scale = Vector2( 0.5, 0.437633 )
+scale = Vector2( 0.5, 0.447397 )
 
 [node name="OnionHair" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
-rotation = 0.780087
-
-[node name="onion_eyes" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="1"]
-
-scale = Vector2( 1, 0.46017 )
+rotation = 0.766586
 
 [node name="OnionEarL" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
-rotation = 0.243467
+rotation = 0.252609
 
 [node name="OnionTail" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
-rotation = -0.256754
+rotation = -0.172771
 
 [node name="OnionEarR" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
-rotation = -0.594291
+rotation = -0.589264
 
 [node name="AnimationTreePlayer1" parent="Onion/Onion" index="1"]
 
@@ -109,6 +110,18 @@ data = {
 "position": Vector2( 688, 102 ),
 "type": "output"
 }, {
+"filter": [  ],
+"from": "Onion_Walk",
+"id": "walk",
+"position": Vector2( 24, 158 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Onion_JumpUp",
+"id": "jumpup",
+"position": Vector2( 77, 356 ),
+"type": "animation"
+}, {
 "id": "idle/walk",
 "position": Vector2( 207, 91 ),
 "transitions": [ {
@@ -131,21 +144,9 @@ data = {
 "type": "oneshot"
 }, {
 "filter": [  ],
-"from": "Onion_JumpUp",
-"id": "jumpup",
-"position": Vector2( 77, 356 ),
-"type": "animation"
-}, {
-"filter": [  ],
 "from": "Onion_JumpDown",
 "id": "jumpdown",
 "position": Vector2( 408, 268 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Onion_Walk",
-"id": "walk",
-"position": Vector2( 24, 158 ),
 "type": "animation"
 }, {
 "autorestart": false,

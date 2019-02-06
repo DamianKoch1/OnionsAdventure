@@ -7,15 +7,14 @@ onready var label = $Speechbubble/Label
 #setup spiderbuddy triggers
 func _ready():
 	for trigger in get_tree().get_nodes_in_group("SpiderbuddyTrigger"):
-		trigger.connect("triggered", self, "playAnim")
+		trigger.connect("triggered", self, "onTriggerEntered")
 
-func playAnim(text):
+func onTriggerEntered(text):
 	label.text = text
 	if fullAnim.is_playing() == false:
 		fullAnim.play("anim")
 
-func show():
-	anim.play("show")
 
-func hide():
-	anim.play("hide")
+func playAnim(name):
+	anim.play(name)
+	
