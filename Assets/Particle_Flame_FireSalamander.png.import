@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Particle_Flame_placeholder.png-dbda0427b998158702d71b5ab56e39b2.stex"
+path="res://.import/Particle_Flame_FireSalamander.png-baff817e710997ff21f7bb318a758771.stex"
 
 [deps]
 
-source_file="res://Assets/Particle_Flame_placeholder.png"
-dest_files=[ "res://.import/Particle_Flame_placeholder.png-dbda0427b998158702d71b5ab56e39b2.stex" ]
+source_file="res://Assets/Particle_Flame_FireSalamander.png"
+dest_files=[ "res://.import/Particle_Flame_FireSalamander.png-baff817e710997ff21f7bb318a758771.stex" ]
 
 [params]
 
