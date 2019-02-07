@@ -10,9 +10,9 @@
 [ext_resource path="res://Player/OnionSprite/onion_hair.png" type="Texture" id=8]
 [ext_resource path="res://Player/OnionSprite/onion_body_eyes.png" type="Texture" id=9]
 [ext_resource path="res://Player/OnionSprite/onion_body_mouth.png" type="Texture" id=10]
-[ext_resource path="res://Player/OnionSprite/onion_ear_l.png" type="Texture" id=11]
+[ext_resource path="res://Player/OnionSprite/onion_ear_L.png" type="Texture" id=11]
 [ext_resource path="res://Player/OnionSprite/onion_tail.png" type="Texture" id=12]
-[ext_resource path="res://Player/OnionSprite/onion_ear_r.png" type="Texture" id=13]
+[ext_resource path="res://Player/OnionSprite/onion_ear_R.png" type="Texture" id=13]
 [ext_resource path="res://Player/OnionSprite/Onion_Idle.tres" type="Animation" id=14]
 [ext_resource path="res://Player/OnionSprite/Onion_JumpDown.tres" type="Animation" id=15]
 [ext_resource path="res://Player/OnionSprite/Onion_JumpUp.tres" type="Animation" id=16]
@@ -118,7 +118,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="OnionBody" type="Sprite" parent="Onion/Colisionposition/Höhenposition" index="0"]
 
 position = Vector2( 0.50386, -30.1882 )
-scale = Vector2( 0.5, 0.430573 )
+scale = Vector2( 0.5, 0.444309 )
 z_index = 1
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -126,7 +126,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="OnionHair" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
 position = Vector2( 7.13066, -33.507 )
-rotation = 0.942088
+rotation = 0.813334
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 8 )
 offset = Vector2( -1.19385, -22.9981 )
@@ -149,7 +149,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 [node name="OnionEarL" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
 position = Vector2( -0.070208, -36.7456 )
-rotation = 0.133763
+rotation = 0.220952
 scale = Vector2( 1.00907, 1.10266 )
 z_index = -2
 texture = ExtResource( 11 )
@@ -159,7 +159,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 [node name="OnionTail" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
 position = Vector2( -30.5271, 45.5714 )
-rotation = -0.341991
+rotation = -0.210137
 scale = Vector2( 1.00228, 1.10883 )
 z_index = -2
 texture = ExtResource( 12 )
@@ -169,7 +169,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="OnionEarR" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
 position = Vector2( -9.10822, -35.8578 )
-rotation = -0.654613
+rotation = -0.606671
 scale = Vector2( 1.03379, 1.07951 )
 z_index = -2
 texture = ExtResource( 13 )
@@ -201,6 +201,18 @@ data = {
 "id": "out",
 "position": Vector2( 688, 102 ),
 "type": "output"
+}, {
+"filter": [  ],
+"from": "Onion_Walk",
+"id": "walk",
+"position": Vector2( 24, 158 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Onion_JumpUp",
+"id": "jumpup",
+"position": Vector2( 77, 356 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -239,18 +251,6 @@ data = {
 "mix": false,
 "position": Vector2( 362, 94 ),
 "type": "oneshot"
-}, {
-"filter": [  ],
-"from": "Onion_JumpUp",
-"id": "jumpup",
-"position": Vector2( 77, 356 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Onion_Walk",
-"id": "walk",
-"position": Vector2( 24, 158 ),
-"type": "animation"
 } ]
 }
 _sections_unfolded = [ "Pause", "Playback" ]
