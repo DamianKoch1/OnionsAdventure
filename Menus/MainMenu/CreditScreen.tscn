@@ -29,7 +29,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="CreditScreen" type="Container"]
+[node name="CreditScreen" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -393,7 +393,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 7 )
-text = "Lisa Wagner"
+text = "Lisa Wegner"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
