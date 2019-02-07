@@ -121,7 +121,7 @@ _sections_unfolded = [ "Animation", "Damping", "Emission Shape", "Gravity", "Hue
 custom_solver_bias = 0.0
 extents = Vector2( 117.754, 134.469 )
 
-[node name="Spawnpoint" type="Node2D" index="0" groups=[
+[node name="Spawnpoint" type="Node2D" groups=[
 "Spawnpoint",
 ]]
 
