@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=1]
 
-[node name="platform long" type="Node2D" index="0"]
+[node name="platform long" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 

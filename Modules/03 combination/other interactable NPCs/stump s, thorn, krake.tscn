@@ -5,7 +5,7 @@
 [ext_resource path="res://Objects/Obstacles/Thorns/ThornsCorner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=4]
 
-[node name="stump s, thorn, krake" type="Node2D" index="0"]
+[node name="stump s, thorn, krake" type="Node2D"]
 
 [node name="Bouncer" parent="." index="0" instance=ExtResource( 1 )]
 

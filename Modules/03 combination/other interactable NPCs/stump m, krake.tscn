@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[node name="stump m, krake" type="Node2D" index="0"]
+[node name="stump m, krake" type="Node2D"]
 
 [node name="stump m 7" type="Node2D" parent="." index="0"]
 
