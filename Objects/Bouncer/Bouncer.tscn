@@ -15,7 +15,7 @@ extents = Vector2( 8.65703, 8.78032 )
 [sub_resource type="Animation" id=2]
 
 resource_name = "bounce"
-length = 0.4
+length = 0.5
 loop = false
 step = 0.05
 tracks/0/type = "value"
@@ -25,13 +25,25 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.104817, 0.106667 ), Vector2( 0.142222, 0.0800003 ), Vector2( 0.104817, 0.106667 ) ]
+"values": [ Vector2( 0.104817, 0.106667 ), Vector2( 0.220589, 0.057247 ), Vector2( 0.104817, 0.106667 ), Vector2( 0.117201, 0.0966574 ), Vector2( 0.104817, 0.106667 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("icon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.467431, 9.46983 ), Vector2( -0.487558, 9.55599 ) ]
 }
 
-[node name="Bouncer" type="Area2D" index="0"]
+[node name="Bouncer" type="Area2D"]
 
 position = Vector2( 31.5819, 22.7745 )
 scale = Vector2( 3.66032, 3.66032 )
@@ -53,18 +65,20 @@ bounceIncrease = 5
 
 [node name="icon" type="Sprite" parent="." index="0"]
 
-position = Vector2( -0.160533, 4 )
+position = Vector2( -0.477494, 9.51291 )
 scale = Vector2( 0.104817, 0.106667 )
 texture = ExtResource( 2 )
+offset = Vector2( 1.1252, -47.392 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="head_mush" type="Sprite" parent="icon" index="0"]
 
-position = Vector2( -0.62867, -29.0295 )
+position = Vector2( 0.496529, -76.4215 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+visible = false
 position = Vector2( 0, 2.65079 )
 shape = SubResource( 1 )
 

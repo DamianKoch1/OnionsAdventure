@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/onion_body_tail.png-1b46d36e0e592f3b4bb3f53aad8d502a.stex"
+path="res://.import/onion_ear_l.png-47694ed2bf58edcf57525f2506fd1dbc.stex"
 
 [deps]
 
-source_file="res://Player/OnionSprite/onion_body_tail.png"
-dest_files=[ "res://.import/onion_body_tail.png-1b46d36e0e592f3b4bb3f53aad8d502a.stex" ]
+source_file="res://Player/OnionSprite/onion_ear_l.png"
+dest_files=[ "res://.import/onion_ear_l.png-47694ed2bf58edcf57525f2506fd1dbc.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
