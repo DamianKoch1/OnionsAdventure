@@ -48,7 +48,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 20.7729, 169.765 )
 }
 
-[node name="Level 4" type="Node2D"]
+[node name="Level 4" type="Node2D" index="0"]
 
 [node name="short start" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -228,6 +228,7 @@ position = Vector2( 698.063, 97.5071 )
 
 [node name="movingEnemyPlat" parent="." index="11" instance=ExtResource( 21 )]
 
+editor/display_folded = true
 position = Vector2( 5196.64, 1057.8 )
 
 [node name="TileMap" parent="movingEnemyPlat" index="1" instance=ExtResource( 20 )]
@@ -315,6 +316,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="tendril6" parent="." index="14" instance=ExtResource( 26 )]
 
+editor/display_folded = true
 position = Vector2( 7168, 1056 )
 
 [node name="Collectable" parent="tendril6" index="5" instance=ExtResource( 3 )]
@@ -355,6 +357,7 @@ position = Vector2( -352, -64 )
 
 [node name="platform2" parent="." index="16" instance=ExtResource( 29 )]
 
+editor/display_folded = true
 position = Vector2( 7807.86, 840.084 )
 
 [node name="Worm" parent="platform2" index="1" instance=ExtResource( 12 )]
@@ -425,6 +428,7 @@ position = Vector2( -703.148, -539.47 )
 
 [node name="stump m, thorn 3" parent="." index="21" instance=ExtResource( 33 )]
 
+editor/display_folded = true
 position = Vector2( 9600, 1056 )
 
 [node name="Collectable" parent="stump m, thorn 3" index="4" instance=ExtResource( 3 )]
@@ -449,6 +453,7 @@ position = Vector2( 10272, 1056 )
 
 [node name="elevator" parent="." index="23" instance=ExtResource( 35 )]
 
+editor/display_folded = true
 position = Vector2( 10912, 1056 )
 
 [node name="Ladder" parent="elevator" index="5" instance=ExtResource( 8 )]
@@ -497,10 +502,11 @@ position = Vector2( 994.437, 2.72083 )
 
 [node name="MuddyPlat" parent="." index="24" instance=ExtResource( 36 )]
 
-position = Vector2( 11968, 736 )
+position = Vector2( 11968, 735 )
 
 [node name="platform short3" parent="." index="25" instance=ExtResource( 31 )]
 
+editor/display_folded = true
 position = Vector2( 12448, 800 )
 
 [node name="trappedNPC" parent="platform short3" index="1" instance=ExtResource( 18 )]
