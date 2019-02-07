@@ -5,7 +5,7 @@
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 
-[node name="OptionsOverlay" type="Container" index="0"]
+[node name="OptionsOverlay" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -86,10 +86,10 @@ focus_mode = 2
 [node name="Music" parent="Volume/Music" index="1" instance=ExtResource( 3 )]
 
 margin_left = -352.0
-margin_top = -101.0
+margin_top = -99.0
 margin_right = -70.0
-margin_bottom = 25.0
-text = "Music"
+margin_bottom = 27.0
+text = "music"
 
 [node name="Master" type="Node2D" parent="Volume" index="1"]
 
@@ -128,10 +128,10 @@ focus_mode = 2
 [node name="Master" parent="Volume/Master" index="1" instance=ExtResource( 3 )]
 
 margin_left = -352.0
-margin_top = -95.0
+margin_top = -93.0
 margin_right = -70.0
-margin_bottom = 31.0
-text = "Master"
+margin_bottom = 33.0
+text = "master"
 
 [node name="SFX" type="Node2D" parent="Volume" index="2"]
 
@@ -169,10 +169,10 @@ focus_mode = 2
 [node name="SFX" parent="Volume/SFX" index="1" instance=ExtResource( 3 )]
 
 margin_left = -352.0
-margin_top = -73.0
+margin_top = -71.0
 margin_right = 182.0
-margin_bottom = 53.0
-text = "Sound Effects"
+margin_bottom = 55.0
+text = "sound effects"
 
 [node name="Volume" parent="Volume" index="3" instance=ExtResource( 3 )]
 
@@ -180,7 +180,7 @@ margin_left = -384.0
 margin_top = -128.0
 margin_right = -102.0
 margin_bottom = -2.0
-text = "Volume"
+text = "volume"
 
 [node name="BackButton" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -191,15 +191,15 @@ margin_bottom = 95.0
 
 [node name="Label" parent="BackButton" index="0"]
 
-text = "Back"
+text = "back"
 
 [node name="Options" parent="." index="3" instance=ExtResource( 3 )]
 
-margin_left = -85.0
-margin_top = -176.0
-margin_right = 209.0
-margin_bottom = -50.0
-text = "Options"
+margin_left = -104.0
+margin_top = -165.0
+margin_right = 190.0
+margin_bottom = -39.0
+text = "options"
 
 [connection signal="value_changed" from="Volume/Music/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
 
