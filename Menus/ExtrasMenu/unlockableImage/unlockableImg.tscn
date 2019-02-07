@@ -4,7 +4,7 @@
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png" type="Texture" id=5]
+[ext_resource path="res://Menus/ExtrasMenu/Eaglebunny Icon.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -37,7 +37,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="unlockableImg" type="Node2D" index="0"]
+[node name="unlockableImg" type="Node2D"]
 
 position = Vector2( 32, 32 )
 script = ExtResource( 1 )
@@ -113,8 +113,10 @@ scale = Vector2( 0.663696, 0.663696 )
 
 [node name="Sprite2" type="Sprite" parent="Overlay/TrappedNPCs" index="0"]
 
-scale = Vector2( 0.019993, 0.019993 )
+position = Vector2( 3.01343, -3.01343 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Label" parent="Overlay/TrappedNPCs" index="1" instance=ExtResource( 4 )]
 
