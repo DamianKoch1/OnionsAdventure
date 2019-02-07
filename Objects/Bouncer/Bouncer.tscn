@@ -65,7 +65,7 @@ bounceIncrease = 5
 
 [node name="icon" type="Sprite" parent="." index="0"]
 
-position = Vector2( -0.477494, 9.51291 )
+position = Vector2( -0.487558, 9.55599 )
 scale = Vector2( 0.104817, 0.106667 )
 texture = ExtResource( 2 )
 offset = Vector2( 1.1252, -47.392 )
