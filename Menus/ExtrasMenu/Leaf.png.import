@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bunny_net_whole.png-1c4596518a6d073d5d10c10e5096788e.stex"
+path="res://.import/Leaf.png-6e09220733307b26d4f8e854bd9737f9.stex"
 
 [deps]
 
-source_file="res://Menus/ExtrasMenu/bunny_net_whole.png"
-dest_files=[ "res://.import/bunny_net_whole.png-1c4596518a6d073d5d10c10e5096788e.stex" ]
+source_file="res://Menus/ExtrasMenu/Leaf.png"
+dest_files=[ "res://.import/Leaf.png-6e09220733307b26d4f8e854bd9737f9.stex" ]
 
 [params]
 
