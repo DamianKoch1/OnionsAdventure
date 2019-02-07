@@ -3,7 +3,6 @@
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.gd" type="Script" id=1]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=2]
 
-
 [sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 1 )
@@ -97,7 +96,7 @@ margin_bottom = 14.0
 
 margin_left = 68.0
 margin_right = 1193.0
-text = "Yes"
+text = "yes"
 
 [node name="NoButton" parent="." index="3" instance=ExtResource( 2 )]
 
@@ -110,7 +109,7 @@ margin_bottom = 57.0
 
 margin_left = 68.0
 margin_right = 1193.0
-text = "No"
+text = "no"
 
 [connection signal="pressed" from="YesButton" to="." method="_on_YesButton_pressed"]
 
