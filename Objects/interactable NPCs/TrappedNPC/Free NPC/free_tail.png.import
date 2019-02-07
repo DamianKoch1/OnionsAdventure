@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/onion_body_eyes2.png-934b3991cd09f4c411c26cc9aa7eb2f0.stex"
+path="res://.import/free_tail.png-a8f673f6b32c7e1ee23cb53cd05cae4c.stex"
 
 [deps]
 
-source_file="res://Player/OnionSprite/onion_body_eyes2.png"
-dest_files=[ "res://.import/onion_body_eyes2.png-934b3991cd09f4c411c26cc9aa7eb2f0.stex" ]
+source_file="res://Objects/interactable NPCs/TrappedNPC/Free NPC/free_tail.png"
+dest_files=[ "res://.import/free_tail.png-a8f673f6b32c7e1ee23cb53cd05cae4c.stex" ]
 
 [params]
 
