@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Checkpoint/checkpoint.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Goal/Respawn Crystal.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 936.576 )
 
-[node name="Checkpoint" type="Area2D" index="0"]
+[node name="Checkpoint" type="Area2D"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.648227, 0.648227 )
@@ -25,7 +25,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( -0.112274, -0.106319 )
+position = Vector2( -0.112274, 41.5457 )
 scale = Vector2( 0.299415, 0.2835 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
