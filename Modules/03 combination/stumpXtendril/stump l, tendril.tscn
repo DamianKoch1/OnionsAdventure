@@ -1,28 +1,24 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Big_NobranchesA.png" type="Texture" id=3]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Obstacles/Trees/Asset_Stump_Big_NobranchesA.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 7.82994 )
 
-[node name="stump l, tendril" type="Node2D"]
+[node name="stump l, tendril" type="Node2D" index="0"]
 
-[node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
-
-tile_data = PoolIntArray( 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 393211, 4, 0, 393212, 4, 0, 393213, 4, 0, 393214, 4, 0, 393215, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 458747, 4, 0, 458748, 4, 0, 458749, 4, 0, 458750, 4, 0, 458751, 4, 0, 393216, 4, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 524283, 4, 0, 524284, 4, 0, 524285, 4, 0, 524286, 4, 0, 524287, 4, 0, 458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 589819, 4, 0, 589820, 4, 0, 589821, 4, 0, 589822, 4, 0, 589823, 4, 0, 524288, 4, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 655355, 4, 0, 655356, 4, 0, 655357, 4, 0, 655358, 4, 0, 655359, 4, 0, 589824, 4, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 720891, 4, 0, 720892, 4, 0, 720893, 4, 0, 720894, 4, 0, 720895, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 786427, 4, 0, 786428, 4, 0, 786429, 4, 0, 786430, 4, 0, 786431, 4, 0, 720896, 4, 0, 720897, 4, 0, 720898, 4, 0, 720899, 4, 0 )
-
-[node name="stump l 8" type="Node2D" parent="." index="1"]
+[node name="stump l 8" type="Node2D" parent="." index="0"]
 
 position = Vector2( 50, 30 )
 scale = Vector2( 0.0989583, 0.104806 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="Ast 4" parent="stump l 8" index="0" instance=ExtResource( 2 )]
+[node name="Ast 4" parent="stump l 8" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 237.27, 22.3374 )
 _sections_unfolded = [ "Offset", "Transform" ]
@@ -30,7 +26,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="Stump" type="Sprite" parent="stump l 8" index="1"]
 
 scale = Vector2( 2.10025, 2.34684 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -59,8 +55,16 @@ shape = SubResource( 1 )
 build_mode = 0
 polygon = PoolVector2Array( 669.354, 228.125, 1331.84, 256.482, 1324.12, -52.4717, 666.972, 98.79 )
 
-[node name="Ladder" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Ladder" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( -60, -60 )
+
+[node name="new tiles" type="Node2D" parent="." index="2"]
+
+position = Vector2( 0, -20 )
+
+[node name="TileMap" parent="new tiles" index="0" instance=ExtResource( 4 )]
+
+tile_data = PoolIntArray( 327675, 2, 0, 327676, 0, 0, 327677, 0, 0, 327678, 2, 0, 327679, 2, 0, 262144, 0, 0, 262145, 1, 0, 262146, 2, 0, 262147, 1, 0, 393211, 3, 0, 393212, 3, 0, 393213, 5, 0, 393214, 3, 0, 393215, 3, 0, 327680, 5, 0, 327681, 3, 0, 327682, 5, 0, 327683, 3, 0, 458747, 6, 0, 458748, 6, 0, 458749, 6, 0, 458750, 6, 0, 458751, 6, 0, 393216, 6, 0, 393217, 6, 0, 393218, 6, 0, 393219, 6, 0, 524283, 6, 0, 524284, 6, 0, 524285, 6, 0, 524286, 6, 0, 524287, 6, 0, 458752, 6, 0, 458753, 6, 0, 458754, 6, 0, 458755, 6, 0, 589819, 6, 0, 589820, 6, 0, 589821, 6, 0, 589822, 6, 0, 589823, 6, 0, 524288, 6, 0, 524289, 6, 0, 524290, 6, 0, 524291, 6, 0, 655355, 6, 0, 655356, 6, 0, 655357, 6, 0, 655358, 6, 0, 655359, 6, 0, 589824, 6, 0, 589825, 6, 0, 589826, 6, 0, 589827, 6, 0, 720891, 6, 0, 720892, 6, 0, 720893, 6, 0, 720894, 6, 0, 720895, 6, 0, 655360, 6, 0, 655361, 6, 0, 655362, 6, 0, 655363, 6, 0, 786427, 6, 0, 786428, 6, 0, 786429, 6, 0, 786430, 6, 0, 786431, 6, 0, 720896, 6, 0, 720897, 6, 0, 720898, 6, 0, 720899, 6, 0 )
 
 
