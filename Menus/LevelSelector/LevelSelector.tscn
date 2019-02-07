@@ -261,7 +261,7 @@ margin_left = -138.0
 margin_top = -164.0
 margin_right = 435.0
 margin_bottom = -38.0
-text = "level Selection"
+text = "level selection"
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
