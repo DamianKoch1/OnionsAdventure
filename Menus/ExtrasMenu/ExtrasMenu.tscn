@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Menus/ExtrasMenu/ExtrasMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
@@ -6,10 +6,11 @@
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=6]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png" type="Texture" id=7]
+[ext_resource path="res://Menus/ExtrasMenu/Eaglebunny Icon.png" type="Texture" id=7]
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=9]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=10]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Bitchy Enemy Concept.jpg" type="Texture" id=9]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=10]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=11]
 
 [sub_resource type="Animation" id=1]
 
@@ -432,6 +433,7 @@ margin_bottom = -38.0
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 margin_left = -143.0
 margin_top = 123.0
 margin_right = 81.0
@@ -441,7 +443,7 @@ margin_bottom = 159.0
 
 margin_right = 1189.0
 margin_bottom = 273.0
-text = "Back"
+text = "back"
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
@@ -458,6 +460,7 @@ text = "back"
 
 [node name="NextButton" parent="." index="4" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 margin_left = 96.0
 margin_top = -5.0
 margin_right = 320.0
@@ -479,28 +482,23 @@ margin_bottom = 29.0
 
 [node name="Dandelions" type="Node2D" parent="." index="6"]
 
+editor/display_folded = true
 position = Vector2( -125.117, -117.741 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Dandelions" index="0"]
 
-position = Vector2( -18.3922, -29.4368 )
+position = Vector2( -15.3922, -32.4368 )
 scale = Vector2( 0.0853825, 0.0853824 )
 texture = ExtResource( 6 )
 
 [node name="Label" parent="Dandelions" index="1" instance=ExtResource( 3 )]
 
-margin_left = 4.0
-<<<<<<< working copy
-margin_top = -40.0
-margin_right = 342.0
-margin_bottom = 86.0
+margin_left = 8.0
+margin_top = -45.0
+margin_right = 346.0
+margin_bottom = 81.0
 text = "000/150"
-=======
-margin_top = -44.0
-margin_right = 265.0
-margin_bottom = 82.0
-text = "000/200"
->>>>>>> merge rev
 
 [node name="TrappedNPCs" type="Node2D" parent="." index="7"]
 
@@ -508,23 +506,22 @@ position = Vector2( 32.106, -146.164 )
 
 [node name="Sprite2" type="Sprite" parent="TrappedNPCs" index="0"]
 
-scale = Vector2( 0.019993, 0.019993 )
+position = Vector2( -3, -2 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Label" parent="TrappedNPCs" index="1" instance=ExtResource( 3 )]
 
-margin_left = 38.0
-margin_top = -12.0
-margin_right = 376.0
-<<<<<<< working copy
-margin_bottom = 114.0
-text = "000/150"
-=======
+margin_left = 25.0
+margin_top = -16.0
+margin_right = 363.0
 margin_bottom = 110.0
-text = "00/12"
->>>>>>> merge rev
+text = "0/9"
 
 [node name="Page1" type="Node2D" parent="." index="8"]
+
+editor/display_folded = true
 
 [node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 8 )]
 
@@ -570,6 +567,7 @@ NPCsNeeded = 3
 
 [node name="Page2" type="Node2D" parent="." index="9"]
 
+editor/display_folded = true
 visible = false
 
 [node name="unlockableImg" parent="Page2" index="0" instance=ExtResource( 8 )]
@@ -581,12 +579,18 @@ NPCsNeeded = 4
 
 [node name="Sprite" parent="Page2/unlockableImg" index="0"]
 
+visible = false
 scale = Vector2( 0.172973, 0.230769 )
 texture = ExtResource( 9 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg" index="1"]
 
 anims/unlock = SubResource( 1 )
+
+[node name="Overlay" parent="Page2/unlockableImg" index="2"]
+
+visible = false
 
 [node name="unlockableImg2" parent="Page2" index="1" instance=ExtResource( 8 )]
 
@@ -598,7 +602,7 @@ NPCsNeeded = 4
 [node name="Sprite" parent="Page2/unlockableImg2" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg2" index="1"]
 
@@ -614,7 +618,7 @@ NPCsNeeded = 5
 [node name="Sprite" parent="Page2/unlockableImg3" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg3" index="1"]
 
@@ -630,7 +634,7 @@ NPCsNeeded = 5
 [node name="Sprite" parent="Page2/unlockableImg4" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg4" index="1"]
 
@@ -646,7 +650,7 @@ NPCsNeeded = 6
 [node name="Sprite" parent="Page2/unlockableImg5" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg5" index="1"]
 
@@ -662,7 +666,7 @@ NPCsNeeded = 6
 [node name="Sprite" parent="Page2/unlockableImg6" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="AnimationPlayer" parent="Page2/unlockableImg6" index="1"]
 
@@ -670,6 +674,7 @@ anims/unlock = SubResource( 6 )
 
 [node name="Page3" type="Node2D" parent="." index="10"]
 
+editor/display_folded = true
 visible = false
 
 [node name="unlockableImg" parent="Page3" index="0" instance=ExtResource( 8 )]
@@ -682,7 +687,7 @@ NPCsNeeded = 7
 [node name="Sprite" parent="Page3/unlockableImg" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg" index="1"]
 
@@ -698,7 +703,7 @@ NPCsNeeded = 7
 [node name="Sprite" parent="Page3/unlockableImg2" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg2" index="1"]
 
@@ -714,7 +719,7 @@ NPCsNeeded = 8
 [node name="Sprite" parent="Page3/unlockableImg3" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg3" index="1"]
 
@@ -730,7 +735,7 @@ NPCsNeeded = 8
 [node name="Sprite" parent="Page3/unlockableImg4" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg4" index="1"]
 
@@ -746,7 +751,7 @@ NPCsNeeded = 9
 [node name="Sprite" parent="Page3/unlockableImg5" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg5" index="1"]
 
@@ -762,7 +767,7 @@ NPCsNeeded = 9
 [node name="Sprite" parent="Page3/unlockableImg6" index="0"]
 
 scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="AnimationPlayer" parent="Page3/unlockableImg6" index="1"]
 
