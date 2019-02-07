@@ -295,6 +295,7 @@ position = Vector2( 7150.86, -319.071 )
 
 [node name="platform long" parent="." index="17" instance=ExtResource( 23 )]
 
+editor/display_folded = true
 position = Vector2( 7870, -480 )
 
 [node name="Bouncer" parent="platform long" index="1" instance=ExtResource( 24 )]
@@ -375,7 +376,6 @@ position = Vector2( 110.264, -6.61581 )
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 9582.86, -415.071 )
 
 [node name="Bouncer" parent="End2(wall)" index="2" instance=ExtResource( 24 )]
@@ -412,7 +412,7 @@ position = Vector2( 188.421, -233.402 )
 
 [node name="platform short" parent="End2(wall)" index="10" instance=ExtResource( 32 )]
 
-position = Vector2( 146.708, -187.12 )
+position = Vector2( 137.14, -204.929 )
 
 [node name="Background" parent="." index="22" instance=ExtResource( 33 )]
 
