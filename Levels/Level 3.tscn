@@ -69,6 +69,7 @@ position = Vector2( 2.34106, 71.6693 )
 
 [node name="MovingPlat4" parent="." index="1" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 position = Vector2( 480.387, 0.465195 )
 
 [node name="Collectable" parent="MovingPlat4" index="3" instance=ExtResource( 3 )]
@@ -98,6 +99,7 @@ scale = Vector2( 0.406276, 0.406276 )
 
 [node name="movingten1" parent="." index="2" instance=ExtResource( 5 )]
 
+editor/display_folded = true
 position = Vector2( 1249.28, -223.918 )
 
 [node name="Enemy" parent="movingten1" index="2" instance=ExtResource( 6 )]
