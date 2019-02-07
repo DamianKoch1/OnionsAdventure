@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/head.png-2d52e608ab7603a77709afef79260231.stex"
+path="res://.import/free_tail.png-a8f673f6b32c7e1ee23cb53cd05cae4c.stex"
 
 [deps]
 
-source_file="res://Enemies/Enemy/head.png"
-dest_files=[ "res://.import/head.png-2d52e608ab7603a77709afef79260231.stex" ]
+source_file="res://Objects/interactable NPCs/TrappedNPC/Free NPC/free_tail.png"
+dest_files=[ "res://.import/free_tail.png-a8f673f6b32c7e1ee23cb53cd05cae4c.stex" ]
 
 [params]
 
