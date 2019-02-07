@@ -1,9 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=2]
-
-
+[ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=3]
 
 [node name="End2(wall)" type="Node2D"]
 
@@ -14,5 +13,9 @@ tile_data = PoolIntArray( -720883, 0, 0, -720882, 1, 0, -720881, 1, 0, -720880, 
 [node name="Goal" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 250, 80 )
+
+[node name="new tiles" type="Node2D" parent="." index="2"]
+
+[node name="TileMap" parent="new tiles" index="0" instance=ExtResource( 3 )]
 
 
