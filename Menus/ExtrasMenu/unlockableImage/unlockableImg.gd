@@ -18,9 +18,10 @@ func _ready():
 		npcText.text = "x " + str(NPCsNeeded)
 	else:
 		$Overlay/TrappedNPCs.hide()
-	_on_TextureButton_pressed()
+	if SaveGame.dandelions >= dandelionsNeeded && SaveGame.trappedNPCs >= NPCsNeeded:
+		anim.play("unlock")
 
 
 func _on_TextureButton_pressed():
-	if SaveGame.dandelions >= dandelionsNeeded && SaveGame.trappedNPCs >= NPCsNeeded:
-		anim.play("unlock")
+	if anim.is_playing() == false:
+		anim.play("expand")
