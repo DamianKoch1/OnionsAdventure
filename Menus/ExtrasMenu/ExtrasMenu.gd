@@ -12,18 +12,27 @@ func _ready():
 	$Page1.show()
 	$Page2.hide()
 	$Page3.hide()
+	$Page4.hide()
+	$BackButton.hide()
 
 func _on_BackButton_pressed():
+	$NextButton.show()
 	if atPage == 2:
 		$Page1.show()
 		$Page2.hide()
 		atPage = 1
+		$BackButton.hide()
 	elif atPage == 3:
 		$Page2.show()
 		$Page3.hide()
 		atPage = 2
+	elif atPage == 4:
+		$Page3.show()
+		$Page4.hide()
+		atPage = 3
 
 func _on_NextButton_pressed():
+	$BackButton.show()
 	if atPage == 1:
 		$Page1.hide()
 		$Page2.show()
@@ -32,6 +41,11 @@ func _on_NextButton_pressed():
 		$Page2.hide()
 		$Page3.show()
 		atPage = 3
+	elif atPage == 3:
+		$Page3.hide()
+		$Page4.show()
+		atPage = 4
+		$NextButton.hide()
 
 func _on_MainMenuButton_pressed():
 	UISelect.playing = true

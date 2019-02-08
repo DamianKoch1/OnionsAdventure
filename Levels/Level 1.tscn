@@ -495,7 +495,6 @@ rotation = 0.00912847
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 32 )]
 
-editor/display_folded = true
 position = Vector2( 11210.6, -160.362 )
 _sections_unfolded = [ "Transform" ]
 

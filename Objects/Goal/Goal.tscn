@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Goal/goal.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Goal/End Level Crystal v2.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=4]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=5]
@@ -271,6 +271,7 @@ __meta__ = {
 
 [node name="icon" type="Sprite" parent="." index="0"]
 
+position = Vector2( 0, 2.37791 )
 scale = Vector2( 0.166667, 0.166667 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
