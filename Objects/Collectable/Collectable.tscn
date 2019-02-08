@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Collectable/Collectable.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 38.4315, 54.4014 )
 
-[node name="Collectable" type="Node2D" groups=[
+[node name="Collectable" type="Node2D" index="0" groups=[
 "dandelions",
 ]]
 
@@ -32,7 +32,8 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-scale = Vector2( 0.111725, 0.110328 )
+position = Vector2( 0.751022, 0.0666025 )
+scale = Vector2( 0.483857, 0.477807 )
 texture = ExtResource( 2 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

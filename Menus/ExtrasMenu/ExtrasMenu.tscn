@@ -6,7 +6,7 @@
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/ExtrasMenu/Leaf.png" type="Texture" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=7]
+[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=7]
 [ext_resource path="res://Menus/ExtrasMenu/Eaglebunny Icon.png" type="Texture" id=8]
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 1.jpg" type="Texture" id=10]
@@ -390,14 +390,13 @@ margin_bottom = 29.0
 
 [node name="Dandelions" type="Node2D" parent="." index="6"]
 
-editor/display_folded = true
 position = Vector2( -132.117, -111.741 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Dandelions" index="0"]
 
-position = Vector2( -15.3922, -32.4368 )
-scale = Vector2( 0.0853825, 0.0853824 )
+position = Vector2( -14.6412, -36.357 )
+scale = Vector2( 0.415411, 0.415411 )
 texture = ExtResource( 7 )
 
 [node name="Label" parent="Dandelions" index="1" instance=ExtResource( 3 )]
@@ -406,7 +405,7 @@ margin_left = 8.0
 margin_top = -45.0
 margin_right = 346.0
 margin_bottom = 81.0
-text = "000/150"
+text = "000/200"
 
 [node name="TrappedNPCs" type="Node2D" parent="." index="7"]
 
@@ -426,7 +425,7 @@ margin_left = 25.0
 margin_top = -16.0
 margin_right = 363.0
 margin_bottom = 110.0
-text = "0/9"
+text = "0/12"
 
 [node name="Page1" type="Node2D" parent="." index="8"]
 
@@ -561,7 +560,6 @@ anims/unlock = SubResource( 4 )
 
 [node name="Page3" type="Node2D" parent="." index="10"]
 
-editor/display_folded = true
 visible = false
 position = Vector2( -80, 0 )
 
@@ -640,8 +638,8 @@ position = Vector2( -79.5988, 0 )
 
 editor/display_folded = true
 position = Vector2( -101.401, -69 )
-dandelionsNeeded = 110
-NPCsNeeded = 7
+dandelionsNeeded = 160
+NPCsNeeded = 10
 
 [node name="Sprite" parent="Page4/unlockableImg" index="0"]
 
@@ -653,8 +651,8 @@ texture = ExtResource( 22 )
 
 editor/display_folded = true
 position = Vector2( 90.5988, -69 )
-dandelionsNeeded = 120
-NPCsNeeded = 8
+dandelionsNeeded = 170
+NPCsNeeded = 11
 
 [node name="Sprite" parent="Page4/unlockableImg2" index="0"]
 
@@ -666,8 +664,8 @@ texture = ExtResource( 23 )
 
 editor/display_folded = true
 position = Vector2( -101.401, 59 )
-dandelionsNeeded = 140
-NPCsNeeded = 9
+dandelionsNeeded = 190
+NPCsNeeded = 12
 
 [node name="Sprite" parent="Page4/unlockableImg3" index="0"]
 
@@ -676,9 +674,10 @@ texture = ExtResource( 24 )
 
 [node name="unlockableImg4" parent="Page4" index="3" instance=ExtResource( 9 )]
 
+editor/display_folded = true
 position = Vector2( 90.5988, 59 )
-dandelionsNeeded = 150
-NPCsNeeded = 9
+dandelionsNeeded = 200
+NPCsNeeded = 12
 
 [node name="Sprite" parent="Page4/unlockableImg4" index="0"]
 
