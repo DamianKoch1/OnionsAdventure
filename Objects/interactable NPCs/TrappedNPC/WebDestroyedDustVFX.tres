@@ -1,4 +1,4 @@
-[gd_resource type="ParticlesMaterial" load_steps=3 format=2]
+[gd_resource type="ParticlesMaterial" load_steps=5 format=2]
 
 [sub_resource type="Gradient" id=1]
 
@@ -10,6 +10,19 @@ colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 flags = 4
 gradient = SubResource( 1 )
 width = 2048
+
+[sub_resource type="Curve" id=3]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0.27594, 1 ), 0.0, -0.178387, 0, 0, Vector2( 1, 0.00585938 ), -0.984902, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+
+flags = 4
+width = 2048
+curve = SubResource( 3 )
 
 [resource]
 
@@ -40,7 +53,8 @@ damping_random = 0.25
 angle = 0.0
 angle_random = 0.0
 scale = 1.0
-scale_random = 0.0
+scale_random = 0.1
+scale_curve = SubResource( 4 )
 color_ramp = SubResource( 2 )
 hue_variation = 0.0
 hue_variation_random = 0.0

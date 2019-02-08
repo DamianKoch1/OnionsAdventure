@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/PanelButton.tscn" type="PackedScene" id=2]
@@ -12,17 +12,9 @@
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=11]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Alef-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=13]
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=15]
-
-[sub_resource type="DynamicFont" id=1]
-
-size = 130
-use_mipmaps = true
-use_filter = false
-font_data = ExtResource( 13 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="NewGamePanels" type="Node" index="0"]
 
@@ -173,14 +165,14 @@ margin_left = 23.0
 margin_top = 312.0
 margin_right = 31607.0
 margin_bottom = 50939.0
-rect_scale = Vector2( 0.13, 0.13 )
+rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 13 )
 text = "(click anywhere to continue)"
 percent_visible = 1.0
 lines_skipped = 0
