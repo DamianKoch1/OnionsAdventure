@@ -66,12 +66,12 @@ position = Vector2( 2.34106, 71.6693 )
 
 [node name="short start" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -3.76977, -1.17633 )
+position = Vector2( -4.34106, -1.56909 )
 
 [node name="MovingPlat4" parent="." index="1" instance=ExtResource( 2 )]
 
 editor/display_folded = true
-position = Vector2( 476.889, -1.15468 )
+position = Vector2( 476.318, -1.5475 )
 
 [node name="Collectable" parent="MovingPlat4" index="3" instance=ExtResource( 3 )]
 
@@ -100,7 +100,7 @@ scale = Vector2( 0.406276, 0.406276 )
 
 [node name="movingten1" parent="." index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 1245.78, -225.538 )
+position = Vector2( 1245.21, -225.931 )
 
 [node name="Enemy" parent="movingten1" index="2" instance=ExtResource( 6 )]
 
@@ -155,12 +155,12 @@ position = Vector2( 566.287, 81.371 )
 
 [node name="tendril4" parent="." index="3" instance=ExtResource( 8 )]
 
-position = Vector2( 1756.73, -225.589 )
+position = Vector2( 1756.16, -225.981 )
 
 [node name="tendril6" parent="." index="4" instance=ExtResource( 9 )]
 
 editor/display_folded = true
-position = Vector2( 2288, -513.463 )
+position = Vector2( 2287.43, -513.856 )
 
 [node name="Checkpoint" parent="tendril6" index="2" instance=ExtResource( 10 )]
 
@@ -173,7 +173,7 @@ position = Vector2( 0, 104.85 )
 [node name="stump s, mealy, krake" parent="." index="5" instance=ExtResource( 11 )]
 
 editor/display_folded = true
-position = Vector2( 2817.79, -513.526 )
+position = Vector2( 2817.22, -513.919 )
 
 [node name="Collectable2" parent="stump s, mealy, krake" index="5" instance=ExtResource( 3 )]
 
@@ -186,7 +186,7 @@ position = Vector2( -170.91, -51.6563 )
 [node name="moving ten hard part" parent="." index="6" instance=ExtResource( 12 )]
 
 editor/display_folded = true
-position = Vector2( 3617.76, -609.474 )
+position = Vector2( 3617.19, -609.867 )
 
 [node name="Checkpoint" parent="moving ten hard part" index="4" instance=ExtResource( 10 )]
 
@@ -215,7 +215,7 @@ position = Vector2( 575.034, -85.4694 )
 [node name="tree 1" parent="." index="7" instance=ExtResource( 13 )]
 
 editor/display_folded = true
-position = Vector2( 4577.91, -609.396 )
+position = Vector2( 4577.34, -609.789 )
 
 [node name="Collectable" parent="tree 1" index="2" instance=ExtResource( 3 )]
 
@@ -228,7 +228,7 @@ position = Vector2( 59.874, 86.8172 )
 [node name="Jump down" parent="." index="8" instance=ExtResource( 14 )]
 
 editor/display_folded = true
-position = Vector2( 4705.4, -545.568 )
+position = Vector2( 4710.37, -545.791 )
 
 [node name="Collectable" parent="Jump down" index="1" instance=ExtResource( 3 )]
 
@@ -241,7 +241,7 @@ position = Vector2( 245.48, -55.9552 )
 [node name="stump m, thorn 2" parent="." index="9" instance=ExtResource( 15 )]
 
 editor/display_folded = true
-position = Vector2( 5280.33, -545.552 )
+position = Vector2( 5285.3, -545.775 )
 
 [node name="Rope" parent="stump m, thorn 2" index="3" instance=ExtResource( 16 )]
 
@@ -295,7 +295,7 @@ position = Vector2( 316.975, 115.961 )
 [node name="MovingPlat5" parent="." index="10" instance=ExtResource( 19 )]
 
 editor/display_folded = true
-position = Vector2( 5982.07, -449.782 )
+position = Vector2( 5987.07, -449.782 )
 
 [node name="Collectable" parent="MovingPlat5" index="4" instance=ExtResource( 3 )]
 
@@ -312,7 +312,7 @@ position = Vector2( 169.671, 184.111 )
 [node name="platform" parent="." index="11" instance=ExtResource( 20 )]
 
 editor/display_folded = true
-position = Vector2( 5957.04, -551.348 )
+position = Vector2( 5962.04, -551.348 )
 
 [node name="trappedNPC" parent="platform" index="1" instance=ExtResource( 21 )]
 
@@ -336,7 +336,7 @@ rotation = -1.70637
 [node name="stump l, tendril" parent="." index="12" instance=ExtResource( 23 )]
 
 editor/display_folded = true
-position = Vector2( 6447.19, -448.137 )
+position = Vector2( 6466.45, -449.827 )
 
 [node name="Checkpoint" parent="stump l, tendril" index="3" instance=ExtResource( 10 )]
 
@@ -345,7 +345,7 @@ position = Vector2( 243.963, 62.9247 )
 [node name="moving salamander" parent="." index="13" instance=ExtResource( 24 )]
 
 editor/display_folded = true
-position = Vector2( 7879.78, -288.075 )
+position = Vector2( 7899.04, -289.765 )
 
 [node name="Collectable" parent="moving salamander" index="3" instance=ExtResource( 3 )]
 
@@ -358,7 +358,7 @@ position = Vector2( 97.6582, -4.69423 )
 [node name="stump l, stump m, tendril" parent="." index="14" instance=ExtResource( 25 )]
 
 editor/display_folded = true
-position = Vector2( 7053.2, -288.113 )
+position = Vector2( 7072.46, -289.803 )
 
 [node name="Collectable" parent="stump l, stump m, tendril" index="5" instance=ExtResource( 3 )]
 
@@ -371,7 +371,7 @@ position = Vector2( -222.001, 56.0002 )
 [node name="platform long" parent="." index="15" instance=ExtResource( 26 )]
 
 editor/display_folded = true
-position = Vector2( 7178.31, -483.455 )
+position = Vector2( 7197.57, -485.145 )
 
 [node name="Ladder" parent="platform long" index="1" instance=ExtResource( 27 )]
 
@@ -420,8 +420,7 @@ position = Vector2( -151.259, -153.804 )
 
 [node name="stump m, movingten, mealy" parent="." index="16" instance=ExtResource( 29 )]
 
-editor/display_folded = true
-position = Vector2( 8679.27, -287.976 )
+position = Vector2( 8698.81, -289.793 )
 
 [node name="Checkpoint" parent="stump m, movingten, mealy" index="6" instance=ExtResource( 10 )]
 
@@ -438,7 +437,7 @@ position = Vector2( 210.282, -27.9776 )
 [node name="platform short" parent="." index="17" instance=ExtResource( 30 )]
 
 editor/display_folded = true
-position = Vector2( 2806.66, -724.669 )
+position = Vector2( 2826.2, -726.486 )
 
 [node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 21 )]
 
@@ -455,7 +454,7 @@ position = Vector2( 123.337, -54.5004 )
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
 
 editor/display_folded = true
-position = Vector2( 9620.69, -598.702 )
+position = Vector2( 9640.23, -600.519 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
 
@@ -504,7 +503,7 @@ position = Vector2( -252.633, -190.582 )
 [node name="stone 4 flip" parent="." index="19" instance=ExtResource( 34 )]
 
 editor/display_folded = true
-position = Vector2( 9237.65, -160.031 )
+position = Vector2( 9257.19, -161.848 )
 
 [node name="Collectable" parent="stone 4 flip" index="2" instance=ExtResource( 3 )]
 
@@ -528,24 +527,24 @@ position = Vector2( 1065.01, 38.0822 )
 
 [node name="stump l, movingten, stone, muddy" parent="." index="20" instance=ExtResource( 35 )]
 
-position = Vector2( 9935.03, -32.5966 )
+position = Vector2( 9954.57, -34.4132 )
 
 [node name="Jump down2" parent="." index="21" instance=ExtResource( 14 )]
 
-position = Vector2( 9172.69, -95.8428 )
+position = Vector2( 9191.14, -97.9298 )
 
 [node name="Jump down3" parent="." index="22" instance=ExtResource( 14 )]
 
-position = Vector2( 9459.42, -31.6065 )
+position = Vector2( 9477.87, -33.6934 )
 
 [node name="Krakenmushroom2 (up)" parent="." index="23" instance=ExtResource( 36 )]
 
-position = Vector2( 10446, -32.5999 )
+position = Vector2( 10464.3, -34.4045 )
 
 [node name="End3(down)" parent="." index="24" instance=ExtResource( 37 )]
 
 editor/display_folded = true
-position = Vector2( 11142.4, -160.719 )
+position = Vector2( 11160.7, -162.524 )
 
 [node name="Collectable" parent="End3(down)" index="2" instance=ExtResource( 3 )]
 
