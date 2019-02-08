@@ -49,7 +49,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 20.7729, 169.765 )
 }
 
-[node name="Level 4" type="Node2D" index="0"]
+[node name="Level 4" type="Node2D"]
 
 [node name="short start" parent="." index="0" instance=ExtResource( 1 )]
 

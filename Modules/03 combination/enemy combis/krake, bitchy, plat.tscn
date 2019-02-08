@@ -11,7 +11,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -25.1224, 74.9925, 22.1071, -62.8446, 49.9119, 111.749, 21.4038, 16.6829, -81.7473, -72.9071, 13.7477, 3.09527, -68.576, -154.599, 11.3141, 62.0699, -198.496, 120.211, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="krake, bitchy, plat" type="Node2D" index="0"]
+[node name="krake, bitchy, plat" type="Node2D"]
 
 [node name="Enemy" parent="." index="0" instance=ExtResource( 1 )]
 

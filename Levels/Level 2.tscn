@@ -34,7 +34,7 @@
 [ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=33]
 
-[node name="Level 2" type="Node2D" index="0"]
+[node name="Level 2" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -182,7 +182,7 @@ position = Vector2( 3930, -160 )
 
 [node name="Jump down" parent="." index="9" instance=ExtResource( 15 )]
 
-position = Vector2( 3952, -191.433 )
+position = Vector2( 3941.7, -192.03 )
 
 [node name="trappedNPC3" parent="Jump down" index="1" instance=ExtResource( 9 )]
 
@@ -190,8 +190,7 @@ position = Vector2( 1686.81, 88.3816 )
 
 [node name="stump m, bitchy" parent="." index="10" instance=ExtResource( 16 )]
 
-editor/display_folded = true
-position = Vector2( 4560, -191.433 )
+position = Vector2( 4549.7, -192.03 )
 
 [node name="Collectable21" parent="stump m, bitchy" index="4" instance=ExtResource( 4 )]
 
@@ -224,7 +223,7 @@ position = Vector2( -532.297, 22.1393 )
 [node name="stump s, tendril, thorn2" parent="." index="11" instance=ExtResource( 7 )]
 
 editor/display_folded = true
-position = Vector2( 5264, -191.433 )
+position = Vector2( 5253.7, -192.03 )
 
 [node name="Checkpoint2" parent="stump s, tendril, thorn2" index="4" instance=ExtResource( 12 )]
 
@@ -232,12 +231,12 @@ position = Vector2( -307.41, 63.4347 )
 
 [node name="Mealy2" parent="." index="12" instance=ExtResource( 17 )]
 
-position = Vector2( 5616, -191.433 )
+position = Vector2( 5605.7, -192.03 )
 
 [node name="enemy platform 2" parent="." index="13" instance=ExtResource( 18 )]
 
 editor/display_folded = true
-position = Vector2( 5660, -250 )
+position = Vector2( 5649.7, -250.597 )
 
 [node name="Ladder" parent="enemy platform 2" index="3" instance=ExtResource( 19 )]
 
@@ -258,7 +257,7 @@ position = Vector2( 9.0249, -182.305 )
 [node name="stump s, stump l 3" parent="." index="14" instance=ExtResource( 20 )]
 
 editor/display_folded = true
-position = Vector2( 6096, -191.433 )
+position = Vector2( 6085.7, -192.03 )
 
 [node name="Collectable31" parent="stump s, stump l 3" index="4" instance=ExtResource( 4 )]
 
@@ -271,7 +270,7 @@ position = Vector2( 187.049, -17.1111 )
 [node name="Krakenmushroom2 (up)" parent="." index="15" instance=ExtResource( 21 )]
 
 editor/display_folded = true
-position = Vector2( 6638.86, -191.071 )
+position = Vector2( 6629.61, -192.05 )
 
 [node name="Checkpoint3" parent="Krakenmushroom2 (up)" index="2" instance=ExtResource( 12 )]
 
@@ -291,12 +290,12 @@ position = Vector2( 671.17, -223.864 )
 
 [node name="stump m, krake" parent="." index="16" instance=ExtResource( 22 )]
 
-position = Vector2( 7150.86, -319.071 )
+position = Vector2( 7141.61, -320.05 )
 
 [node name="platform long" parent="." index="17" instance=ExtResource( 23 )]
 
 editor/display_folded = true
-position = Vector2( 7870, -480 )
+position = Vector2( 7860.75, -480.979 )
 
 [node name="Bouncer" parent="platform long" index="1" instance=ExtResource( 24 )]
 
@@ -351,7 +350,7 @@ position = Vector2( 160.833, -39.6847 )
 [node name="stump s, stump m 2" parent="." index="18" instance=ExtResource( 27 )]
 
 editor/display_folded = true
-position = Vector2( 7886.86, -319.071 )
+position = Vector2( 7877.61, -320.05 )
 
 [node name="StoneBigA" parent="stump s, stump m 2" index="3" instance=ExtResource( 28 )]
 
@@ -359,12 +358,12 @@ position = Vector2( 134.237, 31.6087 )
 
 [node name="stump l, tendril" parent="." index="19" instance=ExtResource( 29 )]
 
-position = Vector2( 8366.86, -319.071 )
+position = Vector2( 8357.61, -320.05 )
 
 [node name="stump s, thorn, krake" parent="." index="20" instance=ExtResource( 30 )]
 
 editor/display_folded = true
-position = Vector2( 8782.86, -319.071 )
+position = Vector2( 8773.61, -320.05 )
 
 [node name="Collectable44" parent="stump s, thorn, krake" index="4" instance=ExtResource( 4 )]
 
@@ -376,7 +375,8 @@ position = Vector2( 110.264, -6.61581 )
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 31 )]
 
-position = Vector2( 9582.86, -415.071 )
+editor/display_folded = true
+position = Vector2( 9573.61, -416.05 )
 
 [node name="Bouncer" parent="End2(wall)" index="2" instance=ExtResource( 24 )]
 
