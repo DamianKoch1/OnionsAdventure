@@ -49,7 +49,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -174,13 +174,12 @@ scale = Vector2( 0.548139, 0.548139 )
 
 [node name="stump l, moving tendril" parent="." index="7" instance=ExtResource( 16 )]
 
-editor/display_folded = true
 position = Vector2( 3910.62, -128.362 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Checkpoint" parent="stump l, moving tendril" index="3" instance=ExtResource( 11 )]
 
-position = Vector2( 577.568, -92.313 )
+position = Vector2( 575.059, -101.634 )
 
 [node name="Collectable10" parent="stump l, moving tendril" index="4" instance=ExtResource( 5 )]
 
@@ -205,7 +204,6 @@ text = "Jump onto that tendril!"
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 17 )]
 
-editor/display_folded = true
 position = Vector2( 4896.62, -288.362 )
 _sections_unfolded = [ "Transform" ]
 
@@ -289,11 +287,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC2" parent="platform" index="1" instance=ExtResource( 12 )]
 
-position = Vector2( 13.6299, -43.986 )
+position = Vector2( 13.9883, -27.4957 )
 
 [node name="Collectable24" parent="platform" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( -131.136, -45.6124 )
+position = Vector2( -132.212, -28.4051 )
 
 [node name="Collectable26" parent="platform" index="3" instance=ExtResource( 5 )]
 
@@ -301,7 +299,7 @@ position = Vector2( -4544.6, 253.379 )
 
 [node name="Collectable27" parent="platform" index="4" instance=ExtResource( 5 )]
 
-position = Vector2( 149.869, -39.9108 )
+position = Vector2( 150.228, -26.6468 )
 
 [node name="enemyPlatform" parent="." index="13" instance=ExtResource( 23 )]
 
@@ -349,7 +347,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Checkpoint" parent="stone stairs" index="4" instance=ExtResource( 11 )]
 
-position = Vector2( 537.099, 69.5436 )
+position = Vector2( 537.975, 60.4919 )
 
 [node name="Collectable31" parent="stone stairs" index="5" instance=ExtResource( 5 )]
 

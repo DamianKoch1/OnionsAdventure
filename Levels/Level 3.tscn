@@ -60,7 +60,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -18.132, -24.176, 7.85721, 8.46162, -9.04248, 204.421, 0, 0, 9.06602, 25.3848, 4.74219, 248.234, 0, 0, 0, 0, 40.9175, 277.071, -7.25281, 12.6924, 11.4836, -34.4509, 81.4121, 266.796, 0, 0, 0, 0, 80.8081, 193.059, 8.46162, 5.43961, -21.154, -22.3628, 56.0273, 151.96, 0, 0, 0, 0, -21.3359, 147.125, 0, 0, 0, 0, -53.3691, 169.488, 6.64841, -7.25281, -11.4836, 6.04401, -120.458, 194.268, 0, 0, 0, 0, -139.798, 220.257, 19.9452, -19.3408, -47.7477, 9.06602, -152.491, 277.676, 0, 0, -16.3188, -10.2748, -218.975, 262.566, 0, 0, 0, 0, -237.711, 216.027, -12.6924, 19.3408, 4.83521, -20.5496, -223.206, 150.751, 0, 0, 0, 0, -148.26, 138.663, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D"]
+[node name="Level 3" type="Node2D" index="0"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -311,12 +311,11 @@ position = Vector2( 169.671, 184.111 )
 
 [node name="platform" parent="." index="11" instance=ExtResource( 20 )]
 
-editor/display_folded = true
 position = Vector2( 5962.04, -551.348 )
 
 [node name="trappedNPC" parent="platform" index="1" instance=ExtResource( 21 )]
 
-position = Vector2( 8.54639, -35.1416 )
+position = Vector2( 7.91602, -23.1668 )
 
 [node name="Enemy" parent="platform" index="2" instance=ExtResource( 22 )]
 
@@ -436,12 +435,11 @@ position = Vector2( 210.282, -27.9776 )
 
 [node name="platform short" parent="." index="17" instance=ExtResource( 30 )]
 
-editor/display_folded = true
 position = Vector2( 2826.2, -726.486 )
 
 [node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 21 )]
 
-position = Vector2( 5.00562, -39.3468 )
+position = Vector2( 4.54248, -26.3746 )
 
 [node name="Collectable" parent="platform short" index="2" instance=ExtResource( 3 )]
 
@@ -449,11 +447,10 @@ position = Vector2( -155.84, -5.88074 )
 
 [node name="Collectable2" parent="platform short" index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 123.337, -54.5004 )
+position = Vector2( 109.438, -36.8953 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 9640.23, -600.519 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
@@ -462,21 +459,19 @@ position = Vector2( -585.001, 167 )
 
 [node name="trappedNPC" parent="moving salamander 2 platform" index="4" instance=ExtResource( 21 )]
 
-position = Vector2( 315.752, -127.31 )
+position = Vector2( 320.039, -117.021 )
 
 [node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 30 )]
 
-editor/display_folded = true
 position = Vector2( 612.643, -54.0206 )
 
 [node name="FireSalamander" parent="moving salamander 2 platform/platform short" index="1" instance=ExtResource( 32 )]
 
-position = Vector2( 21.043, -26.5474 )
+position = Vector2( 15.041, -9.39984 )
 objToDestroyPath = NodePath("../../platform short2/ThornsUp")
 
 [node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 30 )]
 
-editor/display_folded = true
 position = Vector2( 828.726, -22.0994 )
 
 [node name="Collectable" parent="moving salamander 2 platform/platform short2" index="0" instance=ExtResource( 3 )]
@@ -485,7 +480,7 @@ position = Vector2( 50.3945, -47.2071 )
 
 [node name="ThornsUp" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 33 )]
 
-position = Vector2( -30.3721, -63.3244 )
+position = Vector2( -30.8359, -51.2787 )
 scale = Vector2( 0.806852, 0.806852 )
 
 [node name="Ladder2" parent="moving salamander 2 platform" index="7" instance=ExtResource( 27 )]
@@ -502,7 +497,6 @@ position = Vector2( -252.633, -190.582 )
 
 [node name="stone 4 flip" parent="." index="19" instance=ExtResource( 34 )]
 
-editor/display_folded = true
 position = Vector2( 9257.19, -161.848 )
 
 [node name="Collectable" parent="stone 4 flip" index="2" instance=ExtResource( 3 )]
