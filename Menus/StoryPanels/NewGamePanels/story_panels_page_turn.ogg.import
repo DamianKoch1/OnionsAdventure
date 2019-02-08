@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/story_panels_page_turn.ogg-3c9fe23e308ac33589badc0d90e73ec6.oggstr"
+
+[deps]
+
+source_file="res://Menus/StoryPanels/NewGamePanels/story_panels_page_turn.ogg"
+dest_files=[ "res://.import/story_panels_page_turn.ogg-3c9fe23e308ac33589badc0d90e73ec6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

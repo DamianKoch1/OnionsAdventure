@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Footstep_Dirt.ogg-c4cae888988e8bb1a6f6cdb60514467b.oggstr"
+
+[deps]
+
+source_file="res://Enemies/Enemy/Footstep_Dirt.ogg"
+dest_files=[ "res://.import/Footstep_Dirt.ogg-c4cae888988e8bb1a6f6cdb60514467b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

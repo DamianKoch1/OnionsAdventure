@@ -6,7 +6,7 @@
 [ext_resource path="res://Camera/Animals_Trapped.png" type="Texture" id=4]
 [ext_resource path="res://Camera/Animals_Free.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=7]
+[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=7]
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=9]
 
@@ -131,14 +131,14 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Dandelions" index="1"]
 
-position = Vector2( 29.8839, 25.0416 )
-scale = Vector2( 0.0972979, 0.0972979 )
+position = Vector2( 31.1305, 28.4576 )
+scale = Vector2( 0.477468, 0.477468 )
 texture = ExtResource( 7 )
 
 [node name="BGMPlayer" parent="." index="1" instance=ExtResource( 8 )]
 
 stream = ExtResource( 9 )
-volume_db = -65.74
+volume_db = 0.0
 
 
 [editable path="CanvasLayer/Spiderbuddy"]

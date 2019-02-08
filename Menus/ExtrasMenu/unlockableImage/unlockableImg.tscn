@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=3]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png" type="Texture" id=5]
+[ext_resource path="res://Menus/ExtrasMenu/Eaglebunny Icon.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -93,8 +93,8 @@ scale = Vector2( 0.652807, 0.652807 )
 
 [node name="Sprite" type="Sprite" parent="Overlay/Dandelions" index="0"]
 
-position = Vector2( -18.3922, -29.4368 )
-scale = Vector2( 0.0853825, 0.0853824 )
+position = Vector2( -10.1033, -27.9344 )
+scale = Vector2( 0.396177, 0.396177 )
 texture = ExtResource( 3 )
 
 [node name="Label" parent="Overlay/Dandelions" index="1" instance=ExtResource( 4 )]
@@ -113,8 +113,10 @@ scale = Vector2( 0.663696, 0.663696 )
 
 [node name="Sprite2" type="Sprite" parent="Overlay/TrappedNPCs" index="0"]
 
-scale = Vector2( 0.019993, 0.019993 )
+position = Vector2( 3.01343, -3.01343 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Label" parent="Overlay/TrappedNPCs" index="1" instance=ExtResource( 4 )]
 

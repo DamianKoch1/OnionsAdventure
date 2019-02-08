@@ -140,7 +140,7 @@ tracks/8/keys = {
 "values": [ 0.0163833, -12.5282, 0.0163833 ]
 }
 
-[node name="Moth" type="Node2D" groups=[
+[node name="Moth" type="Node2D" index="0" groups=[
 "Enemies",
 ]]
 
