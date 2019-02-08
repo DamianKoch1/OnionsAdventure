@@ -16,7 +16,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-global="*res://global.gd"
 SaveGame="*res://SaveGame.gd"
 UISelect="*res://Menus/UISelect.tscn"
 MenuMusic="*res://Menus/MenuMusic.tscn"
