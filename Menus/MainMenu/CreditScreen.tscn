@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Menus/MainMenu/CreditScreen.gd" type="Script" id=1]
-[ext_resource path="res://Menus/MainMenu/CreditScreenBackground.png" type="Texture" id=2]
+[ext_resource path="res://Menus/BG.png" type="Texture" id=2]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/MainMenu/Credit Screen Menu BOX.png" type="Texture" id=5]
@@ -29,7 +29,7 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
-[node name="CreditScreen" type="Container"]
+[node name="CreditScreen" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -79,7 +79,7 @@ anchor_bottom = 0.0
 margin_left = -373.0
 margin_top = -197.0
 margin_right = 267.0
-margin_bottom = 172.0
+margin_bottom = 163.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -89,7 +89,7 @@ size_flags_vertical = 1
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 7
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="OptionsOverlay" parent="." index="2" instance=ExtResource( 3 )]
 

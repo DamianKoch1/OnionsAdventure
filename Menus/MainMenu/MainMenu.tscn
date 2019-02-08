@@ -38,7 +38,7 @@ curve = SubResource( 3 )
 render_priority = 0
 trail_divisor = 1
 emission_shape = 2
-emission_box_extents = Vector3( 400, 300, 1 )
+emission_box_extents = Vector3( 300, 200, 1 )
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
@@ -72,9 +72,9 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Angular Velocity", "Color", "Spread" ]
+_sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
