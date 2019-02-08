@@ -4,7 +4,7 @@
 [ext_resource path="res://Menus/MenuButton/hover.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=3]
 
-[node name="ExtrasButton2" type="TextureButton" index="0"]
+[node name="ExtrasButton2" type="TextureButton"]
 
 anchor_left = 0.0
 anchor_top = 0.0
