@@ -1,26 +1,30 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/PanelButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel3.jpg" type="Texture" id=3]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=4]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/mock up intro 1.3.jpg" type="Texture" id=5]
-[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/story_panels_page_turn.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Alef-Regular.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel6.jpg" type="Texture" id=3]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel5.jpg" type="Texture" id=4]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel4.jpg" type="Texture" id=5]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel3.jpg" type="Texture" id=6]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/IntroMockUp.jpg" type="Texture" id=7]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel2.jpg" type="Texture" id=8]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel1.jpg" type="Texture" id=9]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=11]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Alef-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 130
 use_mipmaps = true
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 13 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="NewGamePanels" type="Node"]
+[node name="NewGamePanels" type="Node" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -44,9 +48,12 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="PanelButton3" parent="." index="1" instance=ExtResource( 2 )]
+[node name="PanelButton6" parent="." index="1" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 1 )
+margin_right = 1829.0
+margin_bottom = 1029.0
 disabled = false
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 3 )
@@ -56,9 +63,12 @@ texture_focused = ExtResource( 3 )
 expand = true
 animSpeed = 0.7
 
-[node name="PanelButton2" parent="." index="2" instance=ExtResource( 2 )]
+[node name="PanelButton5" parent="." index="2" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 1 )
+margin_right = 1829.0
+margin_bottom = 1029.0
 disabled = false
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 4 )
@@ -67,8 +77,9 @@ texture_disabled = ExtResource( 4 )
 texture_focused = ExtResource( 4 )
 expand = true
 
-[node name="PanelButton1" parent="." index="3" instance=ExtResource( 2 )]
+[node name="PanelButton4" parent="." index="3" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 1 )
 margin_right = 1829.0
 margin_bottom = 1029.0
@@ -80,12 +91,67 @@ texture_disabled = ExtResource( 5 )
 texture_focused = ExtResource( 5 )
 expand = true
 
-[node name="pageTurn" parent="." index="4" instance=ExtResource( 6 )]
+[node name="PanelButton3" parent="." index="4" instance=ExtResource( 2 )]
 
-stream = ExtResource( 7 )
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 1 )
+margin_right = 1829.0
+margin_bottom = 1029.0
+disabled = false
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
+texture_disabled = ExtResource( 6 )
+texture_focused = ExtResource( 6 )
+expand = true
+
+[node name="PanelButton2b" parent="." index="5" instance=ExtResource( 2 )]
+
+modulate = Color( 1, 1, 1, 1 )
+margin_right = 1829.0
+margin_bottom = 1029.0
+disabled = false
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 7 )
+texture_focused = ExtResource( 7 )
+expand = true
+
+[node name="PanelButton2a" parent="." index="6" instance=ExtResource( 2 )]
+
+modulate = Color( 1, 1, 1, 1 )
+margin_right = 1829.0
+margin_bottom = 1029.0
+disabled = false
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
+expand = true
+animSpeed = 2.0
+
+[node name="PanelButton1" parent="." index="7" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 1 )
+margin_right = 1829.0
+margin_bottom = 1029.0
+disabled = false
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 9 )
+texture_focused = ExtResource( 9 )
+expand = true
+
+[node name="pageTurn" parent="." index="8" instance=ExtResource( 10 )]
+
+stream = ExtResource( 11 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="SkipButton" parent="." index="5" instance=ExtResource( 8 )]
+[node name="SkipButton" parent="." index="9" instance=ExtResource( 12 )]
 
 margin_left = 415.0
 margin_top = 313.0
@@ -97,7 +163,7 @@ margin_bottom = 349.0
 modulate = Color( 1, 1, 1, 1 )
 text = "Skip"
 
-[node name="Label" type="Label" parent="." index="6"]
+[node name="Label" type="Label" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -121,15 +187,18 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 
-[node name="BGMPlayer" parent="." index="7" instance=ExtResource( 10 )]
+[node name="BGMPlayer" parent="." index="11" instance=ExtResource( 14 )]
 
-stream = ExtResource( 11 )
+editor/display_folded = true
+stream = ExtResource( 15 )
 volume_db = 10.0
 
-[connection signal="animFinished" from="PanelButton3" to="." method="_on_PanelButton3_animFinished"]
+[connection signal="animFinished" from="PanelButton6" to="." method="_on_PanelButton6_animFinished"]
 
 [connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
 
 
+[editable path="PanelButton3"]
+[editable path="PanelButton1"]
 [editable path="SkipButton"]
 [editable path="BGMPlayer"]
