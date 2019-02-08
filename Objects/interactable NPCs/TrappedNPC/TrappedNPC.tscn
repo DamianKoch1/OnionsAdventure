@@ -447,7 +447,7 @@ tracks/4/keys = {
 "values": [ 0.0, -14.3794, -0.134704, 13.888, 0.0, -14.3794, 0.0 ]
 }
 
-[node name="trappedNPC" type="Node2D" index="0" groups=[
+[node name="trappedNPC" type="Node2D" groups=[
 "trappedNPCs",
 ]]
 
@@ -597,6 +597,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="randomPitch" parent="." index="3" instance=ExtResource( 16 )]
 
 stream = ExtResource( 17 )
+volume_db = 10.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 

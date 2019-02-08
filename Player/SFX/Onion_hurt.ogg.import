@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Onion_hurt.ogg-6161cb4c3f4f0e7eccea4f12503bf7cd.oggstr"
+
+[deps]
+
+source_file="res://Player/SFX/Onion_hurt.ogg"
+dest_files=[ "res://.import/Onion_hurt.ogg-6161cb4c3f4f0e7eccea4f12503bf7cd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
