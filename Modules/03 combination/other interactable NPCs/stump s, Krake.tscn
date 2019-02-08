@@ -4,7 +4,7 @@
 [ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=3]
 
-[node name="stump s, Krake" type="Node2D" index="0"]
+[node name="stump s, Krake" type="Node2D"]
 
 [node name="stump s 1" parent="." index="0" instance=ExtResource( 1 )]
 
