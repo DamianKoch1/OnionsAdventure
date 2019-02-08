@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Spawnpoint/Respawn Crystal.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Spawnpoint/spawnpoint.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
 [ext_resource path="res://Objects/Spawnpoint/crystal_respawn.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Objects/Spawnpoint/crystal_activation.wav" type="AudioStream" id=5]
@@ -121,7 +121,7 @@ _sections_unfolded = [ "Animation", "Damping", "Emission Shape", "Gravity", "Hue
 custom_solver_bias = 0.0
 extents = Vector2( 117.754, 134.469 )
 
-[node name="Spawnpoint" type="Node2D" groups=[
+[node name="Spawnpoint" type="Node2D" index="0" groups=[
 "Spawnpoint",
 ]]
 
@@ -235,6 +235,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
+visible = false
 shape = SubResource( 7 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

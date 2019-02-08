@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/collectable placeholder.png-08a80add2746a7de0fffd1a82eb32683.stex"
+path="res://.import/Panel4.jpg-58d3ee994fa75c620fa6b4e37d47816c.stex"
 
 [deps]
 
-source_file="res://Objects/Collectable/collectable placeholder.png"
-dest_files=[ "res://.import/collectable placeholder.png-08a80add2746a7de0fffd1a82eb32683.stex" ]
+source_file="res://Menus/StoryPanels/NewGamePanels/Panel4.jpg"
+dest_files=[ "res://.import/Panel4.jpg-58d3ee994fa75c620fa6b4e37d47816c.stex" ]
 
 [params]
 

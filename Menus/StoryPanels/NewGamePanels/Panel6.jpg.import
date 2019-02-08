@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Respawn Crystal.png-7284662012a9f2046efc5ad6689f2f25.stex"
+path="res://.import/Panel6.jpg-e06e7554b1859aa1054bb4205445d6a0.stex"
 
 [deps]
 
-source_file="res://Objects/Checkpoint/Respawn Crystal.png"
-dest_files=[ "res://.import/Respawn Crystal.png-7284662012a9f2046efc5ad6689f2f25.stex" ]
+source_file="res://Menus/StoryPanels/NewGamePanels/Panel6.jpg"
+dest_files=[ "res://.import/Panel6.jpg-e06e7554b1859aa1054bb4205445d6a0.stex" ]
 
 [params]
 
