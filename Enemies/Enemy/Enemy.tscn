@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Enemies/Enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemies/footstep.wav" type="AudioStream" id=3]
+[ext_resource path="res://Enemies/Enemy/Footstep_Dirt.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Enemies/Enemy_flying.ogg" type="AudioStream" id=4]
 
 [sub_resource type="Curve2D" id=1]
@@ -32,9 +32,7 @@ load_path = ""
 ]]
 
 script = ExtResource( 1 )
-mothsound = false
 movespeed = 2
-pathLooped = true
 
 [node name="EnemyPath" type="Path2D" parent="." index="0"]
 
@@ -102,6 +100,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="muddySound" parent="EnemyPath/Enemy" index="3" instance=ExtResource( 2 )]
 
 stream = ExtResource( 3 )
+volume_db = 10.0
 
 [node name="mothSound" type="AudioStreamPlayer2D" parent="EnemyPath/Enemy" index="4"]
 

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/crystal_respawn.ogg-20e5b891098878bb41514a960bbb94f4
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

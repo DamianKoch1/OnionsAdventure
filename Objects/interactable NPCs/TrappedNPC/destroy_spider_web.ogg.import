@@ -11,5 +11,5 @@ dest_files=[ "res://.import/destroy_spider_web.ogg-e68d9ff5097efdcf573021b646515
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
