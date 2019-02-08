@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Goal/Goal.tscn" type="PackedScene" id=2]
@@ -19,15 +19,14 @@
 [ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Assets/Background/old/ParallaxBackground.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/SpiderbuddyTrigger.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/SpiderbuddyTrigger.tscn" type="PackedScene" id=25]
 
-[node name="Prototype 0" type="Node2D" index="0"]
+[node name="Prototype 0" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -71,33 +70,33 @@ enabled = false
 
 [node name="OnionBody" parent="Onion/Onion/Colisionposition/Höhenposition" index="0"]
 
-scale = Vector2( 0.5, 0.431974 )
+scale = Vector2( 0.5, 0.443417 )
 
 [node name="OnionHair" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
-rotation = 0.8103
+rotation = 0.752936
 
 [node name="onion_eyes" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="1"]
 
-scale = Vector2( 1, 0.160743 )
+scale = Vector2( 1, 0.836372 )
 
 [node name="OnionEarL" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
-rotation = 0.223007
+rotation = 0.261853
 
 [node name="OnionTail" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
-rotation = -0.309236
+rotation = -0.202642
 
 [node name="OnionEarR" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
-rotation = -0.605541
+rotation = -0.584181
 
 [node name="AnimationTreePlayer1" parent="Onion/Onion" index="1"]
 
 data = {
 "active": true,
-"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1 ],
+"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "id": "scale",
@@ -115,27 +114,27 @@ data = {
 "position": Vector2( 688, 102 ),
 "type": "output"
 }, {
-"filter": [  ],
-"from": "Onion_JumpUp",
-"id": "jumpup",
-"position": Vector2( 77, 356 ),
-"type": "animation"
-}, {
 "autorestart": false,
-"autorestart_delay": 1.0,
+"autorestart_delay": 0.0,
 "autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.1,
+"fade_in": 0.1,
+"fade_out": 0.0,
 "filter": [  ],
-"id": "fallOneshot",
+"id": "jumpOneshot",
 "mix": false,
-"position": Vector2( 541, 92 ),
+"position": Vector2( 362, 94 ),
 "type": "oneshot"
 }, {
 "filter": [  ],
 "from": "Onion_JumpDown",
 "id": "jumpdown",
 "position": Vector2( 408, 268 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Onion_JumpUp",
+"id": "jumpup",
+"position": Vector2( 77, 356 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -155,14 +154,14 @@ data = {
 "xfade": 0.3
 }, {
 "autorestart": false,
-"autorestart_delay": 0.0,
+"autorestart_delay": 1.0,
 "autorestart_random_delay": 0.0,
-"fade_in": 0.1,
-"fade_out": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.1,
 "filter": [  ],
-"id": "jumpOneshot",
+"id": "fallOneshot",
 "mix": false,
-"position": Vector2( 362, 94 ),
+"position": Vector2( 541, 92 ),
 "type": "oneshot"
 } ]
 }
@@ -311,49 +310,45 @@ objToDestroyPath = NodePath("../Enemy3")
 
 position = Vector2( 1175.64, 12.7948 )
 
-[node name="ParallaxBackground" parent="." index="21" instance=ExtResource( 20 )]
-
-editor/display_folded = true
-
-[node name="TwistedTree" parent="." index="22" instance=ExtResource( 21 )]
+[node name="TwistedTree" parent="." index="21" instance=ExtResource( 20 )]
 
 position = Vector2( 240, -80 )
 z_index = -4
 
-[node name="stump m 7" parent="." index="23" instance=ExtResource( 22 )]
+[node name="stump m 7" parent="." index="22" instance=ExtResource( 21 )]
 
 position = Vector2( 790, -110 )
 
-[node name="Enemy" parent="." index="24" instance=ExtResource( 23 )]
+[node name="Enemy" parent="." index="23" instance=ExtResource( 22 )]
 
 position = Vector2( -587.197, 198.662 )
 
-[node name="Enemy2" parent="." index="25" instance=ExtResource( 23 )]
+[node name="Enemy2" parent="." index="24" instance=ExtResource( 22 )]
 
 position = Vector2( 2920.16, -70.3229 )
 
-[node name="Enemy5" parent="." index="26" instance=ExtResource( 23 )]
+[node name="Enemy5" parent="." index="25" instance=ExtResource( 22 )]
 
 position = Vector2( 1432.99, -139.393 )
 
-[node name="Enemy3" parent="." index="27" instance=ExtResource( 24 )]
+[node name="Enemy3" parent="." index="26" instance=ExtResource( 23 )]
 
 position = Vector2( 1626.45, -24.4935 )
 
-[node name="Enemy4" parent="." index="28" instance=ExtResource( 24 )]
+[node name="Enemy4" parent="." index="27" instance=ExtResource( 23 )]
 
 position = Vector2( 2888.57, 15.4914 )
 
-[node name="Collectable" parent="." index="29" instance=ExtResource( 25 )]
+[node name="Collectable" parent="." index="28" instance=ExtResource( 24 )]
 
 position = Vector2( 35.0641, 208.437 )
 
-[node name="SpiderbuddyTrigger" parent="." index="30" instance=ExtResource( 26 )]
+[node name="SpiderbuddyTrigger" parent="." index="29" instance=ExtResource( 25 )]
 
 position = Vector2( 989.795, -58.0164 )
 text = "test"
 
-[node name="TileMap2" parent="." index="31" instance=ExtResource( 9 )]
+[node name="TileMap2" parent="." index="30" instance=ExtResource( 9 )]
 
 tile_data = PoolIntArray( 23, 536870921, 0, 24, 536870912, 0, 25, 536870912, 0, 26, 536870912, 0, 27, 536870912, 0, 28, 536870912, 0, 65559, 536870922, 0, 65560, 536870916, 0, 262168, 536870919, 0, 327704, 536870919, 0, 393240, 536870919, 0, 458776, 536870919, 0, 589820, 536870921, 0, 589821, 0, 0, 589822, 2, 0, 589823, 2, 0, 524288, 2, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 0, 0, 524294, 0, 0, 524295, 2, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 1, 0, 524300, 1, 0, 524301, 2, 0, 524302, 2, 0, 524303, 0, 0, 524304, 0, 0, 524305, 1, 0, 524306, 2, 0, 524307, 2, 0, 524308, 2, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 536870919, 0, 655356, 536870922, 0, 655357, 3, 0, 655358, 4, 0, 655359, 4, 0, 589824, 5, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 5, 0, 589833, 5, 0, 589834, 4, 0, 589835, 5, 0, 589836, 5, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 4, 0, 589841, 4, 0, 589842, 5, 0, 589843, 5, 0, 589844, 3, 0, 589845, 3, 0, 589846, 3, 0, 589847, 3, 0, 589848, 536870919, 0, 720892, 536870927, 0, 720893, 6, 0, 720894, 6, 0, 720895, 6, 0, 655360, 6, 0, 655361, 6, 0, 655362, 6, 0, 655363, 6, 0, 655364, 6, 0, 655365, 6, 0, 655366, 6, 0, 655367, 6, 0, 655368, 6, 0, 655369, 6, 0, 655370, 6, 0, 655371, 6, 0, 655372, 6, 0, 655373, 6, 0, 655374, 6, 0, 655375, 6, 0, 655376, 6, 0, 655377, 6, 0, 655378, 6, 0, 655379, 6, 0, 655380, 6, 0, 655381, 6, 0, 655382, 6, 0, 655383, 6, 0, 655384, 536870919, 0, 786428, 1610612751, 0, 786429, 6, 0, 786430, 6, 0, 786431, 6, 0, 720896, 6, 0, 720897, 6, 0, 720898, 6, 0, 720899, 6, 0, 720900, 6, 0, 720901, 6, 0, 720902, 6, 0, 720903, 6, 0, 720904, 6, 0, 720905, 6, 0, 720906, 6, 0, 720907, 6, 0, 720908, 6, 0, 720909, 6, 0, 720910, 6, 0, 720911, 6, 0, 720912, 6, 0, 720913, 6, 0, 720914, 6, 0, 720915, 6, 0, 720916, 6, 0, 720917, 6, 0, 720918, 6, 0, 720919, 6, 0, 720920, 536870919, 0, 851964, 536870927, 0, 851965, 6, 0, 851966, 6, 0, 851967, 6, 0, 786432, 6, 0, 786433, 6, 0, 786434, 6, 0, 786435, 6, 0, 786436, 6, 0, 786437, 6, 0, 786438, 6, 0, 786439, 6, 0, 786440, 6, 0, 786441, 6, 0, 786442, 6, 0, 786443, 6, 0, 786444, 6, 0, 786445, 6, 0, 786446, 6, 0, 786447, 6, 0, 786448, 6, 0, 786449, 6, 0, 786450, 6, 0, 786451, 6, 0, 786452, 6, 0, 786453, 6, 0, 786454, 6, 0, 786455, 6, 0, 786456, 536870919, 0 )
 
@@ -362,4 +357,3 @@ tile_data = PoolIntArray( 23, 536870921, 0, 24, 536870912, 0, 25, 536870912, 0, 
 [editable path="EarthStone2"]
 [editable path="EarthStone3"]
 [editable path="EarthStone3/TileMap/FireStone"]
-[editable path="ParallaxBackground"]
