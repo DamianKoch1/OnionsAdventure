@@ -8,9 +8,6 @@ func _ready():
 	MenuMusic.fadeOut(2)
 	$BGMPlayer.fadeIn(2)
 
-func _process(delta):
-	print($BGMPlayer.volume_db)
-
 func loadLv1():
 	get_tree().change_scene_to(lv1)
 
@@ -20,6 +17,8 @@ func _on_SkipButton_pressed():
 		UISelect.playing = true
 		$BGMPlayer.fadeOut()
 		loadLv1()
-	
-func _on_PanelButton3_animFinished():
+
+
+
+func _on_PanelButton6_animFinished():
 	loadLv1()
