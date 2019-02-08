@@ -4,7 +4,7 @@
 [ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=3]
 
-[node name="stump m, thorn 3" type="Node2D" index="0"]
+[node name="stump m, thorn 3" type="Node2D"]
 
 [node name="stump m 7" parent="." index="0" instance=ExtResource( 1 )]
 

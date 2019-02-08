@@ -8,7 +8,7 @@
 [ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=7]
 
-[node name="movingPlat4" type="Node2D" index="0"]
+[node name="movingPlat4" type="Node2D"]
 
 [node name="Ladder" parent="." index="0" instance=ExtResource( 1 )]
 

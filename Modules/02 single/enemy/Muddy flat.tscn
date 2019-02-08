@@ -10,7 +10,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 42.0712, 170.339 )
 }
 
-[node name="Muddy flat" type="Node2D" index="0"]
+[node name="Muddy flat" type="Node2D"]
 
 [node name="Muddy" parent="." index="0" instance=ExtResource( 1 )]
 
