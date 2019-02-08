@@ -34,7 +34,7 @@
 [ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=33]
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 2" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -148,12 +148,11 @@ position = Vector2( 272.666, -68.9957 )
 
 [node name="stump s, stump l 2" parent="." index="6" instance=ExtResource( 11 )]
 
-editor/display_folded = true
 position = Vector2( 3040.93, 96 )
 
 [node name="Checkpoint" parent="stump s, stump l 2" index="3" instance=ExtResource( 12 )]
 
-position = Vector2( 354.133, 63.341 )
+position = Vector2( 354.491, 60.8316 )
 
 [node name="Collectable18" parent="stump s, stump l 2" index="4" instance=ExtResource( 4 )]
 
@@ -222,12 +221,11 @@ position = Vector2( -532.297, 22.1393 )
 
 [node name="stump s, tendril, thorn2" parent="." index="11" instance=ExtResource( 7 )]
 
-editor/display_folded = true
 position = Vector2( 5253.7, -192.03 )
 
 [node name="Checkpoint2" parent="stump s, tendril, thorn2" index="4" instance=ExtResource( 12 )]
 
-position = Vector2( -307.41, 63.4347 )
+position = Vector2( -296.007, 62.6202 )
 
 [node name="Mealy2" parent="." index="12" instance=ExtResource( 17 )]
 

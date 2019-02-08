@@ -90,7 +90,6 @@ position = Vector2( 159.947, -34.0427 )
 
 [node name="movingplatdown" parent="." index="4" instance=ExtResource( 7 )]
 
-editor/display_folded = true
 position = Vector2( 1952, 384 )
 
 [node name="Ladder" parent="movingplatdown" index="12" instance=ExtResource( 8 )]

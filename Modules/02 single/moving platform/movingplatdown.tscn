@@ -10,7 +10,6 @@
 
 [node name="Movingplatform" parent="." index="0" instance=ExtResource( 1 )]
 
-editor/display_folded = true
 position = Vector2( 68.7533, 159.606 )
 
 [node name="State2" parent="Movingplatform" index="1"]
@@ -19,7 +18,7 @@ position = Vector2( 0.113937, 145.974 )
 
 [node name="ThornsDown" parent="Movingplatform" index="3" instance=ExtResource( 2 )]
 
-position = Vector2( 1.40803, 124.68 )
+position = Vector2( 1.40803, 102.092 )
 scale = Vector2( 0.67647, 0.67647 )
 
 [node name="Movingplatform2" parent="." index="1" instance=ExtResource( 1 )]
