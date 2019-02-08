@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CreditScreenBackground.png-85a485ce3e549031c58ee5ddf60f9df3.stex"
+path="res://.import/popup_1024.png-166a84651ca0043db20aa66c25e82b05.stex"
 
 [deps]
 
-source_file="res://Menus/MainMenu/CreditScreenBackground.png"
-dest_files=[ "res://.import/CreditScreenBackground.png-85a485ce3e549031c58ee5ddf60f9df3.stex" ]
+source_file="res://Menus/YesNoOverlay/popup_1024.png"
+dest_files=[ "res://.import/popup_1024.png-166a84651ca0043db20aa66c25e82b05.stex" ]
 
 [params]
 

@@ -1,14 +1,28 @@
-[gd_scene load_steps=8 format=2]
-
-[ext_resource path="res://Menus/MainMenu/CreditScreen.gd" type="Script" id=1]
-[ext_resource path="res://Menus/MainMenu/CreditScreenBackground.png" type="Texture" id=2]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 <<<<<<< working copy
-[ext_resource path="res://Menus/MainMenu/Credit Screen Menu BOX.png" type="Texture" id=5]
+[gd_scene load_steps=20 format=2]
 =======
+[gd_scene load_steps=6 format=2]
 >>>>>>> merge rev
 
+[ext_resource path="res://Menus/MainMenu/CreditScreen.gd" type="Script" id=1]
+[ext_resource path="res://Menus/BG.png" type="Texture" id=2]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menus/MainMenu/Credit Screen Menu BOX.png" type="Texture" id=5]
+[ext_resource path="res://Menus/MainMenu/Nico_Onion.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Menus/MainMenu/Franzi_Onions.png" type="Texture" id=8]
+[ext_resource path="res://Menus/MainMenu/Sebastian_Onions.png" type="Texture" id=9]
+[ext_resource path="res://Menus/MainMenu/Kadda_Onions.png" type="Texture" id=10]
+[ext_resource path="res://Menus/MainMenu/Lisa_Onions.png" type="Texture" id=11]
+[ext_resource path="res://Menus/MainMenu/Lara_Onion.png" type="Texture" id=12]
+[ext_resource path="res://Menus/MainMenu/Nastja_Onion.png" type="Texture" id=13]
+[ext_resource path="res://Menus/MainMenu/Nica_Onions.png" type="Texture" id=14]
+[ext_resource path="res://Menus/MainMenu/Philip_Onion.png" type="Texture" id=15]
+[ext_resource path="res://Menus/MainMenu/Damian_Onions.png" type="Texture" id=16]
+[ext_resource path="res://Menus/MainMenu/thOSN4KJXC.jpg" type="Texture" id=17]
+
+<<<<<<< working copy
 [sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 1 )
@@ -20,7 +34,10 @@ flags = 4
 gradient = SubResource( 1 )
 width = 2048
 
+[node name="CreditScreen" type="Container"]
+=======
 [node name="CreditScreen" type="Container" index="0"]
+>>>>>>> merge rev
 
 pause_mode = 2
 anchor_left = 0.0
@@ -40,28 +57,7 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
 
-[node name="Background" type="TextureRect" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -373.0
-margin_top = -197.0
-margin_right = 303.0
-margin_bottom = 193.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = SubResource( 2 )
-expand = true
-stretch_mode = 7
-_sections_unfolded = [ "Rect", "Visibility" ]
-
-[node name="Background2" type="TextureRect" parent="." index="1"]
+[node name="Background2" type="TextureRect" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -70,7 +66,7 @@ anchor_bottom = 0.0
 margin_left = -373.0
 margin_top = -197.0
 margin_right = 267.0
-margin_bottom = 172.0
+margin_bottom = 163.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -80,9 +76,9 @@ size_flags_vertical = 1
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 7
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
-[node name="OptionsOverlay" parent="." index="2" instance=ExtResource( 3 )]
+[node name="OptionsOverlay" parent="." index="1" instance=ExtResource( 3 )]
 
 visible = false
 margin_left = -21.0
@@ -90,8 +86,9 @@ margin_top = -5.0
 margin_right = 11.0
 margin_bottom = 24.0
 
-[node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
+[node name="BackButton" parent="." index="2" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 margin_left = -135.0
 margin_top = 97.0
 margin_right = 89.0
@@ -99,15 +96,738 @@ margin_bottom = 133.0
 
 [node name="Label" parent="BackButton" index="0"]
 
-text = "Back"
+text = "back"
 
-[node name="Credits Boxes" type="Node2D" parent="." index="4"]
+[node name="Credits Boxes" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+visible = false
 
 [node name="Credit Screen Menu BOX" type="Sprite" parent="Credits Boxes" index="0"]
 
 position = Vector2( -35.2457, -9.52373 )
 scale = Vector2( 0.362291, 0.362291 )
 texture = ExtResource( 5 )
+
+[node name="Nico's Onion" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( -10, -13 )
+
+[node name="Sprite" type="Sprite" parent="Nico's Onion" index="0"]
+
+position = Vector2( -271.098, -132.159 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Nico's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -298.0
+margin_top = -89.0
+margin_right = 68.0
+margin_bottom = 19.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Nico Drews"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Nico's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -303.0
+margin_top = -76.0
+margin_right = 360.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Producer/Marketing"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Franzi's Onion" type="Node2D" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 99.6931, -14 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="Franzi's Onion" index="0"]
+
+position = Vector2( -267.479, -118.251 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Franzi's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -309.0
+margin_top = -88.0
+margin_right = 248.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Franziska Richter"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Franzi's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -292.0
+margin_top = -75.0
+margin_right = 371.0
+margin_bottom = 33.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Level Design"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Sebastian's Onion" type="Node2D" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 212, -13 )
+
+[node name="Sprite" type="Sprite" parent="Sebastian's Onion" index="0"]
+
+position = Vector2( -266.034, -126.965 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Sebastian's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -310.0
+margin_top = -89.0
+margin_right = 234.0
+margin_bottom = 19.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Sebastian Scopel"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Sebastian's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -303.0
+margin_top = -76.0
+margin_right = 360.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "2D Environment/UI"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Katharina's Onion" type="Node2D" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 212, -13 )
+
+[node name="Sprite" type="Sprite" parent="Katharina's Onion" index="0"]
+
+position = Vector2( -154.207, -119.945 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Katharina's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -194.0
+margin_top = -89.0
+margin_right = 350.0
+margin_bottom = 19.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Katharina Batzel"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Katharina's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -173.0
+margin_top = -76.0
+margin_right = 490.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Lead Artist"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Lisa's Onion" type="Node2D" parent="." index="9"]
+
+position = Vector2( 324, -13 )
+
+[node name="Sprite" type="Sprite" parent="Lisa's Onion" index="0"]
+
+position = Vector2( -154.593, -119.431 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Lisa's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -183.0
+margin_top = -89.0
+margin_right = 361.0
+margin_bottom = 19.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Lisa Wegner"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Lisa's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -167.0
+margin_top = -76.0
+margin_right = 496.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "2d Artist"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Lara's Onion" type="Node2D" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 324, 99 )
+
+[node name="Sprite" type="Sprite" parent="Lara's Onion" index="0"]
+
+position = Vector2( -154.593, -119.431 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Lara's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -186.0
+margin_top = -85.0
+margin_right = 358.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Lara Serzisko"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Lara's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -186.0
+margin_top = -72.0
+margin_right = 477.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Game/Sound Design"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Anastasia's Onion" type="Node2D" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 212, 99 )
+
+[node name="Sprite" type="Sprite" parent="Anastasia's Onion" index="0"]
+
+position = Vector2( -154.486, -116.907 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Anastasia's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -191.0
+margin_top = -85.0
+margin_right = 353.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Anastasia Haar"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Anastasia's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -185.0
+margin_top = -72.0
+margin_right = 478.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "2D Art/Animation"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Nicole's Onion" type="Node2D" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 98, 99 )
+
+[node name="Sprite" type="Sprite" parent="Nicole's Onion" index="0"]
+
+position = Vector2( -154.96, -115.329 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Nicole's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -185.0
+margin_top = -85.0
+margin_right = 359.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Nicole Arzer"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Nicole's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -170.0
+margin_top = -72.0
+margin_right = 493.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "2D Artist"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Philip's Onion" type="Node2D" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( -12, 99 )
+
+[node name="Sprite" type="Sprite" parent="Philip's Onion" index="0"]
+
+position = Vector2( -156.538, -126.118 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Philip's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -186.0
+margin_top = -85.0
+margin_right = 358.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Philip Pasche"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Philip's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -175.0
+margin_top = -72.0
+margin_right = 488.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Game Design"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Damian's Onion" type="Node2D" parent="." index="14"]
+
+editor/display_folded = true
+position = Vector2( -126, 99 )
+
+[node name="Sprite" type="Sprite" parent="Damian's Onion" index="0"]
+
+position = Vector2( -154.538, -126.118 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Damian's Onion" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -185.0
+margin_top = -85.0
+margin_right = 359.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Damian Koch"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Damian's Onion" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -173.0
+margin_top = -72.0
+margin_right = 490.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Programmer"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Dwight Neely" type="Node2D" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( -67, 209 )
+
+[node name="Sprite" type="Sprite" parent="Dwight Neely" index="0"]
+
+position = Vector2( -151.538, -122.118 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Dwight Neely" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -205.0
+margin_top = -81.0
+margin_right = 521.0
+margin_bottom = 27.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Dwight Neely (Dotaku)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Dwight Neely" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -193.0
+margin_top = -68.0
+margin_right = 682.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Voice Actor - Spider Buddy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Makayla Dee" type="Node2D" parent="." index="16"]
+
+editor/display_folded = true
+position = Vector2( 270, 209 )
+
+[node name="Sprite" type="Sprite" parent="Makayla Dee" index="0"]
+
+position = Vector2( -152.538, -121.118 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Makayla Dee" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -183.0
+margin_top = -81.0
+margin_right = 361.0
+margin_bottom = 27.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Makayla Dee"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Makayla Dee" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -184.0
+margin_top = -68.0
+margin_right = 479.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Voice Actor - Onion"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
