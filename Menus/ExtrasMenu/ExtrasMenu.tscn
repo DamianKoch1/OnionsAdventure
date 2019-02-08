@@ -274,7 +274,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Gallery" type="Container"]
+[node name="Gallery" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -325,11 +325,10 @@ text = "gallery"
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
-margin_left = -129.0
+margin_left = -149.0
 margin_top = 123.0
-margin_right = 95.0
-margin_bottom = 159.0
+margin_right = 43.0
+margin_bottom = 155.0
 
 [node name="Label" parent="MainMenuButton" index="0"]
 

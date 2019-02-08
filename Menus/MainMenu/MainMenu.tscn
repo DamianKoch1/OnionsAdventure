@@ -138,72 +138,61 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="PlayButton" parent="." index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = -310.0
 margin_top = 13.0
-margin_right = -86.0
-margin_bottom = 49.0
+margin_right = -118.0
+margin_bottom = 45.0
 
 [node name="Label" parent="PlayButton" index="0"]
 
-margin_left = 82.0
-margin_right = 554.0
 text = "play"
 
 [node name="ExtrasButton" parent="." index="3" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = -310.0
 margin_top = 45.0
-margin_right = -86.0
-margin_bottom = 81.0
+margin_right = -118.0
+margin_bottom = 77.0
 
 [node name="Label" parent="ExtrasButton" index="0"]
 
-margin_left = 82.0
-margin_right = 979.0
+margin_right = 961.0
 text = "gallery"
 
 [node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = -310.0
 margin_top = 77.0
-margin_right = -86.0
-margin_bottom = 113.0
+margin_right = -118.0
+margin_bottom = 109.0
 
 [node name="Label" parent="OptionsButton" index="0"]
 
-margin_left = 82.0
-margin_right = 551.0
+margin_right = 533.0
 text = "options"
 
 [node name="CreditsButton" parent="." index="5" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = -310.0
 margin_top = 109.0
-margin_right = -86.0
-margin_bottom = 145.0
+margin_right = -118.0
+margin_bottom = 141.0
 
 [node name="Label" parent="CreditsButton" index="0"]
 
-margin_left = 82.0
-margin_right = 702.0
+margin_right = 684.0
 text = "credits"
 
 [node name="QuitButton" parent="." index="6" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = -310.0
 margin_top = 141.0
-margin_right = -86.0
-margin_bottom = 177.0
+margin_right = -118.0
+margin_bottom = 173.0
 
 [node name="Label" parent="QuitButton" index="0"]
 
-margin_left = 82.0
-margin_right = 551.0
+margin_right = 533.0
 text = "quit"
 
 [node name="YesNoOverlayQuit" parent="." index="7" instance=ExtResource( 5 )]

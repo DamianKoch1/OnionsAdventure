@@ -7,7 +7,7 @@
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 
-[node name="PauseMenu" type="Container"]
+[node name="PauseMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -75,60 +75,57 @@ _sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
 
 [node name="ResumeButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -125.0
-margin_top = -65.0
+margin_left = -93.0
+margin_top = -60.0
 margin_right = 99.0
-margin_bottom = -29.0
+margin_bottom = -28.0
 
 [node name="Label" parent="ResumeButton" index="0"]
 
 modulate = Color( 0.295288, 0.324413, 0.640625, 1 )
-margin_left = 96.0
-margin_right = 1221.0
+margin_right = 1189.0
 text = "resume"
 
 [node name="RestartButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -125.0
-margin_top = -20.0
+margin_left = -93.0
+margin_top = -18.0
 margin_right = 99.0
-margin_bottom = 16.0
+margin_bottom = 14.0
 
 [node name="Label" parent="RestartButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 69.0
-margin_right = 1167.0
+margin_left = 41.0
+margin_right = 1139.0
 text = "restart level"
 
 [node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = -125.0
-margin_top = 25.0
+margin_left = -93.0
+margin_top = 24.0
 margin_right = 99.0
-margin_bottom = 61.0
+margin_bottom = 56.0
 
 [node name="Label" parent="OptionsButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 95.0
-margin_right = 1193.0
+margin_right = 1162.0
 text = "options"
 
 [node name="MainMenuButton" parent="." index="5" instance=ExtResource( 4 )]
 
-margin_left = -125.0
-margin_top = 70.0
+margin_left = -93.0
+margin_top = 66.0
 margin_right = 99.0
-margin_bottom = 106.0
+margin_bottom = 98.0
 
 [node name="Label" parent="MainMenuButton" index="0"]
 
 modulate = Color( 0.294118, 0.321569, 0.639216, 1 )
-margin_left = 80.0
-margin_top = 2.0
-margin_right = 1178.0
-margin_bottom = 275.0
+margin_left = 48.0
+margin_right = 1146.0
+margin_bottom = 273.0
 text = "main menu"
 
 [node name="YesNoOverlayMainMenu" parent="." index="6" instance=ExtResource( 5 )]
