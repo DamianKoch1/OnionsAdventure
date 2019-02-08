@@ -101,11 +101,10 @@ margin_bottom = 24.0
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
-editor/display_folded = true
-margin_left = -135.0
-margin_top = 97.0
-margin_right = 89.0
-margin_bottom = 133.0
+margin_left = -149.0
+margin_top = 91.0
+margin_right = 43.0
+margin_bottom = 123.0
 
 [node name="Label" parent="BackButton" index="0"]
 

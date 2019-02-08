@@ -7,7 +7,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=6]
 
-[node name="LevelSelector" type="Container"]
+[node name="LevelSelector" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -50,18 +50,21 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="BackButton" parent="." index="1" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = -148.0
 margin_top = 59.0
-margin_right = 76.0
+margin_right = 43.0
 margin_bottom = 95.0
 
 [node name="Label" parent="BackButton" index="0"]
 
-margin_right = 1205.0
+margin_left = 63.0
+margin_right = 1204.0
 text = "back"
 
 [node name="removeLater" type="Container" parent="." index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -202,7 +205,7 @@ _sections_unfolded = [ "Z Index" ]
 
 margin_left = -277.0
 margin_top = -101.0
-margin_right = -117.0
+margin_right = -85.0
 margin_bottom = -69.0
 
 [node name="Label" parent="LevelButtons/Level1Button" index="0"]
@@ -213,7 +216,7 @@ text = "level 1"
 
 margin_left = -53.0
 margin_top = -101.0
-margin_right = 107.0
+margin_right = 139.0
 margin_bottom = -69.0
 levelId = 2
 
@@ -225,7 +228,7 @@ text = "level 2"
 
 margin_left = -277.0
 margin_top = -5.0
-margin_right = -117.0
+margin_right = -85.0
 margin_bottom = 27.0
 levelId = 3
 
@@ -237,7 +240,7 @@ text = "level 3"
 
 margin_left = -53.0
 margin_top = -5.0
-margin_right = 107.0
+margin_right = 139.0
 margin_bottom = 27.0
 levelId = 4
 

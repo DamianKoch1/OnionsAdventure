@@ -87,10 +87,10 @@ texture = ExtResource( 6 )
 
 [node name="SkipButton" parent="." index="3" instance=ExtResource( 7 )]
 
-margin_left = 415.0
-margin_top = 313.0
-margin_right = 639.0
-margin_bottom = 349.0
+margin_left = 416.0
+margin_top = 320.0
+margin_right = 608.0
+margin_bottom = 356.0
 
 [node name="Label" parent="SkipButton" index="0"]
 
