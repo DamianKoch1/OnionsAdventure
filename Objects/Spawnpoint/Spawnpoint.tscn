@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Objects/Spawnpoint/Spawnpoint.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Spawnpoint/spawnpoint.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Spawnpoint/Respawn Crystal.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
 [ext_resource path="res://Objects/Spawnpoint/respawn.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Objects/Spawnpoint/crystalActivation.wav" type="AudioStream" id=5]
@@ -121,7 +121,7 @@ _sections_unfolded = [ "Animation", "Damping", "Emission Shape", "Gravity", "Hue
 custom_solver_bias = 0.0
 extents = Vector2( 117.754, 134.469 )
 
-[node name="Spawnpoint" type="Node2D" index="0" groups=[
+[node name="Spawnpoint" type="Node2D" groups=[
 "Spawnpoint",
 ]]
 
@@ -133,7 +133,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( -0.112274, -0.106319 )
+position = Vector2( -0.112274, 41.5457 )
 scale = Vector2( 0.299415, 0.2835 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]

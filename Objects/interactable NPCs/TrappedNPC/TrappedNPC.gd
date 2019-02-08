@@ -7,6 +7,8 @@ var saveFile
 
 var player
 
+onready var anim = $AnimationPlayer
+
 func _ready():
 	saveFile = ConfigFile.new()
 	checkCollected()
@@ -25,7 +27,7 @@ func _on_Area2D_body_entered(body):
 			body.emit_signal("NPCsaved")
 			collected = true
 			saveCollected()
-			$AnimationPlayer.play("onCollect")
+			$scriptAnims.play("onCollect")
 			SaveGame.saveGame()
 			$WebDestroyedDustVFX.emitting = true
 
@@ -46,3 +48,6 @@ func checkCollected():
 func _on_unfreezePlayer_timeout():
 	if player != null:
 		player.setIdle()
+
+func playAnim(name):
+	anim.play(name)
