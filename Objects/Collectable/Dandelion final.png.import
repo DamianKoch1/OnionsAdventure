@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/collectable placeholder.png-08a80add2746a7de0fffd1a82eb32683.stex"
+path="res://.import/Dandelion final.png-9d7d3b4bed61a300a3f8fc88245e6b49.stex"
 
 [deps]
 
-source_file="res://Objects/Collectable/collectable placeholder.png"
-dest_files=[ "res://.import/collectable placeholder.png-08a80add2746a7de0fffd1a82eb32683.stex" ]
+source_file="res://Objects/Collectable/Dandelion final.png"
+dest_files=[ "res://.import/Dandelion final.png-9d7d3b4bed61a300a3f8fc88245e6b49.stex" ]
 
 [params]
 

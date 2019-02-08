@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=3]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/ExtrasMenu/Eaglebunny Icon.png" type="Texture" id=5]
 
@@ -37,7 +37,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="unlockableImg" type="Node2D"]
+[node name="unlockableImg" type="Node2D" index="0"]
 
 position = Vector2( 32, 32 )
 script = ExtResource( 1 )
@@ -93,8 +93,8 @@ scale = Vector2( 0.652807, 0.652807 )
 
 [node name="Sprite" type="Sprite" parent="Overlay/Dandelions" index="0"]
 
-position = Vector2( -18.3922, -29.4368 )
-scale = Vector2( 0.0853825, 0.0853824 )
+position = Vector2( -10.1033, -27.9344 )
+scale = Vector2( 0.396177, 0.396177 )
 texture = ExtResource( 3 )
 
 [node name="Label" parent="Overlay/Dandelions" index="1" instance=ExtResource( 4 )]
