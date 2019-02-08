@@ -27,7 +27,7 @@
 [ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/SpiderbuddyTrigger.tscn" type="PackedScene" id=26]
 
-[node name="Prototype 0" type="Node2D"]
+[node name="Prototype 0" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -71,27 +71,27 @@ enabled = false
 
 [node name="OnionBody" parent="Onion/Onion/Colisionposition/Höhenposition" index="0"]
 
-scale = Vector2( 0.5, 0.426973 )
+scale = Vector2( 0.5, 0.431974 )
 
 [node name="OnionHair" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
-rotation = 0.845725
+rotation = 0.8103
 
 [node name="onion_eyes" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="1"]
 
-scale = Vector2( 1, 0.347965 )
+scale = Vector2( 1, 0.160743 )
 
 [node name="OnionEarL" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
-rotation = 0.199018
+rotation = 0.223007
 
 [node name="OnionTail" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
-rotation = -0.354533
+rotation = -0.309236
 
 [node name="OnionEarR" parent="Onion/Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
-rotation = -0.618732
+rotation = -0.605541
 
 [node name="AnimationTreePlayer1" parent="Onion/Onion" index="1"]
 
@@ -116,12 +116,6 @@ data = {
 "type": "output"
 }, {
 "filter": [  ],
-"from": "Onion_JumpDown",
-"id": "jumpdown",
-"position": Vector2( 408, 268 ),
-"type": "animation"
-}, {
-"filter": [  ],
 "from": "Onion_JumpUp",
 "id": "jumpup",
 "position": Vector2( 77, 356 ),
@@ -137,6 +131,18 @@ data = {
 "mix": false,
 "position": Vector2( 541, 92 ),
 "type": "oneshot"
+}, {
+"filter": [  ],
+"from": "Onion_JumpDown",
+"id": "jumpdown",
+"position": Vector2( 408, 268 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Onion_Walk",
+"id": "walk",
+"position": Vector2( 24, 158 ),
+"type": "animation"
 }, {
 "id": "idle/walk",
 "position": Vector2( 207, 91 ),
@@ -158,12 +164,6 @@ data = {
 "mix": false,
 "position": Vector2( 362, 94 ),
 "type": "oneshot"
-}, {
-"filter": [  ],
-"from": "Onion_Walk",
-"id": "walk",
-"position": Vector2( 24, 158 ),
-"type": "animation"
 } ]
 }
 
