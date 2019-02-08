@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/MovingPlatform/Movingplatform.gd" type="Script" id=1]
-[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=2]
-
-
+[ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=2]
 
 [node name="Movingplatform" type="Node2D"]
 
@@ -12,17 +10,21 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 platformSpeed = 1.25
 
-[node name="TileMap" parent="." index="0" instance=ExtResource( 2 )]
-
-tile_data = PoolIntArray( -2, 0, 0, -1, 1, 0, -65536, 1, 0, -65535, 2, 0, 65534, 1610612738, 0, 65535, 1610612737, 0, 0, 1610612737, 0, 1, 1610612736, 0 )
-
-[node name="State1" type="Position2D" parent="." index="1"]
+[node name="State1" type="Position2D" parent="." index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="State2" type="Position2D" parent="." index="2"]
+[node name="State2" type="Position2D" parent="." index="1"]
 
 position = Vector2( 320, 64 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="new tiles" type="Node2D" parent="." index="2"]
+
+position = Vector2( 0, -11.2941 )
+
+[node name="TileMap" parent="new tiles" index="0" instance=ExtResource( 2 )]
+
+tile_data = PoolIntArray( -3, 536870921, 0, -2, 536870913, 0, -1, 1, 0, -65536, 1, 0, -65535, 536870913, 0, -65534, 9, 0, 65533, 536870926, 0, 65534, 11, 0, 65535, 13, 0, 0, 12, 0, 1, 12, 0, 2, 14, 0 )
 
 

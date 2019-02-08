@@ -1,11 +1,13 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Assets/FinishedTileSet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=1]
 
 [node name="platform short" type="Node2D"]
 
-[node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
+[node name="new tiles" type="Node2D" parent="." index="0"]
 
-tile_data = PoolIntArray( 65533, 0, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 2, 0, 131069, 6, 0, 131070, 7, 0, 131071, 7, 0, 65536, 7, 0, 65537, 7, 0, 65538, 8, 0 )
+[node name="TileMap" parent="new tiles" index="0" instance=ExtResource( 1 )]
+
+tile_data = PoolIntArray( 65532, 536870921, 0, 65533, 0, 0, 65534, 1, 0, 65535, 2, 0, 0, 0, 0, 1, 2, 0, 2, 1, 0, 3, 9, 0, 131068, 536870926, 0, 131069, 12, 0, 131070, 11, 0, 131071, 13, 0, 65536, 12, 0, 65537, 13, 0, 65538, 11, 0, 65539, 14, 0 )
 
 
