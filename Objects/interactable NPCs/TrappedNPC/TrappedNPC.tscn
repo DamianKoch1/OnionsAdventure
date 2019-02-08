@@ -104,7 +104,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource_name = "reset"
 length = 1.0
@@ -123,7 +123,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 length = 0.9
 loop = false
@@ -381,7 +381,7 @@ tracks/20/keys = {
 "values": [ Vector2( -2.70178, 29.7198 ), Vector2( -1.62106, 12.9686 ), Vector2( -1.9813, 43.7691 ), Vector2( -4.32286, 136.171 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 
 length = 1.0
 loop = true
@@ -606,9 +606,9 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/appreciation = SubResource( 2 )
-anims/reset = SubResource( 4 )
-"anims/turn and jump" = SubResource( 5 )
-anims/wiggle = SubResource( 6 )
+anims/reset = SubResource( 3 )
+"anims/turn and jump" = SubResource( 4 )
+anims/wiggle = SubResource( 5 )
 next/appreciation = "turn and jump"
 blend_times = [  ]
 
