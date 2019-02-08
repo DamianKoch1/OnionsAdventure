@@ -429,12 +429,10 @@ text = "0/12"
 [node name="Page1" type="Node2D" parent="." index="8"]
 
 editor/display_folded = true
-visible = false
 position = Vector2( -80, 0 )
 
 [node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 9 )]
 
-editor/display_folded = true
 position = Vector2( -101, -69 )
 dandelionsNeeded = 5
 NPCsNeeded = 1
@@ -453,7 +451,6 @@ NPCsNeeded = 1
 
 [node name="Sprite" parent="Page1/unlockableImg2" index="0"]
 
-position = Vector2( 0, -32 )
 scale = Vector2( 0.0720001, 0.096 )
 texture = ExtResource( 11 )
 
@@ -475,7 +472,6 @@ editor/display_folded = true
 
 [node name="unlockableImg4" parent="Page1" index="3" instance=ExtResource( 9 )]
 
-editor/display_folded = true
 position = Vector2( 91, 59 )
 dandelionsNeeded = 25
 NPCsNeeded = 3
@@ -500,7 +496,6 @@ NPCsNeeded = 4
 
 [node name="Sprite" parent="Page2/unlockableImg" index="0"]
 
-position = Vector2( -3.8824, -32 )
 scale = Vector2( 0.0543594, 0.0725227 )
 texture = ExtResource( 14 )
 
@@ -549,7 +544,6 @@ NPCsNeeded = 6
 
 [node name="Sprite" parent="Page2/unlockableImg4" index="0"]
 
-position = Vector2( 0, -32 )
 scale = Vector2( 0.0654153, 0.0872727 )
 texture = ExtResource( 17 )
 
@@ -559,6 +553,7 @@ anims/unlock = SubResource( 4 )
 
 [node name="Page3" type="Node2D" parent="." index="10"]
 
+editor/display_folded = true
 visible = false
 position = Vector2( -80, 0 )
 
@@ -571,7 +566,6 @@ NPCsNeeded = 7
 
 [node name="Sprite" parent="Page3/unlockableImg" index="0"]
 
-position = Vector2( -14.5292, -32 )
 scale = Vector2( 0.096, 0.128077 )
 texture = ExtResource( 18 )
 
@@ -588,7 +582,6 @@ NPCsNeeded = 8
 
 [node name="Sprite" parent="Page3/unlockableImg2" index="0"]
 
-position = Vector2( 5.95822, -32 )
 scale = Vector2( 0.0284632, 0.0379737 )
 texture = ExtResource( 19 )
 
@@ -605,7 +598,6 @@ NPCsNeeded = 9
 
 [node name="Sprite" parent="Page3/unlockableImg3" index="0"]
 
-position = Vector2( -7.37271, -32 )
 scale = Vector2( 0.0784656, 0.104684 )
 texture = ExtResource( 20 )
 
@@ -631,6 +623,8 @@ anims/unlock = SubResource( 8 )
 
 [node name="Page4" type="Node2D" parent="." index="11"]
 
+editor/display_folded = true
+visible = false
 position = Vector2( -79.5988, 0 )
 
 [node name="unlockableImg" parent="Page4" index="0" instance=ExtResource( 9 )]
@@ -642,7 +636,6 @@ NPCsNeeded = 10
 
 [node name="Sprite" parent="Page4/unlockableImg" index="0"]
 
-position = Vector2( -17.0316, -32 )
 scale = Vector2( 0.0580761, 0.0774347 )
 texture = ExtResource( 22 )
 
@@ -655,7 +648,6 @@ NPCsNeeded = 11
 
 [node name="Sprite" parent="Page4/unlockableImg2" index="0"]
 
-position = Vector2( -13.7172, -32 )
 scale = Vector2( 0.0580762, 0.0774349 )
 texture = ExtResource( 23 )
 
@@ -680,7 +672,6 @@ NPCsNeeded = 12
 
 [node name="Sprite" parent="Page4/unlockableImg4" index="0"]
 
-position = Vector2( -14.8351, -32 )
 scale = Vector2( 0.0137143, 0.0182857 )
 texture = ExtResource( 25 )
 

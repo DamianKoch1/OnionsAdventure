@@ -168,7 +168,8 @@ func setState(newState):
 					$SFX/footstep.playRandomPitch()
 			jump:
 				animTreePlayer.oneshot_node_stop("fallOneshot")
-				animTreePlayer.timescale_node_set_scale("scale", -340/motion.y)
+				if motion.y != 0:
+					animTreePlayer.timescale_node_set_scale("scale", -340/motion.y)
 				animTreePlayer.oneshot_node_start("jumpOneshot")
 			fall:
 				animTreePlayer.oneshot_node_stop("jumpOneshot")
