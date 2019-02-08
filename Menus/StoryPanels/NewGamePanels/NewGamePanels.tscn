@@ -135,7 +135,6 @@ animSpeed = 2.0
 [node name="PanelButton1" parent="." index="7" instance=ExtResource( 2 )]
 
 editor/display_folded = true
-visible = false
 modulate = Color( 1, 1, 1, 1 )
 margin_right = 1829.0
 margin_bottom = 1029.0
