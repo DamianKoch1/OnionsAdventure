@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/collectable placeholder.png-08a80add2746a7de0fffd1a82eb32683.stex"
+path="res://.import/IntroMockUp.jpg-c0a6519055f452365b4e9c095b508dd5.stex"
 
 [deps]
 
-source_file="res://Objects/Collectable/collectable placeholder.png"
-dest_files=[ "res://.import/collectable placeholder.png-08a80add2746a7de0fffd1a82eb32683.stex" ]
+source_file="res://Menus/StoryPanels/NewGamePanels/IntroMockUp.jpg"
+dest_files=[ "res://.import/IntroMockUp.jpg-c0a6519055f452365b4e9c095b508dd5.stex" ]
 
 [params]
 
