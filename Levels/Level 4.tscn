@@ -354,20 +354,19 @@ position = Vector2( -352, -64 )
 
 [node name="platform2" parent="." index="16" instance=ExtResource( 29 )]
 
-editor/display_folded = true
 position = Vector2( 7792.43, 839.649 )
 
 [node name="Worm" parent="platform2" index="1" instance=ExtResource( 12 )]
 
-position = Vector2( -99.9282, -35.754 )
+position = Vector2( -101.392, -20.1485 )
 
 [node name="Worm2" parent="platform2" index="2" instance=ExtResource( 12 )]
 
-position = Vector2( 100.882, -33.8538 )
+position = Vector2( 101.857, -21.662 )
 
 [node name="trappedNPC" parent="platform2" index="3" instance=ExtResource( 18 )]
 
-position = Vector2( 0.0551758, -41.2764 )
+position = Vector2( -1.89551, -25.6709 )
 
 [node name="Rope" parent="platform2" index="4" instance=ExtResource( 17 )]
 
@@ -503,12 +502,11 @@ position = Vector2( 11952.6, 734.565 )
 
 [node name="platform short3" parent="." index="25" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 12432.6, 799.565 )
 
 [node name="trappedNPC" parent="platform short3" index="1" instance=ExtResource( 18 )]
 
-position = Vector2( 4.69727, -38.4616 )
+position = Vector2( 2.30176, -25.2894 )
 
 [node name="stone, krake down" parent="." index="26" instance=ExtResource( 37 )]
 
