@@ -48,7 +48,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 20.7729, 169.765 )
 }
 
-[node name="Level 4" type="Node2D"]
+[node name="Level 4" type="Node2D" index="0"]
 
 [node name="short start" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -167,7 +167,7 @@ position = Vector2( 4160, 928 )
 
 [node name="Muddy" parent="stump l, moving tendril" index="3" instance=ExtResource( 15 )]
 
-position = Vector2( -260, 112 )
+position = Vector2( -260.488, 104.685 )
 movespeed = 1.5
 
 [node name="platform up" parent="." index="9" instance=ExtResource( 16 )]
