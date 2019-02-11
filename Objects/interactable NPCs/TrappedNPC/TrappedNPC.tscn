@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.gd" type="Script" id=1]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_net.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/destroy_spider_web.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/WebDestroyedDustVFX.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/onCollect.tres" type="Animation" id=19]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/help_me_03.ogg" type="AudioStream" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -457,6 +458,7 @@ _sections_unfolded = [ "Visibility", "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -528,6 +530,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Free" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
 visible = false
 position = Vector2( -2.70178, 29.7198 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -536,6 +539,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="free_body" type="Sprite" parent="Free" index="1"]
 
+editor/display_folded = true
 position = Vector2( -0.216494, 1.23753 )
 scale = Vector2( 0.316412, 0.316 )
 texture = ExtResource( 8 )
@@ -619,7 +623,7 @@ position = Vector2( 3.15125, 8.69749 )
 scale = Vector2( 0.9, 0.9 )
 z_index = 5
 lifetime = 2.0
-_sections_unfolded = [ "Process Material", "Time", "Transform", "Z Index" ]
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Z Index" ]
 
 [node name="unfreezePlayer" type="Timer" parent="." index="6"]
 
@@ -638,8 +642,25 @@ playback_speed = 1.0
 anims/onCollect = ExtResource( 19 )
 blend_times = [  ]
 
+[node name="help" type="AudioStreamPlayer2D" parent="." index="8"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="9"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 [connection signal="timeout" from="unfreezePlayer" to="." method="_on_unfreezePlayer_timeout"]
+
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
 
 
