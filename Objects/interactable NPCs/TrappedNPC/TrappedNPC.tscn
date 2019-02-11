@@ -483,8 +483,6 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
-visible = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Sprite" index="0"]
@@ -541,6 +539,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Free" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
+visible = false
 position = Vector2( -2.70178, 29.7198 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -550,6 +550,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="free_body" type="Sprite" parent="Free" index="1"]
 
+editor/display_folded = true
 position = Vector2( -0.216494, 1.23753 )
 scale = Vector2( 0.316412, 0.316 )
 texture = ExtResource( 8 )
