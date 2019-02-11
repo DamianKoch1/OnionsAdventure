@@ -51,3 +51,7 @@ func _on_unfreezePlayer_timeout():
 
 func playAnim(name):
 	anim.play(name)
+
+
+func _on_VisibilityNotifier2D_screen_entered():
+	$help.play()
