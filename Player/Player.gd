@@ -107,6 +107,9 @@ func _physics_process(delta):
 					setState(fall)
 		#climbing, attach to rope when climbing, var rope assigned by rope/ladder
 		elif state == climb:
+			if $SFX/climb.playing == false:
+				if motion.x != 0 || motion.y != 0:
+					$SFX/climb.play()
 			if rope != null:
 				var transf = get_global_transform()
 				attachTo(rope)

@@ -39,33 +39,38 @@ func _ready():
 #show story panel depending on level, end game at last level
 func _on_Goal_body_entered(body):
 	if body.is_in_group("Player") && anim.is_playing() == false:
-			match SaveGame.currLevelId:
-				0:
-					anim.play("end")
-					panel.show()
-					panel1.hide()
-					panel2.hide()
-				1:
-					anim.play("endLevel1")
-					panel.hide()
-					panel1.show()
-					panel2.hide()
-				2:
-					anim.play("endLevel2")
-					panel.hide()
-					panel1.hide()
-					panel2.show()
-				3:
-					anim.play("endLevel2")
-					panel.hide()
-					panel1.hide()
-					panel2.show()
-				4:
-					anim.play("endGame")
-					panel.show()
-					panel1.hide()
-					panel2.hide()
-			body.state = body.frozen
+		var i = randf()
+		if i > 0.5:
+			$SFX/OnionYeah1.play()
+		else:
+			$SFX/OnionYeah2.play()
+		match SaveGame.currLevelId:
+			0:
+				anim.play("end")
+				panel.show()
+				panel1.hide()
+				panel2.hide()
+			1:
+				anim.play("endLevel1")
+				panel.hide()
+				panel1.show()
+				panel2.hide()
+			2:
+				anim.play("endLevel2")
+				panel.hide()
+				panel1.hide()
+				panel2.show()
+			3:
+				anim.play("endLevel2")
+				panel.hide()
+				panel1.hide()
+				panel2.show()
+			4:
+				anim.play("endGame")
+				panel.show()
+				panel1.hide()
+				panel2.hide()
+		body.state = body.frozen
 
 func loadNextLevel():
 	SaveGame.currLevelId += 1
@@ -74,4 +79,4 @@ func loadNextLevel():
 
 func loadEndPanels():
 	get_tree().change_scene_to(endPanels)
-	
+
