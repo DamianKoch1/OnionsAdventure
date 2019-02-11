@@ -1153,6 +1153,11 @@ margin_left = -149.0
 margin_top = 123.0
 margin_right = 43.0
 margin_bottom = 155.0
+focus_neighbour_left = NodePath("../BackButton")
+focus_neighbour_top = NodePath("../NextButton")
+focus_neighbour_right = NodePath("../NextButton")
+focus_neighbour_bottom = NodePath(".")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="MainMenuButton" index="0"]
 
@@ -1166,6 +1171,11 @@ margin_left = -338.0
 margin_top = -5.0
 margin_right = -114.0
 margin_bottom = 31.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../NextButton")
+focus_neighbour_bottom = NodePath("../MainMenuButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="BackButton" index="0"]
 
@@ -1187,6 +1197,11 @@ margin_left = 57.0
 margin_top = -5.0
 margin_right = 281.0
 margin_bottom = 31.0
+focus_neighbour_left = NodePath("../BackButton")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../MainMenuButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="NextButton" index="0"]
 
@@ -1268,7 +1283,6 @@ NPCsNeeded = 1
 
 [node name="Sprite" parent="Page1/unlockableImg" index="0"]
 
-position = Vector2( 32, 16 )
 scale = Vector2( 0.064, 0.0551724 )
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
@@ -1385,7 +1399,6 @@ NPCsNeeded = 4
 
 [node name="Sprite" parent="Page2/unlockableImg" index="0"]
 
-position = Vector2( 32, 16 )
 scale = Vector2( 0.0821678, 0.0708343 )
 texture = ExtResource( 14 )
 
@@ -1480,7 +1493,6 @@ NPCsNeeded = 7
 
 [node name="Sprite" parent="Page3/unlockableImg" index="0"]
 
-position = Vector2( 32, 16 )
 scale = Vector2( 0.128, 0.110345 )
 texture = ExtResource( 18 )
 
@@ -1575,7 +1587,6 @@ NPCsNeeded = 10
 
 [node name="Sprite" parent="Page4/unlockableImg" index="0"]
 
-position = Vector2( 32, 16 )
 scale = Vector2( 0.077385, 0.0667112 )
 texture = ExtResource( 22 )
 
