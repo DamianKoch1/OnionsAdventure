@@ -49,12 +49,13 @@ func emit():
 #burning particles at object
 func burn():
 	if useHorizontalFlames == false:
-		flames = $VerticalFlames
+		flames = $Flames/VerticalFlames
 	else:
-		flames = $HorizontalFlames
-	flames.global_position = objToDestroy.global_position
+		flames = $Flames/HorizontalFlames
+	$Flames.global_position = objToDestroy.global_position
 	attachBurningVFX(flames, objToDestroy)
 	flames.emitting = true
+	$Flames/burningSFX.play()
 
 #called by burn anim
 func removeObj():
