@@ -19,6 +19,10 @@ func _ready():
 	loadVolume()
 	hide()
 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel") && visible == true:
+		_on_BackButton_pressed()
+
 func saveVolume():
 	saveFile.set_value("Volume", "master", masterSlider.value) 
 	saveFile.set_value("Volume", "music", musicSlider.value) 

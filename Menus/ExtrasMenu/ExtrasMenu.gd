@@ -16,6 +16,10 @@ func _ready():
 	$BackButton.hide()
 	$NextButton.grab_focus()
 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		_on_MainMenuButton_pressed()
+
 func _on_BackButton_pressed():
 	$NextButton.show()
 	if atPage == 2:

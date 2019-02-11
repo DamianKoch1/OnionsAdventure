@@ -3,6 +3,13 @@ extends Container
 onready var levelSelector = preload("res://Menus/LevelSelector/LevelSelector.tscn")
 onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 
+func _ready():
+	$NewGameButton.grab_focus()
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		_on_BackButton_pressed()
+
 func _on_ContinueButton_pressed():
 	UISelect.playing = true
 	SaveGame.loadGame()

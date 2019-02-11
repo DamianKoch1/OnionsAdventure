@@ -188,6 +188,11 @@ margin_left = -149.0
 margin_top = 59.0
 margin_right = 75.0
 margin_bottom = 95.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="BackButton" index="0"]
 
