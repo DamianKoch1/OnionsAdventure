@@ -43,11 +43,11 @@ tracks/1/keys = {
 "values": [ Vector2( -0.467431, 9.46983 ), Vector2( -0.487558, 9.55599 ) ]
 }
 
-[node name="Bouncer" type="Area2D"]
+[node name="Bouncer" type="Area2D" index="0"]
 
 position = Vector2( 31.5819, 22.7745 )
 scale = Vector2( 3.66032, 3.66032 )
-z_index = -5
+z_index = 60
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -60,7 +60,7 @@ _sections_unfolded = [ "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
-maxBounceStr = 900
+maxBounceStr = 1000
 bounceIncrease = 5
 
 [node name="icon" type="Sprite" parent="." index="0"]

@@ -12,7 +12,9 @@ extents = Vector2( 38.4315, 54.4014 )
 "dandelions",
 ]]
 
+z_index = 90
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
@@ -34,7 +36,9 @@ shape = SubResource( 1 )
 
 position = Vector2( 0.751022, 0.0666025 )
 scale = Vector2( 0.483857, 0.477807 )
+z_index = 90
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Z Index" ]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

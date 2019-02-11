@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Assets/Stones/Stone Big New.png" type="Texture" id=1]
 
-[node name="StoneBigA" type="Sprite"]
+[node name="StoneBigA" type="Sprite" index="0"]
 
 scale = Vector2( 0.457747, 0.457747 )
-z_index = -5
+z_index = 50
 texture = ExtResource( 1 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]

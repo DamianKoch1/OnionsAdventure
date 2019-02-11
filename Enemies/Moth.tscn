@@ -144,8 +144,9 @@ tracks/8/keys = {
 "Enemies",
 ]]
 
+z_index = 30
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 movespeed = 0.2
 
 [node name="EnemyPath" type="Path2D" parent="." index="0"]

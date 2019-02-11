@@ -373,7 +373,6 @@ position = Vector2( 110.264, -6.61581 )
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 9573.61, -416.05 )
 
 [node name="Bouncer" parent="End2(wall)" index="2" instance=ExtResource( 24 )]

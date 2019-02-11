@@ -10,7 +10,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 44.1856, 32 )
+extents = Vector2( 5.9448, 41.6136 )
 
 [sub_resource type="Curve" id=2]
 
@@ -250,12 +250,12 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Goal" type="Area2D" groups=[
+[node name="Goal" type="Area2D" index="0" groups=[
 "Persist",
 ]]
 
 scale = Vector2( 1.26161, 1.26161 )
-z_index = -5
+z_index = 50
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

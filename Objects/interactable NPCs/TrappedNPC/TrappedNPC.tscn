@@ -447,11 +447,11 @@ tracks/4/keys = {
 "values": [ 0.0, -14.3794, -0.134704, 13.888, 0.0, -14.3794, 0.0 ]
 }
 
-[node name="trappedNPC" type="Node2D" index="0" groups=[
+[node name="trappedNPC" type="Node2D" groups=[
 "trappedNPCs",
 ]]
 
-z_index = -5
+z_index = 80
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
@@ -619,7 +619,7 @@ position = Vector2( 3.15125, 8.69749 )
 scale = Vector2( 0.9, 0.9 )
 z_index = 5
 lifetime = 2.0
-_sections_unfolded = [ "Process Material", "Time", "Transform", "Z Index" ]
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Z Index" ]
 
 [node name="unfreezePlayer" type="Timer" parent="." index="6"]
 
