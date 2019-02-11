@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Collectable/Collectable.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=2]
@@ -8,30 +8,13 @@
 custom_solver_bias = 0.0
 extents = Vector2( 38.4315, 54.4014 )
 
-[sub_resource type="Animation" id=2]
-
-resource_name = "swinging"
-length = 1.5
-loop = true
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -58.3471, 0.0 ]
-}
-
 [node name="Collectable" type="Node2D" index="0" groups=[
 "dandelions",
 ]]
 
+z_index = 90
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
@@ -51,21 +34,11 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 0.167877, -0.771442 )
-rotation = -0.675412
+position = Vector2( 0.751022, 0.0666025 )
 scale = Vector2( 0.483857, 0.477807 )
+z_index = 90
 texture = ExtResource( 2 )
-offset = Vector2( 1.2052, 1.75394 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
-
-root_node = NodePath("..")
-autoplay = "swinging"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/swinging = SubResource( 2 )
-blend_times = [  ]
+_sections_unfolded = [ "Z Index" ]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

@@ -6,9 +6,10 @@
 
 position = Vector2( 52.4028, 476.493 )
 scale = Vector2( 3.39596, 1.96351 )
+z_index = 40
 texture = ExtResource( 1 )
 centered = false
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }

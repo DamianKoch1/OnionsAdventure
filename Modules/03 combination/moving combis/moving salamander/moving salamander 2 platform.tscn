@@ -6,7 +6,7 @@
 [ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=5]
 
-[node name="moving salamander 2 platform" type="Node2D"]
+[node name="moving salamander 2 platform" type="Node2D" index="0"]
 
 [node name="Movingplatform" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -18,14 +18,13 @@ position = Vector2( 0, -248.469 )
 
 [node name="FireSalamander" parent="Movingplatform" index="3" instance=ExtResource( 2 )]
 
-position = Vector2( -2.24753, -67.7644 )
+position = Vector2( -3.89639, -55.5628 )
 scale = Vector2( 1.12941, 1.12941 )
 objToDestroyPath = NodePath("../../Movingplatform2/ThornsGround")
 destroyRadius = 250
 
 [node name="Movingplatform2" parent="." index="1" instance=ExtResource( 1 )]
 
-editor/display_folded = true
 position = Vector2( 121.781, -89.6642 )
 
 [node name="State2" parent="Movingplatform2" index="1"]
@@ -34,12 +33,12 @@ position = Vector2( -259.763, 0 )
 
 [node name="ThornsGround" parent="Movingplatform2" index="3" instance=ExtResource( 3 )]
 
-position = Vector2( -1.75792, -55.761 )
+position = Vector2( -0.768585, -49.4953 )
 scale = Vector2( 0.484363, 0.484363 )
 
 [node name="StoneBigA" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( -7, 42 )
+position = Vector2( -7.79056, 52.0138 )
 
 [node name="new tiles" type="Node2D" parent="." index="3"]
 

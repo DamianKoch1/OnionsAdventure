@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 7.82994 )
 
-[node name="stump l, moving tendril" type="Node2D" index="0"]
+[node name="stump l, moving tendril" type="Node2D"]
 
 [node name="stump l 8" type="Node2D" parent="." index="0"]
 
@@ -21,7 +21,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="Ast 4" parent="stump l 8" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 237.27, 22.3374 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Stump" type="Sprite" parent="stump l 8" index="1"]
 

@@ -6,7 +6,7 @@
 [ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=5]
 
-[node name="moving salamander" type="Node2D"]
+[node name="moving salamander" type="Node2D" index="0"]
 
 [node name="Movingplatform" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -19,21 +19,21 @@ position = Vector2( 262.243, 0 )
 
 [node name="FireSalamander" parent="Movingplatform" index="3" instance=ExtResource( 2 )]
 
-position = Vector2( -1.71703, -63.2468 )
+position = Vector2( -2.20825, -57.1259 )
 scale = Vector2( 0.936583, 1.12941 )
 objToDestroyPath = NodePath("../../ThornsUp2")
 
 [node name="ThornsGround" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( -171.637, 326.095 )
+position = Vector2( -199.922, 325.12 )
 
 [node name="ThornsGround2" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -7.77248, 324.105 )
+position = Vector2( -31.1809, 324.105 )
 
 [node name="ThornsGround3" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 104.346, 324.105 )
+position = Vector2( 77.0362, 323.13 )
 
 [node name="ThornsGround4" parent="." index="4" instance=ExtResource( 3 )]
 
@@ -41,17 +41,17 @@ position = Vector2( 104.346, 324.105 )
 
 [node name="ThornsGround5" parent="." index="5" instance=ExtResource( 3 )]
 
-position = Vector2( 189.263, 322.115 )
+position = Vector2( 206.332, 315.288 )
 rotation = -0.542052
 
 [node name="ThornsUp" parent="." index="6" instance=ExtResource( 4 )]
 
-position = Vector2( -90.4462, 292.007 )
+position = Vector2( -118.731, 292.007 )
 scale = Vector2( 0.738417, 0.738417 )
 
 [node name="ThornsUp2" parent="." index="7" instance=ExtResource( 4 )]
 
-position = Vector2( 285, 70 )
+position = Vector2( 284.206, 68.0139 )
 scale = Vector2( 0.71875, 0.71875 )
 
 [node name="new tiles" type="Node2D" parent="." index="8"]

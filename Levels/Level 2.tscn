@@ -91,7 +91,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC1" parent="firesalamander, thorn, tendril" index="5" instance=ExtResource( 9 )]
 
-position = Vector2( -93.722, -110.301 )
+position = Vector2( -93.722, -108.036 )
 
 [node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 10 )]
 
@@ -292,12 +292,11 @@ position = Vector2( 7141.61, -320.05 )
 
 [node name="platform long" parent="." index="17" instance=ExtResource( 23 )]
 
-editor/display_folded = true
 position = Vector2( 7860.75, -480.979 )
 
 [node name="Bouncer" parent="platform long" index="1" instance=ExtResource( 24 )]
 
-position = Vector2( -376.708, 250.72 )
+position = Vector2( -377, 255.976 )
 
 [node name="FireSalamander" parent="platform long" index="2" instance=ExtResource( 25 )]
 
@@ -373,20 +372,19 @@ position = Vector2( 110.264, -6.61581 )
 
 [node name="End2(wall)" parent="." index="21" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 9573.61, -416.05 )
 
 [node name="Bouncer" parent="End2(wall)" index="2" instance=ExtResource( 24 )]
 
-position = Vector2( -307.087, 93.5974 )
+position = Vector2( -307.484, 96.7751 )
 
 [node name="Bouncer2" parent="End2(wall)" index="3" instance=ExtResource( 24 )]
 
-position = Vector2( -226.813, 92.2714 )
+position = Vector2( -226.02, 96.6407 )
 
 [node name="Bouncer3" parent="End2(wall)" index="4" instance=ExtResource( 24 )]
 
-position = Vector2( -155.164, 90.2808 )
+position = Vector2( -155.164, 97.0335 )
 
 [node name="Collectable46" parent="End2(wall)" index="5" instance=ExtResource( 4 )]
 

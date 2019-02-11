@@ -9,10 +9,10 @@
 custom_solver_bias = 0.0
 extents = Vector2( 9.3325, 9.25747 )
 
-[node name="stump l 8" type="Node2D" index="0"]
+[node name="stump l 8" type="Node2D"]
 
 scale = Vector2( 0.0989583, 0.104806 )
-z_index = -5
+z_index = 50
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ast 3" parent="." index="0" instance=ExtResource( 1 )]
@@ -23,14 +23,15 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 [node name="Ast 4" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 203.414, 81.3666 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Stump" type="Sprite" parent="." index="2"]
 
 position = Vector2( 18.1129, 78.6706 )
 scale = Vector2( 2.10025, 2.34684 )
+z_index = 50
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
