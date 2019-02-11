@@ -259,7 +259,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 position = Vector2( 278.307, -291.202 )
 scale = Vector2( 2.99633, 1.6584 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="stump" type="Sprite" parent="stump m, thorn 2/stump m 8" index="1"]
 
