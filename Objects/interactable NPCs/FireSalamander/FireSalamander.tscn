@@ -25,7 +25,7 @@ extents = Vector2( 13, 13 )
 custom_solver_bias = 0.0
 extents = Vector2( 11.8311, 11.5305 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 
 resource_name = "spitFire"
 length = 0.4
@@ -118,7 +118,7 @@ tracks/6/keys = {
 
 [node name="FireSalamander" type="Node2D" index="0"]
 
-z_index = -7
+z_index = 60
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 objToDestroyPath = null
@@ -226,7 +226,7 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/burnObj = ExtResource( 9 )
-anims/spitFire = SubResource( 5 )
+anims/spitFire = SubResource( 3 )
 blend_times = [  ]
 
 [node name="FireCone" parent="." index="2" instance=ExtResource( 10 )]
