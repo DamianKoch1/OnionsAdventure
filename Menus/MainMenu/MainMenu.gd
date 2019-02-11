@@ -13,6 +13,16 @@ func _ready():
 	if MenuMusic.playing == false:
 		MenuMusic.fadeIn()
 	
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		if $OptionsOverlay.visible == false:
+			if $YesNoOverlayQuit.visible == false:
+				_on_QuitButton_pressed()
+			else:
+				cancel()
+				$PlayButton.grab_focus()
+		else:
+			$PlayButton.grab_focus()
 
 func _on_CreditsButton_pressed():
 	UISelect.playing = true
@@ -23,11 +33,15 @@ func _on_QuitButton_pressed():
 	if $YesNoOverlayQuit.visible == false:
 		UISelect.playing = true
 		$YesNoOverlayQuit.show()
+		$YesNoOverlayQuit/NoButton.grab_focus()
 
 
 func _on_OptionsButton_pressed():
 	UISelect.playing = true
+	$YesNoOverlayQuit.hide()
 	$OptionsOverlay.show()
+	$OptionsOverlay/BackButton.grab_focus()
+	
 
 func quit():
 	get_tree().quit()
@@ -45,10 +59,3 @@ func _on_PlayButton_pressed():
 func _on_ExtrasButton_pressed():
 	UISelect.playing = true
 	get_tree().change_scene_to(extrasMenu)
-	
-func _process(delta):
-	if Input.is_action_just_pressed("ui_cancel"):
-		if $YesNoOverlayQuit.visible == false:
-			_on_QuitButton_pressed()
-		else:
-			cancel()

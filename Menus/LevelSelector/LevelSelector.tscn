@@ -7,7 +7,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=6]
 
-[node name="LevelSelector" type="Container" index="0"]
+[node name="LevelSelector" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
