@@ -380,6 +380,18 @@ tracks/20/keys = {
 "update": 0,
 "values": [ Vector2( -2.70178, 29.7198 ), Vector2( -1.62106, 12.9686 ), Vector2( -1.9813, 43.7691 ), Vector2( -4.32286, 136.171 ) ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("Free/free_body:z_index")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, -10 ]
+}
 
 [sub_resource type="Animation" id=5]
 
@@ -472,6 +484,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
+visible = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Sprite" index="0"]
@@ -528,18 +541,19 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Free" type="Node2D" parent="." index="2"]
 
-visible = false
 position = Vector2( -2.70178, 29.7198 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Free" index="0"]
+
+_sections_unfolded = [ "Z Index" ]
 
 [node name="free_body" type="Sprite" parent="Free" index="1"]
 
 position = Vector2( -0.216494, 1.23753 )
 scale = Vector2( 0.316412, 0.316 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Z Index" ]
 
 [node name="free_tail" type="Sprite" parent="Free/free_body" index="0"]
 
@@ -619,7 +633,7 @@ position = Vector2( 3.15125, 8.69749 )
 scale = Vector2( 0.9, 0.9 )
 z_index = 5
 lifetime = 2.0
-_sections_unfolded = [ "Process Material", "Time", "Transform", "Z Index" ]
+_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Z Index" ]
 
 [node name="unfreezePlayer" type="Timer" parent="." index="6"]
 
