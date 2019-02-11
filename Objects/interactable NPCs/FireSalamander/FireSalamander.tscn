@@ -119,7 +119,7 @@ tracks/6/keys = {
 
 [node name="FireSalamander" type="Node2D" index="0"]
 
-z_index = -7
+z_index = 60
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 objToDestroyPath = null

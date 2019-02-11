@@ -159,8 +159,9 @@ tracks/9/keys = {
 ]]
 
 scale = Vector2( 1.56875, 1.56875 )
+z_index = 30
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 movespeed = 2
 
 [node name="EnemyPath" type="Path2D" parent="." index="0"]

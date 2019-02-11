@@ -31,7 +31,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 position = Vector2( 278.307, -291.202 )
 scale = Vector2( 2.99633, 1.6584 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="stump" type="Sprite" parent="stump m 8" index="1"]
 
@@ -59,7 +59,7 @@ shape = SubResource( 1 )
 
 [node name="StoneBigA" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 98.8678, -8.91158 )
+position = Vector2( 100.059, -12.8837 )
 scale = Vector2( 0.68385, 0.68385 )
 
 [node name="new tiles" type="Node2D" parent="." index="3"]

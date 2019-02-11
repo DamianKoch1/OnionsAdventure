@@ -8,11 +8,12 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 936.576 )
 
-[node name="Checkpoint" type="Area2D" index="0"]
+[node name="Checkpoint" type="Area2D"]
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.648227, 0.648227 )
-z_index = -5
+z_index = 50
+z_as_relative = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -27,15 +28,16 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 position = Vector2( -0.112274, 41.5457 )
 scale = Vector2( 0.299415, 0.2835 )
+z_index = 50
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 position = Vector2( 0, -256.818 )
 scale = Vector2( 1.33333, 0.591497 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [connection signal="body_entered" from="." to="." method="_on_Checkpoint_body_entered"]
 

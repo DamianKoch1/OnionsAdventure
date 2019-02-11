@@ -13,20 +13,21 @@ extents = Vector2( 2514.69, 8264.78 )
 custom_solver_bias = 0.0
 extents = Vector2( 1770.14, 5857.99 )
 
-[node name="ThornsUp" type="Node2D" groups=[
+[node name="ThornsUp" type="Node2D" index="0" groups=[
 "rayIgnore",
 ]]
 
-z_index = -5
+z_index = 30
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 position = Vector2( 0, 0.0290004 )
 scale = Vector2( 0.524075, 0.466064 )
+z_index = 30
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Collider" type="StaticBody2D" parent="Sprite" index="0" groups=[
 "rayIgnore",

@@ -4,11 +4,11 @@
 [ext_resource path="res://Objects/Obstacles/Stones/StoneSmall4A.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=3]
 
-[node name="smallstone2" type="Node2D"]
+[node name="smallstone2" type="Node2D" index="0"]
 
 [node name="stump s 2" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 120, 200 )
+position = Vector2( 121.618, 198.059 )
 
 [node name="StoneSmall4A" parent="." index="1" instance=ExtResource( 2 )]
 
