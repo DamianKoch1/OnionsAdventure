@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Onion_climbing.ogg-f4e9fd0f73c5fa4071ce3bf0f6218c38.oggstr"
+
+[deps]
+
+source_file="res://Player/SFX/Onion_climbing.ogg"
+dest_files=[ "res://.import/Onion_climbing.ogg-f4e9fd0f73c5fa4071ce3bf0f6218c38.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

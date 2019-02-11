@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=1]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/feet_b_sala.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_FlameVFX.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_FlameVFX.tres" type="Material" id=13]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_horizontal_FlameVFX.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/thorns_burning.ogg" type="AudioStream" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -127,6 +128,7 @@ useHorizontalFlames = false
 
 [node name="FireSalamander" type="StaticBody2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -251,17 +253,30 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="VerticalFlames" parent="." index="3" instance=ExtResource( 12 )]
+[node name="Flames" type="Node2D" parent="." index="3"]
+
+[node name="VerticalFlames" parent="Flames" index="0" instance=ExtResource( 12 )]
 
 z_index = 5
 process_material = ExtResource( 13 )
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
 
-[node name="HorizontalFlames" parent="." index="4" instance=ExtResource( 14 )]
+[node name="HorizontalFlames" parent="Flames" index="1" instance=ExtResource( 14 )]
 
 scale = Vector2( 1.52718, 1 )
 z_index = 5
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="burningSFX" type="AudioStreamPlayer2D" parent="Flames" index="2"]
+
+stream = ExtResource( 15 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="body_entered" from="FireSalamander/Trigger" to="." method="_on_FireStoneTrigger_body_entered"]
 
