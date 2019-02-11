@@ -460,7 +460,7 @@ tracks/4/keys = {
 "values": [ 0.0, -14.3794, -0.134704, 13.888, 0.0, -14.3794, 0.0 ]
 }
 
-[node name="trappedNPC" type="Node2D" groups=[
+[node name="trappedNPC" type="Node2D" index="0" groups=[
 "trappedNPCs",
 ]]
 
@@ -486,7 +486,6 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
-visible = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Sprite" index="0"]
@@ -544,6 +543,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Free" type="Node2D" parent="." index="2"]
 
 editor/display_folded = true
+visible = false
 position = Vector2( -2.70178, 29.7198 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -555,7 +555,7 @@ _sections_unfolded = [ "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( -0.216494, 1.23753 )
-scale = Vector2( 0.316412, 0.316 )
+scale = Vector2( 0.316412, 0.316412 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Z Index" ]
 
@@ -585,7 +585,6 @@ _sections_unfolded = [ "Visibility" ]
 [node name="free_face" type="Sprite" parent="Free/free_body" index="3"]
 
 position = Vector2( -24.0069, -0.386612 )
-scale = Vector2( 0.646812, 1 )
 texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -604,10 +603,9 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="free_heart" type="Sprite" parent="Free/free_body" index="6"]
 
-modulate = Color( 1, 1, 1, 0 )
 show_behind_parent = true
-position = Vector2( -20.3492, -156.667 )
-rotation = 0.265255
+position = Vector2( 5.70764, -3.16022 )
+rotation = -0.0572072
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 15 )
 _sections_unfolded = [ "Visibility" ]
