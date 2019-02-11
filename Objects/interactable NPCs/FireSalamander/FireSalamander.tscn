@@ -2,30 +2,34 @@
 
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.gd" type="Script" id=1]
 [ext_resource path="res://Objects/interactable NPCs/FireSalamander/feet_b_sala.png" type="Texture" id=2]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/body_sala.png" type="Texture" id=3]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/leaf_b_sala.png" type="Texture" id=4]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/leaf_f_sala.png" type="Texture" id=5]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/fire_sala.png" type="Texture" id=6]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/tongue_sala.png" type="Texture" id=7]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/feet_f_sala.png" type="Texture" id=8]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/jumped on.tres" type="Animation" id=9]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/Fire_Salamander_FlameVFX.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/fire_salamaber_spits.ogg" type="AudioStream" id=11]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_FlameVFX.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_FlameVFX.tres" type="Material" id=13]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_horizontal_FlameVFX.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/leaf_b_sala.png" type="Texture" id=3]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/leaf_f_sala.png" type="Texture" id=4]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/fire_sala.png" type="Texture" id=5]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/tongue_sala.png" type="Texture" id=6]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/feet_f_sala.png" type="Texture" id=7]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/jumped on.tres" type="Animation" id=8]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/Fire_Salamander_FlameVFX.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/fire_salamaber_spits.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_FlameVFX.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_FlameVFX.tres" type="Material" id=12]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/Burning_Thorns_horizontal_FlameVFX.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 13, 13 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="StreamTexture" id=2]
+
+flags = 0
+load_path = "res://.import/fasi_body.png-98cb1eff99bbd46aed477d2ca2a95dd9.stex"
+
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.8311, 11.5305 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 resource_name = "spitFire"
 length = 0.4
@@ -156,28 +160,28 @@ texture = ExtResource( 2 )
 
 position = Vector2( 19.7114, 13.5294 )
 scale = Vector2( 0.284556, 0.288274 )
-texture = ExtResource( 3 )
+texture = SubResource( 2 )
 _sections_unfolded = [ "Animation", "Offset", "Visibility" ]
 
 [node name="leaf_b_sala" type="Sprite" parent="FireSalamander/FireSalamander/body" index="0"]
 
 show_behind_parent = true
 position = Vector2( 74.3022, -41.7246 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 offset = Vector2( -24.6138, -11.197 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="leaf_f_sala" type="Sprite" parent="FireSalamander/FireSalamander/body" index="1"]
 
 position = Vector2( 69.786, -38.1582 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 offset = Vector2( -28.6587, -14.6834 )
 
 [node name="fire_sala" type="Sprite" parent="FireSalamander/FireSalamander/body" index="2"]
 
 show_behind_parent = true
 position = Vector2( -104.54, -2.94026 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 offset = Vector2( -16.1216, -26.7866 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -186,14 +190,14 @@ _sections_unfolded = [ "Visibility" ]
 visible = false
 position = Vector2( 51.0342, 19.8339 )
 scale = Vector2( 0.284556, 0.288274 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="feet_f_sala" type="Sprite" parent="FireSalamander/FireSalamander" index="3"]
 
 position = Vector2( 22.528, 29.9806 )
 scale = Vector2( 0.284556, 0.288274 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="Trigger" type="Area2D" parent="FireSalamander" index="2"]
 
@@ -212,7 +216,7 @@ __meta__ = {
 
 position = Vector2( 16, -14.9718 )
 scale = Vector2( 1.23077, 1.13804 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -225,11 +229,11 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/burnObj = ExtResource( 9 )
-anims/spitFire = SubResource( 5 )
+anims/burnObj = ExtResource( 8 )
+anims/spitFire = SubResource( 4 )
 blend_times = [  ]
 
-[node name="FireCone" parent="." index="2" instance=ExtResource( 10 )]
+[node name="FireCone" parent="." index="2" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( 47.7602, 18.0499 )
@@ -239,7 +243,7 @@ _sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "T
 [node name="FireSFX" type="AudioStreamPlayer2D" parent="FireCone" index="0"]
 
 position = Vector2( -2.27882, -0.500687 )
-stream = ExtResource( 11 )
+stream = ExtResource( 10 )
 volume_db = 3.0
 pitch_scale = 1.0
 autoplay = false
@@ -251,13 +255,13 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="VerticalFlames" parent="." index="3" instance=ExtResource( 12 )]
+[node name="VerticalFlames" parent="." index="3" instance=ExtResource( 11 )]
 
 z_index = 5
-process_material = ExtResource( 13 )
+process_material = ExtResource( 12 )
 _sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
 
-[node name="HorizontalFlames" parent="." index="4" instance=ExtResource( 14 )]
+[node name="HorizontalFlames" parent="." index="4" instance=ExtResource( 13 )]
 
 scale = Vector2( 1.52718, 1 )
 z_index = 5
