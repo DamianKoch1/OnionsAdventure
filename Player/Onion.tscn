@@ -28,7 +28,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 14.0286, 21.1175 )
 
-[node name="Onion" type="KinematicBody2D" groups=[
+[node name="Onion" type="KinematicBody2D" index="0" groups=[
 "Player",
 ]]
 
@@ -84,7 +84,7 @@ area_mask = 1
 [node name="climb" type="AudioStreamPlayer2D" parent="SFX" index="1"]
 
 stream = ExtResource( 3 )
-volume_db = -5.0
+volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
@@ -95,7 +95,7 @@ area_mask = 1
 [node name="jump" parent="SFX" index="2" instance=ExtResource( 4 )]
 
 stream = ExtResource( 5 )
-volume_db = -5.0
+volume_db = 0.0
 
 [node name="footstep" parent="SFX" index="3" instance=ExtResource( 4 )]
 
@@ -117,7 +117,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="OnionBody" type="Sprite" parent="Onion/Colisionposition/Höhenposition" index="0"]
 
 position = Vector2( 3.68967, -4.13689 )
-scale = Vector2( 0.5, 0.43317 )
+scale = Vector2( 0.5, 0.449853 )
 z_index = 1
 texture = ExtResource( 7 )
 offset = Vector2( -6.37161, -58.5187 )
@@ -126,7 +126,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="OnionHair" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
 position = Vector2( 0.759048, -92.0257 )
-rotation = 0.934091
+rotation = 0.726095
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 8 )
 offset = Vector2( -1.19385, -22.9981 )
@@ -149,7 +149,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 [node name="OnionEarL" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
 position = Vector2( -6.44182, -95.2643 )
-rotation = 0.139178
+rotation = 0.280029
 scale = Vector2( 1.00907, 1.10266 )
 z_index = -2
 texture = ExtResource( 11 )
@@ -159,7 +159,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 [node name="OnionTail" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
 position = Vector2( -36.8987, -12.9473 )
-rotation = -0.324559
+rotation = -0.142546
 scale = Vector2( 1.00228, 1.10883 )
 z_index = -2
 texture = ExtResource( 12 )
@@ -169,7 +169,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="OnionEarR" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
 position = Vector2( -15.4798, -94.3764 )
-rotation = -0.651636
+rotation = -0.574186
 scale = Vector2( 1.03379, 1.07951 )
 z_index = -2
 texture = ExtResource( 13 )
@@ -184,7 +184,7 @@ base_path = NodePath("../..")
 active = true
 data = {
 "active": true,
-"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1 ],
+"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "id": "scale",
@@ -202,6 +202,16 @@ data = {
 "position": Vector2( 688, 102 ),
 "type": "output"
 }, {
+"id": "idle/walk",
+"position": Vector2( 207, 91 ),
+"transitions": [ {
+"auto_advance": false
+}, {
+"auto_advance": false
+} ],
+"type": "transition",
+"xfade": 0.3
+}, {
 "filter": [  ],
 "from": "Onion_JumpDown",
 "id": "jumpdown",
@@ -214,15 +224,16 @@ data = {
 "position": Vector2( 77, 356 ),
 "type": "animation"
 }, {
-"id": "idle/walk",
-"position": Vector2( 207, 91 ),
-"transitions": [ {
-"auto_advance": false
-}, {
-"auto_advance": false
-} ],
-"type": "transition",
-"xfade": 0.3
+"autorestart": false,
+"autorestart_delay": 1.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.0,
+"fade_out": 0.1,
+"filter": [  ],
+"id": "fallOneshot",
+"mix": false,
+"position": Vector2( 541, 92 ),
+"type": "oneshot"
 }, {
 "autorestart": false,
 "autorestart_delay": 0.0,
@@ -233,17 +244,6 @@ data = {
 "id": "jumpOneshot",
 "mix": false,
 "position": Vector2( 362, 94 ),
-"type": "oneshot"
-}, {
-"autorestart": false,
-"autorestart_delay": 1.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.0,
-"fade_out": 0.1,
-"filter": [  ],
-"id": "fallOneshot",
-"mix": false,
-"position": Vector2( 541, 92 ),
 "type": "oneshot"
 }, {
 "filter": [  ],
@@ -280,6 +280,10 @@ texture = ExtResource( 19 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="GlowbugVFX" parent="." index="4" instance=ExtResource( 20 )]
+
+z_index = -100
+z_as_relative = false
+_sections_unfolded = [ "Process Material", "Transform", "Z Index" ]
 
 [node name="landingTest" parent="." index="5" instance=ExtResource( 21 )]
 
