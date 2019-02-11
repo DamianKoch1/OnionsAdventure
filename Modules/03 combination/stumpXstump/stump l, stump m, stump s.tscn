@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.4254 )
 
-[node name="stump l, stump m, stump s" type="Node2D"]
+[node name="stump l, stump m, stump s" type="Node2D" index="0"]
 
 [node name="stump l 8" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -56,7 +56,7 @@ shape = SubResource( 1 )
 
 [node name="stump s 1" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( -169.603, 107.547 )
+position = Vector2( -169.927, 103.018 )
 
 [node name="new tiles" type="Node2D" parent="." index="3"]
 

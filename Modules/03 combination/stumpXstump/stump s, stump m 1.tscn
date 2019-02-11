@@ -13,7 +13,7 @@ extents = Vector2( 10, 11.4254 )
 
 [node name="stump s 1" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -101.463, 107.803 )
+position = Vector2( -99.6706, 104.218 )
 
 [node name="stump m 7" type="Node2D" parent="." index="1"]
 

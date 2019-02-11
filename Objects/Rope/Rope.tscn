@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 7.26522 )
 
-[node name="Rope" type="Node2D" index="0" groups=[
+[node name="Rope" type="Node2D" groups=[
 "rayIgnore",
 ]]
 
