@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Camera/Spiderbuddy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Camera/Animals_Trapped.png" type="Texture" id=4]
-[ext_resource path="res://Camera/Animals_Free.png" type="Texture" id=5]
+[ext_resource path="res://Camera/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Camera/HUD/Animals_Trapped.png" type="Texture" id=4]
+[ext_resource path="res://Camera/HUD/Animals_Free.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=7]
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]

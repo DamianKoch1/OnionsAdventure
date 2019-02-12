@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Animals_Free.png-145cf5faeeeadb55587af94c3bab8376.stex"
+path="res://.import/Animals_Trapped.png-e6f7e1a2e6fee20162b592b808829b06.stex"
 
 [deps]
 
-source_file="res://Camera/Animals_Free.png"
-dest_files=[ "res://.import/Animals_Free.png-145cf5faeeeadb55587af94c3bab8376.stex" ]
+source_file="res://Camera/HUD/Animals_Trapped.png"
+dest_files=[ "res://.import/Animals_Trapped.png-e6f7e1a2e6fee20162b592b808829b06.stex" ]
 
 [params]
 
