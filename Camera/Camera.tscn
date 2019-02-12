@@ -42,7 +42,7 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Pause", "Tra
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
 
-layer = 1
+layer = 2
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
