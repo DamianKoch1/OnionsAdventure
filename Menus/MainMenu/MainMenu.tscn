@@ -92,7 +92,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Mouse", "Pause" ]
+_sections_unfolded = [ "Focus", "Mouse", "Pause" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
@@ -142,6 +142,8 @@ margin_left = -310.0
 margin_top = 13.0
 margin_right = -118.0
 margin_bottom = 45.0
+focus_neighbour_top = NodePath("../QuitButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="PlayButton" index="0"]
 
@@ -189,6 +191,8 @@ margin_left = -310.0
 margin_top = 141.0
 margin_right = -118.0
 margin_bottom = 173.0
+focus_neighbour_bottom = NodePath("../PlayButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="QuitButton" index="0"]
 
@@ -198,6 +202,22 @@ text = "quit"
 [node name="YesNoOverlayQuit" parent="." index="7" instance=ExtResource( 5 )]
 
 visible = false
+
+[node name="YesButton" parent="YesNoOverlayQuit" index="2"]
+
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../NoButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
+
+[node name="NoButton" parent="YesNoOverlayQuit" index="3"]
+
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../YesButton")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
 
@@ -237,4 +257,5 @@ margin_bottom = 280.0
 [editable path="OptionsButton"]
 [editable path="CreditsButton"]
 [editable path="QuitButton"]
+[editable path="YesNoOverlayQuit"]
 [editable path="StartFadeIn"]

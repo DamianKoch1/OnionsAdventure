@@ -12,7 +12,7 @@ extents = Vector2( 363.126, 640.44 )
 [node name="stump m 7" type="Node2D" index="0"]
 
 scale = Vector2( 0.0765978, 0.0959247 )
-z_index = -5
+z_index = 5
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ast 3" parent="." index="0" instance=ExtResource( 1 )]
@@ -24,13 +24,14 @@ scale = Vector2( 4.00471, 1.96351 )
 
 position = Vector2( 278.307, -291.202 )
 scale = Vector2( 2.99633, 1.6584 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="stump" type="Sprite" parent="." index="2"]
 
 scale = Vector2( 3.283, 2.90836 )
+z_index = 50
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="stump" index="0"]
 

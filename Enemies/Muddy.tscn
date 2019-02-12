@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Enemies/Muddy.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Enemy/feet_b_b.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Enemies/Enemy/feet_b_a.png" type="Texture" id=6]
 [ext_resource path="res://Enemies/Enemy/feet_f_a.png" type="Texture" id=7]
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Player/SFX/footstep.wav" type="AudioStream" id=9]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -158,8 +159,9 @@ tracks/9/keys = {
 ]]
 
 scale = Vector2( 1.56875, 1.56875 )
+z_index = 30
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 movespeed = 2
 
 [node name="EnemyPath" type="Path2D" parent="." index="0"]
@@ -279,7 +281,12 @@ playback_speed = 1.0
 anims/Walk = SubResource( 4 )
 blend_times = [  ]
 
-[node name="muddySound" parent="EnemyPath/Enemy" index="3" instance=ExtResource( 8 )]
+[node name="footsteps" parent="EnemyPath/Enemy" index="3" instance=ExtResource( 8 )]
+
+stream = ExtResource( 9 )
+max_distance = 1000.0
+startPitch = 0.8
+pitchRange = 0.3
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyPath" index="1"]
 

@@ -95,7 +95,7 @@ extents = Vector2( 74.6466, 35.155 )
 ]]
 
 scale = Vector2( 0.692182, 0.692182 )
-z_index = -1000
+z_index = -10
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 diggedOut = false
@@ -135,7 +135,7 @@ texture = ExtResource( 2 )
 position = Vector2( -0.82462, -5.44734 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="beak_b" type="Sprite" parent="Enemy/Sprites/body_m" index="0"]
 
@@ -198,7 +198,6 @@ autostart = true
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
 
 position = Vector2( -3.96112e-006, 2.06667e-006 )
-scale = Vector2( 1, 1 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

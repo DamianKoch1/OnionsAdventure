@@ -6,14 +6,15 @@
 
 position = Vector2( 0, 28.3229 )
 scale = Vector2( 0.0556382, 0.0574858 )
-z_index = -5
+z_index = 50
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 scale = Vector2( 4.43327, 4.84153 )
+z_index = 50
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
 

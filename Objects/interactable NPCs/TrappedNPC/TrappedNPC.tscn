@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.gd" type="Script" id=1]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/bunny_net.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/destroy_spider_web.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/WebDestroyedDustVFX.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/onCollect.tres" type="Animation" id=19]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/help_me_03.ogg" type="AudioStream" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -392,6 +393,18 @@ tracks/21/keys = {
 "update": 1,
 "values": [ 0, -10 ]
 }
+tracks/22/type = "value"
+tracks/22/path = NodePath(".:z_index")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 80, -10 ]
+}
 
 [sub_resource type="Animation" id=5]
 
@@ -463,12 +476,13 @@ tracks/4/keys = {
 "trappedNPCs",
 ]]
 
-z_index = -5
+z_index = 80
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -541,8 +555,9 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 visible = false
+modulate = Color( 1, 1, 1, 0.999998 )
 position = Vector2( -2.70178, 29.7198 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Free" index="0"]
 
@@ -601,10 +616,9 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="free_heart" type="Sprite" parent="Free/free_body" index="6"]
 
-modulate = Color( 1, 1, 1, 0 )
 show_behind_parent = true
-position = Vector2( -20.3492, -156.667 )
-rotation = 0.265255
+position = Vector2( 5.70764, -3.16022 )
+rotation = -0.0572072
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 15 )
 _sections_unfolded = [ "Visibility" ]
@@ -653,8 +667,25 @@ playback_speed = 1.0
 anims/onCollect = ExtResource( 19 )
 blend_times = [  ]
 
+[node name="help" type="AudioStreamPlayer2D" parent="." index="8"]
+
+stream = ExtResource( 20 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="9"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 [connection signal="timeout" from="unfreezePlayer" to="." method="_on_unfreezePlayer_timeout"]
+
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
 
 

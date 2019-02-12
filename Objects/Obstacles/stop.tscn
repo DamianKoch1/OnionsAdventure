@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 14.8131, 23.1278 )
+
+[node name="stop" type="Node2D"]
+
+editor/display_folded = true
+
+[node name="collider" type="Sprite" parent="." index="0"]
+
+position = Vector2( -438.208, 8.24515 )
+scale = Vector2( 0.207837, 0.245963 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collider" index="0"]
+
+position = Vector2( -487.288, -321.291 )
+scale = Vector2( 0.476135, 0.426104 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collider/StaticBody2D2" index="0"]
+
+position = Vector2( 1019.23, 801.484 )
+scale = Vector2( 33.1696, 96.2157 )
+shape = SubResource( 1 )
+
+
