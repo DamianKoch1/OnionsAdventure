@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Background/Background final 2.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Background/Semi Background Tree Provisoric.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Background/Static/Tree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Background/Front Layer Bottom Camera Cage.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Background/Front Layer Top Camera Cage.png" type="Texture" id=4]
 
@@ -28,9 +28,10 @@ _sections_unfolded = [ "Motion" ]
 
 [node name="Sprite" type="Sprite" parent="LastLayer" index="0"]
 
-position = Vector2( 390.665, 95.535 )
-scale = Vector2( 0.644011, 0.617126 )
+position = Vector2( 380.965, 98.1883 )
+scale = Vector2( 0.672944, 0.622318 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Static" type="ParallaxLayer" parent="." index="1"]
 
@@ -39,11 +40,7 @@ motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion" ]
 
-[node name="Sprite" type="Sprite" parent="Static" index="0"]
-
-position = Vector2( 1024, 352 )
-scale = Vector2( 0.481571, 0.461467 )
-texture = ExtResource( 2 )
+[node name="Tree" parent="Static" index="0" instance=ExtResource( 2 )]
 
 [node name="Foreground" type="ParallaxBackground" parent="." index="2"]
 
@@ -71,9 +68,12 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Foreground/Bottom" index="0"]
 
-position = Vector2( 365.607, 102.93 )
+position = Vector2( 1442.63, 114.432 )
 scale = Vector2( 0.605339, 0.580068 )
 texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( -672, 56, 7344, 284 )
+_sections_unfolded = [ "Region" ]
 
 [node name="Top" type="ParallaxLayer" parent="Foreground" index="1"]
 
@@ -84,8 +84,11 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Foreground/Top" index="0"]
 
-position = Vector2( 256, -96 )
-scale = Vector2( 0.505339, 0.484243 )
+position = Vector2( 700.638, -117.911 )
+scale = Vector2( 0.391802, 0.375445 )
 texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( -84, 12, 6756, 412 )
+_sections_unfolded = [ "Region" ]
 
 
