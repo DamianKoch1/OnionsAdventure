@@ -7,7 +7,7 @@
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 
-[node name="PauseMenu" type="Container"]
+[node name="PauseMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -133,41 +133,9 @@ text = "main menu"
 editor/display_folded = true
 visible = false
 
-[node name="YesButton" parent="YesNoOverlayMainMenu" index="2"]
-
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath(".")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../NoButton")
-_sections_unfolded = [ "Focus", "Rect", "Textures" ]
-
-[node name="NoButton" parent="YesNoOverlayMainMenu" index="3"]
-
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../YesButton")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath(".")
-_sections_unfolded = [ "Focus", "Rect", "Textures" ]
-
 [node name="YesNoOverlayRestart" parent="." index="7" instance=ExtResource( 5 )]
 
 visible = false
-
-[node name="YesButton" parent="YesNoOverlayRestart" index="2"]
-
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath(".")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../NoButton")
-_sections_unfolded = [ "Focus", "Rect", "Textures" ]
-
-[node name="NoButton" parent="YesNoOverlayRestart" index="3"]
-
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../YesButton")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath(".")
-_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
 
