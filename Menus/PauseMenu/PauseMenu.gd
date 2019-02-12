@@ -31,20 +31,24 @@ func _process(delta):
 					keyboardButtonFocus = false
 			else:
 				$OptionsOverlay.hide()
+				keyboardButtonFocus = false
 		else:
 			cancel()
-			$ResumeButton.grab_focus()
+			keyboardButtonFocus = false
+			
 	if Input.is_action_just_pressed("ui_up") || Input.is_action_just_pressed("ui_down"):
 		if paused == true && keyboardButtonFocus == false:
+			keyboardButtonFocus = true
 			if $YesNoOverlayMainMenu.visible == true:
 				$YesNoOverlayMainMenu/NoButton.grab_focus()
 			elif $YesNoOverlayRestart.visible == true:
 				$YesNoOverlayRestart/NoButton.grab_focus()
 			elif $OptionsOverlay.visible == true:
 				$OptionsOverlay/BackButton.grab_focus()
+				keyboardButtonFocus = false
 			else:
 				$ResumeButton.grab_focus()
-			keyboardButtonFocus = true
+			
 
 func _on_ResumeButton_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -62,6 +66,7 @@ func _on_RestartButton_pressed():
 func _on_OptionsButton_pressed():
 	UISelect.playing = true
 	$OptionsOverlay.show()
+	keyboardButtonFocus = false
 
 func _on_MainMenuButton_pressed():
 	UISelect.playing = true
