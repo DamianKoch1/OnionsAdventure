@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spiddy_leaf1.png-9f8f4d3e830cff30da3ca093731338ed.stex"
+path="res://.import/Animals_Free.png-c2df1d0534566018db5364739ba605a5.stex"
 
 [deps]
 
-source_file="res://Camera/spiddy_leaf1.png"
-dest_files=[ "res://.import/spiddy_leaf1.png-9f8f4d3e830cff30da3ca093731338ed.stex" ]
+source_file="res://Camera/HUD/Animals_Free.png"
+dest_files=[ "res://.import/Animals_Free.png-c2df1d0534566018db5364739ba605a5.stex" ]
 
 [params]
 

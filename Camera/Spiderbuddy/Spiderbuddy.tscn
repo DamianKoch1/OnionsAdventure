@@ -1,14 +1,15 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Camera/Spiderbuddy.gd" type="Script" id=1]
-[ext_resource path="res://Camera/spiddy_net.png" type="Texture" id=2]
-[ext_resource path="res://Camera/spiddy_body.png" type="Texture" id=3]
-[ext_resource path="res://Camera/spiddy_feet2.png" type="Texture" id=4]
-[ext_resource path="res://Camera/spiddy_head.png" type="Texture" id=5]
-[ext_resource path="res://Camera/spiddy_leaf2.png" type="Texture" id=6]
-[ext_resource path="res://Camera/spiddy_leaf1.png" type="Texture" id=7]
-[ext_resource path="res://Camera/spiddy_feet1.png" type="Texture" id=8]
+[ext_resource path="res://Camera/Spiderbuddy/Spiderbuddy.gd" type="Script" id=1]
+[ext_resource path="res://Camera/Spiderbuddy/spiddy_net.png" type="Texture" id=2]
+[ext_resource path="res://Camera/Spiderbuddy/spiddy_body.png" type="Texture" id=3]
+[ext_resource path="res://Camera/Spiderbuddy/spiddy_feet2.png" type="Texture" id=4]
+[ext_resource path="res://Camera/Spiderbuddy/spiddy_head.png" type="Texture" id=5]
+[ext_resource path="res://Camera/Spiderbuddy/spiddy_leaf2.png" type="Texture" id=6]
+[ext_resource path="res://Camera/Spiderbuddy/spiddy_leaf1.png" type="Texture" id=7]
+[ext_resource path="res://Camera/Spiderbuddy/spiddy_feet1.png" type="Texture" id=8]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=9]
+
 
 [sub_resource type="Animation" id=1]
 

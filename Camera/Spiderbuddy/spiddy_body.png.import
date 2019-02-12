@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Animals_Trapped.png-1c343e4e554b64b84a635f5c10ef0f01.stex"
+path="res://.import/spiddy_body.png-101113e1ce2458f7da04f62551411b08.stex"
 
 [deps]
 
-source_file="res://Camera/Animals_Trapped.png"
-dest_files=[ "res://.import/Animals_Trapped.png-1c343e4e554b64b84a635f5c10ef0f01.stex" ]
+source_file="res://Camera/Spiderbuddy/spiddy_body.png"
+dest_files=[ "res://.import/spiddy_body.png-101113e1ce2458f7da04f62551411b08.stex" ]
 
 [params]
 

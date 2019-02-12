@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spiddy_body.png-505ca5c0fefcd04b99ffa4775fe307c0.stex"
+path="res://.import/spiddy_feet2.png-563998be7eb5ad4a8e823715ba477ca8.stex"
 
 [deps]
 
-source_file="res://Camera/spiddy_body.png"
-dest_files=[ "res://.import/spiddy_body.png-505ca5c0fefcd04b99ffa4775fe307c0.stex" ]
+source_file="res://Camera/Spiderbuddy/spiddy_feet2.png"
+dest_files=[ "res://.import/spiddy_feet2.png-563998be7eb5ad4a8e823715ba477ca8.stex" ]
 
 [params]
 
