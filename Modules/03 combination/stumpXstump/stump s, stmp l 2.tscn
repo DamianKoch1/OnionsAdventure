@@ -8,11 +8,11 @@
 
 [node name="stump l 8" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 141.091, 38.9475 )
+position = Vector2( 139.771, 34.1061 )
 
 [node name="stump s 1" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -88.033, 109.788 )
+position = Vector2( -87.3859, 103.641 )
 
 [node name="new tiles" type="Node2D" parent="." index="2"]
 

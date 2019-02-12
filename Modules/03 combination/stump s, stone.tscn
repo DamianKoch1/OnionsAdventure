@@ -8,11 +8,11 @@
 
 [node name="stump s 1" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -80, 105.631 )
+position = Vector2( -80, 103.87 )
 
 [node name="StoneMedium2A" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 88.0139, 93.575 )
+position = Vector2( 90.6546, 86.5329 )
 scale = Vector2( 0.639739, 0.639739 )
 
 [node name="Node2D" type="Node2D" parent="." index="2"]

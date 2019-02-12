@@ -18,13 +18,14 @@ position = Vector2( 262.243, 0 )
 
 [node name="FireSalamander" parent="Movingplatform" index="3" instance=ExtResource( 2 )]
 
-position = Vector2( 3.90248, -67.7644 )
+position = Vector2( 4.34798, -56.7516 )
 scale = Vector2( 0.936583, 1.12941 )
 objToDestroyPath = NodePath("../../ThornsUp")
 
 [node name="ThornsUp" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 290, 70 )
+position = Vector2( 286.788, 79.8139 )
+scale = Vector2( 0.734577, 0.734577 )
 
 [node name="new tiles" type="Node2D" parent="." index="2"]
 

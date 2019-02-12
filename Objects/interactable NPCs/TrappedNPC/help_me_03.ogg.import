@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/help_me_03.ogg-0b2a73bbea210a5f730c74d03cf10457.oggstr"
+
+[deps]
+
+source_file="res://Objects/interactable NPCs/TrappedNPC/help_me_03.ogg"
+dest_files=[ "res://.import/help_me_03.ogg-0b2a73bbea210a5f730c74d03cf10457.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -13,7 +13,7 @@ use_filter = true
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
-[node name="PlayMenu" type="Container" index="0"]
+[node name="PlayMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -60,6 +60,8 @@ margin_left = -149.0
 margin_top = -133.0
 margin_right = 43.0
 margin_bottom = -101.0
+focus_neighbour_top = NodePath("../BackButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="NewGameButton" index="0"]
 
@@ -103,6 +105,8 @@ margin_left = -149.0
 margin_top = 59.0
 margin_right = 43.0
 margin_bottom = 91.0
+focus_neighbour_bottom = NodePath("../NewGameButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="BackButton" index="0"]
 

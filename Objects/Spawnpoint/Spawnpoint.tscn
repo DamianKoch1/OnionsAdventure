@@ -127,7 +127,7 @@ extents = Vector2( 117.754, 134.469 )
 
 position = Vector2( 16, 16 )
 scale = Vector2( 0.648227, 0.648227 )
-z_index = -5
+z_index = 50
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 

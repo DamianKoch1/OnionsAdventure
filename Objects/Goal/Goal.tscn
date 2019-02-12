@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Goal/End Level Crystal v2.png" type="Texture" id=2]
@@ -6,11 +6,13 @@
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=4]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=5]
 [ext_resource path="res://Objects/Spawnpoint/RespawnCrystalVFX.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Goal/Onion_yeah_1.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Objects/Goal/Onion_yeah_2.ogg" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 44.1856, 32 )
+extents = Vector2( 5.9448, 41.6136 )
 
 [sub_resource type="Curve" id=2]
 
@@ -250,12 +252,12 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Goal" type="Area2D" groups=[
+[node name="Goal" type="Area2D" index="0" groups=[
 "Persist",
 ]]
 
 scale = Vector2( 1.26161, 1.26161 )
-z_index = -5
+z_index = 50
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -311,6 +313,7 @@ _sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Vis
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
+editor/display_folded = true
 layer = 0
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -371,6 +374,30 @@ blend_times = [  ]
 
 position = Vector2( -2.72102, 11.2872 )
 scale = Vector2( 0.745897, 0.745897 )
+
+[node name="SFX" type="Node2D" parent="." index="6"]
+
+[node name="OnionYeah1" type="AudioStreamPlayer2D" parent="SFX" index="0"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="OnionYeah2" type="AudioStreamPlayer2D" parent="SFX" index="1"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="body_entered" from="." to="." method="_on_Goal_body_entered"]
 

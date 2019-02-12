@@ -10,13 +10,13 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 7.26522 )
 
-[node name="Rope" type="Node2D" index="0" groups=[
+[node name="Rope" type="Node2D" groups=[
 "rayIgnore",
 ]]
 
 position = Vector2( 144, 80 )
 scale = Vector2( 0.5, 7.5 )
-z_index = -6
+z_index = 70
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 swingDegrees = 30
@@ -27,8 +27,9 @@ mirrorSwing = false
 
 position = Vector2( -4.76837e-007, 14.9333 )
 scale = Vector2( 0.184971, 0.0339298 )
+z_index = 70
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="." index="1" groups=[
 "rayIgnore",
@@ -51,6 +52,7 @@ shape = SubResource( 1 )
 [node name="ropeSwing" parent="." index="2" instance=ExtResource( 3 )]
 
 stream = ExtResource( 4 )
+max_distance = 1000.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

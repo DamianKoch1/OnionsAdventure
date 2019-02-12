@@ -3,8 +3,8 @@ extends "res://Enemies/Enemy/Enemy.gd"
 onready var muddySound = $EnemyPath/Enemy/muddySound
 
 func _unique_process(delta):
-	if $EnemyPath/Enemy/muddySound.playing == false:
-		$EnemyPath/Enemy/muddySound.playRandomPitch()
+	if $EnemyPath/Enemy/footsteps.playing == false:
+		$EnemyPath/Enemy/footsteps.playRandomPitch()
 	i += delta*movespeed
 	if i >= 20*PI:
 		i = 0

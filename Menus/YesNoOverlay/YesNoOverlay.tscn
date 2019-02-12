@@ -75,6 +75,11 @@ margin_left = -78.0
 margin_top = -22.0
 margin_right = 146.0
 margin_bottom = 14.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../NoButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="YesButton" index="0"]
 
@@ -88,6 +93,11 @@ margin_left = -73.0
 margin_top = 21.0
 margin_right = 151.0
 margin_bottom = 57.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../YesButton")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="NoButton" index="0"]
 

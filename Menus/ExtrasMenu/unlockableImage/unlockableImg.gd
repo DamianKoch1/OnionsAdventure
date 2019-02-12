@@ -2,7 +2,9 @@ extends Node2D
 
 onready var dandelionText = $Overlay/Dandelions/Label
 onready var npcText = $Overlay/TrappedNPCs/Label
-onready var anim = $AnimationPlayer
+onready var anim = $unlock
+
+onready var expanded = false
 
 export var dandelionsNeeded = 0
 export var NPCsNeeded = 0
@@ -23,5 +25,17 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
-	if anim.is_playing() == false:
-		anim.play("expand")
+	#needs animationplayer attched when used in other scenes because animation is different for each concept
+	if has_node("AnimationPlayer"):
+		if $AnimationPlayer.is_playing() == false:
+			if expanded == false:
+				$AnimationPlayer.play("expand")
+				expanded = true
+			else:
+				$AnimationPlayer.play_backwards("expand")
+				expanded = false
+			
+		
+
+
+	

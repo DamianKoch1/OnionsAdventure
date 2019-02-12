@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Assets/Stones/Stone Inamovable New.png" type="Texture" id=1]
 
-[node name="StoneInamovable1A" type="Sprite"]
+[node name="StoneInamovable1A" type="Sprite" index="0"]
 
 position = Vector2( 128.054, 68.1367 )
 scale = Vector2( 0.674602, 0.674602 )
-z_index = -5
+z_index = 50
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 __meta__ = {
