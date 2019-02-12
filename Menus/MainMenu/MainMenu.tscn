@@ -203,22 +203,6 @@ text = "quit"
 
 visible = false
 
-[node name="YesButton" parent="YesNoOverlayQuit" index="2"]
-
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath(".")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../NoButton")
-_sections_unfolded = [ "Focus", "Rect", "Textures" ]
-
-[node name="NoButton" parent="YesNoOverlayQuit" index="3"]
-
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../YesButton")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath(".")
-_sections_unfolded = [ "Focus", "Rect", "Textures" ]
-
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
 
 visible = false
