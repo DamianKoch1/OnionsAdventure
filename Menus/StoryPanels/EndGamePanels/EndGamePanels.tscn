@@ -13,7 +13,7 @@
 [ext_resource path="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Intro.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Loop.ogg" type="AudioStream" id=12]
 
-[node name="EndGamePanels" type="Node" index="0"]
+[node name="EndGamePanels" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )

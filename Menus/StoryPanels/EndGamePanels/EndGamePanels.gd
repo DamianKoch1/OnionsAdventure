@@ -14,6 +14,8 @@ func _process(delta):
 		simulateClick()
 	if Input.is_action_just_pressed("ui_cancel"):
 		_on_SkipButton_pressed()
+	if Input.is_action_just_pressed("ui_up") || Input.is_action_just_pressed("ui_down") || Input.is_action_just_pressed("ui_left") || Input.is_action_just_pressed("ui_right"):
+			$SkipButton.grab_focus()
 
 #simulating a click using space/enter so coding panel order logic isnt necessary
 func simulateClick():
