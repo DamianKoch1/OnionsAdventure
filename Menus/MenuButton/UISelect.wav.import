@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/UISelect.wav-7b5f5ec35803b80fcc68983cc1ea84ba.sample"
+path="res://.import/UISelect.wav-22159fe206113f07f8c4d5ba9fd5713c.sample"
 
 [deps]
 
-source_file="res://Menus/UISelect.wav"
-dest_files=[ "res://.import/UISelect.wav-7b5f5ec35803b80fcc68983cc1ea84ba.sample" ]
+source_file="res://Menus/MenuButton/UISelect.wav"
+dest_files=[ "res://.import/UISelect.wav-22159fe206113f07f8c4d5ba9fd5713c.sample" ]
 
 [params]
 
