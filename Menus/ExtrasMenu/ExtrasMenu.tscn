@@ -1097,7 +1097,7 @@ tracks/4/keys = {
 "values": [ Vector2( -32, -32 ), Vector2( -384, -256 ) ]
 }
 
-[node name="Gallery" type="Container"]
+[node name="Gallery" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -1150,7 +1150,7 @@ text = "gallery"
 
 margin_left = -149.0
 margin_top = 123.0
-margin_right = 43.0
+margin_right = 11.0
 margin_bottom = 155.0
 focus_neighbour_left = NodePath("../BackButton")
 focus_neighbour_top = NodePath("../NextButton")

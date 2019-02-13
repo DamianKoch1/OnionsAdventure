@@ -13,7 +13,7 @@
 [ext_resource path="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Intro.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Loop.ogg" type="AudioStream" id=12]
 
-[node name="EndGamePanels" type="Node"]
+[node name="EndGamePanels" type="Node" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -87,14 +87,13 @@ texture = ExtResource( 6 )
 
 [node name="SkipButton" parent="." index="3" instance=ExtResource( 7 )]
 
-margin_left = 416.0
+margin_left = 480.0
 margin_top = 320.0
-margin_right = 608.0
+margin_right = 640.0
 margin_bottom = 356.0
 
 [node name="Label" parent="SkipButton" index="0"]
 
-modulate = Color( 1, 1, 1, 1 )
 text = "Skip"
 
 [node name="Label" type="Label" parent="." index="4"]

@@ -71,10 +71,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="YesButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -78.0
+editor/display_folded = true
+margin_left = -81.0
 margin_top = -22.0
-margin_right = 146.0
-margin_bottom = 14.0
+margin_right = 79.0
+margin_bottom = 10.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath(".")
@@ -89,10 +90,11 @@ text = "yes"
 
 [node name="NoButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -73.0
-margin_top = 21.0
-margin_right = 151.0
-margin_bottom = 57.0
+editor/display_folded = true
+margin_left = -81.0
+margin_top = 17.0
+margin_right = 79.0
+margin_bottom = 49.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../YesButton")
 focus_neighbour_right = NodePath(".")

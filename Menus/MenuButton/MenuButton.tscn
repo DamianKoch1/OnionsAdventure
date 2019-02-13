@@ -6,8 +6,9 @@
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Menus/MenuButton/UISelect.wav" type="AudioStream" id=5]
 
-[node name="ExtrasButton2" type="TextureButton"]
+[node name="ExtrasButton2" type="TextureButton" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -48,7 +49,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0.131042, 0.441406, 1 )
+custom_colors/font_color = Color( 0.0224609, 0.122482, 0.359375, 1 )
 custom_colors/font_color_shadow = Color( 0.273438, 0.273438, 0.273438, 1 )
 custom_constants/shadow_offset_x = 4
 custom_constants/shadow_offset_y = 5
