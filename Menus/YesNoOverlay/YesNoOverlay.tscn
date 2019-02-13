@@ -63,15 +63,19 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.67451, 0.701961, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "are you sure?"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants" ]
 
 [node name="YesButton" parent="." index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
+editor/display_folded = false
 margin_left = -81.0
 margin_top = -22.0
 margin_right = 79.0
@@ -86,11 +90,12 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 margin_left = 68.0
 margin_right = 1193.0
+custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
 text = "yes"
 
 [node name="NoButton" parent="." index="3" instance=ExtResource( 4 )]
 
-editor/display_folded = true
+editor/display_folded = false
 margin_left = -81.0
 margin_top = 17.0
 margin_right = 79.0
@@ -105,6 +110,7 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 margin_left = 68.0
 margin_right = 1193.0
+custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
 text = "no"
 
 [connection signal="pressed" from="YesButton" to="." method="_on_YesButton_pressed"]
