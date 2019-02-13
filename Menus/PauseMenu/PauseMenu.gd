@@ -1,6 +1,7 @@
 extends Container
 
 onready var paused = false
+onready var keyboardButtonFocus = false
 
 onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 
@@ -20,7 +21,6 @@ func _process(delta):
 				if paused == false:
 					paused = true
 					show()
-					$ResumeButton.grab_focus()
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					get_tree().paused = true
 				else:
@@ -28,14 +28,31 @@ func _process(delta):
 					hide()
 					get_tree().paused = false
 					Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+					keyboardButtonFocus = false
 			else:
 				$OptionsOverlay.hide()
-				$ResumeButton.grab_focus()
+				keyboardButtonFocus = false
 		else:
 			cancel()
-			$ResumeButton.grab_focus()
+			keyboardButtonFocus = false
+			
+	if Input.is_action_just_pressed("ui_up") || Input.is_action_just_pressed("ui_down"):
+		if paused == true && keyboardButtonFocus == false:
+			keyboardButtonFocus = true
+			if $YesNoOverlayMainMenu.visible == true:
+				$YesNoOverlayMainMenu/NoButton.grab_focus()
+			elif $YesNoOverlayRestart.visible == true:
+				$YesNoOverlayRestart/NoButton.grab_focus()
+			elif $OptionsOverlay.visible == true:
+				$OptionsOverlay/BackButton.grab_focus()
+				keyboardButtonFocus = false
+			else:
+				$ResumeButton.grab_focus()
+			
 
 func _on_ResumeButton_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	keyboardButtonFocus = false
 	UISelect.playing = true
 	paused = false
 	get_tree().paused = false
@@ -44,17 +61,17 @@ func _on_ResumeButton_pressed():
 func _on_RestartButton_pressed():
 	UISelect.playing = true
 	$YesNoOverlayRestart.show()
-	$YesNoOverlayRestart/NoButton.grab_focus()
+	keyboardButtonFocus = false
 
 func _on_OptionsButton_pressed():
 	UISelect.playing = true
 	$OptionsOverlay.show()
-	$OptionsOverlay/BackButton.grab_focus()
+	keyboardButtonFocus = false
 
 func _on_MainMenuButton_pressed():
 	UISelect.playing = true
 	$YesNoOverlayMainMenu.show()
-	$YesNoOverlayMainMenu/NoButton.grab_focus()
+	keyboardButtonFocus = false
 
 func loadMainMenu():
 	get_tree().paused = false
@@ -67,3 +84,4 @@ func restart():
 func cancel():
 	$YesNoOverlayMainMenu.hide()
 	$YesNoOverlayRestart.hide()
+	keyboardButtonFocus = false

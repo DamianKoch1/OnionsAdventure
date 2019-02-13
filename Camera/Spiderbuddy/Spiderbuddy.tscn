@@ -10,7 +10,6 @@
 [ext_resource path="res://Camera/Spiderbuddy/spiddy_feet1.png" type="Texture" id=8]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=9]
 
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "blabbing"

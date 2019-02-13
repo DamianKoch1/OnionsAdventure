@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/SpiderbuddyTrigger.gd" type="Script" id=1]
+[ext_resource path="res://Objects/interactable NPCs/SpiderbuddyTrigger/SpiderbuddyTrigger.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -14,6 +14,7 @@ extents = Vector2( 160, 96 )
 script = ExtResource( 1 )
 text = "insert text"
 spiderCooldown = 15
+spiderDelay = 0
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
@@ -29,6 +30,15 @@ audio_bus_name = "Master"
 
 shape = SubResource( 1 )
 
+[node name="Timer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 

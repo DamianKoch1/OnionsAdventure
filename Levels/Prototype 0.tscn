@@ -23,7 +23,8 @@
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Objects/interactable NPCs/Spiderbuddy/SpiderbuddyTrigger.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Objects/interactable NPCs/SpiderbuddyTrigger/SpiderbuddyTrigger.tscn" type="PackedScene" id=24]
+
 
 [node name="Prototype 0" type="Node2D" index="0"]
 
