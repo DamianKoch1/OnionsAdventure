@@ -141,7 +141,7 @@ _sections_unfolded = [ "Rect" ]
 
 margin_left = -278.0
 margin_top = 13.0
-margin_right = -86.0
+margin_right = -118.0
 margin_bottom = 45.0
 
 [node name="Label" parent="NewGameButton" index="0"]
@@ -154,7 +154,7 @@ text = "new game"
 visible = false
 margin_left = -278.0
 margin_top = 13.0
-margin_right = -86.0
+margin_right = -118.0
 margin_bottom = 45.0
 
 [node name="Label" parent="ContinueButton" index="0"]
@@ -166,7 +166,7 @@ text = "continue"
 
 margin_left = -278.0
 margin_top = 45.0
-margin_right = -86.0
+margin_right = -118.0
 margin_bottom = 77.0
 
 [node name="Label" parent="LevelSelectorButton" index="0"]
@@ -179,7 +179,7 @@ text = "levels"
 editor/display_folded = true
 margin_left = -278.0
 margin_top = 77.0
-margin_right = -86.0
+margin_right = -118.0
 margin_bottom = 109.0
 
 [node name="Label" parent="ExtrasButton" index="0"]
@@ -192,7 +192,7 @@ text = "gallery"
 editor/display_folded = true
 margin_left = -278.0
 margin_top = 109.0
-margin_right = -86.0
+margin_right = -118.0
 margin_bottom = 141.0
 
 [node name="Label" parent="OptionsButton" index="0"]
@@ -205,7 +205,7 @@ text = "options"
 editor/display_folded = true
 margin_left = -278.0
 margin_top = 141.0
-margin_right = -86.0
+margin_right = -118.0
 margin_bottom = 173.0
 
 [node name="Label" parent="CreditsButton" index="0"]
@@ -218,7 +218,7 @@ text = "credits"
 editor/display_folded = true
 margin_left = -278.0
 margin_top = 173.0
-margin_right = -86.0
+margin_right = -118.0
 margin_bottom = 205.0
 focus_neighbour_bottom = NodePath("../PlayButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
