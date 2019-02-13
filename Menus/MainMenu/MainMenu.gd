@@ -4,12 +4,12 @@ extends Container
 onready var playMenu = preload("res://Menus/PlayMenu/PlayMenu.tscn")
 onready var creditscreen = preload("res://Menus/MainMenu/CreditScreen.tscn")
 onready var extrasMenu = preload("res://Menus/ExtrasMenu/ExtrasMenu.tscn")
-onready var keyboardButtonFocus = false
 
 func _ready():
 	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
 	$YesNoOverlayQuit.connect("noPressed", self, "cancel")
 	$YesNoOverlayQuit.hide()
+	$PlayButton.grab_focus()
 	if MenuMusic.playing == false:
 		MenuMusic.fadeIn()
 	
@@ -20,18 +20,9 @@ func _process(delta):
 				_on_QuitButton_pressed()
 			else:
 				cancel()
-		keyboardButtonFocus = false
-	if Input.is_action_just_pressed("ui_up") || Input.is_action_just_pressed("ui_down") || Input.is_action_just_pressed("ui_right"):
-		if keyboardButtonFocus == false:
-			if $OptionsOverlay.visible == true:
-				$OptionsOverlay/BackButton.grab_focus()
-			elif $YesNoOverlayQuit.visible == true:
-				$YesNoOverlayQuit/NoButton.grab_focus()
-				keyboardButtonFocus = true
-			else:
 				$PlayButton.grab_focus()
-				keyboardButtonFocus = true
-
+		else:
+			$PlayButton.grab_focus()
 
 func _on_CreditsButton_pressed():
 	UISelect.playing = true
@@ -42,14 +33,14 @@ func _on_QuitButton_pressed():
 	if $YesNoOverlayQuit.visible == false:
 		UISelect.playing = true
 		$YesNoOverlayQuit.show()
-		keyboardButtonFocus = false
+		$YesNoOverlayQuit/NoButton.grab_focus()
 
 
 func _on_OptionsButton_pressed():
 	UISelect.playing = true
 	$YesNoOverlayQuit.hide()
 	$OptionsOverlay.show()
-	keyboardButtonFocus = false
+	$OptionsOverlay/BackButton.grab_focus()
 	
 
 func quit():
