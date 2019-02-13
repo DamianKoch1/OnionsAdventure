@@ -7,7 +7,7 @@
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 
-[node name="PauseMenu" type="Container" index="0"]
+[node name="PauseMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -130,7 +130,6 @@ text = "main menu"
 
 [node name="YesNoOverlayMainMenu" parent="." index="6" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 visible = false
 
 [node name="Label" parent="YesNoOverlayMainMenu" index="1"]

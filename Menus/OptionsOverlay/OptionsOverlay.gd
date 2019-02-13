@@ -1,39 +1,26 @@
 extends Container
 
 
-var savePath = "user://settings.cfg"
-var saveFile
 
 onready var masterSlider = $Volume/Master/MasterSlider
 onready var musicSlider = $Volume/Music/MusicSlider
 onready var sfxSlider = $Volume/SFX/SFXSlider
 
-#volume slider values
-var masterVol
-var musicVol
-var sfxVol
+
 
 
 func _ready():
-	saveFile = ConfigFile.new()
-	loadVolume()
+	SaveGame.loadVolume()
+	masterSlider.value = SaveGame.masterVol
+	musicSlider.value = SaveGame.musicVol
+	sfxSlider.value = SaveGame.sfxVol
 	hide()
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel") && visible == true:
 		_on_BackButton_pressed()
 
-func saveVolume():
-	saveFile.set_value("Volume", "master", masterSlider.value) 
-	saveFile.set_value("Volume", "music", musicSlider.value) 
-	saveFile.set_value("Volume", "sfx", sfxSlider.value) 
-	saveFile.save(savePath)
 
-func loadVolume():
-	saveFile.load(savePath)
-	masterSlider.value = saveFile.get_value("Volume", "master", 100)
-	musicSlider.value = saveFile.get_value("Volume", "music", 100)
-	sfxSlider.value = saveFile.get_value("Volume", "sfx", 100)
 
 func _on_BackButton_pressed():
 	UISelect.playing = true
@@ -42,12 +29,12 @@ func _on_BackButton_pressed():
 #set volume bus values if sliders change
 func _on_SFXSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SoundEffects"), sqrt(value*sfxSlider.max_value) - 100)
-	saveVolume()
+	SaveGame.saveVolume(masterSlider.value, musicSlider.value, sfxSlider.value)
 
 func _on_MusicSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), sqrt(value*musicSlider.max_value) - 100)
-	saveVolume()
+	SaveGame.saveVolume(masterSlider.value, musicSlider.value, sfxSlider.value)
 
 func _on_MasterSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), sqrt(value*masterSlider.max_value) - 100)
-	saveVolume()
+	SaveGame.saveVolume(masterSlider.value, musicSlider.value, sfxSlider.value)
