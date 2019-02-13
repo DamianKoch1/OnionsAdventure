@@ -5,7 +5,7 @@
 [ext_resource path="res://Menus/MenuButton/MenuButton.gd" type="Script" id=3]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=4]
 
-[node name="ExtrasButton2" type="TextureButton"]
+[node name="ExtrasButton2" type="TextureButton" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -58,5 +58,7 @@ max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
 
 [connection signal="mouse_entered" from="." to="." method="_on_ExtrasButton2_mouse_entered"]
+
+[connection signal="pressed" from="." to="." method="_on_ExtrasButton2_pressed"]
 
 

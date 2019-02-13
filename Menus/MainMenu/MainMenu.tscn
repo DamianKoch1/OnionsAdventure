@@ -74,7 +74,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -121,10 +121,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -568.0
-margin_top = -257.0
-margin_right = 431.0
-margin_bottom = 199.0
+margin_left = -513.0
+margin_top = -232.0
+margin_right = 172.0
+margin_bottom = 81.0
 rect_scale = Vector2( 0.35, 0.35 )
 rect_pivot_offset = Vector2( 435.896, 183.536 )
 rect_clip_content = false
@@ -133,64 +133,93 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 3 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
-[node name="PlayButton" parent="." index="2" instance=ExtResource( 4 )]
+[node name="NewGameButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -310.0
+margin_left = -278.0
 margin_top = 13.0
-margin_right = -118.0
+margin_right = -86.0
 margin_bottom = 45.0
-focus_neighbour_top = NodePath("../QuitButton")
-_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
-[node name="Label" parent="PlayButton" index="0"]
+[node name="Label" parent="NewGameButton" index="0"]
 
-text = "play"
+margin_right = 961.0
+text = "new game"
 
-[node name="ExtrasButton" parent="." index="3" instance=ExtResource( 4 )]
+[node name="ContinueButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -310.0
+visible = false
+margin_left = -278.0
+margin_top = 13.0
+margin_right = -86.0
+margin_bottom = 45.0
+
+[node name="Label" parent="ContinueButton" index="0"]
+
+margin_right = 961.0
+text = "continue"
+
+[node name="LevelSelectorButton" parent="." index="4" instance=ExtResource( 4 )]
+
+margin_left = -278.0
 margin_top = 45.0
-margin_right = -118.0
+margin_right = -86.0
 margin_bottom = 77.0
+
+[node name="Label" parent="LevelSelectorButton" index="0"]
+
+margin_right = 961.0
+text = "levels"
+
+[node name="ExtrasButton" parent="." index="5" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+margin_left = -278.0
+margin_top = 77.0
+margin_right = -86.0
+margin_bottom = 109.0
 
 [node name="Label" parent="ExtrasButton" index="0"]
 
 margin_right = 961.0
 text = "gallery"
 
-[node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
+[node name="OptionsButton" parent="." index="6" instance=ExtResource( 4 )]
 
-margin_left = -310.0
-margin_top = 77.0
-margin_right = -118.0
-margin_bottom = 109.0
+editor/display_folded = true
+margin_left = -278.0
+margin_top = 109.0
+margin_right = -86.0
+margin_bottom = 141.0
 
 [node name="Label" parent="OptionsButton" index="0"]
 
 margin_right = 533.0
 text = "options"
 
-[node name="CreditsButton" parent="." index="5" instance=ExtResource( 4 )]
+[node name="CreditsButton" parent="." index="7" instance=ExtResource( 4 )]
 
-margin_left = -310.0
-margin_top = 109.0
-margin_right = -118.0
-margin_bottom = 141.0
+editor/display_folded = true
+margin_left = -278.0
+margin_top = 141.0
+margin_right = -86.0
+margin_bottom = 173.0
 
 [node name="Label" parent="CreditsButton" index="0"]
 
 margin_right = 684.0
 text = "credits"
 
-[node name="QuitButton" parent="." index="6" instance=ExtResource( 4 )]
+[node name="QuitButton" parent="." index="8" instance=ExtResource( 4 )]
 
-margin_left = -310.0
-margin_top = 141.0
-margin_right = -118.0
-margin_bottom = 173.0
+editor/display_folded = true
+margin_left = -278.0
+margin_top = 173.0
+margin_right = -86.0
+margin_bottom = 205.0
 focus_neighbour_bottom = NodePath("../PlayButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
@@ -199,7 +228,7 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 margin_right = 533.0
 text = "quit"
 
-[node name="YesNoOverlayQuit" parent="." index="7" instance=ExtResource( 5 )]
+[node name="YesNoOverlayQuit" parent="." index="9" instance=ExtResource( 5 )]
 
 visible = false
 
@@ -211,7 +240,7 @@ margin_right = 413.0
 margin_bottom = 49.0
 text = "quit?"
 
-[node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
+[node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 6 )]
 
 visible = false
 margin_left = 63.0
@@ -219,21 +248,25 @@ margin_top = 50.0
 margin_right = 95.0
 margin_bottom = 79.0
 
-[node name="GlowbugVFX" parent="." index="9" instance=ExtResource( 7 )]
+[node name="GlowbugVFX" parent="." index="11" instance=ExtResource( 7 )]
 
 visible = false
 position = Vector2( -1.95227, 37.2379 )
 amount = 30
 process_material = SubResource( 5 )
 
-[node name="StartFadeIn" parent="." index="10" instance=ExtResource( 8 )]
+[node name="StartFadeIn" parent="." index="12" instance=ExtResource( 8 )]
 
 margin_left = -396.0
 margin_top = -168.0
 margin_right = 372.0
 margin_bottom = 280.0
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="NewGameButton" to="." method="_on_NewGameButton_pressed"]
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
+
+[connection signal="pressed" from="LevelSelectorButton" to="." method="_on_LevelSelectorButton_pressed"]
 
 [connection signal="pressed" from="ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
 
@@ -243,11 +276,16 @@ margin_bottom = 280.0
 
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
 
+[connection signal="pressed" from="OptionsOverlay/BackButton" to="." method="_on_BackButton_pressed"]
 
-[editable path="PlayButton"]
+
+[editable path="NewGameButton"]
+[editable path="ContinueButton"]
+[editable path="LevelSelectorButton"]
 [editable path="ExtrasButton"]
 [editable path="OptionsButton"]
 [editable path="CreditsButton"]
 [editable path="QuitButton"]
 [editable path="YesNoOverlayQuit"]
+[editable path="OptionsOverlay"]
 [editable path="StartFadeIn"]
