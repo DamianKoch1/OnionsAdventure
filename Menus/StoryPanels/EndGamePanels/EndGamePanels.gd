@@ -31,7 +31,6 @@ func loadMainMenu():
 func _on_SkipButton_pressed():
 	if skipped != true:
 		skipped = true
-		UISelect.playing = true
 		$BGMPlayerIntro.fadeOut()
 		loadMainMenu()
 	
