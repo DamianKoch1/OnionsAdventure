@@ -6,13 +6,13 @@
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Menus/MenuButton/UISelect.wav" type="AudioStream" id=5]
 
-[node name="ExtrasButton2" type="TextureButton" index="0"]
+[node name="ExtrasButton2" type="TextureButton"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 192.0
+margin_right = 160.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -37,8 +37,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 64.0
-margin_right = 536.0
+margin_left = 52.0
+margin_right = 524.0
 margin_bottom = 108.0
 rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -48,8 +48,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0.167969, 0.167969, 0.167969, 1 )
+custom_colors/font_color = Color( 0, 0.131042, 0.441406, 1 )
+custom_colors/font_color_shadow = Color( 0.273438, 0.273438, 0.273438, 1 )
 custom_constants/shadow_offset_x = 4
 custom_constants/shadow_offset_y = 5
 text = "gallery (wip)"
