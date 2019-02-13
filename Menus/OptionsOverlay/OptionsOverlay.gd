@@ -23,7 +23,6 @@ func _process(delta):
 
 
 func _on_BackButton_pressed():
-	UISelect.playing = true
 	hide()
 
 #set volume bus values if sliders change

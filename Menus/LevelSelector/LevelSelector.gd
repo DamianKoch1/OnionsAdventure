@@ -17,16 +17,13 @@ func _process(delta):
 		_on_BackButton_pressed()
 
 func _on_OptionsButton_pressed():
-	UISelect.playing = true
 	$OptionsOverlay.show()
 
 
 func _on_Level0Button_pressed():
-	UISelect.playing = true
 	SaveGame.currLevelId = 0
 	get_tree().change_scene_to(prototype)
 
 
 func _on_BackButton_pressed():
-	UISelect.playing = true
 	get_tree().change_scene_to(mainMenu)

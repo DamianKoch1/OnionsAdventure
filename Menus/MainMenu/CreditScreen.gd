@@ -10,6 +10,5 @@ func _process(delta):
 		_on_BackButton_pressed()
 
 func _on_BackButton_pressed():
-	UISelect.playing = true
 	get_tree().change_scene_to(mainMenu)
 

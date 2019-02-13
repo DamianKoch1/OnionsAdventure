@@ -7,4 +7,4 @@ func _on_ExtrasButton2_mouse_entered():
 
 
 func _on_ExtrasButton2_pressed():
-	UISelect.playing = true
+	$UISelect.playing = true

@@ -55,5 +55,4 @@ func _on_NextButton_pressed():
 		$BackButton.grab_focus()
 
 func _on_MainMenuButton_pressed():
-	UISelect.playing = true
 	get_tree().change_scene_to(mainMenu)
