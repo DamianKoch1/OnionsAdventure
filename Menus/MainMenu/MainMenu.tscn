@@ -201,7 +201,13 @@ text = "quit"
 
 [node name="YesNoOverlayQuit" parent="." index="7" instance=ExtResource( 5 )]
 
-visible = false
+[node name="Label" parent="YesNoOverlayQuit" index="1"]
+
+margin_left = -20.0
+margin_top = -59.0
+margin_right = 413.0
+margin_bottom = 49.0
+text = "quit?"
 
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
 
