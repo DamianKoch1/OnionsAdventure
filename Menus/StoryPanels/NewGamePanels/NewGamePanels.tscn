@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/PanelButton.tscn" type="PackedScene" id=2]
@@ -12,9 +12,8 @@
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=11]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=13]
-[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=14]
 
 [node name="NewGamePanels" type="Node" index="0"]
 
@@ -154,34 +153,10 @@ margin_bottom = 352.0
 
 text = "Skip"
 
-[node name="Label" type="Label" parent="." index="10"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 320.0
-margin_right = 31616.0
-margin_bottom = 50947.0
-rect_scale = Vector2( 0.3, 0.3 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 13 )
-text = "(click anywhere to continue)"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
-
-[node name="BGMPlayer" parent="." index="11" instance=ExtResource( 14 )]
+[node name="BGMPlayer" parent="." index="10" instance=ExtResource( 13 )]
 
 editor/display_folded = true
-stream = ExtResource( 15 )
+stream = ExtResource( 14 )
 volume_db = 10.0
 
 [connection signal="animFinished" from="PanelButton6" to="." method="_on_PanelButton6_animFinished"]

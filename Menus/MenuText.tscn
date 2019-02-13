@@ -2,9 +2,8 @@
 
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=1]
 
-[node name="Title" type="Label" index="0"]
+[node name="Title" type="Label"]
 
-modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -19,10 +18,14 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.0196078, 0.121569, 0.356863, 1 )
+custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Gallery"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_fonts" ]
+_sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
 
 
