@@ -201,6 +201,8 @@ text = "quit"
 
 [node name="YesNoOverlayQuit" parent="." index="7" instance=ExtResource( 5 )]
 
+visible = false
+
 [node name="Label" parent="YesNoOverlayQuit" index="1"]
 
 margin_left = -20.0
