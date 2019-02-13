@@ -12,7 +12,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 
-#cursor/pause menu on pressing escape, hide cursor ingame
+#cursor/pause menu on pressing escape, hide cursor ingame, always put focus on correct button
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		if $YesNoOverlayMainMenu.visible == false && $YesNoOverlayRestart.visible == false:
@@ -36,23 +36,19 @@ func _process(delta):
 			$ResumeButton.grab_focus()
 
 func _on_ResumeButton_pressed():
-	UISelect.playing = true
 	paused = false
 	get_tree().paused = false
 	hide()
 	
 func _on_RestartButton_pressed():
-	UISelect.playing = true
 	$YesNoOverlayRestart.show()
 	$YesNoOverlayRestart/NoButton.grab_focus()
 
 func _on_OptionsButton_pressed():
-	UISelect.playing = true
 	$OptionsOverlay.show()
 	$OptionsOverlay/BackButton.grab_focus()
 
 func _on_MainMenuButton_pressed():
-	UISelect.playing = true
 	$YesNoOverlayMainMenu.show()
 	$YesNoOverlayMainMenu/NoButton.grab_focus()
 

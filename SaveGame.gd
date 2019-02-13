@@ -4,6 +4,15 @@ extends Node
 var savePath = "user://save.cfg"  
 var saveFile
 
+var settingsPath = "user://settings.cfg"
+
+
+
+#volume slider values
+var masterVol
+var musicVol
+var sfxVol
+
 var spawnpoint
 
 #true on new game, player loads position when entering level if true
@@ -26,6 +35,7 @@ var dandelionDict = {}
 func _ready():
 	saveFile = ConfigFile.new()
 	loadCollectableCount()
+	loadVolume()
 
 func setCurrLevelId(newId):
 	if newId > currLevelId:
@@ -39,6 +49,10 @@ func deleteSave():
 	dir.remove("user://dandelions.cfg")
 	trappedNPCs = 0
 	dandelions = 0
+	
+func fileExists(path):
+	var dir = Directory.new()
+	return dir.file_exists(path)
 
 func saveGame():
 	saveFile.set_value("SaveState", "latestLevelId", currLevelId) 
@@ -50,6 +64,7 @@ func saveGame():
 	saveFile.save(savePath)
 
 func loadGame():
+	loadPlayerState = true
 	saveFile.load(savePath)
 	var levelToLoadId = saveFile.get_value("SaveState", "latestLevelId") 
 	var path = "Levels/Level " + str(levelToLoadId) + ".tscn"
@@ -60,6 +75,19 @@ func loadGame():
 	playerPosX = saveFile.get_value("SaveState", "spawnPosX", 0)
 	playerPosY = saveFile.get_value("SaveState", "spawnPosY", 0)
 	
+func saveVolume(masterValue, musicValue, sfxValue):
+	saveFile.set_value("Volume", "master", masterValue) 
+	saveFile.set_value("Volume", "music", musicValue) 
+	saveFile.set_value("Volume", "sfx", sfxValue) 
+	saveFile.save(settingsPath)
+
+func loadVolume():
+	saveFile.load(settingsPath)
+	masterVol = saveFile.get_value("Volume", "master", 100)
+	musicVol = saveFile.get_value("Volume", "music", 100)
+	sfxVol = saveFile.get_value("Volume", "sfx", 100)
+	
+
 func checkLevelProgress():
 	saveFile.load(savePath)
 	highestLevelId = saveFile.get_value("SaveState", "highestLevelId", 1)

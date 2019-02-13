@@ -9,4 +9,9 @@ func loadLevel(id):
 
 
 func _on_LevelButton_pressed():
+	$UISelect.playing = true
 	loadLevel(levelId)
+
+
+func _on_LevelButton_mouse_entered():
+	grab_focus()
