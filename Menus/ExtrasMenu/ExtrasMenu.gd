@@ -4,7 +4,6 @@ onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 onready var dandelionCounter = $Dandelions/Label
 onready var NPCCounter = $TrappedNPCs/Label
 onready var atPage = 1
-onready var keyboardButtonFocus = false
 
 
 func _ready():
@@ -15,14 +14,11 @@ func _ready():
 	$Page3.hide()
 	$Page4.hide()
 	$BackButton.hide()
+	$NextButton.grab_focus()
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_on_MainMenuButton_pressed()
-	if Input.is_action_just_pressed("ui_up") || Input.is_action_just_pressed("ui_right") || Input.is_action_just_pressed("ui_left") || Input.is_action_just_pressed("ui_down"):
-		if keyboardButtonFocus == false:
-			$NextButton.grab_focus()
-			keyboardButtonFocus = true
 
 func _on_BackButton_pressed():
 	$NextButton.show()
@@ -31,8 +27,7 @@ func _on_BackButton_pressed():
 		$Page2.hide()
 		atPage = 1
 		$BackButton.hide()
-		if keyboardButtonFocus == true:
-			$NextButton.grab_focus()
+		$NextButton.grab_focus()
 	elif atPage == 3:
 		$Page2.show()
 		$Page3.hide()
@@ -57,8 +52,7 @@ func _on_NextButton_pressed():
 		$Page4.show()
 		atPage = 4
 		$NextButton.hide()
-		if keyboardButtonFocus == true:
-			$BackButton.grab_focus()
+		$BackButton.grab_focus()
 
 func _on_MainMenuButton_pressed():
 	UISelect.playing = true

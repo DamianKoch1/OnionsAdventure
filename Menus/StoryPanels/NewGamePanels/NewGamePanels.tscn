@@ -16,7 +16,7 @@
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=15]
 
-[node name="NewGamePanels" type="Node" index="0"]
+[node name="NewGamePanels" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -152,7 +152,6 @@ margin_bottom = 352.0
 
 [node name="Label" parent="SkipButton" index="0"]
 
-modulate = Color( 1, 1, 1, 1 )
 text = "Skip"
 
 [node name="Label" type="Label" parent="." index="10"]
