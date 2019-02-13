@@ -31,7 +31,6 @@ func loadLv1():
 func _on_SkipButton_pressed():
 	if skipped != true:
 		skipped = true
-		UISelect.playing = true
 		$BGMPlayer.fadeOut()
 		loadLv1()
 
