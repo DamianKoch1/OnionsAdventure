@@ -6,9 +6,12 @@ onready var extrasMenu = preload("res://Menus/ExtrasMenu/ExtrasMenu.tscn")
 onready var levelSelector = preload("res://Menus/LevelSelector/LevelSelector.tscn")
 onready var newGamePanels = preload("res://Menus/StoryPanels/NewGamePanels/NewGamePanels.tscn")
 
+onready var fade = $Fade
+
 var focusButton
 
 func _ready():
+	$Fade.fadeIn()
 	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
 	$YesNoOverlayQuit.connect("noPressed", self, "cancel")
 	$YesNoOverlayQuit.hide()
@@ -35,6 +38,7 @@ func _process(delta):
 		else:
 			focusButton.grab_focus()
 
+
 func _on_CreditsButton_pressed():
 	get_tree().change_scene_to(creditscreen)
 
@@ -46,9 +50,13 @@ func _on_QuitButton_pressed():
 
 
 func _on_OptionsButton_pressed():
+	fade.connectOneshot(self, "options", 2)
+
+func options():
 	$YesNoOverlayQuit.hide()
 	$OptionsOverlay.show()
 	$OptionsOverlay/BackButton.grab_focus()
+	fade.fadeIn(2)
 	
 
 func quit():
@@ -65,6 +73,9 @@ func _on_ExtrasButton_pressed():
 
 
 func _on_NewGameButton_pressed():
+	fade.connectOneshot(self, "newGame")
+	
+func newGame():
 	SaveGame.deleteSave()
 	SaveGame.loadPlayerState = false
 	get_tree().change_scene_to(newGamePanels)
