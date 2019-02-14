@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bootsplash.png-3d25e60e31160d6980fc27e7928e477e.stex"
+path="res://.import/Title_WIP.png-48d295c25d7b771d805391ed345c54ab.stex"
 
 [deps]
 
-source_file="res://Assets/bootsplash.png"
-dest_files=[ "res://.import/bootsplash.png-3d25e60e31160d6980fc27e7928e477e.stex" ]
+source_file="res://Menus/Bootsplash/Title_WIP.png"
+dest_files=[ "res://.import/Title_WIP.png-48d295c25d7b771d805391ed345c54ab.stex" ]
 
 [params]
 
@@ -17,7 +17,7 @@ compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
