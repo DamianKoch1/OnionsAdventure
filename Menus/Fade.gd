@@ -13,6 +13,6 @@ func fadeOut(speed=1):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	emit_signal("finished")
 
-func connectOneshot(target, function, speed=1):
+func oneshot(target, function, speed=1):
 	connect("finished", target, function, [], 4)
 	fadeOut(speed)

@@ -40,7 +40,7 @@ func _process(delta):
 
 
 func _on_CreditsButton_pressed():
-	fade.connectOneshot(self, "credits", 2)
+	fade.oneshot(self, "credits", 2)
 
 func credits():
 	get_tree().change_scene_to(creditscreen)
@@ -53,7 +53,7 @@ func _on_QuitButton_pressed():
 
 
 func _on_OptionsButton_pressed():
-	fade.connectOneshot(self, "options", 2)
+	fade.oneshot(self, "options", 2)
 
 func options():
 	$YesNoOverlayQuit.hide()
@@ -72,14 +72,14 @@ func cancel():
 
 
 func _on_ExtrasButton_pressed():
-	fade.connectOneshot(self, "extras", 2)
+	fade.oneshot(self, "extras", 2)
 
 func extras():
 	get_tree().change_scene_to(extrasMenu)
 
 
 func _on_NewGameButton_pressed():
-	fade.connectOneshot(self, "newGame")
+	fade.oneshot(self, "newGame")
 	
 func newGame():
 	SaveGame.deleteSave()
@@ -92,13 +92,13 @@ func _on_BackButton_pressed():
 
 
 func _on_ContinueButton_pressed():
-	fade.connectOneshot(self, "loadGame")
+	fade.oneshot(self, "loadGame")
 
 func loadGame():
 	SaveGame.loadGame()
 
 func _on_LevelSelectorButton_pressed():
-	fade.connectOneshot(self, "levelSelector", 2)
+	fade.oneshot(self, "levelSelector", 2)
 
 func levelSelector():
 	SaveGame.checkLevelProgress()

@@ -37,4 +37,5 @@ func checkForPlayer():
 
 func _on_Timer_timeout():
 	emit_signal("triggered", text, spiderDelay)
+	timer.stop()
 	
