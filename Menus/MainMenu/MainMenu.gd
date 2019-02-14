@@ -86,9 +86,6 @@ func newGame():
 	SaveGame.loadPlayerState = false
 	get_tree().change_scene_to(newGamePanels)
 
-#options menu back button
-func _on_BackButton_pressed():
-	focusButton.grab_focus()
 
 
 func _on_ContinueButton_pressed():
@@ -104,3 +101,19 @@ func levelSelector():
 	SaveGame.checkLevelProgress()
 	SaveGame.loadPlayerState = false
 	get_tree().change_scene_to(levelSelector)
+
+
+#when options menu finishes fading out
+func _on_AnimationPlayer_animation_finished(anim_name):
+	fade.show()
+	fade.fadeIn(2)
+	focusButton.grab_focus()
+
+#options menu back button
+func _on_BackButton_pressed():
+	fade.oneshot(self, "back", 2) 
+
+func back():
+	$OptionsOverlay.hide()
+	fade.fadeIn(2)
+	focusButton.grab_focus()
