@@ -213,7 +213,5 @@ text = "options"
 
 [connection signal="value_changed" from="Volume/SFX/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
 
-[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
-
 
 [editable path="BackButton"]
