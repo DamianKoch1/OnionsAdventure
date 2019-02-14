@@ -12,6 +12,8 @@ config_version=3
 
 config/name="Onion Adventures"
 run/main_scene="res://Menus/MainMenu/MainMenu.tscn"
+boot_splash/image="res://Assets/bootsplash.png"
+boot_splash/fullsize=false
 config/icon="res://icon.png"
 
 [autoload]
