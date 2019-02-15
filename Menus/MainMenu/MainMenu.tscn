@@ -74,7 +74,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container"]
+[node name="MainMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -260,7 +260,7 @@ _sections_unfolded = [ "Process Material", "Visibility", "Z Index" ]
 
 [node name="Fade" parent="." index="12" instance=ExtResource( 8 )]
 
-editor/display_folded = true
+modulate = Color( 0, 0, 0, 1 )
 margin_left = -396.0
 margin_top = -168.0
 margin_right = 372.0
@@ -292,3 +292,4 @@ margin_bottom = 280.0
 [editable path="QuitButton"]
 [editable path="YesNoOverlayQuit"]
 [editable path="OptionsOverlay"]
+[editable path="Fade"]
