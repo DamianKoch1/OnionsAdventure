@@ -1,6 +1,8 @@
 extends TextureButton
 
 export var levelId = 1
+onready var fade = $CanvasLayer/Fade
+
 
 func loadLevel(id):
 	SaveGame.currLevelId = id
@@ -10,6 +12,10 @@ func loadLevel(id):
 
 func _on_LevelButton_pressed():
 	$UISelect.playing = true
+	fade.oneshot(self, "loadLvl")
+
+#no arguments needed
+func loadLvl():
 	loadLevel(levelId)
 
 

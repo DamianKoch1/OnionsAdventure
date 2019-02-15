@@ -42,7 +42,7 @@ tracks/1/keys = {
 
 pause_mode = 2
 visible = false
-modulate = Color( 0, 0, 0, 0 )
+modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
