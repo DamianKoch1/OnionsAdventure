@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/UI_Mock_Up_Pause_BG.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
 
 [node name="PauseMenu" type="Container" index="0"]
 
@@ -160,12 +161,18 @@ text = "restart?"
 
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
 
-editor/display_folded = true
 visible = false
 margin_left = 56.0
 margin_top = 41.0
 margin_right = 88.0
 margin_bottom = 70.0
+
+[node name="Fade" parent="." index="9" instance=ExtResource( 7 )]
+
+margin_left = -317.0
+margin_top = -156.0
+margin_right = 451.0
+margin_bottom = 292.0
 
 [connection signal="pressed" from="ResumeButton" to="." method="_on_ResumeButton_pressed"]
 
@@ -174,6 +181,8 @@ margin_bottom = 70.0
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+
+[connection signal="pressed" from="OptionsOverlay/BackButton" to="." method="_on_BackButton_pressed"]
 
 
 [editable path="ResumeButton"]
