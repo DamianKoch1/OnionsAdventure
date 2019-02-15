@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Menus/MainMenu/CreditScreen.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Menus/MainMenu/Philip_Onion.png" type="Texture" id=15]
 [ext_resource path="res://Menus/MainMenu/Damian_Onions.png" type="Texture" id=16]
 [ext_resource path="res://Menus/MainMenu/thOSN4KJXC.jpg" type="Texture" id=17]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Gradient" id=1]
 
@@ -840,6 +841,13 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Fade" parent="." index="17" instance=ExtResource( 18 )]
+
+margin_left = -373.0
+margin_top = -197.0
+margin_right = 395.0
+margin_bottom = 251.0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
