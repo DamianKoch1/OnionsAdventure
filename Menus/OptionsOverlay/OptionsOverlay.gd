@@ -16,18 +16,7 @@ func _ready():
 	sfxSlider.value = SaveGame.sfxVol
 	hide()
 
-func _process(delta):
-	if Input.is_action_just_pressed("ui_cancel") && visible == true:
-		_on_BackButton_pressed()
 
-
-
-func _on_BackButton_pressed():
-	fade.oneshot(self, "back", 2)
-	
-func back():
-	fade.hide()
-	hide()
 
 #set volume bus values if sliders change
 func _on_SFXSlider_value_changed(value):
