@@ -11,7 +11,7 @@ onready var fade = $Fade
 var focusButton
 
 func _ready():
-	$Fade.fadeIn()
+	fade.fadeIn()
 	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
 	$YesNoOverlayQuit.connect("noPressed", self, "cancel")
 	$YesNoOverlayQuit.hide()
