@@ -103,12 +103,6 @@ func levelSelector():
 	get_tree().change_scene_to(levelSelector)
 
 
-#when options menu finishes fading out
-func _on_AnimationPlayer_animation_finished(anim_name):
-	fade.show()
-	fade.fadeIn(2)
-	focusButton.grab_focus()
-
 #options menu back button
 func _on_BackButton_pressed():
 	fade.oneshot(self, "back", 2) 
