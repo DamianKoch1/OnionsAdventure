@@ -12,17 +12,17 @@ extents = Vector2( 38.4315, 54.4014 )
 
 resource_name = "swinging"
 length = 1.5
-loop = true
+loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:rotation_degrees")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.7, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"transitions": PoolRealArray( 1, 1, -1 ),
 "update": 0,
 "values": [ 0.0, -58.3471, 0.0 ]
 }
@@ -54,7 +54,6 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 position = Vector2( 0.167877, -0.771442 )
-rotation = -0.885894
 scale = Vector2( 0.483857, 0.477807 )
 texture = ExtResource( 2 )
 offset = Vector2( 1.2052, 1.75394 )
