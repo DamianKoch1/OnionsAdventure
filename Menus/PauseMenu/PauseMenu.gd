@@ -31,11 +31,9 @@ func _process(delta):
 					get_tree().paused = false
 					Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 			else:
-				$OptionsOverlay.hide()
-				$ResumeButton.grab_focus()
+				_on_BackButton_pressed()
 		else:
 			cancel()
-			$ResumeButton.grab_focus()
 
 func _on_ResumeButton_pressed():
 	paused = false
@@ -50,6 +48,8 @@ func _on_OptionsButton_pressed():
 	fade.oneshot(self, "options", 2)
 
 func options():
+	for child in get_children():
+		child.hide()
 	$OptionsOverlay.show()
 	$OptionsOverlay/BackButton.grab_focus()
 	fade.fadeIn(2)
@@ -75,12 +75,17 @@ func restart():
 func cancel():
 	$YesNoOverlayMainMenu.hide()
 	$YesNoOverlayRestart.hide()
+	$ResumeButton.grab_focus()
 
 #options menu back button
 func _on_BackButton_pressed():
 	fade.oneshot(self, "back", 2) 
 
 func back():
+	for child in get_children():
+		child.show()
+		$YesNoOverlayMainMenu.hide()
+		$YesNoOverlayRestart.hide()
 	$OptionsOverlay.hide()
 	fade.fadeIn(2)
 	$ResumeButton.grab_focus()
