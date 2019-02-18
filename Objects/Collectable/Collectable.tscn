@@ -16,7 +16,7 @@ loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:rotation_degrees")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ 0.0, -58.3471, 0.0 ]
 }
 
-[node name="Collectable" type="Node2D" index="0" groups=[
+[node name="Collectable" type="Node2D" groups=[
 "dandelions",
 ]]
 
@@ -54,7 +54,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 position = Vector2( 0.167877, -0.771442 )
-rotation = -0.885894
+rotation = -1.01511
 scale = Vector2( 0.483857, 0.477807 )
 texture = ExtResource( 2 )
 offset = Vector2( 1.2052, 1.75394 )
