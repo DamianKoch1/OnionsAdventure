@@ -5,6 +5,7 @@ onready var panel1 = $CanvasLayer/Level2Start
 onready var panel2 = $CanvasLayer/Level3Start
 
 onready var endPanels = preload("res://Menus/StoryPanels/EndGamePanels/EndGamePanels.tscn")
+onready var transitionPanels = preload("res://Menus/StoryPanels/TransitionPanels/TransitionPanels.tscn")
 
 onready var fade = $CanvasLayer/Fade
 onready var anim = $AnimationPlayer
@@ -37,10 +38,8 @@ func nextAnim():
 	else:
 		anim.play("fadeOut")
 
-func loadNextLevel():
-	SaveGame.currLevelId += 1
-	var path = "Levels/Level " + str(SaveGame.currLevelId) + ".tscn"
-	get_tree().change_scene(path)
+func loadTransitionPanels():
+	get_tree().change_scene_to(transitionPanels)
 
 func loadEndPanels():
 	get_tree().change_scene_to(endPanels)
