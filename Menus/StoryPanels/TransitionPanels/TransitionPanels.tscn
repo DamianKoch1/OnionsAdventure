@@ -1,0 +1,385 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://TransitionPanels.gd" type="Script" id=1]
+[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel3.jpg" type="Texture" id=2]
+[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel2.png" type="Texture" id=3]
+[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel1.png" type="Texture" id=4]
+[ext_resource path="res://Menus/StoryPanels/PanelButton.gd" type="Script" id=5]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=7]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "nextPanel"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "delete"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../PanelButton3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "start"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "nextPanel"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "delete"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../PanelButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "nextPanel"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("../..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "fadeOut"
+} ]
+}
+
+[node name="TransitionPanels" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="one" type="Node2D" parent="." index="0"]
+
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Panel" type="Panel" parent="one" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 704.0
+margin_bottom = 416.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="3" type="Sprite" parent="one" index="1"]
+
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.333, 0.333 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="2" type="Sprite" parent="one" index="2"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 286.023, 208.147 )
+scale = Vector2( 0.333, 0.333 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Offset", "Visibility" ]
+
+[node name="1" type="Sprite" parent="one" index="3"]
+
+position = Vector2( 105.802, 157.156 )
+scale = Vector2( 0.333, 0.333 )
+texture = ExtResource( 4 )
+region_rect = Rect2( 160, 200, 512, 268 )
+_sections_unfolded = [ "Material", "Offset", "Region", "Visibility" ]
+
+[node name="PanelButton2" type="TextureButton" parent="one" index="4"]
+
+pause_mode = 2
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_scale = Vector2( 0.35, 0.35 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+script = ExtResource( 5 )
+_sections_unfolded = [ "Pause", "Rect", "Visibility" ]
+animSpeed = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="one/PanelButton2" index="0"]
+
+root_node = NodePath("..")
+autoplay = "start"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/nextPanel = SubResource( 2 )
+anims/start = SubResource( 5 )
+blend_times = [  ]
+
+[node name="pageTurn" parent="one/PanelButton2" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 914.286, 457.143 )
+stream = ExtResource( 7 )
+
+[node name="PanelButton3" type="TextureButton" parent="one" index="5"]
+
+pause_mode = 2
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_scale = Vector2( 0.35, 0.35 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+script = ExtResource( 5 )
+_sections_unfolded = [ "Pause", "Rect", "Textures", "Visibility" ]
+animSpeed = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="one/PanelButton3" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/nextPanel = SubResource( 3 )
+blend_times = [  ]
+
+[node name="pageTurn" parent="one/PanelButton3" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 914.286, 457.143 )
+stream = ExtResource( 7 )
+
+[node name="PanelButton4" type="TextureButton" parent="one" index="6"]
+
+pause_mode = 2
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_scale = Vector2( 0.35, 0.35 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+script = ExtResource( 5 )
+_sections_unfolded = [ "Pause", "Rect", "Textures", "Visibility" ]
+animSpeed = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="one/PanelButton4" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/nextPanel = SubResource( 4 )
+blend_times = [  ]
+
+[node name="pageTurn" parent="one/PanelButton4" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 914.286, 457.143 )
+stream = ExtResource( 7 )
+
+[node name="two" type="Node2D" parent="." index="1"]
+
+visible = false
+
+[node name="three" type="Node2D" parent="." index="2"]
+
+visible = false
+
+[node name="Fade" parent="." index="3" instance=ExtResource( 8 )]
+
+[node name="SkipButton" parent="." index="4" instance=ExtResource( 9 )]
+
+editor/display_folded = false
+margin_left = 480.0
+margin_top = 320.0
+margin_right = 640.0
+margin_bottom = 352.0
+
+[node name="Label" parent="SkipButton" index="0"]
+
+text = "Skip"
+
+[connection signal="pressed" from="one/PanelButton2" to="one/PanelButton2" method="_on_PanelButton_pressed"]
+
+[connection signal="pressed" from="one/PanelButton3" to="one/PanelButton3" method="_on_PanelButton_pressed"]
+
+[connection signal="pressed" from="one/PanelButton4" to="one/PanelButton4" method="_on_PanelButton_pressed"]
+
+[connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
+
+
+[editable path="SkipButton"]

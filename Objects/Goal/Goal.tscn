@@ -215,7 +215,7 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "loadNextLevel"
+"method": "loadTransitionPanels"
 } ]
 }
 
