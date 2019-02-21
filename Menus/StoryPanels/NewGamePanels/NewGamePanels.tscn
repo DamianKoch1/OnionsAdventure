@@ -15,7 +15,7 @@
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=14]
 
-[node name="NewGamePanels" type="Node" index="0"]
+[node name="NewGamePanels" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
