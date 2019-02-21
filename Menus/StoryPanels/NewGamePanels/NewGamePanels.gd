@@ -7,6 +7,7 @@ onready var skipped = false
 func _ready():
 	MenuMusic.fadeOut(2)
 	$BGMPlayer.fadeIn(2)
+	$Fade.fadeIn(2)
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
