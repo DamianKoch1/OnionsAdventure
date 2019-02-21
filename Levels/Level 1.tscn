@@ -202,7 +202,6 @@ text = "Jump onto that tendril!"
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 17 )]
 
-editor/display_folded = true
 position = Vector2( 4896.62, -288.362 )
 _sections_unfolded = [ "Transform" ]
 
@@ -225,11 +224,11 @@ position = Vector2( -83.0801, 28.5078 )
 
 [node name="Collectable16" parent="stump l, stump m, stump s" index="6" instance=ExtResource( 5 )]
 
-position = Vector2( 417.027, -26.0642 )
+position = Vector2( 4415.45, 82.4977 )
 
 [node name="Collectable17" parent="stump l, stump m, stump s" index="7" instance=ExtResource( 5 )]
 
-position = Vector2( 564.249, 25.2312 )
+position = Vector2( 4669.56, 78.6771 )
 
 [node name="Collectable18" parent="stump l, stump m, stump s" index="8" instance=ExtResource( 5 )]
 
