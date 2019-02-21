@@ -435,6 +435,7 @@ position = Vector2( 210.282, -27.9776 )
 
 [node name="platform short" parent="." index="17" instance=ExtResource( 30 )]
 
+editor/display_folded = true
 position = Vector2( 2826.2, -726.486 )
 
 [node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 21 )]
@@ -451,6 +452,7 @@ position = Vector2( 109.438, -36.8953 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
 
+editor/display_folded = true
 position = Vector2( 9640.23, -600.519 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
@@ -561,14 +563,6 @@ position = Vector2( -336.141, 36.6067 )
 position = Vector2( -436.141, 76.6067 )
 
 [node name="Background" parent="." index="25" instance=ExtResource( 40 )]
-
-[node name="ParallaxLayer" parent="Background" index="0"]
-
-motion_scale = Vector2( 0.065, 0.1 )
-
-[node name="Sprite" parent="Background/ParallaxLayer" index="0"]
-
-position = Vector2( 393.601, 7.44489 )
 
 
 [editable path="movingten1/Enemy"]
