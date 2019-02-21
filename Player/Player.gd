@@ -201,7 +201,6 @@ func loseHp():
 		setState(frozen)
 		motion.x = 0
 		motion.y = 0
-		print("a")
 		fade.oneshot(self, "emitLoseHp", 2)
 		
 func emitLoseHp():
