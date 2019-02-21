@@ -8,6 +8,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	MenuMusic.fadeOut(2)
 	$BGMPlayerIntro.fadeIn(2)
+	$Fade.fadeIn(2)
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):

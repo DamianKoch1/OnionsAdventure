@@ -1,13 +1,13 @@
-extends Node
-
-onready var lv1 = preload("res://Levels/Level 1.tscn")
-
-onready var skipped = false
+extends Node2D
 
 func _ready():
-	MenuMusic.fadeOut(2)
-	$BGMPlayer.fadeIn(2)
-	$Fade.fadeIn(2)
+	match SaveGame.currLevelId:
+		1:
+			$one.show()
+		2:
+			$two.show()
+		3:
+			$three.show()
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -15,27 +15,23 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_on_SkipButton_pressed()
 
-
 #simulating a click using space/enter so coding panel order logic isnt necessary
 func simulateClick():
 	var ev = InputEventMouseButton.new()
 	ev.set_button_index(BUTTON_LEFT)
-	ev.set_pressed(true) 
+	ev.set_pressed(true)
 	get_tree().input_event(ev)
 	ev.set_pressed(false)
 	get_tree().input_event(ev)
 	Input.parse_input_event(ev)
 
-func loadLv1():
-	get_tree().change_scene_to(lv1)
+func fadeOut():
+	$Fade.oneshot(self, "loadNextLevel")
+
+func loadNextLevel():
+	SaveGame.currLevelId += 1
+	var path = "Levels/Level " + str(SaveGame.currLevelId) + ".tscn"
+	get_tree().change_scene(path)
 
 func _on_SkipButton_pressed():
-	if skipped != true:
-		skipped = true
-		$BGMPlayer.fadeOut()
-		loadLv1()
-
-
-
-func _on_PanelButton6_animFinished():
-	loadLv1()
+	loadNextLevel()

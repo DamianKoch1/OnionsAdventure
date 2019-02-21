@@ -3,38 +3,21 @@ extends Area2D
 onready var panel = $CanvasLayer/Panel
 onready var panel1 = $CanvasLayer/Level2Start
 onready var panel2 = $CanvasLayer/Level3Start
-onready var anim = $AnimationPlayer
 
 onready var endPanels = preload("res://Menus/StoryPanels/EndGamePanels/EndGamePanels.tscn")
+onready var transitionPanels = preload("res://Menus/StoryPanels/TransitionPanels/TransitionPanels.tscn")
+
+onready var fade = $CanvasLayer/Fade
+onready var anim = $AnimationPlayer
+
+onready var npcFull = $CanvasLayer/Collectables/NPCs/NPCsFull
+onready var npcImgWidth  = npcFull.region_rect.size.x / 3
+onready var dandelionCounter = $CanvasLayer/Collectables/Dandelions/Label
+
 
 #show story panel depending on current level
 func _ready():
-	match SaveGame.currLevelId:
-		0:
-			anim.play("start")
-			panel.show()
-			panel1.hide()
-			panel2.hide()
-		1:
-			anim.play("start")
-			panel.show()
-			panel1.hide()
-			panel2.hide()
-		2:
-			anim.play("startLevel2")
-			panel.hide()
-			panel1.show()
-			panel2.hide()
-		3:
-			anim.play("startLevel3")
-			panel.hide()
-			panel1.hide()
-			panel2.show()
-		4:
-			anim.play("start")
-			panel.show()
-			panel1.hide()
-			panel2.hide()
+	fade.fadeIn(2)
 		
 #show story panel depending on level, end game at last level
 func _on_Goal_body_entered(body):
@@ -44,38 +27,19 @@ func _on_Goal_body_entered(body):
 			$SFX/OnionYeah1.play()
 		else:
 			$SFX/OnionYeah2.play()
-		match SaveGame.currLevelId:
-			0:
-				anim.play("end")
-				panel.show()
-				panel1.hide()
-				panel2.hide()
-			1:
-				anim.play("endLevel1")
-				panel.hide()
-				panel1.show()
-				panel2.hide()
-			2:
-				anim.play("endLevel2")
-				panel.hide()
-				panel1.hide()
-				panel2.show()
-			3:
-				anim.play("endLevel2")
-				panel.hide()
-				panel1.hide()
-				panel2.show()
-			4:
-				anim.play("endGame")
-				panel.show()
-				panel1.hide()
-				panel2.hide()
+		npcFull.region_rect.size.x = (3 - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth
+		dandelionCounter.text = str(50-get_tree().get_nodes_in_group("dandelions").size()) + "/50"
+		anim.play_backwards("fadeIn")
 		body.state = body.frozen
 
-func loadNextLevel():
-	SaveGame.currLevelId += 1
-	var path = "Levels/Level " + str(SaveGame.currLevelId) + ".tscn"
-	get_tree().change_scene(path)
+func nextAnim():
+	if SaveGame.currLevelId == 4:
+		anim.play("lastFadeOut")
+	else:
+		anim.play("fadeOut")
+
+func loadTransitionPanels():
+	get_tree().change_scene_to(transitionPanels)
 
 func loadEndPanels():
 	get_tree().change_scene_to(endPanels)
