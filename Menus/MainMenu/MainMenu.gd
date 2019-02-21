@@ -23,6 +23,7 @@ func _ready():
 		$ContinueButton.show()
 	else:
 		focusButton = $NewGameButton
+		$OptionsOverlay/NewGameButton.hide()
 		$NewGameButton.show()
 		$ContinueButton.hide()
 	focusButton.grab_focus()

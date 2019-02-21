@@ -74,7 +74,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container"]
+[node name="MainMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -243,11 +243,22 @@ text = "quit?"
 
 [node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 6 )]
 
-visible = false
 margin_left = 63.0
 margin_top = 50.0
 margin_right = 95.0
 margin_bottom = 79.0
+
+[node name="NewGameButton" parent="OptionsOverlay" index="4" instance=ExtResource( 4 )]
+
+editor/display_folded = false
+margin_left = -341.0
+margin_top = 27.0
+margin_right = -181.0
+margin_bottom = 59.0
+
+[node name="Label" parent="OptionsOverlay/NewGameButton" index="0"]
+
+text = "new game"
 
 [node name="GlowbugVFX" parent="." index="11" instance=ExtResource( 7 )]
 
@@ -281,6 +292,8 @@ margin_bottom = 280.0
 
 [connection signal="pressed" from="OptionsOverlay/BackButton" to="." method="_on_BackButton_pressed"]
 
+[connection signal="pressed" from="OptionsOverlay/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+
 
 [editable path="NewGameButton"]
 [editable path="ContinueButton"]
@@ -291,4 +304,5 @@ margin_bottom = 280.0
 [editable path="QuitButton"]
 [editable path="YesNoOverlayQuit"]
 [editable path="OptionsOverlay"]
+[editable path="OptionsOverlay/NewGameButton"]
 [editable path="Fade"]
