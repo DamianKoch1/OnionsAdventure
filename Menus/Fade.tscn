@@ -38,7 +38,7 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="Fade" type="Panel" index="0"]
+[node name="Fade" type="Panel"]
 
 pause_mode = 2
 visible = false

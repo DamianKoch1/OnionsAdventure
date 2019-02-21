@@ -49,7 +49,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -119,20 +119,20 @@ position = Vector2( 1941.31, -96.3637 )
 
 [node name="Checkpoint2" parent="smallstone2" index="3" instance=ExtResource( 11 )]
 
-position = Vector2( 0.479736, 159.1 )
+position = Vector2( 467.998, 31.9291 )
 
 [node name="trappedNPC1" parent="smallstone2" index="4" instance=ExtResource( 12 )]
 
-position = Vector2( 404.219, 53.9719 )
+position = Vector2( 10.2097, 185.553 )
 
 [node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 3 )]
 
-position = Vector2( 338.039, 20.4194 )
+position = Vector2( -55.9703, 152.001 )
 text = "Press “E”!"
 
 [node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 3 )]
 
-position = Vector2( -11.6511, 137.912 )
+position = Vector2( 455.867, 10.7411 )
 text = "It’s like a checkpoint."
 
 [node name="stump s, stump m 1" parent="." index="5" instance=ExtResource( 13 )]
@@ -202,7 +202,6 @@ text = "Jump onto that tendril!"
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 17 )]
 
-editor/display_folded = true
 position = Vector2( 4896.62, -288.362 )
 _sections_unfolded = [ "Transform" ]
 
@@ -225,11 +224,11 @@ position = Vector2( -83.0801, 28.5078 )
 
 [node name="Collectable16" parent="stump l, stump m, stump s" index="6" instance=ExtResource( 5 )]
 
-position = Vector2( 417.027, -26.0642 )
+position = Vector2( 4415.45, 82.4977 )
 
 [node name="Collectable17" parent="stump l, stump m, stump s" index="7" instance=ExtResource( 5 )]
 
-position = Vector2( 564.249, 25.2312 )
+position = Vector2( 4669.56, 78.6771 )
 
 [node name="Collectable18" parent="stump l, stump m, stump s" index="8" instance=ExtResource( 5 )]
 

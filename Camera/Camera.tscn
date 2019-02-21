@@ -15,10 +15,11 @@
 pause_mode = 2
 position = Vector2( 32, 32 )
 z_index = 4096
+offset = Vector2( 25, 0 )
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 1.1, 1.1 )
+zoom = Vector2( 1.2, 1.2 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
@@ -104,6 +105,12 @@ region_rect = Rect2( 0, 0, 225, 100 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="Dandelions" type="Node2D" parent="CanvasLayer" index="3"]
+
+editor/display_folded = true
+position = Vector2( 390.961, -2.57211 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Label" type="Label" parent="CanvasLayer/Dandelions" index="0"]
 
