@@ -522,14 +522,6 @@ position = Vector2( 12144.6, 1183.56 )
 
 [node name="Background" parent="." index="29" instance=ExtResource( 40 )]
 
-[node name="ParallaxLayer" parent="Background" index="0"]
-
-motion_scale = Vector2( 0.054, 0.2 )
-
-[node name="Sprite" parent="Background/ParallaxLayer" index="0"]
-
-position = Vector2( 352, 224 )
-
 
 [editable path="platform up/Enemy"]
 [editable path="Background"]
