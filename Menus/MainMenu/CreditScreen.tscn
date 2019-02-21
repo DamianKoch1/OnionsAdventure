@@ -50,7 +50,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 360 ) ]
 }
 
-[node name="CreditScreen" type="Container" index="0"]
+[node name="CreditScreen" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -144,7 +144,7 @@ texture = ExtResource( 5 )
 
 [node name="Credits" type="Node2D" parent="." index="5"]
 
-position = Vector2( 0, 272.557 )
+position = Vector2( 0, 134.516 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Credits" type="Node2D" parent="Credits" index="0"]
