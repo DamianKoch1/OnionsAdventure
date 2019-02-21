@@ -1,13 +1,16 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Goal/End Level Crystal v2.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=4]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=5]
-[ext_resource path="res://Objects/Spawnpoint/RespawnCrystalVFX.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Objects/Goal/Onion_yeah_1.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Objects/Goal/Onion_yeah_2.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Camera/HUD/Animals_Trapped.png" type="Texture" id=4]
+[ext_resource path="res://Camera/HUD/Animals_Free.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=7]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Spawnpoint/RespawnCrystalVFX.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Goal/Onion_yeah_1.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Objects/Goal/Onion_yeah_2.ogg" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -70,29 +73,144 @@ _sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Emiss
 
 [sub_resource type="Animation" id=5]
 
-resource_name = "end"
+resource_name = "fadeIn"
 length = 2.0
 loop = false
 step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/Panel:modulate")
+tracks/0/type = "method"
+tracks/0/path = NodePath("CanvasLayer/Collectables")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 1.9, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+"values": [ {
+"args": [  ],
+"method": "show"
+}, {
+"args": [  ],
+"method": "hide"
+} ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/Collectables:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 1.4, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.524863 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/Collectables/NPCs:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CanvasLayer/Collectables/Dandelions:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "nextAnim"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "fadeOut"
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath("CanvasLayer/Collectables")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "show"
+}, {
+"args": [  ],
+"method": "hide"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/Collectables:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.4, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.524863 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/Collectables/NPCs:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CanvasLayer/Collectables/Dandelions:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
 "times": PoolRealArray( 2 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
@@ -101,31 +219,72 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
-resource_name = "endGame"
+resource_name = "lastFadeOut"
 length = 2.0
 loop = false
 step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/Panel:modulate")
+tracks/0/type = "method"
+tracks/0/path = NodePath("CanvasLayer/Collectables")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 1.9, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+"values": [ {
+"args": [  ],
+"method": "show"
+}, {
+"args": [  ],
+"method": "hide"
+} ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/Collectables:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 1.4, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.524863 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/Collectables/NPCs:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CanvasLayer/Collectables/Dandelions:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
 "times": PoolRealArray( 2 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
@@ -134,128 +293,11 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=7]
-
-length = 3.0
-loop = false
-step = 0.1
-tracks/0/type = "method"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 3 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "loadNextLevel"
-} ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("CanvasLayer/Level2Start:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=8]
-
-length = 3.0
-loop = false
-step = 0.1
-tracks/0/type = "method"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 3 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "loadNextLevel"
-} ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("CanvasLayer/Level3Start:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=9]
-
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/Panel:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
-}
-
-[sub_resource type="Animation" id=10]
-
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/Level2Start:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=11]
-
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/Level3Start:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
 [node name="Goal" type="Area2D" index="0" groups=[
 "Persist",
 ]]
 
+self_modulate = Color( 0, 0, 0, 0 )
 scale = Vector2( 1.26161, 1.26161 )
 z_index = 50
 input_pickable = true
@@ -313,23 +355,22 @@ _sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Vis
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
-editor/display_folded = true
 layer = 0
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="Panel" type="Panel" parent="CanvasLayer" index="0"]
+[node name="Collectables" type="Panel" parent="CanvasLayer" index="0"]
 
-visible = false
-modulate = Color( 0, 0, 0, 0 )
+pause_mode = 2
+self_modulate = Color( 0, 0, 0, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 640.0
-margin_bottom = 384.0
+margin_right = 768.0
+margin_bottom = 448.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -338,48 +379,88 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Level2Start" type="Sprite" parent="CanvasLayer" index="1"]
+[node name="NPCs" type="Node2D" parent="CanvasLayer/Collectables" index="0"]
 
-visible = false
-scale = Vector2( 0.864865, 0.864865 )
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 320.857, 224.58 )
+scale = Vector2( 1.10352, 1.10352 )
+z_index = 4096
+_sections_unfolded = [ "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NPCsEmpty" type="Sprite" parent="CanvasLayer/Collectables/NPCs" index="0"]
+
+position = Vector2( -32, -32 )
+scale = Vector2( 0.371773, 0.322383 )
 texture = ExtResource( 4 )
 centered = false
-_sections_unfolded = [ "Visibility" ]
+region_enabled = true
+region_rect = Rect2( 0, 0, 225, 100 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="Level3Start" type="Sprite" parent="CanvasLayer" index="2"]
+[node name="NPCsFull" type="Sprite" parent="CanvasLayer/Collectables/NPCs" index="1"]
 
-visible = false
-scale = Vector2( 0.864865, 0.864865 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.371773, 0.322383 )
 texture = ExtResource( 5 )
 centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 225, 100 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="Dandelions" type="Node2D" parent="CanvasLayer/Collectables" index="1"]
+
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 236.447, 91.9335 )
+scale = Vector2( 1.33729, 1.33729 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+[node name="Label" type="Label" parent="CanvasLayer/Collectables/Dandelions" index="0"]
 
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/end = SubResource( 5 )
-anims/endGame = SubResource( 6 )
-anims/endLevel1 = SubResource( 7 )
-anims/endLevel2 = SubResource( 8 )
-anims/start = SubResource( 9 )
-anims/startLevel2 = SubResource( 10 )
-anims/startLevel3 = SubResource( 11 )
-blend_times = [  ]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 56.0
+margin_top = 17.0
+margin_right = 123.0
+margin_bottom = 49.0
+rect_scale = Vector2( 0.3, 0.3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+text = "00/50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="OnionRespawnVFX" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Collectables/Dandelions" index="1"]
+
+position = Vector2( 31.1305, 28.4576 )
+scale = Vector2( 0.477468, 0.477468 )
+texture = ExtResource( 7 )
+
+[node name="Fade" parent="CanvasLayer" index="1" instance=ExtResource( 8 )]
+
+[node name="OnionRespawnVFX" parent="." index="4" instance=ExtResource( 9 )]
 
 position = Vector2( -2.72102, 11.2872 )
 scale = Vector2( 0.745897, 0.745897 )
 
-[node name="SFX" type="Node2D" parent="." index="6"]
+[node name="SFX" type="Node2D" parent="." index="5"]
 
 [node name="OnionYeah1" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 10 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -390,7 +471,7 @@ area_mask = 1
 
 [node name="OnionYeah2" type="AudioStreamPlayer2D" parent="SFX" index="1"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 11 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -399,6 +480,20 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/fadeIn = SubResource( 5 )
+anims/fadeOut = SubResource( 6 )
+anims/lastFadeOut = SubResource( 7 )
+blend_times = [  ]
+
 [connection signal="body_entered" from="." to="." method="_on_Goal_body_entered"]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="CanvasLayer/Collectables" method="_on_AnimationPlayer_animation_finished"]
 
 

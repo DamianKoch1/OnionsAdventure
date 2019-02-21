@@ -105,6 +105,12 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="Dandelions" type="Node2D" parent="CanvasLayer" index="3"]
 
+editor/display_folded = true
+position = Vector2( 390.961, -2.57211 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="Label" type="Label" parent="CanvasLayer/Dandelions" index="0"]
 
 anchor_left = 0.0
