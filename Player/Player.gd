@@ -6,12 +6,15 @@ var motion = Vector2()
 onready var sprite = $Onion
 onready var anim = $Onion/AnimationPlayer
 onready var animTreePlayer = $Onion/AnimationTreePlayer1
+onready var fade = $CanvasLayer/Fade
 
 var state = idle setget setState
 enum {idle, run, jump, fall, climb, frozen}
 
 #origin node to attach to if airborne
 onready var worldNode = get_parent()
+
+onready var damageCD = 0
 
 #ray that finds object below to attach to (movingplatforms etc)
 onready var ray = $RayCast2D
@@ -49,6 +52,7 @@ func _ready():
 
 func _physics_process(delta):
 	if state != frozen:
+		damageCD = max(damageCD - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
 		#debug fly and godmode
 		if Input.is_action_just_pressed("debugFly"):
@@ -190,13 +194,20 @@ func setState(newState):
 				animTreePlayer.transition_node_set_current("idle/walk", 0)
 
 func loseHp():
-	if state != frozen && debugGodmode != true:
+	if state != frozen && debugGodmode != true && damageCD == 0:
+		damageCD = 2
 		$SFX/hurt.playing = true
 		#blinking? modulating alpha turns black in animationTreePlayer...
-		emit_signal("loseHp", self)
-		setState(idle)
+		setState(frozen)
 		motion.x = 0
 		motion.y = 0
+		print("a")
+		fade.oneshot(self, "emitLoseHp", 2)
+		
+func emitLoseHp():
+		emit_signal("loseHp", self)
+		fade.fadeIn(2)
+		state = idle
 
 #no sound, used for uncontrolled jumps (krakenmushroom)
 func bounce(bounceStr):
