@@ -71,6 +71,12 @@ func restartFade():
 
 func restart():
 	get_tree().reload_current_scene()
+	fade.hide()
+	paused = false
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	cancel()
+	hide()
 	
 func cancel():
 	$YesNoOverlayMainMenu.hide()

@@ -7,13 +7,16 @@ var saveFile
 
 var player
 
+onready var helpSoundCD = 0
+
 onready var anim = $AnimationPlayer
 
 func _ready():
 	saveFile = ConfigFile.new()
 	checkCollected()
 	
-
+func _process(delta):
+	helpSoundCD = max(helpSoundCD - delta, 0)
 
 #delete self and increase counter if player presses push button in area, shortly freeze player until timer runs out
 func _on_Area2D_body_entered(body):
@@ -54,4 +57,6 @@ func playAnim(name):
 
 
 func _on_VisibilityNotifier2D_screen_entered():
-	$help.play()
+	if helpSoundCD == 0:
+		$help.play()
+		helpSoundCD = 10
