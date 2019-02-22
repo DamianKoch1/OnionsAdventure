@@ -34,7 +34,7 @@
 [ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=33]
 
-[node name="Level 2" type="Node2D" index="0"]
+[node name="Level 2" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -252,16 +252,15 @@ position = Vector2( 9.0249, -182.305 )
 
 [node name="stump s, stump l 3" parent="." index="14" instance=ExtResource( 20 )]
 
-editor/display_folded = true
 position = Vector2( 6085.7, -192.03 )
 
 [node name="Collectable31" parent="stump s, stump l 3" index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 11.0493, -173.111 )
+position = Vector2( 14.6597, -129.791 )
 
 [node name="Collectable32" parent="stump s, stump l 3" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 187.049, -17.1111 )
+position = Vector2( 184.654, -44.0543 )
 
 [node name="Krakenmushroom2 (up)" parent="." index="15" instance=ExtResource( 21 )]
 
@@ -409,10 +408,6 @@ position = Vector2( 188.421, -233.402 )
 position = Vector2( 137.14, -204.929 )
 
 [node name="Background" parent="." index="22" instance=ExtResource( 33 )]
-
-[node name="Tree" parent="Background/Static" index="0"]
-
-position = Vector2( 1002.9, -29.4972 )
 
 
 [editable path="Background"]
