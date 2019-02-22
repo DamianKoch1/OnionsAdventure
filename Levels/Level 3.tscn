@@ -60,7 +60,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -18.132, -24.176, 7.85721, 8.46162, -9.04248, 204.421, 0, 0, 9.06602, 25.3848, 4.74219, 248.234, 0, 0, 0, 0, 40.9175, 277.071, -7.25281, 12.6924, 11.4836, -34.4509, 81.4121, 266.796, 0, 0, 0, 0, 80.8081, 193.059, 8.46162, 5.43961, -21.154, -22.3628, 56.0273, 151.96, 0, 0, 0, 0, -21.3359, 147.125, 0, 0, 0, 0, -53.3691, 169.488, 6.64841, -7.25281, -11.4836, 6.04401, -120.458, 194.268, 0, 0, 0, 0, -139.798, 220.257, 19.9452, -19.3408, -47.7477, 9.06602, -152.491, 277.676, 0, 0, -16.3188, -10.2748, -218.975, 262.566, 0, 0, 0, 0, -237.711, 216.027, -12.6924, 19.3408, 4.83521, -20.5496, -223.206, 150.751, 0, 0, 0, 0, -148.26, 138.663, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D" index="0"]
+[node name="Level 3" type="Node2D"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -369,7 +369,6 @@ position = Vector2( -222.001, 56.0002 )
 
 [node name="platform long" parent="." index="15" instance=ExtResource( 26 )]
 
-editor/display_folded = true
 position = Vector2( 7197.57, -485.145 )
 
 [node name="Ladder" parent="platform long" index="1" instance=ExtResource( 27 )]
@@ -403,7 +402,7 @@ position = Vector2( 370.734, 35.8189 )
 
 [node name="Collectable" parent="platform long" index="8" instance=ExtResource( 3 )]
 
-position = Vector2( -1.62891, -198.74 )
+position = Vector2( 4.67334, -312.186 )
 
 [node name="Collectable2" parent="platform long" index="9" instance=ExtResource( 3 )]
 
@@ -431,7 +430,7 @@ position = Vector2( -29.7832, -50.5401 )
 
 [node name="Collectable2" parent="stump m, movingten, mealy" index="8" instance=ExtResource( 3 )]
 
-position = Vector2( 210.282, -27.9776 )
+position = Vector2( 248.96, -115.574 )
 
 [node name="platform short" parent="." index="17" instance=ExtResource( 30 )]
 
@@ -452,7 +451,6 @@ position = Vector2( 109.438, -36.8953 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
 
-editor/display_folded = true
 position = Vector2( 9640.23, -600.519 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
