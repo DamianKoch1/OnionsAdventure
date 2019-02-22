@@ -95,7 +95,6 @@ position = Vector2( -93.722, -108.036 )
 
 [node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 position = Vector2( 2336.93, -32 )
 
 [node name="Collectable06" parent="stump m, stump l, tendril, muddy" index="5" instance=ExtResource( 4 )]
