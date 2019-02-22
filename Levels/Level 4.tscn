@@ -168,7 +168,7 @@ position = Vector2( 4160, 928 )
 [node name="Muddy" parent="stump l, moving tendril" index="3" instance=ExtResource( 15 )]
 
 position = Vector2( -260.488, 104.685 )
-movespeed = 1.5
+movespeed = 1.0
 
 [node name="platform up" parent="." index="9" instance=ExtResource( 16 )]
 
