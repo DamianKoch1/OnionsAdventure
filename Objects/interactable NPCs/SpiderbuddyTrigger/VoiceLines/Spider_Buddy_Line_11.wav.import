@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Spider_Buddy_Line_11.wav-355c0c79f2645769c632b6aceff1b5ae.sample"
+
+[deps]
+
+source_file="res://Objects/interactable NPCs/SpiderbuddyTrigger/VoiceLines/Spider_Buddy_Line_11.wav"
+dest_files=[ "res://.import/Spider_Buddy_Line_11.wav-355c0c79f2645769c632b6aceff1b5ae.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
