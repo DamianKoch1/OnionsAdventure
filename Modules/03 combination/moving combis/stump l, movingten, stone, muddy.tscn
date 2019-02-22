@@ -19,7 +19,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 46.1254, 170.18 )
 }
 
-[node name="stump l, movingten, stone, muddy" type="Node2D" index="0"]
+[node name="stump l, movingten, stone, muddy" type="Node2D"]
 
 [node name="Stump2" type="Sprite" parent="." index="0"]
 
@@ -112,7 +112,7 @@ polygon = PoolVector2Array( 669.354, 228.125, 1331.84, 256.482, 1324.12, -52.471
 
 editor/display_folded = true
 position = Vector2( 75.6506, 104.29 )
-movespeed = 1.75
+movespeed = 1.3
 
 [node name="EnemyPath" parent="Muddy" index="0"]
 

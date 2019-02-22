@@ -23,7 +23,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="Ast 4" parent="stump l 8" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 231.398, 22.3374 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Stump" type="Sprite" parent="stump l 8" index="1"]
 
@@ -68,7 +68,7 @@ position = Vector2( 167.62, -241.327 )
 [node name="Muddy" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 46.8071, 106.608 )
-movespeed = 1.25
+movespeed = 0.9
 
 [node name="new tiles" type="Node2D" parent="." index="4"]
 

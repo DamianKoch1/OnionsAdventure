@@ -58,13 +58,12 @@ position = Vector2( 47.6684, 42.0298 )
 
 [node name="firesalamander, thorn" parent="." index="2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 768.93, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="SpiderbuddyTrigger" parent="firesalamander, thorn" index="3" instance=ExtResource( 6 )]
 
-position = Vector2( -9.8219, 67.5255 )
+position = Vector2( -87.7417, 66.0553 )
 text = "Jump onto him!"
 
 [node name="stump s, tendril, thorn" parent="." index="3" instance=ExtResource( 7 )]
@@ -95,7 +94,6 @@ position = Vector2( -93.722, -108.036 )
 
 [node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 10 )]
 
-editor/display_folded = true
 position = Vector2( 2336.93, -32 )
 
 [node name="Collectable06" parent="stump m, stump l, tendril, muddy" index="5" instance=ExtResource( 4 )]
@@ -172,7 +170,7 @@ position = Vector2( 82, -97 )
 
 [node name="SpiderbuddyTrigger" parent="MovingPlat2" index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 44.1987, 74.8918 )
+position = Vector2( -63.2805, 73.7838 )
 text = "Jump onto them!"
 
 [node name="stone 2 (up)" parent="." index="8" instance=ExtResource( 14 )]
