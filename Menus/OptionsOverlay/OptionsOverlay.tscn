@@ -66,6 +66,8 @@ margin_right = 16.0
 margin_bottom = -73.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath("../../Master/MasterSlider")
+focus_neighbour_bottom = NodePath("../../SFX/SFXSlider")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -82,7 +84,7 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
-_sections_unfolded = [ "Theme", "custom_styles" ]
+_sections_unfolded = [ "Focus", "Theme", "custom_styles" ]
 
 [node name="Music" parent="Volume/Music" index="1" instance=ExtResource( 3 )]
 
@@ -109,6 +111,8 @@ margin_right = 16.0
 margin_bottom = -65.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath("../../Music/MusicSlider")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -125,6 +129,7 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
+_sections_unfolded = [ "Focus", "Mouse" ]
 
 [node name="Master" parent="Volume/Master" index="1" instance=ExtResource( 3 )]
 
@@ -150,6 +155,7 @@ margin_right = 16.0
 margin_bottom = -47.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_bottom = NodePath("../../../BackButton")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -166,6 +172,7 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
+_sections_unfolded = [ "Focus" ]
 
 [node name="SFX" parent="Volume/SFX" index="1" instance=ExtResource( 3 )]
 
@@ -190,7 +197,7 @@ margin_top = 59.0
 margin_right = 11.0
 margin_bottom = 95.0
 focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath(".")
+focus_neighbour_top = NodePath("../Volume/SFX/SFXSlider")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
