@@ -449,7 +449,6 @@ position = Vector2( 10256.6, 1055.56 )
 
 [node name="elevator" parent="." index="23" instance=ExtResource( 35 )]
 
-editor/display_folded = true
 position = Vector2( 10896.6, 1055.56 )
 
 [node name="Ladder" parent="elevator" index="5" instance=ExtResource( 8 )]
@@ -462,7 +461,7 @@ position = Vector2( 256, 64 )
 
 [node name="Collectable" parent="elevator" index="7" instance=ExtResource( 3 )]
 
-position = Vector2( 0, -55.7755 )
+position = Vector2( 0, -48.9738 )
 
 [node name="Collectable2" parent="elevator" index="8" instance=ExtResource( 3 )]
 
@@ -502,6 +501,7 @@ position = Vector2( 11952.6, 734.565 )
 
 [node name="platform short3" parent="." index="25" instance=ExtResource( 31 )]
 
+editor/display_folded = true
 position = Vector2( 12432.6, 799.565 )
 
 [node name="trappedNPC" parent="platform short3" index="1" instance=ExtResource( 18 )]
