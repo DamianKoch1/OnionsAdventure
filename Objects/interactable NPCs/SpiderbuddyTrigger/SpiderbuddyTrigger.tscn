@@ -15,6 +15,9 @@ script = ExtResource( 1 )
 text = "insert text"
 spiderCooldown = 15
 spiderDelay = 0
+waitForKey = false
+key = ""
+keyWaitTime = 5
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
