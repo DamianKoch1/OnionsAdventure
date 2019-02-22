@@ -68,6 +68,17 @@ playback_speed = 1.0
 anims/swinging = SubResource( 2 )
 blend_times = [  ]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "SoundEffects"
+area_mask = 1
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 
