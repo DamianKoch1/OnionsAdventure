@@ -70,6 +70,6 @@ func resetObj():
 
 func attachBurningVFX(object, target):
 	var transf = object.get_global_transform()
-	get_parent().remove_child(object)
+	object.get_parent().remove_child(object)
 	target.add_child(object)
 	object.set_global_transform(transf)
