@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 160, 96 )
 
-[node name="SpiderbuddyTrigger" type="Node2D" index="0" groups=[
+[node name="SpiderbuddyTrigger" type="Node2D" groups=[
 "SpiderbuddyTrigger",
 ]]
 
