@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Leaf.png-5917d5d2dbba6885f93ce784db1bc819.stex"
+path="res://.import/firefly_2_-_volume_cursor.png-d3dc0c77713c127d6cabb3f5717ec6c0.stex"
 
 [deps]
 
-source_file="res://Menus/OptionsOverlay/Leaf.png"
-dest_files=[ "res://.import/Leaf.png-5917d5d2dbba6885f93ce784db1bc819.stex" ]
+source_file="res://Menus/OptionsOverlay/Slider/firefly_2_-_volume_cursor.png"
+dest_files=[ "res://.import/firefly_2_-_volume_cursor.png-d3dc0c77713c127d6cabb3f5717ec6c0.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

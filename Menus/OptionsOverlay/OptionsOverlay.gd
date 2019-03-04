@@ -5,7 +5,7 @@ extends Container
 onready var masterSlider = $Volume/Master/MasterSlider
 onready var musicSlider = $Volume/Music/MusicSlider
 onready var sfxSlider = $Volume/SFX/SFXSlider
-onready var fade = $Fade
+
 
 
 
