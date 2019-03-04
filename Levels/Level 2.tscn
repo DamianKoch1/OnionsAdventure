@@ -34,7 +34,7 @@
 [ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=33]
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 2" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -85,6 +85,7 @@ position = Vector2( 100.831, 7.75626 )
 
 [node name="firesalamander, thorn, tendril" parent="." index="4" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 position = Vector2( 1632.93, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -94,6 +95,7 @@ position = Vector2( -93.722, -108.036 )
 
 [node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 10 )]
 
+editor/display_folded = true
 position = Vector2( 2336.93, -32 )
 
 [node name="Collectable06" parent="stump m, stump l, tendril, muddy" index="5" instance=ExtResource( 4 )]
@@ -146,6 +148,7 @@ position = Vector2( 272.666, -68.9957 )
 
 [node name="stump s, stump l 2" parent="." index="6" instance=ExtResource( 11 )]
 
+editor/display_folded = true
 position = Vector2( 3040.93, 96 )
 
 [node name="Checkpoint" parent="stump s, stump l 2" index="3" instance=ExtResource( 12 )]
@@ -179,6 +182,7 @@ position = Vector2( 3930, -160 )
 
 [node name="Jump down" parent="." index="9" instance=ExtResource( 15 )]
 
+editor/display_folded = true
 position = Vector2( 3941.7, -192.03 )
 
 [node name="trappedNPC3" parent="Jump down" index="1" instance=ExtResource( 9 )]
@@ -187,6 +191,7 @@ position = Vector2( 1686.81, 88.3816 )
 
 [node name="stump m, bitchy" parent="." index="10" instance=ExtResource( 16 )]
 
+editor/display_folded = true
 position = Vector2( 4549.7, -192.03 )
 
 [node name="Collectable21" parent="stump m, bitchy" index="4" instance=ExtResource( 4 )]
@@ -219,6 +224,7 @@ position = Vector2( -532.297, 22.1393 )
 
 [node name="stump s, tendril, thorn2" parent="." index="11" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 5253.7, -192.03 )
 
 [node name="Checkpoint2" parent="stump s, tendril, thorn2" index="4" instance=ExtResource( 12 )]
@@ -289,6 +295,7 @@ position = Vector2( 7141.61, -320.05 )
 
 [node name="platform long" parent="." index="17" instance=ExtResource( 23 )]
 
+editor/display_folded = true
 position = Vector2( 7860.75, -480.979 )
 
 [node name="Bouncer" parent="platform long" index="1" instance=ExtResource( 24 )]

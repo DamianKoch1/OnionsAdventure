@@ -41,14 +41,14 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=40]
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 12.4875, 170.161 )
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 363.126, 640.44 )
@@ -60,7 +60,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -18.132, -24.176, 7.85721, 8.46162, -9.04248, 204.421, 0, 0, 9.06602, 25.3848, 4.74219, 248.234, 0, 0, 0, 0, 40.9175, 277.071, -7.25281, 12.6924, 11.4836, -34.4509, 81.4121, 266.796, 0, 0, 0, 0, 80.8081, 193.059, 8.46162, 5.43961, -21.154, -22.3628, 56.0273, 151.96, 0, 0, 0, 0, -21.3359, 147.125, 0, 0, 0, 0, -53.3691, 169.488, 6.64841, -7.25281, -11.4836, 6.04401, -120.458, 194.268, 0, 0, 0, 0, -139.798, 220.257, 19.9452, -19.3408, -47.7477, 9.06602, -152.491, 277.676, 0, 0, -16.3188, -10.2748, -218.975, 262.566, 0, 0, 0, 0, -237.711, 216.027, -12.6924, 19.3408, 4.83521, -20.5496, -223.206, 150.751, 0, 0, 0, 0, -148.26, 138.663, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D"]
+[node name="Level 3" type="Node2D" index="0"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -110,7 +110,7 @@ position = Vector2( -94.1378, 167.889 )
 [node name="EnemyPath" parent="movingten1/Enemy" index="0"]
 
 position = Vector2( 91.9547, -170.232 )
-curve = SubResource( 2 )
+curve = SubResource( 1 )
 
 [node name="PathFollow2D" parent="movingten1/Enemy/EnemyPath" index="1"]
 
@@ -289,7 +289,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump m, thorn 2/stump m 9/stump/StaticBody2D2" index="0"]
 
 position = Vector2( 915.729, 640.662 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="MovingPlat5" parent="." index="10" instance=ExtResource( 19 )]
 
@@ -450,6 +450,7 @@ position = Vector2( 109.438, -36.8953 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
 
+editor/display_folded = true
 position = Vector2( 9640.23, -600.519 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
@@ -496,6 +497,7 @@ position = Vector2( -252.633, -190.582 )
 
 [node name="stone 4 flip" parent="." index="19" instance=ExtResource( 34 )]
 
+editor/display_folded = true
 position = Vector2( 9257.19, -161.848 )
 
 [node name="Collectable" parent="stone 4 flip" index="2" instance=ExtResource( 3 )]
