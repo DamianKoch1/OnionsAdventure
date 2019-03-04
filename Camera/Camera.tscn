@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Camera/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Camera/HUD/UI_NPC2.png" type="Texture" id=4]
-[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=5]
-[ext_resource path="res://Menus/ExtrasMenu/DandelionUI.png" type="Texture" id=6]
-[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Camera/HUD/UI_NPC2greyed.png" type="Texture" id=4]
+[ext_resource path="res://Camera/HUD/UI_NPC2.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Camera/HUD/DandelionUI.png" type="Texture" id=7]
+[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=9]
 
 [node name="Camera" type="Camera2D" index="0"]
 
@@ -84,7 +85,6 @@ __meta__ = {
 
 [node name="NPCsEmpty" type="Sprite" parent="CanvasLayer/NPCs" index="0"]
 
-self_modulate = Color( 0.273438, 0.273438, 0.273438, 1 )
 position = Vector2( -32, -32 )
 scale = Vector2( 0.371773, 0.322383 )
 texture = ExtResource( 4 )
@@ -97,7 +97,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
 position = Vector2( -32, -32 )
 scale = Vector2( 0.371773, 0.322383 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 225, 100 )
@@ -127,7 +127,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 6 )
 text = "00/50"
 percent_visible = 1.0
 lines_skipped = 0
@@ -138,11 +138,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 position = Vector2( 31.1305, 29.8198 )
 scale = Vector2( 0.477468, 0.477468 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
-[node name="BGMPlayer" parent="." index="1" instance=ExtResource( 7 )]
+[node name="BGMPlayer" parent="." index="1" instance=ExtResource( 8 )]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 volume_db = 0.0
 
 

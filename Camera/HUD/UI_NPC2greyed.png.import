@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DandelionUI.png-8498cf3d41b9474eb910d64ec6bf160b.stex"
+path="res://.import/UI_NPC2greyed.png-84d8752cc62da5d64fc44fd253e544f6.stex"
 
 [deps]
 
-source_file="res://Menus/ExtrasMenu/DandelionUI.png"
-dest_files=[ "res://.import/DandelionUI.png-8498cf3d41b9474eb910d64ec6bf160b.stex" ]
+source_file="res://Camera/HUD/UI_NPC2greyed.png"
+dest_files=[ "res://.import/UI_NPC2greyed.png-84d8752cc62da5d64fc44fd253e544f6.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
