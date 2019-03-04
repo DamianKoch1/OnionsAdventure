@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Background/Background final 2.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Background/Static/Tree.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Background/Front Layer Bottom Camera Cage.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Background/Front Layer Top Camera Cage.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Background/Front Layer Bottom Camera Cage.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Background/Front Layer Top Camera Cage.png" type="Texture" id=3]
 
-[node name="Background" type="ParallaxBackground"]
+[node name="Background" type="ParallaxBackground" index="0"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -19,14 +18,14 @@ scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = false
 
-[node name="LastLayer" type="ParallaxLayer" parent="." index="0"]
+[node name="Layer1" type="ParallaxLayer" parent="." index="0"]
 
 motion_scale = Vector2( 0.06, 0.1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion" ]
 
-[node name="Sprite" type="Sprite" parent="LastLayer" index="0"]
+[node name="Sprite" type="Sprite" parent="Layer1" index="0"]
 
 position = Vector2( 380.965, 98.1883 )
 scale = Vector2( 0.672944, 0.622318 )
@@ -39,8 +38,6 @@ motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion" ]
-
-[node name="Tree" parent="Static" index="0" instance=ExtResource( 2 )]
 
 [node name="Foreground" type="ParallaxBackground" parent="." index="2"]
 
@@ -70,7 +67,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 position = Vector2( 2362.63, 138.292 )
 scale = Vector2( 0.458874, 0.439718 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( -672, 0, 14688, 340 )
 _sections_unfolded = [ "Region" ]
@@ -86,9 +83,16 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 position = Vector2( 1073.71, -138.24 )
 scale = Vector2( 0.288818, 0.27676 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( -84, 12, 13512, 412 )
 _sections_unfolded = [ "Region" ]
+
+[node name="Static" type="ParallaxLayer" parent="Foreground" index="2"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
 
 
