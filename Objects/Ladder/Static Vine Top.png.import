@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Floor Tiles Mid Part.png-cf581ef3a9dc68aa85d166e97955e446.stex"
+path="res://.import/Static Vine Top.png-433bc6e56379f2154dae0db7bfc63f97.stex"
 
 [deps]
 
-source_file="res://Assets/new tiles/Floor Tiles Mid Part.png"
-dest_files=[ "res://.import/Floor Tiles Mid Part.png-cf581ef3a9dc68aa85d166e97955e446.stex" ]
+source_file="res://Objects/Ladder/Static Vine Top.png"
+dest_files=[ "res://.import/Static Vine Top.png-433bc6e56379f2154dae0db7bfc63f97.stex" ]
 
 [params]
 
