@@ -61,7 +61,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="SpiderbuddyTrigger" parent="Start" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( -97.0325, 41.9004 )
-text = "Press “A”, “D” or arrow keys"
+text = "For moving press “A”, “D” or narrow keys."
 
 [node name="smallstump2" parent="." index="1" instance=ExtResource( 4 )]
 
@@ -79,7 +79,7 @@ position = Vector2( -31.4462, 89.9133 )
 [node name="SpiderbuddyTrigger" parent="smallstump2" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( -383.874, 82.8169 )
-text = "Good! … Press “Space”!"
+text = "Good! Now press “Space” to jump."
 
 [node name="smallstoneup" parent="." index="2" instance=ExtResource( 6 )]
 
@@ -101,7 +101,7 @@ position = Vector2( 275.767, -32.3074 )
 [node name="SpiderbuddyTrigger" parent="mediumstump2" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( -24.4019, 35.2019 )
-text = "They will hurt you!"
+text = "Onion, watch out! They will hurt you!"
 
 [node name="ThornsCorner" parent="mediumstump2" index="6" instance=ExtResource( 8 )]
 
@@ -125,13 +125,15 @@ position = Vector2( 10.2097, 185.553 )
 
 [node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 3 )]
 
-position = Vector2( -99.1992, 150.38 )
-text = "Press “E”!"
+position = Vector2( -106.886, 65.8814 )
+scale = Vector2( 1.24021, 1.71819 )
+text = "Oh no, look! Eaglebunny got caught inside my Web. Help him by pressing “E”."
+keyWaitTime = 0
 
 [node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 3 )]
 
 position = Vector2( 344.553, 39.9205 )
-text = "It’s like a checkpoint."
+text = "Here you will return if you get hurt."
 
 [node name="stump s, stump m 1" parent="." index="5" instance=ExtResource( 13 )]
 
@@ -196,7 +198,7 @@ position = Vector2( 390.963, -74.9346 )
 [node name="SpiderbuddyTrigger" parent="stump l, moving tendril" index="8" instance=ExtResource( 3 )]
 
 position = Vector2( -342.811, -40.1284 )
-text = "Jump onto that tendril!"
+text = "The tendrils will help you to cross big gaps. Jump onto it!"
 
 [node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 17 )]
 
@@ -236,7 +238,7 @@ position = Vector2( 254.966, -158.66 )
 
 position = Vector2( 208.688, 21.2203 )
 scale = Vector2( 1.23411, 1.2233 )
-text = "Don’t touch these insects!"
+text = "Onion, watch out! The insects will hurt you if you touch them!"
 
 [node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 19 )]
 
@@ -397,12 +399,7 @@ position = Vector2( -254.506, 2.70752 )
 
 position = Vector2( -144.4, 25.2701 )
 
-[node name="SpiderbuddyTrigger" parent="stump s, stone" index="7" instance=ExtResource( 3 )]
-
-position = Vector2( -392.589, 0 )
-text = ""
-
-[node name="ThornsCorner" parent="stump s, stone" index="8" instance=ExtResource( 8 )]
+[node name="ThornsCorner" parent="stump s, stone" index="7" instance=ExtResource( 8 )]
 
 position = Vector2( -11.4678, 109.119 )
 scale = Vector2( 0.356969, 0.356969 )
