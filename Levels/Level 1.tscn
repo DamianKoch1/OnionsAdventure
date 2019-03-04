@@ -49,7 +49,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -61,7 +61,6 @@ _sections_unfolded = [ "Z Index" ]
 
 position = Vector2( -97.0325, 41.9004 )
 text = "Press “A”, “D” or arrow keys"
-spiderDelay = 5
 
 [node name="smallstump2" parent="." index="1" instance=ExtResource( 4 )]
 

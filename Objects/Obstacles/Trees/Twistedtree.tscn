@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Objects/Obstacles/Trees/asset_Tree_Magical_Concept_New_2A v2.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Obstacles/Trees/Tree Bigv3a.png" type="Texture" id=1]
 
 [node name="TwistedTree" type="Sprite"]
 
@@ -16,6 +16,7 @@ __meta__ = {
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
+position = Vector2( -9.93095, -48.3559 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -28,14 +29,14 @@ bounce = 0.0
 
 position = Vector2( -160.238, -52.1485 )
 build_mode = 0
-polygon = PoolVector2Array( 350.285, 692.202, 328.904, 696.312, 304.397, 696.312, 276.021, 702.761, 233.456, 698.892, 193.729, 697.339, 179.76, 676.385, 183.252, 640.299, 188.585, 617.625, 401.164, 615.534, 439.498, 617.625, 447.165, 661.535, 433.922, 678.959, 400.467, 685.232 )
+polygon = PoolVector2Array( 375.069, 696.643, 328.904, 696.312, 304.397, 696.312, 279.589, 696.643, 231.849, 672.773, 207.978, 648.903, 207.978, 625.032, 401.164, 615.534, 446.68, 625.032, 446.68, 672.773, 446.68, 696.643, 422.81, 696.643 )
 one_way_collision = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="1"]
 
 position = Vector2( -173.512, -52.1485 )
 build_mode = 0
-polygon = PoolVector2Array( 666.167, 501.315, 605.424, 525.725, 602.585, 552.975, 605.992, 592.146, 639.574, 599.556, 731.533, 600.897, 790.776, 600.897, 873.555, 585.586, 873.944, 563.761, 872.808, 533.673, 867.444, 501.229 )
+polygon = PoolVector2Array( 674.785, 505.682, 603.175, 529.552, 603.175, 577.292, 603.175, 625.032, 650.915, 601.162, 731.533, 600.897, 790.776, 600.897, 841.877, 577.292, 865.747, 529.552, 865.747, 505.682 )
 one_way_collision = true
 
 
