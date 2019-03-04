@@ -6,7 +6,7 @@
 [ext_resource path="res://Camera/HUD/Animals_Trapped.png" type="Texture" id=4]
 [ext_resource path="res://Camera/HUD/Animals_Free.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=7]
+[ext_resource path="res://Menus/ExtrasMenu/DandelionUI.png" type="Texture" id=7]
 [ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/Spawnpoint/RespawnCrystalVFX.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Goal/Onion_yeah_1.ogg" type="AudioStream" id=10]
@@ -413,7 +413,6 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="Dandelions" type="Node2D" parent="CanvasLayer/Collectables" index="1"]
 
-editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 236.447, 91.9335 )
 scale = Vector2( 1.33729, 1.33729 )
@@ -445,8 +444,8 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Collectables/Dandelions" index="1"]
 
-position = Vector2( 31.1305, 28.4576 )
-scale = Vector2( 0.477468, 0.477468 )
+position = Vector2( 33.0065, 33.1475 )
+scale = Vector2( 0.452136, 0.452136 )
 texture = ExtResource( 7 )
 
 [node name="Fade" parent="CanvasLayer" index="1" instance=ExtResource( 8 )]
