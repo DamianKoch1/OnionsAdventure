@@ -57,7 +57,7 @@ func _physics_process(delta):
 		attachCD = max(attachCD - delta, 0)
 		ghostjumpTimeframe = max(ghostjumpTimeframe - delta, 0)
 		#debug fly and godmode
-		if Input.is_action_just_pressed("debugFly"):
+		if Input.is_action_just_pressed("debugFly") && Input.is_action_pressed("debug1") && Input.is_action_pressed("debug2"):
 			if debugFly == false:
 				print("Fly ON")
 				$Onion/debugFly.show()
@@ -75,7 +75,7 @@ func _physics_process(delta):
 				climbspeed /= 2.5
 				movespeed /= 4
 				debugFly = false
-		if Input.is_action_just_pressed("debugGodmode"):
+		if Input.is_action_just_pressed("debugGodmode") && Input.is_action_pressed("debug1") && Input.is_action_pressed("debug2"):
 			if debugGodmode == false:
 				print("Invincible ON")
 				$debugInvincible.show()
