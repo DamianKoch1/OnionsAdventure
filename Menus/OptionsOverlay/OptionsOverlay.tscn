@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
-[ext_resource path="res://Menus/OptionsOverlay/firefly_2_-_volume_cursor.png" type="Texture" id=3]
-[ext_resource path="res://Menus/OptionsOverlay/firefly_-_volume_c..png" type="Texture" id=4]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlaySlider.tres" type="StyleBox" id=5]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlayGrabberArea.tres" type="StyleBox" id=6]
+[ext_resource path="res://Menus/OptionsOverlay/Slider/firefly_2_-_volume_cursor.png" type="Texture" id=3]
+[ext_resource path="res://Menus/OptionsOverlay/Slider/firefly_-_volume_c..png" type="Texture" id=4]
+[ext_resource path="res://Menus/OptionsOverlay/Slider/OptionsOverlaySlider.tres" type="StyleBox" id=5]
+[ext_resource path="res://Menus/OptionsOverlay/Slider/OptionsOverlayGrabberArea.tres" type="StyleBox" id=6]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=8]
 
@@ -65,10 +65,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -190.0
-margin_top = -134.0
-margin_right = 557.0
-margin_bottom = 260.0
+margin_left = -191.0
+margin_top = -127.0
+margin_right = 556.0
+margin_bottom = 267.0
 rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -87,7 +87,7 @@ min_value = 20.0
 max_value = 100.0
 step = 1.0
 page = 0.0
-value = 100.0
+value = 80.0
 exp_edit = false
 rounded = false
 editable = true
