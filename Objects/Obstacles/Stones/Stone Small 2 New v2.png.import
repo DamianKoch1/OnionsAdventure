@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Stone_BridgeA.png-46137255d4d15b5be42c3a9afad41679.stex"
+path="res://.import/Stone Small 2 New v2.png-004cce50b78d11c0dbc3ffad0ca68139.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Stones/Asset_Stone_BridgeA.png"
-dest_files=[ "res://.import/Asset_Stone_BridgeA.png-46137255d4d15b5be42c3a9afad41679.stex" ]
+source_file="res://Objects/Obstacles/Stones/Stone Small 2 New v2.png"
+dest_files=[ "res://.import/Stone Small 2 New v2.png-004cce50b78d11c0dbc3ffad0ca68139.stex" ]
 
 [params]
 
