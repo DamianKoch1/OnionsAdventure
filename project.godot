@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Onion Adventures"
+config/name="Onion's Adventure"
 run/main_scene="res://Menus/Bootsplash/BootLogo.tscn"
 boot_splash/image="res://Menus/Bootsplash/S4G_logo.png"
 boot_splash/fullsize=false
