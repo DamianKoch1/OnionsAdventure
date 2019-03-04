@@ -8,7 +8,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
 
-[node name="PauseMenu" type="Container" index="0"]
+[node name="PauseMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -169,11 +169,11 @@ margin_bottom = 70.0
 
 texture = ExtResource( 2 )
 
-[node name="Music" parent="OptionsOverlay/Volume/Music" index="1"]
+[node name="Master" parent="OptionsOverlay/Volume/Master" index="1"]
 
 custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
 
-[node name="Master" parent="OptionsOverlay/Volume/Master" index="1"]
+[node name="Music" parent="OptionsOverlay/Volume/Music" index="1"]
 
 custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
 

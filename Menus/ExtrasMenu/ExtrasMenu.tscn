@@ -26,7 +26,6 @@
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 16.png" type="Texture" id=24]
 [ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=25]
 
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "expand"
@@ -1156,7 +1155,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1461, -69 ), Vector2( -2101, -69 ) ]
 }
 
-[node name="Gallery" type="Container"]
+[node name="Gallery" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -1200,18 +1199,19 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Gallery Title" parent="." index="1" instance=ExtResource( 3 )]
 
-margin_left = -310.0
-margin_top = -157.0
-margin_right = -49.0
-margin_bottom = -31.0
+margin_left = -343.0
+margin_top = -135.0
+margin_right = -82.0
+margin_bottom = -9.0
+rect_scale = Vector2( 0.35, 0.35 )
 text = "gallery"
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -149.0
-margin_top = 123.0
-margin_right = 11.0
-margin_bottom = 155.0
+margin_left = -377.0
+margin_top = 83.0
+margin_right = -217.0
+margin_bottom = 115.0
 focus_neighbour_left = NodePath("../BackButton")
 focus_neighbour_top = NodePath("../NextButton")
 focus_neighbour_right = NodePath("../NextButton")
@@ -1222,14 +1222,15 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 margin_right = 1189.0
 margin_bottom = 273.0
+rect_scale = Vector2( 0.25, 0.25 )
 text = "back"
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -338.0
-margin_top = -5.0
-margin_right = -114.0
-margin_bottom = 31.0
+margin_left = -183.0
+margin_top = 107.0
+margin_right = 41.0
+margin_bottom = 143.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../NextButton")
@@ -1252,10 +1253,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="NextButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = 57.0
-margin_top = -5.0
-margin_right = 281.0
-margin_bottom = 31.0
+margin_left = -75.0
+margin_top = 107.0
+margin_right = 149.0
+margin_bottom = 143.0
 focus_neighbour_left = NodePath("../BackButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath(".")
@@ -1279,7 +1280,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Dandelions" type="Node2D" parent="." index="5"]
 
-position = Vector2( -132.117, -111.741 )
+editor/display_folded = true
+position = Vector2( -146.117, -106.741 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Dandelions" index="0"]
@@ -1299,7 +1301,7 @@ text = "000/200"
 [node name="TrappedNPCs" type="Node2D" parent="." index="6"]
 
 editor/display_folded = true
-position = Vector2( 27.106, -141.164 )
+position = Vector2( 9.10599, -135.565 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite2" type="Sprite" parent="TrappedNPCs" index="0"]
@@ -1320,18 +1322,21 @@ text = "0/12"
 [node name="Pages" type="Node2D" parent="." index="7"]
 
 show_behind_parent = true
-position = Vector2( -181, -69 )
+position = Vector2( -1461, -69 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Page1" type="Node2D" parent="Pages" index="0"]
 
+editor/display_folded = true
+position = Vector2( 10, 0 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="unlockableImg" parent="Pages/Page1" index="0" instance=ExtResource( 8 )]
 
+editor/display_folded = false
 show_behind_parent = true
-position = Vector2( 0, 0 )
-_sections_unfolded = [ "Visibility", "Z Index" ]
+position = Vector2( 16, -11 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 dandelionsNeeded = 5
 NPCsNeeded = 1
 
@@ -1360,7 +1365,7 @@ blend_times = [  ]
 [node name="unlockableImg2" parent="Pages/Page1" index="1" instance=ExtResource( 8 )]
 
 show_behind_parent = true
-position = Vector2( 192, 0 )
+position = Vector2( 176, -11 )
 dandelionsNeeded = 10
 NPCsNeeded = 1
 
@@ -1386,7 +1391,7 @@ blend_times = [  ]
 
 [node name="unlockableImg3" parent="Pages/Page1" index="2" instance=ExtResource( 8 )]
 
-position = Vector2( 0, 128 )
+position = Vector2( 16, 99 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 dandelionsNeeded = 20
 NPCsNeeded = 2
@@ -1412,7 +1417,7 @@ blend_times = [  ]
 
 [node name="unlockableImg4" parent="Pages/Page1" index="3" instance=ExtResource( 8 )]
 
-position = Vector2( 192, 128 )
+position = Vector2( 176, 99 )
 dandelionsNeeded = 25
 NPCsNeeded = 3
 
@@ -1442,7 +1447,7 @@ position = Vector2( 640, 0 )
 
 [node name="unlockableImg" parent="Pages/Page2" index="0" instance=ExtResource( 8 )]
 
-position = Vector2( 0, 0 )
+position = Vector2( 26, -11 )
 dandelionsNeeded = 50
 NPCsNeeded = 4
 
@@ -1463,7 +1468,7 @@ blend_times = [  ]
 
 [node name="unlockableImg2" parent="Pages/Page2" index="1" instance=ExtResource( 8 )]
 
-position = Vector2( 192, 0 )
+position = Vector2( 186, -11 )
 dandelionsNeeded = 60
 NPCsNeeded = 5
 
@@ -1484,7 +1489,7 @@ blend_times = [  ]
 
 [node name="unlockableImg3" parent="Pages/Page2" index="2" instance=ExtResource( 8 )]
 
-position = Vector2( 0, 128 )
+position = Vector2( 26, 99 )
 dandelionsNeeded = 80
 NPCsNeeded = 6
 
@@ -1505,7 +1510,7 @@ blend_times = [  ]
 
 [node name="unlockableImg4" parent="Pages/Page2" index="3" instance=ExtResource( 8 )]
 
-position = Vector2( 192, 128 )
+position = Vector2( 186, 99 )
 dandelionsNeeded = 90
 NPCsNeeded = 6
 
@@ -1526,12 +1531,11 @@ blend_times = [  ]
 
 [node name="Page3" type="Node2D" parent="Pages" index="2"]
 
-editor/display_folded = true
 position = Vector2( 1280, 0 )
 
 [node name="unlockableImg" parent="Pages/Page3" index="0" instance=ExtResource( 8 )]
 
-position = Vector2( 0, 0 )
+position = Vector2( 26, -11 )
 dandelionsNeeded = 110
 NPCsNeeded = 7
 
@@ -1552,7 +1556,7 @@ blend_times = [  ]
 
 [node name="unlockableImg2" parent="Pages/Page3" index="1" instance=ExtResource( 8 )]
 
-position = Vector2( 192, 0 )
+position = Vector2( 186, -11 )
 dandelionsNeeded = 120
 NPCsNeeded = 8
 
@@ -1573,7 +1577,7 @@ blend_times = [  ]
 
 [node name="unlockableImg3" parent="Pages/Page3" index="2" instance=ExtResource( 8 )]
 
-position = Vector2( 0, 128 )
+position = Vector2( 26, 99 )
 dandelionsNeeded = 140
 NPCsNeeded = 9
 
@@ -1594,7 +1598,7 @@ blend_times = [  ]
 
 [node name="unlockableImg4" parent="Pages/Page3" index="3" instance=ExtResource( 8 )]
 
-position = Vector2( 192, 128 )
+position = Vector2( 186, 99 )
 dandelionsNeeded = 150
 NPCsNeeded = 9
 
@@ -1615,12 +1619,11 @@ blend_times = [  ]
 
 [node name="Page4" type="Node2D" parent="Pages" index="3"]
 
-editor/display_folded = true
 position = Vector2( 1920, 0 )
 
 [node name="unlockableImg" parent="Pages/Page4" index="0" instance=ExtResource( 8 )]
 
-position = Vector2( 0.000183105, 0 )
+position = Vector2( 26.0002, -11 )
 dandelionsNeeded = 160
 NPCsNeeded = 10
 
@@ -1641,7 +1644,7 @@ blend_times = [  ]
 
 [node name="unlockableImg2" parent="Pages/Page4" index="1" instance=ExtResource( 8 )]
 
-position = Vector2( 192, 0 )
+position = Vector2( 186, -11 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 dandelionsNeeded = 170
 NPCsNeeded = 11
@@ -1663,7 +1666,7 @@ blend_times = [  ]
 
 [node name="unlockableImg3" parent="Pages/Page4" index="2" instance=ExtResource( 8 )]
 
-position = Vector2( 0.000183105, 128 )
+position = Vector2( 26.0002, 99 )
 dandelionsNeeded = 190
 NPCsNeeded = 12
 
@@ -1684,7 +1687,7 @@ blend_times = [  ]
 
 [node name="unlockableImg4" parent="Pages/Page4" index="3" instance=ExtResource( 8 )]
 
-position = Vector2( 192, 128 )
+position = Vector2( 186, 99 )
 dandelionsNeeded = 200
 NPCsNeeded = 12
 
@@ -1717,10 +1720,11 @@ blend_times = [  ]
 
 [node name="Page" parent="." index="9" instance=ExtResource( 3 )]
 
-margin_left = -97.0
-margin_top = -5.0
-margin_right = 195.0
-margin_bottom = 121.0
+margin_left = -265.0
+margin_top = 113.0
+margin_right = 27.0
+margin_bottom = 239.0
+rect_scale = Vector2( 0.25, 0.25 )
 text = "Page 1/4"
 
 [node name="Fade" parent="." index="10" instance=ExtResource( 25 )]
