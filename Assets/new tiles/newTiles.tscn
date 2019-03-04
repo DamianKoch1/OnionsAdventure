@@ -1,20 +1,28 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Assets/new tiles/Floor Tiles Mid Part.png" type="Texture" id=1]
-[ext_resource path="res://Assets/new tiles/Floor Upper Tile Edge.png" type="Texture" id=2]
-[ext_resource path="res://Assets/new tiles/Floor Lower Tile Edge.png" type="Texture" id=3]
-[ext_resource path="res://Assets/new tiles/Floor Floating Bottom 1.png" type="Texture" id=4]
-[ext_resource path="res://Assets/new tiles/Floor Floating Bottom 2.png" type="Texture" id=5]
-[ext_resource path="res://Assets/new tiles/Floor Floating Bottom 3.png" type="Texture" id=6]
-[ext_resource path="res://Assets/new tiles/Floor Floating Lower Tile Edge.png" type="Texture" id=7]
-[ext_resource path="res://Assets/new tiles/Floor Straight Edge Tile.png" type="Texture" id=8]
+[ext_resource path="res://Assets/new tiles/Tiles/All Floor Tiles Mid Part.png" type="Texture" id=1]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Top Tile Edge.png" type="Texture" id=2]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Pit Lower Tile Edge.png" type="Texture" id=3]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Floating Bottom 1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Floating Bottom 2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Floating Bottom 3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Floating Lower Tile Edge.png" type="Texture" id=7]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Straight Tile Edge.png" type="Texture" id=8]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor High Bottom Tile Side Edge 1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor High Bottom Tile Side Edge 2-1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor High Bottom Tile Side Edge 2-2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor High Bottom Tile Side Edge End.png" type="Texture" id=12]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Low Bottom Tile Side Edge End.png" type="Texture" id=13]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Low Side Top Tile Edge.png" type="Texture" id=14]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Corner.png" type="Texture" id=15]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Earth.png" type="Texture" id=16]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 50, 25 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 50, 50 )
@@ -27,14 +35,19 @@ extents = Vector2( 25, 25 )
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 25, 25 )
+extents = Vector2( 50, 25 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
+extents = Vector2( 25, 25 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
 extents = Vector2( 50, 25 )
 
-[node name="Tiles" type="Node2D" index="0"]
+[node name="Tiles" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -61,7 +74,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="00/StaticBody2D" index="0"]
 
 position = Vector2( 50, 75 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="01" type="Sprite" parent="." index="1"]
@@ -88,7 +101,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="01/StaticBody2D2" index="0"]
 
 position = Vector2( 50, 75 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="02" type="Sprite" parent="." index="2"]
@@ -115,7 +128,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="02/StaticBody2D3" index="0"]
 
 position = Vector2( 50, 75 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="03" type="Sprite" parent="." index="3"]
@@ -142,7 +155,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="03/StaticBody2D" index="0"]
 
 position = Vector2( 50, 50 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="04" type="Sprite" parent="." index="4"]
@@ -170,7 +183,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="04/StaticBody2D2" index="0"]
 
 position = Vector2( 50, 50 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="05" type="Sprite" parent="." index="5"]
@@ -197,7 +210,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="05/StaticBody2D" index="0"]
 
 position = Vector2( 50, 50 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="06" type="Sprite" parent="." index="6"]
@@ -224,7 +237,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="06/StaticBody2D" index="0"]
 
 position = Vector2( 50, 50 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="07" type="Sprite" parent="." index="7"]
@@ -251,7 +264,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="07/StaticBody2D" index="0"]
 
 position = Vector2( 50, 50 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="08" type="Sprite" parent="." index="8"]
@@ -278,7 +291,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="08/StaticBody2D" index="0"]
 
 position = Vector2( 50, 50 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="09" type="Sprite" parent="." index="9"]
@@ -291,7 +304,7 @@ centered = false
 region_rect = Rect2( 200, 0, 100, 100 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="09" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="09" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -301,10 +314,11 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="09/StaticBody2D3" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="09/StaticBody2D" index="0"]
 
 position = Vector2( 25, 75 )
 shape = SubResource( 3 )
+one_way_collision = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="10" type="Sprite" parent="." index="10"]
@@ -317,7 +331,7 @@ centered = false
 region_rect = Rect2( 200, 0, 100, 100 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="10" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="10" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -327,10 +341,11 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="10/StaticBody2D3" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="10/StaticBody2D" index="0"]
 
 position = Vector2( 25, 25 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
+one_way_collision = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="11" type="Sprite" parent="." index="11"]
@@ -356,7 +371,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="11/StaticBody2D3" index="0"]
 
 position = Vector2( 50, 25 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="12" type="Sprite" parent="." index="12"]
@@ -382,7 +397,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="12/StaticBody2D3" index="0"]
 
 position = Vector2( 50, 25 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="13" type="Sprite" parent="." index="13"]
@@ -408,7 +423,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="13/StaticBody2D3" index="0"]
 
 position = Vector2( 50, 25 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="14" type="Sprite" parent="." index="14"]
@@ -434,7 +449,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="14/StaticBody2D3" index="0"]
 
 position = Vector2( 25, 25 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="15" type="Sprite" parent="." index="15"]
@@ -445,5 +460,213 @@ texture = ExtResource( 8 )
 centered = false
 region_rect = Rect2( 200, 0, 100, 100 )
 _sections_unfolded = [ "Region" ]
+
+[node name="16" type="Sprite" parent="." index="16"]
+
+editor/display_folded = true
+position = Vector2( 256, 64 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 9 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="16" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="16/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="17" type="Sprite" parent="." index="17"]
+
+editor/display_folded = true
+position = Vector2( 320, 64 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 10 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="17" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="17/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="18" type="Sprite" parent="." index="18"]
+
+editor/display_folded = true
+position = Vector2( 384, 64 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 11 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="18" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="18/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="19" type="Sprite" parent="." index="19"]
+
+editor/display_folded = true
+position = Vector2( 448, 64 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 12 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="19" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="19/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="20" type="Sprite" parent="." index="20"]
+
+editor/display_folded = true
+position = Vector2( 512, 64 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 13 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="20" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="20/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="21" type="Sprite" parent="." index="21"]
+
+editor/display_folded = true
+position = Vector2( 512, 0 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 14 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="21" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="21/StaticBody2D" index="0"]
+
+position = Vector2( 50, 75 )
+shape = SubResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="22" type="Sprite" parent="." index="22"]
+
+editor/display_folded = true
+position = Vector2( 512, 128 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 15 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="22" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="22/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="23" type="Sprite" parent="." index="23"]
+
+editor/display_folded = true
+position = Vector2( 0, 192 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 16 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="23" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="23/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 
