@@ -62,6 +62,8 @@ _sections_unfolded = [ "Z Index" ]
 
 position = Vector2( -97.0325, 41.9004 )
 text = "Press “A”, “D” or arrow keys"
+waitForKey = true
+key = "ui_left"
 
 [node name="smallstump2" parent="." index="1" instance=ExtResource( 4 )]
 
