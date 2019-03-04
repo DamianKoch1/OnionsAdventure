@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
@@ -7,10 +7,11 @@
 [ext_resource path="res://Camera/HUD/UI_NPC2.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Camera/HUD/DandelionUI.png" type="Texture" id=7]
-[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=9]
+[ext_resource path="res://ConceptUnlockPopup.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=10]
 
-[node name="Camera" type="Camera2D" index="0"]
+[node name="Camera" type="Camera2D"]
 
 pause_mode = 2
 position = Vector2( 32, 32 )
@@ -140,9 +141,14 @@ position = Vector2( 31.1305, 29.8198 )
 scale = Vector2( 0.477468, 0.477468 )
 texture = ExtResource( 7 )
 
-[node name="BGMPlayer" parent="." index="1" instance=ExtResource( 8 )]
+[node name="ConceptUnlockPopup" parent="CanvasLayer" index="4" instance=ExtResource( 8 )]
 
-stream = ExtResource( 9 )
+margin_top = 153.0
+margin_bottom = 411.0
+
+[node name="BGMPlayer" parent="." index="1" instance=ExtResource( 9 )]
+
+stream = ExtResource( 10 )
 volume_db = 0.0
 
 
