@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Stump_Big_NobranchesA.png-892ba944619e7484ebb846941814d135.stex"
+path="res://.import/Stone Medium 2 New v2.png-5dcbd7c23b6f97a59f59bab290f68245.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Trees/Asset_Stump_Big_NobranchesA.png"
-dest_files=[ "res://.import/Asset_Stump_Big_NobranchesA.png-892ba944619e7484ebb846941814d135.stex" ]
+source_file="res://Objects/Obstacles/Stones/Stone Medium 2 New v2.png"
+dest_files=[ "res://.import/Stone Medium 2 New v2.png-5dcbd7c23b6f97a59f59bab290f68245.stex" ]
 
 [params]
 

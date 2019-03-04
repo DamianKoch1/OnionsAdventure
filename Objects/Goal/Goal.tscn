@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Goal/End Level Crystal v2.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Goal/End of Level Crystal.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
 [ext_resource path="res://Camera/HUD/UI_NPC2greyed.png" type="Texture" id=4]
 [ext_resource path="res://Camera/HUD/UI_NPC2.png" type="Texture" id=5]

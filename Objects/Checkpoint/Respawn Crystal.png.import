@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Stone_Small_4A.png-200f12133454f57f835016f03fd307b5.stex"
+path="res://.import/Respawn Crystal.png-7284662012a9f2046efc5ad6689f2f25.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Stones/Asset_Stone_Small_4A.png"
-dest_files=[ "res://.import/Asset_Stone_Small_4A.png-200f12133454f57f835016f03fd307b5.stex" ]
+source_file="res://Objects/Checkpoint/Respawn Crystal.png"
+dest_files=[ "res://.import/Respawn Crystal.png-7284662012a9f2046efc5ad6689f2f25.stex" ]
 
 [params]
 

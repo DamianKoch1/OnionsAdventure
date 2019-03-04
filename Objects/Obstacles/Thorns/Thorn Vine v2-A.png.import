@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree Stump Medium New.png-f5feb1825ded88a529079c27277bf73f.stex"
+path="res://.import/Thorn Vine v2-A.png-a8e7dcb596bda07944c753772b7f5e44.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Trees/Tree Stump Medium New.png"
-dest_files=[ "res://.import/Tree Stump Medium New.png-f5feb1825ded88a529079c27277bf73f.stex" ]
+source_file="res://Objects/Obstacles/Thorns/Thorn Vine v2-A.png"
+dest_files=[ "res://.import/Thorn Vine v2-A.png-a8e7dcb596bda07944c753772b7f5e44.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Stump_Normal_NoBranchesA.png-0a5dc1883835a7cb35212f6e1d05c3e1.stex"
+path="res://.import/Stone Inamovable New v2.png-09e448f26722df42f02535262f066e19.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Trees/Asset_Stump_Normal_NoBranchesA.png"
-dest_files=[ "res://.import/Asset_Stump_Normal_NoBranchesA.png-0a5dc1883835a7cb35212f6e1d05c3e1.stex" ]
+source_file="res://Objects/Obstacles/Stones/Stone Inamovable New v2.png"
+dest_files=[ "res://.import/Stone Inamovable New v2.png-09e448f26722df42f02535262f066e19.stex" ]
 
 [params]
 
