@@ -1,16 +1,15 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Goal/End Level Crystal v2.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
-[ext_resource path="res://Camera/HUD/Animals_Trapped.png" type="Texture" id=4]
-[ext_resource path="res://Camera/HUD/Animals_Free.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Menus/ExtrasMenu/DandelionUI.png" type="Texture" id=7]
-[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Spawnpoint/RespawnCrystalVFX.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Objects/Goal/Onion_yeah_1.ogg" type="AudioStream" id=10]
-[ext_resource path="res://Objects/Goal/Onion_yeah_2.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Camera/HUD/UI_NPC2.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Menus/ExtrasMenu/DandelionUI.png" type="Texture" id=6]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Spawnpoint/RespawnCrystalVFX.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Goal/Onion_yeah_1.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Objects/Goal/Onion_yeah_2.ogg" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -381,7 +380,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="NPCs" type="Node2D" parent="CanvasLayer/Collectables" index="0"]
 
-editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 320.857, 224.58 )
 scale = Vector2( 1.10352, 1.10352 )
@@ -393,19 +391,20 @@ __meta__ = {
 
 [node name="NPCsEmpty" type="Sprite" parent="CanvasLayer/Collectables/NPCs" index="0"]
 
+modulate = Color( 0.270588, 0.270588, 0.270588, 1 )
 position = Vector2( -32, -32 )
 scale = Vector2( 0.371773, 0.322383 )
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 225, 100 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="NPCsFull" type="Sprite" parent="CanvasLayer/Collectables/NPCs" index="1"]
 
 position = Vector2( -32, -32 )
 scale = Vector2( 0.371773, 0.322383 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 225, 100 )
@@ -413,6 +412,7 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="Dandelions" type="Node2D" parent="CanvasLayer/Collectables" index="1"]
 
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 236.447, 91.9335 )
 scale = Vector2( 1.33729, 1.33729 )
@@ -435,7 +435,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "00/50"
 percent_visible = 1.0
 lines_skipped = 0
@@ -446,11 +446,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 position = Vector2( 33.0065, 33.1475 )
 scale = Vector2( 0.452136, 0.452136 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
-[node name="Fade" parent="CanvasLayer" index="1" instance=ExtResource( 8 )]
+[node name="Fade" parent="CanvasLayer" index="1" instance=ExtResource( 7 )]
 
-[node name="OnionRespawnVFX" parent="." index="4" instance=ExtResource( 9 )]
+[node name="OnionRespawnVFX" parent="." index="4" instance=ExtResource( 8 )]
 
 position = Vector2( -2.72102, 11.2872 )
 scale = Vector2( 0.745897, 0.745897 )
@@ -459,7 +459,7 @@ scale = Vector2( 0.745897, 0.745897 )
 
 [node name="OnionYeah1" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 9 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -470,7 +470,7 @@ area_mask = 1
 
 [node name="OnionYeah2" type="AudioStreamPlayer2D" parent="SFX" index="1"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 10 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Animals_Trapped.png-e6f7e1a2e6fee20162b592b808829b06.stex"
+path="res://.import/UI_NPC2.png-36e80e29783e4a7994e898bfe55d52e7.stex"
 
 [deps]
 
-source_file="res://Camera/HUD/Animals_Trapped.png"
-dest_files=[ "res://.import/Animals_Trapped.png-e6f7e1a2e6fee20162b592b808829b06.stex" ]
+source_file="res://Camera/HUD/UI_NPC2.png"
+dest_files=[ "res://.import/UI_NPC2.png-36e80e29783e4a7994e898bfe55d52e7.stex" ]
 
 [params]
 
