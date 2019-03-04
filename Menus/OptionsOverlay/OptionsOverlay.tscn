@@ -18,6 +18,7 @@ content_margin_bottom = -1.0
 [node name="OptionsOverlay" type="Container" index="0"]
 
 pause_mode = 2
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -58,10 +59,12 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Volume" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 43, -5 )
 
 [node name="Master" type="Node2D" parent="Volume" index="0"]
 
+editor/display_folded = true
 position = Vector2( 0, -1.36462 )
 scale = Vector2( 1, 0.999999 )
 
@@ -112,6 +115,7 @@ text = "master"
 
 [node name="Music" type="Node2D" parent="Volume" index="1"]
 
+editor/display_folded = true
 position = Vector2( 0, 37.05 )
 
 [node name="MusicSlider" type="HSlider" parent="Volume/Music" index="0"]
@@ -161,6 +165,7 @@ text = "music"
 
 [node name="SFX" type="Node2D" parent="Volume" index="2"]
 
+editor/display_folded = true
 position = Vector2( 0, 40.85 )
 
 [node name="SFXSlider" type="HSlider" parent="Volume/SFX" index="0"]

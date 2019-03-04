@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BGOnion.png" type="Texture" id=2]
-[ext_resource path="res://Menus/MainMenu/Main Menu Title.png" type="Texture" id=3]
+[ext_resource path="res://Menus/MainMenu/Main Menu Title_Hobo.png" type="Texture" id=3]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
@@ -242,6 +242,7 @@ text = "quit?"
 
 [node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 6 )]
 
+visible = false
 margin_left = 63.0
 margin_top = 50.0
 margin_right = 95.0
