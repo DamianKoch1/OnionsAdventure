@@ -1,7 +1,6 @@
 extends Container
 
 
-onready var prototype = preload("res://Levels/Prototype 0.tscn")
 onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
 
 onready var fade = $Fade
@@ -19,11 +18,6 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_on_BackButton_pressed()
 
-
-
-func _on_Level0Button_pressed():
-	SaveGame.currLevelId = 0
-	get_tree().change_scene_to(prototype)
 
 
 func _on_BackButton_pressed():
