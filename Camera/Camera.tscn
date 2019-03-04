@@ -6,11 +6,11 @@
 [ext_resource path="res://Camera/HUD/Animals_Trapped.png" type="Texture" id=4]
 [ext_resource path="res://Camera/HUD/Animals_Free.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=7]
+[ext_resource path="res://Menus/ExtrasMenu/DandelionUI.png" type="Texture" id=7]
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=9]
 
-[node name="Camera" type="Camera2D"]
+[node name="Camera" type="Camera2D" index="0"]
 
 pause_mode = 2
 position = Vector2( 32, 32 )
@@ -106,7 +106,6 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="Dandelions" type="Node2D" parent="CanvasLayer" index="3"]
 
-editor/display_folded = true
 position = Vector2( 390.961, -2.57211 )
 __meta__ = {
 "_edit_group_": true
@@ -138,7 +137,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Dandelions" index="1"]
 
-position = Vector2( 31.1305, 28.4576 )
+position = Vector2( 31.1305, 29.8198 )
 scale = Vector2( 0.477468, 0.477468 )
 texture = ExtResource( 7 )
 
