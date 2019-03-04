@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/new tiles/Tiles/All Floor Tiles Mid Part.png" type="Texture" id=1]
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Top Tile Edge.png" type="Texture" id=2]
@@ -38,11 +38,6 @@ custom_solver_bias = 0.0
 extents = Vector2( 50, 25 )
 
 [sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 25, 25 )
-
-[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 50, 25 )
@@ -323,30 +318,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="10" type="Sprite" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 192, 64 )
 scale = Vector2( 0.32, 0.32 )
 texture = ExtResource( 3 )
 centered = false
 region_rect = Rect2( 200, 0, 100, 100 )
 _sections_unfolded = [ "Region" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="10" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="10/StaticBody2D" index="0"]
-
-position = Vector2( 25, 25 )
-shape = SubResource( 3 )
-one_way_collision = true
-_sections_unfolded = [ "Transform" ]
 
 [node name="11" type="Sprite" parent="." index="11"]
 
@@ -428,29 +405,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="14" type="Sprite" parent="." index="14"]
 
-editor/display_folded = true
 position = Vector2( 448, 0 )
 scale = Vector2( 0.32, 0.32 )
 texture = ExtResource( 7 )
 centered = false
 region_rect = Rect2( 200, 0, 100, 100 )
 _sections_unfolded = [ "Region" ]
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="14" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="14/StaticBody2D3" index="0"]
-
-position = Vector2( 25, 25 )
-shape = SubResource( 5 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="15" type="Sprite" parent="." index="15"]
 
@@ -614,7 +574,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="21/StaticBody2D" index="0"]
 
 position = Vector2( 50, 75 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="22" type="Sprite" parent="." index="22"]
