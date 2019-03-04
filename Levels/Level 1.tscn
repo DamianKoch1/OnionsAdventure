@@ -345,7 +345,7 @@ position = Vector2( 958.48, -168.77 )
 [node name="stone stairs" parent="." index="15" instance=ExtResource( 26 )]
 
 editor/display_folded = true
-position = Vector2( 7684.83, -224.957 )
+position = Vector2( 7683.6, -223.729 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Checkpoint" parent="stone stairs" index="4" instance=ExtResource( 11 )]
