@@ -50,10 +50,10 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="BackButton" parent="." index="1" instance=ExtResource( 3 )]
 
-margin_left = -149.0
-margin_top = 59.0
-margin_right = 42.0
-margin_bottom = 95.0
+margin_left = -341.0
+margin_top = 91.0
+margin_right = -150.0
+margin_bottom = 127.0
 
 [node name="Label" parent="BackButton" index="0"]
 
