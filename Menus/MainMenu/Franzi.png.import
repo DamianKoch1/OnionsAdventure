@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Philip_Onion.png-fbf32514803c13d3384b930458ce562d.stex"
+path="res://.import/Franzi.png-0fc6eedc5f7c2533368beb332b17503a.stex"
 
 [deps]
 
-source_file="res://Menus/MainMenu/Philip_Onion.png"
-dest_files=[ "res://.import/Philip_Onion.png-fbf32514803c13d3384b930458ce562d.stex" ]
+source_file="res://Menus/MainMenu/Franzi.png"
+dest_files=[ "res://.import/Franzi.png-0fc6eedc5f7c2533368beb332b17503a.stex" ]
 
 [params]
 

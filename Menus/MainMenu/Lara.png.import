@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nastja_Onion.png-d6116e75fb8df8724fa4875926153f4f.stex"
+path="res://.import/Lara.png-408ba6005ee033320d2df630c64ffe9d.stex"
 
 [deps]
 
-source_file="res://Menus/MainMenu/Nastja_Onion.png"
-dest_files=[ "res://.import/Nastja_Onion.png-d6116e75fb8df8724fa4875926153f4f.stex" ]
+source_file="res://Menus/MainMenu/Lara.png"
+dest_files=[ "res://.import/Lara.png-408ba6005ee033320d2df630c64ffe9d.stex" ]
 
 [params]
 

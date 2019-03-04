@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Damian_Onions.png-13dc02316ffc96763183a78226dc9daa.stex"
+path="res://.import/Nico.png-f28fb88abc364cf705bed8ffb43583ec.stex"
 
 [deps]
 
-source_file="res://Menus/MainMenu/Damian_Onions.png"
-dest_files=[ "res://.import/Damian_Onions.png-13dc02316ffc96763183a78226dc9daa.stex" ]
+source_file="res://Menus/MainMenu/Nico.png"
+dest_files=[ "res://.import/Nico.png-f28fb88abc364cf705bed8ffb43583ec.stex" ]
 
 [params]
 
