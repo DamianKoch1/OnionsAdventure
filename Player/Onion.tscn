@@ -29,7 +29,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 14.0286, 21.1175 )
 
-[node name="Onion" type="KinematicBody2D" index="0" groups=[
+[node name="Onion" type="KinematicBody2D" groups=[
 "Player",
 ]]
 
@@ -119,7 +119,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="OnionBody" type="Sprite" parent="Onion/Colisionposition/Höhenposition" index="0"]
 
 position = Vector2( 3.68967, -4.13689 )
-scale = Vector2( 0.5, 0.426086 )
+scale = Vector2( 0.5, 0.429677 )
 z_index = 1
 texture = ExtResource( 7 )
 offset = Vector2( -6.37161, -58.5187 )
@@ -128,7 +128,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="OnionHair" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
 position = Vector2( 0.759048, -92.0257 )
-rotation = 0.854757
+rotation = 0.824762
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 8 )
 offset = Vector2( -1.19385, -22.9981 )
@@ -137,7 +137,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="onion_eyes" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="1"]
 
 position = Vector2( 19.3836, -54.0169 )
-scale = Vector2( 1, 0.396036 )
+scale = Vector2( 1, 0.237441 )
 texture = ExtResource( 9 )
 offset = Vector2( -12.1219, -0.543782 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
@@ -152,7 +152,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 [node name="OnionEarL" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
 position = Vector2( -6.44182, -95.2643 )
-rotation = 0.192902
+rotation = 0.213213
 scale = Vector2( 1.00907, 1.10266 )
 z_index = -2
 texture = ExtResource( 11 )
@@ -162,7 +162,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 [node name="OnionTail" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
 position = Vector2( -36.8987, -12.9473 )
-rotation = -0.362215
+rotation = -0.330266
 scale = Vector2( 1.00228, 1.10883 )
 z_index = -2
 texture = ExtResource( 12 )
@@ -172,7 +172,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="OnionEarR" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
 position = Vector2( -15.4798, -94.3764 )
-rotation = -0.622095
+rotation = -0.610926
 scale = Vector2( 1.03379, 1.07951 )
 z_index = -2
 texture = ExtResource( 13 )
@@ -187,7 +187,7 @@ base_path = NodePath("../..")
 active = true
 data = {
 "active": true,
-"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1 ],
+"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1, "idle", "idle/walk", 0, "walk", "idle/walk", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "id": "scale",
@@ -204,28 +204,6 @@ data = {
 "id": "out",
 "position": Vector2( 688, 102 ),
 "type": "output"
-}, {
-"filter": [  ],
-"from": "Onion_JumpDown",
-"id": "jumpdown",
-"position": Vector2( 408, 268 ),
-"type": "animation"
-}, {
-"id": "idle/walk",
-"position": Vector2( 207, 91 ),
-"transitions": [ {
-"auto_advance": false
-}, {
-"auto_advance": false
-} ],
-"type": "transition",
-"xfade": 0.3
-}, {
-"filter": [  ],
-"from": "Onion_JumpUp",
-"id": "jumpup",
-"position": Vector2( 77, 356 ),
-"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -254,6 +232,28 @@ data = {
 "mix": false,
 "position": Vector2( 362, 94 ),
 "type": "oneshot"
+}, {
+"filter": [  ],
+"from": "Onion_JumpUp",
+"id": "jumpup",
+"position": Vector2( 77, 356 ),
+"type": "animation"
+}, {
+"id": "idle/walk",
+"position": Vector2( 207, 91 ),
+"transitions": [ {
+"auto_advance": false
+}, {
+"auto_advance": false
+} ],
+"type": "transition",
+"xfade": 0.3
+}, {
+"filter": [  ],
+"from": "Onion_JumpDown",
+"id": "jumpdown",
+"position": Vector2( 408, 268 ),
+"type": "animation"
 } ]
 }
 _sections_unfolded = [ "Pause", "Playback" ]
