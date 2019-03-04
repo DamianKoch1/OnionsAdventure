@@ -33,10 +33,8 @@ func updateNPCsaved():
 	npcFull.region_rect.size.x = (3 - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth
 	if SaveGame.dandelions == 5 && SaveGame.trappedNPCs == 1:
 		$CanvasLayer/ConceptUnlockPopup.popup()
-		popupShown = true
 
 func updateCollectables():
 	dandelionCounter.text = str(50-get_tree().get_nodes_in_group("dandelions").size()) + "/50"
-	if SaveGame.dandelions == 5 && SaveGame.trappedNPCs == 1 && popupShown == false:
+	if SaveGame.dandelions == 5 && SaveGame.trappedNPCs == 1:
 		$CanvasLayer/ConceptUnlockPopup.popup()
-		popupShown = true
