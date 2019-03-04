@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
-[ext_resource path="res://Menus/ExtrasMenu/DandelionUI.png" type="Texture" id=3]
+[ext_resource path="res://Camera/HUD/DandelionUI.png" type="Texture" id=3]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/ExtrasMenu/Eaglebunny Icon.png" type="Texture" id=5]
+
 
 
 [sub_resource type="Animation" id=1]
