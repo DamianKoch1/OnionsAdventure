@@ -1,16 +1,17 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Menus/PauseMenu/PauseMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Camera/Spiderbuddy/Spiderbuddy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Camera/HUD/Animals_Trapped.png" type="Texture" id=4]
-[ext_resource path="res://Camera/HUD/Animals_Free.png" type="Texture" id=5]
+[ext_resource path="res://Camera/HUD/UI_NPC2greyed.png" type="Texture" id=4]
+[ext_resource path="res://Camera/HUD/UI_NPC2.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=7]
-[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Camera/HUD/DandelionUI.png" type="Texture" id=7]
+[ext_resource path="res://ConceptUnlockPopup.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=10]
 
-[node name="Camera" type="Camera2D"]
+[node name="Camera" type="Camera2D" index="0"]
 
 pause_mode = 2
 position = Vector2( 32, 32 )
@@ -76,7 +77,6 @@ editor/display_folded = true
 
 [node name="NPCs" type="Node2D" parent="CanvasLayer" index="2"]
 
-editor/display_folded = true
 position = Vector2( 563.093, 41.0886 )
 z_index = 4096
 _sections_unfolded = [ "Z Index" ]
@@ -92,7 +92,7 @@ texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 225, 100 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="NPCsFull" type="Sprite" parent="CanvasLayer/NPCs" index="1"]
 
@@ -106,7 +106,6 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="Dandelions" type="Node2D" parent="CanvasLayer" index="3"]
 
-editor/display_folded = true
 position = Vector2( 390.961, -2.57211 )
 __meta__ = {
 "_edit_group_": true
@@ -138,14 +137,19 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Dandelions" index="1"]
 
-position = Vector2( 31.1305, 28.4576 )
+position = Vector2( 31.1305, 29.8198 )
 scale = Vector2( 0.477468, 0.477468 )
 texture = ExtResource( 7 )
 
-[node name="BGMPlayer" parent="." index="1" instance=ExtResource( 8 )]
+[node name="ConceptUnlockPopup" parent="CanvasLayer" index="4" instance=ExtResource( 8 )]
 
-stream = ExtResource( 9 )
-volume_db = 0.0
+margin_top = 153.0
+margin_bottom = 411.0
+
+[node name="BGMPlayer" parent="." index="1" instance=ExtResource( 9 )]
+
+stream = ExtResource( 10 )
+volume_db = -10.0
 
 
 [editable path="CanvasLayer/Spiderbuddy"]

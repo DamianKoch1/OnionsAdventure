@@ -472,7 +472,7 @@ tracks/4/keys = {
 "values": [ 0.0, -14.3794, -0.134704, 13.888, 0.0, -14.3794, 0.0 ]
 }
 
-[node name="trappedNPC" type="Node2D" index="0" groups=[
+[node name="trappedNPC" type="Node2D" groups=[
 "trappedNPCs",
 ]]
 
@@ -626,7 +626,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="randomPitch" parent="." index="3" instance=ExtResource( 16 )]
 
 stream = ExtResource( 17 )
-volume_db = 10.0
+volume_db = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 
@@ -670,12 +670,12 @@ blend_times = [  ]
 [node name="help" type="AudioStreamPlayer2D" parent="." index="8"]
 
 stream = ExtResource( 20 )
-volume_db = 0.0
+volume_db = 10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
-bus = "Master"
+bus = "SoundEffects"
 area_mask = 1
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="9"]

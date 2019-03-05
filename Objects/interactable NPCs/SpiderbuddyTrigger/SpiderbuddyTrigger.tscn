@@ -13,8 +13,12 @@ extents = Vector2( 160, 96 )
 
 script = ExtResource( 1 )
 text = "insert text"
-spiderCooldown = 15
-spiderDelay = 0
+voiceLine = null
+spiderCooldown = 30
+spiderIdleDuration = 5
+waitForKey = false
+key = ""
+keyWaitTime = 5
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
@@ -37,8 +41,28 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "SoundEffects"
+area_mask = 1
+
+[node name="VoiceLineDelay" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="VoiceLineDelay" to="." method="_on_VoiceLineDelay_timeout"]
 
 

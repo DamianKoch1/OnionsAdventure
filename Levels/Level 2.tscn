@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=2]
@@ -9,32 +9,46 @@
 [ext_resource path="res://Modules/03 combination/stump s, tendril, thorn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Modules/03 combination/other interactable NPCs/firesalamander, thorn, tendril.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Modules/03 combination/enemy combis/stump m, stump l, tendril, muddy.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Modules/02 single/moving platform/MovingPlat2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Modules/02 single/stones/stone2up.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Modules/03 combination/enemy combis/stump m, bitchy.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Modules/02 single/enemy/Mealy2.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Modules/03 combination/platform/enemy platform 2.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l 3.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=21]
-[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump m, krake.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Modules/02 single/platform/platform long.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, tendril.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, thorn, krake.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=31]
-[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Decoration/Grass.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Modules/03 combination/enemy combis/stump m, stump l, tendril, muddy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Modules/02 single/moving platform/MovingPlat2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modules/02 single/stones/stone2up.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Modules/03 combination/enemy combis/stump m, bitchy.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Modules/02 single/enemy/Mealy2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modules/03 combination/platform/enemy platform 2.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=20]
+[ext_resource path="res://Objects/Ladder/Static Vine Top.png" type="Texture" id=21]
+[ext_resource path="res://Objects/Ladder/Static Vine Bottom.png" type="Texture" id=22]
+[ext_resource path="res://Objects/Ladder/LadderMid.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l 3.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=25]
+[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump m, krake.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Modules/02 single/platform/platform long.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, tendril.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, thorn, krake.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=35]
+[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=37]
 
-[node name="Level 2" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[node name="Level 2" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -58,14 +72,13 @@ position = Vector2( 47.6684, 42.0298 )
 
 [node name="firesalamander, thorn" parent="." index="2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 768.93, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="SpiderbuddyTrigger" parent="firesalamander, thorn" index="3" instance=ExtResource( 6 )]
 
-position = Vector2( -9.8219, 67.5255 )
-text = "Jump onto him!"
+position = Vector2( -87.7417, 66.0553 )
+text = "There is a Fire Salamander over there. Try jumping onto him and see what’s going to happen!"
 
 [node name="stump s, tendril, thorn" parent="." index="3" instance=ExtResource( 7 )]
 
@@ -93,7 +106,17 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -93.722, -108.036 )
 
-[node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 10 )]
+[node name="Grass" parent="firesalamander, thorn, tendril/trappedNPC1" index="10" instance=ExtResource( 10 )]
+
+position = Vector2( -35.208, 44.036 )
+scale = Vector2( 0.183318, 0.183318 )
+
+[node name="Grass2" parent="firesalamander, thorn, tendril/trappedNPC1" index="11" instance=ExtResource( 10 )]
+
+position = Vector2( 28.792, 44.036 )
+scale = Vector2( 0.183318, 0.183318 )
+
+[node name="stump m, stump l, tendril, muddy" parent="." index="5" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 2336.93, -32 )
@@ -146,11 +169,12 @@ position = Vector2( 70.9861, -72.9763 )
 
 position = Vector2( 272.666, -68.9957 )
 
-[node name="stump s, stump l 2" parent="." index="6" instance=ExtResource( 11 )]
+[node name="stump s, stump l 2" parent="." index="6" instance=ExtResource( 12 )]
 
+editor/display_folded = true
 position = Vector2( 3040.93, 96 )
 
-[node name="Checkpoint" parent="stump s, stump l 2" index="3" instance=ExtResource( 12 )]
+[node name="Checkpoint" parent="stump s, stump l 2" index="3" instance=ExtResource( 13 )]
 
 position = Vector2( 354.491, 60.8316 )
 
@@ -158,8 +182,9 @@ position = Vector2( 354.491, 60.8316 )
 
 position = Vector2( -14.7329, -12.2774 )
 
-[node name="MovingPlat2" parent="." index="7" instance=ExtResource( 13 )]
+[node name="MovingPlat2" parent="." index="7" instance=ExtResource( 14 )]
 
+editor/display_folded = true
 position = Vector2( 3584.93, 96 )
 
 [node name="Collectable19" parent="MovingPlat2" index="2" instance=ExtResource( 4 )]
@@ -172,14 +197,14 @@ position = Vector2( 82, -97 )
 
 [node name="SpiderbuddyTrigger" parent="MovingPlat2" index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 44.1987, 74.8918 )
-text = "Jump onto them!"
+position = Vector2( -63.2805, 73.7838 )
+text = "These platforms will help you to overcome big height differences. You can jump onto them!"
 
-[node name="stone 2 (up)" parent="." index="8" instance=ExtResource( 14 )]
+[node name="stone 2 (up)" parent="." index="8" instance=ExtResource( 15 )]
 
 position = Vector2( 3930, -160 )
 
-[node name="Jump down" parent="." index="9" instance=ExtResource( 15 )]
+[node name="Jump down" parent="." index="9" instance=ExtResource( 16 )]
 
 position = Vector2( 3941.7, -192.03 )
 
@@ -187,8 +212,19 @@ position = Vector2( 3941.7, -192.03 )
 
 position = Vector2( 1686.81, 88.3816 )
 
-[node name="stump m, bitchy" parent="." index="10" instance=ExtResource( 16 )]
+[node name="Grass" parent="Jump down/trappedNPC3" index="10" instance=ExtResource( 10 )]
 
+position = Vector2( -28.5098, 39.6484 )
+scale = Vector2( 0.270796, 0.270796 )
+
+[node name="Grass2" parent="Jump down/trappedNPC3" index="11" instance=ExtResource( 10 )]
+
+position = Vector2( 19.4902, 39.6484 )
+scale = Vector2( 0.270796, 0.270796 )
+
+[node name="stump m, bitchy" parent="." index="10" instance=ExtResource( 17 )]
+
+editor/display_folded = true
 position = Vector2( 4549.7, -192.03 )
 
 [node name="Collectable21" parent="stump m, bitchy" index="4" instance=ExtResource( 4 )]
@@ -221,24 +257,101 @@ position = Vector2( -532.297, 22.1393 )
 
 [node name="stump s, tendril, thorn2" parent="." index="11" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 5253.7, -192.03 )
 
-[node name="Checkpoint2" parent="stump s, tendril, thorn2" index="4" instance=ExtResource( 12 )]
+[node name="Checkpoint2" parent="stump s, tendril, thorn2" index="4" instance=ExtResource( 13 )]
 
 position = Vector2( -296.007, 62.6202 )
 
-[node name="Mealy2" parent="." index="12" instance=ExtResource( 17 )]
+[node name="Mealy2" parent="." index="12" instance=ExtResource( 18 )]
 
 position = Vector2( 5605.7, -192.03 )
 
-[node name="enemy platform 2" parent="." index="13" instance=ExtResource( 18 )]
+[node name="enemy platform 2" parent="." index="13" instance=ExtResource( 19 )]
 
 editor/display_folded = true
 position = Vector2( 5649.7, -250.597 )
 
-[node name="Ladder" parent="enemy platform 2" index="3" instance=ExtResource( 19 )]
+[node name="Ladder" type="Node2D" parent="enemy platform 2" index="3"]
 
+editor/display_folded = true
 position = Vector2( -290, -20 )
+
+[node name="Top" type="Area2D" parent="enemy platform 2/Ladder" index="0" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 16.2998, -145.403 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 20 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="enemy platform 2/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 21 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy platform 2/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="enemy platform 2/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 16.2998, 46.597 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 20 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="enemy platform 2/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 22 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy platform 2/Ladder/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="enemy platform 2/Ladder" index="2" instance=ExtResource( 23 )]
+
+position = Vector2( 16.2998, -17.403 )
+
+[node name="Mid2" parent="enemy platform 2/Ladder" index="3" instance=ExtResource( 23 )]
+
+position = Vector2( 16.2998, -81.403 )
 
 [node name="Collectable28" parent="enemy platform 2" index="4" instance=ExtResource( 4 )]
 
@@ -252,25 +365,25 @@ position = Vector2( 83.9326, -37.0025 )
 
 position = Vector2( 9.0249, -182.305 )
 
-[node name="stump s, stump l 3" parent="." index="14" instance=ExtResource( 20 )]
+[node name="stump s, stump l 3" parent="." index="14" instance=ExtResource( 24 )]
 
 editor/display_folded = true
 position = Vector2( 6085.7, -192.03 )
 
 [node name="Collectable31" parent="stump s, stump l 3" index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 11.0493, -173.111 )
+position = Vector2( 14.6597, -129.791 )
 
 [node name="Collectable32" parent="stump s, stump l 3" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 187.049, -17.1111 )
+position = Vector2( 184.654, -44.0543 )
 
-[node name="Krakenmushroom2 (up)" parent="." index="15" instance=ExtResource( 21 )]
+[node name="Krakenmushroom2 (up)" parent="." index="15" instance=ExtResource( 25 )]
 
 editor/display_folded = true
 position = Vector2( 6629.61, -192.05 )
 
-[node name="Checkpoint3" parent="Krakenmushroom2 (up)" index="2" instance=ExtResource( 12 )]
+[node name="Checkpoint3" parent="Krakenmushroom2 (up)" index="2" instance=ExtResource( 13 )]
 
 position = Vector2( -152.995, 65.1645 )
 
@@ -286,19 +399,19 @@ position = Vector2( 579.17, -151.864 )
 
 position = Vector2( 671.17, -223.864 )
 
-[node name="stump m, krake" parent="." index="16" instance=ExtResource( 22 )]
+[node name="stump m, krake" parent="." index="16" instance=ExtResource( 26 )]
 
 position = Vector2( 7141.61, -320.05 )
 
-[node name="platform long" parent="." index="17" instance=ExtResource( 23 )]
+[node name="platform long" parent="." index="17" instance=ExtResource( 27 )]
 
 position = Vector2( 7860.75, -480.979 )
 
-[node name="Bouncer" parent="platform long" index="1" instance=ExtResource( 24 )]
+[node name="Bouncer" parent="platform long" index="1" instance=ExtResource( 28 )]
 
 position = Vector2( -377, 255.976 )
 
-[node name="FireSalamander" parent="platform long" index="2" instance=ExtResource( 25 )]
+[node name="FireSalamander" parent="platform long" index="2" instance=ExtResource( 29 )]
 
 position = Vector2( -90.3252, -29.1256 )
 objToDestroyPath = NodePath("../ThornsUp")
@@ -335,29 +448,49 @@ position = Vector2( -377.284, 187.174 )
 
 position = Vector2( 726.297, 73.3204 )
 
-[node name="ThornsUp" parent="platform long" index="11" instance=ExtResource( 26 )]
+[node name="ThornsUp" parent="platform long" index="11" instance=ExtResource( 30 )]
 
 position = Vector2( 29.8979, -46.6056 )
 scale = Vector2( 0.607996, 0.607996 )
+
+[node name="Grass" parent="platform long/ThornsUp" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( -30.6709, 78.2646 )
+scale = Vector2( 0.284143, 0.284143 )
+
+[node name="Grass2" parent="platform long/ThornsUp" index="2" instance=ExtResource( 10 )]
+
+position = Vector2( 21.9609, 78.2646 )
+scale = Vector2( 0.284143, 0.284143 )
+
+[node name="Grass3" parent="platform long/ThornsUp" index="3" instance=ExtResource( 10 )]
+
+position = Vector2( 153.541, 78.2646 )
+scale = Vector2( 0.284143, 0.284143 )
+
+[node name="Grass4" parent="platform long/ThornsUp" index="4" instance=ExtResource( 10 )]
+
+position = Vector2( 258.805, 78.2646 )
+scale = Vector2( 0.284143, 0.284143 )
 
 [node name="trappedNPC" parent="platform long" index="12" instance=ExtResource( 9 )]
 
 position = Vector2( 160.833, -39.6847 )
 
-[node name="stump s, stump m 2" parent="." index="18" instance=ExtResource( 27 )]
+[node name="stump s, stump m 2" parent="." index="18" instance=ExtResource( 31 )]
 
 editor/display_folded = true
 position = Vector2( 7877.61, -320.05 )
 
-[node name="StoneBigA" parent="stump s, stump m 2" index="3" instance=ExtResource( 28 )]
+[node name="StoneBigA" parent="stump s, stump m 2" index="3" instance=ExtResource( 32 )]
 
 position = Vector2( 134.237, 31.6087 )
 
-[node name="stump l, tendril" parent="." index="19" instance=ExtResource( 29 )]
+[node name="stump l, tendril" parent="." index="19" instance=ExtResource( 33 )]
 
 position = Vector2( 8357.61, -320.05 )
 
-[node name="stump s, thorn, krake" parent="." index="20" instance=ExtResource( 30 )]
+[node name="stump s, thorn, krake" parent="." index="20" instance=ExtResource( 34 )]
 
 editor/display_folded = true
 position = Vector2( 8773.61, -320.05 )
@@ -370,19 +503,19 @@ position = Vector2( 110.999, 77.1847 )
 
 position = Vector2( 110.264, -6.61581 )
 
-[node name="End2(wall)" parent="." index="21" instance=ExtResource( 31 )]
+[node name="End2(wall)" parent="." index="21" instance=ExtResource( 35 )]
 
 position = Vector2( 9573.61, -416.05 )
 
-[node name="Bouncer" parent="End2(wall)" index="2" instance=ExtResource( 24 )]
+[node name="Bouncer" parent="End2(wall)" index="2" instance=ExtResource( 28 )]
 
 position = Vector2( -307.484, 96.7751 )
 
-[node name="Bouncer2" parent="End2(wall)" index="3" instance=ExtResource( 24 )]
+[node name="Bouncer2" parent="End2(wall)" index="3" instance=ExtResource( 28 )]
 
 position = Vector2( -226.02, 96.6407 )
 
-[node name="Bouncer3" parent="End2(wall)" index="4" instance=ExtResource( 24 )]
+[node name="Bouncer3" parent="End2(wall)" index="4" instance=ExtResource( 28 )]
 
 position = Vector2( -155.164, 97.0335 )
 
@@ -406,11 +539,19 @@ position = Vector2( 101.525, -230.729 )
 
 position = Vector2( 188.421, -233.402 )
 
-[node name="platform short" parent="End2(wall)" index="10" instance=ExtResource( 32 )]
+[node name="platform short" parent="End2(wall)" index="10" instance=ExtResource( 36 )]
 
 position = Vector2( 137.14, -204.929 )
 
-[node name="Background" parent="." index="22" instance=ExtResource( 33 )]
+[node name="Background" parent="." index="22" instance=ExtResource( 37 )]
+
+[connection signal="body_entered" from="enemy platform 2/Ladder/Top" to="enemy platform 2/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="enemy platform 2/Ladder/Top" to="enemy platform 2/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="enemy platform 2/Ladder/Bot" to="enemy platform 2/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="enemy platform 2/Ladder/Bot" to="enemy platform 2/Ladder/Bot" method="_on_Ladder_body_exited"]
 
 
 [editable path="Background"]

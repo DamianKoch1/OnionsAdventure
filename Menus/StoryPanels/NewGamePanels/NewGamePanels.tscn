@@ -1,12 +1,12 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/NewGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/PanelButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel6.jpg" type="Texture" id=3]
-[ext_resource path="res://Menus/StoryPanels/PanelButton.gd" type="Script" id=4]
-[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=6]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/introPanel5Sketch.jpg" type="Texture" id=7]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/introPanel5Sketch.jpg" type="Texture" id=4]
+[ext_resource path="res://Menus/StoryPanels/PanelButton.gd" type="Script" id=5]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=7]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel4.jpg" type="Texture" id=8]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/Panel3.jpg" type="Texture" id=9]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/IntroMockUp.jpg" type="Texture" id=10]
@@ -17,41 +17,10 @@
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=16]
 
-[sub_resource type="Animation" id=2]
-
-resource_name = "nextPanel"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:disabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -576, 0 ) ]
-}
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "nextPanel"
-length = 1.0
+length = 2.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -61,10 +30,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ false, true, false ]
+"values": [ false, true ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -73,7 +42,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1 ),
+"times": PoolRealArray( 2.5 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -81,19 +50,19 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("..:modulate")
+tracks/2/path = NodePath(".:rect_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 2.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( -608, 0 ) ]
 }
 
-[node name="NewGamePanels" type="Node" index="0"]
+[node name="NewGamePanels" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -132,14 +101,29 @@ texture_focused = ExtResource( 3 )
 expand = true
 animSpeed = 0.7
 
-[node name="PanelButton5a" type="TextureButton" parent="." index="2"]
+[node name="PanelButton5b" parent="." index="2" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 1 )
+margin_left = -608.0
+margin_right = 2958.0
+margin_bottom = 1024.0
+disabled = false
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
+expand = true
+
+[node name="PanelButton5a" type="TextureButton" parent="." index="3"]
 
 pause_mode = 2
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1829.0
+margin_right = 3566.0
 margin_bottom = 1024.0
 rect_scale = Vector2( 0.35, 0.35 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -153,8 +137,13 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
 expand = true
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Pause", "Rect", "Textures", "Visibility" ]
 animSpeed = 1.0
 
@@ -165,64 +154,14 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/nextPanel = SubResource( 2 )
-blend_times = [  ]
-
-[node name="pageTurn" parent="PanelButton5a" index="1" instance=ExtResource( 5 )]
-
-position = Vector2( 914.286, 457.143 )
-stream = ExtResource( 6 )
-
-[node name="Sprite" type="Sprite" parent="PanelButton5a" index="2"]
-
-scale = Vector2( 0.924258, 0.953214 )
-texture = ExtResource( 7 )
-centered = false
-_sections_unfolded = [ "Offset" ]
-
-[node name="PanelButton5b" type="TextureButton" parent="PanelButton5a" index="3"]
-
-pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1829.0
-margin_right = 6257.0
-margin_bottom = 2953.0
-rect_scale = Vector2( 0.35, 0.35 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-expand = true
-script = ExtResource( 4 )
-_sections_unfolded = [ "Pause", "Rect", "Textures", "Visibility" ]
-animSpeed = 1.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelButton5a/PanelButton5b" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/nextPanel = SubResource( 1 )
 blend_times = [  ]
 
-[node name="pageTurn" parent="PanelButton5a/PanelButton5b" index="1" instance=ExtResource( 5 )]
+[node name="pageTurn" parent="PanelButton5a" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 914.286, 457.143 )
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 
-[node name="PanelButton4" parent="." index="3" instance=ExtResource( 2 )]
+[node name="PanelButton4" parent="." index="4" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 modulate = Color( 1, 1, 1, 1 )
@@ -236,7 +175,7 @@ texture_disabled = ExtResource( 8 )
 texture_focused = ExtResource( 8 )
 expand = true
 
-[node name="PanelButton3" parent="." index="4" instance=ExtResource( 2 )]
+[node name="PanelButton3" parent="." index="5" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 modulate = Color( 1, 1, 1, 1 )
@@ -250,7 +189,7 @@ texture_disabled = ExtResource( 9 )
 texture_focused = ExtResource( 9 )
 expand = true
 
-[node name="PanelButton2b" parent="." index="5" instance=ExtResource( 2 )]
+[node name="PanelButton2b" parent="." index="6" instance=ExtResource( 2 )]
 
 modulate = Color( 1, 1, 1, 1 )
 margin_right = 1829.0
@@ -263,7 +202,7 @@ texture_disabled = ExtResource( 10 )
 texture_focused = ExtResource( 10 )
 expand = true
 
-[node name="PanelButton2a" parent="." index="6" instance=ExtResource( 2 )]
+[node name="PanelButton2a" parent="." index="7" instance=ExtResource( 2 )]
 
 modulate = Color( 1, 1, 1, 1 )
 margin_right = 1829.0
@@ -277,7 +216,7 @@ texture_focused = ExtResource( 11 )
 expand = true
 animSpeed = 2.0
 
-[node name="PanelButton1" parent="." index="7" instance=ExtResource( 2 )]
+[node name="PanelButton1" parent="." index="8" instance=ExtResource( 2 )]
 
 editor/display_folded = true
 modulate = Color( 1, 1, 1, 1 )
@@ -291,14 +230,14 @@ texture_disabled = ExtResource( 12 )
 texture_focused = ExtResource( 12 )
 expand = true
 
-[node name="pageTurn" parent="." index="8" instance=ExtResource( 5 )]
+[node name="pageTurn" parent="." index="9" instance=ExtResource( 6 )]
 
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Fade" parent="." index="9" instance=ExtResource( 13 )]
+[node name="Fade" parent="." index="10" instance=ExtResource( 13 )]
 
-[node name="SkipButton" parent="." index="10" instance=ExtResource( 14 )]
+[node name="SkipButton" parent="." index="11" instance=ExtResource( 14 )]
 
 margin_left = 480.0
 margin_top = 320.0
@@ -309,7 +248,7 @@ margin_bottom = 352.0
 
 text = "Skip"
 
-[node name="BGMPlayer" parent="." index="11" instance=ExtResource( 15 )]
+[node name="BGMPlayer" parent="." index="12" instance=ExtResource( 15 )]
 
 editor/display_folded = true
 stream = ExtResource( 16 )
@@ -318,8 +257,6 @@ volume_db = 10.0
 [connection signal="animFinished" from="PanelButton6" to="." method="_on_PanelButton6_animFinished"]
 
 [connection signal="pressed" from="PanelButton5a" to="PanelButton5a" method="_on_PanelButton_pressed"]
-
-[connection signal="pressed" from="PanelButton5a/PanelButton5b" to="PanelButton5a/PanelButton5b" method="_on_PanelButton_pressed"]
 
 [connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
 

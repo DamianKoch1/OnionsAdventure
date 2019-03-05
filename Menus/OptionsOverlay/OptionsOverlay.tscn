@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
-[ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menus/OptionsOverlay/Slider/firefly_2_-_volume_cursor.png" type="Texture" id=3]
+[ext_resource path="res://Menus/OptionsOverlay/Slider/firefly_-_volume_c..png" type="Texture" id=4]
+[ext_resource path="res://Menus/OptionsOverlay/Slider/OptionsOverlaySlider.tres" type="StyleBox" id=5]
+[ext_resource path="res://Menus/OptionsOverlay/Slider/OptionsOverlayGrabberArea.tres" type="StyleBox" id=6]
+[ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=8]
 
 [node name="OptionsOverlay" type="Container"]
 
@@ -50,49 +54,7 @@ _sections_unfolded = [ "Visibility" ]
 
 position = Vector2( 43, -5 )
 
-[node name="Music" type="Node2D" parent="Volume" index="0"]
-
-position = Vector2( 0, 37.05 )
-
-[node name="MusicSlider" type="HSlider" parent="Volume/Music" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -176.0
-margin_top = -89.0
-margin_right = 16.0
-margin_bottom = -73.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-min_value = 20.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 100.0
-exp_edit = false
-rounded = false
-editable = true
-tick_count = 0
-ticks_on_borders = false
-focus_mode = 2
-_sections_unfolded = [ "Theme", "custom_styles" ]
-
-[node name="Music" parent="Volume/Music" index="1" instance=ExtResource( 3 )]
-
-margin_left = -352.0
-margin_top = -99.0
-margin_right = -70.0
-margin_bottom = 27.0
-text = "music"
-
-[node name="Master" type="Node2D" parent="Volume" index="1"]
+[node name="Master" type="Node2D" parent="Volume" index="0"]
 
 position = Vector2( 0, -1.36462 )
 scale = Vector2( 1, 0.999999 )
@@ -103,30 +65,38 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -176.0
-margin_top = -81.0
-margin_right = 16.0
-margin_bottom = -65.0
+margin_left = -191.0
+margin_top = -127.0
+margin_right = 556.0
+margin_bottom = 267.0
+rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath("../../Music/MusicSlider")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = ExtResource( 5 )
+custom_styles/grabber_area = ExtResource( 6 )
 min_value = 20.0
 max_value = 100.0
 step = 1.0
 page = 0.0
-value = 100.0
+value = 80.0
 exp_edit = false
 rounded = false
 editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
+_sections_unfolded = [ "Focus", "Rect", "Theme", "Visibility", "custom_icons", "custom_styles" ]
 
-[node name="Master" parent="Volume/Master" index="1" instance=ExtResource( 3 )]
+[node name="Master" parent="Volume/Master" index="1" instance=ExtResource( 7 )]
 
 margin_left = -352.0
 margin_top = -93.0
@@ -134,27 +104,34 @@ margin_right = -70.0
 margin_bottom = 33.0
 text = "master"
 
-[node name="SFX" type="Node2D" parent="Volume" index="2"]
+[node name="Music" type="Node2D" parent="Volume" index="1"]
 
-position = Vector2( 0, 40.85 )
+position = Vector2( 0, 77.2354 )
 
-[node name="SFXSlider" type="HSlider" parent="Volume/SFX" index="0"]
+[node name="MusicSlider" type="HSlider" parent="Volume/Music" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -176.0
-margin_top = -63.0
-margin_right = 16.0
-margin_bottom = -47.0
+margin_left = -190.0
+margin_top = -139.0
+margin_right = 557.0
+margin_bottom = 255.0
+rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_neighbour_top = NodePath("../../Master/MasterSlider")
+focus_neighbour_bottom = NodePath("../../SFX/SFXSlider")
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = ExtResource( 5 )
+custom_styles/grabber_area = ExtResource( 6 )
 min_value = 20.0
 max_value = 100.0
 step = 1.0
@@ -166,8 +143,58 @@ editable = true
 tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
+_sections_unfolded = [ "Focus", "Rect", "Theme", "Visibility", "custom_icons", "custom_styles" ]
 
-[node name="SFX" parent="Volume/SFX" index="1" instance=ExtResource( 3 )]
+[node name="Music" parent="Volume/Music" index="1" instance=ExtResource( 7 )]
+
+margin_left = -352.0
+margin_top = -99.0
+margin_right = -70.0
+margin_bottom = 27.0
+text = "music"
+
+[node name="SFX" type="Node2D" parent="Volume" index="2"]
+
+position = Vector2( 0, 121.21 )
+
+[node name="SFXSlider" type="HSlider" parent="Volume/SFX" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -190.0
+margin_top = -110.0
+margin_right = 557.0
+margin_bottom = 284.0
+rect_scale = Vector2( 0.3, 0.3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_top = NodePath("../../Music/MusicSlider")
+focus_neighbour_bottom = NodePath("../../../BackButton")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = ExtResource( 5 )
+custom_styles/grabber_area = ExtResource( 6 )
+min_value = 20.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
+_sections_unfolded = [ "Focus", "Rect", "Theme", "Visibility", "custom_icons", "custom_styles" ]
+
+[node name="SFX" parent="Volume/SFX" index="1" instance=ExtResource( 7 )]
 
 margin_left = -352.0
 margin_top = -71.0
@@ -175,7 +202,7 @@ margin_right = 182.0
 margin_bottom = 55.0
 text = "sound effects"
 
-[node name="Volume" parent="Volume" index="3" instance=ExtResource( 3 )]
+[node name="Volume" parent="Volume" index="3" instance=ExtResource( 7 )]
 
 margin_left = -384.0
 margin_top = -128.0
@@ -183,14 +210,14 @@ margin_right = -102.0
 margin_bottom = -2.0
 text = "volume"
 
-[node name="BackButton" parent="." index="2" instance=ExtResource( 4 )]
+[node name="BackButton" parent="." index="2" instance=ExtResource( 8 )]
 
-margin_left = -149.0
-margin_top = 59.0
-margin_right = 11.0
-margin_bottom = 95.0
+margin_left = -377.0
+margin_top = 79.0
+margin_right = -217.0
+margin_bottom = 115.0
 focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath(".")
+focus_neighbour_top = NodePath("../Volume/SFX/SFXSlider")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
@@ -199,7 +226,7 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 text = "back"
 
-[node name="Options" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Options" parent="." index="3" instance=ExtResource( 7 )]
 
 margin_left = -104.0
 margin_top = -165.0
@@ -207,9 +234,9 @@ margin_right = 190.0
 margin_bottom = -39.0
 text = "options"
 
-[connection signal="value_changed" from="Volume/Music/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
-
 [connection signal="value_changed" from="Volume/Master/MasterSlider" to="." method="_on_MasterSlider_value_changed"]
+
+[connection signal="value_changed" from="Volume/Music/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
 
 [connection signal="value_changed" from="Volume/SFX/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
 

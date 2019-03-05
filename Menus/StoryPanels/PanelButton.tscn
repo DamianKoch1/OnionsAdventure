@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/PanelButton.gd" type="Script" id=1]
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/randomPitch.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -49,7 +50,7 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="PanelButton" type="TextureButton"]
+[node name="PanelButton" type="TextureButton" index="0"]
 
 pause_mode = 2
 modulate = Color( 1, 1, 1, 0 )
@@ -86,10 +87,17 @@ playback_speed = 1.0
 anims/nextPanel = SubResource( 1 )
 blend_times = [  ]
 
-[node name="pageTurn" parent="." index="1" instance=ExtResource( 2 )]
+[node name="pageTurn" type="AudioStreamPlayer" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 914.286, 457.143 )
 stream = ExtResource( 3 )
+volume_db = -10.0
+pitch_scale = 0.9
+autoplay = false
+mix_target = 0
+bus = "SoundEffects"
+script = ExtResource( 4 )
+startPitch = 1
+pitchRange = 0.2
 
 [connection signal="pressed" from="." to="." method="_on_PanelButton_pressed"]
 
