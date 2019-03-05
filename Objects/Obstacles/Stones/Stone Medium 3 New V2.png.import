@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/End Level Crystal v2.png-37e4f58764b969fbbbe5d898a5a3ed29.stex"
+path="res://.import/Stone Medium 3 New V2.png-b226d336d92d01d4be05111eba6b60f4.stex"
 
 [deps]
 
-source_file="res://Objects/Goal/End Level Crystal v2.png"
-dest_files=[ "res://.import/End Level Crystal v2.png-37e4f58764b969fbbbe5d898a5a3ed29.stex" ]
+source_file="res://Objects/Obstacles/Stones/Stone Medium 3 New V2.png"
+dest_files=[ "res://.import/Stone Medium 3 New V2.png-b226d336d92d01d4be05111eba6b60f4.stex" ]
 
 [params]
 

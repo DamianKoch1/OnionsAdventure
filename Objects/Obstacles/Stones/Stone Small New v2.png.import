@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Stone_Small_4A.png-200f12133454f57f835016f03fd307b5.stex"
+path="res://.import/Stone Small New v2.png-5c1522c45aa25a1d89bbfd5344def360.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Stones/Asset_Stone_Small_4A.png"
-dest_files=[ "res://.import/Asset_Stone_Small_4A.png-200f12133454f57f835016f03fd307b5.stex" ]
+source_file="res://Objects/Obstacles/Stones/Stone Small New v2.png"
+dest_files=[ "res://.import/Stone Small New v2.png-5c1522c45aa25a1d89bbfd5344def360.stex" ]
 
 [params]
 

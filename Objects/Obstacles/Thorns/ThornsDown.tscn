@@ -13,7 +13,7 @@ extents = Vector2( 3200.62, 14117.5 )
 custom_solver_bias = 0.0
 extents = Vector2( 2407.31, 10038.4 )
 
-[node name="ThornsDown" type="Node2D" groups=[
+[node name="ThornsDown" type="Node2D" index="0" groups=[
 "rayIgnore",
 ]]
 
