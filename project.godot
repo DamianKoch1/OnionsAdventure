@@ -14,7 +14,7 @@ config/name="Onion's Adventure"
 run/main_scene="res://Menus/Bootsplash/BootLogo.tscn"
 boot_splash/image="res://Menus/Bootsplash/S4G_logo.png"
 boot_splash/fullsize=false
-config/icon="res://icon.png"
+config/icon="res://Assets/onion.png"
 
 [autoload]
 
