@@ -51,7 +51,7 @@ extents = Vector2( 32, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 2" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -111,12 +111,12 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -93.722, -108.036 )
 
-[node name="Grass5" parent="firesalamander, thorn, tendril" index="10" instance=ExtResource( 10 )]
+[node name="Grass5" parent="firesalamander, thorn, tendril" index="6" instance=ExtResource( 10 )]
 
 position = Vector2( -128.93, -64 )
 scale = Vector2( 0.183318, 0.183318 )
 
-[node name="Grass6" parent="firesalamander, thorn, tendril" index="11" instance=ExtResource( 10 )]
+[node name="Grass6" parent="firesalamander, thorn, tendril" index="7" instance=ExtResource( 10 )]
 
 position = Vector2( -64.9301, -64 )
 scale = Vector2( 0.183318, 0.183318 )
@@ -557,6 +557,8 @@ position = Vector2( 137.14, -204.929 )
 
 [node name="Background Deko" type="Node2D" parent="." index="22"]
 
+editor/display_folded = true
+
 [node name="Bush" parent="Background Deko" index="0" instance=ExtResource( 38 )]
 
 position = Vector2( 16, 96 )
@@ -825,6 +827,10 @@ scale = Vector2( 0.392223, 0.392223 )
 [node name="Background" parent="." index="23" instance=ExtResource( 40 )]
 
 editor/display_folded = true
+
+[node name="Layer1" parent="Background" index="0"]
+
+position = Vector2( -80, 0 )
 
 [connection signal="body_entered" from="enemy platform 2/Ladder/Top" to="enemy platform 2/Ladder/Top" method="_on_Ladder_body_entered"]
 
