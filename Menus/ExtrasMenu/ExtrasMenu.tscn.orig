@@ -1173,7 +1173,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause", "Rect" ]
+_sections_unfolded = [ "Pause" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
@@ -1205,6 +1205,7 @@ margin_right = -82.0
 margin_bottom = -9.0
 rect_scale = Vector2( 0.35, 0.35 )
 text = "gallery"
+_sections_unfolded = [ "BBCode", "Margin", "Visibility", "custom_colors", "custom_constants" ]
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -1212,10 +1213,17 @@ margin_left = -377.0
 margin_top = 83.0
 margin_right = -217.0
 margin_bottom = 115.0
+<<<<<<< working copy
 focus_neighbour_left = NodePath("../BackButton")
 focus_neighbour_top = NodePath("../NextButton")
 focus_neighbour_right = NodePath("../NextButton")
 focus_neighbour_bottom = NodePath(".")
+=======
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../BackButton")
+focus_neighbour_bottom = NodePath("../BackButton")
+>>>>>>> merge rev
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="MainMenuButton" index="0"]
@@ -1227,22 +1235,19 @@ text = "back"
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
-<<<<<<< working copy
-editor/display_folded = false
-margin_left = -338.0
-margin_top = -5.0
-margin_right = -114.0
-margin_bottom = 31.0
-=======
 margin_left = -183.0
 margin_top = 107.0
 margin_right = 41.0
 margin_bottom = 143.0
->>>>>>> merge rev
+<<<<<<< working copy
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath(".")
+=======
+focus_neighbour_left = NodePath("../MainMenuButton")
+focus_neighbour_top = NodePath("../MainMenuButton")
+>>>>>>> merge rev
 focus_neighbour_right = NodePath("../NextButton")
-focus_neighbour_bottom = NodePath("../MainMenuButton")
+focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="BackButton" index="0"]
@@ -1266,9 +1271,9 @@ margin_top = 107.0
 margin_right = 149.0
 margin_bottom = 143.0
 focus_neighbour_left = NodePath("../BackButton")
-focus_neighbour_top = NodePath(".")
+focus_neighbour_top = NodePath("../MainMenuButton")
 focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../MainMenuButton")
+focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="NextButton" index="0"]
@@ -1330,11 +1335,7 @@ text = "0/12"
 [node name="Pages" type="Node2D" parent="." index="7"]
 
 show_behind_parent = true
-<<<<<<< working copy
-position = Vector2( -821, -69 )
-=======
 position = Vector2( -1461, -69 )
->>>>>>> merge rev
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Page1" type="Node2D" parent="Pages" index="0"]
