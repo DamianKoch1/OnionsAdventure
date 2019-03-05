@@ -67,7 +67,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -75,7 +75,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="LevelStartEndLong" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( -515.043, -61.1685 )
+position = Vector2( -584.162, -63.827 )
 
 [node name="Start" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -112,7 +112,6 @@ position = Vector2( 1022.61, 0.332367 )
 
 [node name="mediumstump2" parent="." index="4" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 position = Vector2( 1375.48, -127.622 )
 _sections_unfolded = [ "Transform" ]
 
@@ -120,9 +119,9 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -21.8928, -50.42 )
 
-[node name="Collectable06" parent="mediumstump2" index="4" instance=ExtResource( 6 )]
+[node name="Collectable05" parent="mediumstump2" index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 275.767, -32.3074 )
+position = Vector2( 1421.09, -26.0791 )
 
 [node name="SpiderbuddyTrigger" parent="mediumstump2" index="5" instance=ExtResource( 4 )]
 
@@ -145,7 +144,6 @@ position = Vector2( 237.356, 102.755 )
 
 [node name="smallstone2" parent="." index="5" instance=ExtResource( 12 )]
 
-editor/display_folded = true
 position = Vector2( 1968.12, -96.6266 )
 
 [node name="Checkpoint2" parent="smallstone2" index="3" instance=ExtResource( 13 )]
@@ -188,21 +186,15 @@ scale = Vector2( 0.191963, 0.191963 )
 
 [node name="stump s, stump m 1" parent="." index="6" instance=ExtResource( 15 )]
 
-editor/display_folded = true
 position = Vector2( 2721.43, -128.625 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable05" parent="stump s, stump m 1" index="3" instance=ExtResource( 6 )]
-
-position = Vector2( -621.516, 113.828 )
-
-[node name="Collectable02" parent="stump s, stump m 1" index="4" instance=ExtResource( 6 )]
+[node name="Collectable02" parent="stump s, stump m 1" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -108.262, 22.5838 )
 
 [node name="stump m, stone big" parent="." index="7" instance=ExtResource( 16 )]
 
-editor/display_folded = true
 position = Vector2( 3297.43, -128.625 )
 
 [node name="Collectable07" parent="stump m, stone big" index="4" instance=ExtResource( 6 )]
@@ -211,7 +203,7 @@ position = Vector2( 313.907, -55.7878 )
 
 [node name="Collectable10" parent="stump m, stone big" index="5" instance=ExtResource( 6 )]
 
-position = Vector2( 313.907, -55.7878 )
+position = Vector2( -25.7458, -24.0217 )
 
 [node name="Collectable08" parent="stump m, stone big" index="6" instance=ExtResource( 6 )]
 
@@ -347,7 +339,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="platform" parent="." index="13" instance=ExtResource( 24 )]
 
-editor/display_folded = true
 position = Vector2( 7645.98, -366.018 )
 _sections_unfolded = [ "Transform" ]
 
@@ -361,7 +352,7 @@ position = Vector2( -132.212, -28.4051 )
 
 [node name="Collectable26" parent="platform" index="3" instance=ExtResource( 6 )]
 
-position = Vector2( -4544.6, 253.379 )
+position = Vector2( -4564.96, 213.468 )
 
 [node name="Collectable27" parent="platform" index="4" instance=ExtResource( 6 )]
 
@@ -641,11 +632,11 @@ position = Vector2( -209.522, 93.904 )
 
 [node name="Collectable38" parent="stump s, stone" index="5" instance=ExtResource( 6 )]
 
-position = Vector2( -254.506, 2.70752 )
+position = Vector2( -254.018, -20.7011 )
 
 [node name="Collectable39" parent="stump s, stone" index="6" instance=ExtResource( 6 )]
 
-position = Vector2( -144.4, 25.2701 )
+position = Vector2( -143.912, 12.1028 )
 
 [node name="SpiderbuddyTrigger" parent="stump s, stone" index="7" instance=ExtResource( 4 )]
 
@@ -670,7 +661,6 @@ scale = Vector2( 0.613614, 0.613614 )
 
 [node name="tree2" parent="." index="19" instance=ExtResource( 35 )]
 
-editor/display_folded = true
 position = Vector2( 9094.47, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
@@ -688,7 +678,7 @@ position = Vector2( -127, 3 )
 
 [node name="Collectable42" parent="tree2" index="5" instance=ExtResource( 6 )]
 
-position = Vector2( 43, -38 )
+position = Vector2( 43, -60.3241 )
 
 [node name="Grass5" parent="tree2" index="10" instance=ExtResource( 10 )]
 
