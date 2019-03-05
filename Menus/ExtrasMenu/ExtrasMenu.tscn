@@ -1205,7 +1205,7 @@ margin_right = -82.0
 margin_bottom = -9.0
 rect_scale = Vector2( 0.35, 0.35 )
 text = "gallery"
-_sections_unfolded = [ "BBCode", "Margin", "Visibility", "custom_colors", "custom_constants" ]
+_sections_unfolded = [ "BBCode", "Margin", "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -1323,7 +1323,7 @@ text = "0/12"
 [node name="Pages" type="Node2D" parent="." index="7"]
 
 show_behind_parent = true
-position = Vector2( -1461, -69 )
+position = Vector2( -181, -69 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Page1" type="Node2D" parent="Pages" index="0"]
