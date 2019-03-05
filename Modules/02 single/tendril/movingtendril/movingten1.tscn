@@ -3,7 +3,7 @@
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=2]
 
-[node name="movingten1" type="Node2D" index="0"]
+[node name="movingten1" type="Node2D"]
 
 [node name="Rope" parent="." index="0" instance=ExtResource( 1 )]
 
