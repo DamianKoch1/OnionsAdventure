@@ -74,7 +74,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -155,9 +155,9 @@ text = "new game"
 [node name="ContinueButton" parent="." index="3" instance=ExtResource( 4 )]
 
 visible = false
-margin_left = -187.0
+margin_left = -186.0
 margin_top = 13.0
-margin_right = -27.0
+margin_right = -26.0
 margin_bottom = 45.0
 
 [node name="Label" parent="ContinueButton" index="0"]
@@ -241,10 +241,11 @@ visible = false
 
 [node name="Label" parent="YesNoOverlayQuit" index="1"]
 
-margin_left = -19.0
+margin_left = -26.0
 margin_top = -59.0
-margin_right = 414.0
+margin_right = 407.0
 margin_bottom = 49.0
+rect_scale = Vector2( 0.35, 0.35 )
 text = "quit?"
 
 [node name="YesButton" parent="YesNoOverlayQuit" index="2"]
@@ -260,6 +261,7 @@ margin_bottom = 50.0
 [node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 6 )]
 
 editor/display_folded = true
+visible = false
 margin_left = 63.0
 margin_top = 50.0
 margin_right = 95.0
@@ -300,6 +302,7 @@ text = "new game"
 
 [node name="GlowbugVFX" parent="." index="11" instance=ExtResource( 7 )]
 
+visible = false
 show_behind_parent = true
 position = Vector2( -1.95227, 37.2379 )
 z_index = 0
