@@ -8,7 +8,7 @@ var player
 func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") && playerAttached == true:
 		player.jump(player.jumpheight)
-		player.attachCD = 1
+		player.attachCD = 0.3
 		playerAttached = false
 		player = null
 
