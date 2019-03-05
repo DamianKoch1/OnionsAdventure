@@ -49,7 +49,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 360 ) ]
 }
 
-[node name="CreditScreen" type="Container"]
+[node name="CreditScreen" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -161,7 +161,6 @@ text = "back"
 
 [node name="Credits" type="Node2D" parent="." index="5"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="Credits" type="Node2D" parent="Credits" index="0"]
@@ -171,6 +170,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Nico" type="Node2D" parent="Credits/Credits" index="0"]
 
+editor/display_folded = true
 position = Vector2( 156, 190 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Nico" index="0"]
@@ -236,7 +236,8 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Franzi" type="Node2D" parent="Credits/Credits" index="1"]
 
-position = Vector2( 237.693, 189 )
+editor/display_folded = true
+position = Vector2( 238.693, 189 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Franzi" index="0"]
@@ -302,6 +303,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Sebastian" type="Node2D" parent="Credits/Credits" index="2"]
 
+editor/display_folded = true
 position = Vector2( 153, -10 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Sebastian" index="0"]
@@ -367,6 +369,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Katharina" type="Node2D" parent="Credits/Credits" index="3"]
 
+editor/display_folded = true
 position = Vector2( 130, -10 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Katharina" index="0"]
@@ -432,6 +435,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Lisa" type="Node2D" parent="Credits/Credits" index="4"]
 
+editor/display_folded = true
 position = Vector2( 220, -10 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Lisa" index="0"]
@@ -497,6 +501,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Lara" type="Node2D" parent="Credits/Credits" index="5"]
 
+editor/display_folded = true
 position = Vector2( 220, 89 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Lara" index="0"]
@@ -562,7 +567,8 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Anastasia" type="Node2D" parent="Credits/Credits" index="6"]
 
-position = Vector2( 130, 89 )
+editor/display_folded = true
+position = Vector2( 314, -12 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Anastasia" index="0"]
 
@@ -627,6 +633,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Nicole" type="Node2D" parent="Credits/Credits" index="7"]
 
+editor/display_folded = true
 position = Vector2( 221, 188 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Nicole" index="0"]
@@ -692,7 +699,8 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Philip" type="Node2D" parent="Credits/Credits" index="8"]
 
-position = Vector2( 323, 188 )
+editor/display_folded = true
+position = Vector2( 133, 89 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Philip" index="0"]
 
@@ -757,6 +765,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Damian" type="Node2D" parent="Credits/Credits" index="9"]
 
+editor/display_folded = true
 position = Vector2( 42, 88 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Damian" index="0"]
@@ -822,7 +831,8 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="DwightNeely" type="Node2D" parent="Credits/Credits" index="10"]
 
-position = Vector2( 312.025, -18.1433 )
+editor/display_folded = true
+position = Vector2( 310.025, 82.8567 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/DwightNeely" index="0"]
 
@@ -887,7 +897,8 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="MakaylaDee" type="Node2D" parent="Credits/Credits" index="11"]
 
-position = Vector2( 314.397, 82.8226 )
+editor/display_folded = true
+position = Vector2( 311.397, 181.823 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/MakaylaDee" index="0"]
 
@@ -929,9 +940,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -184.0
+margin_left = -185.0
 margin_top = -68.0
-margin_right = 479.0
+margin_right = 478.0
 margin_bottom = 40.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )

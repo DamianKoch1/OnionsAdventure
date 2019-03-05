@@ -8,6 +8,7 @@ onready var idleTimer = $IdleTimer
 func _ready():
 	for trigger in get_tree().get_nodes_in_group("SpiderbuddyTrigger"):
 		trigger.connect("triggered", self, "onTriggerEntered")
+		trigger.connect("spiderHide", self, "onSelectedKeyPressed")
 
 func onTriggerEntered(text, idleDuration):
 	label.text = text
@@ -15,6 +16,10 @@ func onTriggerEntered(text, idleDuration):
 	if anim.is_playing() == false:
 		anim.play("show")
 
+#when key spiderbuddy waits for is pressed he should either not appear (in trigger script) or go up again
+func onSelectedKeyPressed():
+	if anim.get_current_animation() == "blabbing":
+		anim.play("hide")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

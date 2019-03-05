@@ -1,11 +1,69 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Menus/LevelSelector/LevelSelector.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Menus/ExtrasMenu/Leaf.png" type="Texture" id=6]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "1to2"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelButtons:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -640, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "2to3"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelButtons:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -640, 0 ), Vector2( -1280, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "3to4"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelButtons:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1280, 0 ), Vector2( -1920, 0 ) ]
+}
 
 [node name="LevelSelector" type="Container"]
 
@@ -50,10 +108,15 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="BackButton" parent="." index="1" instance=ExtResource( 3 )]
 
-margin_left = -149.0
-margin_top = 59.0
-margin_right = 42.0
-margin_bottom = 95.0
+margin_left = -341.0
+margin_top = 91.0
+margin_right = -150.0
+margin_bottom = 127.0
+focus_neighbour_left = NodePath("../PrevButton")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../NextButton")
+focus_neighbour_bottom = NodePath(".")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="BackButton" index="0"]
 
@@ -61,118 +124,7 @@ margin_left = 63.0
 margin_right = 1204.0
 text = "back"
 
-[node name="removeLater" type="Container" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 60.0
-margin_top = -208.0
-margin_right = 60.0
-margin_bottom = -208.0
-rect_scale = Vector2( 0.3, 0.3 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect", "Visibility", "Z Index" ]
-
-[node name="Level1Button2" parent="removeLater" index="0" instance=ExtResource( 4 )]
-
-editor/display_folded = true
-margin_left = 438.0
-margin_top = 117.0
-margin_right = 598.0
-margin_bottom = 149.0
-
-[node name="Label" parent="removeLater/Level1Button2" index="0"]
-
-text = "Level 1"
-
-[node name="Level2Button2" parent="removeLater" index="1" instance=ExtResource( 4 )]
-
-editor/display_folded = true
-margin_left = 438.0
-margin_top = 149.0
-margin_right = 598.0
-margin_bottom = 181.0
-levelId = 2
-
-[node name="Label" parent="removeLater/Level2Button2" index="0"]
-
-text = "Level 2"
-
-[node name="Level3Button2" parent="removeLater" index="2" instance=ExtResource( 4 )]
-
-editor/display_folded = true
-margin_left = 438.0
-margin_top = 181.0
-margin_right = 598.0
-margin_bottom = 213.0
-levelId = 3
-
-[node name="Label" parent="removeLater/Level3Button2" index="0"]
-
-text = "Level 3"
-
-[node name="Level4Button2" parent="removeLater" index="3" instance=ExtResource( 4 )]
-
-editor/display_folded = true
-margin_left = 434.0
-margin_top = 216.0
-margin_right = 594.0
-margin_bottom = 248.0
-levelId = 4
-
-[node name="Label" parent="removeLater/Level4Button2" index="0"]
-
-text = "Level 4"
-
-[node name="Label" type="Label" parent="removeLater" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 431.0
-margin_top = 75.0
-margin_right = 633.0
-margin_bottom = 89.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "(playtest buttons, dont remove)"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label2" type="Label" parent="removeLater" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 413.0
-margin_top = 240.0
-margin_right = 453.0
-margin_bottom = 254.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LevelButtons" type="Container" parent="." index="3"]
+[node name="LevelButtons" type="Container" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -184,27 +136,38 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Rect", "Z Index" ]
 
 [node name="Level1Button" parent="LevelButtons" index="0" instance=ExtResource( 4 )]
 
-editor/display_folded = true
-margin_left = -245.0
-margin_top = -101.0
-margin_right = -85.0
-margin_bottom = -69.0
+margin_left = -130.0
+margin_top = 27.0
+margin_right = 30.0
+margin_bottom = 59.0
+focus_neighbour_left = NodePath("../../PrevButton")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../../NextButton")
+focus_neighbour_bottom = NodePath("../../BackButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures", "Visibility" ]
 
 [node name="Label" parent="LevelButtons/Level1Button" index="0"]
 
 text = "level 1"
 
-[node name="Level2Button" parent="LevelButtons" index="1" instance=ExtResource( 4 )]
+[node name="CanvasLayer" parent="LevelButtons/Level1Button" index="2"]
 
 editor/display_folded = true
-margin_left = -21.0
-margin_top = -101.0
-margin_right = 139.0
-margin_bottom = -69.0
+
+[node name="Level2Button" parent="LevelButtons" index="1" instance=ExtResource( 4 )]
+
+margin_left = 510.0
+margin_top = 27.0
+margin_right = 670.0
+margin_bottom = 59.0
+focus_neighbour_left = NodePath("../../PrevButton")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../../NextButton")
+focus_neighbour_bottom = NodePath("../../BackButton")
 levelId = 2
 
 [node name="Label" parent="LevelButtons/Level2Button" index="0"]
@@ -213,11 +176,14 @@ text = "level 2"
 
 [node name="Level3Button" parent="LevelButtons" index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
-margin_left = -245.0
-margin_top = -5.0
-margin_right = -85.0
-margin_bottom = 27.0
+margin_left = 1150.0
+margin_top = 27.0
+margin_right = 1310.0
+margin_bottom = 59.0
+focus_neighbour_left = NodePath("../../PrevButton")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../../NextButton")
+focus_neighbour_bottom = NodePath("../../BackButton")
 levelId = 3
 
 [node name="Label" parent="LevelButtons/Level3Button" index="0"]
@@ -226,18 +192,21 @@ text = "level 3"
 
 [node name="Level4Button" parent="LevelButtons" index="3" instance=ExtResource( 4 )]
 
-editor/display_folded = true
-margin_left = -21.0
-margin_top = -5.0
-margin_right = 139.0
-margin_bottom = 27.0
+margin_left = 1790.0
+margin_top = 27.0
+margin_right = 1950.0
+margin_bottom = 59.0
+focus_neighbour_left = NodePath("../../PrevButton")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../../NextButton")
+focus_neighbour_bottom = NodePath("../../BackButton")
 levelId = 4
 
 [node name="Label" parent="LevelButtons/Level4Button" index="0"]
 
 text = "level 4"
 
-[node name="Level Selection Title" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Level Selection Title" parent="." index="3" instance=ExtResource( 5 )]
 
 margin_left = -117.0
 margin_top = -165.0
@@ -245,7 +214,57 @@ margin_right = 456.0
 margin_bottom = -39.0
 text = "level selection"
 
-[node name="Fade" parent="." index="5" instance=ExtResource( 6 )]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/1to2 = SubResource( 1 )
+anims/2to3 = SubResource( 2 )
+anims/3to4 = SubResource( 3 )
+blend_times = [  ]
+
+[node name="NextButton" parent="." index="5" instance=ExtResource( 3 )]
+
+editor/display_folded = false
+margin_left = 107.0
+margin_top = -69.0
+margin_right = 267.0
+margin_bottom = -37.0
+
+[node name="Label" parent="NextButton" index="0"]
+
+text = ""
+
+[node name="Sprite" type="Sprite" parent="NextButton" index="2"]
+
+position = Vector2( 81.647, 15.126 )
+scale = Vector2( -0.452483, 0.452483 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="PrevButton" parent="." index="6" instance=ExtResource( 3 )]
+
+margin_left = -373.0
+margin_top = -69.0
+margin_right = -213.0
+margin_bottom = -37.0
+
+[node name="Label" parent="PrevButton" index="0"]
+
+text = ""
+
+[node name="Sprite" type="Sprite" parent="PrevButton" index="2"]
+
+position = Vector2( 69.522, 15.126 )
+rotation = -3.14159
+scale = Vector2( -0.452483, -0.452483 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Fade" parent="." index="7" instance=ExtResource( 7 )]
 
 margin_left = -373.0
 margin_top = -197.0
@@ -254,13 +273,15 @@ margin_bottom = 251.0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+
+[connection signal="pressed" from="PrevButton" to="." method="_on_PrevButton_pressed"]
+
 
 [editable path="BackButton"]
-[editable path="removeLater/Level1Button2"]
-[editable path="removeLater/Level2Button2"]
-[editable path="removeLater/Level3Button2"]
-[editable path="removeLater/Level4Button2"]
 [editable path="LevelButtons/Level1Button"]
 [editable path="LevelButtons/Level2Button"]
 [editable path="LevelButtons/Level3Button"]
 [editable path="LevelButtons/Level4Button"]
+[editable path="NextButton"]
+[editable path="PrevButton"]

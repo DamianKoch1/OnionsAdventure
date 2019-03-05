@@ -1213,10 +1213,10 @@ margin_left = -377.0
 margin_top = 83.0
 margin_right = -217.0
 margin_bottom = 115.0
-focus_neighbour_left = NodePath("../BackButton")
-focus_neighbour_top = NodePath("../NextButton")
-focus_neighbour_right = NodePath("../NextButton")
-focus_neighbour_bottom = NodePath(".")
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../BackButton")
+focus_neighbour_bottom = NodePath("../BackButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="MainMenuButton" index="0"]
@@ -1232,10 +1232,10 @@ margin_left = -183.0
 margin_top = 107.0
 margin_right = 41.0
 margin_bottom = 143.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath(".")
+focus_neighbour_left = NodePath("../MainMenuButton")
+focus_neighbour_top = NodePath("../MainMenuButton")
 focus_neighbour_right = NodePath("../NextButton")
-focus_neighbour_bottom = NodePath("../MainMenuButton")
+focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="BackButton" index="0"]
@@ -1259,9 +1259,9 @@ margin_top = 107.0
 margin_right = 149.0
 margin_bottom = 143.0
 focus_neighbour_left = NodePath("../BackButton")
-focus_neighbour_top = NodePath(".")
+focus_neighbour_top = NodePath("../MainMenuButton")
 focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../MainMenuButton")
+focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="NextButton" index="0"]
