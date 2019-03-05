@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/new tiles/Tiles/All Floor Tiles Mid Part.png" type="Texture" id=1]
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Top Tile Edge.png" type="Texture" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Low Side Top Tile Edge.png" type="Texture" id=14]
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Corner.png" type="Texture" id=15]
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Earth.png" type="Texture" id=16]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Bottom 1.png" type="Texture" id=17]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Bottom 2.png" type="Texture" id=18]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Bottom 3.png" type="Texture" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -48,10 +51,9 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="00" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
+position = Vector2( 16, 16 )
 scale = Vector2( 0.32, 0.32 )
 texture = ExtResource( 1 )
-centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 100, 100 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
@@ -65,10 +67,11 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="00/StaticBody2D" index="0"]
 
-position = Vector2( 50, 75 )
+position = Vector2( 0, 25 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -624,6 +627,84 @@ friction = 1.0
 bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="23/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="24" type="Sprite" parent="." index="24"]
+
+editor/display_folded = true
+position = Vector2( 64, 192 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 17 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="24" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="24/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="25" type="Sprite" parent="." index="25"]
+
+editor/display_folded = true
+position = Vector2( 128, 192 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 18 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="25" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="25/StaticBody2D" index="0"]
+
+position = Vector2( 50, 50 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="26" type="Sprite" parent="." index="26"]
+
+editor/display_folded = true
+position = Vector2( 192, 192 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 19 )
+centered = false
+region_rect = Rect2( 200, 200, 100, 100 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="26" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="26/StaticBody2D" index="0"]
 
 position = Vector2( 50, 50 )
 shape = SubResource( 2 )
