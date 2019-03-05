@@ -12,7 +12,6 @@
 [ext_resource path="res://Objects/Goal/Onion_yeah_1.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Objects/Goal/Onion_yeah_2.ogg" type="AudioStream" id=11]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -461,7 +460,7 @@ scale = Vector2( 0.745897, 0.745897 )
 [node name="OnionYeah1" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 
 stream = ExtResource( 10 )
-volume_db = 0.0
+volume_db = 10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
@@ -472,7 +471,7 @@ area_mask = 1
 [node name="OnionYeah2" type="AudioStreamPlayer2D" parent="SFX" index="1"]
 
 stream = ExtResource( 11 )
-volume_db = 0.0
+volume_db = 10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
