@@ -1199,20 +1199,21 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Gallery Title" parent="." index="1" instance=ExtResource( 3 )]
 
-margin_left = -343.0
-margin_top = -135.0
-margin_right = -82.0
-margin_bottom = -9.0
-rect_scale = Vector2( 0.35, 0.35 )
+margin_left = -334.0
+margin_top = -169.0
+margin_right = -73.0
+margin_bottom = -43.0
+rect_scale = Vector2( 0.4, 0.4 )
 text = "gallery"
 _sections_unfolded = [ "BBCode", "Margin", "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -377.0
-margin_top = 83.0
-margin_right = -217.0
-margin_bottom = 115.0
+editor/display_folded = false
+margin_left = -356.0
+margin_top = 79.0
+margin_right = -196.0
+margin_bottom = 111.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../BackButton")
@@ -1223,7 +1224,6 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 margin_right = 1189.0
 margin_bottom = 273.0
-rect_scale = Vector2( 0.25, 0.25 )
 text = "back"
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
@@ -1322,6 +1322,7 @@ text = "0/12"
 
 [node name="Pages" type="Node2D" parent="." index="7"]
 
+editor/display_folded = true
 show_behind_parent = true
 position = Vector2( -181, -69 )
 _sections_unfolded = [ "Transform", "Visibility" ]
