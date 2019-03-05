@@ -33,7 +33,7 @@ width = 2048
 [sub_resource type="Animation" id=3]
 
 resource_name = "Scroll"
-length = 13.0
+length = 30.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -43,13 +43,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 13 ),
+"times": PoolRealArray( 0, 30 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 360 ) ]
+"values": [ Vector2( 0, 360 ), Vector2( 0, -1254.36 ) ]
 }
 
-[node name="CreditScreen" type="Container"]
+[node name="CreditScreen" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -161,6 +161,7 @@ text = "back"
 
 [node name="Credits" type="Node2D" parent="." index="5"]
 
+position = Vector2( 0, -515.798 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Credits" type="Node2D" parent="Credits" index="0"]
