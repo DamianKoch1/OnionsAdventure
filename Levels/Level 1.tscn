@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Decoration/LevelStartEndLong.tscn" type="PackedScene" id=2]
@@ -30,15 +30,16 @@
 [ext_resource path="res://Objects/Ladder/Static Vine Top.png" type="Texture" id=28]
 [ext_resource path="res://Objects/Ladder/Static Vine Bottom.png" type="Texture" id=29]
 [ext_resource path="res://Objects/Ladder/LadderMid.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=34]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=35]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=37]
-[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=38]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Decoration/VineTop.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=38]
+[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=40]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -64,7 +65,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -379,7 +380,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="stump s, stump l" parent="." index="15" instance=ExtResource( 26 )]
 
-editor/display_folded = true
 position = Vector2( 7077.44, -224.625 )
 _sections_unfolded = [ "Transform" ]
 
@@ -485,9 +485,13 @@ position = Vector2( 30.353, 46.275 )
 
 position = Vector2( 30.353, -17.725 )
 
+[node name="VineTop" parent="stump s, stump l/Ladder" index="4" instance=ExtResource( 31 )]
+
+position = Vector2( 28.7397, -65.8619 )
+scale = Vector2( 0.512923, 0.512923 )
+
 [node name="Ladder2" type="Node2D" parent="stump s, stump l" index="9"]
 
-editor/display_folded = true
 position = Vector2( 958.48, -168.77 )
 
 [node name="Top" type="Area2D" parent="stump s, stump l/Ladder2" index="0" groups=[
@@ -567,7 +571,12 @@ position = Vector2( 34.3496, 43.275 )
 
 position = Vector2( 34.3496, -20.725 )
 
-[node name="stone stairs" parent="." index="16" instance=ExtResource( 31 )]
+[node name="VineTop" parent="stump s, stump l/Ladder2" index="4" instance=ExtResource( 31 )]
+
+position = Vector2( 33.6504, -65.3493 )
+scale = Vector2( 0.512923, 0.512923 )
+
+[node name="stone stairs" parent="." index="16" instance=ExtResource( 32 )]
 
 editor/display_folded = true
 position = Vector2( 7676.21, -223.397 )
@@ -610,17 +619,17 @@ position = Vector2( -992.222, -361.165 )
 position = Vector2( 8080.66, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="stump s, stone" parent="." index="18" instance=ExtResource( 32 )]
+[node name="stump s, stone" parent="." index="18" instance=ExtResource( 33 )]
 
 editor/display_folded = true
 position = Vector2( 8624.66, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Worm" parent="stump s, stone" index="3" instance=ExtResource( 33 )]
+[node name="Worm" parent="stump s, stone" index="3" instance=ExtResource( 34 )]
 
 position = Vector2( -268.421, 93.363 )
 
-[node name="Worm2" parent="stump s, stone" index="4" instance=ExtResource( 33 )]
+[node name="Worm2" parent="stump s, stone" index="4" instance=ExtResource( 34 )]
 
 position = Vector2( -209.522, 93.904 )
 
@@ -653,7 +662,7 @@ scale = Vector2( 0.613614, 0.613614 )
 position = Vector2( 151.516, 57.2601 )
 scale = Vector2( 0.613614, 0.613614 )
 
-[node name="tree2" parent="." index="19" instance=ExtResource( 34 )]
+[node name="tree2" parent="." index="19" instance=ExtResource( 35 )]
 
 editor/display_folded = true
 position = Vector2( 9120.66, -159.452 )
@@ -673,7 +682,7 @@ scale = Vector2( 0.196981, 0.196981 )
 position = Vector2( 36.6035, 44.8251 )
 scale = Vector2( 0.196981, 0.196981 )
 
-[node name="Worm3" parent="tree2" index="3" instance=ExtResource( 33 )]
+[node name="Worm3" parent="tree2" index="3" instance=ExtResource( 34 )]
 
 position = Vector2( 53.7559, 91.5891 )
 
@@ -685,7 +694,7 @@ position = Vector2( -127, 3 )
 
 position = Vector2( 43, -38 )
 
-[node name="stump s, stump l 2" parent="." index="20" instance=ExtResource( 35 )]
+[node name="stump s, stump l 2" parent="." index="20" instance=ExtResource( 36 )]
 
 editor/display_folded = true
 position = Vector2( 9838.66, -159.452 )
@@ -736,7 +745,7 @@ position = Vector2( 1312, -10 )
 position = Vector2( 72.0264, 86.5841 )
 scale = Vector2( 0.512413, 0.512413 )
 
-[node name="stump s, stump m 2" parent="." index="21" instance=ExtResource( 36 )]
+[node name="stump s, stump m 2" parent="." index="21" instance=ExtResource( 37 )]
 
 position = Vector2( 10584.6, -159.452 )
 _sections_unfolded = [ "Transform" ]
@@ -754,7 +763,7 @@ curve = SubResource( 4 )
 
 rotation = 0.00912847
 
-[node name="End2(wall)" parent="." index="22" instance=ExtResource( 37 )]
+[node name="End2(wall)" parent="." index="22" instance=ExtResource( 38 )]
 
 position = Vector2( 11224.6, -159.452 )
 _sections_unfolded = [ "Transform" ]
@@ -770,11 +779,11 @@ position = Vector2( -47.2969, 51.0922 )
 scale = Vector2( 0.372263, 0.372263 )
 z_index = 60
 
-[node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 38 )]
+[node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 39 )]
 
 position = Vector2( -255.331, 33.9647 )
 
-[node name="Background" parent="." index="23" instance=ExtResource( 39 )]
+[node name="Background" parent="." index="23" instance=ExtResource( 40 )]
 
 [connection signal="body_entered" from="stump s, stump l/Ladder/Top" to="stump s, stump l/Ladder/Top" method="_on_Ladder_body_entered"]
 
