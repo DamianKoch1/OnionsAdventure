@@ -1,39 +1,44 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
-[ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/interactable NPCs/SpiderbuddyTrigger/SpiderbuddyTrigger.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Modules/02 single/stumps/s/smallstump2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Modules/02 single/stones/smallstoneup.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Modules/02 single/stumps/m/mediumstump2.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Objects/Obstacles/Thorns/ThornsCorner.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Modules/02 single/stones/smallstone2.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 1.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Modules/03 combination/stump m, stone big.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, moving tendril.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m, stump s.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l 3.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Modules/02 single/tree/tree 1.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Modules/03 combination/platform/enemyPlatform.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=32]
-[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Decoration/LevelStartEndLong.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/interactable NPCs/SpiderbuddyTrigger/SpiderbuddyTrigger.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Modules/02 single/stumps/s/smallstump2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Collectable/Collectable.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Modules/02 single/stones/smallstoneup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Modules/02 single/stumps/m/mediumstump2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsCorner.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Decoration/Grass.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Modules/02 single/stones/smallstone2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 1.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Modules/03 combination/stump m, stone big.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, moving tendril.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m, stump s.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l 3.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Modules/02 single/tree/tree 1.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Modules/03 combination/platform/enemyPlatform.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=27]
+[ext_resource path="res://Objects/Ladder/Static Vine Top.png" type="Texture" id=28]
+[ext_resource path="res://Objects/Ladder/Static Vine Bottom.png" type="Texture" id=29]
+[ext_resource path="res://Objects/Ladder/LadderMid.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=37]
+[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=39]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -42,7 +47,17 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.07446, 170.337 )
 }
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Curve2D" id=4]
 
 bake_interval = 5.0
 _data = {
@@ -55,161 +70,200 @@ position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Start" parent="." index="0" instance=ExtResource( 2 )]
+[node name="LevelStartEndLong" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="SpiderbuddyTrigger" parent="Start" index="5" instance=ExtResource( 3 )]
+position = Vector2( -515.043, -61.1685 )
+scale = Vector2( 0.396922, 0.396922 )
+
+[node name="Start" parent="." index="1" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+position = Vector2( -7.39471, 0.332367 )
+
+[node name="SpiderbuddyTrigger" parent="Start" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -97.0325, 41.9004 )
 text = "Press “A”, “D” or arrow keys"
 
-[node name="smallstump2" parent="." index="1" instance=ExtResource( 4 )]
+[node name="smallstump2" parent="." index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 660, 0 )
+position = Vector2( 652.605, 0.332367 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable01" parent="smallstump2" index="3" instance=ExtResource( 5 )]
+[node name="Collectable01" parent="smallstump2" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 307.218, 1.72031 )
 
-[node name="Collectable03" parent="smallstump2" index="4" instance=ExtResource( 5 )]
+[node name="Collectable03" parent="smallstump2" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -31.4462, 89.9133 )
 
-[node name="SpiderbuddyTrigger" parent="smallstump2" index="5" instance=ExtResource( 3 )]
+[node name="SpiderbuddyTrigger" parent="smallstump2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -383.874, 82.8169 )
 text = "Good! … Press “Space”!"
 
-[node name="smallstoneup" parent="." index="2" instance=ExtResource( 6 )]
+[node name="smallstoneup" parent="." index="3" instance=ExtResource( 7 )]
 
-position = Vector2( 1030, 0 )
+position = Vector2( 1022.61, 0.332367 )
 
-[node name="mediumstump2" parent="." index="3" instance=ExtResource( 7 )]
+[node name="mediumstump2" parent="." index="4" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 1382.87, -127.954 )
+position = Vector2( 1375.48, -127.622 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable04" parent="mediumstump2" index="3" instance=ExtResource( 5 )]
+[node name="Collectable04" parent="mediumstump2" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -21.8928, -50.42 )
 
-[node name="Collectable06" parent="mediumstump2" index="4" instance=ExtResource( 5 )]
+[node name="Collectable06" parent="mediumstump2" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 275.767, -32.3074 )
 
-[node name="SpiderbuddyTrigger" parent="mediumstump2" index="5" instance=ExtResource( 3 )]
+[node name="SpiderbuddyTrigger" parent="mediumstump2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -24.4019, 35.2019 )
 text = "They will hurt you!"
 
-[node name="ThornsCorner" parent="mediumstump2" index="6" instance=ExtResource( 8 )]
+[node name="ThornsCorner" parent="mediumstump2" index="6" instance=ExtResource( 9 )]
 
-position = Vector2( 181.315, 98.8114 )
+position = Vector2( 182.369, 98.2844 )
 
-[node name="ThornsGround" parent="mediumstump2" index="7" instance=ExtResource( 9 )]
+[node name="Grass" parent="mediumstump2/ThornsCorner" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( 51.3696, 62.2135 )
+scale = Vector2( 0.435982, 0.435982 )
+
+[node name="ThornsGround" parent="mediumstump2" index="7" instance=ExtResource( 11 )]
 
 position = Vector2( 237.356, 102.755 )
 
-[node name="smallstone2" parent="." index="4" instance=ExtResource( 10 )]
+[node name="smallstone2" parent="." index="5" instance=ExtResource( 12 )]
 
 editor/display_folded = true
-position = Vector2( 1975.51, -96.959 )
+position = Vector2( 1968.12, -96.6266 )
 
-[node name="Checkpoint2" parent="smallstone2" index="3" instance=ExtResource( 11 )]
+[node name="Checkpoint2" parent="smallstone2" index="3" instance=ExtResource( 13 )]
 
 position = Vector2( 467.998, 31.9291 )
 
-[node name="trappedNPC1" parent="smallstone2" index="4" instance=ExtResource( 12 )]
+[node name="trappedNPC1" parent="smallstone2" index="4" instance=ExtResource( 14 )]
 
+editor/display_folded = true
 position = Vector2( 10.2097, 185.553 )
 
-[node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 3 )]
+[node name="Grass" parent="smallstone2/trappedNPC1" index="10" instance=ExtResource( 10 )]
+
+position = Vector2( -37.6904, 43.6332 )
+scale = Vector2( 0.191963, 0.191963 )
+
+[node name="Grass2" parent="smallstone2/trappedNPC1" index="11" instance=ExtResource( 10 )]
+
+position = Vector2( 32.0957, 42.7573 )
+scale = Vector2( 0.191963, 0.191963 )
+
+[node name="Grass3" parent="smallstone2/trappedNPC1" index="12" instance=ExtResource( 10 )]
+
+position = Vector2( 91.2813, 40.7712 )
+scale = Vector2( 0.191963, 0.191963 )
+
+[node name="Grass4" parent="smallstone2/trappedNPC1" index="13" instance=ExtResource( 10 )]
+
+position = Vector2( 129.812, 39.9767 )
+scale = Vector2( 0.191963, 0.191963 )
+
+[node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -99.1992, 150.38 )
 text = "Press “E”!"
 
-[node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 3 )]
+[node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 344.553, 39.9205 )
 text = "It’s like a checkpoint."
 
-[node name="stump s, stump m 1" parent="." index="5" instance=ExtResource( 13 )]
+[node name="stump s, stump m 1" parent="." index="6" instance=ExtResource( 15 )]
 
 editor/display_folded = true
-position = Vector2( 2728.82, -128.957 )
+position = Vector2( 2721.43, -128.625 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable05" parent="stump s, stump m 1" index="3" instance=ExtResource( 5 )]
+[node name="Collectable05" parent="stump s, stump m 1" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -621.516, 113.828 )
 
-[node name="Collectable02" parent="stump s, stump m 1" index="4" instance=ExtResource( 5 )]
+[node name="Collectable02" parent="stump s, stump m 1" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -108.262, 22.5838 )
 
-[node name="stump m, stone big" parent="." index="6" instance=ExtResource( 14 )]
+[node name="stump m, stone big" parent="." index="7" instance=ExtResource( 16 )]
 
-position = Vector2( 3304.82, -128.957 )
+position = Vector2( 3297.43, -128.625 )
 
-[node name="Collectable07" parent="stump m, stone big" index="4" instance=ExtResource( 5 )]
-
-position = Vector2( 313.907, -55.7878 )
-
-[node name="Collectable10" parent="stump m, stone big" index="5" instance=ExtResource( 5 )]
+[node name="Collectable07" parent="stump m, stone big" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 313.907, -55.7878 )
 
-[node name="Collectable08" parent="stump m, stone big" index="6" instance=ExtResource( 5 )]
+[node name="Collectable10" parent="stump m, stone big" index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 313.907, -55.7878 )
+
+[node name="Collectable08" parent="stump m, stone big" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 125.387, -11.9416 )
 
-[node name="Collectable09" parent="stump m, stone big" index="7" instance=ExtResource( 5 )]
+[node name="Collectable09" parent="stump m, stone big" index="7" instance=ExtResource( 6 )]
 
 position = Vector2( -353.827, -71.4841 )
 
-[node name="ThornsUp" parent="stump m, stone big" index="8" instance=ExtResource( 15 )]
+[node name="ThornsUp" parent="stump m, stone big" index="8" instance=ExtResource( 17 )]
 
 position = Vector2( -79.873, 85.1429 )
 scale = Vector2( 0.548139, 0.548139 )
 
-[node name="stump l, moving tendril" parent="." index="7" instance=ExtResource( 16 )]
+[node name="Grass" parent="stump m, stone big/ThornsUp" index="1" instance=ExtResource( 10 )]
 
-position = Vector2( 3944.82, -128.957 )
-_sections_unfolded = [ "Transform" ]
+position = Vector2( -13.8745, 87.4775 )
+scale = Vector2( 0.325107, 0.325107 )
 
-[node name="Checkpoint" parent="stump l, moving tendril" index="3" instance=ExtResource( 11 )]
+[node name="stump l, moving tendril" parent="." index="8" instance=ExtResource( 18 )]
+
+editor/display_folded = true
+position = Vector2( 3937.43, -128.625 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Checkpoint" parent="stump l, moving tendril" index="3" instance=ExtResource( 13 )]
 
 position = Vector2( 575.059, -101.634 )
 
-[node name="Collectable10" parent="stump l, moving tendril" index="4" instance=ExtResource( 5 )]
+[node name="Collectable10" parent="stump l, moving tendril" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -172.847, -110.579 )
 
-[node name="Collectable11" parent="stump l, moving tendril" index="5" instance=ExtResource( 5 )]
+[node name="Collectable11" parent="stump l, moving tendril" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( -88.7002, -59.3581 )
 
-[node name="Collectable12" parent="stump l, moving tendril" index="6" instance=ExtResource( 5 )]
+[node name="Collectable12" parent="stump l, moving tendril" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 59.2764, -133.213 )
 
-[node name="Collectable14" parent="stump l, moving tendril" index="7" instance=ExtResource( 5 )]
+[node name="Collectable14" parent="stump l, moving tendril" index="7" instance=ExtResource( 6 )]
 
 position = Vector2( 390.963, -74.9346 )
 
-[node name="SpiderbuddyTrigger" parent="stump l, moving tendril" index="8" instance=ExtResource( 3 )]
+[node name="SpiderbuddyTrigger" parent="stump l, moving tendril" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( -342.811, -40.1284 )
 text = "Jump onto that tendril!"
 
-[node name="stump l, stump m, stump s" parent="." index="8" instance=ExtResource( 17 )]
+[node name="stump l, stump m, stump s" parent="." index="9" instance=ExtResource( 19 )]
 
 editor/display_folded = true
-position = Vector2( 4930.83, -288.957 )
+position = Vector2( 4923.44, -288.625 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Enemy" parent="stump l, stump m, stump s" index="4" instance=ExtResource( 18 )]
+[node name="Enemy" parent="stump l, stump m, stump s" index="4" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 position = Vector2( 398.198, 103.051 )
@@ -222,308 +276,522 @@ curve = SubResource( 1 )
 
 rotation = 0.00182911
 
-[node name="Collectable15" parent="stump l, stump m, stump s" index="5" instance=ExtResource( 5 )]
+[node name="Collectable15" parent="stump l, stump m, stump s" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( -83.0801, 28.5078 )
 
-[node name="Collectable16" parent="stump l, stump m, stump s" index="6" instance=ExtResource( 5 )]
+[node name="Collectable16" parent="stump l, stump m, stump s" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 4415.45, 82.4977 )
 
-[node name="Collectable17" parent="stump l, stump m, stump s" index="7" instance=ExtResource( 5 )]
+[node name="Collectable17" parent="stump l, stump m, stump s" index="7" instance=ExtResource( 6 )]
 
 position = Vector2( 4669.56, 78.6771 )
 
-[node name="Collectable18" parent="stump l, stump m, stump s" index="8" instance=ExtResource( 5 )]
+[node name="Collectable18" parent="stump l, stump m, stump s" index="8" instance=ExtResource( 6 )]
 
 position = Vector2( 254.966, -158.66 )
 
-[node name="SpiderbuddyTrigger" parent="stump l, stump m, stump s" index="9" instance=ExtResource( 3 )]
+[node name="SpiderbuddyTrigger" parent="stump l, stump m, stump s" index="9" instance=ExtResource( 4 )]
 
 position = Vector2( 208.688, 21.2203 )
 scale = Vector2( 1.23411, 1.2233 )
 text = "Don’t touch these insects!"
 
-[node name="stump s, stump l 3" parent="." index="9" instance=ExtResource( 19 )]
+[node name="stump s, stump l 3" parent="." index="10" instance=ExtResource( 21 )]
 
 editor/display_folded = true
-position = Vector2( 5826.83, -288.957 )
+position = Vector2( 5819.44, -288.625 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable19" parent="stump s, stump l 3" index="4" instance=ExtResource( 5 )]
+[node name="Collectable19" parent="stump s, stump l 3" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -93.668, 80.6362 )
 
-[node name="Collectable20" parent="stump s, stump l 3" index="5" instance=ExtResource( 5 )]
+[node name="Collectable20" parent="stump s, stump l 3" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 189.434, -29.2146 )
 
-[node name="Collectable21" parent="stump s, stump l 3" index="6" instance=ExtResource( 5 )]
+[node name="Collectable21" parent="stump s, stump l 3" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 7.14893, -161.867 )
 
-[node name="ThornsGround" parent="stump s, stump l 3" index="7" instance=ExtResource( 9 )]
+[node name="ThornsGround" parent="stump s, stump l 3" index="7" instance=ExtResource( 11 )]
 
 position = Vector2( 107.019, 102.466 )
 
-[node name="tree 1" parent="." index="10" instance=ExtResource( 20 )]
+[node name="Grass" parent="stump s, stump l 3/ThornsGround" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( -61.3467, 56.8488 )
+scale = Vector2( 0.330722, 0.330722 )
+
+[node name="tree 1" parent="." index="11" instance=ExtResource( 22 )]
 
 editor/display_folded = true
-position = Vector2( 6338.83, -288.957 )
+position = Vector2( 6331.44, -288.625 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable30" parent="tree 1" index="2" instance=ExtResource( 5 )]
+[node name="Collectable30" parent="tree 1" index="2" instance=ExtResource( 6 )]
 
 position = Vector2( 148.574, -52.8296 )
 
-[node name="Jump down2" parent="." index="11" instance=ExtResource( 21 )]
+[node name="Jump down2" parent="." index="12" instance=ExtResource( 23 )]
 
-position = Vector2( 6470.83, -224.957 )
+position = Vector2( 6463.44, -224.625 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="platform" parent="." index="12" instance=ExtResource( 22 )]
+[node name="platform" parent="." index="13" instance=ExtResource( 24 )]
 
 editor/display_folded = true
-position = Vector2( 7679.56, -366.35 )
+position = Vector2( 7672.17, -366.018 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="trappedNPC2" parent="platform" index="1" instance=ExtResource( 12 )]
+[node name="trappedNPC2" parent="platform" index="1" instance=ExtResource( 14 )]
 
+editor/display_folded = true
 position = Vector2( 14.3857, -21.9347 )
 
-[node name="Collectable24" parent="platform" index="2" instance=ExtResource( 5 )]
+[node name="Grass" parent="platform/trappedNPC2" index="10" instance=ExtResource( 10 )]
+
+position = Vector2( -28.9307, 43.828 )
+scale = Vector2( 0.193985, 0.193985 )
+
+[node name="Grass2" parent="platform/trappedNPC2" index="11" instance=ExtResource( 10 )]
+
+position = Vector2( 8.04004, 45.5885 )
+scale = Vector2( 0.193985, 0.193985 )
+
+[node name="Collectable24" parent="platform" index="2" instance=ExtResource( 6 )]
 
 position = Vector2( -132.212, -28.4051 )
 
-[node name="Collectable26" parent="platform" index="3" instance=ExtResource( 5 )]
+[node name="Collectable26" parent="platform" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -4544.6, 253.379 )
 
-[node name="Collectable27" parent="platform" index="4" instance=ExtResource( 5 )]
+[node name="Collectable27" parent="platform" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 150.228, -26.6468 )
 
-[node name="enemyPlatform" parent="." index="13" instance=ExtResource( 23 )]
+[node name="enemyPlatform" parent="." index="14" instance=ExtResource( 25 )]
 
-position = Vector2( 6805.85, -359.912 )
+position = Vector2( 6798.46, -359.58 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="stump s, stump l" parent="." index="14" instance=ExtResource( 24 )]
+[node name="stump s, stump l" parent="." index="15" instance=ExtResource( 26 )]
 
 editor/display_folded = true
-position = Vector2( 7084.83, -224.957 )
+position = Vector2( 7077.44, -224.625 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable22" parent="stump s, stump l" index="3" instance=ExtResource( 5 )]
+[node name="Collectable22" parent="stump s, stump l" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -343.749, 89.119 )
 
-[node name="Collectable23" parent="stump s, stump l" index="4" instance=ExtResource( 5 )]
+[node name="Collectable23" parent="stump s, stump l" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -266.371, 86.676 )
 
-[node name="Collectable25" parent="stump s, stump l" index="5" instance=ExtResource( 5 )]
+[node name="Collectable25" parent="stump s, stump l" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( -184.92, 87.49 )
 
-[node name="Collectable28" parent="stump s, stump l" index="6" instance=ExtResource( 5 )]
+[node name="Collectable28" parent="stump s, stump l" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 127.565, -151.536 )
 
-[node name="Collectable29" parent="stump s, stump l" index="7" instance=ExtResource( 5 )]
+[node name="Collectable29" parent="stump s, stump l" index="7" instance=ExtResource( 6 )]
 
 position = Vector2( -37.1123, 7.24855 )
 
-[node name="Ladder" parent="stump s, stump l" index="8" instance=ExtResource( 25 )]
-
-position = Vector2( 274.476, -155.77 )
-
-[node name="Ladder2" parent="stump s, stump l" index="9" instance=ExtResource( 25 )]
-
-position = Vector2( 958.48, -168.77 )
-
-[node name="stone stairs" parent="." index="15" instance=ExtResource( 26 )]
+[node name="Ladder" type="Node2D" parent="stump s, stump l" index="8"]
 
 editor/display_folded = true
-position = Vector2( 7684.83, -224.957 )
+position = Vector2( 274.476, -155.77 )
+
+[node name="Top" type="Area2D" parent="stump s, stump l/Ladder" index="0" groups=[
+"rayIgnore",
+]]
+
+editor/display_folded = true
+position = Vector2( 30.353, -81.725 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="stump s, stump l/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 28 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump s, stump l/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Checkpoint" parent="stone stairs" index="4" instance=ExtResource( 11 )]
+[node name="Bot" type="Area2D" parent="stump s, stump l/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+editor/display_folded = true
+position = Vector2( 30.353, 110.275 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="stump s, stump l/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 29 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump s, stump l/Ladder/Bot" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="stump s, stump l/Ladder" index="2" instance=ExtResource( 30 )]
+
+position = Vector2( 30.353, 46.275 )
+
+[node name="Mid2" parent="stump s, stump l/Ladder" index="3" instance=ExtResource( 30 )]
+
+position = Vector2( 30.353, -17.725 )
+
+[node name="Ladder2" type="Node2D" parent="stump s, stump l" index="9"]
+
+editor/display_folded = true
+position = Vector2( 958.48, -168.77 )
+
+[node name="Top" type="Area2D" parent="stump s, stump l/Ladder2" index="0" groups=[
+"rayIgnore",
+]]
+
+editor/display_folded = true
+position = Vector2( 34.3496, -84.725 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="stump s, stump l/Ladder2/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 28 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump s, stump l/Ladder2/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="stump s, stump l/Ladder2" index="1" groups=[
+"rayIgnore",
+]]
+
+editor/display_folded = true
+position = Vector2( 34.3496, 107.275 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="stump s, stump l/Ladder2/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 29 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump s, stump l/Ladder2/Bot" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid3" parent="stump s, stump l/Ladder2" index="2" instance=ExtResource( 30 )]
+
+position = Vector2( 34.3496, 43.275 )
+
+[node name="Mid4" parent="stump s, stump l/Ladder2" index="3" instance=ExtResource( 30 )]
+
+position = Vector2( 34.3496, -20.725 )
+
+[node name="stone stairs" parent="." index="16" instance=ExtResource( 31 )]
+
+editor/display_folded = true
+position = Vector2( 7676.21, -223.397 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Checkpoint" parent="stone stairs" index="4" instance=ExtResource( 13 )]
 
 position = Vector2( 537.975, 60.4919 )
 
-[node name="Collectable31" parent="stone stairs" index="5" instance=ExtResource( 5 )]
+[node name="Collectable31" parent="stone stairs" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( -349.424, 88.7813 )
 
-[node name="Collectable32" parent="stone stairs" index="6" instance=ExtResource( 5 )]
+[node name="Collectable32" parent="stone stairs" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( -235.393, 41.5398 )
 
-[node name="Collectable33" parent="stone stairs" index="7" instance=ExtResource( 5 )]
+[node name="Collectable33" parent="stone stairs" index="7" instance=ExtResource( 6 )]
 
 position = Vector2( -40.7256, 21.1772 )
 
-[node name="Collectable34" parent="stone stairs" index="8" instance=ExtResource( 5 )]
+[node name="Collectable34" parent="stone stairs" index="8" instance=ExtResource( 6 )]
 
 position = Vector2( 135.208, 32.5803 )
 
-[node name="Collectable35" parent="stone stairs" index="9" instance=ExtResource( 5 )]
+[node name="Collectable35" parent="stone stairs" index="9" instance=ExtResource( 6 )]
 
 position = Vector2( -711.393, -182.842 )
 
-[node name="Collectable36" parent="stone stairs" index="10" instance=ExtResource( 5 )]
+[node name="Collectable36" parent="stone stairs" index="10" instance=ExtResource( 6 )]
 
 position = Vector2( -828.77, -288.189 )
 
-[node name="Collectable37" parent="stone stairs" index="11" instance=ExtResource( 5 )]
+[node name="Collectable37" parent="stone stairs" index="11" instance=ExtResource( 6 )]
 
 position = Vector2( -992.222, -361.165 )
 
-[node name="Jump down" parent="." index="16" instance=ExtResource( 21 )]
+[node name="Jump down" parent="." index="17" instance=ExtResource( 23 )]
 
-position = Vector2( 8100.83, -160.957 )
+position = Vector2( 8080.66, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="stump s, stone" parent="." index="17" instance=ExtResource( 27 )]
+[node name="stump s, stone" parent="." index="18" instance=ExtResource( 32 )]
 
 editor/display_folded = true
-position = Vector2( 8644.83, -160.957 )
+position = Vector2( 8624.66, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Worm" parent="stump s, stone" index="3" instance=ExtResource( 28 )]
+[node name="Worm" parent="stump s, stone" index="3" instance=ExtResource( 33 )]
 
 position = Vector2( -268.421, 93.363 )
 
-[node name="Worm2" parent="stump s, stone" index="4" instance=ExtResource( 28 )]
+[node name="Worm2" parent="stump s, stone" index="4" instance=ExtResource( 33 )]
 
 position = Vector2( -209.522, 93.904 )
 
-[node name="Collectable38" parent="stump s, stone" index="5" instance=ExtResource( 5 )]
+[node name="Collectable38" parent="stump s, stone" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( -254.506, 2.70752 )
 
-[node name="Collectable39" parent="stump s, stone" index="6" instance=ExtResource( 5 )]
+[node name="Collectable39" parent="stump s, stone" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( -144.4, 25.2701 )
 
-[node name="SpiderbuddyTrigger" parent="stump s, stone" index="7" instance=ExtResource( 3 )]
+[node name="SpiderbuddyTrigger" parent="stump s, stone" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( -392.589, 0 )
 text = ""
 
-[node name="ThornsCorner" parent="stump s, stone" index="8" instance=ExtResource( 8 )]
+[node name="ThornsCorner" parent="stump s, stone" index="8" instance=ExtResource( 9 )]
 
+editor/display_folded = true
 position = Vector2( -11.4678, 109.119 )
 scale = Vector2( 0.356969, 0.356969 )
 
-[node name="tree2" parent="." index="18" instance=ExtResource( 29 )]
+[node name="Grass" parent="stump s, stone/ThornsCorner" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( 55.8223, 63.9366 )
+scale = Vector2( 0.613614, 0.613614 )
+
+[node name="Grass2" parent="stump s, stone/ThornsCorner" index="2" instance=ExtResource( 10 )]
+
+position = Vector2( 151.516, 57.2601 )
+scale = Vector2( 0.613614, 0.613614 )
+
+[node name="tree2" parent="." index="19" instance=ExtResource( 34 )]
 
 editor/display_folded = true
-position = Vector2( 9140.83, -160.957 )
+position = Vector2( 9120.66, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="trappedNPC3" parent="tree2" index="2" instance=ExtResource( 12 )]
+[node name="trappedNPC3" parent="tree2" index="2" instance=ExtResource( 14 )]
 
 position = Vector2( 309.63, -44.124 )
 
-[node name="Worm3" parent="tree2" index="3" instance=ExtResource( 28 )]
+[node name="Grass" parent="tree2/trappedNPC3" index="10" instance=ExtResource( 10 )]
+
+position = Vector2( -33.8174, 47.4659 )
+scale = Vector2( 0.196981, 0.196981 )
+
+[node name="Grass2" parent="tree2/trappedNPC3" index="11" instance=ExtResource( 10 )]
+
+position = Vector2( 36.6035, 44.8251 )
+scale = Vector2( 0.196981, 0.196981 )
+
+[node name="Worm3" parent="tree2" index="3" instance=ExtResource( 33 )]
 
 position = Vector2( 53.7559, 91.5891 )
 
-[node name="Collectable41" parent="tree2" index="4" instance=ExtResource( 5 )]
+[node name="Collectable41" parent="tree2" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -127, 3 )
 
-[node name="Collectable42" parent="tree2" index="5" instance=ExtResource( 5 )]
+[node name="Collectable42" parent="tree2" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 43, -38 )
 
-[node name="stump s, stump l 2" parent="." index="19" instance=ExtResource( 30 )]
+[node name="stump s, stump l 2" parent="." index="20" instance=ExtResource( 35 )]
 
 editor/display_folded = true
-position = Vector2( 9858.83, -160.957 )
+position = Vector2( 9838.66, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Collectable43" parent="stump s, stump l 2" index="3" instance=ExtResource( 5 )]
+[node name="Collectable43" parent="stump s, stump l 2" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -27, -5 )
 
-[node name="Collectable44" parent="stump s, stump l 2" index="4" instance=ExtResource( 5 )]
+[node name="Collectable44" parent="stump s, stump l 2" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 323.5, -38.6288 )
 
-[node name="Collectable45" parent="stump s, stump l 2" index="5" instance=ExtResource( 5 )]
+[node name="Collectable45" parent="stump s, stump l 2" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 146.253, -170.336 )
 
-[node name="Collectable46" parent="stump s, stump l 2" index="6" instance=ExtResource( 5 )]
+[node name="Collectable46" parent="stump s, stump l 2" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 466, 83.0001 )
 
-[node name="Collectable47" parent="stump s, stump l 2" index="7" instance=ExtResource( 5 )]
+[node name="Collectable47" parent="stump s, stump l 2" index="7" instance=ExtResource( 6 )]
 
 position = Vector2( 621.84, -100.038 )
 
-[node name="Collectable48" parent="stump s, stump l 2" index="8" instance=ExtResource( 5 )]
+[node name="Collectable48" parent="stump s, stump l 2" index="8" instance=ExtResource( 6 )]
 
 position = Vector2( 725, 78.0001 )
 
-[node name="Collectable49" parent="stump s, stump l 2" index="9" instance=ExtResource( 5 )]
+[node name="Collectable49" parent="stump s, stump l 2" index="9" instance=ExtResource( 6 )]
 
 position = Vector2( 961, 86.0001 )
 
-[node name="Collectable50" parent="stump s, stump l 2" index="10" instance=ExtResource( 5 )]
+[node name="Collectable50" parent="stump s, stump l 2" index="10" instance=ExtResource( 6 )]
 
 position = Vector2( 1140, -12 )
 
-[node name="Collectable51" parent="stump s, stump l 2" index="11" instance=ExtResource( 5 )]
+[node name="Collectable51" parent="stump s, stump l 2" index="11" instance=ExtResource( 6 )]
 
 position = Vector2( 1224, -10 )
 
-[node name="Collectable52" parent="stump s, stump l 2" index="12" instance=ExtResource( 5 )]
+[node name="Collectable52" parent="stump s, stump l 2" index="12" instance=ExtResource( 6 )]
 
 position = Vector2( 1312, -10 )
 
-[node name="ThornsUp" parent="stump s, stump l 2" index="13" instance=ExtResource( 15 )]
+[node name="ThornsUp" parent="stump s, stump l 2" index="13" instance=ExtResource( 17 )]
 
 position = Vector2( 72.0264, 86.5841 )
 scale = Vector2( 0.512413, 0.512413 )
 
-[node name="stump s, stump m 2" parent="." index="20" instance=ExtResource( 31 )]
+[node name="stump s, stump m 2" parent="." index="21" instance=ExtResource( 36 )]
 
-position = Vector2( 10604.8, -160.957 )
+position = Vector2( 10584.6, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Enemy" parent="stump s, stump m 2" index="3" instance=ExtResource( 18 )]
+[node name="Enemy" parent="stump s, stump m 2" index="3" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 position = Vector2( -444.053, 103.843 )
 
 [node name="EnemyPath" parent="stump s, stump m 2/Enemy" index="0"]
 
-curve = SubResource( 2 )
+curve = SubResource( 4 )
 
 [node name="PathFollow2D" parent="stump s, stump m 2/Enemy/EnemyPath" index="1"]
 
 rotation = 0.00912847
 
-[node name="End2(wall)" parent="." index="21" instance=ExtResource( 32 )]
+[node name="End2(wall)" parent="." index="22" instance=ExtResource( 37 )]
 
-editor/display_folded = true
-position = Vector2( 11244.8, -160.957 )
+position = Vector2( 11224.6, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ThornsGround" parent="End2(wall)" index="2" instance=ExtResource( 9 )]
+[node name="ThornsGround" parent="End2(wall)" index="2" instance=ExtResource( 11 )]
 
 position = Vector2( -513.278, 110.508 )
 scale = Vector2( 0.403203, 0.403203 )
 
-[node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 33 )]
+[node name="Grass" parent="End2(wall)/ThornsGround" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( -47.2969, 51.0922 )
+scale = Vector2( 0.372263, 0.372263 )
+z_index = 60
+
+[node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 38 )]
 
 position = Vector2( -255.331, 33.9647 )
 
-[node name="Background" parent="." index="22" instance=ExtResource( 34 )]
+[node name="Background" parent="." index="23" instance=ExtResource( 39 )]
+
+[connection signal="body_entered" from="stump s, stump l/Ladder/Top" to="stump s, stump l/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="stump s, stump l/Ladder/Top" to="stump s, stump l/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="stump s, stump l/Ladder/Bot" to="stump s, stump l/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="stump s, stump l/Ladder/Bot" to="stump s, stump l/Ladder/Bot" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="stump s, stump l/Ladder2/Top" to="stump s, stump l/Ladder2/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="stump s, stump l/Ladder2/Top" to="stump s, stump l/Ladder2/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="stump s, stump l/Ladder2/Bot" to="stump s, stump l/Ladder2/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="stump s, stump l/Ladder2/Bot" to="stump s, stump l/Ladder2/Bot" method="_on_Ladder_body_exited"]
 
 
 [editable path="stump l, stump m, stump s/Enemy"]

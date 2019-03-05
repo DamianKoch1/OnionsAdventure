@@ -626,7 +626,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="randomPitch" parent="." index="3" instance=ExtResource( 16 )]
 
 stream = ExtResource( 17 )
-volume_db = 10.0
+volume_db = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 
@@ -670,7 +670,7 @@ blend_times = [  ]
 [node name="help" type="AudioStreamPlayer2D" parent="." index="8"]
 
 stream = ExtResource( 20 )
-volume_db = 0.0
+volume_db = 10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0

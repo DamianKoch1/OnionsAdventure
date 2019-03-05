@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Menus/MainMenu/CreditScreen.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Menus/MainMenu/Nico.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menus/MainMenu/Nico.png" type="Texture" id=6]
 [ext_resource path="res://Menus/MainMenu/Franzi.png" type="Texture" id=7]
 [ext_resource path="res://Menus/MainMenu/Seb.png" type="Texture" id=8]
 [ext_resource path="res://Menus/MainMenu/Kadda.png" type="Texture" id=9]
@@ -49,7 +49,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 360 ) ]
 }
 
-[node name="CreditScreen" type="Container"]
+[node name="CreditScreen" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -111,7 +111,34 @@ expand = true
 stretch_mode = 7
 _sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="OptionsOverlay" parent="." index="2" instance=ExtResource( 3 )]
+[node name="CreditsLabel" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -343.0
+margin_top = -126.0
+margin_right = -82.0
+rect_scale = Vector2( 0.35, 0.35 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0156863, 0.121569, 0.356863, 1 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+text = "credits"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="OptionsOverlay" parent="." index="3" instance=ExtResource( 4 )]
 
 visible = false
 margin_left = -21.0
@@ -119,35 +146,38 @@ margin_top = -5.0
 margin_right = 11.0
 margin_bottom = 24.0
 
-[node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
+[node name="BackButton" parent="." index="4" instance=ExtResource( 5 )]
 
-margin_left = -132.0
-margin_top = 91.0
-margin_right = 28.0
-margin_bottom = 123.0
+editor/display_folded = false
+margin_left = -377.0
+margin_top = 83.0
+margin_right = -217.0
+margin_bottom = 115.0
 
 [node name="Label" parent="BackButton" index="0"]
 
+rect_scale = Vector2( 0.25, 0.25 )
 text = "back"
 
-[node name="Credits" type="Node2D" parent="." index="4"]
+[node name="Credits" type="Node2D" parent="." index="5"]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Credits" type="Node2D" parent="Credits" index="0"]
 
+position = Vector2( -86, 21 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Nico" type="Node2D" parent="Credits/Credits" index="0"]
 
 editor/display_folded = true
-position = Vector2( -10, -13 )
+position = Vector2( 156, 190 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Nico" index="0"]
 
-position = Vector2( -271.06, -132.159 )
+position = Vector2( -271.06, -130.159 )
 scale = Vector2( 0.423865, 0.423865 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Label" type="Label" parent="Credits/Credits/Nico" index="1"]
@@ -157,9 +187,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -298.0
-margin_top = -89.0
+margin_top = -90.0
 margin_right = 68.0
-margin_bottom = 19.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -167,7 +197,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Nico Drews"
 percent_visible = 1.0
 lines_skipped = 0
@@ -191,7 +224,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Producer/Marketing"
 percent_visible = 1.0
 lines_skipped = 0
@@ -201,7 +237,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="Franzi" type="Node2D" parent="Credits/Credits" index="1"]
 
 editor/display_folded = true
-position = Vector2( 99.6931, -14 )
+position = Vector2( 238.693, 189 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Franzi" index="0"]
@@ -218,9 +254,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -309.0
-margin_top = -88.0
+margin_top = -89.0
 margin_right = 248.0
-margin_bottom = 20.0
+margin_bottom = 19.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -228,7 +264,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Franziska Richter"
 percent_visible = 1.0
 lines_skipped = 0
@@ -252,7 +291,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Level Design"
 percent_visible = 1.0
 lines_skipped = 0
@@ -262,11 +304,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="Sebastian" type="Node2D" parent="Credits/Credits" index="2"]
 
 editor/display_folded = true
-position = Vector2( 212, -13 )
+position = Vector2( 153, -10 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Sebastian" index="0"]
 
-position = Vector2( -265.999, -126.93 )
+position = Vector2( -265.999, -125.93 )
 scale = Vector2( 0.430266, 0.430266 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
@@ -278,9 +320,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -310.0
-margin_top = -89.0
+margin_top = -90.0
 margin_right = 234.0
-margin_bottom = 19.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -288,7 +330,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Sebastian Scopel"
 percent_visible = 1.0
 lines_skipped = 0
@@ -312,7 +357,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "2D Environment/UI"
 percent_visible = 1.0
 lines_skipped = 0
@@ -322,11 +370,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="Katharina" type="Node2D" parent="Credits/Credits" index="3"]
 
 editor/display_folded = true
-position = Vector2( 212, -13 )
+position = Vector2( 130, -10 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Katharina" index="0"]
 
-position = Vector2( -154.207, -119.919 )
+position = Vector2( -154.207, -116.919 )
 scale = Vector2( 0.448039, 0.448039 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
@@ -338,9 +386,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -194.0
-margin_top = -89.0
+margin_top = -90.0
 margin_right = 350.0
-margin_bottom = 19.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -348,7 +396,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Katharina Batzel"
 percent_visible = 1.0
 lines_skipped = 0
@@ -372,7 +423,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Lead Artist"
 percent_visible = 1.0
 lines_skipped = 0
@@ -382,11 +436,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="Lisa" type="Node2D" parent="Credits/Credits" index="4"]
 
 editor/display_folded = true
-position = Vector2( 324, -13 )
+position = Vector2( 220, -10 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Lisa" index="0"]
 
-position = Vector2( -154.593, -119.408 )
+position = Vector2( -154.593, -116.408 )
 scale = Vector2( 0.454282, 0.454282 )
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
@@ -398,9 +452,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -183.0
-margin_top = -89.0
+margin_top = -90.0
 margin_right = 361.0
-margin_bottom = 19.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -408,7 +462,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Lisa Wegner"
 percent_visible = 1.0
 lines_skipped = 0
@@ -432,7 +489,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "2d Artist"
 percent_visible = 1.0
 lines_skipped = 0
@@ -442,12 +502,12 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="Lara" type="Node2D" parent="Credits/Credits" index="5"]
 
 editor/display_folded = true
-position = Vector2( 324, 99 )
+position = Vector2( 220, 89 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Lara" index="0"]
 
-position = Vector2( -154.593, -119.431 )
-scale = Vector2( 0.428069, 0.428069 )
+position = Vector2( -154.593, -115.431 )
+scale = Vector2( 0.437302, 0.437302 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
@@ -458,9 +518,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -186.0
-margin_top = -85.0
+margin_top = -88.0
 margin_right = 358.0
-margin_bottom = 23.0
+margin_bottom = 20.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -468,7 +528,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Lara Serzisko"
 percent_visible = 1.0
 lines_skipped = 0
@@ -482,9 +545,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -186.0
-margin_top = -72.0
+margin_top = -74.0
 margin_right = 477.0
-margin_bottom = 36.0
+margin_bottom = 34.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -492,7 +555,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Game/Sound Design"
 percent_visible = 1.0
 lines_skipped = 0
@@ -502,11 +568,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="Anastasia" type="Node2D" parent="Credits/Credits" index="6"]
 
 editor/display_folded = true
-position = Vector2( 212, 99 )
+position = Vector2( 314, -12 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Anastasia" index="0"]
 
-position = Vector2( -154.486, -116.907 )
+position = Vector2( -154.486, -115.907 )
 scale = Vector2( 0.453088, 0.453088 )
 texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
@@ -518,9 +584,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -191.0
-margin_top = -85.0
+margin_top = -88.0
 margin_right = 353.0
-margin_bottom = 23.0
+margin_bottom = 20.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -528,7 +594,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Anastasia Haar"
 percent_visible = 1.0
 lines_skipped = 0
@@ -542,9 +611,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -185.0
-margin_top = -72.0
+margin_top = -74.0
 margin_right = 478.0
-margin_bottom = 36.0
+margin_bottom = 34.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -552,7 +621,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "2D Art/Animation"
 percent_visible = 1.0
 lines_skipped = 0
@@ -562,11 +634,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="Nicole" type="Node2D" parent="Credits/Credits" index="7"]
 
 editor/display_folded = true
-position = Vector2( 98, 99 )
+position = Vector2( 221, 188 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Nicole" index="0"]
 
-position = Vector2( -154.93, -115.329 )
+position = Vector2( -154.93, -114.329 )
 scale = Vector2( 0.440785, 0.440785 )
 texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
@@ -578,9 +650,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -185.0
-margin_top = -85.0
+margin_top = -88.0
 margin_right = 359.0
-margin_bottom = 23.0
+margin_bottom = 20.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -588,7 +660,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Nicole Arzer"
 percent_visible = 1.0
 lines_skipped = 0
@@ -602,9 +677,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -170.0
-margin_top = -72.0
+margin_top = -74.0
 margin_right = 493.0
-margin_bottom = 36.0
+margin_bottom = 34.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -612,7 +687,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "2D Artist"
 percent_visible = 1.0
 lines_skipped = 0
@@ -622,11 +700,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="Philip" type="Node2D" parent="Credits/Credits" index="8"]
 
 editor/display_folded = true
-position = Vector2( -12, 99 )
+position = Vector2( 133, 89 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Philip" index="0"]
 
-position = Vector2( -156.538, -118.132 )
+position = Vector2( -156.538, -120.132 )
 scale = Vector2( 0.377431, 0.377431 )
 texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
@@ -638,9 +716,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -186.0
-margin_top = -85.0
+margin_top = -88.0
 margin_right = 358.0
-margin_bottom = 23.0
+margin_bottom = 20.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -648,7 +726,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Philip Pasche"
 percent_visible = 1.0
 lines_skipped = 0
@@ -662,9 +743,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -175.0
-margin_top = -72.0
+margin_top = -74.0
 margin_right = 488.0
-margin_bottom = 36.0
+margin_bottom = 34.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -672,7 +753,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Game Design"
 percent_visible = 1.0
 lines_skipped = 0
@@ -681,11 +765,12 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Damian" type="Node2D" parent="Credits/Credits" index="9"]
 
-position = Vector2( -126, 99 )
+editor/display_folded = true
+position = Vector2( 42, 88 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/Damian" index="0"]
 
-position = Vector2( -154.507, -122.031 )
+position = Vector2( -154.507, -125.031 )
 scale = Vector2( 0.437302, 0.437302 )
 texture = ExtResource( 15 )
 _sections_unfolded = [ "Transform" ]
@@ -697,9 +782,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -185.0
-margin_top = -85.0
+margin_top = -88.0
 margin_right = 359.0
-margin_bottom = 23.0
+margin_bottom = 20.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -707,7 +792,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Damian Koch"
 percent_visible = 1.0
 lines_skipped = 0
@@ -721,9 +809,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -173.0
-margin_top = -72.0
+margin_top = -74.0
 margin_right = 490.0
-margin_bottom = 36.0
+margin_bottom = 34.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -731,7 +819,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Programmer"
 percent_visible = 1.0
 lines_skipped = 0
@@ -741,12 +832,12 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="DwightNeely" type="Node2D" parent="Credits/Credits" index="10"]
 
 editor/display_folded = true
-position = Vector2( -67, 209 )
+position = Vector2( 310.025, 82.8567 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/DwightNeely" index="0"]
 
-position = Vector2( -151.538, -122.118 )
-scale = Vector2( 0.45778, 0.45778 )
+position = Vector2( -151.538, -114.118 )
+scale = Vector2( 0.437302, 0.437302 )
 texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
@@ -757,9 +848,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -205.0
-margin_top = -81.0
+margin_top = -82.0
 margin_right = 521.0
-margin_bottom = 27.0
+margin_bottom = 26.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -767,7 +858,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Dwight Neely (Dotaku)"
 percent_visible = 1.0
 lines_skipped = 0
@@ -791,7 +885,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Voice Actor - Spider Buddy"
 percent_visible = 1.0
 lines_skipped = 0
@@ -801,12 +898,12 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="MakaylaDee" type="Node2D" parent="Credits/Credits" index="11"]
 
 editor/display_folded = true
-position = Vector2( 270, 209 )
+position = Vector2( 311.397, 181.823 )
 
 [node name="Sprite" type="Sprite" parent="Credits/Credits/MakaylaDee" index="0"]
 
-position = Vector2( -152.605, -121.185 )
-scale = Vector2( 0.384199, 0.384199 )
+position = Vector2( -152.605, -111.185 )
+scale = Vector2( 0.437302, 0.437302 )
 texture = ExtResource( 17 )
 _sections_unfolded = [ "Transform" ]
 
@@ -817,9 +914,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -183.0
-margin_top = -81.0
+margin_top = -82.0
 margin_right = 361.0
-margin_bottom = 27.0
+margin_bottom = 26.0
 rect_scale = Vector2( 0.15, 0.15 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -827,7 +924,10 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Makayla Dee"
 percent_visible = 1.0
 lines_skipped = 0
@@ -840,9 +940,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -184.0
+margin_left = -185.0
 margin_top = -68.0
-margin_right = 479.0
+margin_right = 478.0
 margin_bottom = 40.0
 rect_scale = Vector2( 0.1, 0.1 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -851,21 +951,51 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
 text = "Voice Actor - Onion"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="Fade" parent="." index="5" instance=ExtResource( 18 )]
+[node name="TeamName" type="Label" parent="Credits/Credits" index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -123.0
+margin_top = -219.0
+margin_right = 481.0
+margin_bottom = -111.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "Adventure Buddies"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Fade" parent="." index="6" instance=ExtResource( 18 )]
 
 margin_left = -373.0
 margin_top = -197.0
 margin_right = 395.0
 margin_bottom = 251.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
 
 root_node = NodePath("..")
 autoplay = "Scroll"
