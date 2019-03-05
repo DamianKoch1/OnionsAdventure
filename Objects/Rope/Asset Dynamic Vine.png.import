@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Vine_BigA.png-da0db2029badad17f9c03c7b4c5eafc9.stex"
+path="res://.import/Asset Dynamic Vine.png-68249cdf0f52b359b9ed6c56c600ba1b.stex"
 
 [deps]
 
-source_file="res://Objects/Ladder/Asset_Vine_BigA.png"
-dest_files=[ "res://.import/Asset_Vine_BigA.png-da0db2029badad17f9c03c7b4c5eafc9.stex" ]
+source_file="res://Objects/Rope/Asset Dynamic Vine.png"
+dest_files=[ "res://.import/Asset Dynamic Vine.png-68249cdf0f52b359b9ed6c56c600ba1b.stex" ]
 
 [params]
 

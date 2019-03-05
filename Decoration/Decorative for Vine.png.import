@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Leaf.png-5917d5d2dbba6885f93ce784db1bc819.stex"
+path="res://.import/Decorative for Vine.png-fffe14f19b20db935d117ee1fddc3a9e.stex"
 
 [deps]
 
-source_file="res://Menus/OptionsOverlay/Leaf.png"
-dest_files=[ "res://.import/Leaf.png-5917d5d2dbba6885f93ce784db1bc819.stex" ]
+source_file="res://Decoration/Decorative for Vine.png"
+dest_files=[ "res://.import/Decorative for Vine.png-fffe14f19b20db935d117ee1fddc3a9e.stex" ]
 
 [params]
 

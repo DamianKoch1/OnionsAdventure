@@ -22,3 +22,13 @@ func _on_LevelButton_pressed():
 
 func _on_LevelButton_mouse_entered():
 	grab_focus()
+
+
+
+
+func _on_Screenshot_pressed():
+	emit_signal("pressed")
+
+
+func _on_Screenshot_mouse_entered():
+	grab_focus()

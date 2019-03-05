@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Objects/Rope/Rope.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Rope/Asset_Vine_BigB.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Rope/Asset Dynamic Vine.png" type="Texture" id=2]
 [ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Rope/ropeSwing.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 7.26522 )
+extents = Vector2( 38.8892, 7.26522 )
 
 [node name="Rope" type="Node2D" groups=[
 "rayIgnore",
@@ -26,7 +26,7 @@ mirrorSwing = false
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 position = Vector2( -4.76837e-007, 14.9333 )
-scale = Vector2( 0.184971, 0.0339298 )
+scale = Vector2( 0.839727, 0.0438731 )
 z_index = 70
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -52,6 +52,7 @@ shape = SubResource( 1 )
 [node name="ropeSwing" parent="." index="2" instance=ExtResource( 3 )]
 
 stream = ExtResource( 4 )
+volume_db = 10.0
 max_distance = 1000.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
