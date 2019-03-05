@@ -17,7 +17,7 @@
 [ext_resource path="res://Modules/03 combination/stumpXthorn/stump m, thorn 2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Objects/Obstacles/Trees/Tree Stump Medium New.png" type="Texture" id=18]
+[ext_resource path="res://Objects/Obstacles/Trees/Tree Stump Medium New v2.png" type="Texture" id=18]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat5(cliffx3).tscn" type="PackedScene" id=19]
 [ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=21]
@@ -60,7 +60,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -18.132, -24.176, 7.85721, 8.46162, -9.04248, 204.421, 0, 0, 9.06602, 25.3848, 4.74219, 248.234, 0, 0, 0, 0, 40.9175, 277.071, -7.25281, 12.6924, 11.4836, -34.4509, 81.4121, 266.796, 0, 0, 0, 0, 80.8081, 193.059, 8.46162, 5.43961, -21.154, -22.3628, 56.0273, 151.96, 0, 0, 0, 0, -21.3359, 147.125, 0, 0, 0, 0, -53.3691, 169.488, 6.64841, -7.25281, -11.4836, 6.04401, -120.458, 194.268, 0, 0, 0, 0, -139.798, 220.257, 19.9452, -19.3408, -47.7477, 9.06602, -152.491, 277.676, 0, 0, -16.3188, -10.2748, -218.975, 262.566, 0, 0, 0, 0, -237.711, 216.027, -12.6924, 19.3408, 4.83521, -20.5496, -223.206, 150.751, 0, 0, 0, 0, -148.26, 138.663, 0, 0, 0, 0, -81.2339, 169.313 )
 }
 
-[node name="Level 3" type="Node2D"]
+[node name="Level 3" type="Node2D" index="0"]
 
 position = Vector2( 2.34106, 71.6693 )
 
@@ -240,34 +240,41 @@ position = Vector2( 245.48, -55.9552 )
 
 [node name="stump m, thorn 2" parent="." index="9" instance=ExtResource( 15 )]
 
-editor/display_folded = true
 position = Vector2( 5285.3, -545.775 )
 
 [node name="Rope" parent="stump m, thorn 2" index="3" instance=ExtResource( 16 )]
 
 position = Vector2( 244.708, -198.6 )
 
-[node name="stump m 8" type="Node2D" parent="stump m, thorn 2" index="4"]
+[node name="Collectable" parent="stump m, thorn 2" index="4" instance=ExtResource( 3 )]
 
-editor/display_folded = true
-position = Vector2( 119.148, 166.06 )
+position = Vector2( 118.104, -34.2094 )
+
+[node name="Collectable2" parent="stump m, thorn 2" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 316.975, 115.961 )
+
+[node name="stump m 9" type="Node2D" parent="stump m, thorn 2" index="6"]
+
+position = Vector2( 122.747, 166.61 )
 scale = Vector2( 0.0765978, 0.0959247 )
-z_index = -5
+z_index = 5
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="Ast 4" parent="stump m, thorn 2/stump m 8" index="0" instance=ExtResource( 17 )]
+[node name="Ast 4" parent="stump m, thorn 2/stump m 9" index="0" instance=ExtResource( 17 )]
 
 position = Vector2( 278.307, -291.202 )
 scale = Vector2( 2.99633, 1.6584 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="stump" type="Sprite" parent="stump m, thorn 2/stump m 8" index="1"]
+[node name="stump" type="Sprite" parent="stump m, thorn 2/stump m 9" index="1"]
 
 scale = Vector2( 3.283, 2.90836 )
+z_index = 50
 texture = ExtResource( 18 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="stump m, thorn 2/stump m 8/stump" index="0"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump m, thorn 2/stump m 9/stump" index="0"]
 
 position = Vector2( -289.35, -205 )
 scale = Vector2( 0.3046, 0.343836 )
@@ -279,22 +286,13 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump m, thorn 2/stump m 8/stump/StaticBody2D2" index="0"]
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump m, thorn 2/stump m 9/stump/StaticBody2D2" index="0"]
 
 position = Vector2( 915.729, 640.662 )
 shape = SubResource( 2 )
 
-[node name="Collectable" parent="stump m, thorn 2" index="5" instance=ExtResource( 3 )]
-
-position = Vector2( 118.104, -34.2094 )
-
-[node name="Collectable2" parent="stump m, thorn 2" index="6" instance=ExtResource( 3 )]
-
-position = Vector2( 316.975, 115.961 )
-
 [node name="MovingPlat5" parent="." index="10" instance=ExtResource( 19 )]
 
-editor/display_folded = true
 position = Vector2( 5987.07, -449.782 )
 
 [node name="Collectable" parent="MovingPlat5" index="4" instance=ExtResource( 3 )]
@@ -369,6 +367,7 @@ position = Vector2( -222.001, 56.0002 )
 
 [node name="platform long" parent="." index="15" instance=ExtResource( 26 )]
 
+editor/display_folded = true
 position = Vector2( 7197.57, -485.145 )
 
 [node name="Ladder" parent="platform long" index="1" instance=ExtResource( 27 )]
@@ -451,6 +450,7 @@ position = Vector2( 109.438, -36.8953 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
 
+editor/display_folded = true
 position = Vector2( 9640.23, -600.519 )
 
 [node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
@@ -497,6 +497,7 @@ position = Vector2( -252.633, -190.582 )
 
 [node name="stone 4 flip" parent="." index="19" instance=ExtResource( 34 )]
 
+editor/display_folded = true
 position = Vector2( 9257.19, -161.848 )
 
 [node name="Collectable" parent="stone 4 flip" index="2" instance=ExtResource( 3 )]

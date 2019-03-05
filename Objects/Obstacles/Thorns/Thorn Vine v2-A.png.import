@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asset_Stone_BridgeA.png-46137255d4d15b5be42c3a9afad41679.stex"
+path="res://.import/Thorn Vine v2-A.png-a8e7dcb596bda07944c753772b7f5e44.stex"
 
 [deps]
 
-source_file="res://Objects/Obstacles/Stones/Asset_Stone_BridgeA.png"
-dest_files=[ "res://.import/Asset_Stone_BridgeA.png-46137255d4d15b5be42c3a9afad41679.stex" ]
+source_file="res://Objects/Obstacles/Thorns/Thorn Vine v2-A.png"
+dest_files=[ "res://.import/Thorn Vine v2-A.png-a8e7dcb596bda07944c753772b7f5e44.stex" ]
 
 [params]
 
