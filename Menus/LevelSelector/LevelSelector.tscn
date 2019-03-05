@@ -108,7 +108,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="BackButton" parent="." index="1" instance=ExtResource( 3 )]
 
-editor/display_folded = false
 margin_left = -356.0
 margin_top = 79.0
 margin_right = -196.0
@@ -122,7 +121,7 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 [node name="Label" parent="BackButton" index="0"]
 
 margin_right = 1193.0
-text = "back"
+text = "Back"
 
 [node name="LevelButtons" type="Container" parent="." index="2"]
 
@@ -140,11 +139,10 @@ _sections_unfolded = [ "Rect", "Z Index" ]
 
 [node name="Level1Button" parent="LevelButtons" index="0" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = -130.0
-margin_top = 27.0
+margin_top = 39.0
 margin_right = 30.0
-margin_bottom = 59.0
+margin_bottom = 71.0
 focus_neighbour_left = NodePath("../../PrevButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../../NextButton")
@@ -153,7 +151,9 @@ _sections_unfolded = [ "Focus", "Rect", "Textures", "Visibility" ]
 
 [node name="Label" parent="LevelButtons/Level1Button" index="0"]
 
-text = "level 1"
+margin_left = 47.0
+margin_right = 519.0
+text = "Level 1"
 
 [node name="CanvasLayer" parent="LevelButtons/Level1Button" index="2"]
 
@@ -167,11 +167,10 @@ text = "A Journey begins..."
 
 [node name="Level2Button" parent="LevelButtons" index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = 510.0
-margin_top = 27.0
+margin_top = 39.0
 margin_right = 670.0
-margin_bottom = 59.0
+margin_bottom = 71.0
 focus_neighbour_left = NodePath("../../PrevButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../../NextButton")
@@ -180,7 +179,9 @@ levelId = 2
 
 [node name="Label" parent="LevelButtons/Level2Button" index="0"]
 
-text = "level 2"
+margin_left = 47.0
+margin_right = 519.0
+text = "Level 2"
 
 [node name="LevelName" parent="LevelButtons/Level2Button" index="3"]
 
@@ -190,11 +191,10 @@ text = "Meeting new Friends"
 
 [node name="Level3Button" parent="LevelButtons" index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = 1150.0
-margin_top = 27.0
+margin_top = 39.0
 margin_right = 1310.0
-margin_bottom = 59.0
+margin_bottom = 71.0
 focus_neighbour_left = NodePath("../../PrevButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../../NextButton")
@@ -203,7 +203,9 @@ levelId = 3
 
 [node name="Label" parent="LevelButtons/Level3Button" index="0"]
 
-text = "level 3"
+margin_left = 47.0
+margin_right = 519.0
+text = "Level 3"
 
 [node name="CanvasLayer" parent="LevelButtons/Level3Button" index="2"]
 
@@ -217,11 +219,10 @@ text = "Deeper inside the Forest"
 
 [node name="Level4Button" parent="LevelButtons" index="3" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 margin_left = 1790.0
-margin_top = 27.0
+margin_top = 39.0
 margin_right = 1950.0
-margin_bottom = 59.0
+margin_bottom = 71.0
 focus_neighbour_left = NodePath("../../PrevButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../../NextButton")
@@ -230,7 +231,9 @@ levelId = 4
 
 [node name="Label" parent="LevelButtons/Level4Button" index="0"]
 
-text = "level 4"
+margin_left = 47.0
+margin_right = 519.0
+text = "Level 4"
 
 [node name="LevelName" parent="LevelButtons/Level4Button" index="3"]
 
@@ -242,12 +245,12 @@ text = "Finding Home
 
 [node name="Level Selection Title" parent="." index="3" instance=ExtResource( 5 )]
 
-margin_left = -334.0
+margin_left = -148.0
 margin_top = -169.0
-margin_right = 239.0
+margin_right = 425.0
 margin_bottom = -43.0
 rect_scale = Vector2( 0.4, 0.4 )
-text = "level selection"
+text = "Level selection"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 
@@ -264,9 +267,9 @@ blend_times = [  ]
 [node name="NextButton" parent="." index="5" instance=ExtResource( 3 )]
 
 margin_left = 107.0
-margin_top = -69.0
+margin_top = -57.0
 margin_right = 267.0
-margin_bottom = -37.0
+margin_bottom = -25.0
 
 [node name="Label" parent="NextButton" index="0"]
 
@@ -282,9 +285,9 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="PrevButton" parent="." index="6" instance=ExtResource( 3 )]
 
 margin_left = -373.0
-margin_top = -69.0
+margin_top = -57.0
 margin_right = -213.0
-margin_bottom = -37.0
+margin_bottom = -25.0
 
 [node name="Label" parent="PrevButton" index="0"]
 
