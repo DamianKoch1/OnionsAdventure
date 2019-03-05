@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Decoration/Grass.tscn" type="PackedScene" id=5]
 
-[node name="stump m, movingten, mealy" type="Node2D" index="0"]
+[node name="stump m, movingten, mealy" type="Node2D"]
 
 [node name="stump m 7" parent="." index="0" instance=ExtResource( 1 )]
 

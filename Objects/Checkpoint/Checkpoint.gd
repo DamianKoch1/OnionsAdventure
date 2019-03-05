@@ -10,6 +10,6 @@ func _ready():
 func _on_Checkpoint_body_entered(body):
 	if body.is_in_group("Player"):
 		spawnpoint.global_position = global_position
-		spawnpoint.playActivationSound()
+		spawnpoint.activate()
 		SaveGame.saveGame()
 		queue_free()
