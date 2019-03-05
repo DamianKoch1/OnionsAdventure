@@ -74,7 +74,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container"]
+[node name="MainMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -145,6 +145,9 @@ margin_left = -192.0
 margin_top = 13.0
 margin_right = -32.0
 margin_bottom = 45.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath("../LevelSelectorButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="NewGameButton" index="0"]
 
@@ -159,6 +162,9 @@ margin_left = -186.0
 margin_top = 13.0
 margin_right = -26.0
 margin_bottom = 45.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath("../LevelSelectorButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="ContinueButton" index="0"]
 
@@ -173,6 +179,9 @@ margin_left = -175.0
 margin_top = 43.0
 margin_right = -15.0
 margin_bottom = 75.0
+focus_neighbour_top = NodePath("../ContinueButton")
+focus_neighbour_bottom = NodePath("../ExtrasButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="LevelSelectorButton" index="0"]
 
@@ -186,6 +195,9 @@ margin_left = -179.0
 margin_top = 73.0
 margin_right = -19.0
 margin_bottom = 105.0
+focus_neighbour_top = NodePath("../LevelSelectorButton")
+focus_neighbour_bottom = NodePath("../OptionsButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="ExtrasButton" index="0"]
 
@@ -199,6 +211,9 @@ margin_left = -182.0
 margin_top = 103.0
 margin_right = -22.0
 margin_bottom = 135.0
+focus_neighbour_top = NodePath("../ExtrasButton")
+focus_neighbour_bottom = NodePath("../CreditsButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="OptionsButton" index="0"]
 
@@ -212,6 +227,9 @@ margin_left = -180.0
 margin_top = 133.0
 margin_right = -20.0
 margin_bottom = 165.0
+focus_neighbour_top = NodePath("../OptionsButton")
+focus_neighbour_bottom = NodePath("../QuitButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="CreditsButton" index="0"]
 
@@ -225,7 +243,8 @@ margin_left = -168.0
 margin_top = 163.0
 margin_right = -8.0
 margin_bottom = 195.0
-focus_neighbour_bottom = NodePath("../PlayButton")
+focus_neighbour_top = NodePath("../CreditsButton")
+focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="QuitButton" index="0"]
@@ -260,6 +279,7 @@ margin_bottom = 50.0
 
 [node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 6 )]
 
+visible = false
 margin_left = 63.0
 margin_top = 50.0
 margin_right = 95.0
@@ -279,7 +299,7 @@ editor/display_folded = true
 
 [node name="BackButton" parent="OptionsOverlay" index="2"]
 
-focus_neighbour_left = NodePath("../NewGameButton")
+focus_neighbour_right = NodePath("../NewGameButton")
 
 [node name="NewGameButton" parent="OptionsOverlay" index="4" instance=ExtResource( 4 )]
 
@@ -288,8 +308,9 @@ margin_left = -155.0
 margin_top = 93.0
 margin_right = 5.0
 margin_bottom = 125.0
-focus_neighbour_top = NodePath(".")
-focus_neighbour_right = NodePath("../BackButton")
+focus_neighbour_left = NodePath("../BackButton")
+focus_neighbour_top = NodePath("../Volume/SFX/SFXSlider")
+focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 

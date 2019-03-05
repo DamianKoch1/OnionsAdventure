@@ -49,7 +49,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 360 ) ]
 }
 
-[node name="CreditScreen" type="Container" index="0"]
+[node name="CreditScreen" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -165,6 +165,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Credits" type="Node2D" parent="Credits" index="0"]
 
+editor/display_folded = true
 position = Vector2( -86, 21 )
 _sections_unfolded = [ "Transform" ]
 
@@ -932,7 +933,7 @@ text = "Makayla Dee"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 
 [node name="Label2" type="Label" parent="Credits/Credits/MakaylaDee" index="2"]
 
@@ -987,6 +988,759 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="OstSfxCredits" type="Node2D" parent="Credits" index="1"]
+
+[node name="Credit 1" type="Label" parent="Credits/OstSfxCredits" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -146.0
+margin_top = 173.0
+margin_right = 493.0
+margin_bottom = 281.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"Menu_Select_00\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -770.0
+margin_top = 97.0
+margin_right = 4787.0
+margin_bottom = 427.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by Little Robot Sound Factory (littlerobotsoundfactory.com)
+Licensed under Creative Commons: By Attribution 3.0 License http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 2" type="Label" parent="Credits/OstSfxCredits" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -169.0
+margin_top = 233.0
+margin_right = 645.0
+margin_bottom = 341.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"Fantasy Sound Library\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -288.0
+margin_top = 82.0
+margin_right = 3323.0
+margin_bottom = 412.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by Little Robot Sound Factory (littlerobotsoundfactory.com)
+Licensed under Creative Commons: By Attribution 3.0 License http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 3" type="Label" parent="Credits/OstSfxCredits" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -113.0
+margin_top = 293.0
+margin_right = 701.0
+margin_bottom = 401.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"Help Me\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -512.0
+margin_top = 82.0
+margin_right = 3099.0
+margin_bottom = 412.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by brandonreese (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 4" type="Label" parent="Credits/OstSfxCredits" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -118.0
+margin_top = 353.0
+margin_right = 696.0
+margin_bottom = 461.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"Swoosh 1\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -568.0
+margin_top = 90.0
+margin_right = 3387.0
+margin_bottom = 420.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by man
+Licensed under Creative Commons: By Sampling Plus 1.0 License https://creativecommons.org/licenses/sampling+/1.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -261.0
+margin_top = 412.0
+margin_right = 3694.0
+margin_bottom = 853.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "Boing Raw Copyright 2005 cfork <http://freesound.org/people/cfork/>
+Boing Jump Copyright 2012 Iwan Gabovitch <http://qubodup.net>
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 5" type="Label" parent="Credits/OstSfxCredits" index="5"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -107.0
+margin_top = 473.0
+margin_right = 707.0
+margin_bottom = 581.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"enchant\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 5" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -616.0
+margin_top = 90.0
+margin_right = 3339.0
+margin_bottom = 420.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by p0ss (opengameart.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 6" type="Label" parent="Credits/OstSfxCredits" index="6"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -114.0
+margin_top = 543.0
+margin_right = 700.0
+margin_bottom = 651.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"healspell2\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 6" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -588.0
+margin_top = 90.0
+margin_right = 3367.0
+margin_bottom = 420.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by DoKashiteru (opengameart.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 7" type="Label" parent="Credits/OstSfxCredits" index="7"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -149.0
+margin_top = 614.0
+margin_right = 665.0
+margin_bottom = 722.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"crackling Fireplace\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 7" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -448.0
+margin_top = 90.0
+margin_right = 3507.0
+margin_bottom = 531.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by Daniel Simon (soundbible.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 8" type="Label" parent="Credits/OstSfxCredits" index="8"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -210.0
+margin_top = 683.0
+margin_right = 962.0
+margin_bottom = 791.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"SFX_MAGIC_FIREBALL_001.wav\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 8" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -204.0
+margin_top = 90.0
+margin_right = 3751.0
+margin_bottom = 531.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by JoelAudio (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 9" type="Label" parent="Credits/OstSfxCredits" index="9"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -146.0
+margin_top = 753.0
+margin_right = 1026.0
+margin_bottom = 861.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"Teddy Bear Waltz\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 9" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -460.0
+margin_top = 90.0
+margin_right = 3495.0
+margin_bottom = 531.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by JoelAudio (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 10" type="Label" parent="Credits/OstSfxCredits" index="10"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -184.0
+margin_top = 823.0
+margin_right = 988.0
+margin_bottom = 931.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"Soft Mysterious Harp Loop\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 10" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -308.0
+margin_top = 90.0
+margin_right = 3647.0
+margin_bottom = 531.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by JoelAudio (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 11" type="Label" parent="Credits/OstSfxCredits" index="11"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -148.0
+margin_top = 893.0
+margin_right = 1024.0
+margin_bottom = 1001.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"Woodland Fantasy\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 11" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -452.0
+margin_top = 90.0
+margin_right = 3503.0
+margin_bottom = 531.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by Matthew Pablo (matthewpablo.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Credit 12" type="Label" parent="Credits/OstSfxCredits" index="12"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -171.0
+margin_top = 963.0
+margin_right = 1001.0
+margin_bottom = 1071.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "\"Going on an Adventure!\""
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Credits/OstSfxCredits/Credit 12" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -360.0
+margin_top = 90.0
+margin_right = 3595.0
+margin_bottom = 642.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "by Matthew Pablo (matthewpablo.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Credits/OstSfxCredits" index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -261.0
+margin_top = 1035.0
+margin_right = 3694.0
+margin_bottom = 1476.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.266667, 0.266667, 0.266667, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "Sound effects obtained from https://www.zapsplat.com"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="Fade" parent="." index="6" instance=ExtResource( 18 )]
 

@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 38.8892, 7.26522 )
 
-[node name="Rope" type="Node2D" index="0" groups=[
+[node name="Rope" type="Node2D" groups=[
 "rayIgnore",
 ]]
 
@@ -58,6 +58,7 @@ shape = SubResource( 1 )
 [node name="ropeSwing" parent="." index="2" instance=ExtResource( 4 )]
 
 stream = ExtResource( 5 )
+volume_db = 10.0
 max_distance = 1000.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
