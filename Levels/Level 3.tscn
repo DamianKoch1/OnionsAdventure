@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat4.tscn" type="PackedScene" id=2]
@@ -26,39 +26,52 @@
 [ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, stump m, tendril.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Modules/02 single/platform/platform long.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander 2 platform.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Modules/02 single/stones/stone 4 flip.tscn" type="PackedScene" id=34]
-[ext_resource path="res://Modules/03 combination/moving combis/stump l, movingten, stone, muddy.tscn" type="PackedScene" id=35]
-[ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=36]
-[ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=37]
-[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=38]
-[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=39]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=27]
+[ext_resource path="res://Objects/Ladder/Static Vine Top.png" type="Texture" id=28]
+[ext_resource path="res://Objects/Ladder/Static Vine Bottom.png" type="Texture" id=29]
+[ext_resource path="res://Objects/Ladder/LadderMid.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/moving salamander 2 platform.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Objects/interactable NPCs/FireSalamander/FireSalamander.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Modules/02 single/stones/stone 4 flip.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Modules/03 combination/moving combis/stump l, movingten, stone, muddy.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Modules/02 single/krakenmushroom/Krakenmushroom2 (up).tscn" type="PackedScene" id=39]
+[ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=40]
+[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=43]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=3]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 12.4875, 170.161 )
 }
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 363.126, 640.44 )
 
-[sub_resource type="Curve2D" id=3]
+[sub_resource type="Curve2D" id=5]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -81.2339, 169.313, -18.132, -24.176, 7.85721, 8.46162, -9.04248, 204.421, 0, 0, 9.06602, 25.3848, 4.74219, 248.234, 0, 0, 0, 0, 40.9175, 277.071, -7.25281, 12.6924, 11.4836, -34.4509, 81.4121, 266.796, 0, 0, 0, 0, 80.8081, 193.059, 8.46162, 5.43961, -21.154, -22.3628, 56.0273, 151.96, 0, 0, 0, 0, -21.3359, 147.125, 0, 0, 0, 0, -53.3691, 169.488, 6.64841, -7.25281, -11.4836, 6.04401, -120.458, 194.268, 0, 0, 0, 0, -139.798, 220.257, 19.9452, -19.3408, -47.7477, 9.06602, -152.491, 277.676, 0, 0, -16.3188, -10.2748, -218.975, 262.566, 0, 0, 0, 0, -237.711, 216.027, -12.6924, 19.3408, 4.83521, -20.5496, -223.206, 150.751, 0, 0, 0, 0, -148.26, 138.663, 0, 0, 0, 0, -81.2339, 169.313 )
 }
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
 
 [node name="Level 3" type="Node2D" index="0"]
 
@@ -100,6 +113,7 @@ scale = Vector2( 0.406276, 0.406276 )
 
 [node name="movingten1" parent="." index="2" instance=ExtResource( 5 )]
 
+editor/display_folded = true
 position = Vector2( 1245.21, -225.931 )
 
 [node name="Enemy" parent="movingten1" index="2" instance=ExtResource( 6 )]
@@ -110,7 +124,7 @@ position = Vector2( -94.1378, 167.889 )
 [node name="EnemyPath" parent="movingten1/Enemy" index="0"]
 
 position = Vector2( 91.9547, -170.232 )
-curve = SubResource( 1 )
+curve = SubResource( 3 )
 
 [node name="PathFollow2D" parent="movingten1/Enemy/EnemyPath" index="1"]
 
@@ -289,7 +303,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="stump m, thorn 2/stump m 9/stump/StaticBody2D2" index="0"]
 
 position = Vector2( 915.729, 640.662 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="MovingPlat5" parent="." index="10" instance=ExtResource( 19 )]
 
@@ -323,7 +337,7 @@ movespeed = 0.15
 
 [node name="EnemyPath" parent="platform/Enemy" index="0"]
 
-curve = SubResource( 3 )
+curve = SubResource( 5 )
 
 [node name="PathFollow2D" parent="platform/Enemy/EnemyPath" index="1"]
 
@@ -370,34 +384,189 @@ position = Vector2( -222.001, 56.0002 )
 editor/display_folded = true
 position = Vector2( 7197.57, -485.145 )
 
-[node name="Ladder" parent="platform long" index="1" instance=ExtResource( 27 )]
+[node name="Ladder" type="Node2D" parent="platform long" index="1"]
 
-position = Vector2( -345.173, -58.9086 )
+editor/display_folded = true
+position = Vector2( -351.911, -50.5243 )
 
-[node name="Bouncer" parent="platform long" index="2" instance=ExtResource( 28 )]
+[node name="Top" type="Area2D" parent="platform long/Ladder" index="0" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( -6.73779, -87.6157 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="platform long/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 28 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform long/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="platform long/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( -6.73779, 104.384 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="platform long/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 29 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform long/Ladder/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="platform long/Ladder" index="2" instance=ExtResource( 30 )]
+
+position = Vector2( -6.73779, -23.6157 )
+
+[node name="Mid2" parent="platform long/Ladder" index="3" instance=ExtResource( 30 )]
+
+position = Vector2( -6.73779, 40.3843 )
+
+[node name="Ladder2" type="Node2D" parent="platform long" index="2"]
+
+position = Vector2( 384.089, -2.52429 )
+
+[node name="Top" type="Area2D" parent="platform long/Ladder2" index="0" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( -16, -96 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="platform long/Ladder2/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 28 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform long/Ladder2/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="platform long/Ladder2" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( -16, 160 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="platform long/Ladder2/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 29 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform long/Ladder2/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="platform long/Ladder2" index="2" instance=ExtResource( 30 )]
+
+position = Vector2( -16, -32 )
+
+[node name="Mid2" parent="platform long/Ladder2" index="3" instance=ExtResource( 30 )]
+
+position = Vector2( -16, 32 )
+
+[node name="Mid3" parent="platform long/Ladder2" index="4" instance=ExtResource( 30 )]
+
+position = Vector2( -16, 96 )
+
+[node name="Bouncer" parent="platform long" index="3" instance=ExtResource( 31 )]
 
 position = Vector2( -156.554, -35.078 )
 
-[node name="Bouncer2" parent="platform long" index="3" instance=ExtResource( 28 )]
+[node name="Bouncer2" parent="platform long" index="4" instance=ExtResource( 31 )]
 
 position = Vector2( 150.361, -34.085 )
 
-[node name="Worm" parent="platform long" index="4" instance=ExtResource( 7 )]
+[node name="Worm" parent="platform long" index="5" instance=ExtResource( 7 )]
 
 position = Vector2( -56.4282, -37.2421 )
 
-[node name="Worm2" parent="platform long" index="5" instance=ExtResource( 7 )]
+[node name="Worm2" parent="platform long" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 0.733972, -37.2521 )
 diggedOut = true
 
-[node name="Worm3" parent="platform long" index="6" instance=ExtResource( 7 )]
+[node name="Worm3" parent="platform long" index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 57.0746, -37.2812 )
-
-[node name="Ladder2" parent="platform long" index="7" instance=ExtResource( 27 )]
-
-position = Vector2( 370.734, 35.8189 )
 
 [node name="Collectable" parent="platform long" index="8" instance=ExtResource( 3 )]
 
@@ -415,8 +584,9 @@ position = Vector2( 147.083, -149.505 )
 
 position = Vector2( -151.259, -153.804 )
 
-[node name="stump m, movingten, mealy" parent="." index="16" instance=ExtResource( 29 )]
+[node name="stump m, movingten, mealy" parent="." index="16" instance=ExtResource( 32 )]
 
+editor/display_folded = true
 position = Vector2( 8698.81, -289.793 )
 
 [node name="Checkpoint" parent="stump m, movingten, mealy" index="6" instance=ExtResource( 10 )]
@@ -431,7 +601,7 @@ position = Vector2( -29.7832, -50.5401 )
 
 position = Vector2( 248.96, -115.574 )
 
-[node name="platform short" parent="." index="17" instance=ExtResource( 30 )]
+[node name="platform short" parent="." index="17" instance=ExtResource( 33 )]
 
 editor/display_folded = true
 position = Vector2( 2826.2, -726.486 )
@@ -448,29 +618,108 @@ position = Vector2( -155.84, -5.88074 )
 
 position = Vector2( 109.438, -36.8953 )
 
-[node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 31 )]
+[node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 34 )]
 
-editor/display_folded = true
 position = Vector2( 9640.23, -600.519 )
 
-[node name="Ladder" parent="moving salamander 2 platform" index="3" instance=ExtResource( 27 )]
+[node name="Ladder" type="Node2D" parent="moving salamander 2 platform" index="3"]
 
+editor/display_folded = true
 position = Vector2( -585.001, 167 )
+
+[node name="Top" type="Area2D" parent="moving salamander 2 platform/Ladder" index="0" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( -17.5703, -118.15 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="moving salamander 2 platform/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 28 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving salamander 2 platform/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="moving salamander 2 platform/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( -17.5703, 137.85 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="moving salamander 2 platform/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 29 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving salamander 2 platform/Ladder/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="moving salamander 2 platform/Ladder" index="2" instance=ExtResource( 30 )]
+
+position = Vector2( -17.5703, 73.8497 )
+
+[node name="Mid2" parent="moving salamander 2 platform/Ladder" index="3" instance=ExtResource( 30 )]
+
+position = Vector2( -17.5703, 9.84967 )
+
+[node name="Mid3" parent="moving salamander 2 platform/Ladder" index="4" instance=ExtResource( 30 )]
+
+position = Vector2( -17.5703, -54.1503 )
 
 [node name="trappedNPC" parent="moving salamander 2 platform" index="4" instance=ExtResource( 21 )]
 
 position = Vector2( 320.039, -117.021 )
 
-[node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 30 )]
+[node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 33 )]
 
 position = Vector2( 612.643, -54.0206 )
 
-[node name="FireSalamander" parent="moving salamander 2 platform/platform short" index="1" instance=ExtResource( 32 )]
+[node name="FireSalamander" parent="moving salamander 2 platform/platform short" index="1" instance=ExtResource( 35 )]
 
 position = Vector2( 15.041, -9.39984 )
 objToDestroyPath = NodePath("../../platform short2/ThornsUp")
 
-[node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 30 )]
+[node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 33 )]
 
 position = Vector2( 828.726, -22.0994 )
 
@@ -478,24 +727,111 @@ position = Vector2( 828.726, -22.0994 )
 
 position = Vector2( 50.3945, -47.2071 )
 
-[node name="ThornsUp" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 33 )]
+[node name="ThornsUp" parent="moving salamander 2 platform/platform short2" index="2" instance=ExtResource( 36 )]
 
 position = Vector2( -30.8359, -51.2787 )
 scale = Vector2( 0.806852, 0.806852 )
 
-[node name="Ladder2" parent="moving salamander 2 platform" index="7" instance=ExtResource( 27 )]
+[node name="Ladder2" type="Node2D" parent="moving salamander 2 platform" index="7"]
 
 position = Vector2( 1064.17, -13.2639 )
 
-[node name="Ladder4" parent="moving salamander 2 platform" index="8" instance=ExtResource( 27 )]
+[node name="Top" type="Area2D" parent="moving salamander 2 platform/Ladder2" index="0" groups=[
+"rayIgnore",
+]]
 
-position = Vector2( 1070.82, 253.736 )
+position = Vector2( 29.2588, -81.8864 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Collectable" parent="moving salamander 2 platform" index="9" instance=ExtResource( 3 )]
+[node name="icon" type="Sprite" parent="moving salamander 2 platform/Ladder2/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 28 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving salamander 2 platform/Ladder2/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="moving salamander 2 platform/Ladder2" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 29.2588, 366.114 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="moving salamander 2 platform/Ladder2/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 29 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving salamander 2 platform/Ladder2/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="moving salamander 2 platform/Ladder2" index="2" instance=ExtResource( 30 )]
+
+position = Vector2( 29.2588, 302.114 )
+
+[node name="Mid2" parent="moving salamander 2 platform/Ladder2" index="3" instance=ExtResource( 30 )]
+
+position = Vector2( 29.2588, 238.114 )
+
+[node name="Mid3" parent="moving salamander 2 platform/Ladder2" index="4" instance=ExtResource( 30 )]
+
+position = Vector2( 29.2588, 174.114 )
+
+[node name="Mid4" parent="moving salamander 2 platform/Ladder2" index="5" instance=ExtResource( 30 )]
+
+position = Vector2( 29.2588, 110.114 )
+
+[node name="Mid5" parent="moving salamander 2 platform/Ladder2" index="6" instance=ExtResource( 30 )]
+
+position = Vector2( 29.2588, 46.1136 )
+
+[node name="Mid6" parent="moving salamander 2 platform/Ladder2" index="7" instance=ExtResource( 30 )]
+
+position = Vector2( 29.2588, -17.8864 )
+
+[node name="Collectable" parent="moving salamander 2 platform" index="8" instance=ExtResource( 3 )]
 
 position = Vector2( -252.633, -190.582 )
 
-[node name="stone 4 flip" parent="." index="19" instance=ExtResource( 34 )]
+[node name="stone 4 flip" parent="." index="19" instance=ExtResource( 37 )]
 
 editor/display_folded = true
 position = Vector2( 9257.19, -161.848 )
@@ -520,7 +856,7 @@ position = Vector2( 653.159, 111.725 )
 
 position = Vector2( 1065.01, 38.0822 )
 
-[node name="stump l, movingten, stone, muddy" parent="." index="20" instance=ExtResource( 35 )]
+[node name="stump l, movingten, stone, muddy" parent="." index="20" instance=ExtResource( 38 )]
 
 position = Vector2( 9954.57, -34.4132 )
 
@@ -532,11 +868,11 @@ position = Vector2( 9191.14, -97.9298 )
 
 position = Vector2( 9477.87, -33.6934 )
 
-[node name="Krakenmushroom2 (up)" parent="." index="23" instance=ExtResource( 36 )]
+[node name="Krakenmushroom2 (up)" parent="." index="23" instance=ExtResource( 39 )]
 
 position = Vector2( 10464.3, -34.4045 )
 
-[node name="End3(down)" parent="." index="24" instance=ExtResource( 37 )]
+[node name="End3(down)" parent="." index="24" instance=ExtResource( 40 )]
 
 editor/display_folded = true
 position = Vector2( 11160.7, -162.524 )
@@ -553,15 +889,47 @@ position = Vector2( -205.375, -65.2354 )
 
 position = Vector2( -52.7568, 19.5955 )
 
-[node name="StoneBigA" parent="End3(down)" index="5" instance=ExtResource( 38 )]
+[node name="StoneBigA" parent="End3(down)" index="5" instance=ExtResource( 41 )]
 
 position = Vector2( -336.141, 36.6067 )
 
-[node name="stump m 7" parent="End3(down)" index="6" instance=ExtResource( 39 )]
+[node name="stump m 7" parent="End3(down)" index="6" instance=ExtResource( 42 )]
 
 position = Vector2( -436.141, 76.6067 )
 
-[node name="Background" parent="." index="25" instance=ExtResource( 40 )]
+[node name="Background" parent="." index="25" instance=ExtResource( 43 )]
+
+[connection signal="body_entered" from="platform long/Ladder/Top" to="platform long/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="platform long/Ladder/Top" to="platform long/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="platform long/Ladder/Bot" to="platform long/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="platform long/Ladder/Bot" to="platform long/Ladder/Bot" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="platform long/Ladder2/Top" to="platform long/Ladder2/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="platform long/Ladder2/Top" to="platform long/Ladder2/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="platform long/Ladder2/Bot" to="platform long/Ladder2/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="platform long/Ladder2/Bot" to="platform long/Ladder2/Bot" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="moving salamander 2 platform/Ladder/Top" to="moving salamander 2 platform/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="moving salamander 2 platform/Ladder/Top" to="moving salamander 2 platform/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="moving salamander 2 platform/Ladder/Bot" to="moving salamander 2 platform/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="moving salamander 2 platform/Ladder/Bot" to="moving salamander 2 platform/Ladder/Bot" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="moving salamander 2 platform/Ladder2/Top" to="moving salamander 2 platform/Ladder2/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="moving salamander 2 platform/Ladder2/Top" to="moving salamander 2 platform/Ladder2/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="moving salamander 2 platform/Ladder2/Bot" to="moving salamander 2 platform/Ladder2/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="moving salamander 2 platform/Ladder2/Bot" to="moving salamander 2 platform/Ladder2/Bot" method="_on_Ladder_body_exited"]
 
 
 [editable path="movingten1/Enemy"]
