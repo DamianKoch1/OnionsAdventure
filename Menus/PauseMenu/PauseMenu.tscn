@@ -55,9 +55,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -29.0
+margin_left = -42.0
 margin_top = -124.0
-margin_right = 1192.0
+margin_right = 1179.0
 margin_bottom = 149.0
 rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -79,9 +79,9 @@ _sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants"
 
 [node name="ResumeButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -93.0
+margin_left = -109.0
 margin_top = -60.0
-margin_right = 67.0
+margin_right = 51.0
 margin_bottom = -28.0
 
 [node name="Label" parent="ResumeButton" index="0"]
@@ -93,9 +93,9 @@ text = "resume"
 
 [node name="RestartButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -93.0
+margin_left = -107.0
 margin_top = -18.0
-margin_right = 67.0
+margin_right = 53.0
 margin_bottom = 14.0
 
 [node name="Label" parent="RestartButton" index="0"]
@@ -108,9 +108,9 @@ text = "restart level"
 
 [node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = -93.0
+margin_left = -107.0
 margin_top = 24.0
-margin_right = 67.0
+margin_right = 53.0
 margin_bottom = 56.0
 
 [node name="Label" parent="OptionsButton" index="0"]
@@ -122,9 +122,9 @@ text = "options"
 
 [node name="MainMenuButton" parent="." index="5" instance=ExtResource( 4 )]
 
-margin_left = -93.0
+margin_left = -104.0
 margin_top = 66.0
-margin_right = 67.0
+margin_right = 56.0
 margin_bottom = 98.0
 
 [node name="Label" parent="MainMenuButton" index="0"]
@@ -139,12 +139,29 @@ text = "main menu"
 
 editor/display_folded = true
 visible = false
+margin_left = 7.0
+margin_right = 53.0
+
+[node name="Background" parent="YesNoOverlayMainMenu" index="0"]
+
+margin_left = -98.0
+margin_right = 94.0
 
 [node name="Label" parent="YesNoOverlayMainMenu" index="1"]
 
-margin_left = -64.0
-margin_right = 405.0
+margin_left = -70.0
+margin_right = 399.0
 text = "to main menu?"
+
+[node name="YesButton" parent="YesNoOverlayMainMenu" index="2"]
+
+margin_left = -86.0
+margin_right = 74.0
+
+[node name="NoButton" parent="YesNoOverlayMainMenu" index="3"]
+
+margin_left = -83.0
+margin_right = 77.0
 
 [node name="YesNoOverlayRestart" parent="." index="7" instance=ExtResource( 5 )]
 
@@ -159,6 +176,7 @@ text = "restart?"
 
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 visible = false
 margin_left = 56.0
 margin_top = 41.0
