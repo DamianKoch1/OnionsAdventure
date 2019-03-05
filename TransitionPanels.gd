@@ -8,6 +8,7 @@ func _ready():
 			$two.show()
 		3:
 			$three.show()
+	$BGMPlayer.fadeIn(2)
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
