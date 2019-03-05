@@ -11,8 +11,9 @@ func respawn(player):
 	player.global_transform = global_transform
 	$OnionRespawnVFX.emitting = true
 
-func playActivationSound():
+func activate():
 	$activate.playing = true
+	$AnimationPlayer.play("activate")
 
 #setup respawning for not yet known players and give them a dict entry to prevent signal reconecting multiple times
 func _on_Area2D_body_entered(body):
