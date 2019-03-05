@@ -37,6 +37,7 @@ func _process(delta):
 				cancel()
 				focusButton.grab_focus()
 		else:
+			$OptionsOverlay.hide()
 			focusButton.grab_focus()
 
 
