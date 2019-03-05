@@ -8,7 +8,7 @@
 
 [node name="Goal" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 320, 80 )
+position = Vector2( 440, 80 )
 
 [node name="new tiles" type="Node2D" parent="." index="1"]
 
