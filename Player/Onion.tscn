@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/SFX/Onion_hurt.ogg" type="AudioStream" id=2]
@@ -29,7 +29,110 @@
 custom_solver_bias = 0.0
 extents = Vector2( 14.0286, 21.1175 )
 
-[node name="Onion" type="KinematicBody2D" groups=[
+[sub_resource type="Animation" id=2]
+
+resource_name = "Onion_Joyful"
+length = 1.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionEarL:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 16.2041, 25.9579, -32.7879, -8.48774, -32.7879, -8.48774, -32.7879 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionEarR:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -32.8107, -18.2684, -66.0514, -36.5859, -66.0514, -36.5859, -66.0514 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3.68967, -4.13689 ), Vector2( 3.68967, -4.13689 ), Vector2( 3.68967, -29.7327 ), Vector2( 3.68967, -4.13689 ), Vector2( 3.68967, -29.7327 ), Vector2( 3.68967, -4.13689 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.450089 ), Vector2( 0.5, 0.511688 ), Vector2( 0.5, 0.271517 ), Vector2( 0.5, 0.517732 ), Vector2( 0.5, 0.271517 ), Vector2( 0.5, 0.517732 ), Vector2( 0.5, 0.271517 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionTail:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -8.03568, 7.48597, -34.4282, -9.09502, -34.4282, -9.09502, -34.4282 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_eyes:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 15.3836, -54.0169 ), Vector2( 15.3836, -47.5722 ), Vector2( 15.3836, -54.0169 ), Vector2( 15.3836, -47.5722 ), Vector2( 15.3836, -54.0169 ), Vector2( 15.3836, -47.5722 ), Vector2( 15.3836, -54.0169 ), Vector2( 15.3836, -47.5722 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/onion_eyes:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.164268 ), Vector2( 1, 1 ), Vector2( 1, 0.164268 ), Vector2( 1, 1 ), Vector2( 1, 0.164268 ), Vector2( 1, 1 ), Vector2( 1, 0.164268 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Onion/Colisionposition/Höhenposition/OnionBody/OnionHair:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 41.3665, 100.606, 44.3436, 100.606, 44.3436, 100.606 ]
+}
+
+[node name="Onion" type="KinematicBody2D" index="0" groups=[
 "Player",
 ]]
 
@@ -106,7 +209,6 @@ pitchRange = 0.3
 
 [node name="Onion" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Colisionposition" type="Node2D" parent="Onion" index="0"]
@@ -118,8 +220,8 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="OnionBody" type="Sprite" parent="Onion/Colisionposition/Höhenposition" index="0"]
 
-position = Vector2( 3.68967, -4.13689 )
-scale = Vector2( 0.5, 0.430171 )
+position = Vector2( 3.68967, -23.4437 )
+scale = Vector2( 0.5, 0.432611 )
 z_index = 1
 texture = ExtResource( 7 )
 offset = Vector2( -6.37161, -58.5187 )
@@ -128,7 +230,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="OnionHair" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
 position = Vector2( 0.759048, -92.0257 )
-rotation = 0.940027
+rotation = 0.936925
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 8 )
 offset = Vector2( -1.19385, -22.9981 )
@@ -136,15 +238,14 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="onion_eyes" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="1"]
 
-position = Vector2( 19.3836, -54.0169 )
-scale = Vector2( 1, 0.97423 )
+position = Vector2( 15.3836, -52.4334 )
 texture = ExtResource( 9 )
 offset = Vector2( -12.1219, -0.543782 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
 
 [node name="onion_mouth" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="2"]
 
-position = Vector2( 25.8524, -7.23115 )
+position = Vector2( 17.8524, -7.23115 )
 texture = ExtResource( 10 )
 offset = Vector2( -15.5477, -24.2438 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
@@ -152,7 +253,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 [node name="OnionEarL" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
 position = Vector2( -6.44182, -95.2643 )
-rotation = 0.135158
+rotation = 0.137259
 scale = Vector2( 1.00907, 1.10266 )
 z_index = -2
 texture = ExtResource( 11 )
@@ -162,7 +263,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 [node name="OnionTail" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
 position = Vector2( -36.8987, -12.9473 )
-rotation = -0.342931
+rotation = -0.32883
 scale = Vector2( 1.00228, 1.10883 )
 z_index = -2
 texture = ExtResource( 12 )
@@ -172,7 +273,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="OnionEarR" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
 position = Vector2( -15.4798, -94.3764 )
-rotation = -0.653846
+rotation = -0.652691
 scale = Vector2( 1.03379, 1.07951 )
 z_index = -2
 texture = ExtResource( 13 )
@@ -187,7 +288,7 @@ base_path = NodePath("../..")
 active = true
 data = {
 "active": true,
-"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1 ],
+"connections": [ "jumpup", "scale", 0, "fallOneshot", "out", 0, "idle", "idle/walk", 0, "walk", "idle/walk", 1, "jumpOneshot", "fallOneshot", 0, "jumpdown", "fallOneshot", 1, "idle/walk", "jumpOneshot", 0, "scale", "jumpOneshot", 1 ],
 "master": NodePath("../AnimationPlayer"),
 "nodes": [ {
 "id": "scale",
@@ -205,16 +306,11 @@ data = {
 "position": Vector2( 688, 102 ),
 "type": "output"
 }, {
-"autorestart": false,
-"autorestart_delay": 0.0,
-"autorestart_random_delay": 0.0,
-"fade_in": 0.1,
-"fade_out": 0.0,
 "filter": [  ],
-"id": "jumpOneshot",
-"mix": false,
-"position": Vector2( 362, 94 ),
-"type": "oneshot"
+"from": "Onion_JumpDown",
+"id": "jumpdown",
+"position": Vector2( 408, 268 ),
+"type": "animation"
 }, {
 "id": "idle/walk",
 "position": Vector2( 207, 91 ),
@@ -227,21 +323,9 @@ data = {
 "xfade": 0.3
 }, {
 "filter": [  ],
-"from": "Onion_JumpDown",
-"id": "jumpdown",
-"position": Vector2( 408, 268 ),
-"type": "animation"
-}, {
-"filter": [  ],
 "from": "Onion_JumpUp",
 "id": "jumpup",
 "position": Vector2( 77, 356 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Onion_Walk",
-"id": "walk",
-"position": Vector2( 24, 158 ),
 "type": "animation"
 }, {
 "autorestart": false,
@@ -253,6 +337,23 @@ data = {
 "id": "fallOneshot",
 "mix": false,
 "position": Vector2( 541, 92 ),
+"type": "oneshot"
+}, {
+"filter": [  ],
+"from": "Onion_Walk",
+"id": "walk",
+"position": Vector2( 24, 158 ),
+"type": "animation"
+}, {
+"autorestart": false,
+"autorestart_delay": 0.0,
+"autorestart_random_delay": 0.0,
+"fade_in": 0.1,
+"fade_out": 0.0,
+"filter": [  ],
+"id": "jumpOneshot",
+"mix": false,
+"position": Vector2( 362, 94 ),
 "type": "oneshot"
 } ]
 }
@@ -266,6 +367,7 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Onion_Idle = ExtResource( 14 )
+anims/Onion_Joyful = SubResource( 2 )
 anims/Onion_JumpDown = ExtResource( 15 )
 anims/Onion_JumpUp = ExtResource( 16 )
 anims/Onion_Walk = ExtResource( 17 )
