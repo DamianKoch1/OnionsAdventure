@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=2]
@@ -44,9 +44,10 @@
 [ext_resource path="res://Modules/03 combination/other interactable NPCs/stone, krake down.tscn" type="PackedScene" id=42]
 [ext_resource path="res://Modules/01 basic/end up.tscn" type="PackedScene" id=43]
 [ext_resource path="res://Modules/03 combination/enemy combis/krake, bitchy, plat.tscn" type="PackedScene" id=44]
-[ext_resource path="res://Decoration/Bush.tscn" type="PackedScene" id=45]
-[ext_resource path="res://Decoration/Stone.tscn" type="PackedScene" id=46]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Decoration/LevelStartEndLong.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Decoration/Bush.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Decoration/Stone.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=48]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -65,7 +66,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 20.7729, 169.765 )
 }
 
-[node name="Level 4" type="Node2D" index="0"]
+[node name="Level 4" type="Node2D"]
 
 [node name="short start" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -928,304 +929,312 @@ position = Vector2( 12467.7, 958.997 )
 
 position = Vector2( 12144.6, 1183.56 )
 
-[node name="Background Deko" type="Node2D" parent="." index="29"]
+[node name="LevelStartEndLong" parent="." index="29" instance=ExtResource( 45 )]
 
-[node name="Bush" parent="Background Deko" index="0" instance=ExtResource( 45 )]
+position = Vector2( 13222.9, 895.69 )
+flip_h = true
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Background Deko" type="Node2D" parent="." index="30"]
+
+editor/display_folded = true
+
+[node name="Bush" parent="Background Deko" index="0" instance=ExtResource( 46 )]
 
 position = Vector2( 350.483, 413.351 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush2" parent="Background Deko" index="1" instance=ExtResource( 45 )]
+[node name="Bush2" parent="Background Deko" index="1" instance=ExtResource( 46 )]
 
 position = Vector2( -236.769, 416.675 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush3" parent="Background Deko" index="2" instance=ExtResource( 45 )]
+[node name="Bush3" parent="Background Deko" index="2" instance=ExtResource( 46 )]
 
 position = Vector2( -78.3216, 417.783 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush4" parent="Background Deko" index="3" instance=ExtResource( 45 )]
+[node name="Bush4" parent="Background Deko" index="3" instance=ExtResource( 46 )]
 
 position = Vector2( -155.883, 421.107 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush5" parent="Background Deko" index="4" instance=ExtResource( 45 )]
+[node name="Bush5" parent="Background Deko" index="4" instance=ExtResource( 46 )]
 
 position = Vector2( 1328.87, 414.459 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush6" parent="Background Deko" index="5" instance=ExtResource( 45 )]
+[node name="Bush6" parent="Background Deko" index="5" instance=ExtResource( 46 )]
 
 position = Vector2( 1778.72, 484.264 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush7" parent="Background Deko" index="6" instance=ExtResource( 45 )]
+[node name="Bush7" parent="Background Deko" index="6" instance=ExtResource( 46 )]
 
 position = Vector2( 2871.23, 587.31 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush8" parent="Background Deko" index="7" instance=ExtResource( 45 )]
+[node name="Bush8" parent="Background Deko" index="7" instance=ExtResource( 46 )]
 
 position = Vector2( 2772.62, 899.773 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush9" parent="Background Deko" index="8" instance=ExtResource( 45 )]
+[node name="Bush9" parent="Background Deko" index="8" instance=ExtResource( 46 )]
 
 position = Vector2( 3262.36, 812.239 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush10" parent="Background Deko" index="9" instance=ExtResource( 45 )]
+[node name="Bush10" parent="Background Deko" index="9" instance=ExtResource( 46 )]
 
 position = Vector2( 3450.73, 1026.09 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush11" parent="Background Deko" index="10" instance=ExtResource( 45 )]
+[node name="Bush11" parent="Background Deko" index="10" instance=ExtResource( 46 )]
 
 position = Vector2( 4224.13, 1022.76 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush12" parent="Background Deko" index="11" instance=ExtResource( 45 )]
+[node name="Bush12" parent="Background Deko" index="11" instance=ExtResource( 46 )]
 
 position = Vector2( 5970.37, 1151.29 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush13" parent="Background Deko" index="12" instance=ExtResource( 45 )]
+[node name="Bush13" parent="Background Deko" index="12" instance=ExtResource( 46 )]
 
 position = Vector2( 6313.86, 1156.83 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush14" parent="Background Deko" index="13" instance=ExtResource( 45 )]
+[node name="Bush14" parent="Background Deko" index="13" instance=ExtResource( 46 )]
 
 position = Vector2( 6415.79, 1153.51 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush15" parent="Background Deko" index="14" instance=ExtResource( 45 )]
+[node name="Bush15" parent="Background Deko" index="14" instance=ExtResource( 46 )]
 
 position = Vector2( 6864.54, 1150.19 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush16" parent="Background Deko" index="15" instance=ExtResource( 45 )]
+[node name="Bush16" parent="Background Deko" index="15" instance=ExtResource( 46 )]
 
 position = Vector2( 7466.2, 1153.51 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush17" parent="Background Deko" index="16" instance=ExtResource( 45 )]
+[node name="Bush17" parent="Background Deko" index="16" instance=ExtResource( 46 )]
 
 position = Vector2( 8719.37, 1441.6 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush18" parent="Background Deko" index="17" instance=ExtResource( 45 )]
+[node name="Bush18" parent="Background Deko" index="17" instance=ExtResource( 46 )]
 
 position = Vector2( 8617.43, 1432.73 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush19" parent="Background Deko" index="18" instance=ExtResource( 45 )]
+[node name="Bush19" parent="Background Deko" index="18" instance=ExtResource( 46 )]
 
 position = Vector2( 8944.3, 1349.63 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush20" parent="Background Deko" index="19" instance=ExtResource( 45 )]
+[node name="Bush20" parent="Background Deko" index="19" instance=ExtResource( 46 )]
 
 position = Vector2( 9222.41, 961.821 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush21" parent="Background Deko" index="20" instance=ExtResource( 45 )]
+[node name="Bush21" parent="Background Deko" index="20" instance=ExtResource( 46 )]
 
 position = Vector2( 8834.61, 818.887 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush22" parent="Background Deko" index="21" instance=ExtResource( 45 )]
+[node name="Bush22" parent="Background Deko" index="21" instance=ExtResource( 46 )]
 
 position = Vector2( 9785.29, 1165.7 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush23" parent="Background Deko" index="22" instance=ExtResource( 45 )]
+[node name="Bush23" parent="Background Deko" index="22" instance=ExtResource( 46 )]
 
 position = Vector2( 10119.9, 1160.16 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush24" parent="Background Deko" index="23" instance=ExtResource( 45 )]
+[node name="Bush24" parent="Background Deko" index="23" instance=ExtResource( 46 )]
 
 position = Vector2( 10542.1, 1157.94 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush25" parent="Background Deko" index="24" instance=ExtResource( 45 )]
+[node name="Bush25" parent="Background Deko" index="24" instance=ExtResource( 46 )]
 
 position = Vector2( 11762, 1272.07 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush26" parent="Background Deko" index="25" instance=ExtResource( 45 )]
+[node name="Bush26" parent="Background Deko" index="25" instance=ExtResource( 46 )]
 
 position = Vector2( 11814.1, 1273.18 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush27" parent="Background Deko" index="26" instance=ExtResource( 45 )]
+[node name="Bush27" parent="Background Deko" index="26" instance=ExtResource( 46 )]
 
 position = Vector2( 12487.8, 1273.18 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush28" parent="Background Deko" index="27" instance=ExtResource( 45 )]
+[node name="Bush28" parent="Background Deko" index="27" instance=ExtResource( 46 )]
 
 position = Vector2( 12276.1, 1287.58 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush29" parent="Background Deko" index="28" instance=ExtResource( 45 )]
+[node name="Bush29" parent="Background Deko" index="28" instance=ExtResource( 46 )]
 
 position = Vector2( 12631.8, 1065.98 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush30" parent="Background Deko" index="29" instance=ExtResource( 45 )]
+[node name="Bush30" parent="Background Deko" index="29" instance=ExtResource( 46 )]
 
 position = Vector2( 13127.1, 1060.44 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush31" parent="Background Deko" index="30" instance=ExtResource( 45 )]
+[node name="Bush31" parent="Background Deko" index="30" instance=ExtResource( 46 )]
 
 position = Vector2( 13225.7, 1056 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Bush32" parent="Background Deko" index="31" instance=ExtResource( 45 )]
+[node name="Bush32" parent="Background Deko" index="31" instance=ExtResource( 46 )]
 
 position = Vector2( 11964.7, 823.85 )
 scale = Vector2( 0.406612, 0.406612 )
 
-[node name="Stone" parent="Background Deko" index="32" instance=ExtResource( 46 )]
+[node name="Stone" parent="Background Deko" index="32" instance=ExtResource( 47 )]
 
 position = Vector2( 402.35, 434.913 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone2" parent="Background Deko" index="33" instance=ExtResource( 46 )]
+[node name="Stone2" parent="Background Deko" index="33" instance=ExtResource( 47 )]
 
 position = Vector2( -16.7617, 435.512 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone3" parent="Background Deko" index="34" instance=ExtResource( 46 )]
+[node name="Stone3" parent="Background Deko" index="34" instance=ExtResource( 47 )]
 
 position = Vector2( -105.374, 433.117 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone4" parent="Background Deko" index="35" instance=ExtResource( 46 )]
+[node name="Stone4" parent="Background Deko" index="35" instance=ExtResource( 47 )]
 
 position = Vector2( 590.95, 428.926 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone5" parent="Background Deko" index="36" instance=ExtResource( 46 )]
+[node name="Stone5" parent="Background Deko" index="36" instance=ExtResource( 47 )]
 
 position = Vector2( 1354.93, 432.519 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone6" parent="Background Deko" index="37" instance=ExtResource( 46 )]
+[node name="Stone6" parent="Background Deko" index="37" instance=ExtResource( 47 )]
 
 position = Vector2( 1680.64, 495.984 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone7" parent="Background Deko" index="38" instance=ExtResource( 46 )]
+[node name="Stone7" parent="Background Deko" index="38" instance=ExtResource( 47 )]
 
 position = Vector2( 3194.83, 1010.29 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone8" parent="Background Deko" index="39" instance=ExtResource( 46 )]
+[node name="Stone8" parent="Background Deko" index="39" instance=ExtResource( 47 )]
 
 position = Vector2( 3082.87, 1010.29 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone9" parent="Background Deko" index="40" instance=ExtResource( 46 )]
+[node name="Stone9" parent="Background Deko" index="40" instance=ExtResource( 47 )]
 
 position = Vector2( 2837.99, 915.695 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone10" parent="Background Deko" index="41" instance=ExtResource( 46 )]
+[node name="Stone10" parent="Background Deko" index="41" instance=ExtResource( 47 )]
 
 position = Vector2( 3576.22, 1039.63 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone11" parent="Background Deko" index="42" instance=ExtResource( 46 )]
+[node name="Stone11" parent="Background Deko" index="42" instance=ExtResource( 47 )]
 
 position = Vector2( 4252.79, 1041.43 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone12" parent="Background Deko" index="43" instance=ExtResource( 46 )]
+[node name="Stone12" parent="Background Deko" index="43" instance=ExtResource( 47 )]
 
 position = Vector2( 4353.97, 1040.23 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone13" parent="Background Deko" index="44" instance=ExtResource( 46 )]
+[node name="Stone13" parent="Background Deko" index="44" instance=ExtResource( 47 )]
 
 position = Vector2( 4556.94, 882.764 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone14" parent="Background Deko" index="45" instance=ExtResource( 46 )]
+[node name="Stone14" parent="Background Deko" index="45" instance=ExtResource( 47 )]
 
 position = Vector2( 6029.82, 1167.16 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone15" parent="Background Deko" index="46" instance=ExtResource( 46 )]
+[node name="Stone15" parent="Background Deko" index="46" instance=ExtResource( 47 )]
 
 position = Vector2( 6314.22, 1168.96 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone16" parent="Background Deko" index="47" instance=ExtResource( 46 )]
+[node name="Stone16" parent="Background Deko" index="47" instance=ExtResource( 47 )]
 
 position = Vector2( 6836.31, 1166.56 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone17" parent="Background Deko" index="48" instance=ExtResource( 46 )]
+[node name="Stone17" parent="Background Deko" index="48" instance=ExtResource( 47 )]
 
 position = Vector2( 7520.06, 1167.16 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone18" parent="Background Deko" index="49" instance=ExtResource( 46 )]
+[node name="Stone18" parent="Background Deko" index="49" instance=ExtResource( 47 )]
 
 position = Vector2( 8665.72, 1453.01 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone19" parent="Background Deko" index="50" instance=ExtResource( 46 )]
+[node name="Stone19" parent="Background Deko" index="50" instance=ExtResource( 47 )]
 
 position = Vector2( 8890.65, 1358.83 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone20" parent="Background Deko" index="51" instance=ExtResource( 46 )]
+[node name="Stone20" parent="Background Deko" index="51" instance=ExtResource( 47 )]
 
 position = Vector2( 8901.73, 838.057 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone21" parent="Background Deko" index="52" instance=ExtResource( 46 )]
+[node name="Stone21" parent="Background Deko" index="52" instance=ExtResource( 47 )]
 
 position = Vector2( 9722.78, 1168.25 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone22" parent="Background Deko" index="53" instance=ExtResource( 46 )]
+[node name="Stone22" parent="Background Deko" index="53" instance=ExtResource( 47 )]
 
 position = Vector2( 10121.7, 1164.92 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone23" parent="Background Deko" index="54" instance=ExtResource( 46 )]
+[node name="Stone23" parent="Background Deko" index="54" instance=ExtResource( 47 )]
 
 position = Vector2( 10680.1, 1171.57 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone24" parent="Background Deko" index="55" instance=ExtResource( 46 )]
+[node name="Stone24" parent="Background Deko" index="55" instance=ExtResource( 47 )]
 
 position = Vector2( 11221.9, 1168.25 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone25" parent="Background Deko" index="56" instance=ExtResource( 46 )]
+[node name="Stone25" parent="Background Deko" index="56" instance=ExtResource( 47 )]
 
 position = Vector2( 12231.3, 1295.67 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone26" parent="Background Deko" index="57" instance=ExtResource( 46 )]
+[node name="Stone26" parent="Background Deko" index="57" instance=ExtResource( 47 )]
 
 position = Vector2( 12687.8, 1070.74 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Stone27" parent="Background Deko" index="58" instance=ExtResource( 46 )]
+[node name="Stone27" parent="Background Deko" index="58" instance=ExtResource( 47 )]
 
 position = Vector2( 13281.7, 1075.17 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Background" parent="." index="30" instance=ExtResource( 47 )]
+[node name="Background" parent="." index="31" instance=ExtResource( 48 )]
 
 editor/display_folded = true
 
