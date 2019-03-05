@@ -75,7 +75,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="LevelStartEndLong" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( -515.043, -61.1685 )
+position = Vector2( -584.162, -63.827 )
 
 [node name="Start" parent="." index="1" instance=ExtResource( 3 )]
 
