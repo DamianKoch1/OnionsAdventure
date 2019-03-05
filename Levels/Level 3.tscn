@@ -351,16 +351,6 @@ position = Vector2( 5962.04, -551.348 )
 
 position = Vector2( 7.91602, -23.1668 )
 
-[node name="Grass" parent="platform/trappedNPC" index="10" instance=ExtResource( 5 )]
-
-position = Vector2( -30.5474, 44.7477 )
-scale = Vector2( 0.212452, 0.212452 )
-
-[node name="Grass2" parent="platform/trappedNPC" index="11" instance=ExtResource( 5 )]
-
-position = Vector2( 27.9741, 45.7744 )
-scale = Vector2( 0.212452, 0.212452 )
-
 [node name="Enemy" parent="platform" index="2" instance=ExtResource( 23 )]
 
 editor/display_folded = true
@@ -375,6 +365,16 @@ curve = SubResource( 3 )
 
 position = Vector2( -236.878, 223.283 )
 rotation = -1.70637
+
+[node name="Grass" parent="platform" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( -22.6313, 21.5809 )
+scale = Vector2( 0.212452, 0.212452 )
+
+[node name="Grass2" parent="platform" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 35.8901, 22.6076 )
+scale = Vector2( 0.212452, 0.212452 )
 
 [node name="stump l, tendril" parent="." index="12" instance=ExtResource( 24 )]
 
@@ -651,18 +651,7 @@ position = Vector2( 2826.2, -726.486 )
 
 [node name="trappedNPC" parent="platform short" index="1" instance=ExtResource( 22 )]
 
-editor/display_folded = true
 position = Vector2( 4.54248, -23.2233 )
-
-[node name="Grass" parent="platform short/trappedNPC" index="10" instance=ExtResource( 5 )]
-
-position = Vector2( -28.8333, 46.6515 )
-scale = Vector2( 0.173386, 0.169896 )
-
-[node name="Grass2" parent="platform short/trappedNPC" index="11" instance=ExtResource( 5 )]
-
-position = Vector2( 29.2861, 46.2334 )
-scale = Vector2( 0.173386, 0.169896 )
 
 [node name="Collectable" parent="platform short" index="2" instance=ExtResource( 3 )]
 
@@ -671,6 +660,16 @@ position = Vector2( -155.84, -5.88074 )
 [node name="Collectable2" parent="platform short" index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 109.438, -36.8953 )
+
+[node name="Grass" parent="platform short" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( -24.2908, 23.4282 )
+scale = Vector2( 0.173386, 0.169896 )
+
+[node name="Grass2" parent="platform short" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 33.8286, 23.0101 )
+scale = Vector2( 0.173386, 0.169896 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 36 )]
 
@@ -769,16 +768,6 @@ scale = Vector2( 0.418205, 0.418205 )
 
 position = Vector2( 320.039, -117.021 )
 
-[node name="Grass" parent="moving salamander 2 platform/trappedNPC" index="10" instance=ExtResource( 5 )]
-
-position = Vector2( -30.8994, 41.7106 )
-scale = Vector2( 0.146532, 0.146532 )
-
-[node name="Grass2" parent="moving salamander 2 platform/trappedNPC" index="11" instance=ExtResource( 5 )]
-
-position = Vector2( 28.4219, 43.5547 )
-scale = Vector2( 0.146532, 0.146532 )
-
 [node name="platform short" parent="moving salamander 2 platform" index="5" instance=ExtResource( 35 )]
 
 position = Vector2( 612.643, -54.0206 )
@@ -790,7 +779,6 @@ objToDestroyPath = NodePath("../../platform short2/ThornsUp")
 
 [node name="platform short2" parent="moving salamander 2 platform" index="6" instance=ExtResource( 35 )]
 
-editor/display_folded = true
 position = Vector2( 828.726, -22.0994 )
 
 [node name="Collectable" parent="moving salamander 2 platform/platform short2" index="0" instance=ExtResource( 3 )]
@@ -802,10 +790,10 @@ position = Vector2( 50.3945, -47.2071 )
 position = Vector2( -30.8359, -51.2787 )
 scale = Vector2( 0.806852, 0.806852 )
 
-[node name="Grass" parent="moving salamander 2 platform/platform short2/ThornsUp" index="1" instance=ExtResource( 5 )]
+[node name="Grass" parent="moving salamander 2 platform/platform short2" index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 0.958984, 84.7175 )
-scale = Vector2( 0.288826, 0.288826 )
+position = Vector2( -30.0625, 17.0758 )
+scale = Vector2( 0.23304, 0.23304 )
 
 [node name="Ladder2" type="Node2D" parent="moving salamander 2 platform" index="7"]
 
@@ -912,6 +900,16 @@ scale = Vector2( 0.512923, 0.512923 )
 [node name="Collectable" parent="moving salamander 2 platform" index="8" instance=ExtResource( 3 )]
 
 position = Vector2( -252.633, -190.582 )
+
+[node name="Grass" parent="moving salamander 2 platform" index="10" instance=ExtResource( 5 )]
+
+position = Vector2( 289.14, -75.3104 )
+scale = Vector2( 0.146532, 0.146532 )
+
+[node name="Grass2" parent="moving salamander 2 platform" index="11" instance=ExtResource( 5 )]
+
+position = Vector2( 348.461, -73.4663 )
+scale = Vector2( 0.146532, 0.146532 )
 
 [node name="stone 4 flip" parent="." index="19" instance=ExtResource( 39 )]
 
