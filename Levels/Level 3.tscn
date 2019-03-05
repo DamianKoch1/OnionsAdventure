@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/02 single/moving platform/MovingPlat4.tscn" type="PackedScene" id=2]
@@ -44,7 +44,9 @@
 [ext_resource path="res://Modules/01 basic/End3(down).tscn" type="PackedScene" id=42]
 [ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=43]
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=44]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Decoration/Bush.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Decoration/Stone.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=47]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -673,6 +675,7 @@ scale = Vector2( 0.173386, 0.169896 )
 
 [node name="moving salamander 2 platform" parent="." index="18" instance=ExtResource( 36 )]
 
+editor/display_folded = true
 position = Vector2( 9640.23, -600.519 )
 
 [node name="Ladder" type="Node2D" parent="moving salamander 2 platform" index="3"]
@@ -987,7 +990,336 @@ scale = Vector2( 2.47591, 2.47591 )
 position = Vector2( 178.453, 589.344 )
 scale = Vector2( 2.47591, 2.47591 )
 
-[node name="Background" parent="." index="25" instance=ExtResource( 45 )]
+[node name="Background deko" type="Node2D" parent="." index="25"]
+
+[node name="Bush" parent="Background deko" index="0" instance=ExtResource( 45 )]
+
+position = Vector2( 11.6271, 101.996 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush2" parent="Background deko" index="1" instance=ExtResource( 45 )]
+
+position = Vector2( -599.229, 96.2956 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush3" parent="Background deko" index="2" instance=ExtResource( 45 )]
+
+position = Vector2( -509.928, 106.746 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush4" parent="Background deko" index="3" instance=ExtResource( 45 )]
+
+position = Vector2( 537.932, 40.2451 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush5" parent="Background deko" index="4" instance=ExtResource( 45 )]
+
+position = Vector2( 598.733, 17.4448 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush6" parent="Background deko" index="5" instance=ExtResource( 45 )]
+
+position = Vector2( 734.584, -126.007 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush7" parent="Background deko" index="6" instance=ExtResource( 45 )]
+
+position = Vector2( 1418.59, -59.506 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush8" parent="Background deko" index="7" instance=ExtResource( 45 )]
+
+position = Vector2( 1959.8, -122.357 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush11" parent="Background deko" index="8" instance=ExtResource( 45 )]
+
+position = Vector2( 2553.49, -412.886 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush12" parent="Background deko" index="9" instance=ExtResource( 45 )]
+
+position = Vector2( 3198.76, -503.414 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush13" parent="Background deko" index="10" instance=ExtResource( 45 )]
+
+position = Vector2( 2874.54, -732.89 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush14" parent="Background deko" index="11" instance=ExtResource( 45 )]
+
+position = Vector2( 4754.56, -508.677 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush15" parent="Background deko" index="12" instance=ExtResource( 45 )]
+
+position = Vector2( 4842.99, -498.15 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush16" parent="Background deko" index="13" instance=ExtResource( 45 )]
+
+position = Vector2( 5147.2, -448.676 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush17" parent="Background deko" index="14" instance=ExtResource( 45 )]
+
+position = Vector2( 5619.84, -345.517 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush18" parent="Background deko" index="15" instance=ExtResource( 45 )]
+
+position = Vector2( 5859.84, -549.73 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush19" parent="Background deko" index="16" instance=ExtResource( 45 )]
+
+position = Vector2( 6101.95, -554.993 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush20" parent="Background deko" index="17" instance=ExtResource( 45 )]
+
+position = Vector2( 7480.91, -196.042 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush21" parent="Background deko" index="18" instance=ExtResource( 45 )]
+
+position = Vector2( 8945.13, -187.621 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush22" parent="Background deko" index="19" instance=ExtResource( 45 )]
+
+position = Vector2( 9221.98, -471.834 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush23" parent="Background deko" index="20" instance=ExtResource( 45 )]
+
+position = Vector2( 9507.24, 8.17091 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush24" parent="Background deko" index="21" instance=ExtResource( 45 )]
+
+position = Vector2( 9591.46, -3.40813 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush25" parent="Background deko" index="22" instance=ExtResource( 45 )]
+
+position = Vector2( 10405.1, 67.1189 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush26" parent="Background deko" index="23" instance=ExtResource( 45 )]
+
+position = Vector2( 11194.6, -60.2509 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush27" parent="Background deko" index="24" instance=ExtResource( 45 )]
+
+position = Vector2( 11267.3, -69.7246 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush29" parent="Background deko" index="25" instance=ExtResource( 45 )]
+
+position = Vector2( 11914.6, 0.802414 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush30" parent="Background deko" index="26" instance=ExtResource( 45 )]
+
+position = Vector2( 11997.8, 2.9077 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush10" parent="Background deko" index="27" instance=ExtResource( 45 )]
+
+position = Vector2( 1815.25, -120.262 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush28" parent="Background deko" index="28" instance=ExtResource( 45 )]
+
+position = Vector2( 7022.21, -192.844 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Bush9" parent="Background deko" index="29" instance=ExtResource( 45 )]
+
+position = Vector2( 1883.69, -125.849 )
+scale = Vector2( 0.331524, 0.331524 )
+
+[node name="Stone" parent="Background deko" index="30" instance=ExtResource( 46 )]
+
+position = Vector2( -18.5256, 116.243 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone2" parent="Background deko" index="31" instance=ExtResource( 46 )]
+
+position = Vector2( -411.805, 115.613 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone3" parent="Background deko" index="32" instance=ExtResource( 46 )]
+
+position = Vector2( 430.847, 83.4697 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone4" parent="Background deko" index="33" instance=ExtResource( 46 )]
+
+position = Vector2( 660.89, 15.4021 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone5" parent="Background deko" index="34" instance=ExtResource( 46 )]
+
+position = Vector2( 771.815, -111.91 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone6" parent="Background deko" index="35" instance=ExtResource( 46 )]
+
+position = Vector2( 1369.3, -46.9933 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone7" parent="Background deko" index="36" instance=ExtResource( 46 )]
+
+position = Vector2( 1838.84, -111.91 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone8" parent="Background deko" index="37" instance=ExtResource( 46 )]
+
+position = Vector2( 2167.2, -144.053 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone9" parent="Background deko" index="38" instance=ExtResource( 46 )]
+
+position = Vector2( 2508.8, -398.046 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone10" parent="Background deko" index="39" instance=ExtResource( 46 )]
+
+position = Vector2( 3003.55, -399.937 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone11" parent="Background deko" index="40" instance=ExtResource( 46 )]
+
+position = Vector2( 3097.15, -498.807 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone12" parent="Background deko" index="41" instance=ExtResource( 46 )]
+
+position = Vector2( 4447.14, -495.354 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone13" parent="Background deko" index="42" instance=ExtResource( 46 )]
+
+position = Vector2( 4898.72, -499.565 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone14" parent="Background deko" index="43" instance=ExtResource( 46 )]
+
+position = Vector2( 5096.78, -434.404 )
+scale = Vector2( 0.37682, 0.37682 )
+
+[node name="Stone15" parent="Background deko" index="44" instance=ExtResource( 46 )]
+
+position = Vector2( 5250.99, -429.746 )
+scale = Vector2( 0.37682, 0.37682 )
+flip_h = true
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone16" parent="Background deko" index="45" instance=ExtResource( 46 )]
+
+position = Vector2( 5451.44, -338.545 )
+scale = Vector2( 0.37682, 0.37682 )
+flip_h = true
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone17" parent="Background deko" index="46" instance=ExtResource( 46 )]
+
+position = Vector2( 5671.85, -336.645 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone18" parent="Background deko" index="47" instance=ExtResource( 46 )]
+
+position = Vector2( 5813.95, -548.227 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone19" parent="Background deko" index="48" instance=ExtResource( 46 )]
+
+position = Vector2( 6421.33, -337.698 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone20" parent="Background deko" index="49" instance=ExtResource( 46 )]
+
+position = Vector2( 6643.44, -336.645 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone21" parent="Background deko" index="50" instance=ExtResource( 46 )]
+
+position = Vector2( 7081.34, -174.538 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone22" parent="Background deko" index="51" instance=ExtResource( 46 )]
+
+position = Vector2( 7051.86, -176.644 )
+scale = Vector2( 0.37682, 0.37682 )
+flip_h = true
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone23" parent="Background deko" index="52" instance=ExtResource( 46 )]
+
+position = Vector2( 7530.81, -180.854 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone24" parent="Background deko" index="53" instance=ExtResource( 46 )]
+
+position = Vector2( 8238.19, -179.802 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone25" parent="Background deko" index="54" instance=ExtResource( 46 )]
+
+position = Vector2( 8995.04, -175.591 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone26" parent="Background deko" index="55" instance=ExtResource( 46 )]
+
+position = Vector2( 9120.3, -52.4319 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone27" parent="Background deko" index="56" instance=ExtResource( 46 )]
+
+position = Vector2( 9462.41, 14.9372 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone28" parent="Background deko" index="57" instance=ExtResource( 46 )]
+
+position = Vector2( 10462.4, 74.9379 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone29" parent="Background deko" index="58" instance=ExtResource( 46 )]
+
+position = Vector2( 10797.2, -48.2213 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone30" parent="Background deko" index="59" instance=ExtResource( 46 )]
+
+position = Vector2( 11142.4, -48.2213 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Stone31" parent="Background deko" index="60" instance=ExtResource( 46 )]
+
+position = Vector2( 11837.2, 13.8846 )
+scale = Vector2( 0.37682, 0.37682 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Background" parent="." index="26" instance=ExtResource( 47 )]
+
+editor/display_folded = true
 
 [connection signal="body_entered" from="platform long/Ladder/Top" to="platform long/Ladder/Top" method="_on_Ladder_body_entered"]
 
