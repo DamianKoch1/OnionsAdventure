@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/Obstacles/Trees/Stump M.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Obstacles/Trees/Tree Stump Medium New v2.png" type="Texture" id=5]
+[ext_resource path="res://Decoration/Grass.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -69,5 +70,20 @@ bounce = 0.0
 
 position = Vector2( 915.729, 640.662 )
 shape = SubResource( 1 )
+
+[node name="Grass" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( -222.549, 133.344 )
+scale = Vector2( 0.337326, 0.337326 )
+
+[node name="Grass2" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( -23.1701, 133.344 )
+scale = Vector2( 0.337326, 0.337326 )
+
+[node name="Grass3" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 277.395, 127.955 )
+scale = Vector2( 0.337326, 0.337326 )
 
 

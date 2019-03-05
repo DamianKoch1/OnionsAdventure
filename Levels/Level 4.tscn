@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=2]
@@ -7,48 +7,61 @@
 [ext_resource path="res://Modules/01 basic/Jump down.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/Moth.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Modules/02 single/moving platform/movingplatdown.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/movingsalamander3.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, thorn, krake.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Modules/03 combination/TreeDown.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, moving tendril.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Modules/02 single/platform/platform up.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Modules/02 single/stones/stone 4 flip.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Modules/03 combination/moving combis/movingEnemyPlat.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m 3.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Modules/02 single/tendril/tendril6.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Modules/03 combination/moving combis/movingPlat4.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Modules/02 single/enemy/Muddy flat.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, Krake.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Modules/03 combination/stumpXthorn/stump m, thorn 3.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Modules/03 combination/stumpXtendril/stump m, stump l, tendril, thorn.tscn" type="PackedScene" id=34]
-[ext_resource path="res://Modules/02 single/moving platform/elevator.tscn" type="PackedScene" id=35]
-[ext_resource path="res://Modules/03 combination/platform/MuddyPlat.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Modules/03 combination/other interactable NPCs/stone, krake down.tscn" type="PackedScene" id=37]
-[ext_resource path="res://Modules/01 basic/end up.tscn" type="PackedScene" id=38]
-[ext_resource path="res://Modules/03 combination/enemy combis/krake, bitchy, plat.tscn" type="PackedScene" id=39]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=8]
+[ext_resource path="res://Objects/Ladder/Static Vine Top.png" type="Texture" id=9]
+[ext_resource path="res://Objects/Ladder/Static Vine Bottom.png" type="Texture" id=10]
+[ext_resource path="res://Objects/Ladder/LadderMid.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Modules/03 combination/moving combis/moving salamander/movingsalamander3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, thorn, krake.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Modules/03 combination/TreeDown.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump l, moving tendril.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Enemies/Muddy.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modules/02 single/platform/platform up.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/TrappedNPC.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Modules/02 single/stones/stone 4 flip.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Modules/03 combination/moving combis/movingEnemyPlat.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsUp.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump l, stump m 3.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Modules/02 single/tendril/tendril6.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Modules/03 combination/moving combis/movingPlat4.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Objects/Bouncer/Bouncer.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Modules/02 single/enemy/Muddy flat.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Modules/02 single/platform/platform short.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Modules/03 combination/other interactable NPCs/stump s, Krake.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Modules/03 combination/stumpXthorn/stump m, thorn 3.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Modules/03 combination/stumpXtendril/stump m, stump l, tendril, thorn.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Modules/02 single/moving platform/elevator.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Modules/03 combination/platform/MuddyPlat.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Modules/03 combination/other interactable NPCs/stone, krake down.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Modules/01 basic/end up.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Modules/03 combination/enemy combis/krake, bitchy, plat.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=43]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Curve2D" id=3]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, 20.7729, 169.765 )
 }
 
-[node name="Level 4" type="Node2D" index="0"]
+[node name="Level 4" type="Node2D"]
 
 [node name="short start" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -93,11 +106,86 @@ position = Vector2( 159.947, -34.0427 )
 editor/display_folded = true
 position = Vector2( 1952, 384 )
 
-[node name="Ladder" parent="movingplatdown" index="12" instance=ExtResource( 8 )]
+[node name="Ladder" type="Node2D" parent="movingplatdown" index="12"]
 
 position = Vector2( 704, 256 )
 
-[node name="Checkpoint" parent="movingplatdown" index="13" instance=ExtResource( 9 )]
+[node name="Top" type="Area2D" parent="movingplatdown/Ladder" index="0" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 32, -96 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="movingplatdown/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 9 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="movingplatdown/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="movingplatdown/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 32, 96 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="movingplatdown/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 10 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="movingplatdown/Ladder/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="movingplatdown/Ladder" index="2" instance=ExtResource( 11 )]
+
+position = Vector2( 32, 32 )
+
+[node name="Mid2" parent="movingplatdown/Ladder" index="3" instance=ExtResource( 11 )]
+
+position = Vector2( 32, -32 )
+
+[node name="Checkpoint" parent="movingplatdown" index="13" instance=ExtResource( 12 )]
 
 position = Vector2( 704, 480 )
 
@@ -121,15 +209,15 @@ position = Vector2( 932.966, 418.838 )
 
 position = Vector2( 940.722, 161.773 )
 
-[node name="movingsalamander3" parent="." index="5" instance=ExtResource( 10 )]
+[node name="movingsalamander3" parent="." index="5" instance=ExtResource( 13 )]
 
 position = Vector2( 3232, 480 )
 
-[node name="stump s, thorn, krake" parent="." index="6" instance=ExtResource( 11 )]
+[node name="stump s, thorn, krake" parent="." index="6" instance=ExtResource( 14 )]
 
 position = Vector2( 3040, 800 )
 
-[node name="Worm" parent="stump s, thorn, krake" index="4" instance=ExtResource( 12 )]
+[node name="Worm" parent="stump s, thorn, krake" index="4" instance=ExtResource( 15 )]
 
 position = Vector2( 290.599, -5.03149 )
 
@@ -137,9 +225,8 @@ position = Vector2( 290.599, -5.03149 )
 
 position = Vector2( 115.236, 21.0527 )
 
-[node name="TreeDown" parent="." index="7" instance=ExtResource( 13 )]
+[node name="TreeDown" parent="." index="7" instance=ExtResource( 16 )]
 
-editor/display_folded = true
 position = Vector2( 3552, 704 )
 
 [node name="Collectable" parent="TreeDown" index="3" instance=ExtResource( 3 )]
@@ -162,24 +249,24 @@ position = Vector2( 650.417, 160.665 )
 
 position = Vector2( 903.049, -222.715 )
 
-[node name="stump l, moving tendril" parent="." index="8" instance=ExtResource( 14 )]
+[node name="stump l, moving tendril" parent="." index="8" instance=ExtResource( 17 )]
 
 position = Vector2( 4160, 928 )
 
-[node name="Muddy" parent="stump l, moving tendril" index="3" instance=ExtResource( 15 )]
+[node name="Muddy" parent="stump l, moving tendril" index="3" instance=ExtResource( 18 )]
 
 position = Vector2( -260.488, 104.685 )
 movespeed = 1.0
 
-[node name="platform up" parent="." index="9" instance=ExtResource( 16 )]
+[node name="platform up" parent="." index="9" instance=ExtResource( 19 )]
 
 position = Vector2( 4160, 544 )
 
-[node name="Rope" parent="platform up" index="1" instance=ExtResource( 17 )]
+[node name="Rope" parent="platform up" index="1" instance=ExtResource( 20 )]
 
 position = Vector2( -354.654, -236.097 )
 
-[node name="Enemy" parent="platform up" index="2" instance=ExtResource( 15 )]
+[node name="Enemy" parent="platform up" index="2" instance=ExtResource( 18 )]
 
 editor/display_folded = true
 position = Vector2( -146.284, -26.4634 )
@@ -187,25 +274,104 @@ movespeed = 1.0
 
 [node name="EnemyPath" parent="platform up/Enemy" index="0"]
 
-curve = SubResource( 1 )
+curve = SubResource( 3 )
 
 [node name="PathFollow2D" parent="platform up/Enemy/EnemyPath" index="1"]
 
 rotation = -0.00426639
 
-[node name="trappedNPC" parent="platform up" index="3" instance=ExtResource( 18 )]
+[node name="trappedNPC" parent="platform up" index="3" instance=ExtResource( 21 )]
 
 position = Vector2( 150.195, -106.06 )
 
-[node name="Ladder" parent="platform up" index="4" instance=ExtResource( 8 )]
+[node name="Ladder" type="Node2D" parent="platform up" index="4"]
 
 position = Vector2( 388.529, 85.0029 )
 
-[node name="stone 4 flip" parent="." index="10" instance=ExtResource( 19 )]
+[node name="Top" type="Area2D" parent="platform up/Ladder" index="0" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 27.4712, -181.003 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="platform up/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 9 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform up/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="platform up/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 27.4712, 74.9971 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="platform up/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 10 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform up/Ladder/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="platform up/Ladder" index="2" instance=ExtResource( 11 )]
+
+position = Vector2( 27.4712, 10.9971 )
+
+[node name="Mid2" parent="platform up/Ladder" index="3" instance=ExtResource( 11 )]
+
+position = Vector2( 27.4712, -53.0029 )
+
+[node name="Mid3" parent="platform up/Ladder" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( 27.4712, -117.003 )
+
+[node name="stone 4 flip" parent="." index="10" instance=ExtResource( 22 )]
 
 position = Vector2( 4832, 896 )
 
-[node name="Checkpoint" parent="stone 4 flip" index="2" instance=ExtResource( 9 )]
+[node name="Checkpoint" parent="stone 4 flip" index="2" instance=ExtResource( 12 )]
 
 position = Vector2( -224, -64 )
 
@@ -221,43 +387,43 @@ position = Vector2( 295.846, 93.075 )
 
 position = Vector2( 698.063, 97.5071 )
 
-[node name="movingEnemyPlat" parent="." index="11" instance=ExtResource( 20 )]
+[node name="movingEnemyPlat" parent="." index="11" instance=ExtResource( 23 )]
 
 position = Vector2( 5196.64, 1057.8 )
 
-[node name="ThornsUp" parent="movingEnemyPlat" index="1" instance=ExtResource( 21 )]
+[node name="ThornsUp" parent="movingEnemyPlat" index="1" instance=ExtResource( 24 )]
 
 position = Vector2( -199.368, 145.113 )
 
-[node name="ThornsUp2" parent="movingEnemyPlat" index="2" instance=ExtResource( 21 )]
+[node name="ThornsUp2" parent="movingEnemyPlat" index="2" instance=ExtResource( 24 )]
 
 position = Vector2( 182.392, 140.6 )
 
-[node name="ThornsUp3" parent="movingEnemyPlat" index="3" instance=ExtResource( 21 )]
+[node name="ThornsUp3" parent="movingEnemyPlat" index="3" instance=ExtResource( 24 )]
 
 position = Vector2( 442.313, 140.6 )
 
-[node name="ThornsGround" parent="movingEnemyPlat/ThornsUp3" index="1" instance=ExtResource( 22 )]
+[node name="ThornsGround" parent="movingEnemyPlat/ThornsUp3" index="1" instance=ExtResource( 25 )]
 
 position = Vector2( -558.651, 54.1503 )
 
-[node name="ThornsUp4" parent="movingEnemyPlat" index="4" instance=ExtResource( 21 )]
+[node name="ThornsUp4" parent="movingEnemyPlat" index="4" instance=ExtResource( 24 )]
 
 position = Vector2( 442.313, 140.6 )
 
-[node name="ThornsGround" parent="movingEnemyPlat/ThornsUp4" index="1" instance=ExtResource( 22 )]
+[node name="ThornsGround" parent="movingEnemyPlat/ThornsUp4" index="1" instance=ExtResource( 25 )]
 
 position = Vector2( -441.325, 55.0527 )
 
-[node name="ThornsGround2" parent="movingEnemyPlat/ThornsUp4" index="2" instance=ExtResource( 22 )]
+[node name="ThornsGround2" parent="movingEnemyPlat/ThornsUp4" index="2" instance=ExtResource( 25 )]
 
 position = Vector2( -346.562, 53.2478 )
 
-[node name="ThornsGround3" parent="movingEnemyPlat/ThornsUp4" index="3" instance=ExtResource( 22 )]
+[node name="ThornsGround3" parent="movingEnemyPlat/ThornsUp4" index="3" instance=ExtResource( 25 )]
 
 position = Vector2( -169.563, 56.0662 )
 
-[node name="ThornsGround4" parent="movingEnemyPlat/ThornsUp4" index="4" instance=ExtResource( 22 )]
+[node name="ThornsGround4" parent="movingEnemyPlat/ThornsUp4" index="4" instance=ExtResource( 25 )]
 
 position = Vector2( -75.9189, 55.8121 )
 
@@ -265,16 +431,16 @@ position = Vector2( -75.9189, 55.8121 )
 
 position = Vector2( -12.5728, -21.9282 )
 
-[node name="TileMap2" parent="movingEnemyPlat/Node2D" index="0" instance=ExtResource( 23 )]
+[node name="TileMap2" parent="movingEnemyPlat/Node2D" index="0" instance=ExtResource( 26 )]
 
 tile_data = PoolIntArray( -9, 1, 0, -8, 1, 0, -7, 9, 0, -65522, 536870921, 0, -65521, 536870913, 0, -65520, 536870913, 0, 65527, 4, 0, 65528, 16, 0, 65529, 14, 0, 14, 536870926, 0, 15, 536870928, 0, 16, 536870915, 0, 17, 536870935, 0, 18, 536870935, 0, 131063, 536870935, 0, 131064, 17, 0, 65551, 536870929, 0, 65552, 536870935, 0, 65553, 536870935, 0, 65554, 536870935, 0, 196599, 536870935, 0, 196600, 17, 0, 131087, 536870929, 0, 131088, 536870935, 0, 131089, 536870935, 0, 131090, 536870935, 0, 262135, 536870935, 0, 262136, 18, 0, 196623, 536870929, 0, 196624, 536870935, 0, 196625, 536870935, 0, 196626, 536870935, 0, 327671, 536870935, 0, 327672, 17, 0, 262159, 536870929, 0, 262160, 536870935, 0, 262161, 536870935, 0, 262162, 536870935, 0, 393207, 536870935, 0, 393208, 18, 0, 327695, 536870929, 0, 327696, 536870935, 0, 327697, 536870935, 0, 327698, 536870935, 0, 458735, 536870935, 0, 458736, 536870935, 0, 458737, 536870935, 0, 458738, 536870935, 0, 458739, 536870935, 0, 458740, 536870935, 0, 458741, 536870935, 0, 458742, 536870935, 0, 458743, 536870935, 0, 458744, 18, 0, 393231, 536870929, 0, 393232, 536870935, 0, 393233, 536870935, 0, 393234, 536870935, 0, 524271, 536870935, 0, 524272, 536870935, 0, 524273, 536870935, 0, 524274, 536870935, 0, 524275, 536870935, 0, 524276, 536870935, 0, 524277, 536870935, 0, 524278, 536870935, 0, 524279, 536870935, 0, 524280, 19, 0, 524281, 1, 0, 524282, 536870913, 0, 524283, 536870914, 0, 524284, 536870912, 0, 524285, 536870913, 0, 524286, 536870913, 0, 524287, 536870912, 0, 458752, 536870914, 0, 458753, 536870913, 0, 458754, 536870912, 0, 458755, 536870914, 0, 458756, 536870913, 0, 458757, 536870913, 0, 458758, 536870913, 0, 458759, 536870914, 0, 458760, 536870913, 0, 458761, 536870913, 0, 458762, 536870913, 0, 458763, 536870914, 0, 458764, 536870914, 0, 458765, 536870913, 0, 458766, 536870914, 0, 458767, 536870931, 0, 458768, 536870935, 0, 458769, 536870935, 0, 458770, 536870935, 0, 589807, 536870935, 0, 589808, 536870935, 0, 589809, 536870935, 0, 589810, 536870935, 0, 589811, 536870935, 0, 589812, 536870935, 0, 589813, 536870935, 0, 589814, 536870935, 0, 589815, 536870935, 0, 589816, 22, 0, 589817, 536870915, 0, 589818, 536870915, 0, 589819, 536870916, 0, 589820, 536870915, 0, 589821, 536870915, 0, 589822, 536870915, 0, 589823, 536870916, 0, 524288, 536870915, 0, 524289, 536870915, 0, 524290, 536870917, 0, 524291, 536870915, 0, 524292, 536870915, 0, 524293, 536870915, 0, 524294, 536870916, 0, 524295, 536870917, 0, 524296, 536870915, 0, 524297, 536870915, 0, 524298, 536870917, 0, 524299, 536870915, 0, 524300, 536870916, 0, 524301, 536870917, 0, 524302, 536870915, 0, 524303, 536870934, 0, 524304, 536870935, 0, 524305, 536870935, 0, 524306, 536870935, 0, 655343, 536870935, 0, 655344, 536870935, 0, 655345, 536870935, 0, 655346, 536870935, 0, 655347, 536870935, 0, 655348, 536870935, 0, 655349, 536870935, 0, 655350, 536870935, 0, 655351, 536870935, 0, 655352, 536870935, 0, 655353, 536870935, 0, 655354, 536870935, 0, 655355, 536870935, 0, 655356, 536870935, 0, 655357, 536870935, 0, 655358, 536870935, 0, 655359, 536870935, 0, 589824, 536870935, 0, 589825, 536870935, 0, 589826, 536870935, 0, 589827, 536870935, 0, 589828, 536870935, 0, 589829, 536870935, 0, 589830, 536870935, 0, 589831, 536870935, 0, 589832, 536870935, 0, 589833, 536870935, 0, 589834, 536870935, 0, 589835, 536870935, 0, 589836, 536870935, 0, 589837, 536870935, 0, 589838, 536870935, 0, 589839, 536870935, 0, 589840, 536870935, 0, 589841, 536870935, 0, 589842, 536870935, 0, 720879, 536870935, 0, 720880, 536870935, 0, 720881, 536870935, 0, 720882, 536870935, 0, 720883, 536870935, 0, 720884, 536870935, 0, 720885, 536870935, 0, 720886, 536870935, 0, 720887, 536870935, 0, 720888, 536870935, 0, 720889, 536870935, 0, 720890, 536870935, 0, 720891, 536870935, 0, 720892, 536870935, 0, 720893, 536870935, 0, 720894, 536870935, 0, 720895, 536870935, 0, 655360, 536870935, 0, 655361, 536870935, 0, 655362, 536870935, 0, 655363, 536870935, 0, 655364, 536870935, 0, 655365, 536870935, 0, 655366, 536870935, 0, 655367, 536870935, 0, 655368, 536870935, 0, 655369, 536870935, 0, 655370, 536870935, 0, 655371, 536870935, 0, 655372, 536870935, 0, 655373, 536870935, 0, 655374, 536870935, 0, 655375, 536870935, 0, 655376, 536870935, 0, 655377, 536870935, 0, 655378, 536870935, 0, 786415, 536870935, 0, 786416, 536870935, 0, 786417, 536870935, 0, 786418, 536870935, 0, 786419, 536870935, 0, 786420, 536870935, 0, 786421, 536870935, 0, 786422, 536870935, 0, 786423, 536870935, 0, 786424, 536870935, 0, 786425, 536870935, 0, 786426, 536870935, 0, 786427, 536870935, 0, 786428, 536870935, 0, 786429, 536870935, 0, 786430, 536870935, 0, 786431, 536870935, 0, 720896, 536870935, 0, 720897, 536870935, 0, 720898, 536870935, 0, 720899, 536870935, 0, 720900, 536870935, 0, 720901, 536870935, 0, 720902, 536870935, 0, 720903, 536870935, 0, 720904, 536870935, 0, 720905, 536870935, 0, 720906, 536870935, 0, 720907, 536870935, 0, 720908, 536870935, 0, 720909, 536870935, 0, 720910, 536870935, 0, 720911, 536870935, 0, 720912, 536870935, 0, 720913, 536870935, 0, 720914, 536870935, 0, 851951, 536870935, 0, 851952, 536870935, 0, 851953, 536870935, 0, 851954, 536870935, 0, 851955, 536870935, 0, 851956, 536870935, 0, 851957, 536870935, 0, 851958, 536870935, 0, 851959, 536870935, 0, 851960, 536870935, 0, 851961, 536870935, 0, 851962, 536870935, 0, 851963, 536870935, 0, 851964, 536870935, 0, 851965, 536870935, 0, 851966, 536870935, 0, 851967, 536870935, 0, 786432, 536870935, 0, 786433, 536870935, 0, 786434, 536870935, 0, 786435, 536870935, 0, 786436, 536870935, 0, 786437, 536870935, 0, 786438, 536870935, 0, 786439, 536870935, 0, 786440, 536870935, 0, 786441, 536870935, 0, 786442, 536870935, 0, 786443, 536870935, 0, 786444, 536870935, 0, 786445, 536870935, 0, 786446, 536870935, 0, 786447, 536870935, 0, 786448, 536870935, 0, 786449, 536870935, 0, 786450, 536870935, 0, 917487, 536870935, 0, 917488, 536870935, 0, 917489, 536870935, 0, 917490, 536870935, 0, 917491, 536870935, 0, 917492, 536870935, 0, 917493, 536870935, 0, 917494, 536870935, 0, 917495, 536870935, 0, 917496, 536870935, 0, 917497, 536870935, 0, 917498, 536870935, 0, 917499, 536870935, 0, 917500, 536870935, 0, 917501, 536870935, 0, 917502, 536870935, 0, 917503, 536870935, 0, 851968, 536870935, 0, 851969, 536870935, 0, 851970, 536870935, 0, 851971, 536870935, 0, 851972, 536870935, 0, 851973, 536870935, 0, 851974, 536870935, 0, 851975, 536870935, 0, 851976, 536870935, 0, 851977, 536870935, 0, 851978, 536870935, 0, 851979, 536870935, 0, 851980, 536870935, 0, 851981, 536870935, 0, 851982, 536870935, 0, 851983, 536870935, 0, 851984, 536870935, 0, 851985, 536870935, 0, 851986, 536870935, 0, 983023, 536870935, 0, 983024, 536870935, 0, 983025, 536870935, 0, 983026, 536870935, 0, 983027, 536870935, 0, 983028, 536870935, 0, 983029, 536870935, 0, 983030, 536870935, 0, 983031, 536870935, 0, 983032, 536870935, 0, 983033, 536870935, 0, 983034, 536870935, 0, 983035, 536870935, 0, 983036, 536870935, 0, 983037, 536870935, 0, 983038, 536870935, 0, 983039, 536870935, 0, 917504, 536870935, 0, 917505, 536870935, 0, 917506, 536870935, 0, 917507, 536870935, 0, 917508, 536870935, 0, 917509, 536870935, 0, 917510, 536870935, 0, 917511, 536870935, 0, 917512, 536870935, 0, 917513, 536870935, 0, 917514, 536870935, 0, 917515, 536870935, 0, 917516, 536870935, 0, 917517, 536870935, 0, 917518, 536870935, 0, 917519, 536870935, 0, 917520, 536870935, 0, 917521, 536870935, 0, 917522, 536870935, 0, 1048559, 536870935, 0, 1048560, 536870935, 0, 1048561, 536870935, 0, 1048562, 536870935, 0, 1048563, 536870935, 0, 1048564, 536870935, 0, 1048565, 536870935, 0, 1048566, 536870935, 0, 1048567, 536870935, 0, 1048568, 536870935, 0, 1048569, 536870935, 0, 1048570, 536870935, 0, 1048571, 536870935, 0, 1048572, 536870935, 0, 1048573, 536870935, 0, 1048574, 536870935, 0, 1048575, 536870935, 0, 983040, 536870935, 0, 983041, 536870935, 0, 983042, 536870935, 0, 983043, 536870935, 0, 983044, 536870935, 0, 983045, 536870935, 0, 983046, 536870935, 0, 983047, 536870935, 0, 983048, 536870935, 0, 983049, 536870935, 0, 983050, 536870935, 0, 983051, 536870935, 0, 983052, 536870935, 0, 983053, 536870935, 0, 983054, 536870935, 0, 983055, 536870935, 0, 983056, 536870935, 0, 983057, 536870935, 0, 983058, 536870935, 0 )
 
-[node name="stump l, stump m" parent="." index="12" instance=ExtResource( 24 )]
+[node name="stump l, stump m" parent="." index="12" instance=ExtResource( 27 )]
 
 editor/display_folded = true
 position = Vector2( 6180.75, 1119.98 )
 
-[node name="Checkpoint" parent="stump l, stump m" index="3" instance=ExtResource( 9 )]
+[node name="Checkpoint" parent="stump l, stump m" index="3" instance=ExtResource( 12 )]
 
 position = Vector2( -384, -160 )
 
@@ -306,12 +472,12 @@ position = Vector2( 698.063, -158.449 )
 
 position = Vector2( 751.249, -79.7786 )
 
-[node name="stump l, stump m 3" parent="." index="13" instance=ExtResource( 25 )]
+[node name="stump l, stump m 3" parent="." index="13" instance=ExtResource( 28 )]
 
 position = Vector2( 6706.75, 1055.52 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="tendril6" parent="." index="14" instance=ExtResource( 26 )]
+[node name="tendril6" parent="." index="14" instance=ExtResource( 29 )]
 
 editor/display_folded = true
 position = Vector2( 7152.57, 1055.56 )
@@ -340,62 +506,138 @@ position = Vector2( 861.411, 115.485 )
 
 position = Vector2( 864.269, 228.255 )
 
-[node name="movingPlat4" parent="." index="15" instance=ExtResource( 27 )]
+[node name="movingPlat4" parent="." index="15" instance=ExtResource( 30 )]
 
 editor/display_folded = true
 position = Vector2( 7728.57, 1183.56 )
 
-[node name="Bouncer" parent="movingPlat4" index="8" instance=ExtResource( 28 )]
+[node name="Bouncer" parent="movingPlat4" index="8" instance=ExtResource( 31 )]
 
 position = Vector2( -256, -32 )
 
-[node name="Checkpoint" parent="movingPlat4" index="9" instance=ExtResource( 9 )]
+[node name="Checkpoint" parent="movingPlat4" index="9" instance=ExtResource( 12 )]
 
 position = Vector2( -352, -64 )
 
-[node name="platform2" parent="." index="16" instance=ExtResource( 29 )]
+[node name="platform2" parent="." index="16" instance=ExtResource( 32 )]
 
-editor/display_folded = true
 position = Vector2( 7792.43, 839.649 )
 
-[node name="Worm" parent="platform2" index="1" instance=ExtResource( 12 )]
+[node name="Worm" parent="platform2" index="1" instance=ExtResource( 15 )]
 
 position = Vector2( -101.392, -20.1485 )
 
-[node name="Worm2" parent="platform2" index="2" instance=ExtResource( 12 )]
+[node name="Worm2" parent="platform2" index="2" instance=ExtResource( 15 )]
 
 position = Vector2( 101.857, -21.662 )
 
-[node name="trappedNPC" parent="platform2" index="3" instance=ExtResource( 18 )]
+[node name="trappedNPC" parent="platform2" index="3" instance=ExtResource( 21 )]
 
 position = Vector2( -1.89551, -25.6709 )
 
-[node name="Rope" parent="platform2" index="4" instance=ExtResource( 17 )]
+[node name="Rope" parent="platform2" index="4" instance=ExtResource( 20 )]
 
 position = Vector2( 448.14, -200.084 )
 
-[node name="Ladder" parent="platform2" index="5" instance=ExtResource( 8 )]
+[node name="Ladder" type="Node2D" parent="platform2" index="5"]
 
 position = Vector2( 768.14, -8.08398 )
 
-[node name="Muddy flat" parent="." index="17" instance=ExtResource( 30 )]
+[node name="Top" type="Area2D" parent="platform2/Ladder" index="0" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 31.4297, -95.565 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="platform2/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 9 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="platform2/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 31.4297, 160.435 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="platform2/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 10 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2/Ladder/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="platform2/Ladder" index="2" instance=ExtResource( 11 )]
+
+[node name="Mid2" parent="platform2/Ladder" index="3" instance=ExtResource( 11 )]
+
+position = Vector2( 31.4297, 32.435 )
+
+[node name="Mid3" parent="platform2/Ladder" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( 31.4297, -31.565 )
+
+[node name="Muddy flat" parent="." index="17" instance=ExtResource( 33 )]
 
 position = Vector2( 8624.58, 1343.56 )
 
-[node name="platform short" parent="." index="18" instance=ExtResource( 31 )]
+[node name="platform short" parent="." index="18" instance=ExtResource( 34 )]
 
 position = Vector2( 8880.58, 831.565 )
 
-[node name="platform short2" parent="." index="19" instance=ExtResource( 31 )]
+[node name="platform short2" parent="." index="19" instance=ExtResource( 34 )]
 
 editor/display_folded = true
 position = Vector2( 9200.58, 959.565 )
 
-[node name="Checkpoint" parent="platform short2" index="1" instance=ExtResource( 9 )]
+[node name="Checkpoint" parent="platform short2" index="1" instance=ExtResource( 12 )]
 
 position = Vector2( 0, 160 )
 
-[node name="stump s, Krake" parent="." index="20" instance=ExtResource( 32 )]
+[node name="stump s, Krake" parent="." index="20" instance=ExtResource( 35 )]
 
 editor/display_folded = true
 position = Vector2( 8944.58, 1343.56 )
@@ -424,7 +666,7 @@ position = Vector2( 252.198, -454.291 )
 
 position = Vector2( -703.148, -539.47 )
 
-[node name="stump m, thorn 3" parent="." index="21" instance=ExtResource( 33 )]
+[node name="stump m, thorn 3" parent="." index="21" instance=ExtResource( 36 )]
 
 editor/display_folded = true
 position = Vector2( 9584.58, 1055.56 )
@@ -445,20 +687,106 @@ position = Vector2( 897.85, -59.8566 )
 
 position = Vector2( 1046.13, 34.0094 )
 
-[node name="stump m, stump l, tendril, thorn" parent="." index="22" instance=ExtResource( 34 )]
+[node name="stump m, stump l, tendril, thorn" parent="." index="22" instance=ExtResource( 37 )]
 
 position = Vector2( 10256.6, 1055.56 )
 
-[node name="elevator" parent="." index="23" instance=ExtResource( 35 )]
+[node name="elevator" parent="." index="23" instance=ExtResource( 38 )]
 
-editor/display_folded = true
 position = Vector2( 10896.6, 1055.56 )
 
-[node name="Ladder" parent="elevator" index="5" instance=ExtResource( 8 )]
+[node name="Ladder" type="Node2D" parent="elevator" index="5"]
 
 position = Vector2( 576, -192 )
 
-[node name="Checkpoint" parent="elevator" index="6" instance=ExtResource( 9 )]
+[node name="Top" type="Area2D" parent="elevator/Ladder" index="0" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 31.4004, -191.56 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="elevator/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 9 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elevator/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="elevator/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+position = Vector2( 31.4004, 192.44 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="elevator/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 10 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elevator/Ladder/Bot" index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="elevator/Ladder" index="2" instance=ExtResource( 11 )]
+
+position = Vector2( 31.4004, 128.44 )
+
+[node name="Mid2" parent="elevator/Ladder" index="3" instance=ExtResource( 11 )]
+
+position = Vector2( 31.4004, 64.4399 )
+
+[node name="Mid3" parent="elevator/Ladder" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( 31.4004, 0.439941 )
+
+[node name="Mid4" parent="elevator/Ladder" index="5" instance=ExtResource( 11 )]
+
+position = Vector2( 31.4004, -63.5601 )
+
+[node name="Mid5" parent="elevator/Ladder" index="6" instance=ExtResource( 11 )]
+
+position = Vector2( 31.4004, -127.56 )
+
+[node name="Checkpoint" parent="elevator" index="6" instance=ExtResource( 12 )]
 
 position = Vector2( 256, 64 )
 
@@ -498,32 +826,64 @@ position = Vector2( 1043.79, -240.631 )
 
 position = Vector2( 994.437, 2.72083 )
 
-[node name="MuddyPlat" parent="." index="24" instance=ExtResource( 36 )]
+[node name="MuddyPlat" parent="." index="24" instance=ExtResource( 39 )]
 
 position = Vector2( 11952.6, 734.565 )
 
-[node name="platform short3" parent="." index="25" instance=ExtResource( 31 )]
+[node name="platform short3" parent="." index="25" instance=ExtResource( 34 )]
 
 editor/display_folded = true
 position = Vector2( 12432.6, 799.565 )
 
-[node name="trappedNPC" parent="platform short3" index="1" instance=ExtResource( 18 )]
+[node name="trappedNPC" parent="platform short3" index="1" instance=ExtResource( 21 )]
 
 position = Vector2( 2.30176, -25.2894 )
 
-[node name="stone, krake down" parent="." index="26" instance=ExtResource( 37 )]
+[node name="stone, krake down" parent="." index="26" instance=ExtResource( 40 )]
 
 position = Vector2( 11504.6, 1055.56 )
 
-[node name="end up" parent="." index="27" instance=ExtResource( 38 )]
+[node name="end up" parent="." index="27" instance=ExtResource( 41 )]
 
 position = Vector2( 12467.7, 958.997 )
 
-[node name="krake, bitchy, plat" parent="." index="28" instance=ExtResource( 39 )]
+[node name="krake, bitchy, plat" parent="." index="28" instance=ExtResource( 42 )]
 
 position = Vector2( 12144.6, 1183.56 )
 
-[node name="Background" parent="." index="29" instance=ExtResource( 40 )]
+[node name="Background" parent="." index="29" instance=ExtResource( 43 )]
+
+[connection signal="body_entered" from="movingplatdown/Ladder/Top" to="movingplatdown/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="movingplatdown/Ladder/Top" to="movingplatdown/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="movingplatdown/Ladder/Bot" to="movingplatdown/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="movingplatdown/Ladder/Bot" to="movingplatdown/Ladder/Bot" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="platform up/Ladder/Top" to="platform up/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="platform up/Ladder/Top" to="platform up/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="platform up/Ladder/Bot" to="platform up/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="platform up/Ladder/Bot" to="platform up/Ladder/Bot" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="platform2/Ladder/Top" to="platform2/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="platform2/Ladder/Top" to="platform2/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="platform2/Ladder/Bot" to="platform2/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="platform2/Ladder/Bot" to="platform2/Ladder/Bot" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="elevator/Ladder/Top" to="elevator/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="elevator/Ladder/Top" to="elevator/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="elevator/Ladder/Bot" to="elevator/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="elevator/Ladder/Bot" to="elevator/Ladder/Bot" method="_on_Ladder_body_exited"]
 
 
 [editable path="platform up/Enemy"]
