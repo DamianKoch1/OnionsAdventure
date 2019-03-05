@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Objects/Rope/Rope.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Rope/Asset Dynamic Vine.png" type="Texture" id=2]
-[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Objects/Rope/ropeSwing.wav" type="AudioStream" id=4]
+[ext_resource path="res://Decoration/VineTop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Rope/ropeSwing.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -31,6 +32,11 @@ z_index = 70
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
+[node name="VineTop" parent="Sprite" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( -0.166351, -389.643 )
+scale = Vector2( 1, 1.17152 )
+
 [node name="Area2D" type="Area2D" parent="." index="1" groups=[
 "rayIgnore",
 ]]
@@ -49,9 +55,9 @@ position = Vector2( 0, 15 )
 scale = Vector2( 1, 2.31368 )
 shape = SubResource( 1 )
 
-[node name="ropeSwing" parent="." index="2" instance=ExtResource( 3 )]
+[node name="ropeSwing" parent="." index="2" instance=ExtResource( 4 )]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = 5.0
 max_distance = 1000.0
 

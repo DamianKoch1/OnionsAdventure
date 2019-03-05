@@ -4,8 +4,8 @@
 
 [node name="VineTop" type="Sprite"]
 
-z_index = 85
+z_index = 90
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform" ]
 
 

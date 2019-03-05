@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Ladder/Static Vine Top.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Objects/Obstacles/Thorns/ThornsGround.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Decoration/Grass.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Decoration/VineTop.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -131,6 +132,11 @@ scale = Vector2( 0.318182, 0.318182 )
 
 position = Vector2( 48, 192 )
 scale = Vector2( 0.318182, 0.318182 )
+
+[node name="VineTop" parent="." index="8" instance=ExtResource( 10 )]
+
+position = Vector2( 32, -64 )
+scale = Vector2( 0.512923, 0.512923 )
 
 [connection signal="body_entered" from="Ladder/Top" to="Ladder/Top" method="_on_Ladder_body_entered"]
 
