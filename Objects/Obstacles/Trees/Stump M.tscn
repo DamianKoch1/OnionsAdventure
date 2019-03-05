@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 363.126, 640.44 )
 
-[node name="stump m 7" type="Node2D" index="0"]
+[node name="stump m 7" type="Node2D"]
 
 scale = Vector2( 0.0765978, 0.0959247 )
 z_index = 5

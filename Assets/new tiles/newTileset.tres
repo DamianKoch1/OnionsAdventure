@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=22 format=2]
+[gd_resource type="TileSet" load_steps=25 format=2]
 
 [ext_resource path="res://Assets/new tiles/Tiles/All Floor Tiles Mid Part.png" type="Texture" id=1]
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Pit Lower Tile Edge.png" type="Texture" id=2]
@@ -15,7 +15,10 @@
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Low Side Top Tile Edge.png" type="Texture" id=13]
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Corner.png" type="Texture" id=14]
 [ext_resource path="res://Assets/new tiles/Tiles/Floor Earth.png" type="Texture" id=15]
-[ext_resource path="res://Assets/new tiles/Tiles/Floor Top Tile Edge.png" type="Texture" id=16]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Bottom 1.png" type="Texture" id=16]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Bottom 2.png" type="Texture" id=17]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Bottom 3.png" type="Texture" id=18]
+[ext_resource path="res://Assets/new tiles/Tiles/Floor Top Tile Edge.png" type="Texture" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -50,8 +53,8 @@ extents = Vector2( 25, 25 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 100, 100 )
 0/is_autotile = false
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
+0/occluder_offset = Vector2( 50, 50 )
+0/navigation_offset = Vector2( 50, 50 )
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -171,7 +174,7 @@ extents = Vector2( 25, 25 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 50, 50 )
 } ]
 9/name = "09"
-9/texture = ExtResource( 16 )
+9/texture = ExtResource( 19 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 100, 100 )
@@ -360,6 +363,48 @@ extents = Vector2( 25, 25 )
 23/occluder_offset = Vector2( 0, 0 )
 23/navigation_offset = Vector2( 0, 0 )
 23/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 50, 50 )
+} ]
+24/name = "24"
+24/texture = ExtResource( 16 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 100, 100 )
+24/is_autotile = false
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 50, 50 )
+} ]
+25/name = "25"
+25/texture = ExtResource( 17 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 100, 100 )
+25/is_autotile = false
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 50, 50 )
+} ]
+26/name = "26"
+26/texture = ExtResource( 18 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 100, 100 )
+26/is_autotile = false
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "shape": SubResource( 2 ),

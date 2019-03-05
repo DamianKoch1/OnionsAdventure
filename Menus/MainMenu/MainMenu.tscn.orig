@@ -1,0 +1,352 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Menus/BGOnion.png" type="Texture" id=2]
+[ext_resource path="res://Menus/MainMenu/Main Menu Title_Hobo.png" type="Texture" id=3]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menus/YesNoOverlay/YesNoOverlay.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GlowbugVFX.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=8]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 0.337278, 0.710059, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="Curve" id=3]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0 ), 0.0, 8.23475, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+
+flags = 4
+width = 2048
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 2
+emission_box_extents = Vector3( 300, 200, 1 )
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 0.5
+angular_velocity = 150.0
+angular_velocity_random = 0.25
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 0.1
+scale_random = 0.3
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
+
+[node name="MainMenu" type="Container"]
+
+pause_mode = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 310.0
+margin_top = 147.0
+margin_right = 350.0
+margin_bottom = 187.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Focus", "Mouse", "Pause" ]
+
+[node name="Background" type="TextureRect" parent="." index="0"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -310.0
+margin_top = -147.0
+margin_right = 330.0
+margin_bottom = 213.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Mouse", "Visibility" ]
+
+[node name="TextureRect" type="TextureRect" parent="." index="1"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -503.0
+margin_top = -226.0
+margin_right = 182.0
+margin_bottom = 87.0
+rect_scale = Vector2( 0.35, 0.35 )
+rect_pivot_offset = Vector2( 435.896, 183.536 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="NewGameButton" parent="." index="2" instance=ExtResource( 4 )]
+
+margin_left = -192.0
+margin_top = 13.0
+margin_right = -32.0
+margin_bottom = 45.0
+
+[node name="Label" parent="NewGameButton" index="0"]
+
+margin_right = 961.0
+rect_scale = Vector2( 0.25, 0.25 )
+text = "new game"
+
+[node name="ContinueButton" parent="." index="3" instance=ExtResource( 4 )]
+
+visible = false
+margin_left = -186.0
+margin_top = 13.0
+margin_right = -26.0
+margin_bottom = 45.0
+
+[node name="Label" parent="ContinueButton" index="0"]
+
+margin_right = 961.0
+rect_scale = Vector2( 0.25, 0.25 )
+custom_colors/font_color = Color( 0.0196078, 0.121569, 0.356863, 1 )
+text = "continue"
+
+[node name="LevelSelectorButton" parent="." index="4" instance=ExtResource( 4 )]
+
+margin_left = -175.0
+margin_top = 43.0
+margin_right = -15.0
+margin_bottom = 75.0
+
+[node name="Label" parent="LevelSelectorButton" index="0"]
+
+margin_right = 961.0
+rect_scale = Vector2( 0.25, 0.25 )
+text = "levels"
+
+[node name="ExtrasButton" parent="." index="5" instance=ExtResource( 4 )]
+
+margin_left = -179.0
+margin_top = 73.0
+margin_right = -19.0
+margin_bottom = 105.0
+
+[node name="Label" parent="ExtrasButton" index="0"]
+
+margin_right = 961.0
+rect_scale = Vector2( 0.25, 0.25 )
+text = "gallery"
+
+[node name="OptionsButton" parent="." index="6" instance=ExtResource( 4 )]
+
+margin_left = -182.0
+margin_top = 103.0
+margin_right = -22.0
+margin_bottom = 135.0
+
+[node name="Label" parent="OptionsButton" index="0"]
+
+margin_right = 533.0
+rect_scale = Vector2( 0.25, 0.25 )
+text = "options"
+
+[node name="CreditsButton" parent="." index="7" instance=ExtResource( 4 )]
+
+margin_left = -180.0
+margin_top = 133.0
+margin_right = -20.0
+margin_bottom = 165.0
+
+[node name="Label" parent="CreditsButton" index="0"]
+
+margin_right = 684.0
+rect_scale = Vector2( 0.25, 0.25 )
+text = "credits"
+
+[node name="QuitButton" parent="." index="8" instance=ExtResource( 4 )]
+
+margin_left = -168.0
+margin_top = 163.0
+margin_right = -8.0
+margin_bottom = 195.0
+focus_neighbour_bottom = NodePath("../PlayButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
+
+[node name="Label" parent="QuitButton" index="0"]
+
+margin_right = 533.0
+rect_scale = Vector2( 0.25, 0.25 )
+text = "quit"
+
+[node name="YesNoOverlayQuit" parent="." index="9" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+visible = false
+
+[node name="Label" parent="YesNoOverlayQuit" index="1"]
+
+margin_left = -26.0
+margin_top = -59.0
+margin_right = 407.0
+margin_bottom = 49.0
+rect_scale = Vector2( 0.35, 0.35 )
+text = "quit?"
+
+[node name="YesButton" parent="YesNoOverlayQuit" index="2"]
+
+margin_top = -11.0
+margin_bottom = 21.0
+
+[node name="NoButton" parent="YesNoOverlayQuit" index="3"]
+
+margin_top = 18.0
+margin_bottom = 50.0
+
+[node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 6 )]
+
+<<<<<<< working copy
+=======
+editor/display_folded = true
+visible = false
+>>>>>>> merge rev
+margin_left = 63.0
+margin_top = 50.0
+margin_right = 95.0
+margin_bottom = 79.0
+
+[node name="Master" parent="OptionsOverlay/Volume" index="0"]
+
+editor/display_folded = true
+
+[node name="Music" parent="OptionsOverlay/Volume" index="1"]
+
+editor/display_folded = true
+
+[node name="SFX" parent="OptionsOverlay/Volume" index="2"]
+
+editor/display_folded = true
+
+[node name="BackButton" parent="OptionsOverlay" index="2"]
+
+focus_neighbour_left = NodePath("../NewGameButton")
+
+[node name="NewGameButton" parent="OptionsOverlay" index="4" instance=ExtResource( 4 )]
+
+editor/display_folded = false
+margin_left = -155.0
+margin_top = 93.0
+margin_right = 5.0
+margin_bottom = 125.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../BackButton")
+focus_neighbour_bottom = NodePath(".")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
+
+[node name="Label" parent="OptionsOverlay/NewGameButton" index="0"]
+
+rect_scale = Vector2( 0.25, 0.25 )
+text = "new game"
+
+[node name="GlowbugVFX" parent="." index="11" instance=ExtResource( 7 )]
+
+visible = false
+show_behind_parent = true
+position = Vector2( -1.95227, 37.2379 )
+z_index = 0
+amount = 30
+process_material = SubResource( 5 )
+_sections_unfolded = [ "Process Material", "Visibility", "Z Index" ]
+
+[node name="Fade" parent="." index="12" instance=ExtResource( 8 )]
+
+margin_left = -396.0
+margin_top = -168.0
+margin_right = 372.0
+margin_bottom = 280.0
+
+[connection signal="pressed" from="NewGameButton" to="." method="_on_NewGameButton_pressed"]
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
+
+[connection signal="pressed" from="LevelSelectorButton" to="." method="_on_LevelSelectorButton_pressed"]
+
+[connection signal="pressed" from="ExtrasButton" to="." method="_on_ExtrasButton_pressed"]
+
+[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
+
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
+
+[connection signal="pressed" from="OptionsOverlay/BackButton" to="." method="_on_BackButton_pressed"]
+
+[connection signal="pressed" from="OptionsOverlay/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+
+
+[editable path="NewGameButton"]
+[editable path="ContinueButton"]
+[editable path="LevelSelectorButton"]
+[editable path="ExtrasButton"]
+[editable path="OptionsButton"]
+[editable path="CreditsButton"]
+[editable path="QuitButton"]
+[editable path="YesNoOverlayQuit"]
+[editable path="OptionsOverlay"]
+[editable path="OptionsOverlay/NewGameButton"]
+[editable path="Fade"]

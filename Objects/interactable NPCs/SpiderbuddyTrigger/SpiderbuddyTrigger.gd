@@ -16,7 +16,7 @@ export var keyWaitTime = 5
 onready var cd = 0
 
 signal triggered
-signal exited
+signal spiderHide
 
 var player
 
@@ -30,6 +30,7 @@ func _process(delta):
 		checkForPlayer()
 	if waitForKey == true && Input.is_action_just_pressed(key):
 		timer.stop()
+		emit_signal("spiderHide")
 		
 
 func _on_Area2D_body_entered(body):
