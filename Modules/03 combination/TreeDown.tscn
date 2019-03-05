@@ -21,7 +21,7 @@ extents = Vector2( 32, 32 )
 
 [node name="TwistedTree" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -0.88028, 33.7605 )
+position = Vector2( 2.72977, 54.5181 )
 
 [node name="Ladder" type="Node2D" parent="." index="1"]
 
