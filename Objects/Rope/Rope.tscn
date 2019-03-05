@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 38.8892, 7.26522 )
 
-[node name="Rope" type="Node2D" groups=[
+[node name="Rope" type="Node2D" index="0" groups=[
 "rayIgnore",
 ]]
 
@@ -34,7 +34,8 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="VineTop" parent="Sprite" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( -0.486206, -384.296 )
+position = Vector2( 0, -390.727 )
+scale = Vector2( 1, 1.15758 )
 
 [node name="Area2D" type="Area2D" parent="." index="1" groups=[
 "rayIgnore",
