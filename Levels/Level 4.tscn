@@ -897,6 +897,7 @@ position = Vector2( 11952.6, 734.565 )
 
 [node name="platform short3" parent="." index="25" instance=ExtResource( 36 )]
 
+editor/display_folded = true
 position = Vector2( 12432.6, 799.565 )
 
 [node name="trappedNPC" parent="platform short3" index="1" instance=ExtResource( 22 )]
@@ -925,7 +926,9 @@ position = Vector2( 12467.7, 958.997 )
 
 position = Vector2( 12144.6, 1183.56 )
 
-[node name="Background" parent="." index="29" instance=ExtResource( 45 )]
+[node name="Background Deko" type="Node2D" parent="." index="29"]
+
+[node name="Background" parent="." index="30" instance=ExtResource( 45 )]
 
 editor/display_folded = true
 
