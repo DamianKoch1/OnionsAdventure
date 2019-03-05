@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Ladder/Static Vine Top.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/Obstacles/Trees/BranchR.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/Obstacles/Trees/Tree Stump Big New v2.png" type="Texture" id=7]
+[ext_resource path="res://Decoration/Grass.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -148,6 +149,11 @@ bounce = 0.0
 position = Vector2( 1019.23, 801.484 )
 scale = Vector2( 33.1696, 96.2157 )
 shape = SubResource( 3 )
+
+[node name="Grass" parent="." index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 48, 128 )
+scale = Vector2( 0.378788, 0.378788 )
 
 [connection signal="body_entered" from="Ladder/Top" to="Ladder/Top" method="_on_Ladder_body_entered"]
 

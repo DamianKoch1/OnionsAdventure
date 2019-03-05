@@ -198,7 +198,6 @@ position = Vector2( -108.262, 22.5838 )
 
 [node name="stump m, stone big" parent="." index="7" instance=ExtResource( 16 )]
 
-editor/display_folded = true
 position = Vector2( 3297.43, -128.625 )
 
 [node name="Collectable07" parent="stump m, stone big" index="4" instance=ExtResource( 6 )]
@@ -221,6 +220,11 @@ position = Vector2( -353.827, -71.4841 )
 
 position = Vector2( -79.873, 85.1429 )
 scale = Vector2( 0.548139, 0.548139 )
+
+[node name="Grass" parent="stump m, stone big/ThornsUp" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( -13.8745, 87.4775 )
+scale = Vector2( 0.325107, 0.325107 )
 
 [node name="stump l, moving tendril" parent="." index="8" instance=ExtResource( 18 )]
 
@@ -316,6 +320,11 @@ position = Vector2( 7.14893, -161.867 )
 
 position = Vector2( 107.019, 102.466 )
 
+[node name="Grass" parent="stump s, stump l 3/ThornsGround" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( -61.3467, 56.8488 )
+scale = Vector2( 0.330722, 0.330722 )
+
 [node name="tree 1" parent="." index="11" instance=ExtResource( 22 )]
 
 editor/display_folded = true
@@ -339,6 +348,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="trappedNPC2" parent="platform" index="1" instance=ExtResource( 14 )]
 
+editor/display_folded = true
 position = Vector2( 14.3857, -21.9347 )
 
 [node name="Grass" parent="platform/trappedNPC2" index="10" instance=ExtResource( 10 )]
