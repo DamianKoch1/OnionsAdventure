@@ -1155,7 +1155,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1461, -69 ), Vector2( -2101, -69 ) ]
 }
 
-[node name="Gallery" type="Container" index="0"]
+[node name="Gallery" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -1205,6 +1205,7 @@ margin_right = -82.0
 margin_bottom = -9.0
 rect_scale = Vector2( 0.35, 0.35 )
 text = "gallery"
+_sections_unfolded = [ "BBCode", "Margin", "Visibility", "custom_colors", "custom_constants" ]
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
