@@ -1,24 +1,39 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Menus/ExtrasMenu/ExtrasMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Collectable/collectable placeholder.png" type="Texture" id=6]
-[ext_resource path="res://Objects/interactable NPCs/TrappedNPC/trapped placeholder.png" type="Texture" id=7]
+[ext_resource path="res://Menus/ExtrasMenu/Leaf.png" type="Texture" id=5]
+[ext_resource path="res://Camera/HUD/DandelionUI.png" type="Texture" id=6]
+[ext_resource path="res://Menus/ExtrasMenu/Eaglebunny Icon.png" type="Texture" id=7]
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=9]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=10]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 1.jpg" type="Texture" id=9]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 2.jpg" type="Texture" id=10]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 3.png" type="Texture" id=11]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 4.png" type="Texture" id=12]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 5.jpg" type="Texture" id=13]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 6.jpg" type="Texture" id=14]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 7.jpg" type="Texture" id=15]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 8.jpg" type="Texture" id=16]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 9.jpg" type="Texture" id=17]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 10.jpg" type="Texture" id=18]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 11.jpg" type="Texture" id=19]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 12.png" type="Texture" id=20]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 13.png" type="Texture" id=21]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 14.png" type="Texture" id=22]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 15.png" type="Texture" id=23]
+[ext_resource path="res://Menus/ExtrasMenu/unlockableImage/Concept 16.png" type="Texture" id=24]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=25]
 
 [sub_resource type="Animation" id=1]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("TextureButton:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -26,123 +41,267 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("TextureButton:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( -32, -32 ), Vector2( -192, -128 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( 128, 64 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.064, 0.0551724 ), Vector2( 0.192, 0.165517 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
 }
 
 [sub_resource type="Animation" id=2]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( -64, 64 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0.11136, 0.096 ), Vector2( 0.29696, 0.256 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -384, -128 ) ]
 }
 
 [sub_resource type="Animation" id=3]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( 128, -64 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0.064, 0.0551724 ), Vector2( 0.3, 0.258621 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -192, -256 ) ]
 }
 
 [sub_resource type="Animation" id=4]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( -64, -64 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0.064, 0.0551724 ), Vector2( 0.29696, 0.256 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -384, -256 ) ]
 }
 
 [sub_resource type="Animation" id=5]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("TextureButton:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -150,122 +309,267 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("TextureButton:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( -32, -32 ), Vector2( -192, -128 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( 128, 64 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0821678, 0.0708343 ), Vector2( 0.237037, 0.204342 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
 }
 
 [sub_resource type="Animation" id=6]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( -64, 64 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0.0640001, 0.0551724 ), Vector2( 0.29696, 0.256 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -384, -128 ) ]
 }
 
 [sub_resource type="Animation" id=7]
 
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( 128, -64 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0.064, 0.0551724 ), Vector2( 0.256, 0.22069 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -192, -256 ) ]
 }
 
 [sub_resource type="Animation" id=8]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( -64, -64 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0.101236, 0.0872727 ), Vector2( 0.269964, 0.232727 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -384, -256 ) ]
 }
 
 [sub_resource type="Animation" id=9]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("TextureButton:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -273,92 +577,267 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("TextureButton:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( -32, -32 ), Vector2( -192, -128 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( 128, 64 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.128, 0.110345 ), Vector2( 0.384, 0.331034 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
 }
 
 [sub_resource type="Animation" id=10]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( -64, 64 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0.044544, 0.0384 ), Vector2( 0.118784, 0.1024 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -384, -128 ) ]
 }
 
 [sub_resource type="Animation" id=11]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( 128, -64 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( 0.121109, 0.104404 ), Vector2( 0.32, 0.275862 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -192, -256 ) ]
 }
 
 [sub_resource type="Animation" id=12]
 
-resource_name = "unlock"
-length = 1.0
+resource_name = "expand"
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureButton:disabled")
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( -64, -64 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0666667, 0.0574713 ), Vector2( 0.266667, 0.229885 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -384, -256 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+
+resource_name = "expand"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureButton:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -366,23 +845,317 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/path = NodePath("TextureButton:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( -32, -32 ), Vector2( -192, -128 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( 128, 64 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.077385, 0.0667112 ), Vector2( 0.270882, 0.233519 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
 }
 
-[node name="Gallery" type="Container"]
+[sub_resource type="Animation" id=14]
+
+resource_name = "expand"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( -64, 64 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0773963, 0.0667209 ), Vector2( 0.270843, 0.233485 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -384, -128 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+
+resource_name = "expand"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( 128, -64 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0666665, 0.0574711 ), Vector2( 0.3, 0.25862 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -192, -256 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+
+resource_name = "expand"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 32, 16 ), Vector2( -64, -64 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0182857, 0.0157635 ), Vector2( 0.064, 0.0551724 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, 96 ), Vector2( 640, 320 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, -32 ), Vector2( -384, -256 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+
+resource_name = "1to2"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pages:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -181, -69 ), Vector2( -821, -69 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+
+resource_name = "2to3"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pages:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -821, -69 ), Vector2( -1461, -69 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+
+resource_name = "3to4"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pages:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1461, -69 ), Vector2( -2101, -69 ) ]
+}
+
+[node name="Gallery" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -400,10 +1173,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause" ]
+_sections_unfolded = [ "Pause", "Rect" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
+show_behind_parent = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -425,336 +1199,553 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Gallery Title" parent="." index="1" instance=ExtResource( 3 )]
 
-margin_left = -341.0
-margin_top = -164.0
-margin_right = -80.0
-margin_bottom = -38.0
+margin_left = -343.0
+margin_top = -135.0
+margin_right = -82.0
+margin_bottom = -9.0
+rect_scale = Vector2( 0.35, 0.35 )
+text = "gallery"
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -143.0
-margin_top = 123.0
-margin_right = 81.0
-margin_bottom = 159.0
+margin_left = -377.0
+margin_top = 83.0
+margin_right = -217.0
+margin_bottom = 115.0
+focus_neighbour_left = NodePath("../BackButton")
+focus_neighbour_top = NodePath("../NextButton")
+focus_neighbour_right = NodePath("../NextButton")
+focus_neighbour_bottom = NodePath(".")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="MainMenuButton" index="0"]
 
 margin_right = 1189.0
 margin_bottom = 273.0
-text = "Back"
+rect_scale = Vector2( 0.25, 0.25 )
+text = "back"
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
-margin_left = -373.0
+<<<<<<< working copy
+editor/display_folded = false
+margin_left = -338.0
 margin_top = -5.0
-margin_right = -149.0
+margin_right = -114.0
 margin_bottom = 31.0
+=======
+margin_left = -183.0
+margin_top = 107.0
+margin_right = 41.0
+margin_bottom = 143.0
+>>>>>>> merge rev
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../NextButton")
+focus_neighbour_bottom = NodePath("../MainMenuButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="BackButton" index="0"]
 
+visible = false
 margin_right = 1189.0
 margin_bottom = 273.0
 text = "back"
 
+[node name="Sprite" type="Sprite" parent="BackButton" index="1"]
+
+position = Vector2( 85, 18 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
 [node name="NextButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = 96.0
-margin_top = -5.0
-margin_right = 320.0
-margin_bottom = 31.0
+margin_left = -75.0
+margin_top = 107.0
+margin_right = 149.0
+margin_bottom = 143.0
+focus_neighbour_left = NodePath("../BackButton")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../MainMenuButton")
+_sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="NextButton" index="0"]
 
+visible = false
 margin_right = 1189.0
 margin_bottom = 273.0
 text = "next"
 
-[node name="OptionsOverlay" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Sprite" type="Sprite" parent="NextButton" index="1"]
 
-visible = false
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 32.0
-margin_bottom = 29.0
+position = Vector2( 84, 18 )
+rotation = 3.14159
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="Dandelions" type="Node2D" parent="." index="6"]
+[node name="Dandelions" type="Node2D" parent="." index="5"]
 
-position = Vector2( -125.117, -117.741 )
+editor/display_folded = true
+position = Vector2( -146.117, -106.741 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Dandelions" index="0"]
 
-position = Vector2( -18.3922, -29.4368 )
-scale = Vector2( 0.0853825, 0.0853824 )
+position = Vector2( -16.7318, -31.7577 )
+scale = Vector2( 0.50204, 0.50204 )
 texture = ExtResource( 6 )
 
 [node name="Label" parent="Dandelions" index="1" instance=ExtResource( 3 )]
 
-margin_left = 4.0
-margin_top = -40.0
-margin_right = 342.0
-margin_bottom = 86.0
-text = "000/150"
+margin_left = 8.0
+margin_top = -45.0
+margin_right = 346.0
+margin_bottom = 81.0
+text = "000/200"
 
-[node name="TrappedNPCs" type="Node2D" parent="." index="7"]
+[node name="TrappedNPCs" type="Node2D" parent="." index="6"]
 
-position = Vector2( 32.106, -146.164 )
+editor/display_folded = true
+position = Vector2( 9.10599, -135.565 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite2" type="Sprite" parent="TrappedNPCs" index="0"]
 
-scale = Vector2( 0.019993, 0.019993 )
+position = Vector2( -3, -2 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Label" parent="TrappedNPCs" index="1" instance=ExtResource( 3 )]
 
-margin_left = 38.0
-margin_top = -12.0
-margin_right = 376.0
-margin_bottom = 114.0
-text = "000/150"
+margin_left = 25.0
+margin_top = -16.0
+margin_right = 363.0
+margin_bottom = 110.0
+text = "0/12"
 
-[node name="Page1" type="Node2D" parent="." index="8"]
+[node name="Pages" type="Node2D" parent="." index="7"]
 
-[node name="unlockableImg" parent="Page1" index="0" instance=ExtResource( 8 )]
+show_behind_parent = true
+<<<<<<< working copy
+position = Vector2( -821, -69 )
+=======
+position = Vector2( -1461, -69 )
+>>>>>>> merge rev
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Page1" type="Node2D" parent="Pages" index="0"]
 
 editor/display_folded = true
-position = Vector2( -245, -69 )
+position = Vector2( 10, 0 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="unlockableImg" parent="Pages/Page1" index="0" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+show_behind_parent = true
+position = Vector2( 16, -11 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 dandelionsNeeded = 5
 NPCsNeeded = 1
 
-[node name="unlockableImg2" parent="Page1" index="1" instance=ExtResource( 8 )]
+[node name="Sprite" parent="Pages/Page1/unlockableImg" index="0"]
 
-editor/display_folded = true
-position = Vector2( -85, -69 )
+scale = Vector2( 0.064, 0.0551724 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="TextureButton" parent="Pages/Page1/unlockableImg" index="2"]
+
+show_behind_parent = true
+expand = true
+_sections_unfolded = [ "Mouse", "Rect", "Textures", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page1/unlockableImg" index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 1 )
+blend_times = [  ]
+
+[node name="unlockableImg2" parent="Pages/Page1" index="1" instance=ExtResource( 8 )]
+
+show_behind_parent = true
+position = Vector2( 176, -11 )
 dandelionsNeeded = 10
 NPCsNeeded = 1
 
-[node name="unlockableImg3" parent="Page1" index="2" instance=ExtResource( 8 )]
+[node name="Sprite" parent="Pages/Page1/unlockableImg2" index="0"]
 
-editor/display_folded = true
-position = Vector2( 75, -69 )
-dandelionsNeeded = 15
-NPCsNeeded = 2
+scale = Vector2( 0.11136, 0.096 )
+texture = ExtResource( 10 )
 
-[node name="unlockableImg4" parent="Page1" index="3" instance=ExtResource( 8 )]
+[node name="TextureButton" parent="Pages/Page1/unlockableImg2" index="2"]
 
-editor/display_folded = true
-position = Vector2( -245, 59 )
+show_behind_parent = true
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page1/unlockableImg2" index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 2 )
+blend_times = [  ]
+
+[node name="unlockableImg3" parent="Pages/Page1" index="2" instance=ExtResource( 8 )]
+
+position = Vector2( 16, 99 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
 dandelionsNeeded = 20
 NPCsNeeded = 2
 
-[node name="unlockableImg5" parent="Page1" index="4" instance=ExtResource( 8 )]
+[node name="Sprite" parent="Pages/Page1/unlockableImg3" index="0"]
 
-editor/display_folded = true
-position = Vector2( -85, 59 )
+scale = Vector2( 0.064, 0.0551724 )
+texture = ExtResource( 11 )
+
+[node name="TextureButton" parent="Pages/Page1/unlockableImg3" index="2"]
+
+_sections_unfolded = [ "Rect" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page1/unlockableImg3" index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 3 )
+blend_times = [  ]
+
+[node name="unlockableImg4" parent="Pages/Page1" index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 176, 99 )
 dandelionsNeeded = 25
 NPCsNeeded = 3
 
-[node name="unlockableImg6" parent="Page1" index="5" instance=ExtResource( 8 )]
+[node name="Sprite" parent="Pages/Page1/unlockableImg4" index="0"]
+
+scale = Vector2( 0.064, 0.0551724 )
+texture = ExtResource( 12 )
+
+[node name="TextureButton" parent="Pages/Page1/unlockableImg4" index="2"]
+
+_sections_unfolded = [ "Rect" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page1/unlockableImg4" index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Page2" type="Node2D" parent="Pages" index="1"]
 
 editor/display_folded = true
-position = Vector2( 75, 59 )
-dandelionsNeeded = 30
-NPCsNeeded = 3
+position = Vector2( 640, 0 )
 
-[node name="Page2" type="Node2D" parent="." index="9"]
+[node name="unlockableImg" parent="Pages/Page2" index="0" instance=ExtResource( 8 )]
 
-visible = false
-
-[node name="unlockableImg" parent="Page2" index="0" instance=ExtResource( 8 )]
-
-editor/display_folded = true
-position = Vector2( -245, -69 )
-dandelionsNeeded = 40
-NPCsNeeded = 4
-
-[node name="Sprite" parent="Page2/unlockableImg" index="0"]
-
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
-
-[node name="AnimationPlayer" parent="Page2/unlockableImg" index="1"]
-
-anims/unlock = SubResource( 1 )
-
-[node name="unlockableImg2" parent="Page2" index="1" instance=ExtResource( 8 )]
-
-editor/display_folded = true
-position = Vector2( -85, -69 )
+position = Vector2( 26, -11 )
 dandelionsNeeded = 50
 NPCsNeeded = 4
 
-[node name="Sprite" parent="Page2/unlockableImg2" index="0"]
+[node name="Sprite" parent="Pages/Page2/unlockableImg" index="0"]
 
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+scale = Vector2( 0.0821678, 0.0708343 )
+texture = ExtResource( 13 )
 
-[node name="AnimationPlayer" parent="Page2/unlockableImg2" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page2/unlockableImg" index="4"]
 
-anims/unlock = SubResource( 2 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 5 )
+blend_times = [  ]
 
-[node name="unlockableImg3" parent="Page2" index="2" instance=ExtResource( 8 )]
+[node name="unlockableImg2" parent="Pages/Page2" index="1" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 75, -69 )
+position = Vector2( 186, -11 )
 dandelionsNeeded = 60
 NPCsNeeded = 5
 
-[node name="Sprite" parent="Page2/unlockableImg3" index="0"]
+[node name="Sprite" parent="Pages/Page2/unlockableImg2" index="0"]
 
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+scale = Vector2( 0.0640001, 0.0551724 )
+texture = ExtResource( 14 )
 
-[node name="AnimationPlayer" parent="Page2/unlockableImg3" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page2/unlockableImg2" index="4"]
 
-anims/unlock = SubResource( 3 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 6 )
+blend_times = [  ]
 
-[node name="unlockableImg4" parent="Page2" index="3" instance=ExtResource( 8 )]
+[node name="unlockableImg3" parent="Pages/Page2" index="2" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( -245, 59 )
-dandelionsNeeded = 70
-NPCsNeeded = 5
-
-[node name="Sprite" parent="Page2/unlockableImg4" index="0"]
-
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
-
-[node name="AnimationPlayer" parent="Page2/unlockableImg4" index="1"]
-
-anims/unlock = SubResource( 4 )
-
-[node name="unlockableImg5" parent="Page2" index="4" instance=ExtResource( 8 )]
-
-editor/display_folded = true
-position = Vector2( -85, 59 )
+position = Vector2( 26, 99 )
 dandelionsNeeded = 80
 NPCsNeeded = 6
 
-[node name="Sprite" parent="Page2/unlockableImg5" index="0"]
+[node name="Sprite" parent="Pages/Page2/unlockableImg3" index="0"]
 
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+scale = Vector2( 0.064, 0.0551724 )
+texture = ExtResource( 15 )
 
-[node name="AnimationPlayer" parent="Page2/unlockableImg5" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page2/unlockableImg3" index="4"]
 
-anims/unlock = SubResource( 5 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 7 )
+blend_times = [  ]
 
-[node name="unlockableImg6" parent="Page2" index="5" instance=ExtResource( 8 )]
+[node name="unlockableImg4" parent="Pages/Page2" index="3" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 75, 59 )
+position = Vector2( 186, 99 )
 dandelionsNeeded = 90
 NPCsNeeded = 6
 
-[node name="Sprite" parent="Page2/unlockableImg6" index="0"]
+[node name="Sprite" parent="Pages/Page2/unlockableImg4" index="0"]
 
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 9 )
+scale = Vector2( 0.101236, 0.0872727 )
+texture = ExtResource( 16 )
 
-[node name="AnimationPlayer" parent="Page2/unlockableImg6" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page2/unlockableImg4" index="4"]
 
-anims/unlock = SubResource( 6 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 8 )
+blend_times = [  ]
 
-[node name="Page3" type="Node2D" parent="." index="10"]
+[node name="Page3" type="Node2D" parent="Pages" index="2"]
 
-visible = false
+position = Vector2( 1280, 0 )
 
-[node name="unlockableImg" parent="Page3" index="0" instance=ExtResource( 8 )]
+[node name="unlockableImg" parent="Pages/Page3" index="0" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( -245, -69 )
-dandelionsNeeded = 100
-NPCsNeeded = 7
-
-[node name="Sprite" parent="Page3/unlockableImg" index="0"]
-
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
-
-[node name="AnimationPlayer" parent="Page3/unlockableImg" index="1"]
-
-anims/unlock = SubResource( 7 )
-
-[node name="unlockableImg2" parent="Page3" index="1" instance=ExtResource( 8 )]
-
-editor/display_folded = true
-position = Vector2( -85, -69 )
+position = Vector2( 26, -11 )
 dandelionsNeeded = 110
 NPCsNeeded = 7
 
-[node name="Sprite" parent="Page3/unlockableImg2" index="0"]
+[node name="Sprite" parent="Pages/Page3/unlockableImg" index="0"]
 
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+scale = Vector2( 0.128, 0.110345 )
+texture = ExtResource( 17 )
 
-[node name="AnimationPlayer" parent="Page3/unlockableImg2" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page3/unlockableImg" index="4"]
 
-anims/unlock = SubResource( 8 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 9 )
+blend_times = [  ]
 
-[node name="unlockableImg3" parent="Page3" index="2" instance=ExtResource( 8 )]
+[node name="unlockableImg2" parent="Pages/Page3" index="1" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 75, -69 )
+position = Vector2( 186, -11 )
 dandelionsNeeded = 120
 NPCsNeeded = 8
 
-[node name="Sprite" parent="Page3/unlockableImg3" index="0"]
+[node name="Sprite" parent="Pages/Page3/unlockableImg2" index="0"]
 
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+scale = Vector2( 0.044544, 0.0384 )
+texture = ExtResource( 18 )
 
-[node name="AnimationPlayer" parent="Page3/unlockableImg3" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page3/unlockableImg2" index="4"]
 
-anims/unlock = SubResource( 9 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 10 )
+blend_times = [  ]
 
-[node name="unlockableImg4" parent="Page3" index="3" instance=ExtResource( 8 )]
+[node name="unlockableImg3" parent="Pages/Page3" index="2" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( -245, 59 )
-dandelionsNeeded = 130
-NPCsNeeded = 8
-
-[node name="Sprite" parent="Page3/unlockableImg4" index="0"]
-
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
-
-[node name="AnimationPlayer" parent="Page3/unlockableImg4" index="1"]
-
-anims/unlock = SubResource( 10 )
-
-[node name="unlockableImg5" parent="Page3" index="4" instance=ExtResource( 8 )]
-
-editor/display_folded = true
-position = Vector2( -85, 59 )
+position = Vector2( 26, 99 )
 dandelionsNeeded = 140
 NPCsNeeded = 9
 
-[node name="Sprite" parent="Page3/unlockableImg5" index="0"]
+[node name="Sprite" parent="Pages/Page3/unlockableImg3" index="0"]
 
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+scale = Vector2( 0.121109, 0.104404 )
+texture = ExtResource( 19 )
 
-[node name="AnimationPlayer" parent="Page3/unlockableImg5" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page3/unlockableImg3" index="4"]
 
-anims/unlock = SubResource( 11 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 11 )
+blend_times = [  ]
 
-[node name="unlockableImg6" parent="Page3" index="5" instance=ExtResource( 8 )]
+[node name="unlockableImg4" parent="Pages/Page3" index="3" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 75, 59 )
+position = Vector2( 186, 99 )
 dandelionsNeeded = 150
 NPCsNeeded = 9
 
-[node name="Sprite" parent="Page3/unlockableImg6" index="0"]
+[node name="Sprite" parent="Pages/Page3/unlockableImg4" index="0"]
 
-scale = Vector2( 0.172973, 0.230769 )
-texture = ExtResource( 10 )
+scale = Vector2( 0.0666667, 0.0574713 )
+texture = ExtResource( 20 )
 
-[node name="AnimationPlayer" parent="Page3/unlockableImg6" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page3/unlockableImg4" index="4"]
 
-anims/unlock = SubResource( 12 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 12 )
+blend_times = [  ]
+
+[node name="Page4" type="Node2D" parent="Pages" index="3"]
+
+position = Vector2( 1920, 0 )
+
+[node name="unlockableImg" parent="Pages/Page4" index="0" instance=ExtResource( 8 )]
+
+position = Vector2( 26.0002, -11 )
+dandelionsNeeded = 160
+NPCsNeeded = 10
+
+[node name="Sprite" parent="Pages/Page4/unlockableImg" index="0"]
+
+scale = Vector2( 0.077385, 0.0667112 )
+texture = ExtResource( 21 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page4/unlockableImg" index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 13 )
+blend_times = [  ]
+
+[node name="unlockableImg2" parent="Pages/Page4" index="1" instance=ExtResource( 8 )]
+
+position = Vector2( 186, -11 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
+dandelionsNeeded = 170
+NPCsNeeded = 11
+
+[node name="Sprite" parent="Pages/Page4/unlockableImg2" index="0"]
+
+scale = Vector2( 0.0773963, 0.0667209 )
+texture = ExtResource( 22 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page4/unlockableImg2" index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 14 )
+blend_times = [  ]
+
+[node name="unlockableImg3" parent="Pages/Page4" index="2" instance=ExtResource( 8 )]
+
+position = Vector2( 26.0002, 99 )
+dandelionsNeeded = 190
+NPCsNeeded = 12
+
+[node name="Sprite" parent="Pages/Page4/unlockableImg3" index="0"]
+
+scale = Vector2( 0.0666665, 0.0574711 )
+texture = ExtResource( 23 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page4/unlockableImg3" index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 15 )
+blend_times = [  ]
+
+[node name="unlockableImg4" parent="Pages/Page4" index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 186, 99 )
+dandelionsNeeded = 200
+NPCsNeeded = 12
+
+[node name="Sprite" parent="Pages/Page4/unlockableImg4" index="0"]
+
+scale = Vector2( 0.0182857, 0.0157635 )
+texture = ExtResource( 24 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pages/Page4/unlockableImg4" index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/expand = SubResource( 16 )
+blend_times = [  ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/1to2 = SubResource( 17 )
+anims/2to3 = SubResource( 18 )
+anims/3to4 = SubResource( 19 )
+blend_times = [  ]
+
+[node name="Page" parent="." index="9" instance=ExtResource( 3 )]
+
+margin_left = -265.0
+margin_top = 113.0
+margin_right = 27.0
+margin_bottom = 239.0
+rect_scale = Vector2( 0.25, 0.25 )
+text = "Page 1/4"
+
+[node name="Fade" parent="." index="10" instance=ExtResource( 25 )]
+
+editor/display_folded = true
+margin_left = -373.0
+margin_top = -197.0
+margin_right = 395.0
+margin_bottom = 251.0
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 
@@ -766,21 +1757,20 @@ anims/unlock = SubResource( 12 )
 [editable path="MainMenuButton"]
 [editable path="BackButton"]
 [editable path="NextButton"]
-[editable path="Page1/unlockableImg"]
-[editable path="Page1/unlockableImg2"]
-[editable path="Page1/unlockableImg3"]
-[editable path="Page1/unlockableImg4"]
-[editable path="Page1/unlockableImg5"]
-[editable path="Page1/unlockableImg6"]
-[editable path="Page2/unlockableImg"]
-[editable path="Page2/unlockableImg2"]
-[editable path="Page2/unlockableImg3"]
-[editable path="Page2/unlockableImg4"]
-[editable path="Page2/unlockableImg5"]
-[editable path="Page2/unlockableImg6"]
-[editable path="Page3/unlockableImg"]
-[editable path="Page3/unlockableImg2"]
-[editable path="Page3/unlockableImg3"]
-[editable path="Page3/unlockableImg4"]
-[editable path="Page3/unlockableImg5"]
-[editable path="Page3/unlockableImg6"]
+[editable path="Pages/Page1/unlockableImg"]
+[editable path="Pages/Page1/unlockableImg2"]
+[editable path="Pages/Page1/unlockableImg3"]
+[editable path="Pages/Page1/unlockableImg4"]
+[editable path="Pages/Page2/unlockableImg"]
+[editable path="Pages/Page2/unlockableImg2"]
+[editable path="Pages/Page2/unlockableImg3"]
+[editable path="Pages/Page2/unlockableImg4"]
+[editable path="Pages/Page3/unlockableImg"]
+[editable path="Pages/Page3/unlockableImg2"]
+[editable path="Pages/Page3/unlockableImg3"]
+[editable path="Pages/Page3/unlockableImg4"]
+[editable path="Pages/Page4/unlockableImg"]
+[editable path="Pages/Page4/unlockableImg2"]
+[editable path="Pages/Page4/unlockableImg3"]
+[editable path="Pages/Page4/unlockableImg4"]
+[editable path="Fade"]
