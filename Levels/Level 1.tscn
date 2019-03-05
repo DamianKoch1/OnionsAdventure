@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Modules/01 basic/Start.tscn" type="PackedScene" id=2]
@@ -24,16 +24,19 @@
 [ext_resource path="res://Modules/02 single/platform/platform clean.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Modules/03 combination/platform/enemyPlatform.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump l.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Objects/Ladder/Ladder.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=32]
-[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Objects/Ladder/Ladder.gd" type="Script" id=25]
+[ext_resource path="res://Objects/Ladder/Static Vine Top.png" type="Texture" id=26]
+[ext_resource path="res://Objects/Ladder/Static Vine Bottom.png" type="Texture" id=27]
+[ext_resource path="res://Objects/Ladder/LadderMid.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Modules/02 single/stones/stone stairs.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Modules/03 combination/stump s, stone.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Enemies/Worm/Worm.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Modules/02 single/tree/tree 2.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stmp l 2.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Modules/03 combination/stumpXstump/stump s, stump m 2.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Modules/01 basic/End2(wall).tscn" type="PackedScene" id=35]
+[ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=37]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -42,14 +45,24 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.07446, 170.337 )
 }
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Curve2D" id=4]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -339,15 +352,171 @@ position = Vector2( 127.565, -151.536 )
 
 position = Vector2( -37.1123, 7.24855 )
 
-[node name="Ladder" parent="stump s, stump l" index="8" instance=ExtResource( 25 )]
+[node name="Ladder" type="Node2D" parent="stump s, stump l" index="8"]
 
+editor/display_folded = true
 position = Vector2( 274.476, -155.77 )
 
-[node name="Ladder2" parent="stump s, stump l" index="9" instance=ExtResource( 25 )]
+[node name="Top" type="Area2D" parent="stump s, stump l/Ladder" index="0" groups=[
+"rayIgnore",
+]]
 
+editor/display_folded = true
+position = Vector2( 30.353, -81.725 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 25 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="stump s, stump l/Ladder/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 26 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump s, stump l/Ladder/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="stump s, stump l/Ladder" index="1" groups=[
+"rayIgnore",
+]]
+
+editor/display_folded = true
+position = Vector2( 30.353, 110.275 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 25 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="stump s, stump l/Ladder/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 27 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump s, stump l/Ladder/Bot" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid" parent="stump s, stump l/Ladder" index="2" instance=ExtResource( 28 )]
+
+position = Vector2( 30.353, 46.275 )
+
+[node name="Mid2" parent="stump s, stump l/Ladder" index="3" instance=ExtResource( 28 )]
+
+position = Vector2( 30.353, -17.725 )
+
+[node name="Ladder2" type="Node2D" parent="stump s, stump l" index="9"]
+
+editor/display_folded = true
 position = Vector2( 958.48, -168.77 )
 
-[node name="stone stairs" parent="." index="15" instance=ExtResource( 26 )]
+[node name="Top" type="Area2D" parent="stump s, stump l/Ladder2" index="0" groups=[
+"rayIgnore",
+]]
+
+editor/display_folded = true
+position = Vector2( 34.3496, -84.725 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 25 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="stump s, stump l/Ladder2/Top" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 26 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump s, stump l/Ladder2/Top" index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bot" type="Area2D" parent="stump s, stump l/Ladder2" index="1" groups=[
+"rayIgnore",
+]]
+
+editor/display_folded = true
+position = Vector2( 34.3496, 107.275 )
+z_index = -6
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 25 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="stump s, stump l/Ladder2/Bot" index="0"]
+
+modulate = Color( 0.675781, 0.57019, 0, 1 )
+position = Vector2( -32, -32 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 27 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump s, stump l/Ladder2/Bot" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mid3" parent="stump s, stump l/Ladder2" index="2" instance=ExtResource( 28 )]
+
+position = Vector2( 34.3496, 43.275 )
+
+[node name="Mid4" parent="stump s, stump l/Ladder2" index="3" instance=ExtResource( 28 )]
+
+position = Vector2( 34.3496, -20.725 )
+
+[node name="stone stairs" parent="." index="15" instance=ExtResource( 29 )]
 
 editor/display_folded = true
 position = Vector2( 7683.6, -223.729 )
@@ -390,17 +559,17 @@ position = Vector2( -992.222, -361.165 )
 position = Vector2( 8100.83, -160.957 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="stump s, stone" parent="." index="17" instance=ExtResource( 27 )]
+[node name="stump s, stone" parent="." index="17" instance=ExtResource( 30 )]
 
 editor/display_folded = true
 position = Vector2( 8644.83, -160.957 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Worm" parent="stump s, stone" index="3" instance=ExtResource( 28 )]
+[node name="Worm" parent="stump s, stone" index="3" instance=ExtResource( 31 )]
 
 position = Vector2( -268.421, 93.363 )
 
-[node name="Worm2" parent="stump s, stone" index="4" instance=ExtResource( 28 )]
+[node name="Worm2" parent="stump s, stone" index="4" instance=ExtResource( 31 )]
 
 position = Vector2( -209.522, 93.904 )
 
@@ -422,7 +591,7 @@ text = ""
 position = Vector2( -11.4678, 109.119 )
 scale = Vector2( 0.356969, 0.356969 )
 
-[node name="tree2" parent="." index="18" instance=ExtResource( 29 )]
+[node name="tree2" parent="." index="18" instance=ExtResource( 32 )]
 
 editor/display_folded = true
 position = Vector2( 9140.83, -160.957 )
@@ -432,7 +601,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 309.63, -44.124 )
 
-[node name="Worm3" parent="tree2" index="3" instance=ExtResource( 28 )]
+[node name="Worm3" parent="tree2" index="3" instance=ExtResource( 31 )]
 
 position = Vector2( 53.7559, 91.5891 )
 
@@ -444,7 +613,7 @@ position = Vector2( -127, 3 )
 
 position = Vector2( 43, -38 )
 
-[node name="stump s, stump l 2" parent="." index="19" instance=ExtResource( 30 )]
+[node name="stump s, stump l 2" parent="." index="19" instance=ExtResource( 33 )]
 
 editor/display_folded = true
 position = Vector2( 9858.83, -160.957 )
@@ -495,7 +664,7 @@ position = Vector2( 1312, -10 )
 position = Vector2( 72.0264, 86.5841 )
 scale = Vector2( 0.512413, 0.512413 )
 
-[node name="stump s, stump m 2" parent="." index="20" instance=ExtResource( 31 )]
+[node name="stump s, stump m 2" parent="." index="20" instance=ExtResource( 34 )]
 
 position = Vector2( 10604.8, -160.957 )
 _sections_unfolded = [ "Transform" ]
@@ -507,13 +676,13 @@ position = Vector2( -444.053, 103.843 )
 
 [node name="EnemyPath" parent="stump s, stump m 2/Enemy" index="0"]
 
-curve = SubResource( 2 )
+curve = SubResource( 4 )
 
 [node name="PathFollow2D" parent="stump s, stump m 2/Enemy/EnemyPath" index="1"]
 
 rotation = 0.00912847
 
-[node name="End2(wall)" parent="." index="21" instance=ExtResource( 32 )]
+[node name="End2(wall)" parent="." index="21" instance=ExtResource( 35 )]
 
 editor/display_folded = true
 position = Vector2( 11244.8, -160.957 )
@@ -524,11 +693,27 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -513.278, 110.508 )
 scale = Vector2( 0.403203, 0.403203 )
 
-[node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 33 )]
+[node name="StoneBigA" parent="End2(wall)" index="3" instance=ExtResource( 36 )]
 
 position = Vector2( -255.331, 33.9647 )
 
-[node name="Background" parent="." index="22" instance=ExtResource( 34 )]
+[node name="Background" parent="." index="22" instance=ExtResource( 37 )]
+
+[connection signal="body_entered" from="stump s, stump l/Ladder/Top" to="stump s, stump l/Ladder/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="stump s, stump l/Ladder/Top" to="stump s, stump l/Ladder/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="stump s, stump l/Ladder/Bot" to="stump s, stump l/Ladder/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="stump s, stump l/Ladder/Bot" to="stump s, stump l/Ladder/Bot" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="stump s, stump l/Ladder2/Top" to="stump s, stump l/Ladder2/Top" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="stump s, stump l/Ladder2/Top" to="stump s, stump l/Ladder2/Top" method="_on_Ladder_body_exited"]
+
+[connection signal="body_entered" from="stump s, stump l/Ladder2/Bot" to="stump s, stump l/Ladder2/Bot" method="_on_Ladder_body_entered"]
+
+[connection signal="body_exited" from="stump s, stump l/Ladder2/Bot" to="stump s, stump l/Ladder2/Bot" method="_on_Ladder_body_exited"]
 
 
 [editable path="stump l, stump m, stump s/Enemy"]
