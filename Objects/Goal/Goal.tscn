@@ -1,12 +1,12 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Objects/Goal/Goal.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Goal/End Level Crystal v2.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Goal/End of Level Crystal.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=3]
-[ext_resource path="res://Camera/HUD/Animals_Trapped.png" type="Texture" id=4]
-[ext_resource path="res://Camera/HUD/Animals_Free.png" type="Texture" id=5]
+[ext_resource path="res://Camera/HUD/UI_NPC2greyed.png" type="Texture" id=4]
+[ext_resource path="res://Camera/HUD/UI_NPC2.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=7]
+[ext_resource path="res://Camera/HUD/DandelionUI.png" type="Texture" id=7]
 [ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/Spawnpoint/RespawnCrystalVFX.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Goal/Onion_yeah_1.ogg" type="AudioStream" id=10]
@@ -293,7 +293,7 @@ tracks/4/keys = {
 } ]
 }
 
-[node name="Goal" type="Area2D" groups=[
+[node name="Goal" type="Area2D" index="0" groups=[
 "Persist",
 ]]
 
@@ -381,7 +381,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="NPCs" type="Node2D" parent="CanvasLayer/Collectables" index="0"]
 
-editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 320.857, 224.58 )
 scale = Vector2( 1.10352, 1.10352 )
@@ -399,7 +398,7 @@ texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 225, 100 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="NPCsFull" type="Sprite" parent="CanvasLayer/Collectables/NPCs" index="1"]
 
@@ -445,8 +444,8 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Collectables/Dandelions" index="1"]
 
-position = Vector2( 31.1305, 28.4576 )
-scale = Vector2( 0.477468, 0.477468 )
+position = Vector2( 33.0065, 33.1475 )
+scale = Vector2( 0.452136, 0.452136 )
 texture = ExtResource( 7 )
 
 [node name="Fade" parent="CanvasLayer" index="1" instance=ExtResource( 8 )]
@@ -461,23 +460,23 @@ scale = Vector2( 0.745897, 0.745897 )
 [node name="OnionYeah1" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 
 stream = ExtResource( 10 )
-volume_db = 0.0
+volume_db = 10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
-bus = "Master"
+bus = "SoundEffects"
 area_mask = 1
 
 [node name="OnionYeah2" type="AudioStreamPlayer2D" parent="SFX" index="1"]
 
 stream = ExtResource( 11 )
-volume_db = 0.0
+volume_db = 10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
-bus = "Master"
+bus = "SoundEffects"
 area_mask = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]

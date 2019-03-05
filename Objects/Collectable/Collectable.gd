@@ -19,7 +19,8 @@ func _on_Area2D_body_entered(body):
 		body.emit_signal("collectedDandelion")
 		saveCollected()
 		SaveGame.saveGame()
-		queue_free()
+		hide()
+		$AudioStreamPlayer2D.playing = true
 
 #save level number, own name and collected state
 func saveCollected():

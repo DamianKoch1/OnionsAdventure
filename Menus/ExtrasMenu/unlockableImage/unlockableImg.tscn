@@ -2,9 +2,11 @@
 
 [ext_resource path="res://Menus/ExtrasMenu/unlockableImage/unlockableImg.gd" type="Script" id=1]
 [ext_resource path="res://Menus/placeholder menu bg.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=3]
+[ext_resource path="res://Camera/HUD/DandelionUI.png" type="Texture" id=3]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/ExtrasMenu/Eaglebunny Icon.png" type="Texture" id=5]
+
+
 
 [sub_resource type="Animation" id=1]
 
@@ -40,6 +42,7 @@ tracks/1/keys = {
 
 [node name="unlockableImg" type="Node2D" index="0"]
 
+editor/display_folded = true
 position = Vector2( 32, 32 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
@@ -116,8 +119,8 @@ scale = Vector2( 0.652807, 0.652807 )
 
 [node name="Sprite" type="Sprite" parent="Overlay/Dandelions" index="0"]
 
-position = Vector2( -10.1033, -27.9344 )
-scale = Vector2( 0.396177, 0.396177 )
+position = Vector2( -15.4594, -27.0887 )
+scale = Vector2( 0.533003, 0.533003 )
 texture = ExtResource( 3 )
 
 [node name="Label" parent="Overlay/Dandelions" index="1" instance=ExtResource( 4 )]

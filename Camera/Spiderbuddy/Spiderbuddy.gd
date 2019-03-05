@@ -1,20 +1,33 @@
 extends Node2D
 
 onready var anim = $AnimationPlayer
-onready var fullAnim = $AnimationPlayer2
 onready var label = $Speechbubble/Label
-
+onready var idleTimer = $IdleTimer
 
 #setup spiderbuddy triggers
 func _ready():
 	for trigger in get_tree().get_nodes_in_group("SpiderbuddyTrigger"):
 		trigger.connect("triggered", self, "onTriggerEntered")
+		trigger.connect("spiderHide", self, "onSelectedKeyPressed")
 
-func onTriggerEntered(text, delay):
+func onTriggerEntered(text, idleDuration):
 	label.text = text
-	if fullAnim.is_playing() == false:
-		fullAnim.play("anim")
+	idleTimer.wait_time = idleDuration
+	if anim.is_playing() == false:
+		anim.play("show")
 
-#used by "anim"
-func playAnim(name):
-	anim.play(name)
+#when key spiderbuddy waits for is pressed he should either not appear (in trigger script) or go up again
+func onSelectedKeyPressed():
+	if anim.get_current_animation() == "blabbing":
+		anim.play("hide")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "show":
+		anim.play("blabbing")
+		idleTimer.start()
+
+
+func _on_IdleTimer_timeout():
+	anim.play("hide")
+	idleTimer.stop()
