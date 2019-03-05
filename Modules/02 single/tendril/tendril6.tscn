@@ -149,8 +149,8 @@ scale = Vector2( 0.318182, 0.318182 )
 
 [node name="VineTop" parent="." index="9" instance=ExtResource( 10 )]
 
-position = Vector2( 0, -32 )
-scale = Vector2( 0.638669, 0.638669 )
+position = Vector2( -2.13142, -35.4118 )
+scale = Vector2( 0.40289, 0.40289 )
 
 [connection signal="body_entered" from="Ladder/Top" to="Ladder/Top" method="_on_Ladder_body_entered"]
 

@@ -64,7 +64,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -73,7 +73,6 @@ _sections_unfolded = [ "Z Index" ]
 [node name="LevelStartEndLong" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( -515.043, -61.1685 )
-scale = Vector2( 0.396922, 0.396922 )
 
 [node name="Start" parent="." index="1" instance=ExtResource( 3 )]
 
