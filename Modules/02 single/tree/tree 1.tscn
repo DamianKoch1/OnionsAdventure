@@ -3,11 +3,11 @@
 [ext_resource path="res://Objects/Obstacles/Trees/Twistedtree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/new tiles/newTilemap.tscn" type="PackedScene" id=2]
 
-[node name="tree 1" type="Node2D"]
+[node name="tree 1" type="Node2D" index="0"]
 
 [node name="TwistedTree" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -184.823, -190.243 )
+position = Vector2( -179.434, -172.281 )
 
 [node name="new tiles" type="Node2D" parent="." index="1"]
 
