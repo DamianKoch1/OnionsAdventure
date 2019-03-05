@@ -242,6 +242,10 @@ func trackFallSpeed():
 	if motion.y > highestFallSpeed:
 		highestFallSpeed = motion.y
 
+func playGoalAnim():
+	animTreePlayer.active = false
+	anim.play("Onion_Joyful")
+
 #remove self from current parent, attach to new parent and keep transform
 func attachTo(obj):
 	if obj.get_class() != "KinematicBody2D":

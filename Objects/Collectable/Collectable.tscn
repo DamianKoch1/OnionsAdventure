@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Objects/Collectable/Collectable.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Collectable/Dandelion final.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Spawnpoint/crystal_activation.wav" type="AudioStream" id=3]
+[ext_resource path="res://Objects/Collectable/collecting.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -13,7 +13,7 @@ extents = Vector2( 38.4315, 54.4014 )
 
 resource_name = "swinging"
 length = 1.5
-loop = false
+loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:rotation_degrees")
@@ -55,6 +55,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 position = Vector2( 0.167877, -0.771442 )
+rotation = -0.705211
 scale = Vector2( 0.483857, 0.477807 )
 texture = ExtResource( 2 )
 offset = Vector2( 1.2052, 1.75394 )
@@ -72,7 +73,7 @@ blend_times = [  ]
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
 
 stream = ExtResource( 3 )
-volume_db = 0.0
+volume_db = 10.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
