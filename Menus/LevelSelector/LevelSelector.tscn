@@ -5,8 +5,8 @@
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menus/LevelSelector/LevelButton/LevelButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Menus/ExtrasMenu/Leaf.png" type="Texture" id=7]
+[ext_resource path="res://Menus/ExtrasMenu/Leaf.png" type="Texture" id=6]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=1]
 
@@ -65,7 +65,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1280, 0 ), Vector2( -1920, 0 ) ]
 }
 
-[node name="LevelSelector" type="Container" index="0"]
+[node name="LevelSelector" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -147,7 +147,7 @@ margin_bottom = 59.0
 focus_neighbour_left = NodePath("../../PrevButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../../NextButton")
-focus_neighbour_bottom = NodePath(".")
+focus_neighbour_bottom = NodePath("../../BackButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures", "Visibility" ]
 
 [node name="Label" parent="LevelButtons/Level1Button" index="0"]
@@ -167,7 +167,7 @@ margin_bottom = 59.0
 focus_neighbour_left = NodePath("../../PrevButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../../NextButton")
-focus_neighbour_bottom = NodePath(".")
+focus_neighbour_bottom = NodePath("../../BackButton")
 levelId = 2
 
 [node name="Label" parent="LevelButtons/Level2Button" index="0"]
@@ -183,7 +183,7 @@ margin_bottom = 59.0
 focus_neighbour_left = NodePath("../../PrevButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../../NextButton")
-focus_neighbour_bottom = NodePath(".")
+focus_neighbour_bottom = NodePath("../../BackButton")
 levelId = 3
 
 [node name="Label" parent="LevelButtons/Level3Button" index="0"]
@@ -199,7 +199,7 @@ margin_bottom = 59.0
 focus_neighbour_left = NodePath("../../PrevButton")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../../NextButton")
-focus_neighbour_bottom = NodePath(".")
+focus_neighbour_bottom = NodePath("../../BackButton")
 levelId = 4
 
 [node name="Label" parent="LevelButtons/Level4Button" index="0"]
@@ -226,14 +226,7 @@ anims/2to3 = SubResource( 2 )
 anims/3to4 = SubResource( 3 )
 blend_times = [  ]
 
-[node name="Fade" parent="." index="5" instance=ExtResource( 6 )]
-
-margin_left = -373.0
-margin_top = -197.0
-margin_right = 395.0
-margin_bottom = 251.0
-
-[node name="NextButton" parent="." index="6" instance=ExtResource( 3 )]
+[node name="NextButton" parent="." index="5" instance=ExtResource( 3 )]
 
 editor/display_folded = false
 margin_left = 107.0
@@ -249,12 +242,11 @@ text = ""
 
 position = Vector2( 81.647, 15.126 )
 scale = Vector2( -0.452483, 0.452483 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="PrevButton" parent="." index="7" instance=ExtResource( 3 )]
+[node name="PrevButton" parent="." index="6" instance=ExtResource( 3 )]
 
-editor/display_folded = false
 margin_left = -373.0
 margin_top = -69.0
 margin_right = -213.0
@@ -269,8 +261,15 @@ text = ""
 position = Vector2( 69.522, 15.126 )
 rotation = -3.14159
 scale = Vector2( -0.452483, -0.452483 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Fade" parent="." index="7" instance=ExtResource( 7 )]
+
+margin_left = -373.0
+margin_top = -197.0
+margin_right = 395.0
+margin_bottom = 251.0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
