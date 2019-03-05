@@ -1155,7 +1155,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1461, -69 ), Vector2( -2101, -69 ) ]
 }
 
-[node name="Gallery" type="Container" index="0"]
+[node name="Gallery" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
