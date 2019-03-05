@@ -1173,7 +1173,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause" ]
+_sections_unfolded = [ "Pause", "Rect" ]
 
 [node name="Background" type="TextureRect" parent="." index="0"]
 
@@ -1225,6 +1225,7 @@ text = "back"
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
+editor/display_folded = false
 margin_left = -338.0
 margin_top = -5.0
 margin_right = -114.0
@@ -1319,7 +1320,7 @@ text = "0/12"
 [node name="Pages" type="Node2D" parent="." index="7"]
 
 show_behind_parent = true
-position = Vector2( -181, -69 )
+position = Vector2( -821, -69 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Page1" type="Node2D" parent="Pages" index="0"]
