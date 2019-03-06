@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/SFX/Onion_hurt.ogg" type="AudioStream" id=2]
@@ -20,11 +20,10 @@
 [ext_resource path="res://Player/OnionSprite/Base.tres" type="Animation" id=18]
 [ext_resource path="res://Player/goku-ss-2-a.png" type="Texture" id=19]
 [ext_resource path="res://Particles2D.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Player/landing test.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Player/shield.png" type="Texture" id=22]
-[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Player/OnionLandingL.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Player/OnionLandingR.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Player/shield.png" type="Texture" id=21]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Player/OnionLandingL.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Player/OnionLandingR.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -229,7 +228,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 editor/display_folded = true
 position = Vector2( 3.68967, -23.4437 )
-scale = Vector2( 0.5, 0.443543 )
+scale = Vector2( 0.5, 0.446616 )
 z_index = 1
 texture = ExtResource( 7 )
 offset = Vector2( -6.37161, -58.5187 )
@@ -238,7 +237,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="OnionHair" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="0"]
 
 position = Vector2( 0.759048, -92.0257 )
-rotation = 0.824238
+rotation = 0.778826
 scale = Vector2( 1, 1.01406 )
 texture = ExtResource( 8 )
 offset = Vector2( -1.19385, -22.9981 )
@@ -261,7 +260,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 [node name="OnionEarL" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="3"]
 
 position = Vector2( -6.44182, -95.2643 )
-rotation = 0.213569
+rotation = 0.244321
 scale = Vector2( 1.00907, 1.10266 )
 z_index = -2
 texture = ExtResource( 11 )
@@ -271,7 +270,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 [node name="OnionTail" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="4"]
 
 position = Vector2( -36.8987, -12.9473 )
-rotation = -0.21915
+rotation = -0.182359
 scale = Vector2( 1.00228, 1.10883 )
 z_index = -2
 texture = ExtResource( 12 )
@@ -281,7 +280,7 @@ _sections_unfolded = [ "Z Index" ]
 [node name="OnionEarR" type="Sprite" parent="Onion/Colisionposition/Höhenposition/OnionBody" index="5"]
 
 position = Vector2( -15.4798, -94.3764 )
-rotation = -0.610731
+rotation = -0.593821
 scale = Vector2( 1.03379, 1.07951 )
 z_index = -2
 texture = ExtResource( 13 )
@@ -314,18 +313,6 @@ data = {
 "position": Vector2( 688, 102 ),
 "type": "output"
 }, {
-"filter": [  ],
-"from": "Onion_JumpUp",
-"id": "jumpup",
-"position": Vector2( 77, 356 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Onion_JumpDown",
-"id": "jumpdown",
-"position": Vector2( 408, 268 ),
-"type": "animation"
-}, {
 "autorestart": false,
 "autorestart_delay": 0.0,
 "autorestart_random_delay": 0.0,
@@ -336,6 +323,12 @@ data = {
 "mix": false,
 "position": Vector2( 362, 94 ),
 "type": "oneshot"
+}, {
+"filter": [  ],
+"from": "Onion_JumpUp",
+"id": "jumpup",
+"position": Vector2( 77, 356 ),
+"type": "animation"
 }, {
 "filter": [  ],
 "from": "Onion_Walk",
@@ -352,6 +345,12 @@ data = {
 } ],
 "type": "transition",
 "xfade": 0.3
+}, {
+"filter": [  ],
+"from": "Onion_JumpDown",
+"id": "jumpdown",
+"position": Vector2( 408, 268 ),
+"type": "animation"
 }, {
 "autorestart": false,
 "autorestart_delay": 1.0,
@@ -398,23 +397,17 @@ z_index = -100
 z_as_relative = false
 _sections_unfolded = [ "Process Material", "Transform", "Z Index" ]
 
-[node name="landingTest" parent="." index="5" instance=ExtResource( 21 )]
-
-position = Vector2( 0, 10.8072 )
-z_index = 5
-_sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Z Index" ]
-
-[node name="debugInvincible" type="Sprite" parent="." index="6"]
+[node name="debugInvincible" type="Sprite" parent="." index="5"]
 
 visible = false
 modulate = Color( 1, 1, 1, 0.33149 )
 position = Vector2( 0.632835, -40.9846 )
 scale = Vector2( -0.239719, 0.239719 )
 z_index = 5
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -422,10 +415,14 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="Fade" parent="CanvasLayer" index="0" instance=ExtResource( 23 )]
+[node name="Fade" parent="CanvasLayer" index="0" instance=ExtResource( 22 )]
 
-[node name="OnionLandingL" parent="." index="8" instance=ExtResource( 24 )]
+[node name="OnionLandingL" parent="." index="7" instance=ExtResource( 23 )]
 
-[node name="OnionLandingR" parent="." index="9" instance=ExtResource( 25 )]
+local_coords = false
+
+[node name="OnionLandingR" parent="." index="8" instance=ExtResource( 24 )]
+
+local_coords = false
 
 
