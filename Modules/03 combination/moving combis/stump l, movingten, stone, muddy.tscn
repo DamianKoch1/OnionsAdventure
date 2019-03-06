@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Objects/Obstacles/Stones/StoneMedium3A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Rope/Rope.tscn" type="PackedScene" id=2]
@@ -16,6 +16,11 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 9.3325, 9.25747 )
+
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 9.3325, 9.25747 )
@@ -89,19 +94,19 @@ position = Vector2( 1019.23, 801.484 )
 scale = Vector2( 33.1696, 96.2157 )
 shape = SubResource( 2 )
 
-[node name="stump l 10" type="Node2D" parent="." index="5"]
+[node name="stump l 8" type="Node2D" parent="." index="5"]
 
-position = Vector2( -174.999, 37.0011 )
+position = Vector2( -173.817, 38.4785 )
 scale = Vector2( 0.0989583, 0.104806 )
 z_index = 50
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="Ast 3" parent="stump l 10" index="0" instance=ExtResource( 6 )]
+[node name="Ast 3" parent="stump l 8" index="0" instance=ExtResource( 6 )]
 
-position = Vector2( -1008.17, -271.763 )
+position = Vector2( -985.901, -270.656 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="Stump" type="Sprite" parent="stump l 10" index="1"]
+[node name="Stump" type="Sprite" parent="stump l 8" index="1"]
 
 position = Vector2( 18.1129, 78.6706 )
 scale = Vector2( 2.10025, 2.34684 )
@@ -112,7 +117,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 10/Stump" index="0"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="stump l 8/Stump" index="0"]
 
 position = Vector2( -487.288, -321.291 )
 scale = Vector2( 0.476135, 0.426104 )
@@ -124,11 +129,11 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="stump l 10/Stump/StaticBody2D2" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stump l 8/Stump/StaticBody2D2" index="0"]
 
 position = Vector2( 1019.23, 801.484 )
 scale = Vector2( 33.1696, 96.2157 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Grass" parent="." index="6" instance=ExtResource( 7 )]
 
