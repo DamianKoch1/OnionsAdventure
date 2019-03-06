@@ -1374,6 +1374,7 @@ _sections_unfolded = [ "Scroll" ]
 
 [node name="Bottom" type="ParallaxLayer" parent="Background/Foreground" index="0"]
 
+position = Vector2( 6.13867, -78.5745 )
 z_index = 4096
 z_as_relative = false
 motion_scale = Vector2( 1.2, 0.8 )
@@ -1383,18 +1384,362 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Fern1" parent="Background/Foreground/Bottom" index="0" instance=ExtResource( 54 )]
 
-position = Vector2( 394.538, 421.407 )
+position = Vector2( 96.2004, 517.17 )
 
-[node name="Fern2" parent="Background/Foreground/Bottom" index="1" instance=ExtResource( 55 )]
+[node name="Fern23" parent="Background/Foreground/Bottom" index="1" instance=ExtResource( 54 )]
 
-position = Vector2( 644.528, 427.376 )
+position = Vector2( 6159.3, 959 )
 
-[node name="Grass" parent="Background/Foreground/Bottom" index="2" instance=ExtResource( 56 )]
+[node name="Fern2" parent="Background/Foreground/Bottom" index="2" instance=ExtResource( 55 )]
 
-position = Vector2( 889.46, 427.376 )
+position = Vector2( 316.725, 510.862 )
+
+[node name="Fern3" parent="Background/Foreground/Bottom" index="3" instance=ExtResource( 55 )]
+
+position = Vector2( 739.063, 524.367 )
+
+[node name="Fern6" parent="Background/Foreground/Bottom" index="4" instance=ExtResource( 55 )]
+
+position = Vector2( 1673.36, 648.367 )
+
+[node name="Fern7" parent="Background/Foreground/Bottom" index="5" instance=ExtResource( 55 )]
+
+position = Vector2( 1969.25, 803.061 )
+
+[node name="Fern8" parent="Background/Foreground/Bottom" index="6" instance=ExtResource( 55 )]
+
+position = Vector2( 2166.91, 884.091 )
+
+[node name="Fern9" parent="Background/Foreground/Bottom" index="7" instance=ExtResource( 55 )]
+
+position = Vector2( 2353.52, 941.794 )
+
+[node name="Fern22" parent="Background/Foreground/Bottom" index="8" instance=ExtResource( 55 )]
+
+position = Vector2( 5891.83, 1065.79 )
+
+[node name="Fern27" parent="Background/Foreground/Bottom" index="9" instance=ExtResource( 55 )]
+
+position = Vector2( 7291.1, 1313.49 )
+
+[node name="Fern28" parent="Background/Foreground/Bottom" index="10" instance=ExtResource( 55 )]
+
+position = Vector2( 7879.33, 1396.49 )
+
+[node name="Fern40" parent="Background/Foreground/Bottom" index="11" instance=ExtResource( 55 )]
+
+position = Vector2( 12607.8, 1060.2 )
+
+[node name="Fern14" parent="Background/Foreground/Bottom" index="12" instance=ExtResource( 55 )]
+
+position = Vector2( 3940.97, 965.121 )
+
+[node name="Fern21" parent="Background/Foreground/Bottom" index="13" instance=ExtResource( 55 )]
+
+position = Vector2( 5713.81, 1049.83 )
+
+[node name="Fern37" parent="Background/Foreground/Bottom" index="14" instance=ExtResource( 55 )]
+
+position = Vector2( 11315.9, 1158.51 )
+
+[node name="Fern38" parent="Background/Foreground/Bottom" index="15" instance=ExtResource( 55 )]
+
+position = Vector2( 11572.2, 1058.04 )
+
+[node name="Fern39" parent="Background/Foreground/Bottom" index="16" instance=ExtResource( 55 )]
+
+position = Vector2( 11871.5, 1055.99 )
+
+[node name="Fern4" parent="Background/Foreground/Bottom" index="17" instance=ExtResource( 55 )]
+
+position = Vector2( 1184.73, 519.456 )
+
+[node name="Fern5" parent="Background/Foreground/Bottom" index="18" instance=ExtResource( 55 )]
+
+position = Vector2( 1406.95, 534.188 )
+
+[node name="Fern10" parent="Background/Foreground/Bottom" index="19" instance=ExtResource( 55 )]
+
+position = Vector2( 3145.41, 931.972 )
+
+[node name="Fern11" parent="Background/Foreground/Bottom" index="20" instance=ExtResource( 55 )]
+
+position = Vector2( 2861.8, 934.427 )
+
+[node name="Fern12" parent="Background/Foreground/Bottom" index="21" instance=ExtResource( 55 )]
+
+position = Vector2( 3352.89, 916.011 )
+
+[node name="Fern13" parent="Background/Foreground/Bottom" index="22" instance=ExtResource( 55 )]
+
+position = Vector2( 3713.84, 922.15 )
+
+[node name="Fern15" parent="Background/Foreground/Bottom" index="23" instance=ExtResource( 55 )]
+
+position = Vector2( 4149.69, 958.982 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern16" parent="Background/Foreground/Bottom" index="24" instance=ExtResource( 55 )]
+
+position = Vector2( 4686.2, 963.893 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern17" parent="Background/Foreground/Bottom" index="25" instance=ExtResource( 55 )]
+
+position = Vector2( 4796.7, 1017.91 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern18" parent="Background/Foreground/Bottom" index="26" instance=ExtResource( 55 )]
+
+position = Vector2( 5114.68, 1042.47 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern19" parent="Background/Foreground/Bottom" index="27" instance=ExtResource( 55 )]
+
+position = Vector2( 5324.62, 1042.47 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern20" parent="Background/Foreground/Bottom" index="28" instance=ExtResource( 55 )]
+
+position = Vector2( 5523.51, 1043.69 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern24" parent="Background/Foreground/Bottom" index="29" instance=ExtResource( 55 )]
+
+position = Vector2( 6331.44, 1001.49 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern26" parent="Background/Foreground/Bottom" index="30" instance=ExtResource( 55 )]
+
+position = Vector2( 7171.2, 1237.5 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern25" parent="Background/Foreground/Bottom" index="31" instance=ExtResource( 55 )]
+
+position = Vector2( 6562.06, 992.446 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern29" parent="Background/Foreground/Bottom" index="32" instance=ExtResource( 55 )]
+
+position = Vector2( 8080.24, 1329.82 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern36" parent="Background/Foreground/Bottom" index="33" instance=ExtResource( 55 )]
+
+position = Vector2( 10624.3, 1162.45 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern31" parent="Background/Foreground/Bottom" index="34" instance=ExtResource( 55 )]
+
+position = Vector2( 8614.18, 1227.58 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern32" parent="Background/Foreground/Bottom" index="35" instance=ExtResource( 55 )]
+
+position = Vector2( 8793.67, 1170.78 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern33" parent="Background/Foreground/Bottom" index="36" instance=ExtResource( 55 )]
+
+position = Vector2( 9636.6, 989.012 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern34" parent="Background/Foreground/Bottom" index="37" instance=ExtResource( 55 )]
+
+position = Vector2( 9852.45, 993.556 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern35" parent="Background/Foreground/Bottom" index="38" instance=ExtResource( 55 )]
+
+position = Vector2( 10084.2, 979.923 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Fern30" parent="Background/Foreground/Bottom" index="39" instance=ExtResource( 55 )]
+
+position = Vector2( 8263.96, 1311.45 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass" parent="Background/Foreground/Bottom" index="40" instance=ExtResource( 56 )]
+
+position = Vector2( 515.003, 496.129 )
+
+[node name="Grass2" parent="Background/Foreground/Bottom" index="41" instance=ExtResource( 56 )]
+
+position = Vector2( -75.5333, 513.317 )
+
+[node name="Grass3" parent="Background/Foreground/Bottom" index="42" instance=ExtResource( 56 )]
+
+position = Vector2( 928.747, 480.168 )
+
+[node name="Grass4" parent="Background/Foreground/Bottom" index="43" instance=ExtResource( 56 )]
+
+position = Vector2( 1508.23, 622.585 )
+
+[node name="Grass5" parent="Background/Foreground/Bottom" index="44" instance=ExtResource( 56 )]
+
+position = Vector2( 2511.29, 938.11 )
+
+[node name="Grass6" parent="Background/Foreground/Bottom" index="45" instance=ExtResource( 56 )]
+
+position = Vector2( 2759.29, 860.764 )
+
+[node name="Grass7" parent="Background/Foreground/Bottom" index="46" instance=ExtResource( 56 )]
+
+position = Vector2( 2955.72, 855.853 )
+
+[node name="Grass8" parent="Background/Foreground/Bottom" index="47" instance=ExtResource( 56 )]
+
+position = Vector2( 4329.55, 951.615 )
+
+[node name="Grass9" parent="Background/Foreground/Bottom" index="48" instance=ExtResource( 56 )]
+
+position = Vector2( 4519.85, 963.893 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass10" parent="Background/Foreground/Bottom" index="49" instance=ExtResource( 56 )]
+
+position = Vector2( 4961.83, 1006.86 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass11" parent="Background/Foreground/Bottom" index="50" instance=ExtResource( 56 )]
+
+position = Vector2( 6021.36, 1004.41 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass12" parent="Background/Foreground/Bottom" index="51" instance=ExtResource( 56 )]
+
+position = Vector2( 6784.07, 984.813 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass13" parent="Background/Foreground/Bottom" index="52" instance=ExtResource( 56 )]
+
+position = Vector2( 6889.58, 1025.51 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass14" parent="Background/Foreground/Bottom" index="53" instance=ExtResource( 56 )]
+
+position = Vector2( 7009.5, 1136.26 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass15" parent="Background/Foreground/Bottom" index="54" instance=ExtResource( 56 )]
+
+position = Vector2( 7717.98, 1307.77 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass16" parent="Background/Foreground/Bottom" index="55" instance=ExtResource( 56 )]
+
+position = Vector2( 8458.67, 1278.23 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass17" parent="Background/Foreground/Bottom" index="56" instance=ExtResource( 56 )]
+
+position = Vector2( 9033.5, 1139.64 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass18" parent="Background/Foreground/Bottom" index="57" instance=ExtResource( 56 )]
+
+position = Vector2( 9153.92, 1110.1 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass19" parent="Background/Foreground/Bottom" index="58" instance=ExtResource( 56 )]
+
+position = Vector2( 9465.19, 962.417 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass20" parent="Background/Foreground/Bottom" index="59" instance=ExtResource( 56 )]
+
+position = Vector2( 10255.9, 941.968 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass21" parent="Background/Foreground/Bottom" index="60" instance=ExtResource( 56 )]
+
+position = Vector2( 10420.4, 972.653 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass22" parent="Background/Foreground/Bottom" index="61" instance=ExtResource( 56 )]
+
+position = Vector2( 10803.9, 1167.45 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass23" parent="Background/Foreground/Bottom" index="62" instance=ExtResource( 56 )]
+
+position = Vector2( 10888, 1163.35 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass24" parent="Background/Foreground/Bottom" index="63" instance=ExtResource( 56 )]
+
+position = Vector2( 11019.2, 1175.66 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass25" parent="Background/Foreground/Bottom" index="64" instance=ExtResource( 56 )]
+
+position = Vector2( 11142.2, 1120.29 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass26" parent="Background/Foreground/Bottom" index="65" instance=ExtResource( 56 )]
+
+position = Vector2( 11743, 1050.57 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass27" parent="Background/Foreground/Bottom" index="66" instance=ExtResource( 56 )]
+
+position = Vector2( 12091.6, 1036.22 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass28" parent="Background/Foreground/Bottom" index="67" instance=ExtResource( 56 )]
+
+position = Vector2( 12290.5, 1038.27 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass29" parent="Background/Foreground/Bottom" index="68" instance=ExtResource( 56 )]
+
+position = Vector2( 12446.4, 1032.12 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass30" parent="Background/Foreground/Bottom" index="69" instance=ExtResource( 56 )]
+
+position = Vector2( 13053.3, 945.996 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass31" parent="Background/Foreground/Bottom" index="70" instance=ExtResource( 56 )]
+
+position = Vector2( 13190.7, 917.288 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
 
 [node name="Top" type="ParallaxLayer" parent="Background/Foreground" index="1"]
 
+visible = false
 motion_scale = Vector2( 0.3, 0.8 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
