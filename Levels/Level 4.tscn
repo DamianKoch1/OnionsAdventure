@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modules/03 combination/moving combis/stump m, movingten, mealy.tscn" type="PackedScene" id=2]
@@ -47,7 +47,18 @@
 [ext_resource path="res://Decoration/LevelStartEndLong.tscn" type="PackedScene" id=45]
 [ext_resource path="res://Decoration/Bush.tscn" type="PackedScene" id=46]
 [ext_resource path="res://Decoration/Stone.tscn" type="PackedScene" id=47]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Assets/Background/Background 0.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Background/Background 1.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Background/Background 2.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Background/Background 3.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Background/Background 5 fireflies optional.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Background/Background 4 gradient.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Background/Decoratives/Fern1.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Assets/Background/Decoratives/Fern2.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Assets/Background/Decoratives/Grass.tscn" type="PackedScene" id=56]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna1.tscn" type="PackedScene" id=57]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna2.tscn" type="PackedScene" id=58]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna3.tscn" type="PackedScene" id=59]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -1237,9 +1248,176 @@ scale = Vector2( 0.345881, 0.345881 )
 position = Vector2( 13281.7, 1075.17 )
 scale = Vector2( 0.345881, 0.345881 )
 
-[node name="Background" parent="." index="31" instance=ExtResource( 48 )]
+[node name="Background" type="ParallaxBackground" parent="." index="31"]
 
-editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="Layer0" type="ParallaxLayer" parent="Background" index="0"]
+
+motion_scale = Vector2( 0.06, 0.1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="Background/Layer0" index="0"]
+
+position = Vector2( 384, 96 )
+scale = Vector2( 0.697774, 0.544817 )
+texture = ExtResource( 48 )
+
+[node name="Layer1" type="ParallaxLayer" parent="Background" index="1"]
+
+z_index = 1
+motion_scale = Vector2( 0.12, 0.2 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="Background/Layer1" index="0"]
+
+position = Vector2( 2016, 224 )
+scale = Vector2( 0.697774, 0.544817 )
+texture = ExtResource( 49 )
+region_enabled = true
+region_rect = Rect2( 76, 248, 6584, 896 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Layer2" type="ParallaxLayer" parent="Background" index="2"]
+
+z_index = 2
+motion_scale = Vector2( 0.18, 0.3 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="Background/Layer2" index="0"]
+
+position = Vector2( 1760, 192 )
+scale = Vector2( 0.697774, 0.544817 )
+texture = ExtResource( 50 )
+region_enabled = true
+region_rect = Rect2( -14, 328, 6342, 812 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Layer3" type="ParallaxLayer" parent="Background" index="3"]
+
+z_index = 3
+motion_scale = Vector2( 0.24, 0.4 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="Background/Layer3" index="0"]
+
+position = Vector2( 1856, 352 )
+scale = Vector2( 0.697774, 0.544817 )
+texture = ExtResource( 51 )
+region_enabled = true
+region_rect = Rect2( 52, 96, 6620, 1200 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Layer4" type="ParallaxLayer" parent="Background" index="4"]
+
+z_index = 4
+motion_scale = Vector2( 0.3, 0.5 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="Background/Layer4" index="0"]
+
+position = Vector2( 1679.3, 90.9769 )
+scale = Vector2( 0.697774, 0.544817 )
+texture = ExtResource( 52 )
+region_enabled = true
+region_rect = Rect2( 84, 452, 6588, 1168 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Camera" type="ParallaxLayer" parent="Background" index="5"]
+
+z_index = 5
+motion_scale = Vector2( 0, 0 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="Background/Camera" index="0"]
+
+position = Vector2( -142.854, -31.533 )
+scale = Vector2( 0.479476, 0.374372 )
+texture = ExtResource( 53 )
+
+[node name="Foreground" type="ParallaxBackground" parent="Background" index="6"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+_sections_unfolded = [ "Scroll" ]
+
+[node name="Bottom" type="ParallaxLayer" parent="Background/Foreground" index="0"]
+
+z_index = 4096
+z_as_relative = false
+motion_scale = Vector2( 1.2, 0.8 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Fern1" parent="Background/Foreground/Bottom" index="0" instance=ExtResource( 54 )]
+
+position = Vector2( 394.538, 421.407 )
+
+[node name="Fern2" parent="Background/Foreground/Bottom" index="1" instance=ExtResource( 55 )]
+
+position = Vector2( 644.528, 427.376 )
+
+[node name="Grass" parent="Background/Foreground/Bottom" index="2" instance=ExtResource( 56 )]
+
+position = Vector2( 889.46, 427.376 )
+
+[node name="Top" type="ParallaxLayer" parent="Background/Foreground" index="1"]
+
+motion_scale = Vector2( 0.3, 0.8 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Lianna1" parent="Background/Foreground/Top" index="0" instance=ExtResource( 57 )]
+
+position = Vector2( 94.4021, 159.826 )
+
+[node name="Lianna2" parent="Background/Foreground/Top" index="1" instance=ExtResource( 58 )]
+
+position = Vector2( 291.892, 172.373 )
+
+[node name="Lianna3" parent="Background/Foreground/Top" index="2" instance=ExtResource( 59 )]
+
+position = Vector2( 504.24, 160.746 )
+
+[node name="Static" type="ParallaxLayer" parent="Background/Foreground" index="2"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Z Index" ]
 
 [connection signal="body_entered" from="movingplatdown/Ladder/Top" to="movingplatdown/Ladder/Top" method="_on_Ladder_body_entered"]
 
@@ -1275,4 +1453,3 @@ editor/display_folded = true
 
 
 [editable path="platform up/Enemy"]
-[editable path="Background"]
