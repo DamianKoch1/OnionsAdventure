@@ -9,7 +9,7 @@
 [ext_resource path="res://Menus/MenuText.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=8]
 
-[node name="OptionsOverlay" type="Container" index="0"]
+[node name="OptionsOverlay" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -56,7 +56,7 @@ position = Vector2( 43, -5 )
 
 [node name="Master" type="Node2D" parent="Volume" index="0"]
 
-position = Vector2( 45, -1.36462 )
+position = Vector2( 45, -17.3646 )
 scale = Vector2( 1, 0.999999 )
 
 [node name="MasterSlider" type="HSlider" parent="Volume/Master" index="0"]
@@ -65,9 +65,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -189.0
+margin_left = -195.0
 margin_top = -96.0
-margin_right = 558.0
+margin_right = 552.0
 margin_bottom = 39.0
 rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -102,11 +102,11 @@ margin_left = -352.0
 margin_top = -93.0
 margin_right = -70.0
 margin_bottom = 33.0
-text = "Master"
+text = "Master volume"
 
 [node name="Music" type="Node2D" parent="Volume" index="1"]
 
-position = Vector2( 45, 77.2354 )
+position = Vector2( 45, 61.2354 )
 
 [node name="MusicSlider" type="HSlider" parent="Volume/Music" index="0"]
 
@@ -114,9 +114,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -192.0
+margin_left = -195.0
 margin_top = -102.0
-margin_right = 555.0
+margin_right = 552.0
 margin_bottom = 33.0
 rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -151,11 +151,11 @@ margin_left = -352.0
 margin_top = -99.0
 margin_right = -70.0
 margin_bottom = 27.0
-text = "Music"
+text = "Music volume"
 
 [node name="SFX" type="Node2D" parent="Volume" index="2"]
 
-position = Vector2( 45, 121.21 )
+position = Vector2( 45, 105.21 )
 
 [node name="SFXSlider" type="HSlider" parent="Volume/SFX" index="0"]
 
@@ -201,15 +201,6 @@ margin_top = -71.0
 margin_right = 182.0
 margin_bottom = 55.0
 text = "Sound effects"
-
-[node name="Volume" parent="Volume" index="3" instance=ExtResource( 7 )]
-
-margin_left = -324.0
-margin_top = -129.0
-margin_right = -42.0
-margin_bottom = -3.0
-rect_scale = Vector2( 0.33, 0.33 )
-text = "Volume"
 
 [node name="BackButton" parent="." index="2" instance=ExtResource( 8 )]
 
