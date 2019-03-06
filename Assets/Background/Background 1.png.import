@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/volume slider 2.png-2ff2e5bb60895368ea15c22f54dafb5e.stex"
+path="res://.import/Background 1.png-11a54ead25f630c4a413ce528edcc38c.stex"
 
 [deps]
 
-source_file="res://Menus/OptionsOverlay/volume slider 2.png"
-dest_files=[ "res://.import/volume slider 2.png-2ff2e5bb60895368ea15c22f54dafb5e.stex" ]
+source_file="res://Assets/Background/Background 1.png"
+dest_files=[ "res://.import/Background 1.png-11a54ead25f630c4a413ce528edcc38c.stex" ]
 
 [params]
 
