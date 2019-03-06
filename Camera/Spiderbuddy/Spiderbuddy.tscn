@@ -223,7 +223,7 @@ tracks/4/keys = {
 "values": [ -24.1365, -24.1365, 0.0 ]
 }
 
-[node name="Spiderbuddy" type="Node2D" index="0"]
+[node name="Spiderbuddy" type="Node2D"]
 
 z_index = 10
 script = ExtResource( 1 )
@@ -314,6 +314,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Speechbubble" index="0"]
 
+visible = false
 position = Vector2( 189.812, 40.4354 )
 scale = Vector2( 0.414157, 0.192334 )
 texture = ExtResource( 9 )
@@ -326,6 +327,7 @@ texture = ExtResource( 10 )
 
 [node name="Sprite3" type="Sprite" parent="Speechbubble" index="2"]
 
+visible = false
 position = Vector2( 294.382, 57.8232 )
 rotation = 3.13697
 scale = Vector2( 0.2222, 0.192334 )
