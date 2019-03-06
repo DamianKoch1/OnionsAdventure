@@ -223,7 +223,7 @@ tracks/4/keys = {
 "values": [ -24.1365, -24.1365, 0.0 ]
 }
 
-[node name="Spiderbuddy" type="Node2D" index="0"]
+[node name="Spiderbuddy" type="Node2D"]
 
 z_index = 10
 script = ExtResource( 1 )
@@ -341,7 +341,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 64.0
 margin_right = 910.0
-margin_bottom = 418.0
+margin_bottom = 702.0
 rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
