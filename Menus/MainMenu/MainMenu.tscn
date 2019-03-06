@@ -292,18 +292,6 @@ margin_top = 50.0
 margin_right = 95.0
 margin_bottom = 79.0
 
-[node name="Master" parent="OptionsOverlay/Volume" index="0"]
-
-editor/display_folded = true
-
-[node name="Music" parent="OptionsOverlay/Volume" index="1"]
-
-editor/display_folded = true
-
-[node name="SFX" parent="OptionsOverlay/Volume" index="2"]
-
-editor/display_folded = true
-
 [node name="BackButton" parent="OptionsOverlay" index="2"]
 
 focus_neighbour_right = NodePath("../NewGameButton")
