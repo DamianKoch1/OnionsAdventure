@@ -27,7 +27,6 @@ destroyRadius = 250
 
 [node name="Movingplatform2" parent="." index="1" instance=ExtResource( 1 )]
 
-editor/display_folded = true
 position = Vector2( 121.781, -89.6642 )
 
 [node name="State2" parent="Movingplatform2" index="1"]
@@ -39,10 +38,10 @@ position = Vector2( -259.763, 0 )
 position = Vector2( -0.768585, -49.4953 )
 scale = Vector2( 0.484363, 0.484363 )
 
-[node name="Grass" parent="Movingplatform2" index="4" instance=ExtResource( 4 )]
+[node name="Grass" parent="Movingplatform2/ThornsGround" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( -28.6048, -23.1348 )
-scale = Vector2( 0.194962, 0.194962 )
+position = Vector2( -57.4697, 54.423 )
+scale = Vector2( 0.402512, 0.402512 )
 
 [node name="StoneBigA" parent="." index="2" instance=ExtResource( 5 )]
 
