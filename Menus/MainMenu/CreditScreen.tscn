@@ -965,7 +965,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="OstSfxCredits" type="Node2D" parent="Credits" index="1"]
 
 editor/display_folded = true
-position = Vector2( 13.1291, 220.331 )
+position = Vector2( 13.1291, 237.331 )
 
 [node name="Credit 1" type="Label" parent="Credits/OstSfxCredits" index="0"]
 
