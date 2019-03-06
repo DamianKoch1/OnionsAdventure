@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Panel2.2.png-d5cc5ce5c959db4cc7202d595347d5db.stex"
+path="res://.import/Button_Large_Highlighted.png-eb1b92e09e50470cb05c59cdbd807b5e.stex"
 
 [deps]
 
-source_file="res://Menus/StoryPanels/NewGamePanels/Panel2.2.png"
-dest_files=[ "res://.import/Panel2.2.png-d5cc5ce5c959db4cc7202d595347d5db.stex" ]
+source_file="res://Menus/MenuButton/Buttons/Button_Large_Highlighted.png"
+dest_files=[ "res://.import/Button_Large_Highlighted.png-eb1b92e09e50470cb05c59cdbd807b5e.stex" ]
 
 [params]
 
