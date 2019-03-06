@@ -20,6 +20,7 @@ func onTriggerEntered(text, idleDuration):
 func onSelectedKeyPressed():
 	if anim.get_current_animation() == "blabbing":
 		anim.play("hide")
+		idleTimer.stop()
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
