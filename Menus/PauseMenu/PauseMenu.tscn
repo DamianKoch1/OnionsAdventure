@@ -8,7 +8,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
 
-[node name="PauseMenu" type="Container"]
+[node name="PauseMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -171,22 +171,24 @@ margin_right = 45.0
 
 [node name="Label" parent="YesNoOverlayRestart" index="1"]
 
-margin_left = -41.0
+margin_left = -40.0
+margin_right = 393.0
 rect_scale = Vector2( 0.3, 0.3 )
 text = "Restart?"
 
 [node name="YesButton" parent="YesNoOverlayRestart" index="2"]
 
-margin_left = -85.0
-margin_right = 75.0
+margin_left = -84.0
+margin_right = 76.0
 
 [node name="NoButton" parent="YesNoOverlayRestart" index="3"]
 
-margin_left = -80.0
-margin_right = 80.0
+margin_left = -79.0
+margin_right = 81.0
 
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 visible = false
 margin_left = 56.0
 margin_top = 41.0
