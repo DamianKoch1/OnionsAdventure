@@ -81,7 +81,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D" index="0"]
+[node name="Level 1" type="Node2D"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -1134,11 +1134,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Tree1" parent="Background/Layer4" index="1" instance=ExtResource( 48 )]
 
-position = Vector2( 1120, 128 )
-
 [node name="Tree2" parent="Background/Layer4" index="2" instance=ExtResource( 49 )]
-
-position = Vector2( 1792, -64 )
 
 [node name="Camera" type="ParallaxLayer" parent="Background" index="5"]
 
