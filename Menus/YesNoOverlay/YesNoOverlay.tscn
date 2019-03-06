@@ -5,7 +5,7 @@
 [ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=4]
 
-[node name="YesNoOverlay" type="Container"]
+[node name="YesNoOverlay" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -75,11 +75,10 @@ _sections_unfolded = [ "Rect", "custom_colors", "custom_constants" ]
 
 [node name="YesButton" parent="." index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = false
-margin_left = -81.0
-margin_top = -15.0
-margin_right = 79.0
-margin_bottom = 17.0
+margin_left = -126.0
+margin_top = -16.0
+margin_right = 34.0
+margin_bottom = 16.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath(".")
@@ -88,19 +87,20 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="YesButton" index="0"]
 
-margin_left = 68.0
-margin_right = 1193.0
+margin_left = 66.0
+margin_top = 3.0
+margin_right = 1191.0
+margin_bottom = 111.0
 rect_scale = Vector2( 0.23, 0.23 )
 custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
 text = "Yes"
 
 [node name="NoButton" parent="." index="3" instance=ExtResource( 4 )]
 
-editor/display_folded = false
-margin_left = -78.0
-margin_top = 16.0
-margin_right = 82.0
-margin_bottom = 48.0
+margin_left = -126.0
+margin_top = 24.0
+margin_right = 34.0
+margin_bottom = 56.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../YesButton")
 focus_neighbour_right = NodePath(".")
@@ -110,7 +110,9 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 [node name="Label" parent="NoButton" index="0"]
 
 margin_left = 68.0
+margin_top = 3.0
 margin_right = 1193.0
+margin_bottom = 111.0
 rect_scale = Vector2( 0.23, 0.23 )
 custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
 text = "No"

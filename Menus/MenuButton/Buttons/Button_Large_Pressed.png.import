@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placeholder panel3.jpg-1cff00b8898e6570aeb930a74d0cc210.stex"
+path="res://.import/Button_Large_Pressed.png-ac37ce7d6f07e42b24732f45bea86ed9.stex"
 
 [deps]
 
-source_file="res://Menus/StoryPanels/NewGamePanels/placeholder panel3.jpg"
-dest_files=[ "res://.import/placeholder panel3.jpg-1cff00b8898e6570aeb930a74d0cc210.stex" ]
+source_file="res://Menus/MenuButton/Buttons/Button_Large_Pressed.png"
+dest_files=[ "res://.import/Button_Large_Pressed.png-ac37ce7d6f07e42b24732f45bea86ed9.stex" ]
 
 [params]
 

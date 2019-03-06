@@ -362,14 +362,17 @@ stream = ExtResource( 9 )
 
 [node name="SkipButton" parent="." index="2" instance=ExtResource( 11 )]
 
-editor/display_folded = false
-margin_left = 480.0
-margin_top = 320.0
-margin_right = 640.0
-margin_bottom = 352.0
+margin_left = 396.0
+margin_top = 310.0
+margin_right = 556.0
+margin_bottom = 342.0
 
 [node name="Label" parent="SkipButton" index="0"]
 
+margin_left = 60.0
+margin_top = 0.0
+margin_right = 532.0
+margin_bottom = 108.0
 text = "Skip"
 
 [node name="BGMPlayer" parent="." index="3" instance=ExtResource( 12 )]

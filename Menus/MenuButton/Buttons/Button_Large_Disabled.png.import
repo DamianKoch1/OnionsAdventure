@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mockup_WIP.jpg-d5c1bcb1d56e4e8ce489a3f17b1ec9cb.stex"
+path="res://.import/Button_Large_Disabled.png-b296d732548edec2ee5ea0bdf710ba46.stex"
 
 [deps]
 
-source_file="res://Menus/PauseMenu/Mockup_WIP.jpg"
-dest_files=[ "res://.import/Mockup_WIP.jpg-d5c1bcb1d56e4e8ce489a3f17b1ec9cb.stex" ]
+source_file="res://Menus/MenuButton/Buttons/Button_Large_Disabled.png"
+dest_files=[ "res://.import/Button_Large_Disabled.png-b296d732548edec2ee5ea0bdf710ba46.stex" ]
 
 [params]
 

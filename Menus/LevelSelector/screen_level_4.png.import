@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pressed.png-8e91dd7eb26f691f022ec79ff5fbc45f.stex"
+path="res://.import/screen_level_4.png-7811a38e956405bc70cfe4d2fa286c56.stex"
 
 [deps]
 
-source_file="res://Menus/MenuButton/pressed.png"
-dest_files=[ "res://.import/pressed.png-8e91dd7eb26f691f022ec79ff5fbc45f.stex" ]
+source_file="res://Menus/LevelSelector/screen_level_4.png"
+dest_files=[ "res://.import/screen_level_4.png-7811a38e956405bc70cfe4d2fa286c56.stex" ]
 
 [params]
 
@@ -16,9 +16,9 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
-flags/mipmaps=true
-flags/anisotropic=true
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
