@@ -52,12 +52,12 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Volume" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 43, -5 )
 
 [node name="Master" type="Node2D" parent="Volume" index="0"]
 
-position = Vector2( 45, -1.36462 )
+editor/display_folded = true
+position = Vector2( 45, -22.3646 )
 scale = Vector2( 1, 0.999999 )
 
 [node name="MasterSlider" type="HSlider" parent="Volume/Master" index="0"]
@@ -103,11 +103,12 @@ margin_left = -352.0
 margin_top = -93.0
 margin_right = -70.0
 margin_bottom = 33.0
-text = "Master"
+text = "Master volume"
 
 [node name="Music" type="Node2D" parent="Volume" index="1"]
 
-position = Vector2( 45, 77.2354 )
+editor/display_folded = true
+position = Vector2( 45, 56.2354 )
 
 [node name="MusicSlider" type="HSlider" parent="Volume/Music" index="0"]
 
@@ -152,11 +153,12 @@ margin_left = -352.0
 margin_top = -99.0
 margin_right = -70.0
 margin_bottom = 27.0
-text = "Music"
+text = "Music volume"
 
 [node name="SFX" type="Node2D" parent="Volume" index="2"]
 
-position = Vector2( 45, 121.21 )
+editor/display_folded = true
+position = Vector2( 45, 100.21 )
 
 [node name="SFXSlider" type="HSlider" parent="Volume/SFX" index="0"]
 
@@ -202,15 +204,6 @@ margin_top = -71.0
 margin_right = 182.0
 margin_bottom = 55.0
 text = "Sound effects"
-
-[node name="Volume" parent="Volume" index="3" instance=ExtResource( 7 )]
-
-margin_left = -324.0
-margin_top = -129.0
-margin_right = -42.0
-margin_bottom = -3.0
-rect_scale = Vector2( 0.33, 0.33 )
-text = "Volume"
 
 [node name="BackButton" parent="." index="2" instance=ExtResource( 8 )]
 

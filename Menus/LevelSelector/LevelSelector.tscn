@@ -108,6 +108,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="BackButton" parent="." index="1" instance=ExtResource( 3 )]
 
+editor/display_folded = false
 margin_left = -356.0
 margin_top = 79.0
 margin_right = -196.0
@@ -244,7 +245,7 @@ margin_bottom = 259.0
 text = "Finding Home
 "
 
-[node name="Level Selection Title" parent="." index="3" instance=ExtResource( 5 )]
+[node name="LevelSelectionTitle" parent="." index="3" instance=ExtResource( 5 )]
 
 margin_left = -148.0
 margin_top = -169.0
