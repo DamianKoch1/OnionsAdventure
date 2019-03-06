@@ -63,7 +63,7 @@ extents = Vector2( 32, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 2" type="Node2D" index="0"]
+[node name="Level 2" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -87,14 +87,13 @@ position = Vector2( 47.6684, 42.0298 )
 
 [node name="firesalamander, thorn" parent="." index="2" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 768.93, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="SpiderbuddyTrigger" parent="firesalamander, thorn" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -87.7417, 66.0553 )
-text = "There is a Fire Salamander over there. Try jumping onto him and see what’s going to happen!"
+text = "Look, it’s a Fire Salamander! Try jumping onto him!"
 keyWaitTime = 0
 
 [node name="stump s, tendril, thorn" parent="." index="3" instance=ExtResource( 7 )]
@@ -202,7 +201,6 @@ position = Vector2( -14.7329, -12.2774 )
 
 [node name="MovingPlat2" parent="." index="7" instance=ExtResource( 14 )]
 
-editor/display_folded = true
 position = Vector2( 3584.93, 96 )
 
 [node name="Collectable19" parent="MovingPlat2" index="2" instance=ExtResource( 4 )]
@@ -216,7 +214,7 @@ position = Vector2( 82, -97 )
 [node name="SpiderbuddyTrigger" parent="MovingPlat2" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -63.2805, 73.7838 )
-text = "These platforms will help you to overcome big height differences. You can jump onto them!"
+text = "These platforms will help you to cross big height differences."
 keyWaitTime = 0
 
 [node name="stone 2 (up)" parent="." index="8" instance=ExtResource( 15 )]
@@ -892,6 +890,7 @@ position = Vector2( 443028, -12488.4 )
 
 [node name="Background" type="ParallaxBackground" parent="." index="23"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
