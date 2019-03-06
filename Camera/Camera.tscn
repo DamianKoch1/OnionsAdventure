@@ -11,7 +11,7 @@
 [ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Camera/BGM_Level_loop.ogg" type="AudioStream" id=10]
 
-[node name="Camera" type="Camera2D"]
+[node name="Camera" type="Camera2D" index="0"]
 
 pause_mode = 2
 position = Vector2( 32, 32 )
@@ -44,7 +44,7 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Pause", "Tra
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
 
-layer = 2
+layer = 20
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
