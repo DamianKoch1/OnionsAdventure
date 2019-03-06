@@ -1,16 +1,85 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menus/StoryPanels/EndGamePanels/EndGamePanels.gd" type="Script" id=1]
 [ext_resource path="res://Menus/StoryPanels/PanelButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/StoryPanels/EndGamePanels/OnionEndScreen.jpg" type="Texture" id=3]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel2.jpg" type="Texture" id=4]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/mock up intro 1.3.jpg" type="Texture" id=5]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/placeholder panel1.jpg" type="Texture" id=6]
-[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Audio/Music/BGMPlayerIntro.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Intro.ogg" type="AudioStream" id=10]
-[ext_resource path="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Loop.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Menus/StoryPanels/EndGamePanels/BG.jpg" type="Texture" id=4]
+[ext_resource path="res://Menus/StoryPanels/EndGamePanels/Outro 1.png" type="Texture" id=5]
+[ext_resource path="res://Menus/StoryPanels/EndGamePanels/Outro 2.png" type="Texture" id=6]
+[ext_resource path="res://Menus/StoryPanels/EndGamePanels/Outro 3.png" type="Texture" id=7]
+[ext_resource path="res://Menus/StoryPanels/EndGamePanels/Outro 4.png" type="Texture" id=8]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Audio/Music/BGMPlayerIntro.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Intro.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Menus/StoryPanels/EndGamePanels/BGM_End_Screen_Loop.ogg" type="AudioStream" id=13]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "start"
+length = 4.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite4:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="EndGamePanels" type="Node" index="0"]
 
@@ -50,9 +119,7 @@ animSpeed = 0.5
 
 [node name="PanelButton1" parent="." index="2" instance=ExtResource( 2 )]
 
-editor/display_folded = true
 modulate = Color( 1, 1, 1, 1 )
-disabled = false
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 4 )
@@ -62,31 +129,49 @@ expand = true
 
 [node name="Sprite" type="Sprite" parent="PanelButton1" index="0"]
 
-position = Vector2( 480, 270 )
-scale = Vector2( 0.5, 0.5 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 275.818, 400.899 )
+scale = Vector2( 0.95977, 0.95977 )
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite2" type="Sprite" parent="PanelButton1" index="1"]
 
-position = Vector2( 1439.39, 811.349 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 752.454, 639.775 )
+scale = Vector2( 1.00716, 1.00716 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite3" type="Sprite" parent="PanelButton1" index="2"]
 
-position = Vector2( 1439.39, 273.925 )
-scale = Vector2( 1.36376, 1.36376 )
-texture = ExtResource( 6 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1188.18, 384.351 )
+scale = Vector2( 0.996726, 0.996726 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite4" type="Sprite" parent="PanelButton1" index="3"]
 
-position = Vector2( 454.113, 824.92 )
-scale = Vector2( 1.36376, 1.36376 )
-texture = ExtResource( 6 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1606.43, 627.557 )
+scale = Vector2( 0.917521, 0.917521 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="Fade" parent="." index="3" instance=ExtResource( 7 )]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="PanelButton1" index="6"]
 
-[node name="SkipButton" parent="." index="4" instance=ExtResource( 8 )]
+root_node = NodePath("..")
+autoplay = "start"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/start = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Fade" parent="." index="3" instance=ExtResource( 9 )]
+
+[node name="SkipButton" parent="." index="4" instance=ExtResource( 10 )]
 
 margin_left = 480.0
 margin_top = 320.0
@@ -97,18 +182,18 @@ margin_bottom = 356.0
 
 text = "Skip"
 
-[node name="BGMPlayerIntro" parent="." index="5" instance=ExtResource( 9 )]
+[node name="BGMPlayerIntro" parent="." index="5" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 
 [node name="Intro" parent="BGMPlayerIntro" index="0"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 12 )
 volume_db = 0.0
 
 [node name="Mainpart" parent="BGMPlayerIntro" index="1"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 13 )
 volume_db = 0.0
 
 [connection signal="animFinished" from="PanelButton2" to="." method="_on_PanelButton2_animFinished"]
