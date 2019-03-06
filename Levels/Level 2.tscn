@@ -63,7 +63,7 @@ extents = Vector2( 32, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 2" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -214,7 +214,7 @@ position = Vector2( 82, -97 )
 [node name="SpiderbuddyTrigger" parent="MovingPlat2" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -63.2805, 73.7838 )
-text = "These platforms will help you to cross big height differences."
+text = "These platforms will help you to get higher."
 keyWaitTime = 0
 
 [node name="stone 2 (up)" parent="." index="8" instance=ExtResource( 15 )]
