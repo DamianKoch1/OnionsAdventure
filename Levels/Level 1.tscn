@@ -98,7 +98,7 @@ position = Vector2( -7.39471, 0.332367 )
 [node name="SpiderbuddyTrigger" parent="Start" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -97.0325, 41.9004 )
-text = "Press “A”, “D” or arrow keys"
+text = "Use “A”, “D” or narrow keys to move."
 waitForKey = true
 key = "ui_right"
 
@@ -118,7 +118,7 @@ position = Vector2( -31.4462, 89.9133 )
 [node name="SpiderbuddyTrigger" parent="smallstump2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -383.874, 82.8169 )
-text = "Good! … Press “Space”!"
+text = "Good! Now press “Space” to jump."
 waitForKey = true
 key = "jump"
 
@@ -142,7 +142,7 @@ position = Vector2( 1421.09, -26.0791 )
 [node name="SpiderbuddyTrigger" parent="mediumstump2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -24.4019, 35.2019 )
-text = "They will hurt you!"
+text = "Onion, watch out! They will hurt you!"
 keyWaitTime = 0
 
 [node name="ThornsCorner" parent="mediumstump2" index="6" instance=ExtResource( 9 )]
@@ -174,14 +174,14 @@ position = Vector2( 10.2097, 185.553 )
 [node name="SpiderbuddyTrigger" parent="smallstone2" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( -99.1992, 150.38 )
-text = "Press “E”!"
+text = "Oh no, Eaglebunny! Help him by pressing “E”."
 waitForKey = true
 key = "push"
 
 [node name="SpiderbuddyTrigger2" parent="smallstone2" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 344.553, 39.9205 )
-text = "It’s like a checkpoint."
+text = "Here you will return if you get hurt."
 keyWaitTime = 0
 
 [node name="Grass" parent="smallstone2" index="7" instance=ExtResource( 10 )]
@@ -271,7 +271,7 @@ position = Vector2( 390.963, -74.9346 )
 [node name="SpiderbuddyTrigger" parent="stump l, moving tendril" index="8" instance=ExtResource( 4 )]
 
 position = Vector2( -342.811, -40.1284 )
-text = "Jump onto that tendril!"
+text = "The tendrils will help you. Jump onto it!"
 keyWaitTime = 0
 
 [node name="stump l, stump m, stump s" parent="." index="9" instance=ExtResource( 19 )]
@@ -312,7 +312,7 @@ position = Vector2( 254.966, -158.66 )
 
 position = Vector2( 208.688, 21.2203 )
 scale = Vector2( 1.23411, 1.2233 )
-text = "Don’t touch these insects!"
+text = "Watch out! The insects will hurt you if you touch them!"
 keyWaitTime = 0
 
 [node name="stump s, stump l 3" parent="." index="10" instance=ExtResource( 21 )]
@@ -639,7 +639,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="stump s, stone" parent="." index="18" instance=ExtResource( 33 )]
 
-editor/display_folded = true
 position = Vector2( 8598.47, -159.452 )
 _sections_unfolded = [ "Transform" ]
 
@@ -659,13 +658,7 @@ position = Vector2( -254.018, -20.7011 )
 
 position = Vector2( -143.912, 12.1028 )
 
-[node name="SpiderbuddyTrigger" parent="stump s, stone" index="7" instance=ExtResource( 4 )]
-
-position = Vector2( -392.589, 0 )
-text = ""
-keyWaitTime = 0
-
-[node name="ThornsCorner" parent="stump s, stone" index="8" instance=ExtResource( 9 )]
+[node name="ThornsCorner" parent="stump s, stone" index="7" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 position = Vector2( -11.4678, 109.119 )
