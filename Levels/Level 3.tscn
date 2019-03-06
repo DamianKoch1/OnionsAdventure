@@ -1453,6 +1453,7 @@ _sections_unfolded = [ "Scroll" ]
 
 [node name="Bottom" type="ParallaxLayer" parent="Background/Foreground" index="0"]
 
+editor/display_folded = true
 z_index = 4096
 z_as_relative = false
 motion_scale = Vector2( 1.2, 0.8 )
@@ -1743,23 +1744,231 @@ _sections_unfolded = [ "Offset" ]
 
 [node name="Top" type="ParallaxLayer" parent="Background/Foreground" index="1"]
 
-visible = false
-motion_scale = Vector2( 0.3, 0.8 )
+position = Vector2( 7.6001, -38.9504 )
+motion_scale = Vector2( 1.2, 0.8 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
-_sections_unfolded = [ "Motion", "Z Index" ]
+_sections_unfolded = [ "Motion", "Transform", "Z Index" ]
 
 [node name="Lianna1" parent="Background/Foreground/Top" index="0" instance=ExtResource( 56 )]
 
-position = Vector2( 94.4021, 159.826 )
+position = Vector2( -293.202, -34.926 )
 
-[node name="Lianna2" parent="Background/Foreground/Top" index="1" instance=ExtResource( 57 )]
+[node name="Lianna2" parent="Background/Foreground/Top" index="1" instance=ExtResource( 56 )]
 
-position = Vector2( 291.892, 172.373 )
+position = Vector2( 340.455, -157.477 )
 
-[node name="Lianna3" parent="Background/Foreground/Top" index="2" instance=ExtResource( 58 )]
+[node name="Lianna3" parent="Background/Foreground/Top" index="2" instance=ExtResource( 56 )]
 
-position = Vector2( 504.24, 160.746 )
+position = Vector2( 576.057, -163.177 )
+
+[node name="Lianna4" parent="Background/Foreground/Top" index="3" instance=ExtResource( 56 )]
+
+position = Vector2( 1410.93, -331.185 )
+
+[node name="Lianna5" parent="Background/Foreground/Top" index="4" instance=ExtResource( 56 )]
+
+position = Vector2( 1624.17, -381.588 )
+
+[node name="Lianna6" parent="Background/Foreground/Top" index="5" instance=ExtResource( 56 )]
+
+position = Vector2( 1863.26, -406.143 )
+
+[node name="Lianna7" parent="Background/Foreground/Top" index="6" instance=ExtResource( 56 )]
+
+position = Vector2( 2252.26, -535.379 )
+
+[node name="Lianna8" parent="Background/Foreground/Top" index="7" instance=ExtResource( 56 )]
+
+position = Vector2( 3038.02, -583.197 )
+
+[node name="Lianna9" parent="Background/Foreground/Top" index="8" instance=ExtResource( 56 )]
+
+position = Vector2( 3985.33, -593.536 )
+
+[node name="Lianna10" parent="Background/Foreground/Top" index="9" instance=ExtResource( 56 )]
+
+position = Vector2( 4233.46, -610.337 )
+
+[node name="Lianna11" parent="Background/Foreground/Top" index="10" instance=ExtResource( 56 )]
+
+position = Vector2( 4467.38, -526.333 )
+
+[node name="Lianna12" parent="Background/Foreground/Top" index="11" instance=ExtResource( 56 )]
+
+position = Vector2( 4901.62, -470.761 )
+
+[node name="Lianna13" parent="Background/Foreground/Top" index="12" instance=ExtResource( 56 )]
+
+position = Vector2( 5739.07, -596.121 )
+
+[node name="Lianna14" parent="Background/Foreground/Top" index="13" instance=ExtResource( 56 )]
+
+position = Vector2( 6913.83, -649.108 )
+
+[node name="Lianna15" parent="Background/Foreground/Top" index="14" instance=ExtResource( 56 )]
+
+position = Vector2( 7136.12, -628.43 )
+
+[node name="Lianna16" parent="Background/Foreground/Top" index="15" instance=ExtResource( 56 )]
+
+position = Vector2( 7438.54, -621.968 )
+
+[node name="Lianna17" parent="Background/Foreground/Top" index="16" instance=ExtResource( 56 )]
+
+position = Vector2( 8688.66, -407.17 )
+
+[node name="Lianna18" parent="Background/Foreground/Top" index="17" instance=ExtResource( 56 )]
+
+position = Vector2( 9353.1, -609.08 )
+
+[node name="Lianna19" parent="Background/Foreground/Top" index="18" instance=ExtResource( 56 )]
+
+position = Vector2( 9628.04, -617.672 )
+
+[node name="Lianna20" parent="Background/Foreground/Top" index="19" instance=ExtResource( 56 )]
+
+position = Vector2( 10504.4, -637.72 )
+
+[node name="Lianna21" parent="Background/Foreground/Top" index="20" instance=ExtResource( 56 )]
+
+position = Vector2( 10763.6, -553.232 )
+
+[node name="Lianna22" parent="Background/Foreground/Top" index="21" instance=ExtResource( 56 )]
+
+position = Vector2( 11519.7, -163.732 )
+
+[node name="LiannaDown" parent="Background/Foreground/Top" index="22" instance=ExtResource( 57 )]
+
+position = Vector2( -125.162, -86.9797 )
+
+[node name="LiannaDown3" parent="Background/Foreground/Top" index="23" instance=ExtResource( 57 )]
+
+position = Vector2( 713.585, -186.492 )
+
+[node name="LiannaDown2" parent="Background/Foreground/Top" index="24" instance=ExtResource( 57 )]
+
+position = Vector2( 164.591, -131.63 )
+
+[node name="LiannaDown4" parent="Background/Foreground/Top" index="25" instance=ExtResource( 57 )]
+
+position = Vector2( 964.567, -291.884 )
+
+[node name="LiannaDown5" parent="Background/Foreground/Top" index="26" instance=ExtResource( 57 )]
+
+position = Vector2( 2860.47, -564.574 )
+
+[node name="LiannaDown6" parent="Background/Foreground/Top" index="27" instance=ExtResource( 57 )]
+
+position = Vector2( 3215.87, -568.451 )
+
+[node name="LiannaDown7" parent="Background/Foreground/Top" index="28" instance=ExtResource( 57 )]
+
+position = Vector2( 3836.21, -573.62 )
+
+[node name="LiannaDown8" parent="Background/Foreground/Top" index="29" instance=ExtResource( 57 )]
+
+position = Vector2( 3528.63, -585.252 )
+
+[node name="LiannaDown10" parent="Background/Foreground/Top" index="30" instance=ExtResource( 57 )]
+
+position = Vector2( 5892.37, -576.205 )
+
+[node name="LiannaDown13" parent="Background/Foreground/Top" index="31" instance=ExtResource( 57 )]
+
+position = Vector2( 7286.83, -617.561 )
+
+[node name="LiannaDown11" parent="Background/Foreground/Top" index="32" instance=ExtResource( 57 )]
+
+position = Vector2( 6587.66, -466.354 )
+
+[node name="LiannaDown12" parent="Background/Foreground/Top" index="33" instance=ExtResource( 57 )]
+
+position = Vector2( 6715.61, -502.54 )
+
+[node name="LiannaDown14" parent="Background/Foreground/Top" index="34" instance=ExtResource( 57 )]
+
+position = Vector2( 8063.11, -365.069 )
+
+[node name="LiannaDown15" parent="Background/Foreground/Top" index="35" instance=ExtResource( 57 )]
+
+position = Vector2( 8219.2, -274.854 )
+
+[node name="LiannaDown16" parent="Background/Foreground/Top" index="36" instance=ExtResource( 57 )]
+
+position = Vector2( 8378.14, -274.854 )
+
+[node name="LiannaDown17" parent="Background/Foreground/Top" index="37" instance=ExtResource( 57 )]
+
+position = Vector2( 9025.4, -478.196 )
+
+[node name="LiannaDown18" parent="Background/Foreground/Top" index="38" instance=ExtResource( 57 )]
+
+position = Vector2( 9210.13, -539.772 )
+
+[node name="LiannaDown9" parent="Background/Foreground/Top" index="39" instance=ExtResource( 57 )]
+
+position = Vector2( 4647.82, -471.523 )
+
+[node name="LiannaDown19" parent="Background/Foreground/Top" index="40" instance=ExtResource( 57 )]
+
+position = Vector2( 10286.3, -621.498 )
+
+[node name="LiannaSmall" parent="Background/Foreground/Top" index="41" instance=ExtResource( 58 )]
+
+position = Vector2( -0.21521, -157.507 )
+
+[node name="LiannaSmall2" parent="Background/Foreground/Top" index="42" instance=ExtResource( 58 )]
+
+position = Vector2( 837.24, -250.558 )
+
+[node name="LiannaSmall3" parent="Background/Foreground/Top" index="43" instance=ExtResource( 58 )]
+
+position = Vector2( 1942.21, -431.489 )
+
+[node name="LiannaSmall4" parent="Background/Foreground/Top" index="44" instance=ExtResource( 58 )]
+
+position = Vector2( 2442.36, -598.205 )
+
+[node name="LiannaSmall5" parent="Background/Foreground/Top" index="45" instance=ExtResource( 58 )]
+
+position = Vector2( 2703.42, -607.252 )
+
+[node name="LiannaSmall6" parent="Background/Foreground/Top" index="46" instance=ExtResource( 58 )]
+
+position = Vector2( 3381.91, -555.557 )
+
+[node name="LiannaSmall7" parent="Background/Foreground/Top" index="47" instance=ExtResource( 58 )]
+
+position = Vector2( 3684.33, -552.972 )
+
+[node name="LiannaSmall8" parent="Background/Foreground/Top" index="48" instance=ExtResource( 58 )]
+
+position = Vector2( 6132.07, -492.231 )
+
+[node name="LiannaSmall9" parent="Background/Foreground/Top" index="49" instance=ExtResource( 58 )]
+
+position = Vector2( 6413.81, -465.091 )
+
+[node name="LiannaSmall10" parent="Background/Foreground/Top" index="50" instance=ExtResource( 58 )]
+
+position = Vector2( 7963.36, -461.214 )
+
+[node name="LiannaSmall11" parent="Background/Foreground/Top" index="51" instance=ExtResource( 58 )]
+
+position = Vector2( 8471.71, -359.543 )
+
+[node name="LiannaSmall12" parent="Background/Foreground/Top" index="52" instance=ExtResource( 58 )]
+
+position = Vector2( 8885.56, -494.149 )
+
+[node name="LiannaSmall13" parent="Background/Foreground/Top" index="53" instance=ExtResource( 58 )]
+
+position = Vector2( 9842.13, -615.868 )
+
+[node name="LiannaSmall14" parent="Background/Foreground/Top" index="54" instance=ExtResource( 58 )]
+
+position = Vector2( 10141.4, -615.868 )
 
 [node name="Static" type="ParallaxLayer" parent="Background/Foreground" index="2"]
 
