@@ -702,12 +702,11 @@ position = Vector2( 8880.58, 831.565 )
 
 [node name="platform short2" parent="." index="19" instance=ExtResource( 36 )]
 
-editor/display_folded = true
-position = Vector2( 9200.58, 959.565 )
+position = Vector2( 9199.07, 921.882 )
 
 [node name="Checkpoint" parent="platform short2" index="1" instance=ExtResource( 13 )]
 
-position = Vector2( 0, 160 )
+position = Vector2( -1.50684, 197.683 )
 
 [node name="stump s, Krake" parent="." index="20" instance=ExtResource( 37 )]
 
@@ -951,8 +950,6 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Background Deko" type="Node2D" parent="." index="30"]
 
-editor/display_folded = true
-
 [node name="Bush" parent="Background Deko" index="0" instance=ExtResource( 46 )]
 
 position = Vector2( 350.483, 413.351 )
@@ -1050,7 +1047,7 @@ scale = Vector2( 0.406612, 0.406612 )
 
 [node name="Bush20" parent="Background Deko" index="19" instance=ExtResource( 46 )]
 
-position = Vector2( 9222.41, 961.821 )
+position = Vector2( 9221.75, 916.709 )
 scale = Vector2( 0.406612, 0.406612 )
 
 [node name="Bush21" parent="Background Deko" index="20" instance=ExtResource( 46 )]
