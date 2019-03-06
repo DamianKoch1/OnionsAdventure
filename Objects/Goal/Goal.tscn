@@ -355,7 +355,7 @@ _sections_unfolded = [ "Process Material", "Textures", "Time", "Transform", "Vis
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
-layer = 0
+layer = 6
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
@@ -493,8 +493,8 @@ blend_times = [  ]
 
 [node name="Light2D" type="Light2D" parent="." index="7"]
 
-position = Vector2( -3.83716, -20.9898 )
-scale = Vector2( 0.283193, 0.308538 )
+position = Vector2( 0.037545, -1.06274 )
+scale = Vector2( 0.234715, 0.232325 )
 enabled = true
 editor_only = false
 texture = ExtResource( 3 )
