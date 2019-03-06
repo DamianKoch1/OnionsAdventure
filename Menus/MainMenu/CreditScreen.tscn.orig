@@ -33,7 +33,7 @@ width = 2048
 [sub_resource type="Animation" id=3]
 
 resource_name = "Scroll"
-length = 45.0
+length = 30.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -43,10 +43,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 45 ),
+"times": PoolRealArray( 0, 30 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 360 ), Vector2( 0, -1254.36 ) ]
+"values": [ Vector2( 0, 360 ), Vector2( 0, -1375.14 ) ]
 }
 
 [node name="CreditScreen" type="Container"]
@@ -134,7 +134,7 @@ text = "Back"
 [node name="Credits" type="Node2D" parent="." index="4"]
 
 <<<<<<< working copy
-position = Vector2( 0, -1243.6 )
+position = Vector2( 0, 312.452 )
 =======
 position = Vector2( 0, 360 )
 >>>>>>> merge rev
@@ -969,7 +969,11 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [node name="OstSfxCredits" type="Node2D" parent="Credits" index="1"]
 
 editor/display_folded = true
+<<<<<<< working copy
 position = Vector2( 13.1291, 220.331 )
+=======
+position = Vector2( 13.1291, 237.331 )
+>>>>>>> merge rev
 
 [node name="Credit 1" type="Label" parent="Credits/OstSfxCredits" index="0"]
 
