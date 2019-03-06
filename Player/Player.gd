@@ -163,7 +163,8 @@ func setState(newState):
 	if state != frozen:
 		if state == fall && highestFallSpeed >= fallVFXspeedThreshhold:
 			if newState == run || newState == idle:
-				$landingTest.emitting = true
+				$OnionLandingR.emitting = true
+				$OnionLandingL.emitting = true
 				highestFallSpeed = 0
 		state = newState
 		match state:
