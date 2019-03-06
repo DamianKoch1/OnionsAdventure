@@ -1,16 +1,18 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://TransitionPanels.gd" type="Script" id=1]
-[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel3.jpg" type="Texture" id=2]
-[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel2.png" type="Texture" id=3]
-[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel1.png" type="Texture" id=4]
-[ext_resource path="res://Menus/StoryPanels/PanelButton.gd" type="Script" id=5]
-[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=7]
-[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel1.jpg" type="Texture" id=2]
+[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel2.jpg" type="Texture" id=3]
+[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel3.jpg" type="Texture" id=4]
+[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel2.png" type="Texture" id=5]
+[ext_resource path="res://Menus/StoryPanels/TransitionPanels/zwischenPanel1.png" type="Texture" id=6]
+[ext_resource path="res://Menus/StoryPanels/PanelButton.gd" type="Script" id=7]
+[ext_resource path="res://Audio/randomPitch.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Menus/StoryPanels/pageTurn.wav" type="AudioStream" id=9]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Menus/MenuButton/MenuButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Audio/Music/BGMPlayer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Menus/StoryPanels/NewGamePanels/BGM_New_Game_loop.ogg" type="AudioStream" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -45,7 +47,7 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../2:modulate")
+tracks/2/path = NodePath("../two:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -76,7 +78,7 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("../1:modulate")
+tracks/0/path = NodePath("../one:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -121,7 +123,7 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../3:modulate")
+tracks/2/path = NodePath("../three:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -181,6 +183,9 @@ tracks/1/keys = {
 [node name="TransitionPanels" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+texture1 = ExtResource( 2 )
+texture2 = ExtResource( 3 )
+texture3 = ExtResource( 4 )
 
 [node name="one" type="Node2D" parent="." index="0"]
 
@@ -203,27 +208,27 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="3" type="Sprite" parent="one" index="1"]
+[node name="three" type="Sprite" parent="one" index="1"]
 
 modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 0.333, 0.333 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="2" type="Sprite" parent="one" index="2"]
+[node name="two" type="Sprite" parent="one" index="2"]
 
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 286.023, 208.147 )
 scale = Vector2( 0.333, 0.333 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Offset", "Visibility" ]
 
-[node name="1" type="Sprite" parent="one" index="3"]
+[node name="one" type="Sprite" parent="one" index="3"]
 
 position = Vector2( 105.802, 157.156 )
 scale = Vector2( 0.333, 0.333 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 region_rect = Rect2( 160, 200, 512, 268 )
 _sections_unfolded = [ "Material", "Offset", "Region", "Visibility" ]
 
@@ -249,7 +254,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-script = ExtResource( 5 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Pause", "Rect", "Visibility" ]
 animSpeed = 1.0
 
@@ -264,10 +269,10 @@ anims/nextPanel = SubResource( 1 )
 anims/start = SubResource( 2 )
 blend_times = [  ]
 
-[node name="pageTurn" parent="one/PanelButton2" index="1" instance=ExtResource( 6 )]
+[node name="pageTurn" parent="one/PanelButton2" index="1" instance=ExtResource( 8 )]
 
 position = Vector2( 914.286, 457.143 )
-stream = ExtResource( 7 )
+stream = ExtResource( 9 )
 
 [node name="PanelButton3" type="TextureButton" parent="one" index="5"]
 
@@ -292,7 +297,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-script = ExtResource( 5 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Pause", "Rect", "Textures", "Visibility" ]
 animSpeed = 1.0
 
@@ -306,10 +311,10 @@ playback_speed = 1.0
 anims/nextPanel = SubResource( 3 )
 blend_times = [  ]
 
-[node name="pageTurn" parent="one/PanelButton3" index="1" instance=ExtResource( 6 )]
+[node name="pageTurn" parent="one/PanelButton3" index="1" instance=ExtResource( 8 )]
 
 position = Vector2( 914.286, 457.143 )
-stream = ExtResource( 7 )
+stream = ExtResource( 9 )
 
 [node name="PanelButton4" type="TextureButton" parent="one" index="6"]
 
@@ -334,7 +339,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-script = ExtResource( 5 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Pause", "Rect", "Textures", "Visibility" ]
 animSpeed = 1.0
 
@@ -348,22 +353,14 @@ playback_speed = 1.0
 anims/nextPanel = SubResource( 4 )
 blend_times = [  ]
 
-[node name="pageTurn" parent="one/PanelButton4" index="1" instance=ExtResource( 6 )]
+[node name="pageTurn" parent="one/PanelButton4" index="1" instance=ExtResource( 8 )]
 
 position = Vector2( 914.286, 457.143 )
-stream = ExtResource( 7 )
+stream = ExtResource( 9 )
 
-[node name="two" type="Node2D" parent="." index="1"]
+[node name="Fade" parent="." index="1" instance=ExtResource( 10 )]
 
-visible = false
-
-[node name="three" type="Node2D" parent="." index="2"]
-
-visible = false
-
-[node name="Fade" parent="." index="3" instance=ExtResource( 8 )]
-
-[node name="SkipButton" parent="." index="4" instance=ExtResource( 9 )]
+[node name="SkipButton" parent="." index="2" instance=ExtResource( 11 )]
 
 editor/display_folded = false
 margin_left = 480.0
@@ -375,9 +372,9 @@ margin_bottom = 352.0
 
 text = "Skip"
 
-[node name="BGMPlayer" parent="." index="5" instance=ExtResource( 10 )]
+[node name="BGMPlayer" parent="." index="3" instance=ExtResource( 12 )]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 13 )
 volume_db = 10.0
 
 [connection signal="pressed" from="one/PanelButton2" to="one/PanelButton2" method="_on_PanelButton_pressed"]
