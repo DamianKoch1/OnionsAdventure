@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Background final 2.png-481ebf487611fadce71ac50c703109fe.stex"
+path="res://.import/zwischenPanel1.jpg-51cc1d4340ea1322414d3c4d9fd62b02.stex"
 
 [deps]
 
-source_file="res://Assets/Background/Background final 2.png"
-dest_files=[ "res://.import/Background final 2.png-481ebf487611fadce71ac50c703109fe.stex" ]
+source_file="res://Menus/StoryPanels/TransitionPanels/zwischenPanel1.jpg"
+dest_files=[ "res://.import/zwischenPanel1.jpg-51cc1d4340ea1322414d3c4d9fd62b02.stex" ]
 
 [params]
 
@@ -15,7 +15,7 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
