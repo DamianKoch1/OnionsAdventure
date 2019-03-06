@@ -8,7 +8,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
 
-[node name="PauseMenu" type="Container"]
+[node name="PauseMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -55,11 +55,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -41.0
-margin_top = -124.0
-margin_right = 1180.0
-margin_bottom = 149.0
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = -53.0
+margin_top = -128.0
+margin_right = 1168.0
+margin_bottom = 145.0
+rect_scale = Vector2( 0.4, 0.4 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -71,7 +71,7 @@ custom_colors/font_color = Color( 0.67451, 0.701961, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
 custom_constants/shadow_offset_x = 4
 custom_constants/shadow_offset_y = 5
-text = "paused"
+text = "Paused"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -86,10 +86,10 @@ margin_bottom = -28.0
 
 [node name="Label" parent="ResumeButton" index="0"]
 
-margin_left = 64.0
-margin_right = 1201.0
+margin_left = 62.0
+margin_right = 1199.0
 custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
-text = "resume"
+text = "Resume"
 
 [node name="RestartButton" parent="." index="3" instance=ExtResource( 4 )]
 
@@ -100,17 +100,17 @@ margin_bottom = 14.0
 
 [node name="Label" parent="RestartButton" index="0"]
 
-margin_left = 47.0
-margin_right = 437.0
+margin_left = 45.0
+margin_right = 452.0
 rect_scale = Vector2( 0.26, 0.3 )
 custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
-text = "restart level"
+text = "Restart level"
 
 [node name="OptionsButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = -105.0
+margin_left = -106.0
 margin_top = 24.0
-margin_right = 55.0
+margin_right = 54.0
 margin_bottom = 56.0
 
 [node name="Label" parent="OptionsButton" index="0"]
@@ -118,7 +118,7 @@ margin_bottom = 56.0
 margin_left = 62.0
 margin_right = 1172.0
 custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
-text = "options"
+text = "Options"
 
 [node name="MainMenuButton" parent="." index="5" instance=ExtResource( 4 )]
 
@@ -129,11 +129,11 @@ margin_bottom = 98.0
 
 [node name="Label" parent="MainMenuButton" index="0"]
 
-margin_left = 50.0
-margin_right = 394.0
+margin_left = 51.0
+margin_right = 396.0
 rect_scale = Vector2( 0.27, 0.3 )
 custom_colors/font_color = Color( 0.294118, 0.321569, 0.639216, 1 )
-text = "main menu"
+text = "Main menu"
 
 [node name="YesNoOverlayMainMenu" parent="." index="6" instance=ExtResource( 5 )]
 
@@ -149,14 +149,20 @@ margin_right = 94.0
 
 [node name="Label" parent="YesNoOverlayMainMenu" index="1"]
 
-margin_left = -63.0
-margin_right = 406.0
-text = "to main menu?"
+margin_left = -75.0
+margin_right = 412.0
+rect_scale = Vector2( 0.3, 0.3 )
+text = "To main menu?"
 
 [node name="YesButton" parent="YesNoOverlayMainMenu" index="2"]
 
-margin_left = -80.0
-margin_right = 80.0
+margin_left = -84.0
+margin_right = 76.0
+
+[node name="NoButton" parent="YesNoOverlayMainMenu" index="3"]
+
+margin_left = -81.0
+margin_right = 79.0
 
 [node name="YesNoOverlayRestart" parent="." index="7" instance=ExtResource( 5 )]
 
@@ -165,9 +171,10 @@ visible = false
 
 [node name="Label" parent="YesNoOverlayRestart" index="1"]
 
-margin_left = -31.0
-margin_right = 402.0
-text = "restart?"
+margin_left = -38.0
+margin_right = 395.0
+rect_scale = Vector2( 0.3, 0.3 )
+text = "Restart?"
 
 [node name="YesButton" parent="YesNoOverlayRestart" index="2"]
 

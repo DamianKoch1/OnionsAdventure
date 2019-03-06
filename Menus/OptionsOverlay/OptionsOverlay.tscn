@@ -52,11 +52,12 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Volume" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 43, -5 )
 
 [node name="Master" type="Node2D" parent="Volume" index="0"]
 
-position = Vector2( 0, -1.36462 )
+position = Vector2( 45, -1.36462 )
 scale = Vector2( 1, 0.999999 )
 
 [node name="MasterSlider" type="HSlider" parent="Volume/Master" index="0"]
@@ -102,11 +103,11 @@ margin_left = -352.0
 margin_top = -93.0
 margin_right = -70.0
 margin_bottom = 33.0
-text = "master"
+text = "Master"
 
 [node name="Music" type="Node2D" parent="Volume" index="1"]
 
-position = Vector2( 0, 77.2354 )
+position = Vector2( 45, 77.2354 )
 
 [node name="MusicSlider" type="HSlider" parent="Volume/Music" index="0"]
 
@@ -151,11 +152,11 @@ margin_left = -352.0
 margin_top = -99.0
 margin_right = -70.0
 margin_bottom = 27.0
-text = "music"
+text = "Music"
 
 [node name="SFX" type="Node2D" parent="Volume" index="2"]
 
-position = Vector2( 0, 121.21 )
+position = Vector2( 45, 121.21 )
 
 [node name="SFXSlider" type="HSlider" parent="Volume/SFX" index="0"]
 
@@ -200,22 +201,24 @@ margin_left = -352.0
 margin_top = -71.0
 margin_right = 182.0
 margin_bottom = 55.0
-text = "sound effects"
+text = "Sound effects"
 
 [node name="Volume" parent="Volume" index="3" instance=ExtResource( 7 )]
 
-margin_left = -384.0
-margin_top = -128.0
-margin_right = -102.0
-margin_bottom = -2.0
-text = "volume"
+margin_left = -324.0
+margin_top = -129.0
+margin_right = -42.0
+margin_bottom = -3.0
+rect_scale = Vector2( 0.33, 0.33 )
+text = "Volume"
 
 [node name="BackButton" parent="." index="2" instance=ExtResource( 8 )]
 
-margin_left = -377.0
-margin_top = 79.0
-margin_right = -217.0
-margin_bottom = 115.0
+editor/display_folded = false
+margin_left = -356.0
+margin_top = 78.0
+margin_right = -196.0
+margin_bottom = 110.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../Volume/SFX/SFXSlider")
 focus_neighbour_right = NodePath(".")
@@ -224,15 +227,18 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="BackButton" index="0"]
 
-text = "back"
+margin_top = 1.0
+margin_bottom = 109.0
+text = "Back"
 
 [node name="Options" parent="." index="3" instance=ExtResource( 7 )]
 
-margin_left = -104.0
-margin_top = -165.0
-margin_right = 190.0
-margin_bottom = -39.0
-text = "options"
+margin_left = -334.0
+margin_top = -169.0
+margin_right = -40.0
+margin_bottom = -43.0
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Options"
 
 [connection signal="value_changed" from="Volume/Master/MasterSlider" to="." method="_on_MasterSlider_value_changed"]
 

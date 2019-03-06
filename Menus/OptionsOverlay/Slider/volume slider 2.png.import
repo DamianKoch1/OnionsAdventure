@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Front Layer Top Camera Cage.png-96aa78f6c7f371249a16eb4b612ce5f6.stex"
+path="res://.import/volume slider 2.png-e996b21527018f91419b2cb30e53c1a6.stex"
 
 [deps]
 
-source_file="res://Assets/Background/Front Layer Top Camera Cage.png"
-dest_files=[ "res://.import/Front Layer Top Camera Cage.png-96aa78f6c7f371249a16eb4b612ce5f6.stex" ]
+source_file="res://Menus/OptionsOverlay/Slider/volume slider 2.png"
+dest_files=[ "res://.import/volume slider 2.png-e996b21527018f91419b2cb30e53c1a6.stex" ]
 
 [params]
 
@@ -15,7 +15,7 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
