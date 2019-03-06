@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Front Layer Bottom Camera Cage.png-361757f530599f5aebcae59cb0affc92.stex"
+path="res://.import/Background 1.png-11a54ead25f630c4a413ce528edcc38c.stex"
 
 [deps]
 
-source_file="res://Assets/Background/Front Layer Bottom Camera Cage.png"
-dest_files=[ "res://.import/Front Layer Bottom Camera Cage.png-361757f530599f5aebcae59cb0affc92.stex" ]
+source_file="res://Assets/Background/Background 1.png"
+dest_files=[ "res://.import/Background 1.png-11a54ead25f630c4a413ce528edcc38c.stex" ]
 
 [params]
 
@@ -15,7 +15,7 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
