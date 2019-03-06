@@ -1,13 +1,17 @@
 extends Node2D
 
+export(Texture) var texture1
+export(Texture) var texture2
+export(Texture) var texture3
+
 func _ready():
 	match SaveGame.currLevelId:
 		1:
-			$one.show()
+			$one/three.texture = texture1
 		2:
-			$two.show()
+			$one/three.texture = texture2
 		3:
-			$three.show()
+			$one/three.texture = texture3
 	$BGMPlayer.fadeIn(2)
 
 func _process(delta):
