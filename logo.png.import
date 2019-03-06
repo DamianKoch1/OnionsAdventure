@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stone Inamovable New.png-4f6cc8e9e8c49de436d112843b51139b.stex"
+path="res://.import/logo.png-cca8726399059c8d4f806e28e356b14d.stex"
 
 [deps]
 
-source_file="res://Assets/Stones/Stone Inamovable New.png"
-dest_files=[ "res://.import/Stone Inamovable New.png-4f6cc8e9e8c49de436d112843b51139b.stex" ]
+source_file="res://logo.png"
+dest_files=[ "res://.import/logo.png-cca8726399059c8d4f806e28e356b14d.stex" ]
 
 [params]
 

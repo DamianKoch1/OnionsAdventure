@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Menus/MainMenu/CreditScreen.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BG.png" type="Texture" id=2]
@@ -17,7 +17,8 @@
 [ext_resource path="res://Menus/MainMenu/Damian.png" type="Texture" id=15]
 [ext_resource path="res://Menus/MainMenu/Dwight.png" type="Texture" id=16]
 [ext_resource path="res://Menus/MainMenu/Azenai.png" type="Texture" id=17]
-[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=18]
+[ext_resource path="res://logo.png" type="Texture" id=18]
+[ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=19]
 
 [sub_resource type="Gradient" id=1]
 
@@ -33,7 +34,7 @@ width = 2048
 [sub_resource type="Animation" id=3]
 
 resource_name = "Scroll"
-length = 30.0
+length = 50.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -43,13 +44,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 30 ),
+"times": PoolRealArray( 0, 50 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 360 ), Vector2( 0, -1254.36 ) ]
+"values": [ Vector2( 0, 360 ), Vector2( 0, -1737.84 ) ]
 }
 
-[node name="CreditScreen" type="Container"]
+[node name="CreditScreen" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -133,12 +134,11 @@ text = "Back"
 
 [node name="Credits" type="Node2D" parent="." index="4"]
 
-position = Vector2( 0, 360 )
+position = Vector2( 0, -1737.84 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Credits" type="Node2D" parent="Credits" index="0"]
 
-editor/display_folded = true
 position = Vector2( -86, 21 )
 _sections_unfolded = [ "Transform" ]
 
@@ -962,6 +962,12 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
+[node name="Sprite" type="Sprite" parent="Credits/Credits" index="13"]
+
+position = Vector2( 24.6134, 1376.59 )
+scale = Vector2( 0.316514, 0.316514 )
+texture = ExtResource( 18 )
+
 [node name="OstSfxCredits" type="Node2D" parent="Credits" index="1"]
 
 editor/display_folded = true
@@ -1719,7 +1725,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="Fade" parent="." index="5" instance=ExtResource( 18 )]
+[node name="Fade" parent="." index="5" instance=ExtResource( 19 )]
 
 margin_left = -373.0
 margin_top = -197.0
