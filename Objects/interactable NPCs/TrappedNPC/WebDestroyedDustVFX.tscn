@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/interactable NPCs/TrappedNPC/WebDestroyedDustVFX.tres" type="Material" id=1]
-[ext_resource path="res://Assets/Particle_Dust.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Wolke.png" type="Texture" id=2]
 
-[node name="WebDestroyedDustVFX" type="Particles2D"]
+[node name="WebDestroyedDustVFX" type="Particles2D" index="0"]
 
 emitting = false
 amount = 16
