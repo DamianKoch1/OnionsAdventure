@@ -491,6 +491,33 @@ anims/fadeOut = SubResource( 6 )
 anims/lastFadeOut = SubResource( 7 )
 blend_times = [  ]
 
+[node name="Light2D" type="Light2D" parent="." index="7"]
+
+position = Vector2( -3.83716, -20.9898 )
+scale = Vector2( 0.283193, 0.308538 )
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 0.596924, 0.817766, 0.9375, 1 )
+energy = 1.67
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = -5
+range_layer_max = 5
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow" ]
+
 [connection signal="body_entered" from="." to="." method="_on_Goal_body_entered"]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="CanvasLayer/Collectables" method="_on_AnimationPlayer_animation_finished"]

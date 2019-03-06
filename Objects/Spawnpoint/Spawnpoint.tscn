@@ -9,12 +9,12 @@
 [ext_resource path="res://Objects/Spawnpoint/OnionRespawnVFX_V1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/Spawnpoint/particletest.png" type="Texture" id=8]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 117.754, 134.469 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=2]
 
 resource_name = "activate"
 length = 0.5
@@ -57,7 +57,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 
 resource_name = "light"
 length = 1.0
@@ -148,7 +148,7 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
 visible = false
-shape = SubResource( 7 )
+shape = SubResource( 1 )
 
 [node name="Light2D" type="Light2D" parent="." index="7"]
 
@@ -163,8 +163,8 @@ mode = 0
 range_height = 0.0
 range_z_min = -1024
 range_z_max = 1024
-range_layer_min = 0
-range_layer_max = 2
+range_layer_min = -5
+range_layer_max = 5
 range_item_cull_mask = 1
 shadow_enabled = false
 shadow_color = Color( 0, 0, 0, 0 )
@@ -182,8 +182,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/activate = SubResource( 8 )
-anims/light = SubResource( 9 )
+anims/activate = SubResource( 2 )
+anims/light = SubResource( 3 )
 next/activate = "light"
 blend_times = [  ]
 
