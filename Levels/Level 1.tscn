@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Decoration/LevelStartEndLong.tscn" type="PackedScene" id=2]
@@ -41,7 +41,8 @@
 [ext_resource path="res://Objects/Obstacles/Stones/StoneBigA.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Decoration/Bush.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Decoration/Stone.tscn" type="PackedScene" id=41]
-[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Decoration/Mushroom.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Assets/Background/Background.tscn" type="PackedScene" id=43]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -67,7 +68,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -80.5574, 170.197, 0, 0, 0, 0, -4.94873, 170.887 )
 }
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" index="0"]
 
 position = Vector2( 770.341, 398.452 )
 script = ExtResource( 1 )
@@ -794,8 +795,6 @@ position = Vector2( -255.331, 33.9647 )
 
 [node name="Background Deko" type="Node2D" parent="." index="23"]
 
-editor/display_folded = true
-
 [node name="Bush" parent="Background Deko" index="0" instance=ExtResource( 40 )]
 
 position = Vector2( 59.6619, 97.0015 )
@@ -971,7 +970,57 @@ scale = Vector2( 0.452774, 0.452774 )
 position = Vector2( 10875.1, -50.151 )
 scale = Vector2( 0.452774, 0.452774 )
 
-[node name="Background" parent="." index="24" instance=ExtResource( 42 )]
+[node name="Mushroom" parent="Background Deko" index="35" instance=ExtResource( 42 )]
+
+position = Vector2( -277.966, 123.59 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom2" parent="Background Deko" index="36" instance=ExtResource( 42 )]
+
+position = Vector2( 653.841, 120.332 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom3" parent="Background Deko" index="37" instance=ExtResource( 42 )]
+
+position = Vector2( 1143.85, -6.66971 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom4" parent="Background Deko" index="38" instance=ExtResource( 42 )]
+
+position = Vector2( 2182.24, 21.8331 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom5" parent="Background Deko" index="39" instance=ExtResource( 42 )]
+
+position = Vector2( 4810.88, -170.96 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom6" parent="Background Deko" index="40" instance=ExtResource( 42 )]
+
+position = Vector2( 6731.34, -362.839 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom7" parent="Background Deko" index="41" instance=ExtResource( 42 )]
+
+position = Vector2( 7695.8, -104.142 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom8" parent="Background Deko" index="42" instance=ExtResource( 42 )]
+
+position = Vector2( 7473.86, -351.953 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom9" parent="Background Deko" index="43" instance=ExtResource( 42 )]
+
+position = Vector2( 9079.95, -42.1147 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Mushroom10" parent="Background Deko" index="44" instance=ExtResource( 42 )]
+
+position = Vector2( 10529, -43.1147 )
+scale = Vector2( 0.0232916, 0.0232916 )
+
+[node name="Background" parent="." index="24" instance=ExtResource( 43 )]
 
 editor/display_folded = true
 
