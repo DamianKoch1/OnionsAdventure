@@ -260,7 +260,7 @@ position = Vector2( 650.417, 160.665 )
 
 [node name="Collectable5" parent="TreeDown" index="7" instance=ExtResource( 3 )]
 
-position = Vector2( 903.049, -222.715 )
+position = Vector2( 882.566, -282.698 )
 
 [node name="stump l, moving tendril" parent="." index="8" instance=ExtResource( 18 )]
 
@@ -535,19 +535,19 @@ position = Vector2( 322.439, -135.18 )
 
 [node name="Collectable3" parent="tendril6" index="7" instance=ExtResource( 3 )]
 
-position = Vector2( 519.658, -33.0275 )
+position = Vector2( 537.021, 8.88357 )
 
 [node name="Collectable4" parent="tendril6" index="8" instance=ExtResource( 3 )]
 
-position = Vector2( 711.701, -35.8654 )
+position = Vector2( 720.682, 92.2629 )
 
 [node name="Collectable5" parent="tendril6" index="9" instance=ExtResource( 3 )]
 
-position = Vector2( 861.411, 115.485 )
+position = Vector2( 861.411, 164.219 )
 
 [node name="Collectable6" parent="tendril6" index="10" instance=ExtResource( 3 )]
 
-position = Vector2( 864.269, 228.255 )
+position = Vector2( 864.269, 276.99 )
 
 [node name="movingPlat4" parent="." index="15" instance=ExtResource( 32 )]
 
@@ -759,12 +759,14 @@ position = Vector2( 10896.6, 1055.56 )
 
 [node name="Ladder" type="Node2D" parent="elevator" index="5"]
 
+editor/display_folded = true
 position = Vector2( 576, -192 )
 
 [node name="Top" type="Area2D" parent="elevator/Ladder" index="0" groups=[
 "rayIgnore",
 ]]
 
+editor/display_folded = true
 position = Vector2( 31.4004, -191.56 )
 z_index = -6
 input_pickable = true
@@ -799,6 +801,7 @@ _sections_unfolded = [ "Transform" ]
 "rayIgnore",
 ]]
 
+editor/display_folded = true
 position = Vector2( 31.4004, 192.44 )
 z_index = -6
 input_pickable = true
@@ -864,7 +867,7 @@ position = Vector2( 0, -48.9738 )
 
 [node name="Collectable2" parent="elevator" index="8" instance=ExtResource( 3 )]
 
-position = Vector2( 601.287, 43.5322 )
+position = Vector2( 605.589, -10.9572 )
 
 [node name="Collectable3" parent="elevator" index="9" instance=ExtResource( 3 )]
 
