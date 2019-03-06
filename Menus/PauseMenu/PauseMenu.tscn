@@ -8,7 +8,7 @@
 [ext_resource path="res://Menus/OptionsOverlay/OptionsOverlay.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/Fade.tscn" type="PackedScene" id=7]
 
-[node name="PauseMenu" type="Container"]
+[node name="PauseMenu" type="Container" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -183,6 +183,8 @@ margin_right = 78.0
 
 [node name="OptionsOverlay" parent="." index="8" instance=ExtResource( 6 )]
 
+editor/display_folded = true
+visible = false
 margin_left = 56.0
 margin_top = 41.0
 margin_right = 88.0

@@ -74,7 +74,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -285,6 +285,8 @@ margin_bottom = 50.0
 
 [node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 6 )]
 
+editor/display_folded = true
+visible = false
 margin_left = 63.0
 margin_top = 50.0
 margin_right = 95.0

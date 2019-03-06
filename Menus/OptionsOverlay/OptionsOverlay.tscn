@@ -52,6 +52,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Volume" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 43, -5 )
 
 [node name="Master" type="Node2D" parent="Volume" index="0"]
