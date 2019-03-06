@@ -1,13 +1,21 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Background/Background 0.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Background/Background 1.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Background/Background 2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Background/Background 3.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Background/Background 5 fireflies optional.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Background/Background 4 gradient.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Background/Decoratives/Tree1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Background/Decoratives/Tree2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Background/Background 4 gradient.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Background/Decoratives/Fern1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Background/Decoratives/Fern2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Background/Decoratives/Grass.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna3.tscn" type="PackedScene" id=14]
 
-[node name="Background" type="ParallaxBackground" index="0"]
+[node name="Background" type="ParallaxBackground"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -44,9 +52,12 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Layer1" index="0"]
 
-position = Vector2( 346.972, 194.611 )
+position = Vector2( 1678.58, 123.047 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 76, 248, 6584, 896 )
+_sections_unfolded = [ "Region" ]
 
 [node name="Layer2" type="ParallaxLayer" parent="." index="2"]
 
@@ -58,9 +69,12 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Layer2" index="0"]
 
-position = Vector2( 337.452, 175.572 )
+position = Vector2( 1654.3, 126.137 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( -14, 328, 6342, 812 )
+_sections_unfolded = [ "Region" ]
 
 [node name="Layer3" type="ParallaxLayer" parent="." index="3"]
 
@@ -72,9 +86,12 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Layer3" index="0"]
 
-position = Vector2( 345.385, 126.385 )
+position = Vector2( 1707.77, 99.8289 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 52, 96, 6620, 1200 )
+_sections_unfolded = [ "Region" ]
 
 [node name="Layer4" type="ParallaxLayer" parent="." index="4"]
 
@@ -86,9 +103,16 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Layer4" index="0"]
 
-position = Vector2( 345.385, 126.385 )
+position = Vector2( 1679.3, 90.9769 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 84, 452, 6588, 1168 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Tree1" parent="Layer4" index="1" instance=ExtResource( 6 )]
+
+[node name="Tree2" parent="Layer4" index="2" instance=ExtResource( 7 )]
 
 [node name="Camera" type="ParallaxLayer" parent="." index="5"]
 
@@ -102,7 +126,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 position = Vector2( -142.854, -31.533 )
 scale = Vector2( 0.479476, 0.374372 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 
 [node name="Foreground" type="ParallaxBackground" parent="." index="6"]
 
@@ -123,17 +147,41 @@ _sections_unfolded = [ "Scroll" ]
 
 z_index = 4096
 z_as_relative = false
-motion_scale = Vector2( 1.2, 0.7 )
+motion_scale = Vector2( 1.2, 0.8 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Fern1" parent="Foreground/Bottom" index="0" instance=ExtResource( 9 )]
+
+position = Vector2( 394.538, 421.407 )
+
+[node name="Fern2" parent="Foreground/Bottom" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( 644.528, 427.376 )
+
+[node name="Grass" parent="Foreground/Bottom" index="2" instance=ExtResource( 11 )]
+
+position = Vector2( 889.46, 427.376 )
 
 [node name="Top" type="ParallaxLayer" parent="Foreground" index="1"]
 
-motion_scale = Vector2( 0.3, 0.7 )
+motion_scale = Vector2( 0.3, 0.8 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Lianna1" parent="Foreground/Top" index="0" instance=ExtResource( 12 )]
+
+position = Vector2( 94.4021, 159.826 )
+
+[node name="Lianna2" parent="Foreground/Top" index="1" instance=ExtResource( 13 )]
+
+position = Vector2( 291.892, 172.373 )
+
+[node name="Lianna3" parent="Foreground/Top" index="2" instance=ExtResource( 14 )]
+
+position = Vector2( 504.24, 160.746 )
 
 [node name="Static" type="ParallaxLayer" parent="Foreground" index="2"]
 
