@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Modules/01 basic/short start.tscn" type="PackedScene" id=2]
@@ -45,13 +45,15 @@
 [ext_resource path="res://Assets/Background/Background 2.png" type="Texture" id=43]
 [ext_resource path="res://Assets/Background/Background 3.png" type="Texture" id=44]
 [ext_resource path="res://Assets/Background/Background 5 fireflies optional.png" type="Texture" id=45]
-[ext_resource path="res://Assets/Background/Background 4 gradient.png" type="Texture" id=46]
-[ext_resource path="res://Assets/Background/Decoratives/Fern1.tscn" type="PackedScene" id=47]
-[ext_resource path="res://Assets/Background/Decoratives/Fern2.tscn" type="PackedScene" id=48]
-[ext_resource path="res://Assets/Background/Decoratives/Grass.tscn" type="PackedScene" id=49]
-[ext_resource path="res://Assets/Background/Decoratives/Lianna1.tscn" type="PackedScene" id=50]
-[ext_resource path="res://Assets/Background/Decoratives/Lianna2.tscn" type="PackedScene" id=51]
-[ext_resource path="res://Assets/Background/Decoratives/Lianna3.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Assets/Background/Decoratives/Tree1.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Assets/Background/Decoratives/Tree2.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Assets/Background/Background 4 gradient.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Background/Decoratives/Fern1.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Assets/Background/Decoratives/Fern2.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Assets/Background/Decoratives/Grass.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna1.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna2.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Assets/Background/Decoratives/Lianna3.tscn" type="PackedScene" id=54]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -63,7 +65,7 @@ extents = Vector2( 32, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 2" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -214,7 +216,7 @@ position = Vector2( 82, -97 )
 [node name="SpiderbuddyTrigger" parent="MovingPlat2" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( -63.2805, 73.7838 )
-text = "These platforms will help you to cross big height differences."
+text = "These platforms will help you to get higher."
 keyWaitTime = 0
 
 [node name="stone 2 (up)" parent="." index="8" instance=ExtResource( 15 )]
@@ -912,7 +914,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Background/Layer0" index="0"]
 
-position = Vector2( 327.633, -4.94794 )
+position = Vector2( 354.905, 84.6592 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 41 )
 
@@ -927,7 +929,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Background/Layer1" index="0"]
 
-position = Vector2( 1654.33, -54.6828 )
+position = Vector2( 1678.58, 123.047 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 42 )
 region_enabled = true
@@ -944,7 +946,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Background/Layer2" index="0"]
 
-position = Vector2( 1633.8, -17.9724 )
+position = Vector2( 1654.3, 126.137 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 43 )
 region_enabled = true
@@ -961,7 +963,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Background/Layer3" index="0"]
 
-position = Vector2( 1720.74, 35.5866 )
+position = Vector2( 1707.77, 99.8289 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 44 )
 region_enabled = true
@@ -978,12 +980,16 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Background/Layer4" index="0"]
 
-position = Vector2( 1659.78, 74.7094 )
+position = Vector2( 1679.3, 90.9769 )
 scale = Vector2( 0.697774, 0.544817 )
 texture = ExtResource( 45 )
 region_enabled = true
 region_rect = Rect2( 84, 452, 6588, 1168 )
 _sections_unfolded = [ "Region" ]
+
+[node name="Tree1" parent="Background/Layer4" index="1" instance=ExtResource( 46 )]
+
+[node name="Tree2" parent="Background/Layer4" index="2" instance=ExtResource( 47 )]
 
 [node name="Camera" type="ParallaxLayer" parent="Background" index="5"]
 
@@ -997,7 +1003,7 @@ _sections_unfolded = [ "Motion", "Z Index" ]
 
 position = Vector2( -142.854, -31.533 )
 scale = Vector2( 0.479476, 0.374372 )
-texture = ExtResource( 46 )
+texture = ExtResource( 48 )
 
 [node name="Foreground" type="ParallaxBackground" parent="Background" index="6"]
 
@@ -1025,181 +1031,181 @@ motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion", "Z Index" ]
 
-[node name="Fern1" parent="Background/Foreground/Bottom" index="0" instance=ExtResource( 47 )]
+[node name="Fern1" parent="Background/Foreground/Bottom" index="0" instance=ExtResource( 49 )]
 
 position = Vector2( -77.515, 150.691 )
 
-[node name="Fern6" parent="Background/Foreground/Bottom" index="1" instance=ExtResource( 47 )]
+[node name="Fern6" parent="Background/Foreground/Bottom" index="1" instance=ExtResource( 49 )]
 
 position = Vector2( 1243.42, 175.178 )
 
-[node name="Fern7" parent="Background/Foreground/Bottom" index="2" instance=ExtResource( 47 )]
+[node name="Fern7" parent="Background/Foreground/Bottom" index="2" instance=ExtResource( 49 )]
 
 position = Vector2( 2035.16, 147.97 )
 
-[node name="Fern8" parent="Background/Foreground/Bottom" index="3" instance=ExtResource( 47 )]
+[node name="Fern8" parent="Background/Foreground/Bottom" index="3" instance=ExtResource( 49 )]
 
 position = Vector2( 2624.21, 138.447 )
 
-[node name="Fern18" parent="Background/Foreground/Bottom" index="4" instance=ExtResource( 47 )]
+[node name="Fern18" parent="Background/Foreground/Bottom" index="4" instance=ExtResource( 49 )]
 
 position = Vector2( 5518.65, 54.9375 )
 
-[node name="Fern19" parent="Background/Foreground/Bottom" index="5" instance=ExtResource( 47 )]
+[node name="Fern19" parent="Background/Foreground/Bottom" index="5" instance=ExtResource( 49 )]
 
 position = Vector2( 6016.37, 46.5865 )
 
-[node name="Fern20" parent="Background/Foreground/Bottom" index="6" instance=ExtResource( 47 )]
+[node name="Fern20" parent="Background/Foreground/Bottom" index="6" instance=ExtResource( 49 )]
 
 position = Vector2( 6774.64, 43.2462 )
 
-[node name="Fern21" parent="Background/Foreground/Bottom" index="7" instance=ExtResource( 47 )]
+[node name="Fern21" parent="Background/Foreground/Bottom" index="7" instance=ExtResource( 49 )]
 
 position = Vector2( 7517.41, -37.0164 )
 
-[node name="Fern13" parent="Background/Foreground/Bottom" index="8" instance=ExtResource( 47 )]
+[node name="Fern13" parent="Background/Foreground/Bottom" index="8" instance=ExtResource( 49 )]
 
 position = Vector2( 4527.01, 27.4529 )
 
-[node name="Fern26" parent="Background/Foreground/Bottom" index="9" instance=ExtResource( 47 )]
+[node name="Fern26" parent="Background/Foreground/Bottom" index="9" instance=ExtResource( 49 )]
 
 position = Vector2( 9944.59, -81.2268 )
 
-[node name="Fern27" parent="Background/Foreground/Bottom" index="10" instance=ExtResource( 47 )]
+[node name="Fern27" parent="Background/Foreground/Bottom" index="10" instance=ExtResource( 49 )]
 
 position = Vector2( 10205, -83.2774 )
 
-[node name="Fern2" parent="Background/Foreground/Bottom" index="11" instance=ExtResource( 48 )]
+[node name="Fern2" parent="Background/Foreground/Bottom" index="11" instance=ExtResource( 50 )]
 
 position = Vector2( 162.952, 166.182 )
 
-[node name="Fern3" parent="Background/Foreground/Bottom" index="12" instance=ExtResource( 48 )]
+[node name="Fern3" parent="Background/Foreground/Bottom" index="12" instance=ExtResource( 50 )]
 
 position = Vector2( 720.709, 175.705 )
 
-[node name="Fern4" parent="Background/Foreground/Bottom" index="13" instance=ExtResource( 48 )]
+[node name="Fern4" parent="Background/Foreground/Bottom" index="13" instance=ExtResource( 50 )]
 
 position = Vector2( 941.091, 181.147 )
 flip_h = true
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern5" parent="Background/Foreground/Bottom" index="14" instance=ExtResource( 48 )]
+[node name="Fern5" parent="Background/Foreground/Bottom" index="14" instance=ExtResource( 50 )]
 
 position = Vector2( 1606.32, 171.624 )
 flip_h = true
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern9" parent="Background/Foreground/Bottom" index="15" instance=ExtResource( 48 )]
+[node name="Fern9" parent="Background/Foreground/Bottom" index="15" instance=ExtResource( 50 )]
 
 position = Vector2( 4993.47, 32.9979 )
 flip_h = true
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern14" parent="Background/Foreground/Bottom" index="16" instance=ExtResource( 48 )]
+[node name="Fern14" parent="Background/Foreground/Bottom" index="16" instance=ExtResource( 50 )]
 
 position = Vector2( 5745.06, 53.0403 )
 flip_h = true
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern15" parent="Background/Foreground/Bottom" index="17" instance=ExtResource( 48 )]
+[node name="Fern15" parent="Background/Foreground/Bottom" index="17" instance=ExtResource( 50 )]
 
 position = Vector2( 6291.21, 41.3489 )
 flip_h = true
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern16" parent="Background/Foreground/Bottom" index="18" instance=ExtResource( 48 )]
+[node name="Fern16" parent="Background/Foreground/Bottom" index="18" instance=ExtResource( 50 )]
 
 position = Vector2( 6545.08, 51.3701 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern17" parent="Background/Foreground/Bottom" index="19" instance=ExtResource( 48 )]
+[node name="Fern17" parent="Background/Foreground/Bottom" index="19" instance=ExtResource( 50 )]
 
 position = Vector2( 6950.94, 36.3383 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern10" parent="Background/Foreground/Bottom" index="20" instance=ExtResource( 48 )]
+[node name="Fern10" parent="Background/Foreground/Bottom" index="20" instance=ExtResource( 50 )]
 
 position = Vector2( 3532.69, 281.859 )
 flip_h = true
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern12" parent="Background/Foreground/Bottom" index="21" instance=ExtResource( 48 )]
+[node name="Fern12" parent="Background/Foreground/Bottom" index="21" instance=ExtResource( 50 )]
 
 position = Vector2( 3995.85, 265.238 )
 flip_h = true
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern11" parent="Background/Foreground/Bottom" index="22" instance=ExtResource( 48 )]
+[node name="Fern11" parent="Background/Foreground/Bottom" index="22" instance=ExtResource( 50 )]
 
 position = Vector2( 3055.13, 264.13 )
 flip_h = true
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern22" parent="Background/Foreground/Bottom" index="23" instance=ExtResource( 48 )]
+[node name="Fern22" parent="Background/Foreground/Bottom" index="23" instance=ExtResource( 50 )]
 
 position = Vector2( 7906.75, -37.3024 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern23" parent="Background/Foreground/Bottom" index="24" instance=ExtResource( 48 )]
+[node name="Fern23" parent="Background/Foreground/Bottom" index="24" instance=ExtResource( 50 )]
 
 position = Vector2( 8431.69, -37.3024 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern24" parent="Background/Foreground/Bottom" index="25" instance=ExtResource( 48 )]
+[node name="Fern24" parent="Background/Foreground/Bottom" index="25" instance=ExtResource( 50 )]
 
 position = Vector2( 9258.07, 59.0739 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="Fern25" parent="Background/Foreground/Bottom" index="26" instance=ExtResource( 48 )]
+[node name="Fern25" parent="Background/Foreground/Bottom" index="26" instance=ExtResource( 50 )]
 
 position = Vector2( 9696.89, -68.0609 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="Grass" parent="Background/Foreground/Bottom" index="27" instance=ExtResource( 49 )]
+[node name="Grass" parent="Background/Foreground/Bottom" index="27" instance=ExtResource( 51 )]
 
 position = Vector2( 407.884, 159.381 )
 
-[node name="Grass2" parent="Background/Foreground/Bottom" index="28" instance=ExtResource( 49 )]
+[node name="Grass2" parent="Background/Foreground/Bottom" index="28" instance=ExtResource( 51 )]
 
 position = Vector2( 1825.4, 122.65 )
 
-[node name="Grass3" parent="Background/Foreground/Bottom" index="29" instance=ExtResource( 49 )]
+[node name="Grass3" parent="Background/Foreground/Bottom" index="29" instance=ExtResource( 51 )]
 
 position = Vector2( 2347.79, 119.929 )
 
-[node name="Grass4" parent="Background/Foreground/Bottom" index="30" instance=ExtResource( 49 )]
+[node name="Grass4" parent="Background/Foreground/Bottom" index="30" instance=ExtResource( 51 )]
 
 position = Vector2( 3261.92, 255.11 )
 
-[node name="Grass5" parent="Background/Foreground/Bottom" index="31" instance=ExtResource( 49 )]
+[node name="Grass5" parent="Background/Foreground/Bottom" index="31" instance=ExtResource( 51 )]
 
 position = Vector2( 3758.33, 277.271 )
 
-[node name="Grass6" parent="Background/Foreground/Bottom" index="32" instance=ExtResource( 49 )]
+[node name="Grass6" parent="Background/Foreground/Bottom" index="32" instance=ExtResource( 51 )]
 
 position = Vector2( 4698.65, -10.0021 )
 
-[node name="Grass7" parent="Background/Foreground/Bottom" index="33" instance=ExtResource( 49 )]
+[node name="Grass7" parent="Background/Foreground/Bottom" index="33" instance=ExtResource( 51 )]
 
 position = Vector2( 5276.53, 20.0613 )
 
-[node name="Grass8" parent="Background/Foreground/Bottom" index="34" instance=ExtResource( 49 )]
+[node name="Grass8" parent="Background/Foreground/Bottom" index="34" instance=ExtResource( 51 )]
 
 position = Vector2( 7670.9, -87.2579 )
 
-[node name="Grass9" parent="Background/Foreground/Bottom" index="35" instance=ExtResource( 49 )]
+[node name="Grass9" parent="Background/Foreground/Bottom" index="35" instance=ExtResource( 51 )]
 
 position = Vector2( 8152.78, -74.9546 )
 
-[node name="Grass10" parent="Background/Foreground/Bottom" index="36" instance=ExtResource( 49 )]
+[node name="Grass10" parent="Background/Foreground/Bottom" index="36" instance=ExtResource( 51 )]
 
 position = Vector2( 8940.19, 15.2701 )
 
-[node name="Grass11" parent="Background/Foreground/Bottom" index="37" instance=ExtResource( 49 )]
+[node name="Grass11" parent="Background/Foreground/Bottom" index="37" instance=ExtResource( 51 )]
 
 position = Vector2( 8940.19, 15.2701 )
 
-[node name="Grass12" parent="Background/Foreground/Bottom" index="38" instance=ExtResource( 49 )]
+[node name="Grass12" parent="Background/Foreground/Bottom" index="38" instance=ExtResource( 51 )]
 
 position = Vector2( 9071.43, 13.2195 )
 flip_h = true
@@ -1213,183 +1219,183 @@ motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion", "Z Index" ]
 
-[node name="Lianna1" parent="Background/Foreground/Top" index="0" instance=ExtResource( 50 )]
+[node name="Lianna1" parent="Background/Foreground/Top" index="0" instance=ExtResource( 52 )]
 
 position = Vector2( 94.4021, 159.826 )
 
-[node name="Lianna2" parent="Background/Foreground/Top" index="1" instance=ExtResource( 50 )]
+[node name="Lianna2" parent="Background/Foreground/Top" index="1" instance=ExtResource( 52 )]
 
 position = Vector2( 1089.41, 132.826 )
 
-[node name="Lianna3" parent="Background/Foreground/Top" index="2" instance=ExtResource( 50 )]
+[node name="Lianna3" parent="Background/Foreground/Top" index="2" instance=ExtResource( 52 )]
 
 position = Vector2( 1261.41, 60.8253 )
 
-[node name="Lianna4" parent="Background/Foreground/Top" index="3" instance=ExtResource( 50 )]
+[node name="Lianna4" parent="Background/Foreground/Top" index="3" instance=ExtResource( 52 )]
 
 position = Vector2( 1902.41, -117.176 )
 
-[node name="Lianna5" parent="Background/Foreground/Top" index="4" instance=ExtResource( 50 )]
+[node name="Lianna5" parent="Background/Foreground/Top" index="4" instance=ExtResource( 52 )]
 
 position = Vector2( 3814.79, 34.8119 )
 
-[node name="Lianna6" parent="Background/Foreground/Top" index="5" instance=ExtResource( 50 )]
+[node name="Lianna6" parent="Background/Foreground/Top" index="5" instance=ExtResource( 52 )]
 
 position = Vector2( 4272.42, -31.9959 )
 
-[node name="Lianna7" parent="Background/Foreground/Top" index="6" instance=ExtResource( 50 )]
+[node name="Lianna7" parent="Background/Foreground/Top" index="6" instance=ExtResource( 52 )]
 
 position = Vector2( 5197.71, -65.3998 )
 
-[node name="Lianna8" parent="Background/Foreground/Top" index="7" instance=ExtResource( 50 )]
+[node name="Lianna8" parent="Background/Foreground/Top" index="7" instance=ExtResource( 52 )]
 
 position = Vector2( 6251.6, -137.218 )
 
-[node name="Lianna9" parent="Background/Foreground/Top" index="8" instance=ExtResource( 50 )]
+[node name="Lianna9" parent="Background/Foreground/Top" index="8" instance=ExtResource( 52 )]
 
 position = Vector2( 6552.23, -142.229 )
 
-[node name="Lianna10" parent="Background/Foreground/Top" index="9" instance=ExtResource( 50 )]
+[node name="Lianna10" parent="Background/Foreground/Top" index="9" instance=ExtResource( 52 )]
 
 position = Vector2( 6864.56, -155.59 )
 
-[node name="Lianna11" parent="Background/Foreground/Top" index="10" instance=ExtResource( 50 )]
+[node name="Lianna11" parent="Background/Foreground/Top" index="10" instance=ExtResource( 52 )]
 
 position = Vector2( 7091.71, -232.419 )
 
-[node name="Lianna12" parent="Background/Foreground/Top" index="11" instance=ExtResource( 50 )]
+[node name="Lianna12" parent="Background/Foreground/Top" index="11" instance=ExtResource( 52 )]
 
 position = Vector2( 7579.4, -310.918 )
 
-[node name="Lianna13" parent="Background/Foreground/Top" index="12" instance=ExtResource( 50 )]
+[node name="Lianna13" parent="Background/Foreground/Top" index="12" instance=ExtResource( 52 )]
 
 position = Vector2( 7756.44, -330.961 )
 
-[node name="Lianna14" parent="Background/Foreground/Top" index="13" instance=ExtResource( 50 )]
+[node name="Lianna14" parent="Background/Foreground/Top" index="13" instance=ExtResource( 52 )]
 
 position = Vector2( 7966.89, -307.578 )
 
-[node name="Lianna15" parent="Background/Foreground/Top" index="14" instance=ExtResource( 50 )]
+[node name="Lianna15" parent="Background/Foreground/Top" index="14" instance=ExtResource( 52 )]
 
 position = Vector2( 8942.28, -180.643 )
 
-[node name="Lianna16" parent="Background/Foreground/Top" index="15" instance=ExtResource( 50 )]
+[node name="Lianna16" parent="Background/Foreground/Top" index="15" instance=ExtResource( 52 )]
 
 position = Vector2( 9147.71, -280.855 )
 
-[node name="Lianna17" parent="Background/Foreground/Top" index="16" instance=ExtResource( 50 )]
+[node name="Lianna17" parent="Background/Foreground/Top" index="16" instance=ExtResource( 52 )]
 
 position = Vector2( 10008.2, -329.524 )
 
-[node name="LiannaDown" parent="Background/Foreground/Top" index="17" instance=ExtResource( 51 )]
+[node name="LiannaDown" parent="Background/Foreground/Top" index="17" instance=ExtResource( 53 )]
 
 position = Vector2( 291.892, 172.373 )
 
-[node name="LiannaDown2" parent="Background/Foreground/Top" index="18" instance=ExtResource( 51 )]
+[node name="LiannaDown2" parent="Background/Foreground/Top" index="18" instance=ExtResource( 53 )]
 
 position = Vector2( 918.896, 150.373 )
 
-[node name="LiannaDown3" parent="Background/Foreground/Top" index="19" instance=ExtResource( 51 )]
+[node name="LiannaDown3" parent="Background/Foreground/Top" index="19" instance=ExtResource( 53 )]
 
 position = Vector2( 1716.9, -54.6285 )
 
-[node name="LiannaDown4" parent="Background/Foreground/Top" index="20" instance=ExtResource( 51 )]
+[node name="LiannaDown4" parent="Background/Foreground/Top" index="20" instance=ExtResource( 53 )]
 
 position = Vector2( 3430.83, 96.3842 )
 
-[node name="LiannaDown5" parent="Background/Foreground/Top" index="21" instance=ExtResource( 51 )]
+[node name="LiannaDown5" parent="Background/Foreground/Top" index="21" instance=ExtResource( 53 )]
 
 position = Vector2( 3696.4, 84.6929 )
 
-[node name="LiannaDown6" parent="Background/Foreground/Top" index="22" instance=ExtResource( 51 )]
+[node name="LiannaDown6" parent="Background/Foreground/Top" index="22" instance=ExtResource( 53 )]
 
 position = Vector2( 4458, -32.2207 )
 
-[node name="LiannaDown7" parent="Background/Foreground/Top" index="23" instance=ExtResource( 51 )]
+[node name="LiannaDown7" parent="Background/Foreground/Top" index="23" instance=ExtResource( 53 )]
 
 position = Vector2( 5012.51, -70.6351 )
 
-[node name="LiannaDown8" parent="Background/Foreground/Top" index="24" instance=ExtResource( 51 )]
+[node name="LiannaDown8" parent="Background/Foreground/Top" index="24" instance=ExtResource( 53 )]
 
 position = Vector2( 5640.5, -207.591 )
 
-[node name="LiannaDown9" parent="Background/Foreground/Top" index="25" instance=ExtResource( 51 )]
+[node name="LiannaDown9" parent="Background/Foreground/Top" index="25" instance=ExtResource( 53 )]
 
 position = Vector2( 6978.33, -175.857 )
 
-[node name="LiannaDown10" parent="Background/Foreground/Top" index="26" instance=ExtResource( 51 )]
+[node name="LiannaDown10" parent="Background/Foreground/Top" index="26" instance=ExtResource( 53 )]
 
 position = Vector2( 7457.67, -274.399 )
 
-[node name="LiannaDown11" parent="Background/Foreground/Top" index="27" instance=ExtResource( 51 )]
+[node name="LiannaDown11" parent="Background/Foreground/Top" index="27" instance=ExtResource( 53 )]
 
 position = Vector2( 8169.17, -289.431 )
 
-[node name="LiannaDown12" parent="Background/Foreground/Top" index="28" instance=ExtResource( 51 )]
+[node name="LiannaDown12" parent="Background/Foreground/Top" index="28" instance=ExtResource( 53 )]
 
 position = Vector2( 8374.61, -297.782 )
 
-[node name="LiannaSmall" parent="Background/Foreground/Top" index="29" instance=ExtResource( 52 )]
+[node name="LiannaSmall" parent="Background/Foreground/Top" index="29" instance=ExtResource( 54 )]
 
 position = Vector2( 504.24, 160.746 )
 
-[node name="LiannaSmall2" parent="Background/Foreground/Top" index="30" instance=ExtResource( 52 )]
+[node name="LiannaSmall2" parent="Background/Foreground/Top" index="30" instance=ExtResource( 54 )]
 
 position = Vector2( 771.242, 134.746 )
 
-[node name="LiannaSmall3" parent="Background/Foreground/Top" index="31" instance=ExtResource( 52 )]
+[node name="LiannaSmall3" parent="Background/Foreground/Top" index="31" instance=ExtResource( 54 )]
 
 position = Vector2( 1510.25, 28.7451 )
 
-[node name="LiannaSmall4" parent="Background/Foreground/Top" index="32" instance=ExtResource( 52 )]
+[node name="LiannaSmall4" parent="Background/Foreground/Top" index="32" instance=ExtResource( 54 )]
 
 position = Vector2( 2452.99, -51.5175 )
 
-[node name="LiannaSmall5" parent="Background/Foreground/Top" index="33" instance=ExtResource( 52 )]
+[node name="LiannaSmall5" parent="Background/Foreground/Top" index="33" instance=ExtResource( 54 )]
 
 position = Vector2( 3332.06, 39.3261 )
 
-[node name="LiannaSmall6" parent="Background/Foreground/Top" index="34" instance=ExtResource( 52 )]
+[node name="LiannaSmall6" parent="Background/Foreground/Top" index="34" instance=ExtResource( 54 )]
 
 position = Vector2( 3556.75, 106.919 )
 
-[node name="LiannaSmall7" parent="Background/Foreground/Top" index="35" instance=ExtResource( 52 )]
+[node name="LiannaSmall7" parent="Background/Foreground/Top" index="35" instance=ExtResource( 54 )]
 
 position = Vector2( 4045.13, 24.574 )
 
-[node name="LiannaSmall8" parent="Background/Foreground/Top" index="36" instance=ExtResource( 52 )]
+[node name="LiannaSmall8" parent="Background/Foreground/Top" index="36" instance=ExtResource( 54 )]
 
 position = Vector2( 4596.29, -48.9145 )
 
-[node name="LiannaSmall9" parent="Background/Foreground/Top" index="37" instance=ExtResource( 52 )]
+[node name="LiannaSmall9" parent="Background/Foreground/Top" index="37" instance=ExtResource( 54 )]
 
 position = Vector2( 4865.19, -42.2337 )
 
-[node name="LiannaSmall10" parent="Background/Foreground/Top" index="38" instance=ExtResource( 52 )]
+[node name="LiannaSmall10" parent="Background/Foreground/Top" index="38" instance=ExtResource( 54 )]
 
 position = Vector2( 5349.55, -149.126 )
 
-[node name="LiannaSmall11" parent="Background/Foreground/Top" index="39" instance=ExtResource( 52 )]
+[node name="LiannaSmall11" parent="Background/Foreground/Top" index="39" instance=ExtResource( 54 )]
 
 position = Vector2( 5504.88, -224.285 )
 
-[node name="LiannaSmall12" parent="Background/Foreground/Top" index="40" instance=ExtResource( 52 )]
+[node name="LiannaSmall12" parent="Background/Foreground/Top" index="40" instance=ExtResource( 54 )]
 
 position = Vector2( 5783.8, -172.509 )
 
-[node name="LiannaSmall13" parent="Background/Foreground/Top" index="41" instance=ExtResource( 52 )]
+[node name="LiannaSmall13" parent="Background/Foreground/Top" index="41" instance=ExtResource( 54 )]
 
 position = Vector2( 6041.01, -172.509 )
 
-[node name="LiannaSmall14" parent="Background/Foreground/Top" index="42" instance=ExtResource( 52 )]
+[node name="LiannaSmall14" parent="Background/Foreground/Top" index="42" instance=ExtResource( 54 )]
 
 position = Vector2( 6707.42, -149.126 )
 
-[node name="LiannaSmall15" parent="Background/Foreground/Top" index="43" instance=ExtResource( 52 )]
+[node name="LiannaSmall15" parent="Background/Foreground/Top" index="43" instance=ExtResource( 54 )]
 
 position = Vector2( 7327.06, -256.019 )
 
-[node name="LiannaSmall16" parent="Background/Foreground/Top" index="44" instance=ExtResource( 52 )]
+[node name="LiannaSmall16" parent="Background/Foreground/Top" index="44" instance=ExtResource( 54 )]
 
 position = Vector2( 8511.23, -286.082 )
 
