@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Background 4 gradient.png-a20e7fac1477071fa3ec6d2fed98f2cb.stex"
+path="res://.import/Lianna3.png-a84f5dcb378c0506a2dad02d08821d6b.stex"
 
 [deps]
 
-source_file="res://Assets/Background/Background 4 gradient.png"
-dest_files=[ "res://.import/Background 4 gradient.png-a20e7fac1477071fa3ec6d2fed98f2cb.stex" ]
+source_file="res://Assets/Background/Decoratives/Lianna3.png"
+dest_files=[ "res://.import/Lianna3.png-a84f5dcb378c0506a2dad02d08821d6b.stex" ]
 
 [params]
 
@@ -15,7 +15,7 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
