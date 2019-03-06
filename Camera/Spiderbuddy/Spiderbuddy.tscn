@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Camera/Spiderbuddy/Spiderbuddy.gd" type="Script" id=1]
 [ext_resource path="res://Camera/Spiderbuddy/spiddy_net.png" type="Texture" id=2]
@@ -8,7 +8,9 @@
 [ext_resource path="res://Camera/Spiderbuddy/spiddy_leaf2.png" type="Texture" id=6]
 [ext_resource path="res://Camera/Spiderbuddy/spiddy_leaf1.png" type="Texture" id=7]
 [ext_resource path="res://Camera/Spiderbuddy/spiddy_feet1.png" type="Texture" id=8]
-[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Camera/Spiderbuddy/Text box.png" type="Texture" id=9]
+[ext_resource path="res://Camera/Spiderbuddy/Text box - leaf.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/hoboStandard.tres" type="DynamicFont" id=11]
 
 [sub_resource type="Animation" id=1]
 
@@ -221,7 +223,7 @@ tracks/4/keys = {
 "values": [ -24.1365, -24.1365, 0.0 ]
 }
 
-[node name="Spiderbuddy" type="Node2D"]
+[node name="Spiderbuddy" type="Node2D" index="0"]
 
 z_index = 10
 script = ExtResource( 1 )
@@ -310,30 +312,48 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 modulate = Color( 1, 1, 1, 0 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Label" type="Label" parent="Speechbubble" index="0"]
+[node name="Sprite" type="Sprite" parent="Speechbubble" index="0"]
+
+position = Vector2( 189.812, 40.4354 )
+scale = Vector2( 0.414157, 0.192334 )
+texture = ExtResource( 9 )
+
+[node name="Sprite2" type="Sprite" parent="Speechbubble" index="1"]
+
+position = Vector2( 80.8151, 24.547 )
+scale = Vector2( 0.2222, 0.192334 )
+texture = ExtResource( 10 )
+
+[node name="Sprite3" type="Sprite" parent="Speechbubble" index="2"]
+
+position = Vector2( 294.382, 57.8232 )
+rotation = 3.13697
+scale = Vector2( 0.2222, 0.192334 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="Speechbubble" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 64.0
-margin_top = -64.0
-margin_right = 462.0
-margin_bottom = 62.0
+margin_right = 910.0
+margin_bottom = 257.0
 rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+rect_clip_content = true
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+size_flags_vertical = 2
+custom_fonts/font = ExtResource( 11 )
+autowrap = true
+clip_text = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
-
-[node name="Sprite" type="Sprite" parent="Speechbubble" index="1"]
+_sections_unfolded = [ "Grow Direction", "Rect", "Size Flags", "Visibility", "custom_fonts" ]
 
 [node name="IdleTimer" type="Timer" parent="." index="4"]
 
