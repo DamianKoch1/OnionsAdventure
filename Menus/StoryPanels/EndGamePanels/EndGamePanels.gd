@@ -1,6 +1,6 @@
 extends Node
 
-onready var mainMenu = preload("res://Menus/MainMenu/MainMenu.tscn")
+onready var credits = preload("res://Menus/MainMenu/CreditScreen.tscn")
 
 onready var skipped = false
 
@@ -26,14 +26,14 @@ func simulateClick():
 	get_tree().input_event(ev)
 	Input.parse_input_event(ev)
 
-func loadMainMenu():
-	get_tree().change_scene_to(mainMenu)
+func loadCredits():
+	get_tree().change_scene_to(credits)
 
 func _on_SkipButton_pressed():
 	if skipped != true:
 		skipped = true
 		$BGMPlayerIntro.fadeOut()
-		loadMainMenu()
+		loadCredits()
 	
 func _on_PanelButton2_animFinished():
-	loadMainMenu()
+	loadCredits()
