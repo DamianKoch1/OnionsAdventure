@@ -19,7 +19,7 @@ position = Vector2( 144, 80 )
 scale = Vector2( 0.5, 7.5 )
 z_index = 70
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Z Index" ]
 swingDegrees = 30
 swingSpeed = 0.03
 mirrorSwing = false
@@ -34,8 +34,8 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="VineTop" parent="Sprite" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 0, -390.727 )
-scale = Vector2( 1, 1.15758 )
+position = Vector2( -0.166351, -389.643 )
+scale = Vector2( 1, 1.17152 )
 
 [node name="Area2D" type="Area2D" parent="." index="1" groups=[
 "rayIgnore",

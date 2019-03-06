@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 9.3325, 9.25747 )
 
-[node name="stump l 8" type="Node2D"]
+[node name="stump l 8" type="Node2D" index="0"]
 
 scale = Vector2( 0.0989583, 0.104806 )
 z_index = 50
@@ -17,7 +17,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ast 3" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -1008.17, -271.763 )
+position = Vector2( -985.901, -270.656 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Ast 4" parent="." index="1" instance=ExtResource( 2 )]

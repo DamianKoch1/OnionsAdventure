@@ -113,3 +113,11 @@ func back():
 	$OptionsOverlay.hide()
 	fade.fadeIn(2)
 	focusButton.grab_focus()
+
+func onOptionsNewGamePressed():
+	fade.oneshot(self, "reset")
+
+func reset():
+	SaveGame.deleteSave()
+	get_tree().change_scene("res://Menus/Bootsplash/BootLogo.tscn")
+	
