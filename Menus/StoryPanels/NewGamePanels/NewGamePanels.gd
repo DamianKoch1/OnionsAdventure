@@ -5,7 +5,6 @@ onready var lv1 = preload("res://Levels/Level 1.tscn")
 onready var skipped = false
 
 func _ready():
-	MenuMusic.fadeOut(2)
 	$BGMPlayer.fadeIn(2)
 	$Fade.fadeIn(2)
 

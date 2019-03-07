@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placeholder panel3.jpg-1cff00b8898e6570aeb930a74d0cc210.stex"
+path="res://.import/screen_level_3.png-86486038a543d8af96f542b2b6844a78.stex"
 
 [deps]
 
-source_file="res://Menus/StoryPanels/NewGamePanels/placeholder panel3.jpg"
-dest_files=[ "res://.import/placeholder panel3.jpg-1cff00b8898e6570aeb930a74d0cc210.stex" ]
+source_file="res://Menus/LevelSelector/screen_level_3.png"
+dest_files=[ "res://.import/screen_level_3.png-86486038a543d8af96f542b2b6844a78.stex" ]
 
 [params]
 

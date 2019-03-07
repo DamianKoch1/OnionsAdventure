@@ -17,6 +17,7 @@ func loadScene():
 
 func _on_LevelButton_pressed():
 	$UISelect.playing = true
+	MenuMusic.fadeOut()
 	fade.oneshot(self, "loadScene")
 
 
