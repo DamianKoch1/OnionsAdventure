@@ -28,6 +28,7 @@ func _physics_process(delta):
 func connectSignals():
 	player.connect("NPCsaved", self, "updateNPCsaved")
 	player.connect("collectedDandelion", self, "updateCollectables")
+	player.connect("goalEntered", $BGMPlayer, "fadeOut")
 
 func updateNPCsaved():
 	npcFull.region_rect.size.x = (3 - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth

@@ -81,6 +81,7 @@ func extras():
 
 
 func _on_NewGameButton_pressed():
+	MenuMusic.fadeOut()
 	fade.oneshot(self, "newGame")
 	
 func newGame():
@@ -91,6 +92,7 @@ func newGame():
 
 
 func _on_ContinueButton_pressed():
+	MenuMusic.fadeOut()
 	fade.oneshot(self, "loadGame")
 
 func loadGame():
@@ -115,6 +117,7 @@ func back():
 	focusButton.grab_focus()
 
 func onOptionsNewGamePressed():
+	MenuMusic.fadeOut()
 	fade.oneshot(self, "reset")
 
 func reset():

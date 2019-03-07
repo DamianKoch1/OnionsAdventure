@@ -36,4 +36,5 @@ func _on_SkipButton_pressed():
 		loadCredits()
 	
 func _on_PanelButton2_animFinished():
-	loadCredits()
+	var creditsInstance = credits.instance()
+	add_child(creditsInstance) 

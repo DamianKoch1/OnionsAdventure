@@ -31,6 +31,7 @@ func simulateClick():
 	Input.parse_input_event(ev)
 
 func fadeOut():
+	$BGMPlayer.fadeOut()
 	$Fade.oneshot(self, "loadNextLevel")
 
 func loadNextLevel():

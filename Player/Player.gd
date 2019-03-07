@@ -42,6 +42,7 @@ var attachCD = 0
 signal loseHp
 signal NPCsaved
 signal collectedDandelion
+signal goalEntered
 
 func _ready():
 	MenuMusic.playing = false
@@ -244,6 +245,7 @@ func trackFallSpeed():
 		highestFallSpeed = motion.y
 
 func playGoalAnim():
+	emit_signal("goalEntered")
 	animTreePlayer.active = false
 	anim.play("Onion_Joyful")
 
