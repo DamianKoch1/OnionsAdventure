@@ -1158,7 +1158,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1461, -69 ), Vector2( -2101, -69 ) ]
 }
 
-[node name="Gallery" type="Container" index="0"]
+[node name="Gallery" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -1230,10 +1230,11 @@ _sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_font
 
 [node name="MainMenuButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -365.0
-margin_top = 93.0
-margin_right = -215.0
-margin_bottom = 125.0
+editor/display_folded = false
+margin_left = -356.0
+margin_top = 79.0
+margin_right = -196.0
+margin_bottom = 111.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath("../BackButton")
@@ -1242,14 +1243,13 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="MainMenuButton" index="0"]
 
-margin_left = 50.0
-margin_top = 0.0
-margin_right = 1230.0
-margin_bottom = 274.0
+margin_right = 1189.0
+margin_bottom = 273.0
 text = "Back"
 
 [node name="BackButton" parent="." index="3" instance=ExtResource( 4 )]
 
+editor/display_folded = false
 margin_left = -115.0
 margin_top = 107.0
 margin_right = -70.0
@@ -1273,6 +1273,7 @@ text = "back"
 
 [node name="NextButton" parent="." index="4" instance=ExtResource( 4 )]
 
+editor/display_folded = false
 margin_left = 28.0
 margin_top = 107.0
 margin_right = 73.0

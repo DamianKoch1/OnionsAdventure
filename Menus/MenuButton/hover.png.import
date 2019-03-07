@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Button_Large_Disabled.png-b296d732548edec2ee5ea0bdf710ba46.stex"
+path="res://.import/hover.png-1e766efa1a97803335c1d351ac3fb65e.stex"
 
 [deps]
 
-source_file="res://Menus/MenuButton/Buttons/Button_Large_Disabled.png"
-dest_files=[ "res://.import/Button_Large_Disabled.png-b296d732548edec2ee5ea0bdf710ba46.stex" ]
+source_file="res://Menus/MenuButton/hover.png"
+dest_files=[ "res://.import/hover.png-1e766efa1a97803335c1d351ac3fb65e.stex" ]
 
 [params]
 
@@ -16,9 +16,9 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=true
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false

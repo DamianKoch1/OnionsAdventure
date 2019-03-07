@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/level_2.png-a8af6fed5907bbb00733c5f0b284bd50.stex"
+path="res://.import/Panel2.2.png-d5cc5ce5c959db4cc7202d595347d5db.stex"
 
 [deps]
 
-source_file="res://Menus/LevelSelector/level_2.png"
-dest_files=[ "res://.import/level_2.png-a8af6fed5907bbb00733c5f0b284bd50.stex" ]
+source_file="res://Menus/StoryPanels/NewGamePanels/Panel2.2.png"
+dest_files=[ "res://.import/Panel2.2.png-d5cc5ce5c959db4cc7202d595347d5db.stex" ]
 
 [params]
 

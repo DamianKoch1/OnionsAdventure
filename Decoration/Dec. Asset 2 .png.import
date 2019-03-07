@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Button_Large_Highlighted.png-eb1b92e09e50470cb05c59cdbd807b5e.stex"
+path="res://.import/Dec. Asset 2 .png-ef9aa960038a55bac7f49637b91ba0e3.stex"
 
 [deps]
 
-source_file="res://Menus/MenuButton/Buttons/Button_Large_Highlighted.png"
-dest_files=[ "res://.import/Button_Large_Highlighted.png-eb1b92e09e50470cb05c59cdbd807b5e.stex" ]
+source_file="res://Decoration/Dec. Asset 2 .png"
+dest_files=[ "res://.import/Dec. Asset 2 .png-ef9aa960038a55bac7f49637b91ba0e3.stex" ]
 
 [params]
 

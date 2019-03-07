@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/level_1.png-6303e937419718142a1a4eb5ae7a7590.stex"
+path="res://.import/Level-Start-End-Short.png-2dd8b95f6fab08433a330365313024c0.stex"
 
 [deps]
 
-source_file="res://Menus/LevelSelector/level_1.png"
-dest_files=[ "res://.import/level_1.png-6303e937419718142a1a4eb5ae7a7590.stex" ]
+source_file="res://Decoration/Level-Start-End-Short.png"
+dest_files=[ "res://.import/Level-Start-End-Short.png-2dd8b95f6fab08433a330365313024c0.stex" ]
 
 [params]
 
