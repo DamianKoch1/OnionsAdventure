@@ -173,17 +173,13 @@ blend_times = [  ]
 
 [node name="SkipButton" parent="." index="4" instance=ExtResource( 10 )]
 
-margin_left = -180.0
-margin_top = 310.0
-margin_right = -20.0
-margin_bottom = 346.0
+margin_left = 480.0
+margin_top = 320.0
+margin_right = 640.0
+margin_bottom = 356.0
 
 [node name="Label" parent="SkipButton" index="0"]
 
-margin_left = 63.0
-margin_top = 2.0
-margin_right = 535.0
-margin_bottom = 110.0
 text = "Skip"
 
 [node name="BGMPlayerIntro" parent="." index="5" instance=ExtResource( 11 )]

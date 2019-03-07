@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Obstacles/Stones/Stone Bridge New v2.png" type="Texture" id=1]
+
+[node name="StoneBridgeA" type="Sprite" index="0"]
+
+position = Vector2( 224, 96 )
+scale = Vector2( 0.650394, 0.650394 )
+z_index = -5
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -265.729, 136.911, -228.342, 133.588, -192, 128, -149.905, 96.4864, -98.7343, 97.8623, -69.3125, 69.0508, -33.0996, 60.4754, 6.77975, 49.6747, 28.4269, 3.03387, 46.6591, 31.3967, 90.6926, 33.0583, 119.771, 4.81046, 137.312, -8.11185, 202.471, -12.3987, 252.702, 66.2911, 292.495, 24.4679, 311.357, -33.8327, 302.783, -83.5598, 264.334, -133.106, 212.823, -144.737, 187.898, -144.737, 127.249, -135.598, 101.493, -116.489, 75.7378, -124.797, 2.62564, -100.704, -22.2989, -81.5948, -29.7763, -62.4859, -72.1481, -59.9935, -99.5652, -46.7003, -177.662, -20.9449, -209.233, -2.66692, -211.726, 20.596, -239.143, 26.4118, -281.081, 56.1904, -293.146, 76.261, -300.8, 103.345, -291.484, 129.433 )
+
+

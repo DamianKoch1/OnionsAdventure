@@ -74,7 +74,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Spread" ]
 
-[node name="MainMenu" type="Container" index="0"]
+[node name="MainMenu" type="Container"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -141,69 +141,63 @@ _sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="NewGameButton" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = -180.0
+margin_left = -192.0
 margin_top = 13.0
-margin_right = -20.0
-margin_bottom = 43.0
+margin_right = -32.0
+margin_bottom = 45.0
 focus_neighbour_top = NodePath(".")
 focus_neighbour_bottom = NodePath("../LevelSelectorButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="NewGameButton" index="0"]
 
-margin_left = 39.0
-margin_top = 1.0
-margin_right = 948.0
-margin_bottom = 109.0
+margin_left = 51.0
+margin_right = 960.0
 rect_scale = Vector2( 0.25, 0.25 )
 text = "New game"
 
 [node name="ContinueButton" parent="." index="3" instance=ExtResource( 4 )]
 
 visible = false
-margin_left = -180.0
+margin_left = -186.0
 margin_top = 13.0
-margin_right = -20.0
-margin_bottom = 43.0
+margin_right = -26.0
+margin_bottom = 45.0
 focus_neighbour_top = NodePath(".")
 focus_neighbour_bottom = NodePath("../LevelSelectorButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="ContinueButton" index="0"]
 
-margin_left = 43.0
-margin_top = 1.0
-margin_right = 952.0
-margin_bottom = 109.0
+margin_left = 50.0
+margin_right = 959.0
 rect_scale = Vector2( 0.25, 0.25 )
 custom_colors/font_color = Color( 0.0196078, 0.121569, 0.356863, 1 )
 text = "Continue"
 
 [node name="LevelSelectorButton" parent="." index="4" instance=ExtResource( 4 )]
 
-margin_left = -180.0
+margin_left = -175.0
 margin_top = 43.0
-margin_right = -20.0
-margin_bottom = 73.0
+margin_right = -15.0
+margin_bottom = 75.0
 focus_neighbour_top = NodePath("../ContinueButton")
 focus_neighbour_bottom = NodePath("../ExtrasButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="LevelSelectorButton" index="0"]
 
-margin_left = 54.0
-margin_top = 2.0
-margin_right = 963.0
-margin_bottom = 110.0
+margin_left = 50.0
+margin_right = 959.0
 rect_scale = Vector2( 0.25, 0.25 )
 text = "Levels"
 
 [node name="ExtrasButton" parent="." index="5" instance=ExtResource( 4 )]
 
-margin_left = -180.0
+margin_left = -179.0
 margin_top = 73.0
-margin_right = -20.0
-margin_bottom = 103.0
+margin_right = -19.0
+margin_bottom = 105.0
 focus_neighbour_top = NodePath("../LevelSelectorButton")
 focus_neighbour_bottom = NodePath("../OptionsButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
@@ -211,28 +205,24 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 [node name="Label" parent="ExtrasButton" index="0"]
 
 margin_left = 51.0
-margin_top = 1.0
 margin_right = 960.0
-margin_bottom = 109.0
 rect_scale = Vector2( 0.25, 0.25 )
 text = "Gallery"
 
 [node name="OptionsButton" parent="." index="6" instance=ExtResource( 4 )]
 
-margin_left = -180.0
+margin_left = -182.0
 margin_top = 103.0
-margin_right = -20.0
-margin_bottom = 133.0
+margin_right = -22.0
+margin_bottom = 135.0
 focus_neighbour_top = NodePath("../ExtrasButton")
 focus_neighbour_bottom = NodePath("../CreditsButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="OptionsButton" index="0"]
 
-margin_left = 49.0
-margin_top = 1.0
-margin_right = 530.0
-margin_bottom = 109.0
+margin_left = 51.0
+margin_right = 532.0
 rect_scale = Vector2( 0.25, 0.25 )
 text = "Options"
 
@@ -241,7 +231,7 @@ text = "Options"
 margin_left = -180.0
 margin_top = 133.0
 margin_right = -20.0
-margin_bottom = 163.0
+margin_bottom = 165.0
 focus_neighbour_top = NodePath("../OptionsButton")
 focus_neighbour_bottom = NodePath("../QuitButton")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
@@ -249,28 +239,23 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 [node name="Label" parent="CreditsButton" index="0"]
 
 margin_left = 51.0
-margin_top = 1.0
 margin_right = 683.0
-margin_bottom = 109.0
 rect_scale = Vector2( 0.25, 0.25 )
 text = "Credits"
 
 [node name="QuitButton" parent="." index="8" instance=ExtResource( 4 )]
 
-margin_left = -180.0
+margin_left = -168.0
 margin_top = 163.0
-margin_right = -20.0
-margin_bottom = 193.0
+margin_right = -8.0
+margin_bottom = 195.0
 focus_neighbour_top = NodePath("../CreditsButton")
 focus_neighbour_bottom = NodePath(".")
 _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="QuitButton" index="0"]
 
-margin_left = 62.0
-margin_top = 2.0
-margin_right = 586.0
-margin_bottom = 110.0
+margin_right = 533.0
 rect_scale = Vector2( 0.25, 0.25 )
 text = "Quit"
 
@@ -300,7 +285,6 @@ margin_bottom = 50.0
 
 [node name="OptionsOverlay" parent="." index="10" instance=ExtResource( 6 )]
 
-visible = false
 margin_left = 63.0
 margin_top = 50.0
 margin_right = 95.0
@@ -308,14 +292,11 @@ margin_bottom = 79.0
 
 [node name="BackButton" parent="OptionsOverlay" index="2"]
 
-margin_left = -365.0
-margin_top = 83.0
-margin_right = -215.0
-margin_bottom = 115.0
 focus_neighbour_right = NodePath("../NewGameButton")
 
 [node name="NewGameButton" parent="OptionsOverlay" index="4" instance=ExtResource( 4 )]
 
+editor/display_folded = false
 margin_left = -155.0
 margin_top = 93.0
 margin_right = 5.0
@@ -328,10 +309,8 @@ _sections_unfolded = [ "Focus", "Rect", "Textures" ]
 
 [node name="Label" parent="OptionsOverlay/NewGameButton" index="0"]
 
-margin_left = 37.0
-margin_top = 1.0
-margin_right = 509.0
-margin_bottom = 109.0
+margin_left = 51.0
+margin_right = 523.0
 rect_scale = Vector2( 0.25, 0.25 )
 text = "New game"
 
@@ -367,7 +346,7 @@ margin_bottom = 280.0
 
 [connection signal="pressed" from="OptionsOverlay/BackButton" to="." method="_on_BackButton_pressed"]
 
-[connection signal="pressed" from="OptionsOverlay/NewGameButton" to="." method="onOptionsNewGamePressed"]
+[connection signal="pressed" from="OptionsOverlay/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 
 
 [editable path="NewGameButton"]
