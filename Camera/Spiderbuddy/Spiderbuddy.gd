@@ -13,7 +13,7 @@ func _ready():
 func onTriggerEntered(text, idleDuration):
 	label.text = text
 	idleTimer.wait_time = idleDuration
-	if anim.is_playing() == false:
+	if !anim.is_playing():
 		anim.play("show")
 
 #when key spiderbuddy waits for is pressed he should either not appear (in trigger script) or go up again

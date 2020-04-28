@@ -29,5 +29,6 @@ func _on_Timer_timeout():
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "digOut" && diggedOut == true:
-		anim.play("idle")
+	if diggedOut:
+		if anim_name == "digOut":
+			anim.play("idle")

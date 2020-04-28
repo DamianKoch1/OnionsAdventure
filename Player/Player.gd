@@ -198,19 +198,23 @@ func setState(newState):
 				animTreePlayer.transition_node_set_current("idle/walk", 0)
 
 func loseHp():
-	if state != frozen && debugGodmode != true && damageCD == 0:
-		damageCD = 2
-		$SFX/hurt.playing = true
-		#blinking? modulating alpha turns black in animationTreePlayer...
-		setState(frozen)
-		motion.x = 0
-		motion.y = 0
-		fade.oneshot(self, "emitLoseHp", 2)
+	if state == frozen:
+		return
+	if debugGodmode:
+		return
+	if damageCD > 0:
+		return
+	damageCD = 2
+	$SFX/hurt.playing = true
+	setState(frozen)
+	motion.x = 0
+	motion.y = 0
+	fade.oneshot(self, "emitLoseHp", 2)
 		
 func emitLoseHp():
-		emit_signal("loseHp", self)
-		fade.fadeIn(2)
-		state = idle
+	emit_signal("loseHp", self)
+	fade.fadeIn(2)
+	state = idle
 
 #no sound, used for uncontrolled jumps (krakenmushroom)
 func bounce(bounceStr):
@@ -251,10 +255,11 @@ func playGoalAnim():
 
 #remove self from current parent, attach to new parent and keep transform
 func attachTo(obj):
-	if obj.get_class() != "KinematicBody2D":
-		var transf = get_global_transform()
-		get_parent().remove_child(self)
-		obj.add_child(self)
-		set_global_transform(transf)
-		global_scale.x = 0.5
-		global_scale.y = 0.5
+	if obj.get_class() == "KinematicBody2D":
+		return
+	var transf = get_global_transform()
+	get_parent().remove_child(self)
+	obj.add_child(self)
+	set_global_transform(transf)
+	global_scale.x = 0.5
+	global_scale.y = 0.5

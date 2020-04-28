@@ -20,7 +20,7 @@ func _physics_process(delta):
 	if player != null:
 		global_position = player.global_position
 	#ready here is called before collectables check if they are already collected, so hud would always start empty
-	if hudUpdated == false:
+	if !hudUpdated:
 		hudUpdated = true
 		updateNPCsaved()
 		updateCollectables()

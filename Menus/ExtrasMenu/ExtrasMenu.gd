@@ -23,36 +23,38 @@ func _process(delta):
 		_on_MainMenuButton_pressed()
 
 func _on_BackButton_pressed():
-	if anim.is_playing() == false:
-		$NextButton.show()
-		if atPage == 2:
-			anim.play_backwards("1to2")
-			atPage = 1
-			$BackButton.hide()
-			$NextButton.grab_focus()
-		elif atPage == 3:
-			anim.play_backwards("2to3")
-			atPage = 2
-		elif atPage == 4:
-			anim.play_backwards("3to4")
-			atPage = 3
-		page.text = "Page " + str(atPage) + "/4"
+	if anim.is_playing():
+		 return
+	$NextButton.show()
+	if atPage == 2:
+		anim.play_backwards("1to2")
+		atPage = 1
+		$BackButton.hide()
+		$NextButton.grab_focus()
+	elif atPage == 3:
+		anim.play_backwards("2to3")
+		atPage = 2
+	elif atPage == 4:
+		anim.play_backwards("3to4")
+		atPage = 3
+	page.text = "Page " + str(atPage) + "/4"
 
 func _on_NextButton_pressed():
-	if anim.is_playing() == false:
-		$BackButton.show()
-		if atPage == 1:
-			anim.play("1to2")
-			atPage = 2
-		elif atPage == 2:
-			anim.play("2to3")
-			atPage = 3
-		elif atPage == 3:
-			anim.play("3to4")
-			atPage = 4
-			$NextButton.hide()
-			$BackButton.grab_focus()
-		page.text = "Page " + str(atPage) + "/4"
+	if anim.is_playing():
+		return
+	$BackButton.show()
+	if atPage == 1:
+		anim.play("1to2")
+		atPage = 2
+	elif atPage == 2:
+		anim.play("2to3")
+		atPage = 3
+	elif atPage == 3:
+		anim.play("3to4")
+		atPage = 4
+		$NextButton.hide()
+		$BackButton.grab_focus()
+	page.text = "Page " + str(atPage) + "/4"
 
 func _on_MainMenuButton_pressed():
 	fade.oneshot(self, "mainMenu", 2)

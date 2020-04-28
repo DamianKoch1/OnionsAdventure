@@ -36,15 +36,19 @@ func _physics_process(delta):
 
 #give player ladder to attach to and make him climb on contact
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Player") && attachCD == 0:
-		body.state = body.climb
-		body.rope = self
-		playerAttached = true
-		player = body
+	if attachCD > 0:
+		return
+	if !body.is_in_group("Player"):
+		return
+	body.state = body.climb
+	body.rope = self
+	playerAttached = true
+	player = body
 
 #detach player when exiting body
 func _on_Area2D_body_exited(body):
-	if body.is_in_group("Player"):
-		body.state = body.jump
-		playerAttached = false
-		player = null
+	if !body.is_in_group("Player"):
+		return
+	body.state = body.jump
+	playerAttached = false
+	player = null

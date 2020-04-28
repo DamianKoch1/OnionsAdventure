@@ -27,15 +27,11 @@ func _ready():
 func _on_TextureButton_pressed():
 	#needs animationplayer attched when used in other scenes because animation is different for each concept
 	if has_node("AnimationPlayer"):
-		if $AnimationPlayer.is_playing() == false:
-			if expanded == false:
-				$AnimationPlayer.play("expand")
-				expanded = true
-			else:
-				$AnimationPlayer.play_backwards("expand")
-				expanded = false
-			
-		
-
-
-	
+		if $AnimationPlayer.is_playing():
+			return
+		if expanded == false:
+			$AnimationPlayer.play("expand")
+			expanded = true
+		else:
+			$AnimationPlayer.play_backwards("expand")
+			expanded = false

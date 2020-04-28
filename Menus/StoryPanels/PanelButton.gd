@@ -11,6 +11,7 @@ func delete():
 
 
 func _on_PanelButton_pressed():
-	if anim.is_playing() != true:
-		$pageTurn.playRandomPitch()
-		anim.play("nextPanel", 1, animSpeed)
+	if anim.is_playing():
+		return
+	$pageTurn.playRandomPitch()
+	anim.play("nextPanel", 1, animSpeed)

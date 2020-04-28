@@ -17,23 +17,23 @@ func _ready():
 #cursor/pause menu on pressing escape, hide cursor ingame, always put focus on correct button
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		if $YesNoOverlayMainMenu.visible == false && $YesNoOverlayRestart.visible == false:
-			if $OptionsOverlay.visible == false:
-				if paused == false:
+		if $YesNoOverlayMainMenu.visible || $YesNoOverlayRestart.visible:
+			cancel()
+		else:
+			if $OptionsOverlay.visible:
+				_on_BackButton_pressed()
+			else:
+				if paused:
+					paused = false
+					hide()
+					get_tree().paused = false
+					Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+				else:
 					paused = true
 					show()
 					$ResumeButton.grab_focus()
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					get_tree().paused = true
-				else:
-					paused = false
-					hide()
-					get_tree().paused = false
-					Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-			else:
-				_on_BackButton_pressed()
-		else:
-			cancel()
 
 func _on_ResumeButton_pressed():
 	paused = false

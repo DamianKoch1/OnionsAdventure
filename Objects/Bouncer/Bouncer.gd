@@ -7,8 +7,10 @@ onready var anim = $AnimationPlayer
 
 #make player bounce depending on current down motion, caps at maxBounceStrength
 func _on_Bouncer_body_entered(body):
-	if body.is_in_group("Player"):
-		if body.motion.y > 0:
-			body.bounce(min(body.motion.y+bounceIncrease*body.gravity, maxBounceStr))
-			anim.play("bounce")
-			$bounceSound.playRandomPitch()
+	if !body.is_in_group("Player"):
+		return
+	if body.motion.y <= 0:
+		return
+	body.bounce(min(body.motion.y+bounceIncrease*body.gravity, maxBounceStr))
+	anim.play("bounce")
+	$bounceSound.playRandomPitch()
