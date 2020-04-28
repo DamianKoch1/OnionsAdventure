@@ -29,10 +29,11 @@ func loadLv1():
 	get_tree().change_scene_to(lv1)
 
 func _on_SkipButton_pressed():
-	if skipped != true:
-		skipped = true
-		$BGMPlayer.fadeOut()
-		loadLv1()
+	if skipped:
+		return
+	skipped = true
+	$BGMPlayer.fadeOut()
+	loadLv1()
 
 
 

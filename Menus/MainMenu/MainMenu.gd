@@ -15,7 +15,7 @@ func _ready():
 	$YesNoOverlayQuit.connect("yesPressed", self, "quit")
 	$YesNoOverlayQuit.connect("noPressed", self, "cancel")
 	$YesNoOverlayQuit.hide()
-	if MenuMusic.playing == false:
+	if !MenuMusic.playing:
 		MenuMusic.fadeIn()
 	if SaveGame.fileExists(SaveGame.savePath):
 		focusButton = $ContinueButton
@@ -30,8 +30,8 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		if $OptionsOverlay.visible == false:
-			if $YesNoOverlayQuit.visible == false:
+		if !$OptionsOverlay.visible:
+			if !$YesNoOverlayQuit.visible:
 				_on_QuitButton_pressed()
 			else:
 				cancel()
@@ -49,9 +49,10 @@ func credits():
 
 
 func _on_QuitButton_pressed():
-	if $YesNoOverlayQuit.visible == false:
-		$YesNoOverlayQuit.show()
-		$YesNoOverlayQuit/NoButton.grab_focus()
+	if $YesNoOverlayQuit.visible:
+		return
+	$YesNoOverlayQuit.show()
+	$YesNoOverlayQuit/NoButton.grab_focus()
 
 
 func _on_OptionsButton_pressed():

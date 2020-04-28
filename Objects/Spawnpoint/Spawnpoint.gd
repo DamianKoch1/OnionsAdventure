@@ -1,7 +1,6 @@
 extends Node2D
 
-#dictionary for known players
-onready var playerDict = {}
+onready var activated = false
 
 func _ready():
 	SaveGame.spawnpoint = self
@@ -17,6 +16,9 @@ func activate():
 
 #setup respawning for not yet known players and give them a dict entry to prevent signal reconecting multiple times
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Player") && playerDict.has(body) == false:
-		playerDict[body] = "connected"
-		body.connect("loseHp", self, "respawn")
+	if activated:
+		return
+	if !body.is_in_group("Player"):
+		return
+	body.connect("loseHp", self, "respawn")
+	activated = true

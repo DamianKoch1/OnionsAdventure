@@ -36,7 +36,7 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="BootLogo" type="Sprite"]
+[node name="BootLogo" type="Sprite" index="0"]
 
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 319.894, 176.203 )

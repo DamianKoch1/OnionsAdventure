@@ -21,17 +21,20 @@ func _ready():
 		
 #show story panel depending on level, end game at last level
 func _on_Goal_body_entered(body):
-	if body.is_in_group("Player") && anim.is_playing() == false:
-		var i = randf()
-		if i > 0.5:
-			$SFX/OnionYeah1.play()
-		else:
-			$SFX/OnionYeah2.play()
-		body.playGoalAnim()
-		npcFull.region_rect.size.x = (3 - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth
-		dandelionCounter.text = str(50-get_tree().get_nodes_in_group("dandelions").size()) + "/50"
-		anim.play_backwards("fadeIn")
-		body.state = body.frozen
+	if anim.is_playing():
+		return
+	if !body.is_in_group("Player"):
+		return
+	var i = randf()
+	if i > 0.5:
+		$SFX/OnionYeah1.play()
+	else:
+		$SFX/OnionYeah2.play()
+	body.playGoalAnim()
+	npcFull.region_rect.size.x = (3 - get_tree().get_nodes_in_group("trappedNPCs").size()) * npcImgWidth
+	dandelionCounter.text = str(50-get_tree().get_nodes_in_group("dandelions").size()) + "/50"
+	anim.play_backwards("fadeIn")
+	body.state = body.frozen
 
 func nextAnim():
 	if SaveGame.currLevelId == 4:

@@ -30,10 +30,11 @@ func loadCredits():
 	get_tree().change_scene_to(credits)
 
 func _on_SkipButton_pressed():
-	if skipped != true:
-		skipped = true
-		$BGMPlayerIntro.fadeOut()
-		loadCredits()
+	if skipped:
+		return
+	skipped = true
+	$BGMPlayerIntro.fadeOut()
+	loadCredits()
 	
 func _on_PanelButton2_animFinished():
 	var creditsInstance = credits.instance()

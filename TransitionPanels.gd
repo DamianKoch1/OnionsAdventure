@@ -13,6 +13,7 @@ func _ready():
 		3:
 			$one/three.texture = texture3
 	$BGMPlayer.fadeIn(2)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):

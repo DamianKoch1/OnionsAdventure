@@ -28,7 +28,7 @@ func _process(delta):
 	#on body exit triggers each frame due to onion changing parents
 	if player != null:
 		checkForPlayer()
-	if waitForKey == true && Input.is_action_just_pressed(key):
+	if waitForKey && Input.is_action_just_pressed(key):
 		timer.stop()
 		emit_signal("spiderHide")
 		
