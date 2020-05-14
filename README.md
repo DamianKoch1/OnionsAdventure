@@ -7,6 +7,9 @@ After dangerous insects attacked Onions peaceful village her whole family fled i
 leaving Onion on her own. 
 Made as a student project in a 10 man team during my first semester at the S4G School for Games GmbH.
 
+Since i was the only programmer, my tasks were basically everything programming-related,
+e.g. gameplay / UI programming, bugfixing and technical documentation.
+
 ![thumbnail](/Images/thumbnail.png)
 
 [Technical Design Document (german)](https://docs.google.com/document/d/1uA9_ai9qRnvGfugPAXIe-aGVDnVgkUDJRVSzIBr0SVM/edit?usp=sharing)
