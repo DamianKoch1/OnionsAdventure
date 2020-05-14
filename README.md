@@ -1,5 +1,5 @@
 # OnionsAdventure
-Onions Adventure is a Jump´n Run game set in a magical forest. Accompany Onion on her adventure to find her lost family. 
+Onions Adventure is a Jump´n Run game set in a magical forest.
 Accompany Onion on her adventure to find her lost family.
 After dangerous insects attacked Onions peaceful village her whole family fled into the enchanted forest, 
 leaving Onion on her own. 
